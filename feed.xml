@@ -3,10 +3,10 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>http://localhost:4000//patrickleungwl/</link>
-    <atom:link href="http://localhost:4000//patrickleungwl/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Mar 2016 23:08:33 +0800</pubDate>
-    <lastBuildDate>Sun, 27 Mar 2016 23:08:33 +0800</lastBuildDate>
+    <link>http://patrickleungwl.github.io/./</link>
+    <atom:link href="http://patrickleungwl.github.io/./feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 28 Mar 2016 00:08:50 +0800</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2016 00:08:50 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -41,8 +41,8 @@
 
 </description>
         <pubDate>Sat, 15 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000//patrickleungwl/tech/2014/03/15/garbage-collector-differences/</link>
-        <guid isPermaLink="true">http://localhost:4000//patrickleungwl/tech/2014/03/15/garbage-collector-differences/</guid>
+        <link>http://patrickleungwl.github.io/./tech/2014/03/15/garbage-collector-differences/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io/./tech/2014/03/15/garbage-collector-differences/</guid>
         
         <category>java,</category>
         
@@ -159,13 +159,15 @@ checkWeakRefs: size=1000, numCollected=992
 
 </description>
         <pubDate>Thu, 13 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000//patrickleungwl/2014/03/13/weakreferences-in-csharp/</link>
-        <guid isPermaLink="true">http://localhost:4000//patrickleungwl/2014/03/13/weakreferences-in-csharp/</guid>
+        <link>http://patrickleungwl.github.io/./tech/2014/03/13/weakreferences-in-csharp/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io/./tech/2014/03/13/weakreferences-in-csharp/</guid>
         
         <category>csharp,</category>
         
         <category>memory</category>
         
+        
+        <category>tech</category>
         
       </item>
     
@@ -275,8 +277,8 @@ solutions to tackling tough memory problems.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 12 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000//patrickleungwl/tech/2014/03/12/softreferences-in-java/</link>
-        <guid isPermaLink="true">http://localhost:4000//patrickleungwl/tech/2014/03/12/softreferences-in-java/</guid>
+        <link>http://patrickleungwl.github.io/./tech/2014/03/12/softreferences-in-java/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io/./tech/2014/03/12/softreferences-in-java/</guid>
         
         <category>java,</category>
         
@@ -407,8 +409,8 @@ Completed testWeakReferences
 
 </description>
         <pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000//patrickleungwl/tech/2014/03/11/weakreferences-in-java/</link>
-        <guid isPermaLink="true">http://localhost:4000//patrickleungwl/tech/2014/03/11/weakreferences-in-java/</guid>
+        <link>http://patrickleungwl.github.io/./tech/2014/03/11/weakreferences-in-java/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io/./tech/2014/03/11/weakreferences-in-java/</guid>
         
         <category>java,</category>
         
