@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Finance Tech Wanderings</title>
+    <description>A journal of tech issues in financial applications</description>
+    <link>http://localhost:4000//patrickleungwl/</link>
+    <atom:link href="http://localhost:4000//patrickleungwl/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 27 Mar 2016 23:08:33 +0800</pubDate>
+    <lastBuildDate>Sun, 27 Mar 2016 23:08:33 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Garbage Collector Differences between Java and CSharp</title>
+        <description>&lt;p&gt;More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’.&lt;/p&gt;
+
+&lt;h2 id=&quot;common-default-behavior&quot;&gt;Common Default Behavior&lt;/h2&gt;
+&lt;p&gt;At indeterminate times, the GC comes around, finds and frees up&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;every unreferenced object- these are objects that cannot be traced to a long living root object&lt;/li&gt;
+  &lt;li&gt;every object referenced only by a WeakReference&lt;/li&gt;
+  &lt;li&gt;and- for Java only- if free memory is low, every object referenced only by a SoftReference&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;c-has-no-softreferences&quot;&gt;C# Has No SoftReferences&lt;/h2&gt;
+&lt;p&gt;C# does not have SoftReferences.  Why this is so?  Two leading theories on StackOverflow say&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java has four levels of reference strength- (strong, soft, weak, and phantom)- and that’s way too confusing.  C# just keeps it simple at two- strong and weak.  Nice.&lt;/li&gt;
+  &lt;li&gt;On 32-bit Windows platforms, C#, unlike Java, uses an entire process’ addressable memory space- 4GB.  It’s 2GB in practical terms because the OS/kernal claims usage on the other 2GB, but it’s also possible to push the user space limits to 3GB using boot flags.  With more memory at is disposal, C# apps are less likely than Java apps to struggle for memory- which is how SoftReferences are likely to be used.With Java on Linux, the way to find the maxium heap size is via:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -XX:+PrintFlagsFinal -version | grep i maxheapsize
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;when-is-the-garbage-collector-coming&quot;&gt;When Is the Garbage Collector Coming?&lt;/h2&gt;
+&lt;p&gt;In C#, it is not uncommon to see code explicitly requesting a garbage collection.  The GC collects immediately at the point in the code.&lt;/p&gt;
+
+&lt;p&gt;In Java however, the GC collection call is only a request.  The GC alays collects at an indeterminate time in the future.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 15 Mar 2014 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000//patrickleungwl/tech/2014/03/15/garbage-collector-differences/</link>
+        <guid isPermaLink="true">http://localhost:4000//patrickleungwl/tech/2014/03/15/garbage-collector-differences/</guid>
+        
+        <category>java,</category>
+        
+        <category>csharp,</category>
+        
+        <category>memory</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>WeakReferences in CSharp</title>
+        <description>&lt;p&gt;Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-)&lt;/p&gt;
+
+&lt;p&gt;When it comes to memory management, C# certainly has many comparable features found in Java and more. Following the previous example of testing WeakReferences in Java, we’ll now run a similar test in C#.&lt;/p&gt;
+
+&lt;p&gt;First, we’ll need a dummy memory resource-heavy object. We’ll use the same DumbWeight class, whose sole function is to allocate memory.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;using System.Collection.Generic;
+
+namespace Drills
+{
+  class DumbWeight
+  {
+    private List&amp;lt;int&amp;gt; _weights;
+
+    public DumbWeight(int weight) 
+    {
+      _weights = new List&amp;lt;int&amp;gt;(weight);
+      for (int i=0; i&amp;lt;weight; i++)
+      {
+        _weights.Add(i);
+      }
+    } 
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And once again, we run our test by 1) creating a thousand DumbWeight instances, 2) maintain a set of WeakReferences pointing to these DumbWeight instances, 3) free up any strong (direct) references to the DumbWeights, and 4) watch what happens over time.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;using System;
+using System.Collections.Generic;
+
+namespace Drills
+{
+  class MyTest
+  {
+    //----------------------------------------------------------
+    // Checks how many objects referenced by WeakReferences are
+    // still alive- not yet collected by the GC.
+    // 
+    private void checkWeakReferences(List&amp;lt;int&amp;gt; ltWeakRefs)
+    {
+      int numCollecte=0;
+      foreach(WeakReference w in ltWeakRefs)
+      {
+        if (!w.IsAlive)
+          ++numCollected;
+      }
+      Console.Out.WriteLine(&quot;checkWeakRefs: size={0}, numCollected={1}&quot;,
+        ltWeakRefs.Count, numCollected);
+    }
+
+    //----------------------------------------------------------
+    // Create a thousand objects pointed to only by WeakReferences.
+    // Every once in a while, scan the WeakReferences to see
+    // if their referenced objects still exist or have been collected.
+    //
+    public void testWeakReferences()
+    {
+      List&amp;lt;int&amp;gt; ltWeakRefs = new List&amp;lt;int&amp;gt;();
+
+      for (int i=0; i&amp;lt;1000; i++ ) 
+      {
+        DumbWeight d = new DumbWeight(100000);
+        WeakReference w = new WeakReference(d);
+        ltWeakRefs.Add(w);
+        d = null;
+        if (s.Count % 100 == 0) 
+          checkWeakReferences(ltWeakRefs);
+      }
+      Console.Out.WriteLine(&quot;Completed testWeakReferences&quot;);
+    }
+
+    static void Main(string[] args)
+    {
+      MyTest t = new MyTest();
+      t.testWeakReferences();
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The test app’s output looks like the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;checkWeakRefs: size=100, numCollected=96
+checkWeakRefs: size=200, numCollected=192
+checkWeakRefs: size=300, numCollected=296
+checkWeakRefs: size=400, numCollected=392
+checkWeakRefs: size=500, numCollected=496
+checkWeakRefs: size=600, numCollected=592
+checkWeakRefs: size=700, numCollected=696
+checkWeakRefs: size=800, numCollected=792
+checkWeakRefs: size=900, numCollected=896
+checkWeakRefs: size=1000, numCollected=992
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The results show that C#’s WeakReference works just like Java’s. The only noticeable difference is that C# offers you a way to check the existence of the WeakReference’s refent using its IsAlive property. In Java, the way to check a WeakReference’s refent is by getting calling get() to get its contained object and checking for null. C#’s way seems more elegant although functionally there is no difference.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 13 Mar 2014 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000//patrickleungwl/2014/03/13/weakreferences-in-csharp/</link>
+        <guid isPermaLink="true">http://localhost:4000//patrickleungwl/2014/03/13/weakreferences-in-csharp/</guid>
+        
+        <category>csharp,</category>
+        
+        <category>memory</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>SoftReferences in Java</title>
+        <description>&lt;p&gt;Continuing on with our investigation into memory handling in Java, let’s look at another 
+rarely used feature- the SoftReference.  To get to the point, a SoftReference is 
+just like a WeakReference- except that the Garbage Collector only collects its 
+referenced object if the JVM is running low on memory.  This makes a SoftReference 
+more “sticky” in a running process’s memory.&lt;/p&gt;
+
+&lt;p&gt;Here is a simple example of how a SoftReference works. Let’s reuse the same 
+resource-heavy DumbWeight class shown in the previous WeakReference example. 
+The following SoftReference test code example creates a thousand SoftReferences of 
+DumbWeights, removes any strong references to the DumbWeights, and then 
+periodically checks when and how often the GC cleans up the DumbWeight instances.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;package drills;
+import java.lang.ref.*;
+import java.util.*;
+
+public class MyTest { 
+
+  /** checkSoftReferences
+   *  
+   *  Check how many soft references still exist and not collected
+   */
+  private void checkSoftReferences(Set&amp;lt;SoftReference&amp;gt; s) {
+    int numCollected = 0;
+    Iterator&amp;lt;SoftReference&amp;gt; i = s.iterator();
+    while (i.hasNext()) {
+      SoftReference w = i.next();
+      DumbWeight d = w.get();
+      if (d==null) {
+        ++numCollected;
+      } 
+    }
+    System.out.format(&quot;checkSoftRefs: size=%d, numCollected=%d\n&quot;, 
+      s.size(), numCollected );
+  }
+
+  /** testSoftReferences
+   *  
+   * Soft references are like weak references- 
+   * except that soft references only get garbage collected
+   * if the process is running out of heap memory.
+   * 
+   * This means soft references are more sticky than weak references.
+   */
+  public void testSoftReferences() {
+
+    Set&amp;lt;SoftReference&amp;gt; s = new HashSet&amp;lt;SoftReference&amp;gt;();
+
+    System.out.println(&quot;*****************************&quot;);
+    System.out.println(&quot;Starting testSoftReferences&quot;);
+    System.out.println(&quot;Creating 1000 soft references&quot;);
+    for (int i=0; i&amp;lt;1000; i++) {
+      DumbWeight d = new DumbWeight(100000);
+      SoftReference w = new SoftReference(d);
+      s.add(w);
+      d = null;
+      if (s.size()%100==0) {
+        checkSoftReferences(s);
+      }
+    } 
+    System.out.println(&quot;Completed testSoftReferences&quot;);
+  }
+
+  public static void main(String[] args) { 
+    MyTest m = new MyTest();
+    m.testSoftReferences();
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The output looks as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*****************************
+Starting testSoftReferences
+Creating 1000 soft references
+checkSoftRefs: size=100, numCollected=0
+checkSoftRefs: size=200, numCollected=0
+checkSoftRefs: size=300, numCollected=208
+checkSoftRefs: size=400, numCollected=208
+checkSoftRefs: size=500, numCollected=416
+checkSoftRefs: size=600, numCollected=416
+checkSoftRefs: size=700, numCollected=624
+checkSoftRefs: size=800, numCollected=624
+checkSoftRefs: size=900, numCollected=832
+checkSoftRefs: size=1000, numCollected=832
+Completed testSoftReferences
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The test results show that the GC wipes out objects referenced by SoftReferences - 
+only if the JVM runs low on memory. Comparing this result to the previous WeakReferences 
+example, you can see that there is some lag time before the GC cleans up the 
+SoftReferenced objects.&lt;/p&gt;
+
+&lt;p&gt;On a Mint Linux laptop with 2Gb ram, I noticed this test app consume at most 525Mb 
+before GC occurs- and the process memory goes back down to around 300Mb.&lt;/p&gt;
+
+&lt;p&gt;These tests prove that both weak and soft references provide useful alternatives 
+handling memory. For resource hungry or long running processes, both are viable 
+solutions to tackling tough memory problems.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 12 Mar 2014 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000//patrickleungwl/tech/2014/03/12/softreferences-in-java/</link>
+        <guid isPermaLink="true">http://localhost:4000//patrickleungwl/tech/2014/03/12/softreferences-in-java/</guid>
+        
+        <category>java,</category>
+        
+        <category>memory</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>WeakReferences in Java</title>
+        <description>&lt;p&gt;Java as a language has been in the public eye for close to two decades now.  And there shouldn’t
+really be anything new to an old techie, should there?  Well, surprise to say- there are some 
+features that I rarely use.  One of these features is the “WeakReference”.&lt;/p&gt;
+
+&lt;p&gt;What are WeakReferences used for? WeakReferences are used for keeping objects in memory for only 
+as long as a variable references it. As soon as this strong reference disappears, this object held 
+by the WeakReference is up for garbage collection. This makes WeakReferences quite handy for 
+keeping high storage-cost objects in memory for only as long as you really need it.&lt;/p&gt;
+
+&lt;p&gt;Example, let’s make a dummy class that does nothing but make heavy memory allocations:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;package drills; 
+
+import java.util.ArrayList;
+
+public class DumbWeight {
+  private ArrayList&amp;lt;Integer&amp;gt; _weights;
+  
+  public DumbWeight(int weight) {
+    _weights = new ArrayList&amp;lt;Integer&amp;gt;(weight);
+    for (int i=0; i&amp;lt;weight; i++) {
+      _weights.add(new Integer(i));
+    }
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And here is the test code. The test code creates a thousand “DumbWeight” objects- each allocating one
+hundred thousand Integers. While the WeakReferences keep track of the DumbWeights, we remove any strong
+references to them. This leaves the WeakReference as the only link to the DumbWeights. The Garbage
+Collector eventually spots this- and wipes out the DumbWeights over time. The CheckReferences method
+periodically scans the set of WeakReferences to see if the DumbWeights still exist.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;package drills;
+import java.lang.ref.*;
+import java.util.*;
+
+public class MyTest { 
+
+  /** checkWeakReferences
+   *  
+   *  Check how many weak references still exist and not collected
+   */
+  private void checkWeakReferences(Set&amp;lt;WeakReference&amp;gt; s) {
+    int numCollected = 0;
+    Iterator&amp;lt;WeakReference&amp;gt; i = s.iterator();
+    while (i.hasNext()) {
+      WeakReference w = i.next();
+      DumbWeight d = w.get();
+      if (d==null) {
+        ++numCollected;
+      } 
+    }
+    System.out.format(&quot;checkWeakRefs: size=%d, numCollected=%dn&quot;,
+      s.size(), numCollected );
+  } 
+
+  /** testWeakReferences
+   *  
+   *  If the GC collects weak references, then we should be
+   *  able to create objects using WR indefinitely.
+   *
+
+  public void testWeakReferences() {
+
+    Set&amp;lt;WeakReference&amp;gt; s = new HashSet&amp;lt;WeakReference&amp;gt;();
+
+    System.out.println(&quot;*****************************&quot;); 
+    System.out.println(&quot;Starting testWeakReferences&quot;); 
+    System.out.println(&quot;Creating 1000 weak references&quot;);
+    for (int i=0; i&amp;amp;lt;1000; i++) {
+      DumbWeight d = new DumbWeight(100000);
+      WeakReference w = new WeakReference(d);
+      s.add(w);
+      d = null;
+      if (s.size()%100==0) {
+        checkWeakReferences(s);
+      } 
+    }
+    System.out.println(&quot;Completed testWeakReferences&quot;); 
+  }
+
+  public static void main(String[] args) { 
+    MyTest m = new MyTest();
+    m.testWeakReferences();
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The output of one such test run is shown below. The memory usage of this Test app stays in the 220 meg range on a Linux laptop with 2Gb RAM.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*****************************
+Starting testWeakReferences
+Creating 1000 weak references
+checkWeakRefs: size=100, numCollected=98
+checkWeakRefs: size=200, numCollected=182
+checkWeakRefs: size=300, numCollected=235
+checkWeakRefs: size=400, numCollected=318
+checkWeakRefs: size=500, numCollected=489
+checkWeakRefs: size=600, numCollected=576
+checkWeakRefs: size=700, numCollected=663
+checkWeakRefs: size=800, numCollected=750
+checkWeakRefs: size=900, numCollected=837
+checkWeakRefs: size=1000, numCollected=924
+Completed testWeakReferences
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As shown, because the objects, the DumbWeight instances, are only “weakly referenced” and not strongly referenced, the GC always collects them whenever it runs.&lt;/p&gt;
+
+&lt;p&gt;Hope the test code makes clear this feature of WeakReference.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000//patrickleungwl/tech/2014/03/11/weakreferences-in-java/</link>
+        <guid isPermaLink="true">http://localhost:4000//patrickleungwl/tech/2014/03/11/weakreferences-in-java/</guid>
+        
+        <category>java,</category>
+        
+        <category>memory</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+  </channel>
+</rss>

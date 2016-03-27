@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title> - A journal of tech issues in financial applications</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/patrickleungwl/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="/patrickleungwl/assets/css/main.css" />
+
+</head>
+<body class="home-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="/patrickleungwl/">Home</a>
+        <a class="subscribe-button icon-feed" href="/patrickleungwl/feed.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">SoftReferences in Java</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2014-03-12">12 Mar 2014</time>
+                
+                    on tech
+                
+            </section>
+        </header>
+
+<!--         <header class="post-header">
+            <a id="blog-logo" href="http://localhost:4000/">
+                
+                    <span class="blog-title"></span>
+                
+            </a>
+        </header> -->
+
+        <!-- <span class="post-meta">
+            <time datetime="2014-03-12">12 Mar 2014</time>
+            
+                on tech
+            
+        </span> -->
+
+        <!-- <h1 class="post-title">SoftReferences in Java</h1> -->
+
+        <section class="post-content">
+            <p>Continuing on with our investigation into memory handling in Java, let’s look at another 
+rarely used feature- the SoftReference.  To get to the point, a SoftReference is 
+just like a WeakReference- except that the Garbage Collector only collects its 
+referenced object if the JVM is running low on memory.  This makes a SoftReference 
+more “sticky” in a running process’s memory.</p>
+
+<p>Here is a simple example of how a SoftReference works. Let’s reuse the same 
+resource-heavy DumbWeight class shown in the previous WeakReference example. 
+The following SoftReference test code example creates a thousand SoftReferences of 
+DumbWeights, removes any strong references to the DumbWeights, and then 
+periodically checks when and how often the GC cleans up the DumbWeight instances.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>package drills;
+import java.lang.ref.*;
+import java.util.*;
+
+public class MyTest { 
+
+  /** checkSoftReferences
+   *  
+   *  Check how many soft references still exist and not collected
+   */
+  private void checkSoftReferences(Set&lt;SoftReference&gt; s) {
+    int numCollected = 0;
+    Iterator&lt;SoftReference&gt; i = s.iterator();
+    while (i.hasNext()) {
+      SoftReference w = i.next();
+      DumbWeight d = w.get();
+      if (d==null) {
+        ++numCollected;
+      } 
+    }
+    System.out.format("checkSoftRefs: size=%d, numCollected=%d\n", 
+      s.size(), numCollected );
+  }
+
+  /** testSoftReferences
+   *  
+   * Soft references are like weak references- 
+   * except that soft references only get garbage collected
+   * if the process is running out of heap memory.
+   * 
+   * This means soft references are more sticky than weak references.
+   */
+  public void testSoftReferences() {
+
+    Set&lt;SoftReference&gt; s = new HashSet&lt;SoftReference&gt;();
+
+    System.out.println("*****************************");
+    System.out.println("Starting testSoftReferences");
+    System.out.println("Creating 1000 soft references");
+    for (int i=0; i&lt;1000; i++) {
+      DumbWeight d = new DumbWeight(100000);
+      SoftReference w = new SoftReference(d);
+      s.add(w);
+      d = null;
+      if (s.size()%100==0) {
+        checkSoftReferences(s);
+      }
+    } 
+    System.out.println("Completed testSoftReferences");
+  }
+
+  public static void main(String[] args) { 
+    MyTest m = new MyTest();
+    m.testSoftReferences();
+  }
+}
+</code></pre>
+</div>
+
+<p>The output looks as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>*****************************
+Starting testSoftReferences
+Creating 1000 soft references
+checkSoftRefs: size=100, numCollected=0
+checkSoftRefs: size=200, numCollected=0
+checkSoftRefs: size=300, numCollected=208
+checkSoftRefs: size=400, numCollected=208
+checkSoftRefs: size=500, numCollected=416
+checkSoftRefs: size=600, numCollected=416
+checkSoftRefs: size=700, numCollected=624
+checkSoftRefs: size=800, numCollected=624
+checkSoftRefs: size=900, numCollected=832
+checkSoftRefs: size=1000, numCollected=832
+Completed testSoftReferences
+</code></pre>
+</div>
+
+<p>The test results show that the GC wipes out objects referenced by SoftReferences - 
+only if the JVM runs low on memory. Comparing this result to the previous WeakReferences 
+example, you can see that there is some lag time before the GC cleans up the 
+SoftReferenced objects.</p>
+
+<p>On a Mint Linux laptop with 2Gb ram, I noticed this test app consume at most 525Mb 
+before GC occurs- and the process memory goes back down to around 300Mb.</p>
+
+<p>These tests prove that both weak and soft references provide useful alternatives 
+handling memory. For resource hungry or long running processes, both are viable 
+solutions to tackling tough memory problems.</p>
+
+
+        </section>
+
+        
+        <section class="archive">
+            <h5>Archive</h5>
+            <ul>
+                
+                    <li><span>15 Mar 2014</span>  <a href="/tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a></li>
+                
+                    <li><span>13 Mar 2014</span>  <a href="/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></li>
+                
+                    <li><span>12 Mar 2014</span>  <a href="/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></li>
+                
+                    <li><span>11 Mar 2014</span>  <a href="/tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a></li>
+                
+            </ul>
+        </section>
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=SoftReferences in Java&amp;url=/tech/2014/03/12/softreferences-in-java/"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2014/03/12/softreferences-in-java/"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2014/03/12/softreferences-in-java/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+            <!-- Disqus comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+    <footer class="site-footer clearfix">
+        <figure class="author-image">
+            <a class="img" href="/patrickleungwl" style="background-image: url(/patrickleungwl/assets/images/profile.png)">
+                <span class="hidden">PatrickLeung</span></a>
+        </figure>
+
+
+      <section class="copyright">
+        <a href="/patrickleungwl"></a> &copy; 
+               &bull; All rights reserved.
+      </section>
+      <section class="poweredby">Made with Jekyll using 
+        <a href="http://github.com/rosario/kasper">Kasper theme</a>
+      </section>
+    </footer>
+    
+    <script type="text/javascript" src="/patrickleungwl/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/patrickleungwl/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/patrickleungwl/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>   
+</body>
+</html>
