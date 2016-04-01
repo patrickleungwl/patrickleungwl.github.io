@@ -31,9 +31,9 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">WeakReferences in Java</h1>
+            <h1 class="post-title">Assertions in Java</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2014-03-11">11 Mar 2014</time>
+                <time class="post-date" datetime="2014-03-17">17 Mar 2014</time>
                 
                     on tech
                 
@@ -49,130 +49,20 @@
         </header> -->
 
         <!-- <span class="post-meta">
-            <time datetime="2014-03-11">11 Mar 2014</time>
+            <time datetime="2014-03-17">17 Mar 2014</time>
             
                 on tech
             
         </span> -->
 
-        <!-- <h1 class="post-title">WeakReferences in Java</h1> -->
+        <!-- <h1 class="post-title">Assertions in Java</h1> -->
 
         <section class="post-content">
-            <p>Java as a language has been in the public eye for close to two decades now.  And there shouldn’t
-really be anything new to an old techie, should there?  Well, surprise to say- there are some 
-features that I rarely use.  One of these features is the “WeakReference”.</p>
+            <p>Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:</p>
 
-<p>What are WeakReferences used for? WeakReferences are used for keeping objects in memory for only 
-as long as a variable references it. As soon as this strong reference disappears, this object held 
-by the WeakReference is up for garbage collection. This makes WeakReferences quite handy for 
-keeping high storage-cost objects in memory for only as long as you really need it.</p>
-
-<p>Example, let’s make a dummy class that does nothing but make heavy memory allocations:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>package drills; 
-
-import java.util.ArrayList;
-
-public class DumbWeight {
-  private ArrayList&lt;Integer&gt; _weights;
-  
-  public DumbWeight(int weight) {
-    _weights = new ArrayList&lt;Integer&gt;(weight);
-    for (int i=0; i&lt;weight; i++) {
-      _weights.add(new Integer(i));
-    }
-  }
-}
-
+<div class="highlighter-rouge"><pre class="highlight"><code>java -ea Test.java
 </code></pre>
 </div>
-
-<p>And here is the test code. The test code creates a thousand “DumbWeight” objects- each allocating one
-hundred thousand Integers. While the WeakReferences keep track of the DumbWeights, we remove any strong
-references to them. This leaves the WeakReference as the only link to the DumbWeights. The Garbage
-Collector eventually spots this- and wipes out the DumbWeights over time. The CheckReferences method
-periodically scans the set of WeakReferences to see if the DumbWeights still exist.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>package drills;
-import java.lang.ref.*;
-import java.util.*;
-
-public class MyTest { 
-
-  /** checkWeakReferences
-   *  
-   *  Check how many weak references still exist and not collected
-   */
-  private void checkWeakReferences(Set&lt;WeakReference&gt; s) {
-    int numCollected = 0;
-    Iterator&lt;WeakReference&gt; i = s.iterator();
-    while (i.hasNext()) {
-      WeakReference w = i.next();
-      DumbWeight d = w.get();
-      if (d==null) {
-        ++numCollected;
-      } 
-    }
-    System.out.format("checkWeakRefs: size=%d, numCollected=%dn",
-      s.size(), numCollected );
-  } 
-
-  /** testWeakReferences
-   *  
-   *  If the GC collects weak references, then we should be
-   *  able to create objects using WR indefinitely.
-   *
-
-  public void testWeakReferences() {
-
-    Set&lt;WeakReference&gt; s = new HashSet&lt;WeakReference&gt;();
-
-    System.out.println("*****************************"); 
-    System.out.println("Starting testWeakReferences"); 
-    System.out.println("Creating 1000 weak references");
-    for (int i=0; i&amp;lt;1000; i++) {
-      DumbWeight d = new DumbWeight(100000);
-      WeakReference w = new WeakReference(d);
-      s.add(w);
-      d = null;
-      if (s.size()%100==0) {
-        checkWeakReferences(s);
-      } 
-    }
-    System.out.println("Completed testWeakReferences"); 
-  }
-
-  public static void main(String[] args) { 
-    MyTest m = new MyTest();
-    m.testWeakReferences();
-  }
-}
-
-</code></pre>
-</div>
-<p>The output of one such test run is shown below. The memory usage of this Test app stays in the 220 meg range on a Linux laptop with 2Gb RAM.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>*****************************
-Starting testWeakReferences
-Creating 1000 weak references
-checkWeakRefs: size=100, numCollected=98
-checkWeakRefs: size=200, numCollected=182
-checkWeakRefs: size=300, numCollected=235
-checkWeakRefs: size=400, numCollected=318
-checkWeakRefs: size=500, numCollected=489
-checkWeakRefs: size=600, numCollected=576
-checkWeakRefs: size=700, numCollected=663
-checkWeakRefs: size=800, numCollected=750
-checkWeakRefs: size=900, numCollected=837
-checkWeakRefs: size=1000, numCollected=924
-Completed testWeakReferences
-
-</code></pre>
-</div>
-
-<p>As shown, because the objects, the DumbWeight instances, are only “weakly referenced” and not strongly referenced, the GC always collects them whenever it runs.</p>
-
-<p>Hope the test code makes clear this feature of WeakReference.</p>
 
 
         </section>
@@ -207,15 +97,15 @@ Completed testWeakReferences
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=WeakReferences in Java&amp;url=/tech/2014/03/11/weakreferences-in-java/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=Assertions in Java&amp;url=/tech/2014/03/17/java-assertions/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2014/03/11/weakreferences-in-java/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2014/03/17/java-assertions/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2014/03/11/weakreferences-in-java/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2014/03/17/java-assertions/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>

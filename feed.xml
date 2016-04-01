@@ -3,11 +3,195 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>http://patrickleungwl.github.io/./</link>
-    <atom:link href="http://patrickleungwl.github.io/./feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Mar 2016 00:59:31 +0800</pubDate>
-    <lastBuildDate>Mon, 28 Mar 2016 00:59:31 +0800</lastBuildDate>
+    <link>http://patrickleungwl.github.io//</link>
+    <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 02 Apr 2016 01:34:46 +0800</pubDate>
+    <lastBuildDate>Sat, 02 Apr 2016 01:34:46 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Java String Literals Versus String Objects</title>
+        <description>&lt;p&gt;Strings in Java can be declared either literally-&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;String s = &quot;123&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;or as a String instance-&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;String s = new String(&quot;123&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;What are the differences between these two strings?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;package drills;
+
+public class Tester {
+
+  public static void main(String[] args) {
+
+    // Test differences between String v = new String(...)
+    // and String v = &quot;...&quot;
+
+    // String literals are stored in a string pool- cached and reused.
+    // String objects are stored in the heap as new objects.		
+
+    // Two string literals with the same characters are the same
+    // in every possible way.
+    String s1 = &quot;abcdef&quot;;
+    String s2 = &quot;abcdef&quot;;
+    assert(s1 == s2);
+    assert(s1.hashCode() == s2.hashCode());
+    assert(s1.equals(s2) &amp;amp;&amp;amp; s2.equals(s1));
+
+    // Two string objects with the same characters are the same
+    // only with hashCode() and equals()- but are different object
+    // instances
+    String s3 = new String(&quot;abcdef&quot;);
+    String s4 = new String(&quot;abcdef&quot;);
+    assert(s3 != s4);
+    assert(s3.hashCode() == s4.hashCode());
+    assert(s3.equals(s4) &amp;amp;&amp;amp; s4.equals(s3));
+
+    // String literals and String objects are separate string
+    // instances, but hashCodes are all equal
+    assert(s1 != s3 &amp;amp;amp;&amp;amp;amp; s1 != s4);
+    assert(s1.hashCode() == s2.hashCode());
+    assert(s2.hashCode() == s3.hashCode());
+    assert(s3.hashCode() == s4.hashCode());
+
+    // Though separate instances, contents are also still equal
+    assert(s1.equals(s3) &amp;amp;&amp;amp; s1.equals(s4));
+    assert(s2.equals(s3) &amp;amp;&amp;amp; s2.equals(s4));
+
+    System.out.println(&quot;Tests completed&quot;);
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Summary:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Regardless of how strings are declared, for a given character sequence, their hashCodes() and equals() all return the same value.
+    &lt;ul&gt;
+      &lt;li&gt;String literals reuse the same string instance if already exists.&lt;/li&gt;
+      &lt;li&gt;String objects always create a new instance (unless using the intern method).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 20 Mar 2014 00:00:00 +0800</pubDate>
+        <link>http://patrickleungwl.github.io//tech/2014/03/20/java-string-literals/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2014/03/20/java-string-literals/</guid>
+        
+        <category>java,</category>
+        
+        <category>memory</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Assertions in Java</title>
+        <description>&lt;p&gt;Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -ea Test.java
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 17 Mar 2014 00:00:00 +0800</pubDate>
+        <link>http://patrickleungwl.github.io//tech/2014/03/17/java-assertions/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2014/03/17/java-assertions/</guid>
+        
+        <category>java,</category>
+        
+        <category>threads</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Delayed Background Thread Runnable</title>
+        <description>&lt;p&gt;With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer
+necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
+at scheduled times.  Below shows a quick example of how it can be used.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;package drills;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+public class Tester {
+
+  DateFormat _df;
+
+  public Tester() {
+    _df = new SimpleDateFormat(&quot;yyyyMMdd HH:mm:ss&quot;);
+  }
+
+  public String GetTimeNow() {
+    Date dt = new Date();
+    return _df.format(dt);
+  }
+
+  public void RunTest() {
+    Runnable worker = new Runnable() {
+      public void run() {
+        System.out.format(&quot;%s: Worker running\n&quot;, GetTimeNow());				
+      }
+    };
+
+    ScheduledExecutorService ex = Executors.newSingleThreadScheduledExecutor();
+    System.out.format(&quot;%s: Scheduled worker to run in 5 seconds\n&quot;, GetTimeNow());
+    ex.schedule(worker, 5, TimeUnit.SECONDS);
+
+    try {
+      Thread.sleep(10000);
+    } catch(Exception e) {
+      // Even if interrupted exception is thrown during sleep, keep going
+    }
+    System.out.println(&quot;Test completed&quot;);
+  }	
+
+  public static void main(String[] args) {
+    Tester t = new Tester();
+    t.RunTest();
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The test app output looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20140317 23:56:53: Scheduled worker to run in 5 seconds
+20140317 23:56:58: Worker running
+Test completed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 17 Mar 2014 00:00:00 +0800</pubDate>
+        <link>http://patrickleungwl.github.io//tech/2014/03/17/delayed_background/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2014/03/17/delayed_background/</guid>
+        
+        <category>java,</category>
+        
+        <category>threads</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>Garbage Collector Differences between Java and CSharp</title>
@@ -41,8 +225,8 @@
 
 </description>
         <pubDate>Sat, 15 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io/./tech/2014/03/15/garbage-collector-differences/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/./tech/2014/03/15/garbage-collector-differences/</guid>
+        <link>http://patrickleungwl.github.io//tech/2014/03/15/garbage-collector-differences/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2014/03/15/garbage-collector-differences/</guid>
         
         <category>java,</category>
         
@@ -159,8 +343,8 @@ checkWeakRefs: size=1000, numCollected=992
 
 </description>
         <pubDate>Thu, 13 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io/./tech/2014/03/13/weakreferences-in-csharp/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/./tech/2014/03/13/weakreferences-in-csharp/</guid>
+        <link>http://patrickleungwl.github.io//tech/2014/03/13/weakreferences-in-csharp/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2014/03/13/weakreferences-in-csharp/</guid>
         
         <category>csharp,</category>
         
@@ -277,8 +461,8 @@ solutions to tackling tough memory problems.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 12 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io/./tech/2014/03/12/softreferences-in-java/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/./tech/2014/03/12/softreferences-in-java/</guid>
+        <link>http://patrickleungwl.github.io//tech/2014/03/12/softreferences-in-java/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2014/03/12/softreferences-in-java/</guid>
         
         <category>java,</category>
         
@@ -409,8 +593,8 @@ Completed testWeakReferences
 
 </description>
         <pubDate>Tue, 11 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io/./tech/2014/03/11/weakreferences-in-java/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/./tech/2014/03/11/weakreferences-in-java/</guid>
+        <link>http://patrickleungwl.github.io//tech/2014/03/11/weakreferences-in-java/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2014/03/11/weakreferences-in-java/</guid>
         
         <category>java,</category>
         
