@@ -43,9 +43,11 @@
     <div class="extra-pagination inner">
         <nav class="pagination" role="pagination">
     
-    <span class="page-number"> Page 1 of 2 </span>
-     
-        <a class="older-posts" href="/page2/" title="Next Page">Older Posts &raquo;</a>
+        
+            <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
+        
+    
+    <span class="page-number"> Page 2 of 2 </span>
      
 </nav>
     </div>
@@ -54,20 +56,20 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/03/17/java-assertions/">Assertions in Java</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>Just playing with a simple delegate example.</p>
+                <p>Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:</p>
 
- <a class="read-more" href="/tech/2014/11/02/simple-delegate-example/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/03/17/java-assertions/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-11-02">
-                    02 Nov 2014
+                <time class="post-date" datetime="2014-03-17">
+                    17 Mar 2014
                 </time> 
             </footer>
         </article>
@@ -76,21 +78,22 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/11/02/how-to-use-yield/">How to use Yield</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do 
-not have.</p>
+                <p>With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer
+necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
+at scheduled times.  Below shows a quick example of how it can be used.</p>
 
- <a class="read-more" href="/tech/2014/11/02/how-to-use-yield/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/03/17/delayed_background/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-11-02">
-                    02 Nov 2014
+                <time class="post-date" datetime="2014-03-17">
+                    17 Mar 2014
                 </time> 
             </footer>
         </article>
@@ -99,20 +102,20 @@ not have.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/24/equals-hashcode-and-comparable-interface/">Equals Hashcode and Comparable Interface in Java</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a></h2>
             </header>
             <section class="post-excerpt">
-                <h2 id="when-should-a-class-overwrite-equals-and-hashcode">When should a class overwrite equals() and hashCode()?</h2>
+                <p>More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’.</p>
 
- <a class="read-more" href="/tech/2014/03/24/equals-hashcode-and-comparable-interface/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/03/15/garbage-collector-differences/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-03-24">
-                    24 Mar 2014
+                <time class="post-date" datetime="2014-03-15">
+                    15 Mar 2014
                 </time> 
             </footer>
         </article>
@@ -121,23 +124,20 @@ not have.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>I’ve just had enough of the abstract high-faluting language used in the GOF’s Design Patterns.
-Absolutely <strong>enough</strong>.  I’m sure there’s more than enough readers who can’t understand any one of the
-GOF’s denser patterns.  The Decorator Pattern is one such dense connundrum.  I mean- <strong>just give it to me 
-straight</strong> what does it do?  why use it?  how to build it?</p>
+                <p>Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-)</p>
 
- <a class="read-more" href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/03/13/weakreferences-in-csharp/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-03-24">
-                    24 Mar 2014
+                <time class="post-date" datetime="2014-03-13">
+                    13 Mar 2014
                 </time> 
             </footer>
         </article>
@@ -146,20 +146,24 @@ straight</strong> what does it do?  why use it?  how to build it?</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>As a software developer, I regularly do drills with different languages.  This is rather analogous to how musicians play scales with their instructions.  This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes.</p>
+                <p>Continuing on with our investigation into memory handling in Java, let’s look at another 
+rarely used feature- the SoftReference.  To get to the point, a SoftReference is 
+just like a WeakReference- except that the Garbage Collector only collects its 
+referenced object if the JVM is running low on memory.  This makes a SoftReference 
+more “sticky” in a running process’s memory.</p>
 
- <a class="read-more" href="/tech/2014/03/22/searching-for-primes-with-c/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/03/12/softreferences-in-java/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-03-22">
-                    22 Mar 2014
+                <time class="post-date" datetime="2014-03-12">
+                    12 Mar 2014
                 </time> 
             </footer>
         </article>
@@ -168,9 +172,11 @@ straight</strong> what does it do?  why use it?  how to build it?</p>
 
     <nav class="pagination" role="pagination">
     
-    <span class="page-number"> Page 1 of 2 </span>
-     
-        <a class="older-posts" href="/page2/" title="Next Page">Older Posts &raquo;</a>
+        
+            <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
+        
+    
+    <span class="page-number"> Page 2 of 2 </span>
      
 </nav>
 

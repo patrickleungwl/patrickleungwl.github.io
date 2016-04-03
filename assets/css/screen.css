@@ -52,7 +52,7 @@ hr {
 }
 mark { background: #FF0; color: #000; }
 code, kbd, pre,
-samp { font-family: monospace, serif; font-size: 1em; }
+samp { font-family: monospace, serif; font-size: 0.9em; }
 pre { white-space: pre-wrap; }
 q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 small { font-size: 80%; }
@@ -354,13 +354,13 @@ pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: #D3DDD3 1px solid;
-    width: 100%;
-    padding: 1px 1px;
+    width: 110%;
+    padding: 4px 4px;
     font-family: 'Anonymous Pro', Inconsolata, monospace;
-    font-size: 1.0em;
+    font-size: 0.9em;
     white-space: pre-wrap;
     overflow: auto;
-    background-color: #DDFBEA;
+    background-color: #E0F8F1 !important;
     line-height: 1.2;
     border-radius: 4px;
 }

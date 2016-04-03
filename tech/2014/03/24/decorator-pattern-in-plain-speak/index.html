@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title> - A journal of tech issues in financial applications</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
+
+</head>
+<body class="home-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="http://patrickleungwl.github.io//">Home</a>
+        <a class="subscribe-button icon-feed" href="http://patrickleungwl.github.io//feed.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Decorator Pattern in Plain Speak</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2014-03-24">24 Mar 2014</time>
+                
+                    on tech
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>I’ve just had enough of the abstract high-faluting language used in the GOF’s Design Patterns.
+Absolutely <strong>enough</strong>.  I’m sure there’s more than enough readers who can’t understand any one of the
+GOF’s denser patterns.  The Decorator Pattern is one such dense connundrum.  I mean- <strong>just give it to me 
+straight</strong> what does it do?  why use it?  how to build it?</p>
+
+<p>In plain terms, if there is a need to add functionality to a class instance (object)- 
+without changing its inherent behavior, then it’s a scenario to use a Decorator pattern.</p>
+
+<p>For adding functionality to a class, why not use inheritance or adding the class into another 
+class thru aggregation or composition?  All of these methods achieve the goal of adding new 
+functionality to a base class- however this is all done at compile time.</p>
+
+<p>In proper software development circles, it is more appropriate to stay flexible and nimble- 
+by delaying the implementation until the last possible moment.  This flexibility is usually 
+achieved by means of configuration (think Spring)- that wires up final implementation classes at runtime.</p>
+
+<p>Likewise, the Decorator pattern can add new functionality to individual objects- rather than 
+classes at runtime.  In plain street English, Decorators are “Wrappers”.  Decorator classes 
+wrap around a base class- and add new functionality.</p>
+
+<p>GOFers usually diagram what they mean by means of UML.  But how about just a simple Ascii 
+diagram for passing on simple ideas without the exact ER formalisms???</p>
+
+<p>In a Decorator pattern, there are four main classes.</p>
+
+<ul>
+  <li>An <strong>AbstractWidget</strong> class.</li>
+  <li>A <strong>ConcreteWidget</strong> class.</li>
+  <li>A <strong>AbstractWrapper</strong> derived from AbstractWidget, wraps around a AbstractWidget in constructor.</li>
+  <li>A <strong>ConcreteWrapper</strong> firmly adds new functionality to the wrapped Widget.</li>
+</ul>
+
+<p>In simple psuedo code terms-</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">AbstractWidget</span> <span class="p">{</span>
+  <span class="k">abstract</span> <span class="nf">baseMethod</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">ConcreteWidget</span> <span class="p">:</span> <span class="n">AbstractWidget</span> <span class="p">{</span>
+  <span class="n">@Override</span>
+  <span class="nf">baseMethod</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">AbstractWrapper</span> <span class="p">:</span> <span class="n">AbstractWidget</span> <span class="p">{</span>
+  <span class="nf">AbstractWrapper</span><span class="p">(</span> <span class="n">AbstractWidget</span> <span class="p">)</span>
+  <span class="n">@Override</span>
+  <span class="nf">baseMethod</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">ConcreteWrapper</span> <span class="p">:</span> <span class="n">AbstractWrapper</span> <span class="p">{</span>
+  <span class="nf">ConcreteWrapper</span><span class="p">(</span> <span class="n">AbstractWidget</span> <span class="p">)</span>
+  <span class="n">@Override</span>
+  <span class="nf">baseMethod</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>To put this pattern into practical terms, let’s imagine two types of automobiles- HondaAccord and TeslaRoadster, each sold with two types of options- SunRoof and TintedWindows.  Each combination of options- none, SunRoof only, TintedWindows only, SunRoof + TintedWindows- yields a unique final assembly for the car.</p>
+
+<p>We can model each car + options combination with a base car class and a set of boolean flags.  The problem with this model is that if we add a new option, we’d have to mess with the base car class.  The Decorator allows us to add new options to a car without changing the base car class.</p>
+
+<p>The code sample below shows one possible Decorator implementation.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// --------------------------------------------
+// CarMake
+// The Abstract Widget
+//
+</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">CarMake</span> <span class="p">{</span>
+    
+    <span class="k">abstract</span> <span class="k">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">();</span>
+    
+    <span class="nf">CarMake</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>            
+<span class="p">}</span>
+
+
+<span class="c1">// --------------------------------------------
+// HondaAccord
+// The concrete widget
+//
+</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">HondaAccord</span> <span class="n">extends</span> <span class="n">CarMake</span> <span class="p">{</span>
+
+    <span class="k">public</span> <span class="nf">HondaAccord</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+    
+    <span class="n">@Override</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"HondaAccord"</span><span class="p">;</span>
+    <span class="p">}</span>        
+<span class="p">}</span>
+
+
+<span class="c1">// --------------------------------------------
+// TeslaRoadster
+// Second concrete widget
+//
+</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">TeslaRoadster</span> <span class="n">extends</span> <span class="n">CarMake</span> <span class="p">{</span>
+    
+    <span class="k">public</span> <span class="nf">TeslaRoadster</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+    
+    <span class="n">@Override</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"TeslaRoadster"</span><span class="p">;</span>
+    <span class="p">}</span>        
+<span class="p">}</span>
+
+
+<span class="c1">// --------------------------------------------
+// CarDecorator
+// Abstractor decorator (wrapper)
+//
+</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">CarDecorator</span> <span class="n">extends</span> <span class="n">CarMake</span> <span class="p">{</span>
+    
+    <span class="n">@Override</span>
+    <span class="k">public</span> <span class="nf">CarDecorator</span><span class="p">(</span><span class="n">CarMake</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>    
+<span class="p">}</span>
+
+
+
+<span class="c1">// --------------------------------------------
+// SunRoofCarDecorator
+//
+</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SunRoofCarDecorator</span> <span class="n">extends</span> <span class="n">CarDecorator</span> <span class="p">{</span>
+    
+    <span class="n">CarMake</span> <span class="n">_wrappedCar</span><span class="p">;</span>
+    
+    <span class="k">public</span> <span class="nf">SunRoofCarDecorator</span><span class="p">(</span><span class="n">CarMake</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">super</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+        
+        <span class="n">_wrappedCar</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="n">@Override</span>
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_wrappedCar</span><span class="p">.</span><span class="nf">getName</span><span class="p">()</span> <span class="p">+</span> <span class="s">", SunRoof"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">// --------------------------------------------
+// TintedWindowsCarDecorator
+//
+</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">TintedWindowsCarDecorator</span> <span class="n">extends</span> <span class="n">CarDecorator</span> <span class="p">{</span>
+    
+    <span class="n">CarMake</span> <span class="n">_wrappedCar</span><span class="p">;</span>
+    
+    <span class="k">public</span> <span class="nf">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">CarMake</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">super</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+        
+        <span class="n">_wrappedCar</span> <span class="p">=</span> <span class="n">c</span><span class="p">;</span>
+    <span class="p">}</span>
+  
+    <span class="n">@Override</span>  
+    <span class="k">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_wrappedCar</span><span class="p">.</span><span class="nf">getName</span><span class="p">()</span> <span class="p">+</span> <span class="s">", TintedWindows"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">// --------------------------------------------
+// Tester
+//
+</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Tester</span> <span class="p">{</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// Car A, HondaAccord has nothing
+</span>        <span class="c1">// Car B, HondaAccord has SunRoof
+</span>        <span class="c1">// Car C, HondaAccord has TintedWindows
+</span>        <span class="c1">// Car D, HondaAccord has SunRoof and TintedWindows
+</span>
+        <span class="c1">// Car E, TeslaRoadster has nothing
+</span>        <span class="c1">// Car F, TeslaRoadster has SunRoof
+</span>        <span class="c1">// Car G, TeslaRoadster has TintedWindows
+</span>        <span class="c1">// Car H, TeslaRoadster has SunRoof and TintedWindows
+</span>
+        <span class="n">CarMake</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">HondaAccord</span><span class="p">();</span>
+        <span class="n">CarMake</span> <span class="n">b</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SunRoofCarDecorator</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+        <span class="n">CarMake</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+        <span class="n">CarMake</span> <span class="n">d</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SunRoofCarDecorator</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+
+        <span class="n">CarMake</span> <span class="n">e</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TeslaRoadster</span><span class="p">();</span>
+        <span class="n">CarMake</span> <span class="n">f</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SunRoofCarDecorator</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+        <span class="n">CarMake</span> <span class="n">g</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+        <span class="n">CarMake</span> <span class="n">h</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"A = "</span> <span class="p">+</span> <span class="n">a</span><span class="p">.</span><span class="nf">getName</span><span class="p">());</span>              
+        <span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"B = "</span> <span class="p">+</span> <span class="n">b</span><span class="p">.</span><span class="nf">getName</span><span class="p">());</span>              
+        <span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"C = "</span> <span class="p">+</span> <span class="n">c</span><span class="p">.</span><span class="nf">getName</span><span class="p">());</span>              
+        <span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"D = "</span> <span class="p">+</span> <span class="n">d</span><span class="p">.</span><span class="nf">getName</span><span class="p">());</span>              
+
+        <span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"E = "</span> <span class="p">+</span> <span class="n">e</span><span class="p">.</span><span class="nf">getName</span><span class="p">());</span>              
+        <span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"F = "</span> <span class="p">+</span> <span class="n">f</span><span class="p">.</span><span class="nf">getName</span><span class="p">());</span>              
+        <span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"G = "</span> <span class="p">+</span> <span class="n">g</span><span class="p">.</span><span class="nf">getName</span><span class="p">());</span>              
+        <span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"H = "</span> <span class="p">+</span> <span class="n">h</span><span class="p">.</span><span class="nf">getName</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<p>The test program output looks as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>A = HondaAccord
+B = HondaAccord, SunRoof
+C = HondaAccord, TintedWindows
+D = HondaAccord, TintedWindows, SunRoof
+E = TeslaRoadster
+F = TeslaRoadster, SunRoof
+G = TeslaRoadster, TintedWindows
+H = TeslaRoadster, SunRoof, TintedWindows
+</code></pre>
+</div>
+
+<p>From this bare-bones example, you can see how we can programmatically alter an object’s behavior at runtime- without affecting the original object’s behavior.</p>
+
+
+        </section>
+
+        <p>
+
+        
+            <section class="archive">
+                <h5>Archive</h5>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                            
+
+                    
+                        <li><span>24 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a>
+                        </li>
+                    
+                        <li><span>22 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a>
+                        </li>
+                    
+                        <li><span>21 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/21/exceptions-in-java-constructors/">Exceptions in Java Constructors</a>
+                        </li>
+                    
+                        <li><span>20 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a>
+                        </li>
+                    
+                        <li><span>17 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/17/java-assertions/">Assertions in Java</a>
+                        </li>
+                    
+                </ul>
+            </section>
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=Decorator Pattern in Plain Speak&amp;url=/tech/2014/03/24/decorator-pattern-in-plain-speak/"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2014/03/24/decorator-pattern-in-plain-speak/"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2014/03/24/decorator-pattern-in-plain-speak/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+            <!-- Disqus comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        
+
+      <section class="copyright">
+        <a href=""></a> &copy; 
+               &bull; All rights reserved.
+      </section>
+      <section class="poweredby">Made with Jekyll using 
+        <a href="http://github.com/rosario/kasper">Kasper theme</a>
+      </section>
+    </footer>
+    
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>   
+</body>
+</html>

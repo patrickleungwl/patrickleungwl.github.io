@@ -40,23 +40,6 @@
             </section>
         </header>
 
-<!--         <header class="post-header">
-            <a id="blog-logo" href="http://patrickleungwl.github.io/">
-                
-                    <span class="blog-title"></span>
-                
-            </a>
-        </header> -->
-
-        <!-- <span class="post-meta">
-            <time datetime="2014-03-12">12 Mar 2014</time>
-            
-                on tech
-            
-        </span> -->
-
-        <!-- <h1 class="post-title">SoftReferences in Java</h1> -->
-
         <section class="post-content">
             <p>Continuing on with our investigation into memory handling in Java, let’s look at another 
 rarely used feature- the SoftReference.  To get to the point, a SoftReference is 
@@ -70,62 +53,62 @@ The following SoftReference test code example creates a thousand SoftReferences 
 DumbWeights, removes any strong references to the DumbWeights, and then 
 periodically checks when and how often the GC cleans up the DumbWeight instances.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>package drills;
-import java.lang.ref.*;
-import java.util.*;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.ref.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
-public class MyTest { 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTest</span> <span class="o">{</span> 
 
-  /** checkSoftReferences
+  <span class="cm">/** checkSoftReferences
    *  
    *  Check how many soft references still exist and not collected
-   */
-  private void checkSoftReferences(Set&lt;SoftReference&gt; s) {
-    int numCollected = 0;
-    Iterator&lt;SoftReference&gt; i = s.iterator();
-    while (i.hasNext()) {
-      SoftReference w = i.next();
-      DumbWeight d = w.get();
-      if (d==null) {
-        ++numCollected;
-      } 
-    }
-    System.out.format("checkSoftRefs: size=%d, numCollected=%d\n", 
-      s.size(), numCollected );
-  }
+   */</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="n">checkSoftReferences</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">numCollected</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">i</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">SoftReference</span> <span class="n">w</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">DumbWeight</span> <span class="n">d</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">d</span><span class="o">==</span><span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">++</span><span class="n">numCollected</span><span class="o">;</span>
+      <span class="o">}</span> 
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"checkSoftRefs: size=%d, numCollected=%d\n"</span><span class="o">,</span> 
+      <span class="n">s</span><span class="o">.</span><span class="na">size</span><span class="o">(),</span> <span class="n">numCollected</span> <span class="o">);</span>
+  <span class="o">}</span>
 
-  /** testSoftReferences
+  <span class="cm">/** testSoftReferences
    *  
    * Soft references are like weak references- 
    * except that soft references only get garbage collected
    * if the process is running out of heap memory.
    * 
    * This means soft references are more sticky than weak references.
-   */
-  public void testSoftReferences() {
+   */</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="n">testSoftReferences</span><span class="o">()</span> <span class="o">{</span>
 
-    Set&lt;SoftReference&gt; s = new HashSet&lt;SoftReference&gt;();
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;();</span>
 
-    System.out.println("*****************************");
-    System.out.println("Starting testSoftReferences");
-    System.out.println("Creating 1000 soft references");
-    for (int i=0; i&lt;1000; i++) {
-      DumbWeight d = new DumbWeight(100000);
-      SoftReference w = new SoftReference(d);
-      s.add(w);
-      d = null;
-      if (s.size()%100==0) {
-        checkSoftReferences(s);
-      }
-    } 
-    System.out.println("Completed testSoftReferences");
-  }
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"*****************************"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Starting testSoftReferences"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Creating 1000 soft references"</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">1000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">DumbWeight</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DumbWeight</span><span class="o">(</span><span class="mi">100000</span><span class="o">);</span>
+      <span class="n">SoftReference</span> <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SoftReference</span><span class="o">(</span><span class="n">d</span><span class="o">);</span>
+      <span class="n">s</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">w</span><span class="o">);</span>
+      <span class="n">d</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">size</span><span class="o">()%</span><span class="mi">100</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">checkSoftReferences</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> 
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Completed testSoftReferences"</span><span class="o">);</span>
+  <span class="o">}</span>
 
-  public static void main(String[] args) { 
-    MyTest m = new MyTest();
-    m.testSoftReferences();
-  }
-}
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+    <span class="n">MyTest</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyTest</span><span class="o">();</span>
+    <span class="n">m</span><span class="o">.</span><span class="na">testSoftReferences</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
@@ -163,27 +146,46 @@ solutions to tackling tough memory problems.</p>
 
         </section>
 
+        <p>
+
         
-        <section class="archive">
-            <h5>Archive</h5>
-            <ul>
-                
-                <li><span>20 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></li>
-                
-                <li><span>17 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/17/java-assertions/">Assertions in Java</a></li>
-                
-                <li><span>17 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a></li>
-                
-                <li><span>15 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a></li>
-                
-                <li><span>13 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></li>
-                
-                <li><span>12 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></li>
-                
-                <li><span>11 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a></li>
-                
-            </ul>
-        </section>
+            <section class="archive">
+                <h5>Archive</h5>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                            
+
+                    
+                        <li><span>11 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a>
+                        </li>
+                    
+                </ul>
+            </section>
         
 
         <footer class="post-footer">
@@ -216,8 +218,10 @@ solutions to tackling tough memory problems.</p>
 
 </main>
 
+
+
     <footer class="site-footer clearfix">
-    
+        
 
       <section class="copyright">
         <a href=""></a> &copy; 

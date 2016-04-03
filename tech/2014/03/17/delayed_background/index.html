@@ -40,75 +40,58 @@
             </section>
         </header>
 
-<!--         <header class="post-header">
-            <a id="blog-logo" href="http://patrickleungwl.github.io/">
-                
-                    <span class="blog-title"></span>
-                
-            </a>
-        </header> -->
-
-        <!-- <span class="post-meta">
-            <time datetime="2014-03-17">17 Mar 2014</time>
-            
-                on tech
-            
-        </span> -->
-
-        <!-- <h1 class="post-title">Delayed Background Thread Runnable</h1> -->
-
         <section class="post-content">
             <p>With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer
 necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
 at scheduled times.  Below shows a quick example of how it can be used.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>package drills;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+<span class="kn">import</span> <span class="nn">java.text.DateFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.Executors</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.ScheduledExecutorService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.TimeUnit</span><span class="o">;</span>
 
-public class Tester {
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="o">{</span>
 
-  DateFormat _df;
+  <span class="n">DateFormat</span> <span class="n">_df</span><span class="o">;</span>
 
-  public Tester() {
-    _df = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
-  }
+  <span class="kd">public</span> <span class="n">Tester</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">_df</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyyMMdd HH:mm:ss"</span><span class="o">);</span>
+  <span class="o">}</span>
 
-  public String GetTimeNow() {
-    Date dt = new Date();
-    return _df.format(dt);
-  }
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">GetTimeNow</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Date</span> <span class="n">dt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+    <span class="k">return</span> <span class="n">_df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">dt</span><span class="o">);</span>
+  <span class="o">}</span>
 
-  public void RunTest() {
-    Runnable worker = new Runnable() {
-      public void run() {
-        System.out.format("%s: Worker running\n", GetTimeNow());				
-      }
-    };
+  <span class="kd">public</span> <span class="kt">void</span> <span class="n">RunTest</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Runnable</span> <span class="n">worker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="n">run</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Worker running\n"</span><span class="o">,</span> <span class="n">GetTimeNow</span><span class="o">());</span>				
+      <span class="o">}</span>
+    <span class="o">};</span>
 
-    ScheduledExecutorService ex = Executors.newSingleThreadScheduledExecutor();
-    System.out.format("%s: Scheduled worker to run in 5 seconds\n", GetTimeNow());
-    ex.schedule(worker, 5, TimeUnit.SECONDS);
+    <span class="n">ScheduledExecutorService</span> <span class="n">ex</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Scheduled worker to run in 5 seconds\n"</span><span class="o">,</span> <span class="n">GetTimeNow</span><span class="o">());</span>
+    <span class="n">ex</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="n">worker</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 
-    try {
-      Thread.sleep(10000);
-    } catch(Exception e) {
-      // Even if interrupted exception is thrown during sleep, keep going
-    }
-    System.out.println("Test completed");
-  }	
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// Even if interrupted exception is thrown during sleep, keep going</span>
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Test completed"</span><span class="o">);</span>
+  <span class="o">}</span>	
 
-  public static void main(String[] args) {
-    Tester t = new Tester();
-    t.RunTest();
-  }
-}
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Tester</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tester</span><span class="o">();</span>
+    <span class="n">t</span><span class="o">.</span><span class="na">RunTest</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 <p>The test app output looks like this:</p>
@@ -122,27 +105,54 @@ Test completed
 
         </section>
 
+        <p>
+
         
-        <section class="archive">
-            <h5>Archive</h5>
-            <ul>
-                
-                <li><span>20 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></li>
-                
-                <li><span>17 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/17/java-assertions/">Assertions in Java</a></li>
-                
-                <li><span>17 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a></li>
-                
-                <li><span>15 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a></li>
-                
-                <li><span>13 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></li>
-                
-                <li><span>12 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></li>
-                
-                <li><span>11 Mar 2014</span>  <a href="http://patrickleungwl.github.io//tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a></li>
-                
-            </ul>
-        </section>
+            <section class="archive">
+                <h5>Archive</h5>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                            
+
+                    
+                        <li><span>17 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a>
+                        </li>
+                    
+                        <li><span>15 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a>
+                        </li>
+                    
+                        <li><span>13 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a>
+                        </li>
+                    
+                        <li><span>12 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a>
+                        </li>
+                    
+                        <li><span>11 Mar 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a>
+                        </li>
+                    
+                </ul>
+            </section>
         
 
         <footer class="post-footer">
@@ -175,8 +185,10 @@ Test completed
 
 </main>
 
+
+
     <footer class="site-footer clearfix">
-    
+        
 
       <section class="copyright">
         <a href=""></a> &copy; 
