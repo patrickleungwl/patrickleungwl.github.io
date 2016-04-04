@@ -47,7 +47,9 @@
             <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
         
     
-    <span class="page-number"> Page 2 of 2 </span>
+    <span class="page-number"> Page 2 of 3 </span>
+     
+        <a class="older-posts" href="/page3/" title="Next Page">Older Posts &raquo;</a>
      
 </nav>
     </div>
@@ -56,20 +58,20 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/17/java-assertions/">Assertions in Java</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/11/04/invoking-delegates-asynchronously/">Invoking Delegates Asynchronously</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:</p>
+                <p>It’s a slow day at work.  Let’s try an asynch delegate.</p>
 
- <a class="read-more" href="/tech/2014/03/17/java-assertions/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/11/04/invoking-delegates-asynchronously/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-03-17">
-                    17 Mar 2014
+                <time class="post-date" datetime="2014-11-04">
+                    04 Nov 2014
                 </time> 
             </footer>
         </article>
@@ -78,22 +80,20 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer
-necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
-at scheduled times.  Below shows a quick example of how it can be used.</p>
+                <p>Just playing with a simple delegate example.</p>
 
- <a class="read-more" href="/tech/2014/03/17/delayed_background/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/11/02/simple-delegate-example/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-03-17">
-                    17 Mar 2014
+                <time class="post-date" datetime="2014-11-02">
+                    02 Nov 2014
                 </time> 
             </footer>
         </article>
@@ -102,20 +102,21 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/11/02/how-to-use-yield/">How to use Yield</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’.</p>
+                <p>Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do 
+not have.</p>
 
- <a class="read-more" href="/tech/2014/03/15/garbage-collector-differences/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/11/02/how-to-use-yield/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-03-15">
-                    15 Mar 2014
+                <time class="post-date" datetime="2014-11-02">
+                    02 Nov 2014
                 </time> 
             </footer>
         </article>
@@ -124,20 +125,20 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/03/24/equals-hashcode-and-comparable-interface/">Equals Hashcode and Comparable Interface in Java</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-)</p>
+                <h2 id="when-should-a-class-overwrite-equals-and-hashcode">When should a class overwrite equals() and hashCode()?</h2>
 
- <a class="read-more" href="/tech/2014/03/13/weakreferences-in-csharp/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/03/24/equals-hashcode-and-comparable-interface/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-03-13">
-                    13 Mar 2014
+                <time class="post-date" datetime="2014-03-24">
+                    24 Mar 2014
                 </time> 
             </footer>
         </article>
@@ -146,24 +147,23 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></h2>
+                <h2 class="post-title"><a href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a></h2>
             </header>
             <section class="post-excerpt">
-                <p>Continuing on with our investigation into memory handling in Java, let’s look at another 
-rarely used feature- the SoftReference.  To get to the point, a SoftReference is 
-just like a WeakReference- except that the Garbage Collector only collects its 
-referenced object if the JVM is running low on memory.  This makes a SoftReference 
-more “sticky” in a running process’s memory.</p>
+                <p>I’ve just had enough of the abstract high-faluting language used in the GOF’s Design Patterns.
+Absolutely <strong>enough</strong>.  I’m sure there’s more than enough readers who can’t understand any one of the
+GOF’s denser patterns.  The Decorator Pattern is one such dense connundrum.  I mean- <strong>just give it to me 
+straight</strong> what does it do?  why use it?  how to build it?</p>
 
- <a class="read-more" href="/tech/2014/03/12/softreferences-in-java/">&raquo;</a>
+ <a class="read-more" href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">&raquo;</a>
             </section>
             <footer class="post-meta">
                 
                  
                     on tech 
                 
-                <time class="post-date" datetime="2014-03-12">
-                    12 Mar 2014
+                <time class="post-date" datetime="2014-03-24">
+                    24 Mar 2014
                 </time> 
             </footer>
         </article>
@@ -176,7 +176,9 @@ more “sticky” in a running process’s memory.</p>
             <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
         
     
-    <span class="page-number"> Page 2 of 2 </span>
+    <span class="page-number"> Page 2 of 3 </span>
+     
+        <a class="older-posts" href="/page3/" title="Next Page">Older Posts &raquo;</a>
      
 </nav>
 

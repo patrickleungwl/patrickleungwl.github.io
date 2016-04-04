@@ -31,9 +31,9 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">Assertions in Java</h1>
+            <h1 class="post-title">Multi-threading Cheat Sheet</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2014-03-17">17 Mar 2014</time>
+                <time class="post-date" datetime="2015-12-18">18 Dec 2015</time>
                 
                     on tech
                 
@@ -41,11 +41,21 @@
         </header>
 
         <section class="post-content">
-            <p>Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:</p>
+            <p>Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>java -ea Test.java
-</code></pre>
-</div>
+<ul>
+  <li>BackgroundWorker
+    <ul>
+      <li>Easy to start working in background</li>
+      <li>Easy to periodically update the UI thread</li>
+    </ul>
+  </li>
+  <li>Theads
+    <ul>
+      <li>Heavy weight multi-threading, but gives full control</li>
+    </ul>
+  </li>
+</ul>
 
 
         </section>
@@ -64,52 +74,28 @@
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                             
                             
 
                     
-                        <li><span>17 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io//tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a>
+                        <li><span>17 Dec 2015</span>
+                          <a href="http://patrickleungwl.github.io//tech,csharp/2015/12/17/how-backgroundworker-works/">How BackgroundWorker Works</a>
                         </li>
                     
-                        <li><span>15 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io//tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a>
+                        <li><span>03 May 2015</span>
+                          <a href="http://patrickleungwl.github.io//tech/2015/05/03/are-generic-collections-faster/">Are Generic Collections Faster than Non-Generic Collections?</a>
                         </li>
                     
-                        <li><span>13 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io//tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a>
+                        <li><span>05 Nov 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/11/05/all-about-events/">All About Events</a>
                         </li>
                     
-                        <li><span>12 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io//tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a>
+                        <li><span>04 Nov 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/11/04/invoking-delegates-asynchronously/">Invoking Delegates Asynchronously</a>
                         </li>
                     
-                        <li><span>11 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io//tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a>
+                        <li><span>02 Nov 2014</span>
+                          <a href="http://patrickleungwl.github.io//tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a>
                         </li>
                     
                 </ul>
@@ -123,15 +109,15 @@
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=Assertions in Java&amp;url=/tech/2014/03/17/java-assertions/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=Multi-threading Cheat Sheet&amp;url=/tech/2015/12/18/multi-threading-cheatsheet/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2014/03/17/java-assertions/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2015/12/18/multi-threading-cheatsheet/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2014/03/17/java-assertions/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2015/12/18/multi-threading-cheatsheet/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
