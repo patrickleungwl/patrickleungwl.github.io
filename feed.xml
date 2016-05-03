@@ -5,8 +5,8 @@
     <description>A journal of tech issues in financial applications</description>
     <link>http://patrickleungwl.github.io//</link>
     <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 May 2016 22:54:49 +0800</pubDate>
-    <lastBuildDate>Tue, 03 May 2016 22:54:49 +0800</lastBuildDate>
+    <pubDate>Tue, 03 May 2016 22:59:18 +0800</pubDate>
+    <lastBuildDate>Tue, 03 May 2016 22:59:18 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -53,7 +53,7 @@ in &lt;a href=&quot;../../../../../../assets/pdf/20160502.5.ratio.pdf&quot;&gt;t
       <item>
         <title>Singapore Math Primary 5 Five Ratio Question</title>
         <description>&lt;p&gt;As my kid has been progressing through the Singapore school system, Iâ€™ve never been seriously challenged
-by primary school math until now.  I was embarrassingly stomped my the following question.&lt;br /&gt;
+by primary school math until now.  I was embarrassingly stomped by the following question.&lt;br /&gt;
 It took me some time to figure it out.  Iâ€™ve posted the question and answer for everyoneâ€™s benefit.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Mr Lee had some red and white paint.  1/3 of the paint was red.  He used 
@@ -574,7 +574,7 @@ would it work?  This was the golden thread that ran through my years in office.â
     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LogMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{0} ThreadId=3D{1} &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{0} ThreadId={1} &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                 &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HH:MM:ss.fff&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
                 &lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CurrentThread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ManagedThreadId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -589,11 +589,11 @@ would it work?  This was the golden thread that ran through my years in office.â
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;nf&quot;&gt;LogMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;LongComputeTask starting&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-            &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percentDone&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3D&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.0f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3D&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percentDone&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.0f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
             &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
                 &lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;percentDone&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3D&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2.0f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;percentDone&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2.0f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
                 &lt;span class=&quot;nf&quot;&gt;LogMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;LongComputeTask {0:0.0f}% completed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                     &lt;span class=&quot;n&quot;&gt;percentDone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -613,7 +613,7 @@ would it work?  This was the golden thread that ran through my years in office.â
             &lt;span class=&quot;c1&quot;&gt;// Acquire mutex here, ensure only 1 instance of this program
 &lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;// run at any one time
 &lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myMutex&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3D&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Mutex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;TestMutex&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myMutex&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Mutex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;TestMutex&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;myMutex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WaitOne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;nf&quot;&gt;LongComputeTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;myMutex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ReleaseMutex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
@@ -622,7 +622,7 @@ would it work?  This was the golden thread that ran through my years in office.â
 
         &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tester&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3D&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MutexTester&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tester&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MutexTester&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;tester&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;RunTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -633,36 +633,36 @@ would it work?  This was the golden thread that ran through my years in office.â
 &lt;p&gt;Window One&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;TestMutex.exe
-19:05:05.661 ThreadId=3D1 LongComputeTask starting
-19:05:06.701 ThreadId=3D1 LongComputeTask 2.0f% completed
-19:05:07.703 ThreadId=3D1 LongComputeTask 4.0f% completed
-19:05:08.703 ThreadId=3D1 LongComputeTask 6.0f% completed
-19:05:09.705 ThreadId=3D1 LongComputeTask 8.0f% completed
-19:05:10.705 ThreadId=3D1 LongComputeTask 10.0f% completed
-19:05:11.705 ThreadId=3D1 LongComputeTask 12.0f% completed
-19:05:12.707 ThreadId=3D1 LongComputeTask 14.0f% completed
-19:05:13.707 ThreadId=3D1 LongComputeTask 16.0f% completed
-19:05:14.707 ThreadId=3D1 LongComputeTask 18.0f% completed
-19:05:15.709 ThreadId=3D1 LongComputeTask 20.0f% completed
-19:05:15.709 ThreadId=3D1 LongComputeTask completed
+19:05:05.661 ThreadId=1 LongComputeTask starting
+19:05:06.701 ThreadId=1 LongComputeTask 2.0f% completed
+19:05:07.703 ThreadId=1 LongComputeTask 4.0f% completed
+19:05:08.703 ThreadId=1 LongComputeTask 6.0f% completed
+19:05:09.705 ThreadId=1 LongComputeTask 8.0f% completed
+19:05:10.705 ThreadId=1 LongComputeTask 10.0f% completed
+19:05:11.705 ThreadId=1 LongComputeTask 12.0f% completed
+19:05:12.707 ThreadId=1 LongComputeTask 14.0f% completed
+19:05:13.707 ThreadId=1 LongComputeTask 16.0f% completed
+19:05:14.707 ThreadId=1 LongComputeTask 18.0f% completed
+19:05:15.709 ThreadId=1 LongComputeTask 20.0f% completed
+19:05:15.709 ThreadId=1 LongComputeTask completed
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Window Two- notice that this second instance of the test app does not start until the first instance 
 completes.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;19:05:15.709 ThreadId=3D1 LongComputeTask starting
-19:05:16.741 ThreadId=3D1 LongComputeTask 2.0f% completed
-19:05:17.741 ThreadId=3D1 LongComputeTask 4.0f% completed
-19:05:18.743 ThreadId=3D1 LongComputeTask 6.0f% completed
-19:05:19.743 ThreadId=3D1 LongComputeTask 8.0f% completed
-19:05:20.743 ThreadId=3D1 LongComputeTask 10.0f% completed
-19:05:21.745 ThreadId=3D1 LongComputeTask 12.0f% completed
-19:05:22.745 ThreadId=3D1 LongComputeTask 14.0f% completed
-19:05:23.745 ThreadId=3D1 LongComputeTask 16.0f% completed
-19:05:24.747 ThreadId=3D1 LongComputeTask 18.0f% completed
-19:05:25.747 ThreadId=3D1 LongComputeTask 20.0f% completed
-19:05:25.747 ThreadId=3D1 LongComputeTask completed
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;19:05:15.709 ThreadId=1 LongComputeTask starting
+19:05:16.741 ThreadId=1 LongComputeTask 2.0f% completed
+19:05:17.741 ThreadId=1 LongComputeTask 4.0f% completed
+19:05:18.743 ThreadId=1 LongComputeTask 6.0f% completed
+19:05:19.743 ThreadId=1 LongComputeTask 8.0f% completed
+19:05:20.743 ThreadId=1 LongComputeTask 10.0f% completed
+19:05:21.745 ThreadId=1 LongComputeTask 12.0f% completed
+19:05:22.745 ThreadId=1 LongComputeTask 14.0f% completed
+19:05:23.745 ThreadId=1 LongComputeTask 16.0f% completed
+19:05:24.747 ThreadId=1 LongComputeTask 18.0f% completed
+19:05:25.747 ThreadId=1 LongComputeTask 20.0f% completed
+19:05:25.747 ThreadId=1 LongComputeTask completed
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
