@@ -47,7 +47,7 @@
 
 <p>Lastly, a class should implement the Comparable interface when you want to overwrite the default sorting.  So if you want to sort the object backwards or add case insensitivity, you can do so in your own Comparable compareTo() routine.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.HashSet</span><span class="o">;</span>
@@ -82,7 +82,7 @@
   <span class="c1">// seal it</span>
   <span class="c1">// make it constructed from a factory builder</span>
   
-  <span class="kd">private</span> <span class="n">MartianDateTime</span><span class="o">(</span><span class="kt">int</span> <span class="n">hour</span><span class="o">,</span> <span class="kt">int</span> <span class="n">minute</span><span class="o">,</span> <span class="kt">int</span> <span class="n">second</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nf">MartianDateTime</span><span class="o">(</span><span class="kt">int</span> <span class="n">hour</span><span class="o">,</span> <span class="kt">int</span> <span class="n">minute</span><span class="o">,</span> <span class="kt">int</span> <span class="n">second</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">martianHour</span> <span class="o">=</span> <span class="n">hour</span><span class="o">;</span>
     <span class="n">martianMinute</span> <span class="o">=</span> <span class="n">minute</span><span class="o">;</span>
     <span class="n">martianSecond</span> <span class="o">=</span> <span class="n">second</span><span class="o">;</span>
@@ -93,15 +93,15 @@
   <span class="c1">// MartianDateTime</span>
   <span class="c1">// Static factory constructor </span>
   
-  <span class="kd">static</span> <span class="kd">public</span> <span class="n">MartianDateTime</span> <span class="n">BuildMartianDateTime</span><span class="o">(</span><span class="kt">int</span> <span class="n">hour</span><span class="o">,</span> <span class="kt">int</span> <span class="n">minute</span><span class="o">,</span> <span class="kt">int</span> <span class="n">second</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="n">MartianDateTime</span><span class="o">(</span><span class="n">hour</span><span class="o">,</span> <span class="n">minute</span><span class="o">,</span> <span class="n">second</span><span class="o">);</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="n">MartianDateTime</span> <span class="nf">BuildMartianDateTime</span><span class="o">(</span><span class="kt">int</span> <span class="n">hour</span><span class="o">,</span> <span class="kt">int</span> <span class="n">minute</span><span class="o">,</span> <span class="kt">int</span> <span class="n">second</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">MartianDateTime</span><span class="o">(</span><span class="n">hour</span><span class="o">,</span> <span class="n">minute</span><span class="o">,</span> <span class="n">second</span><span class="o">);</span>
   <span class="o">}</span>
 
   <span class="c1">// ---------------------------------------------------------------------</span>
   <span class="c1">// toString()</span>
   
   <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="n">toString</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d:%d:%d"</span><span class="o">,</span> <span class="n">martianHour</span><span class="o">,</span> <span class="n">martianMinute</span><span class="o">,</span> <span class="n">martianSecond</span><span class="o">);</span>
   <span class="o">}</span>
   
@@ -113,7 +113,7 @@
   <span class="c1">//  return true if all significant fields compare equal</span>
 
   <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">boolean</span> <span class="n">equals</span><span class="o">(</span><span class="n">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="n">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="k">this</span> <span class="o">==</span> <span class="n">o</span><span class="o">)</span>
       <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
     
@@ -141,7 +141,7 @@
   <span class="c1">// 2. mix in contributions from each significant field</span>
   
   <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="n">hashCode</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="o">()</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">hashCode</span><span class="o">;</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">tmp</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
       <span class="n">tmp</span> <span class="o">=</span> <span class="mi">17</span><span class="o">;</span>
@@ -159,7 +159,7 @@
   <span class="c1">// If this object is greater than comparedTo object, then return 1  </span>
   
   <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="n">compareTo</span><span class="o">(</span><span class="n">MartianDateTime</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="o">(</span><span class="n">MartianDateTime</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
     
     <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">martianHour</span> <span class="o">&gt;</span> <span class="n">o</span><span class="o">.</span><span class="na">martianHour</span><span class="o">)</span>
       <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
@@ -182,7 +182,7 @@
   <span class="c1">// ---------------------------------------------------------------------</span>
   <span class="c1">// test code</span>
   
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
     <span class="c1">// Construct 3 MartianDateTime instances</span>
     <span class="n">MartianDateTime</span> <span class="n">dt1</span> <span class="o">=</span> <span class="n">MartianDateTime</span><span class="o">.</span><span class="na">BuildMartianDateTime</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">8</span><span class="o">,</span><span class="mi">8</span><span class="o">);</span>
@@ -238,6 +238,8 @@
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     

@@ -47,7 +47,7 @@
 
 <p>Does Java have this half-constructed memory leak problem?  Thinking this for a bit- the answer is no- because Java keeps objects in a managed memory heap.  Whatever objects are not referenced by root objects get collected by the GC.  So, constructors throwing exceptions should pose no problems in Java, correct?  Only a test case can tell for sure.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="o">{</span>
@@ -64,7 +64,7 @@
 	
   <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">_a</span><span class="o">;</span>
 		
-  <span class="kd">public</span> <span class="n">Tester</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nf">Tester</span><span class="o">()</span> <span class="o">{</span>
     <span class="n">_a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
     <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">1000000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
       <span class="n">_a</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
@@ -72,7 +72,7 @@
     <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">10</span><span class="o">/</span><span class="mi">0</span><span class="o">;</span>	
   <span class="o">}</span>
 	
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>	
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>	
     <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
       <span class="k">try</span> <span class="o">{</span>				
         <span class="n">Tester</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tester</span><span class="o">();</span>				
@@ -112,6 +112,8 @@ Test completed
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     

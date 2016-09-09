@@ -43,7 +43,7 @@
         <section class="post-content">
             <p>Testing AutoResetEvent today.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">TestAutoResetEvent</span>
@@ -93,7 +93,7 @@
 </span>
         <span class="k">public</span> <span class="k">void</span> <span class="nf">RunTest</span><span class="p">()</span>
         <span class="p">{</span>
-            <span class="n">var</span> <span class="n">myFlag</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AutoResetEvent</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">myFlag</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AutoResetEvent</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
             <span class="n">ThreadPool</span><span class="p">.</span><span class="nf">QueueUserWorkItem</span><span class="p">(</span><span class="k">new</span> <span class="nf">WaitCallback</span><span class="p">(</span><span class="n">LongComputeTask</span><span class="p">),</span> <span class="n">myFlag</span><span class="p">);</span>
             <span class="n">myFlag</span><span class="p">.</span><span class="nf">WaitOne</span><span class="p">();</span>
         <span class="p">}</span>
@@ -102,7 +102,7 @@
 
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">var</span> <span class="n">tester</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AutoResetEventTester</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">tester</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AutoResetEventTester</span><span class="p">();</span>
             <span class="n">tester</span><span class="p">.</span><span class="nf">RunTest</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -136,6 +136,8 @@
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     
