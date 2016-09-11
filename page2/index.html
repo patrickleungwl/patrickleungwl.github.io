@@ -61,9 +61,12 @@
                 <h2 class="post-title"><a href="/tech/2015/12/27/tasks2/">Using Tasks-2</a></h2>
             </header>
             <section class="post-excerpt">
+                Testing with Tasks again. using System; using System.Threading; using System.Threading.Tasks; namespace TestTasks2 { class TasksTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } private void DoWork() { LogMsg("Background worker starting"); float percentDone = 0.0f; for (int i = 0; i &lt; 10; i++) { Thread.Sleep(200); percentDone += 10.0f; } LogMsg("Background worker completed"); } // RunTest // // Function run by main thread // Main thread sets...
+                <!--
                 <p>Testing with Tasks again.</p>
 
  <a class="read-more" href="/tech/2015/12/27/tasks2/">&raquo;</a>
+                -->
             </section>
             <footer class="post-meta">
                 
@@ -83,9 +86,12 @@
                 <h2 class="post-title"><a href="/tech/2015/12/26/tasks/">Using Tasks</a></h2>
             </header>
             <section class="post-excerpt">
+                Testing usage of Tasks today. using System; using System.Threading; using System.Threading.Tasks; namespace TestTasks { class TasksTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } private void DoWork(object e) { LogMsg("Background worker starting"); float percentDone = 0.0f; for (int i = 0; i &lt; 10; i++) { Thread.Sleep(200); percentDone += 10.0f; } LogMsg("Background worker completed"); AutoResetEvent ae = e as AutoResetEvent; ae.Set(); } // RunTest // //...
+                <!--
                 <p>Testing usage of Tasks today.</p>
 
  <a class="read-more" href="/tech/2015/12/26/tasks/">&raquo;</a>
+                -->
             </section>
             <footer class="post-meta">
                 
@@ -105,9 +111,12 @@
                 <h2 class="post-title"><a href="/tech/2015/12/25/autoresetevent/">Using AutoResetEvent</a></h2>
             </header>
             <section class="post-excerpt">
+                Testing AutoResetEvent today. using System; using System.Threading; namespace TestAutoResetEvent { class AutoResetEventTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask(Object stateInfo) { LogMsg("LongComputeTask starting"); float percentDone = 0.0f; for (int i = 0; i &lt; 10; i++) { Thread.Sleep(500); percentDone += 10.0f; LogMsg("LongComputeTask {0:0.0f}% completed", percentDone); } LogMsg("LongComputeTask completed"); AutoResetEvent myFlag = stateInfo as...
+                <!--
                 <p>Testing AutoResetEvent today.</p>
 
  <a class="read-more" href="/tech/2015/12/25/autoresetevent/">&raquo;</a>
+                -->
             </section>
             <footer class="post-meta">
                 
@@ -127,9 +136,12 @@
                 <h2 class="post-title"><a href="/tech/2015/12/24/mutex/">Using Mutexes</a></h2>
             </header>
             <section class="post-excerpt">
+                Testing mutexes today. Mutexes can be used to ensure only one instance of an app runs at any one time. using System; using System.Threading; namespace TestMutex { class MutexTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask() { LogMsg("LongComputeTask starting"); float percentDone = 0.0f; for (int i = 0; i &lt;10; i++) { Thread.Sleep(1000);...
+                <!--
                 <p>Testing mutexes today.  Mutexes can be used to ensure only one instance of an app runs at any one time.</p>
 
  <a class="read-more" href="/tech/2015/12/24/mutex/">&raquo;</a>
+                -->
             </section>
             <footer class="post-meta">
                 
@@ -149,9 +161,12 @@
                 <h2 class="post-title"><a href="/tech/2015/12/23/threadpool/">Using ThreadPool</a></h2>
             </header>
             <section class="post-excerpt">
+                Testing ThreadPool usage today- using System; using System.Threading; namespace TestThreadPool { class ThreadPoolTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId=3D{1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask(Object stateInfo) { LogMsg("LongComputeTask starting"); float percentDone =3D 0.0f; for (int i =3D 0; i &lt; 10; i++) { Thread.Sleep(500); percentDone +=3D 10.0f; LogMsg("LongComputeTask {0:0.0f}% completed", percentDone); } LogMsg("LongComputeTask completed"); AutoResetEvent myFlag =3D stateInfo...
+                <!--
                 <p>Testing ThreadPool usage today-</p>
 
  <a class="read-more" href="/tech/2015/12/23/threadpool/">&raquo;</a>
+                -->
             </section>
             <footer class="post-meta">
                 
