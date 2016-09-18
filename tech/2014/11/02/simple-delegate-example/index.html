@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="home-template">
+<body class="post-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -41,46 +41,48 @@
         </header>
 
         <section class="post-content">
-            <p>Just playing with a simple delegate example.</p>
+            <p>Just playing with a simple delegate example. </p>
 
-<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-
-<span class="k">namespace</span> <span class="nn">TestDelegate</span>
-<span class="p">{</span>
-    <span class="k">class</span> <span class="nc">TestDel</span>
-    <span class="p">{</span>
-        <span class="c1">// Declare signature of operator methods
-</span>        <span class="k">delegate</span> <span class="kt">int</span> <span class="nf">OperatorSig</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">);</span>
-
-        <span class="nf">TestDel</span><span class="p">()</span>
-        <span class="p">{</span>
-        <span class="p">}</span>
-
-
-        <span class="kt">int</span> <span class="nf">Add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">return</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="kt">int</span> <span class="nf">Subtract</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">return</span> <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>
-        <span class="p">}</span>
- 
-
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">TestDel</span> <span class="n">td</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TestDel</span><span class="p">();</span>
-            <span class="n">OperatorSig</span> <span class="n">myAdder</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OperatorSig</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">Add</span><span class="p">);</span>
-            <span class="n">OperatorSig</span> <span class="n">mySuber</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OperatorSig</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">Subtract</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Adder Result is {0}"</span><span class="p">,</span> <span class="nf">myAdder</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">));</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Suber Result is {0}"</span><span class="p">,</span> <span class="nf">mySuber</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">));</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">In</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre>
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span>using System;
+<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>
+<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>namespace TestDelegate
+<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>{
+<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>    class TestDel
+<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>    {
+<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>        // Declare signature of operator methods
+<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>        delegate int OperatorSig(int a, int b);
+<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>
+<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>        TestDel()
+<span class="line-numbers"><a href="#n11" name="n11">11</a></span>        {
+<span class="line-numbers"><a href="#n12" name="n12">12</a></span>        }
+<span class="line-numbers"><a href="#n13" name="n13">13</a></span>
+<span class="line-numbers"><a href="#n14" name="n14">14</a></span>
+<span class="line-numbers"><a href="#n15" name="n15">15</a></span>        int Add(int a, int b)
+<span class="line-numbers"><a href="#n16" name="n16">16</a></span>        {
+<span class="line-numbers"><a href="#n17" name="n17">17</a></span>            return a + b;
+<span class="line-numbers"><a href="#n18" name="n18">18</a></span>        }
+<span class="line-numbers"><a href="#n19" name="n19">19</a></span>
+<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>        int Subtract(int a, int b)
+<span class="line-numbers"><a href="#n21" name="n21">21</a></span>        {
+<span class="line-numbers"><a href="#n22" name="n22">22</a></span>            return a - b;
+<span class="line-numbers"><a href="#n23" name="n23">23</a></span>        }
+<span class="line-numbers"><a href="#n24" name="n24">24</a></span> 
+<span class="line-numbers"><a href="#n25" name="n25">25</a></span>
+<span class="line-numbers"><a href="#n26" name="n26">26</a></span>        static void Main(string[] args)
+<span class="line-numbers"><a href="#n27" name="n27">27</a></span>        {
+<span class="line-numbers"><a href="#n28" name="n28">28</a></span>            TestDel td = new TestDel();
+<span class="line-numbers"><a href="#n29" name="n29">29</a></span>            OperatorSig myAdder = new OperatorSig(td.Add);
+<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>            OperatorSig mySuber = new OperatorSig(td.Subtract);
+<span class="line-numbers"><a href="#n31" name="n31">31</a></span>            Console.Out.WriteLine(&quot;Adder Result is {0}&quot;, myAdder(2, 3));
+<span class="line-numbers"><a href="#n32" name="n32">32</a></span>            Console.Out.WriteLine(&quot;Suber Result is {0}&quot;, mySuber(2, 3));
+<span class="line-numbers"><a href="#n33" name="n33">33</a></span>            Console.In.ReadLine();
+<span class="line-numbers"><a href="#n34" name="n34">34</a></span>        }
+<span class="line-numbers"><a href="#n35" name="n35">35</a></span>    }
+<span class="line-numbers"><a href="#n36" name="n36">36</a></span>}
+<span class="line-numbers"><a href="#n37" name="n37">37</a></span>
+</pre></div>
+</div>
 </div>
 
 
@@ -92,6 +94,8 @@
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     

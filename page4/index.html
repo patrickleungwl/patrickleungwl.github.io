@@ -58,14 +58,35 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/11/04/invoking-delegates-asynchronously/">Invoking Delegates Asynchronously</a></h2>
+            </header>
+            <section class="post-excerpt">
+                It’s a slow day at work. Let’s try an asynch delegate. 1using System; 2using System.Threading; 3using System.Runtime.Remoting.Messaging; // To access the AsyncResult type 4 5namespace TestAsyncDelegate 6{ 7 class TestDel 8 { 9 delegate int OperatorSig(int a, int b); 10 11 TestDel() 12 { 13 } 14 15 16 // -------------------------------------------------------------- 17 // Add 18 // 19 // Random work method that takes an arbitrarily set 2.4 seconds 20 // to complete. 21 // --------------------------------------------------------------...
+                <!--
+                 <a class="read-more" href="/tech/2014/11/04/invoking-delegates-asynchronously/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-11-04">
+                    04 Nov 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a></h2>
             </header>
             <section class="post-excerpt">
-                Just playing with a simple delegate example. using System; namespace TestDelegate { class TestDel { // Declare signature of operator methods delegate int OperatorSig(int a, int b); TestDel() { } int Add(int a, int b) { return a + b; } int Subtract(int a, int b) { return a - b; } static void Main(string[] args) { TestDel td = new TestDel(); OperatorSig myAdder = new OperatorSig(td.Add); OperatorSig mySuber = new OperatorSig(td.Subtract); Console.Out.WriteLine("Adder Result is...
+                Just playing with a simple delegate example. 1using System; 2 3namespace TestDelegate 4{ 5 class TestDel 6 { 7 // Declare signature of operator methods 8 delegate int OperatorSig(int a, int b); 9 10 TestDel() 11 { 12 } 13 14 15 int Add(int a, int b) 16 { 17 return a + b; 18 } 19 20 int Subtract(int a, int b) 21 { 22 return a - b; 23 } 24 25 26...
                 <!--
-                <p>Just playing with a simple delegate example.</p>
-
- <a class="read-more" href="/tech/2014/11/02/simple-delegate-example/">&raquo;</a>
+                 <a class="read-more" href="/tech/2014/11/02/simple-delegate-example/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -86,12 +107,9 @@
                 <h2 class="post-title"><a href="/tech/2014/11/02/how-to-use-yield/">How to use Yield</a></h2>
             </header>
             <section class="post-excerpt">
-                Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do not have. using System; using System.Collections.Generic; namespace TestYield { class TestYield { // -------------------------------------------------- // AllOdds // // Yield provides an easy way to make an enumerator. // Without Yield, you'd have to generate the entire list // of items to iterate thru- and return that list to the // user. // -------------------------------------------------- static public IEnumerable&lt;int&gt;...
+                Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do not have. 1using System; 2using System.Collections.Generic; 3 4 5namespace TestYield 6{ 7 class TestYield 8 { 9 // -------------------------------------------------- 10 // AllOdds 11 // 12 // Yield provides an easy way to make an enumerator. 13 // Without Yield, you'd have to generate the entire list 14 // of items to iterate thru- and return that...
                 <!--
-                <p>Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do 
-not have.</p>
-
- <a class="read-more" href="/tech/2014/11/02/how-to-use-yield/">&raquo;</a>
+                 <a class="read-more" href="/tech/2014/11/02/how-to-use-yield/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -114,9 +132,7 @@ not have.</p>
             <section class="post-excerpt">
                 When should a class overwrite equals() and hashCode()? And when should a class implement the Comparable interface? A class should overwrite equals() when the class represents a value item- meaning ideas like dates, times, colors, or other unique representations of things. An object representing 2001-9-11 should equal another object also representing 2001-9-11, no? These two objects are equal despite being two different objects in memory. And each time you overwrite equals, you also have to...
                 <!--
-                <h2 id="when-should-a-class-overwrite-equals-and-hashcode">When should a class overwrite equals() and hashCode()?</h2>
-
- <a class="read-more" href="/tech/2014/03/24/equals-hashcode-and-comparable-interface/">&raquo;</a>
+                 <a class="read-more" href="/tech/2014/03/24/equals-hashcode-and-comparable-interface/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -139,12 +155,7 @@ not have.</p>
             <section class="post-excerpt">
                 I’ve just had enough of the abstract high-faluting language used in the GOF’s Design Patterns. Absolutely enough. I’m sure there’s more than enough readers who can’t understand any one of the GOF’s denser patterns. The Decorator Pattern is one such dense connundrum. I mean- just give it to me straight what does it do? why use it? how to build it? In plain terms, if there is a need to add functionality to a class...
                 <!--
-                <p>I’ve just had enough of the abstract high-faluting language used in the GOF’s Design Patterns.
-Absolutely <strong>enough</strong>.  I’m sure there’s more than enough readers who can’t understand any one of the
-GOF’s denser patterns.  The Decorator Pattern is one such dense connundrum.  I mean- <strong>just give it to me 
-straight</strong> what does it do?  why use it?  how to build it?</p>
-
- <a class="read-more" href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">&raquo;</a>
+                 <a class="read-more" href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -154,31 +165,6 @@ straight</strong> what does it do?  why use it?  how to build it?</p>
                 
                 <time class="post-date" datetime="2014-03-24">
                     24 Mar 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a></h2>
-            </header>
-            <section class="post-excerpt">
-                As a software developer, I regularly do drills with different languages. This is rather analogous to how musicians play scales with their instructions. This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes. I remember from Jon Bentley’s “Programming Pearls” back in the old days- when 64K RAM was considered a luxury, programmers came up with ingenius algorithms to conserve memory usage. I...
-                <!--
-                <p>As a software developer, I regularly do drills with different languages.  This is rather analogous to how musicians play scales with their instructions.  This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes.</p>
-
- <a class="read-more" href="/tech/2014/03/22/searching-for-primes-with-c/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-22">
-                    22 Mar 2014
                 </time> 
             </footer>
         </article>

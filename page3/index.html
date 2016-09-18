@@ -58,14 +58,35 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/21/rhino-mocks/">Using Rhino Mocks</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Testing Rhino Mocks today for use in unit tests. IAdder.cs 1using System; 2 3namespace TestAdderLib 4{ 5 public interface IAdder 6 { 7 int AddTwoNums(int a, int b); 8 } 9} 10 Adder.cs 1using System; 2using System.Threading; 3 4namespace TestAdderLib 5{ 6 public class Adder : IAdder 7 { 8 public int AddTwoNums(int a, int b) 9 { 10 Thread.Sleep(1000); 11 return a + b; 12 } 13 } 14} TestCalculatorWithRhino.cs 1using System; 2using Microsoft.VisualStudio.TestTools.UnitTesting;...
+                <!--
+                 <a class="read-more" href="/tech/2015/12/21/rhino-mocks/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-21">
+                    21 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2015/12/20/backgroundworker/">Using BackgroundWorker</a></h2>
             </header>
             <section class="post-excerpt">
-                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. using System; using System.ComponentModel; using System.Threading; namespace TestBackgroundWorker { class TestBkGrdWorker { static void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // RunTest // // Function run by main thread // Main thread...
+                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. 1using System; 2using System.ComponentModel; 3using System.Threading; 4 5namespace TestBackgroundWorker 6{ 7 class TestBkGrdWorker 8 { 9 static void LogMsg(string msg, params object[] args) 10 { 11 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 12 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 13 Thread.CurrentThread.ManagedThreadId); 14 Console.Out.WriteLine(msg, args); 15 } 16 17...
                 <!--
-                <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p>
-
- <a class="read-more" href="/tech/2015/12/20/backgroundworker/">&raquo;</a>
+                 <a class="read-more" href="/tech/2015/12/20/backgroundworker/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -86,11 +107,9 @@
                 <h2 class="post-title"><a href="/tech/2015/12/19/variable-params/">Using Variable Params</a></h2>
             </header>
             <section class="post-excerpt">
-                Today just put together a test case to show usage of functions with variable number of parameters. using System; using System.Threading; namespace TestVariableParams { class Tester { // use object[] to allow for arguments of any type static void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } static void Main(string[] args) { LogMsg("Test {0}", "first arg"); LogMsg("This is a test {0} {1}", "first arg", "second arg"); LogMsg("This is a...
+                Today just put together a test case to show usage of functions with variable number of parameters. 1 2using System; 3using System.Threading; 4 5namespace TestVariableParams 6{ 7 class Tester 8 { 9 // use object[] to allow for arguments of any type 10 static void LogMsg(string msg, params object[] args) 11 { 12 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 13 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 14 Thread.CurrentThread.ManagedThreadId); 15 Console.Out.WriteLine(msg, args); 16 } 17 18 static void Main(string[] args) 19 { 20 LogMsg(&quot;Test...
                 <!--
-                <p>Today just put together a test case to show usage of functions with variable number of parameters.</p>
-
- <a class="read-more" href="/tech/2015/12/19/variable-params/">&raquo;</a>
+                 <a class="read-more" href="/tech/2015/12/19/variable-params/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -111,7 +130,7 @@
                 <h2 class="post-title"><a href="/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a></h2>
             </header>
             <section class="post-excerpt">
-                Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.
+                Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each. 
 
 
   BackgroundWorker
@@ -129,9 +148,7 @@
 
 
                 <!--
-                <p>Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.</p>
-
- <a class="read-more" href="/tech/2015/12/18/multi-threading-cheatsheet/">&raquo;</a>
+                 <a class="read-more" href="/tech/2015/12/18/multi-threading-cheatsheet/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -152,11 +169,9 @@
                 <h2 class="post-title"><a href="/tech,csharp/2015/12/17/how-backgroundworker-works/">How BackgroundWorker Works</a></h2>
             </header>
             <section class="post-excerpt">
-                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. using System; using System.Collections.Generic; using System.Linq; using System.Text; using System.ComponentModel; using System.Threading; namespace TestBackgroundWorker { class TestBkGrdWorker     {         private void LogMsg(string msg)         {             Console.Out.WriteLine("{0} ThreadId={1}, {2}",                 DateTime.Now.ToString("HH:MM:ss.fff"),                 Thread.CurrentThread.ManagedThreadId, msg);         }         // RunTest...
+                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. 1using System; 2using System.Collections.Generic; 3using System.Linq; 4using System.Text; 5using System.ComponentModel; 6using System.Threading; 7 8namespace TestBackgroundWorker 9{ 10 class TestBkGrdWorker 11    { 12        private void LogMsg(string msg) 13        { 14            Console.Out.WriteLine(&quot;{0} ThreadId={1}, {2}&quot;, 15                DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 16                Thread.CurrentThread.ManagedThreadId, msg); 17        } 18...
                 <!--
-                <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5.  One of the simpler options is the BackgroundWorker.  To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p>
-
- <a class="read-more" href="/tech,csharp/2015/12/17/how-backgroundworker-works/">&raquo;</a>
+                 <a class="read-more" href="/tech,csharp/2015/12/17/how-backgroundworker-works/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -166,31 +181,6 @@
                 
                 <time class="post-date" datetime="2015-12-17">
                     17 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/05/03/are-generic-collections-faster/">Are Generic Collections Faster than Non-Generic Collections?</a></h2>
-            </header>
-            <section class="post-excerpt">
-                The oft-repeated assertion is that generic collections run faster than their non-generic versions. But is this true? And if so, just how much faster? I wrote some quick code to run a test. using System; using System.Collections.Generic; using System.Collections; namespace TestBoxing { class Program { static void TimeArrayList() { Console.Out.WriteLine("TimeArrayList start"); // Test creating and reading a million boxed ints DateTime dtStart = DateTime.Now; ArrayList intList = new ArrayList(); for (int i = 0; i...
-                <!--
-                <p>The oft-repeated assertion is that generic collections run faster than their non-generic versions.  But is this true?  And if so, just how much faster?</p>
-
- <a class="read-more" href="/tech/2015/05/03/are-generic-collections-faster/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-05-03">
-                    03 May 2015
                 </time> 
             </footer>
         </article>

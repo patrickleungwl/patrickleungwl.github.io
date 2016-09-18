@@ -56,6 +56,29 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Strings in Java can be declared either literally- String s = "123"; or as a String instance- String s = new String("123"); What are the differences between these two strings? 1package drills; 2 3public class Tester { 4 5 public static void main(String[] args) { 6 7 // Test differences between String v = new String(...) 8 // and String v = &quot;...&quot; 9 10 // String literals are stored in a string pool- cached...
+                <!--
+                 <a class="read-more" href="/tech/2014/03/20/java-string-literals/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-03-20">
+                    20 Mar 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2014/03/17/java-assertions/">Assertions in Java</a></h2>
             </header>
             <section class="post-excerpt">
@@ -65,11 +88,8 @@ java -ea Test.java
 
 
 
-
                 <!--
-                <p>Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:</p>
-
- <a class="read-more" href="/tech/2014/03/17/java-assertions/">&raquo;</a>
+                 <a class="read-more" href="/tech/2014/03/17/java-assertions/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -90,13 +110,9 @@ java -ea Test.java
                 <h2 class="post-title"><a href="/tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a></h2>
             </header>
             <section class="post-excerpt">
-                With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer necessary to create timers and callbacks. Java 1.5 has a ExecutorService that can execute tasks at scheduled times. Below shows a quick example of how it can be used. package drills; import java.text.DateFormat; import java.text.SimpleDateFormat; import java.util.Calendar; import java.util.Date; import java.util.concurrent.Executors; import java.util.concurrent.ScheduledExecutorService; import java.util.concurrent.TimeUnit; public class Tester { DateFormat _df; public Tester() {...
+                With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer necessary to create timers and callbacks. Java 1.5 has a ExecutorService that can execute tasks at scheduled times. Below shows a quick example of how it can be used. 1package drills; 2 3import java.text.DateFormat; 4import java.text.SimpleDateFormat; 5import java.util.Calendar; 6import java.util.Date; 7import java.util.concurrent.Executors; 8import java.util.concurrent.ScheduledExecutorService; 9import java.util.concurrent.TimeUnit; 10 11public class Tester { 12 13 DateFormat...
                 <!--
-                <p>With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer
-necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
-at scheduled times.  Below shows a quick example of how it can be used.</p>
-
- <a class="read-more" href="/tech/2014/03/17/delayed_background/">&raquo;</a>
+                 <a class="read-more" href="/tech/2014/03/17/delayed_background/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -119,9 +135,7 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
             <section class="post-excerpt">
                 More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’. Common Default Behavior At indeterminate times, the GC comes around, finds and frees up every unreferenced object- these are objects that cannot be traced to a long living root object every object referenced only by a WeakReference and- for Java only- if free memory is low, every object referenced only by a SoftReference C# Has No SoftReferences C# does...
                 <!--
-                <p>More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’.</p>
-
- <a class="read-more" href="/tech/2014/03/15/garbage-collector-differences/">&raquo;</a>
+                 <a class="read-more" href="/tech/2014/03/15/garbage-collector-differences/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -142,11 +156,9 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
                 <h2 class="post-title"><a href="/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></h2>
             </header>
             <section class="post-excerpt">
-                Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-) When it comes to memory management, C# certainly has many comparable features found in Java and more. Following the previous example of testing WeakReferences in Java, we’ll now run a similar test in C#. First, we’ll need a dummy memory resource-heavy object. We’ll use the same DumbWeight class, whose sole function is to allocate memory. using System.Collection.Generic; namespace Drills...
+                Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-) When it comes to memory management, C# certainly has many comparable features found in Java and more. Following the previous example of testing WeakReferences in Java, we’ll now run a similar test in C#. First, we’ll need a dummy memory resource-heavy object. We’ll use the same DumbWeight class, whose sole function is to allocate memory. 1using System.Collection.Generic; 2 3namespace...
                 <!--
-                <p>Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-)</p>
-
- <a class="read-more" href="/tech/2014/03/13/weakreferences-in-csharp/">&raquo;</a>
+                 <a class="read-more" href="/tech/2014/03/13/weakreferences-in-csharp/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -156,35 +168,6 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
                 
                 <time class="post-date" datetime="2014-03-13">
                     13 Mar 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Continuing on with our investigation into memory handling in Java, let’s look at another rarely used feature- the SoftReference.  To get to the point, a SoftReference is just like a WeakReference- except that the Garbage Collector only collects its referenced object if the JVM is running low on memory.  This makes a SoftReference more “sticky” in a running process’s memory. Here is a simple example of how a SoftReference works. Let’s reuse the same resource-heavy...
-                <!--
-                <p>Continuing on with our investigation into memory handling in Java, let’s look at another 
-rarely used feature- the SoftReference.  To get to the point, a SoftReference is 
-just like a WeakReference- except that the Garbage Collector only collects its 
-referenced object if the JVM is running low on memory.  This makes a SoftReference 
-more “sticky” in a running process’s memory.</p>
-
- <a class="read-more" href="/tech/2014/03/12/softreferences-in-java/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-12">
-                    12 Mar 2014
                 </time> 
             </footer>
         </article>

@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="home-template">
+<body class="post-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -43,76 +43,78 @@
         <section class="post-content">
             <p>Testing AutoResetEvent today.</p>
 
-<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
-
-<span class="k">namespace</span> <span class="nn">TestAutoResetEvent</span>
-<span class="p">{</span>
-    <span class="k">class</span> <span class="nc">AutoResetEventTester</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="k">void</span> <span class="nf">LogMsg</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">,</span> <span class="k">params</span> <span class="kt">object</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"{0} ThreadId={1} "</span><span class="p">,</span>
-                <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(</span><span class="s">"HH:MM:ss.fff"</span><span class="p">),</span>
-                <span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">ManagedThreadId</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
-        <span class="p">}</span>
-
-
-        <span class="c1">// LongComputeTask
-</span>        <span class="c1">//
-</span>        <span class="c1">// Function run by background worker.
-</span>
-        <span class="k">private</span> <span class="k">void</span> <span class="nf">LongComputeTask</span><span class="p">(</span><span class="n">Object</span> <span class="n">stateInfo</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"LongComputeTask starting"</span><span class="p">);</span>
-
-            <span class="kt">float</span> <span class="n">percentDone</span> <span class="p">=</span> <span class="m">0.0f</span><span class="p">;</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
-            <span class="p">{</span>
-                <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">500</span><span class="p">);</span>
-                <span class="n">percentDone</span> <span class="p">+=</span> <span class="m">10.0f</span><span class="p">;</span>
-                <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"LongComputeTask {0:0.0f}% completed"</span><span class="p">,</span>
-                    <span class="n">percentDone</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"LongComputeTask completed"</span><span class="p">);</span>
-
-            <span class="n">AutoResetEvent</span> <span class="n">myFlag</span> <span class="p">=</span> <span class="n">stateInfo</span> <span class="k">as</span> <span class="n">AutoResetEvent</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">myFlag</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">myFlag</span><span class="p">.</span><span class="nf">Set</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-
-        <span class="c1">// RunTest
-</span>        <span class="c1">//
-</span>        <span class="c1">// Function run by main thread
-</span>        <span class="c1">// Main thread sets up the background thread
-</span>        <span class="c1">// and fires it off
-</span>
-        <span class="k">public</span> <span class="k">void</span> <span class="nf">RunTest</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">myFlag</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AutoResetEvent</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
-            <span class="n">ThreadPool</span><span class="p">.</span><span class="nf">QueueUserWorkItem</span><span class="p">(</span><span class="k">new</span> <span class="nf">WaitCallback</span><span class="p">(</span><span class="n">LongComputeTask</span><span class="p">),</span> <span class="n">myFlag</span><span class="p">);</span>
-            <span class="n">myFlag</span><span class="p">.</span><span class="nf">WaitOne</span><span class="p">();</span>
-        <span class="p">}</span>
-
-
-
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">tester</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">AutoResetEventTester</span><span class="p">();</span>
-            <span class="n">tester</span><span class="p">.</span><span class="nf">RunTest</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span>using System;
+<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>using System.Threading;
+<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>
+<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>namespace TestAutoResetEvent
+<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>{
+<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>    class AutoResetEventTester
+<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>    {
+<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>        private void LogMsg(string msg, params object[] args)
+<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>        {
+<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>            Console.Out.Write(&quot;{0} ThreadId={1} &quot;,
+<span class="line-numbers"><a href="#n11" name="n11">11</a></span>                DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;),
+<span class="line-numbers"><a href="#n12" name="n12">12</a></span>                Thread.CurrentThread.ManagedThreadId);
+<span class="line-numbers"><a href="#n13" name="n13">13</a></span>            Console.Out.WriteLine(msg, args);
+<span class="line-numbers"><a href="#n14" name="n14">14</a></span>        }
+<span class="line-numbers"><a href="#n15" name="n15">15</a></span>
+<span class="line-numbers"><a href="#n16" name="n16">16</a></span>
+<span class="line-numbers"><a href="#n17" name="n17">17</a></span>        // LongComputeTask
+<span class="line-numbers"><a href="#n18" name="n18">18</a></span>        //
+<span class="line-numbers"><a href="#n19" name="n19">19</a></span>        // Function run by background worker.
+<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>
+<span class="line-numbers"><a href="#n21" name="n21">21</a></span>        private void LongComputeTask(Object stateInfo)
+<span class="line-numbers"><a href="#n22" name="n22">22</a></span>        {
+<span class="line-numbers"><a href="#n23" name="n23">23</a></span>            LogMsg(&quot;LongComputeTask starting&quot;);
+<span class="line-numbers"><a href="#n24" name="n24">24</a></span>
+<span class="line-numbers"><a href="#n25" name="n25">25</a></span>            float percentDone = 0.0f;
+<span class="line-numbers"><a href="#n26" name="n26">26</a></span>            for (int i = 0; i &lt; 10; i++)
+<span class="line-numbers"><a href="#n27" name="n27">27</a></span>            {
+<span class="line-numbers"><a href="#n28" name="n28">28</a></span>                Thread.Sleep(500);
+<span class="line-numbers"><a href="#n29" name="n29">29</a></span>                percentDone += 10.0f;
+<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>                LogMsg(&quot;LongComputeTask {0:0.0f}% completed&quot;,
+<span class="line-numbers"><a href="#n31" name="n31">31</a></span>                    percentDone);
+<span class="line-numbers"><a href="#n32" name="n32">32</a></span>            }
+<span class="line-numbers"><a href="#n33" name="n33">33</a></span>            LogMsg(&quot;LongComputeTask completed&quot;);
+<span class="line-numbers"><a href="#n34" name="n34">34</a></span>
+<span class="line-numbers"><a href="#n35" name="n35">35</a></span>            AutoResetEvent myFlag = stateInfo as AutoResetEvent;
+<span class="line-numbers"><a href="#n36" name="n36">36</a></span>            if (myFlag != null)
+<span class="line-numbers"><a href="#n37" name="n37">37</a></span>            {
+<span class="line-numbers"><a href="#n38" name="n38">38</a></span>                myFlag.Set();
+<span class="line-numbers"><a href="#n39" name="n39">39</a></span>            }
+<span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span>        }
+<span class="line-numbers"><a href="#n41" name="n41">41</a></span>
+<span class="line-numbers"><a href="#n42" name="n42">42</a></span>
+<span class="line-numbers"><a href="#n43" name="n43">43</a></span>        // RunTest
+<span class="line-numbers"><a href="#n44" name="n44">44</a></span>        //
+<span class="line-numbers"><a href="#n45" name="n45">45</a></span>        // Function run by main thread
+<span class="line-numbers"><a href="#n46" name="n46">46</a></span>        // Main thread sets up the background thread
+<span class="line-numbers"><a href="#n47" name="n47">47</a></span>        // and fires it off
+<span class="line-numbers"><a href="#n48" name="n48">48</a></span>
+<span class="line-numbers"><a href="#n49" name="n49">49</a></span>        public void RunTest()
+<span class="line-numbers"><strong><a href="#n50" name="n50">50</a></strong></span>        {
+<span class="line-numbers"><a href="#n51" name="n51">51</a></span>            var myFlag = new AutoResetEvent(false);
+<span class="line-numbers"><a href="#n52" name="n52">52</a></span>            ThreadPool.QueueUserWorkItem(new WaitCallback(LongComputeTask), myFlag);
+<span class="line-numbers"><a href="#n53" name="n53">53</a></span>            myFlag.WaitOne();
+<span class="line-numbers"><a href="#n54" name="n54">54</a></span>        }
+<span class="line-numbers"><a href="#n55" name="n55">55</a></span>
+<span class="line-numbers"><a href="#n56" name="n56">56</a></span>
+<span class="line-numbers"><a href="#n57" name="n57">57</a></span>
+<span class="line-numbers"><a href="#n58" name="n58">58</a></span>        static void Main(string[] args)
+<span class="line-numbers"><a href="#n59" name="n59">59</a></span>        {
+<span class="line-numbers"><strong><a href="#n60" name="n60">60</a></strong></span>            var tester = new AutoResetEventTester();
+<span class="line-numbers"><a href="#n61" name="n61">61</a></span>            tester.RunTest();
+<span class="line-numbers"><a href="#n62" name="n62">62</a></span>        }
+<span class="line-numbers"><a href="#n63" name="n63">63</a></span>    }
+<span class="line-numbers"><a href="#n64" name="n64">64</a></span>}
+</pre></div>
+</div>
 </div>
 
 <p>The output-</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>19:05:51.698 ThreadId=3 LongComputeTask starting
+<pre><code>19:05:51.698 ThreadId=3 LongComputeTask starting
 19:05:52.232 ThreadId=3 LongComputeTask 10.0f% completed
 19:05:52.732 ThreadId=3 LongComputeTask 20.0f% completed
 19:05:53.232 ThreadId=3 LongComputeTask 30.0f% completed
@@ -125,7 +127,6 @@
 19:05:56.740 ThreadId=3 LongComputeTask 100.0f% completed
 19:05:56.740 ThreadId=3 LongComputeTask completed
 </code></pre>
-</div>
 
 
         </section>
@@ -136,6 +137,8 @@
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     

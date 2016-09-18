@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="home-template">
+<body class="post-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -41,49 +41,50 @@
         </header>
 
         <section class="post-content">
-            <p>Today just put together a test case to show usage of functions with variable number of parameters.</p>
+            <p>Today just put together a test case to show usage of functions with variable number of parameters. </p>
 
-<div class="language-csharp highlighter-rouge"><pre class="highlight"><code>
-<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
-
-<span class="k">namespace</span> <span class="nn">TestVariableParams</span>
-<span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Tester</span>
-    <span class="p">{</span>
-        <span class="c1">// use object[] to allow for arguments of any type
-</span>        <span class="k">static</span> <span class="k">void</span> <span class="nf">LogMsg</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">,</span> <span class="k">params</span> <span class="kt">object</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"{0} ThreadId={1} "</span><span class="p">,</span>
-                <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(</span><span class="s">"HH:MM:ss.fff"</span><span class="p">),</span>
-                <span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">ManagedThreadId</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"Test {0}"</span><span class="p">,</span>
-                <span class="s">"first arg"</span><span class="p">);</span>
-            <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"This is a test {0} {1}"</span><span class="p">,</span>
-                <span class="s">"first arg"</span><span class="p">,</span>
-                <span class="s">"second arg"</span><span class="p">);</span>
-            <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"This is a test with int args {0} {1}"</span><span class="p">,</span>
-                <span class="m">123</span><span class="p">,</span>
-                <span class="m">456</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre>
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span>
+<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>using System;
+<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>using System.Threading;
+<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>
+<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>namespace TestVariableParams
+<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>{
+<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>    class Tester
+<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>    {
+<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>        // use object[] to allow for arguments of any type
+<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>        static void LogMsg(string msg, params object[] args)
+<span class="line-numbers"><a href="#n11" name="n11">11</a></span>        {
+<span class="line-numbers"><a href="#n12" name="n12">12</a></span>            Console.Out.Write(&quot;{0} ThreadId={1} &quot;,
+<span class="line-numbers"><a href="#n13" name="n13">13</a></span>                DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;),
+<span class="line-numbers"><a href="#n14" name="n14">14</a></span>                Thread.CurrentThread.ManagedThreadId);
+<span class="line-numbers"><a href="#n15" name="n15">15</a></span>            Console.Out.WriteLine(msg, args);
+<span class="line-numbers"><a href="#n16" name="n16">16</a></span>        }
+<span class="line-numbers"><a href="#n17" name="n17">17</a></span>
+<span class="line-numbers"><a href="#n18" name="n18">18</a></span>        static void Main(string[] args)
+<span class="line-numbers"><a href="#n19" name="n19">19</a></span>        {
+<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>            LogMsg(&quot;Test {0}&quot;,
+<span class="line-numbers"><a href="#n21" name="n21">21</a></span>                &quot;first arg&quot;);
+<span class="line-numbers"><a href="#n22" name="n22">22</a></span>            LogMsg(&quot;This is a test {0} {1}&quot;,
+<span class="line-numbers"><a href="#n23" name="n23">23</a></span>                &quot;first arg&quot;,
+<span class="line-numbers"><a href="#n24" name="n24">24</a></span>                &quot;second arg&quot;);
+<span class="line-numbers"><a href="#n25" name="n25">25</a></span>            LogMsg(&quot;This is a test with int args {0} {1}&quot;,
+<span class="line-numbers"><a href="#n26" name="n26">26</a></span>                123,
+<span class="line-numbers"><a href="#n27" name="n27">27</a></span>                456);
+<span class="line-numbers"><a href="#n28" name="n28">28</a></span>        }
+<span class="line-numbers"><a href="#n29" name="n29">29</a></span>    }
+<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>}
+<span class="line-numbers"><a href="#n31" name="n31">31</a></span>
+</pre></div>
+</div>
 </div>
 
-<p>The output shows-</p>
+<p>The output shows- </p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>10:05:04.208 ThreadId=1 Test first arg
+<pre><code>10:05:04.208 ThreadId=1 Test first arg
 10:05:04.244 ThreadId=1 This is a test first arg second arg
 10:05:04.244 ThreadId=1 This is a test with int args 123 456
 </code></pre>
-</div>
 
 
         </section>
@@ -94,6 +95,8 @@
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     
