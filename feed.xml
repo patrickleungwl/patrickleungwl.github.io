@@ -3,11 +3,111 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>http://patrickleungwl.github.io//</link>
-    <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2016-09-18 20:06:21 +0800</pubDate>
-    <lastBuildDate>2016-09-18 20:06:21 +0800</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>2016-10-10 00:34:58 +0800</pubDate>
+    <lastBuildDate>2016-10-10 00:34:58 +0800</lastBuildDate>
     <generator>Jekyll v</generator>
+    
+      <item>
+        <title>The Spirit of Kaizen</title>
+        <description>&lt;p&gt;From the book “The Spirit of Kaizen” by Robert Maurer-  The key idea from
+this book on Kaizen is that people are scared by big changes.  Instead of
+making big changes to fix big problems, make small changes instead.  First,
+small changes are quick and easy to implement and do not meet resistance by
+scaring people.  Second, small changes over time is similar to compound
+interest- the small changes accumulate giant effects.&lt;/p&gt;
+
+&lt;p&gt;When making a change- there are two basic strategies- innovation and kaizen.
+Innovation calls for a radical, immediate rethink of the status quo.  Kaizen,
+on the other hand, asks for nothing other than small, doable steps toward
+improvement.&lt;/p&gt;
+
+&lt;p&gt;Continuous improvement says- Look for hundreds of small things you can
+improve.  Look for improvements on existing jobs with your present equipment.&lt;/p&gt;
+
+&lt;p&gt;Kaizen says-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use exiting resources&lt;/li&gt;
+  &lt;li&gt;Ask team members to participate&lt;/li&gt;
+  &lt;li&gt;Remain alert for problems to solve&lt;/li&gt;
+  &lt;li&gt;Look for ways to improve customer service&lt;/li&gt;
+  &lt;li&gt;Make very very small steps toward change&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jim Collin’s Good To Great says- &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;We kept thinking we shold find the ‘one big thing,’ the miracle moment that
+defined breakthrough….But…no matter how dramatic the end reslt, the
+good-to-great transformation never happened in one fell swoop.  There was no
+single defining action, no grand program, no one killer innovation, no
+solitary lucky break, no wrenching revolution.  Good to great comes about by a
+cumulative process- step by step, action by action, decision by decision, turn
+by turn of the flywheel- that adds up to sustains and spectacular results.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;High-reliability organisations know they cannot afford to play games of
+secrecy.  Their attention to small mistakes flows from the recognition that
+human beings, no matter how gifted, are fallible.  Instead of expecting staff
+members to be perfect, HROs require them to be transparent… &lt;em&gt;If you make a
+mistake, tell us so that we can prevent a bigger problem.&lt;/em&gt;  FIX THE PROBLEM,
+NOT THE BLAME. &lt;/p&gt;
+
+</description>
+        <pubDate>2016-10-09 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000//management/2016/10/09/the-spirit-of-kaizen/</link>
+        <guid isPermaLink="true">http://localhost:4000//management/2016/10/09/the-spirit-of-kaizen/</guid>
+        
+        <category>management,</category>
+        
+        <category>kaizen</category>
+        
+        
+        <category>management</category>
+        
+      </item>
+    
+      <item>
+        <title>The Management Masterclass</title>
+        <description>&lt;p&gt;From the book “The Management Masterclass” by Emma De Vita-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Authenticity
+    &lt;ul&gt;
+      &lt;li&gt;To be authentic is to be real, genuine, trustworthy. An authentic person
+is true to his or her own character.&lt;/li&gt;
+      &lt;li&gt;Sell your differences.&lt;/li&gt;
+      &lt;li&gt;Remember your roots.&lt;/li&gt;
+      &lt;li&gt;Break the mould.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Communicator
+    &lt;ul&gt;
+      &lt;li&gt;Make time and take time.&lt;/li&gt;
+      &lt;li&gt;Clear you rmind.&lt;/li&gt;
+      &lt;li&gt;Give your undivided attention.&lt;/li&gt;
+      &lt;li&gt;Don’t interrupt.&lt;/li&gt;
+      &lt;li&gt;Ask what they mean.&lt;/li&gt;
+      &lt;li&gt;Check body language.&lt;/li&gt;
+      &lt;li&gt;Keep your opinions to yourself.&lt;/li&gt;
+      &lt;li&gt;Check what they really feel.&lt;/li&gt;
+      &lt;li&gt;Hear what’s not being said.&lt;/li&gt;
+      &lt;li&gt;Play back what you’ve heard.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>2016-10-08 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000//management/2016/10/08/the-management-masterclass/</link>
+        <guid isPermaLink="true">http://localhost:4000//management/2016/10/08/the-management-masterclass/</guid>
+        
+        <category>management</category>
+        
+        
+        <category>management</category>
+        
+      </item>
     
       <item>
         <title>Get through hard</title>
@@ -17,8 +117,8 @@
 
 </description>
         <pubDate>2016-09-18 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/</guid>
+        <link>http://localhost:4000//musings/2016/09/18/get-through-hard/</link>
+        <guid isPermaLink="true">http://localhost:4000//musings/2016/09/18/get-through-hard/</guid>
         
         <category>history</category>
         
@@ -233,8 +333,8 @@ bin ladin- feel like american
 
 </description>
         <pubDate>2016-09-11 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/</guid>
+        <link>http://localhost:4000//musings/2016/09/11/fifteen-years-on/</link>
+        <guid isPermaLink="true">http://localhost:4000//musings/2016/09/11/fifteen-years-on/</guid>
         
         <category>history</category>
         
@@ -271,8 +371,8 @@ in &lt;a href=&quot;../../../../../../assets/pdf/20160502.5.ratio.pdf&quot;&gt;t
 
 </description>
         <pubDate>2016-05-02 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//math/singapore/2016/05/02/sg-math-primary-five-ratio/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//math/singapore/2016/05/02/sg-math-primary-five-ratio/</guid>
+        <link>http://localhost:4000//math/singapore/2016/05/02/sg-math-primary-five-ratio/</link>
+        <guid isPermaLink="true">http://localhost:4000//math/singapore/2016/05/02/sg-math-primary-five-ratio/</guid>
         
         <category>patterns</category>
         
@@ -298,8 +398,8 @@ in &lt;a href=&quot;../../../../../../assets/pdf/20160501.1.ratio.pdf&quot;&gt;t
 
 </description>
         <pubDate>2016-05-01 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/</guid>
+        <link>http://localhost:4000//math/singapore/2016/05/01/sg-math-primary-five-ratio/</link>
+        <guid isPermaLink="true">http://localhost:4000//math/singapore/2016/05/01/sg-math-primary-five-ratio/</guid>
         
         <category>patterns</category>
         
@@ -353,8 +453,8 @@ said yes to something we cannot do.&lt;/li&gt;
 
 </description>
         <pubDate>2016-04-07 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/</guid>
+        <link>http://localhost:4000//tech/2016/04/07/getting-things-done/</link>
+        <guid isPermaLink="true">http://localhost:4000//tech/2016/04/07/getting-things-done/</guid>
         
         <category>patterns</category>
         
@@ -422,8 +522,8 @@ would it work?  This was the golden thread that ran through my years in office.�
 
 </description>
         <pubDate>2016-04-03 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//management/2016/04/03/lky-on-management/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//management/2016/04/03/lky-on-management/</guid>
+        <link>http://localhost:4000//management/2016/04/03/lky-on-management/</link>
+        <guid isPermaLink="true">http://localhost:4000//management/2016/04/03/lky-on-management/</guid>
         
         <category>patterns</category>
         
@@ -462,8 +562,8 @@ Absort what is useful.  Discard what is not.  Add what is uniquely your own.”
 
 </description>
         <pubDate>2016-04-03 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//motivation/2016/04/03/insprirational-quotes/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//motivation/2016/04/03/insprirational-quotes/</guid>
+        <link>http://localhost:4000//motivation/2016/04/03/insprirational-quotes/</link>
+        <guid isPermaLink="true">http://localhost:4000//motivation/2016/04/03/insprirational-quotes/</guid>
         
         <category>quotes</category>
         
@@ -491,204 +591,12 @@ Absort what is useful.  Discard what is not.  Add what is uniquely your own.”
 
 </description>
         <pubDate>2016-04-02 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2016/04/02/tech-to-study/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2016/04/02/tech-to-study/</guid>
+        <link>http://localhost:4000//tech/2016/04/02/tech-to-study/</link>
+        <guid isPermaLink="true">http://localhost:4000//tech/2016/04/02/tech-to-study/</guid>
         
         <category>tech,</category>
         
         <category>study</category>
-        
-        
-        <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Using Tasks-2</title>
-        <description>&lt;p&gt;Testing with Tasks again. &lt;/p&gt;
-
-&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;using System;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;using System.Threading;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;using System.Threading.Tasks;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;namespace TestTasks2
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;{
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;    class TasksTester
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;    {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;        private void LogMsg(string msg, params object[] args)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;            Console.Out.Write(&amp;quot;{0} ThreadId={1} &amp;quot;,
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n12&quot; name=&quot;n12&quot;&gt;12&lt;/a&gt;&lt;/span&gt;                DateTime.Now.ToString(&amp;quot;HH:MM:ss.fff&amp;quot;),
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n13&quot; name=&quot;n13&quot;&gt;13&lt;/a&gt;&lt;/span&gt;                Thread.CurrentThread.ManagedThreadId);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n14&quot; name=&quot;n14&quot;&gt;14&lt;/a&gt;&lt;/span&gt;            Console.Out.WriteLine(msg, args);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n15&quot; name=&quot;n15&quot;&gt;15&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n16&quot; name=&quot;n16&quot;&gt;16&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n17&quot; name=&quot;n17&quot;&gt;17&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n18&quot; name=&quot;n18&quot;&gt;18&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n19&quot; name=&quot;n19&quot;&gt;19&lt;/a&gt;&lt;/span&gt;        private void DoWork()
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n20&quot; name=&quot;n20&quot;&gt;20&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n21&quot; name=&quot;n21&quot;&gt;21&lt;/a&gt;&lt;/span&gt;            LogMsg(&amp;quot;Background worker starting&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n22&quot; name=&quot;n22&quot;&gt;22&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n23&quot; name=&quot;n23&quot;&gt;23&lt;/a&gt;&lt;/span&gt;            float percentDone = 0.0f;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n24&quot; name=&quot;n24&quot;&gt;24&lt;/a&gt;&lt;/span&gt;            for (int i = 0; i &amp;lt; 10; i++)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n25&quot; name=&quot;n25&quot;&gt;25&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n26&quot; name=&quot;n26&quot;&gt;26&lt;/a&gt;&lt;/span&gt;                Thread.Sleep(200);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n27&quot; name=&quot;n27&quot;&gt;27&lt;/a&gt;&lt;/span&gt;                percentDone += 10.0f;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n28&quot; name=&quot;n28&quot;&gt;28&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n29&quot; name=&quot;n29&quot;&gt;29&lt;/a&gt;&lt;/span&gt;            LogMsg(&amp;quot;Background worker completed&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n30&quot; name=&quot;n30&quot;&gt;30&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n31&quot; name=&quot;n31&quot;&gt;31&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n32&quot; name=&quot;n32&quot;&gt;32&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n33&quot; name=&quot;n33&quot;&gt;33&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n34&quot; name=&quot;n34&quot;&gt;34&lt;/a&gt;&lt;/span&gt;        // RunTest
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n35&quot; name=&quot;n35&quot;&gt;35&lt;/a&gt;&lt;/span&gt;        //
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n36&quot; name=&quot;n36&quot;&gt;36&lt;/a&gt;&lt;/span&gt;        // Function run by main thread
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n37&quot; name=&quot;n37&quot;&gt;37&lt;/a&gt;&lt;/span&gt;        // Main thread sets up the background worker instance
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n38&quot; name=&quot;n38&quot;&gt;38&lt;/a&gt;&lt;/span&gt;        // and fires it off
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n39&quot; name=&quot;n39&quot;&gt;39&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n40&quot; name=&quot;n40&quot;&gt;40&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        public void RunTest()
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n41&quot; name=&quot;n41&quot;&gt;41&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n42&quot; name=&quot;n42&quot;&gt;42&lt;/a&gt;&lt;/span&gt;            var myBkTask = new Task(DoWork);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n43&quot; name=&quot;n43&quot;&gt;43&lt;/a&gt;&lt;/span&gt;            var myBkTask2 = new Task(DoWork);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n44&quot; name=&quot;n44&quot;&gt;44&lt;/a&gt;&lt;/span&gt;            myBkTask.Start();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n45&quot; name=&quot;n45&quot;&gt;45&lt;/a&gt;&lt;/span&gt;            myBkTask2.Start();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n46&quot; name=&quot;n46&quot;&gt;46&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n47&quot; name=&quot;n47&quot;&gt;47&lt;/a&gt;&lt;/span&gt;            LogMsg(&amp;quot;Main thread worker waiting&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n48&quot; name=&quot;n48&quot;&gt;48&lt;/a&gt;&lt;/span&gt;            myBkTask.Wait();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n49&quot; name=&quot;n49&quot;&gt;49&lt;/a&gt;&lt;/span&gt;            myBkTask2.Wait();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n50&quot; name=&quot;n50&quot;&gt;50&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n51&quot; name=&quot;n51&quot;&gt;51&lt;/a&gt;&lt;/span&gt;            LogMsg(&amp;quot;Main thread worker completed&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n52&quot; name=&quot;n52&quot;&gt;52&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n53&quot; name=&quot;n53&quot;&gt;53&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n54&quot; name=&quot;n54&quot;&gt;54&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n55&quot; name=&quot;n55&quot;&gt;55&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n56&quot; name=&quot;n56&quot;&gt;56&lt;/a&gt;&lt;/span&gt;        // Main
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n57&quot; name=&quot;n57&quot;&gt;57&lt;/a&gt;&lt;/span&gt;        // Start up a background worker test instance
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n58&quot; name=&quot;n58&quot;&gt;58&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n59&quot; name=&quot;n59&quot;&gt;59&lt;/a&gt;&lt;/span&gt;        static void Main(string[] args)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n60&quot; name=&quot;n60&quot;&gt;60&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n61&quot; name=&quot;n61&quot;&gt;61&lt;/a&gt;&lt;/span&gt;            var testWkr = new TasksTester();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n62&quot; name=&quot;n62&quot;&gt;62&lt;/a&gt;&lt;/span&gt;            testWkr.RunTest();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n63&quot; name=&quot;n63&quot;&gt;63&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n64&quot; name=&quot;n64&quot;&gt;64&lt;/a&gt;&lt;/span&gt;    }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n65&quot; name=&quot;n65&quot;&gt;65&lt;/a&gt;&lt;/span&gt;}
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The output-&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;19:05:48.736 ThreadId=4, Background worker starting
-19:05:48.721 ThreadId=1, Main thread worker waiting
-19:05:48.735 ThreadId=3, Background worker starting
-19:05:50.752 ThreadId=4, Background worker completed
-19:05:50.762 ThreadId=3, Background worker completed
-19:05:50.762 ThreadId=1, Main thread worker completed
-&lt;/code&gt;&lt;/pre&gt;
-
-</description>
-        <pubDate>2015-12-27 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2015/12/27/tasks2/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2015/12/27/tasks2/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Using Tasks</title>
-        <description>&lt;p&gt;Testing usage of Tasks today. &lt;/p&gt;
-
-&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;using System;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;using System.Threading;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;using System.Threading.Tasks;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;namespace TestTasks
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;{
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;    class TasksTester
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;    {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;        private void LogMsg(string msg, params object[] args)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;            Console.Out.Write(&amp;quot;{0} ThreadId={1} &amp;quot;,
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n12&quot; name=&quot;n12&quot;&gt;12&lt;/a&gt;&lt;/span&gt;                DateTime.Now.ToString(&amp;quot;HH:MM:ss.fff&amp;quot;),
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n13&quot; name=&quot;n13&quot;&gt;13&lt;/a&gt;&lt;/span&gt;                Thread.CurrentThread.ManagedThreadId);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n14&quot; name=&quot;n14&quot;&gt;14&lt;/a&gt;&lt;/span&gt;            Console.Out.WriteLine(msg, args);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n15&quot; name=&quot;n15&quot;&gt;15&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n16&quot; name=&quot;n16&quot;&gt;16&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n17&quot; name=&quot;n17&quot;&gt;17&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n18&quot; name=&quot;n18&quot;&gt;18&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n19&quot; name=&quot;n19&quot;&gt;19&lt;/a&gt;&lt;/span&gt;        private void DoWork(object e)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n20&quot; name=&quot;n20&quot;&gt;20&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n21&quot; name=&quot;n21&quot;&gt;21&lt;/a&gt;&lt;/span&gt;            LogMsg(&amp;quot;Background worker starting&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n22&quot; name=&quot;n22&quot;&gt;22&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n23&quot; name=&quot;n23&quot;&gt;23&lt;/a&gt;&lt;/span&gt;            float percentDone = 0.0f;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n24&quot; name=&quot;n24&quot;&gt;24&lt;/a&gt;&lt;/span&gt;            for (int i = 0; i &amp;lt; 10; i++)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n25&quot; name=&quot;n25&quot;&gt;25&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n26&quot; name=&quot;n26&quot;&gt;26&lt;/a&gt;&lt;/span&gt;                Thread.Sleep(200);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n27&quot; name=&quot;n27&quot;&gt;27&lt;/a&gt;&lt;/span&gt;                percentDone += 10.0f;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n28&quot; name=&quot;n28&quot;&gt;28&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n29&quot; name=&quot;n29&quot;&gt;29&lt;/a&gt;&lt;/span&gt;            LogMsg(&amp;quot;Background worker completed&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n30&quot; name=&quot;n30&quot;&gt;30&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n31&quot; name=&quot;n31&quot;&gt;31&lt;/a&gt;&lt;/span&gt;            AutoResetEvent ae = e as AutoResetEvent;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n32&quot; name=&quot;n32&quot;&gt;32&lt;/a&gt;&lt;/span&gt;            ae.Set();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n33&quot; name=&quot;n33&quot;&gt;33&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n34&quot; name=&quot;n34&quot;&gt;34&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n35&quot; name=&quot;n35&quot;&gt;35&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n36&quot; name=&quot;n36&quot;&gt;36&lt;/a&gt;&lt;/span&gt;        // RunTest
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n37&quot; name=&quot;n37&quot;&gt;37&lt;/a&gt;&lt;/span&gt;        //
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n38&quot; name=&quot;n38&quot;&gt;38&lt;/a&gt;&lt;/span&gt;        // Function run by main thread
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n39&quot; name=&quot;n39&quot;&gt;39&lt;/a&gt;&lt;/span&gt;        // Main thread sets up the background worker instance
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n40&quot; name=&quot;n40&quot;&gt;40&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        // and fires it off
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n41&quot; name=&quot;n41&quot;&gt;41&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n42&quot; name=&quot;n42&quot;&gt;42&lt;/a&gt;&lt;/span&gt;        public void RunTest()
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n43&quot; name=&quot;n43&quot;&gt;43&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n44&quot; name=&quot;n44&quot;&gt;44&lt;/a&gt;&lt;/span&gt;            AutoResetEvent myFlag = new AutoResetEvent(false);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n45&quot; name=&quot;n45&quot;&gt;45&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n46&quot; name=&quot;n46&quot;&gt;46&lt;/a&gt;&lt;/span&gt;            //Action&amp;lt;object&amp;gt; myAction = DoWork;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n47&quot; name=&quot;n47&quot;&gt;47&lt;/a&gt;&lt;/span&gt;            //var myBkTask = new Task(myAction, myFlag);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n48&quot; name=&quot;n48&quot;&gt;48&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n49&quot; name=&quot;n49&quot;&gt;49&lt;/a&gt;&lt;/span&gt;            var myBkTask = new Task(delegate { DoWork(myFlag); });
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n50&quot; name=&quot;n50&quot;&gt;50&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;            myBkTask.Start();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n51&quot; name=&quot;n51&quot;&gt;51&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n52&quot; name=&quot;n52&quot;&gt;52&lt;/a&gt;&lt;/span&gt;            LogMsg(&amp;quot;Main thread worker waiting&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n53&quot; name=&quot;n53&quot;&gt;53&lt;/a&gt;&lt;/span&gt;            myFlag.WaitOne();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n54&quot; name=&quot;n54&quot;&gt;54&lt;/a&gt;&lt;/span&gt;            LogMsg(&amp;quot;Main thread worker completed&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n55&quot; name=&quot;n55&quot;&gt;55&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n56&quot; name=&quot;n56&quot;&gt;56&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n57&quot; name=&quot;n57&quot;&gt;57&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n58&quot; name=&quot;n58&quot;&gt;58&lt;/a&gt;&lt;/span&gt;        // Main
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n59&quot; name=&quot;n59&quot;&gt;59&lt;/a&gt;&lt;/span&gt;        // Start up a background worker test instance
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n60&quot; name=&quot;n60&quot;&gt;60&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n61&quot; name=&quot;n61&quot;&gt;61&lt;/a&gt;&lt;/span&gt;        static void Main(string[] args)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n62&quot; name=&quot;n62&quot;&gt;62&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n63&quot; name=&quot;n63&quot;&gt;63&lt;/a&gt;&lt;/span&gt;            var testWkr = new TasksTester();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n64&quot; name=&quot;n64&quot;&gt;64&lt;/a&gt;&lt;/span&gt;            testWkr.RunTest();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n65&quot; name=&quot;n65&quot;&gt;65&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n66&quot; name=&quot;n66&quot;&gt;66&lt;/a&gt;&lt;/span&gt;    }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n67&quot; name=&quot;n67&quot;&gt;67&lt;/a&gt;&lt;/span&gt;}
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The output is- &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;19:05:47.041 ThreadId=1, Main thread worker waiting
-19:05:47.060 ThreadId=3, Background worker starting
-19:05:49.108 ThreadId=3, Background worker completed
-19:05:49.108 ThreadId=1, Main thread worker completed
-&lt;/code&gt;&lt;/pre&gt;
-
-</description>
-        <pubDate>2015-12-26 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2015/12/26/tasks/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2015/12/26/tasks/</guid>
-        
-        <category>patterns</category>
         
         
         <category>tech</category>
