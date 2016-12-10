@@ -58,12 +58,42 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a></h2>
+            </header>
+            <section class="post-excerpt">
+                I’ve just had enough of the abstract high-faluting language used in the GOF’s Design Patterns. Absolutely enough. I’m sure there’s more than enough readers who can’t understand any one of the GOF’s denser patterns. The Decorator Pattern is one such dense connundrum. I mean- just give it to me straight what does it do? why use it? how to build it? In plain terms, if there is a need to add functionality to a class...
+                <!--
+                <p>I’ve just had enough of the abstract high-faluting language used in the GOF’s Design Patterns.
+Absolutely <strong>enough</strong>.  I’m sure there’s more than enough readers who can’t understand any one of the
+GOF’s denser patterns.  The Decorator Pattern is one such dense connundrum.  I mean- <strong>just give it to me 
+straight</strong> what does it do?  why use it?  how to build it?</p>
+
+ <a class="read-more" href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-03-24">
+                    24 Mar 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a></h2>
             </header>
             <section class="post-excerpt">
-                As a software developer, I regularly do drills with different languages. This is rather analogous to how musicians play scales with their instructions. This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes. I remember from Jon Bentley’s “Programming Pearls” - back in the old days- when 64K RAM was considered a luxury, programmers came up with ingenius algorithms to conserve memory usage....
+                As a software developer, I regularly do drills with different languages. This is rather analogous to how musicians play scales with their instructions. This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes. I remember from Jon Bentley’s “Programming Pearls” back in the old days- when 64K RAM was considered a luxury, programmers came up with ingenius algorithms to conserve memory usage. I...
                 <!--
-                 <a class="read-more" href="/tech/2014/03/22/searching-for-primes-with-c/">&raquo;</a>
+                <p>As a software developer, I regularly do drills with different languages.  This is rather analogous to how musicians play scales with their instructions.  This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes.</p>
+
+ <a class="read-more" href="/tech/2014/03/22/searching-for-primes-with-c/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -86,7 +116,9 @@
             <section class="post-excerpt">
                 This connundrum always troubled me when I coded in C++. What happens to an object when the object’s constructor throws an exception? Is the object fully constructed or not? If not, does that mean its destructor never gets called? If so, then what happens to the memory that the constructor allocated prior to coming across an exception? In C++, there was the problem of leaky memory if constructors are prone to exceptions. This led to...
                 <!--
-                 <a class="read-more" href="/tech/2014/03/21/exceptions-in-java-constructors/">&raquo;</a>
+                <p>This connundrum always troubled me when I coded in C++.  What happens to an object when the object’s constructor throws an exception?  Is the object fully constructed or not?  If not, does that mean its destructor never gets called?  If so, then what happens to the memory that the constructor allocated prior to coming across an exception?</p>
+
+ <a class="read-more" href="/tech/2014/03/21/exceptions-in-java-constructors/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -107,9 +139,11 @@
                 <h2 class="post-title"><a href="/tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></h2>
             </header>
             <section class="post-excerpt">
-                Strings in Java can be declared either literally- String s = "123"; or as a String instance- String s = new String("123"); What are the differences between these two strings? 1package drills; 2 3public class Tester { 4 5 public static void main(String[] args) { 6 7 // Test differences between String v = new String(...) 8 // and String v = &quot;...&quot; 9 10 // String literals are stored in a string pool- cached...
+                Strings in Java can be declared either literally- String s = "123"; or as a String instance- String s = new String("123"); What are the differences between these two strings? package drills; public class Tester { public static void main(String[] args) { // Test differences between String v = new String(...) // and String v = "..." // String literals are stored in a string pool- cached and reused. // String objects are stored in...
                 <!--
-                 <a class="read-more" href="/tech/2014/03/20/java-string-literals/">&raquo;</a>
+                <p>Strings in Java can be declared either literally-</p>
+
+ <a class="read-more" href="/tech/2014/03/20/java-string-literals/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -136,31 +170,11 @@ java -ea Test.java
 
 
 
-                <!--
-                 <a class="read-more" href="/tech/2014/03/17/java-assertions/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-17">
-                    17 Mar 2014
-                </time> 
-            </footer>
-        </article>
 
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a></h2>
-            </header>
-            <section class="post-excerpt">
-                With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer necessary to create timers and callbacks. Java 1.5 has a ExecutorService that can execute tasks at scheduled times. Below shows a quick example of how it can be used. 1package drills; 2 3import java.text.DateFormat; 4import java.text.SimpleDateFormat; 5import java.util.Calendar; 6import java.util.Date; 7import java.util.concurrent.Executors; 8import java.util.concurrent.ScheduledExecutorService; 9import java.util.concurrent.TimeUnit; 10 11public class Tester { 12 13 DateFormat...
                 <!--
-                 <a class="read-more" href="/tech/2014/03/17/delayed_background/">&raquo;</a>
+                <p>Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:</p>
+
+ <a class="read-more" href="/tech/2014/03/17/java-assertions/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">

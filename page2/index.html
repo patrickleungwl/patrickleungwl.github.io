@@ -58,21 +58,26 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/management/2016/04/03/lky-on-management/">LKY on Management</a></h2>
+                <h2 class="post-title"><a href="/tech/2016/04/07/getting-things-done/">Getting Things Done</a></h2>
             </header>
             <section class="post-excerpt">
-                Wisdom distilled from some of the great visionary Lee Kuan Yew’s many speeches- Constantly Innovate “Standing still is a sure way to extinction.” “We have to move upwards to new niches, find a new path to succeed. If we succeed, others will later follow our path but first, we must work out that path and be succeessful. We should not brag about our strategies, especially before they have worked… we must quietly sort our options...
+                From the book “Getting Things Done Secrets” by Rus Slater- If you want to get on in your career or your home life you will need to get things done. In the modern world, however, there are lots of different people wanting lots of different things to be done, and you can’t do everything for everyone unless you get much better at a number of different things. Knowing what things to do Recognize that everyone...
                 <!--
-                 <a class="read-more" href="/management/2016/04/03/lky-on-management/">&raquo;</a>
+                <p>From the book “Getting Things Done Secrets” by Rus Slater- If you want to get on in your career or your
+home life you will need to get things done.  In the modern world, however, there are lots of different
+people wanting lots of different things to be done, and you can’t do everything for everyone unless you
+get much better at a number of different things.</p>
+
+ <a class="read-more" href="/tech/2016/04/07/getting-things-done/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
                 
                  
-                    on management 
+                    on tech 
                 
-                <time class="post-date" datetime="2016-04-03">
-                    03 Apr 2016
+                <time class="post-date" datetime="2016-04-07">
+                    07 Apr 2016
                 </time> 
             </footer>
         </article>
@@ -86,13 +91,53 @@
             <section class="post-excerpt">
                 “It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the area, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually...
                 <!--
-                 <a class="read-more" href="/motivation/2016/04/03/insprirational-quotes/">&raquo;</a>
+                <p>“It is not the critic who counts; not the man who points out how the strong man
+stumbles, or where the doer of deeds could have done them better.
+The credit belongs to the man who is actually in the area,
+whose face is marred by dust and sweat and blood;
+who strives valiantly; who errs, who comes short again and again,
+because there is no effort without error and shortcoming;
+but who does actually strive to do the deeds;
+who knows great enthusiams, the great devotions;
+who spends himself in a worthy cause;
+who at the best knows in the end the triumph of high achievement,
+and who at the worst, if he fails, at least fails while daring greatly,
+so that his place shall never be with those cold and
+timid souls who neither know victory or defeat.” 
+<em>Thedore Roosevelt</em></p>
+
+ <a class="read-more" href="/motivation/2016/04/03/insprirational-quotes/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
                 
                  
                     on motivation 
+                
+                <time class="post-date" datetime="2016-04-03">
+                    03 Apr 2016
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/management/2016/04/03/lky-on-management/">LKY on Management</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Wisdom distilled from some of the great visionary Lee Kuan Yew’s many speeches- Constantly Innovate “Standing still is a sure way to extinction.” “We have to move upwards to new niches, find a new path to succeed. If we succeed, others will later follow our path but first, we must work out that path and be succeessful. We should not brag about our strategies, especially before they have worked… we must quietly sort our options...
+                <!--
+                <p>Wisdom distilled from some of the great visionary Lee Kuan Yew’s many speeches-</p>
+
+ <a class="read-more" href="/management/2016/04/03/lky-on-management/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on management 
                 
                 <time class="post-date" datetime="2016-04-03">
                     03 Apr 2016
@@ -124,7 +169,9 @@
 
 
                 <!--
-                 <a class="read-more" href="/tech/2016/04/02/tech-to-study/">&raquo;</a>
+                <p>A short list of tech to study and review.</p>
+
+ <a class="read-more" href="/tech/2016/04/02/tech-to-study/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -145,9 +192,11 @@
                 <h2 class="post-title"><a href="/tech/2015/12/27/tasks2/">Using Tasks-2</a></h2>
             </header>
             <section class="post-excerpt">
-                Testing with Tasks again. 1using System; 2using System.Threading; 3using System.Threading.Tasks; 4 5namespace TestTasks2 6{ 7 class TasksTester 8 { 9 private void LogMsg(string msg, params object[] args) 10 { 11 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 12 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 13 Thread.CurrentThread.ManagedThreadId); 14 Console.Out.WriteLine(msg, args); 15 } 16 17 18 19 private void DoWork() 20 { 21 LogMsg(&quot;Background worker starting&quot;); 22 23 float percentDone = 0.0f; 24 for (int i = 0; i &lt; 10; i++) 25 { 26 Thread.Sleep(200);...
+                Testing with Tasks again. using System; using System.Threading; using System.Threading.Tasks; namespace TestTasks2 { class TasksTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } private void DoWork() { LogMsg("Background worker starting"); float percentDone = 0.0f; for (int i = 0; i &lt; 10; i++) { Thread.Sleep(200); percentDone += 10.0f; } LogMsg("Background worker completed"); } // RunTest // // Function run by main thread // Main thread sets...
                 <!--
-                 <a class="read-more" href="/tech/2015/12/27/tasks2/">&raquo;</a>
+                <p>Testing with Tasks again.</p>
+
+ <a class="read-more" href="/tech/2015/12/27/tasks2/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -157,29 +206,6 @@
                 
                 <time class="post-date" datetime="2015-12-27">
                     27 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/12/26/tasks/">Using Tasks</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Testing usage of Tasks today. 1using System; 2using System.Threading; 3using System.Threading.Tasks; 4 5namespace TestTasks 6{ 7 class TasksTester 8 { 9 private void LogMsg(string msg, params object[] args) 10 { 11 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 12 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 13 Thread.CurrentThread.ManagedThreadId); 14 Console.Out.WriteLine(msg, args); 15 } 16 17 18 19 private void DoWork(object e) 20 { 21 LogMsg(&quot;Background worker starting&quot;); 22 23 float percentDone = 0.0f; 24 for (int i = 0; i &lt; 10; i++) 25 {...
-                <!--
-                 <a class="read-more" href="/tech/2015/12/26/tasks/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-12-26">
-                    26 Dec 2015
                 </time> 
             </footer>
         </article>

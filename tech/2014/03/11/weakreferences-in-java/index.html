@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="post-template">
+<body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -52,24 +52,22 @@ keeping high storage-cost objects in memory for only as long as you really need 
 
 <p>Example, let’s make a dummy class that does nothing but make heavy memory allocations:</p>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span><span style="color:#080;font-weight:bold">package</span> <span style="color:#707;font-weight:bold">drills</span>; 
-<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>
-<span class="line-numbers"> <a href="#n3" name="n3">3</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.ArrayList</span>;
-<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>
-<span class="line-numbers"> <a href="#n5" name="n5">5</a></span><span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">DumbWeight</span> {
-<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>  <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">ArrayList</span>&lt;<span style="color:#0a8;font-weight:bold">Integer</span>&gt; _weights;
-<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>  
-<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>  <span style="color:#088;font-weight:bold">public</span> DumbWeight(<span style="color:#339;font-weight:bold">int</span> weight) {
-<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>    _weights = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">ArrayList</span>&lt;<span style="color:#0a8;font-weight:bold">Integer</span>&gt;(weight);
-<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>    <span style="color:#080;font-weight:bold">for</span> (<span style="color:#339;font-weight:bold">int</span> i=<span style="color:#00D">0</span>; i&lt;weight; i++) {
-<span class="line-numbers"><a href="#n11" name="n11">11</a></span>      _weights.add(<span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">Integer</span>(i));
-<span class="line-numbers"><a href="#n12" name="n12">12</a></span>    }
-<span class="line-numbers"><a href="#n13" name="n13">13</a></span>  }
-<span class="line-numbers"><a href="#n14" name="n14">14</a></span>}
-<span class="line-numbers"><a href="#n15" name="n15">15</a></span>
-</pre></div>
-</div>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span> 
+
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DumbWeight</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">_weights</span><span class="o">;</span>
+  
+  <span class="kd">public</span> <span class="nf">DumbWeight</span><span class="o">(</span><span class="kt">int</span> <span class="n">weight</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">_weights</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;(</span><span class="n">weight</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">weight</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">_weights</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
 </div>
 
 <p>And here is the test code. The test code creates a thousand “DumbWeight” objects- each allocating one
@@ -78,68 +76,66 @@ references to them. This leaves the WeakReference as the only link to the DumbWe
 Collector eventually spots this- and wipes out the DumbWeights over time. The CheckReferences method
 periodically scans the set of WeakReferences to see if the DumbWeights still exist.</p>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span><span style="color:#080;font-weight:bold">package</span> <span style="color:#707;font-weight:bold">drills</span>;
-<span class="line-numbers"> <a href="#n2" name="n2">2</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.lang.ref</span>.*;
-<span class="line-numbers"> <a href="#n3" name="n3">3</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util</span>.*;
-<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>
-<span class="line-numbers"> <a href="#n5" name="n5">5</a></span><span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">MyTest</span> { 
-<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>
-<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>  <span style="color:#777">/** checkWeakReferences</span>
-<span class="line-numbers"> <a href="#n8" name="n8">8</a></span><span style="color:#777">   *  </span>
-<span class="line-numbers"> <a href="#n9" name="n9">9</a></span><span style="color:#777">   *  Check how many weak references still exist and not collected</span>
-<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span><span style="color:#777">   */</span>
-<span class="line-numbers"><a href="#n11" name="n11">11</a></span>  <span style="color:#088;font-weight:bold">private</span> <span style="color:#339;font-weight:bold">void</span> checkWeakReferences(<span style="color:#0a8;font-weight:bold">Set</span>&lt;<span style="color:#0a8;font-weight:bold">WeakReference</span>&gt; s) {
-<span class="line-numbers"><a href="#n12" name="n12">12</a></span>    <span style="color:#339;font-weight:bold">int</span> numCollected = <span style="color:#00D">0</span>;
-<span class="line-numbers"><a href="#n13" name="n13">13</a></span>    <span style="color:#0a8;font-weight:bold">Iterator</span>&lt;<span style="color:#0a8;font-weight:bold">WeakReference</span>&gt; i = s.iterator();
-<span class="line-numbers"><a href="#n14" name="n14">14</a></span>    <span style="color:#080;font-weight:bold">while</span> (i.hasNext()) {
-<span class="line-numbers"><a href="#n15" name="n15">15</a></span>      <span style="color:#0a8;font-weight:bold">WeakReference</span> w = i.next();
-<span class="line-numbers"><a href="#n16" name="n16">16</a></span>      DumbWeight d = w.get();
-<span class="line-numbers"><a href="#n17" name="n17">17</a></span>      <span style="color:#080;font-weight:bold">if</span> (d==<span style="color:#069">null</span>) {
-<span class="line-numbers"><a href="#n18" name="n18">18</a></span>        ++numCollected;
-<span class="line-numbers"><a href="#n19" name="n19">19</a></span>      } 
-<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>    }
-<span class="line-numbers"><a href="#n21" name="n21">21</a></span>    <span style="color:#0a8;font-weight:bold">System</span>.out.format(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">checkWeakRefs: size=%d, numCollected=%dn</span><span style="color:#710">&quot;</span></span>,
-<span class="line-numbers"><a href="#n22" name="n22">22</a></span>      s.size(), numCollected );
-<span class="line-numbers"><a href="#n23" name="n23">23</a></span>  } 
-<span class="line-numbers"><a href="#n24" name="n24">24</a></span>
-<span class="line-numbers"><a href="#n25" name="n25">25</a></span>  <span style="color:#777">/** testWeakReferences</span>
-<span class="line-numbers"><a href="#n26" name="n26">26</a></span><span style="color:#777">   *  </span>
-<span class="line-numbers"><a href="#n27" name="n27">27</a></span><span style="color:#777">   *  If the GC collects weak references, then we should be</span>
-<span class="line-numbers"><a href="#n28" name="n28">28</a></span><span style="color:#777">   *  able to create objects using WR indefinitely.</span>
-<span class="line-numbers"><a href="#n29" name="n29">29</a></span><span style="color:#777">   *</span>
-<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span><span style="color:#777"></span>
-<span class="line-numbers"><a href="#n31" name="n31">31</a></span><span style="color:#777">  public void testWeakReferences() {</span>
-<span class="line-numbers"><a href="#n32" name="n32">32</a></span><span style="color:#777"></span>
-<span class="line-numbers"><a href="#n33" name="n33">33</a></span><span style="color:#777">    Set&lt;WeakReference&gt; s = new HashSet&lt;WeakReference&gt;();</span>
-<span class="line-numbers"><a href="#n34" name="n34">34</a></span><span style="color:#777"></span>
-<span class="line-numbers"><a href="#n35" name="n35">35</a></span><span style="color:#777">    System.out.println(&quot;*****************************&quot;); </span>
-<span class="line-numbers"><a href="#n36" name="n36">36</a></span><span style="color:#777">    System.out.println(&quot;Starting testWeakReferences&quot;); </span>
-<span class="line-numbers"><a href="#n37" name="n37">37</a></span><span style="color:#777">    System.out.println(&quot;Creating 1000 weak references&quot;);</span>
-<span class="line-numbers"><a href="#n38" name="n38">38</a></span><span style="color:#777">    for (int i=0; i&amp;lt;1000; i++) {</span>
-<span class="line-numbers"><a href="#n39" name="n39">39</a></span><span style="color:#777">      DumbWeight d = new DumbWeight(100000);</span>
-<span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span><span style="color:#777">      WeakReference w = new WeakReference(d);</span>
-<span class="line-numbers"><a href="#n41" name="n41">41</a></span><span style="color:#777">      s.add(w);</span>
-<span class="line-numbers"><a href="#n42" name="n42">42</a></span><span style="color:#777">      d = null;</span>
-<span class="line-numbers"><a href="#n43" name="n43">43</a></span><span style="color:#777">      if (s.size()%100==0) {</span>
-<span class="line-numbers"><a href="#n44" name="n44">44</a></span><span style="color:#777">        checkWeakReferences(s);</span>
-<span class="line-numbers"><a href="#n45" name="n45">45</a></span><span style="color:#777">      } </span>
-<span class="line-numbers"><a href="#n46" name="n46">46</a></span><span style="color:#777">    }</span>
-<span class="line-numbers"><a href="#n47" name="n47">47</a></span><span style="color:#777">    System.out.println(&quot;Completed testWeakReferences&quot;); </span>
-<span class="line-numbers"><a href="#n48" name="n48">48</a></span><span style="color:#777">  }</span>
-<span class="line-numbers"><a href="#n49" name="n49">49</a></span><span style="color:#777"></span>
-<span class="line-numbers"><strong><a href="#n50" name="n50">50</a></strong></span><span style="color:#777">  public static void main(String[] args) { </span>
-<span class="line-numbers"><a href="#n51" name="n51">51</a></span><span style="color:#777">    MyTest m = new MyTest();</span>
-<span class="line-numbers"><a href="#n52" name="n52">52</a></span><span style="color:#777">    m.testWeakReferences();</span>
-<span class="line-numbers"><a href="#n53" name="n53">53</a></span><span style="color:#777">  }</span>
-<span class="line-numbers"><a href="#n54" name="n54">54</a></span><span style="color:#777">}</span>
-<span class="line-numbers"><a href="#n55" name="n55">55</a></span><span style="color:#777"></span>
-<span class="line-numbers"><a href="#n56" name="n56">56</a></span><span style="color:#777"></span></pre></div>
-</div>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.ref.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTest</span> <span class="o">{</span> 
+
+  <span class="cm">/** checkWeakReferences
+   *  
+   *  Check how many weak references still exist and not collected
+   */</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">checkWeakReferences</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">WeakReference</span><span class="o">&gt;</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">numCollected</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">WeakReference</span><span class="o">&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">i</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">WeakReference</span> <span class="n">w</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">DumbWeight</span> <span class="n">d</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">d</span><span class="o">==</span><span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">++</span><span class="n">numCollected</span><span class="o">;</span>
+      <span class="o">}</span> 
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"checkWeakRefs: size=%d, numCollected=%dn"</span><span class="o">,</span>
+      <span class="n">s</span><span class="o">.</span><span class="na">size</span><span class="o">(),</span> <span class="n">numCollected</span> <span class="o">);</span>
+  <span class="o">}</span> 
+
+  <span class="o">/**</span> <span class="n">testWeakReferences</span>
+   <span class="o">*</span>  
+   <span class="o">*</span>  <span class="n">If</span> <span class="n">the</span> <span class="n">GC</span> <span class="n">collects</span> <span class="n">weak</span> <span class="n">references</span><span class="o">,</span> <span class="n">then</span> <span class="n">we</span> <span class="n">should</span> <span class="n">be</span>
+   <span class="o">*</span>  <span class="n">able</span> <span class="n">to</span> <span class="n">create</span> <span class="n">objects</span> <span class="n">using</span> <span class="n">WR</span> <span class="n">indefinitely</span><span class="o">.</span>
+   <span class="o">*</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testWeakReferences</span><span class="o">()</span> <span class="o">{</span>
+
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">WeakReference</span><span class="o">&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">WeakReference</span><span class="o">&gt;();</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"*****************************"</span><span class="o">);</span> 
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Starting testWeakReferences"</span><span class="o">);</span> 
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Creating 1000 weak references"</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="mi">1000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">DumbWeight</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DumbWeight</span><span class="o">(</span><span class="mi">100000</span><span class="o">);</span>
+      <span class="n">WeakReference</span> <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WeakReference</span><span class="o">(</span><span class="n">d</span><span class="o">);</span>
+      <span class="n">s</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">w</span><span class="o">);</span>
+      <span class="n">d</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">size</span><span class="o">()%</span><span class="mi">100</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">checkWeakReferences</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+      <span class="o">}</span> 
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Completed testWeakReferences"</span><span class="o">);</span> 
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+    <span class="n">MyTest</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyTest</span><span class="o">();</span>
+    <span class="n">m</span><span class="o">.</span><span class="na">testWeakReferences</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
 </div>
 <p>The output of one such test run is shown below. The memory usage of this Test app stays in the 220 meg range on a Linux laptop with 2Gb RAM.</p>
 
-<pre><code>*****************************
+<div class="highlighter-rouge"><pre class="highlight"><code>*****************************
 Starting testWeakReferences
 Creating 1000 weak references
 checkWeakRefs: size=100, numCollected=98
@@ -155,6 +151,7 @@ checkWeakRefs: size=1000, numCollected=924
 Completed testWeakReferences
 
 </code></pre>
+</div>
 
 <p>As shown, because the objects, the DumbWeight instances, are only “weakly referenced” and not strongly referenced, the GC always collects them whenever it runs.</p>
 
@@ -169,6 +166,8 @@ Completed testWeakReferences
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     

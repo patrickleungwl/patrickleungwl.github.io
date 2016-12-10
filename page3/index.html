@@ -58,12 +58,39 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/24/mutex/">Using Mutexes</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Testing mutexes today. Mutexes can be used to ensure only one instance of an app runs at any one time. using System; using System.Threading; namespace TestMutex { class MutexTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask() { LogMsg("LongComputeTask starting"); float percentDone = 0.0f; for (int i = 0; i &lt;10; i++) { Thread.Sleep(1000);...
+                <!--
+                <p>Testing mutexes today.  Mutexes can be used to ensure only one instance of an app runs at any one time.</p>
+
+ <a class="read-more" href="/tech/2015/12/24/mutex/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-24">
+                    24 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2015/12/23/threadpool/">Using ThreadPool</a></h2>
             </header>
             <section class="post-excerpt">
-                Testing ThreadPool usage today- 1using System; 2using System.Threading; 3 4namespace TestThreadPool 5{ 6 class ThreadPoolTester 7 { 8 private void LogMsg(string msg, params object[] args) 9 { 10 Console.Out.Write(&quot;{0} ThreadId=3D{1} &quot;, 11 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 12 Thread.CurrentThread.ManagedThreadId); 13 Console.Out.WriteLine(msg, args); 14 } 15 16 17 // LongComputeTask 18 // 19 // Function run by background worker. 20 21 private void LongComputeTask(Object stateInfo) 22 { 23 LogMsg(&quot;LongComputeTask starting&quot;); 24 25 float percentDone =3D 0.0f; 26 for (int i...
+                Testing ThreadPool usage today- using System; using System.Threading; namespace TestThreadPool { class ThreadPoolTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId=3D{1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask(Object stateInfo) { LogMsg("LongComputeTask starting"); float percentDone =3D 0.0f; for (int i =3D 0; i &lt; 10; i++) { Thread.Sleep(500); percentDone +=3D 10.0f; LogMsg("LongComputeTask {0:0.0f}% completed", percentDone); } LogMsg("LongComputeTask completed"); AutoResetEvent myFlag =3D stateInfo...
                 <!--
-                 <a class="read-more" href="/tech/2015/12/23/threadpool/">&raquo;</a>
+                <p>Testing ThreadPool usage today-</p>
+
+ <a class="read-more" href="/tech/2015/12/23/threadpool/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -84,9 +111,12 @@
                 <h2 class="post-title"><a href="/tech/2015/12/22/threads/">Using Threads</a></h2>
             </header>
             <section class="post-excerpt">
-                We’re not supposed to use raw managed threads anymore- given that .net 4+ has given us much more advanced multi-threading features. However, I’ll still post some test code to illustrate how threads work. 1using System; 2using System.Text; 3using System.Threading; 4 5namespace TestThreads 6{ 7 class ThreadTester 8 { 9 private Thread _workerThread; 10 11 private void LogMsg(string msg, params object[] args) 12 { 13 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 14 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 15 Thread.CurrentThread.ManagedThreadId); 16 Console.Out.WriteLine(msg, args); 17...
+                We’re not supposed to use raw managed threads anymore- given that .net 4+ has given us much more advanced multi-threading features. However, I’ll still post some test code to illustrate how threads work. using System; using System.Text; using System.Threading; namespace TestThreads { class ThreadTester { private Thread _workerThread; private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. void LongComputeTask(object...
                 <!--
-                 <a class="read-more" href="/tech/2015/12/22/threads/">&raquo;</a>
+                <p>We’re not supposed to use raw managed threads anymore- given that .net 4+ has given us much more advanced
+multi-threading features.  However, I’ll still post some test code to illustrate how threads work.</p>
+
+ <a class="read-more" href="/tech/2015/12/22/threads/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -107,9 +137,11 @@
                 <h2 class="post-title"><a href="/tech/2015/12/21/rhino-mocks/">Using Rhino Mocks</a></h2>
             </header>
             <section class="post-excerpt">
-                Testing Rhino Mocks today for use in unit tests. IAdder.cs 1using System; 2 3namespace TestAdderLib 4{ 5 public interface IAdder 6 { 7 int AddTwoNums(int a, int b); 8 } 9} 10 Adder.cs 1using System; 2using System.Threading; 3 4namespace TestAdderLib 5{ 6 public class Adder : IAdder 7 { 8 public int AddTwoNums(int a, int b) 9 { 10 Thread.Sleep(1000); 11 return a + b; 12 } 13 } 14} TestCalculatorWithRhino.cs 1using System; 2using Microsoft.VisualStudio.TestTools.UnitTesting;...
+                Testing Rhino Mocks today for use in unit tests. IAdder.cs using System; namespace TestAdderLib { public interface IAdder { int AddTwoNums(int a, int b); } } Adder.cs using System; using System.Threading; namespace TestAdderLib { public class Adder : IAdder { public int AddTwoNums(int a, int b) { Thread.Sleep(1000); return a + b; } } } TestCalculatorWithRhino.cs using System; using Microsoft.VisualStudio.TestTools.UnitTesting; using Calculator; using TestAdderLib; using Rhino.Mocks; namespace TestCalculatorWithRhino { internal class ManuallyCodedAdderStub : IAdder {...
                 <!--
-                 <a class="read-more" href="/tech/2015/12/21/rhino-mocks/">&raquo;</a>
+                <p>Testing Rhino Mocks today for use in unit tests.</p>
+
+ <a class="read-more" href="/tech/2015/12/21/rhino-mocks/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -130,9 +162,11 @@
                 <h2 class="post-title"><a href="/tech/2015/12/20/backgroundworker/">Using BackgroundWorker</a></h2>
             </header>
             <section class="post-excerpt">
-                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. 1using System; 2using System.ComponentModel; 3using System.Threading; 4 5namespace TestBackgroundWorker 6{ 7 class TestBkGrdWorker 8 { 9 static void LogMsg(string msg, params object[] args) 10 { 11 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 12 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 13 Thread.CurrentThread.ManagedThreadId); 14 Console.Out.WriteLine(msg, args); 15 } 16 17...
+                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. using System; using System.ComponentModel; using System.Threading; namespace TestBackgroundWorker { class TestBkGrdWorker { static void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // RunTest // // Function run by main thread // Main thread...
                 <!--
-                 <a class="read-more" href="/tech/2015/12/20/backgroundworker/">&raquo;</a>
+                <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p>
+
+ <a class="read-more" href="/tech/2015/12/20/backgroundworker/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -142,29 +176,6 @@
                 
                 <time class="post-date" datetime="2015-12-20">
                     20 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/12/19/variable-params/">Using Variable Params</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Today just put together a test case to show usage of functions with variable number of parameters. 1 2using System; 3using System.Threading; 4 5namespace TestVariableParams 6{ 7 class Tester 8 { 9 // use object[] to allow for arguments of any type 10 static void LogMsg(string msg, params object[] args) 11 { 12 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 13 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 14 Thread.CurrentThread.ManagedThreadId); 15 Console.Out.WriteLine(msg, args); 16 } 17 18 static void Main(string[] args) 19 { 20 LogMsg(&quot;Test...
-                <!--
-                 <a class="read-more" href="/tech/2015/12/19/variable-params/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-12-19">
-                    19 Dec 2015
                 </time> 
             </footer>
         </article>

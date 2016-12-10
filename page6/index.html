@@ -56,12 +56,43 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-) When it comes to memory management, C# certainly has many comparable features found in Java and more. Following the previous example of testing WeakReferences in Java, we’ll now run a similar test in C#. First, we’ll need a dummy memory resource-heavy object. We’ll use the same DumbWeight class, whose sole function is to allocate memory. using System.Collection.Generic; namespace Drills...
+                <!--
+                <p>Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-)</p>
+
+ <a class="read-more" href="/tech/2014/03/13/weakreferences-in-csharp/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-03-13">
+                    13 Mar 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></h2>
             </header>
             <section class="post-excerpt">
                 Continuing on with our investigation into memory handling in Java, let’s look at another rarely used feature- the SoftReference.  To get to the point, a SoftReference is just like a WeakReference- except that the Garbage Collector only collects its referenced object if the JVM is running low on memory.  This makes a SoftReference more “sticky” in a running process’s memory. Here is a simple example of how a SoftReference works. Let’s reuse the same resource-heavy...
                 <!--
-                 <a class="read-more" href="/tech/2014/03/12/softreferences-in-java/">&raquo;</a>
+                <p>Continuing on with our investigation into memory handling in Java, let’s look at another 
+rarely used feature- the SoftReference.  To get to the point, a SoftReference is 
+just like a WeakReference- except that the Garbage Collector only collects its 
+referenced object if the JVM is running low on memory.  This makes a SoftReference 
+more “sticky” in a running process’s memory.</p>
+
+ <a class="read-more" href="/tech/2014/03/12/softreferences-in-java/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -84,7 +115,11 @@
             <section class="post-excerpt">
                 Java as a language has been in the public eye for close to two decades now.  And there shouldn’t really be anything new to an old techie, should there?  Well, surprise to say- there are some features that I rarely use.  One of these features is the “WeakReference”. What are WeakReferences used for? WeakReferences are used for keeping objects in memory for only as long as a variable references it. As soon as this strong...
                 <!--
-                 <a class="read-more" href="/tech/2014/03/11/weakreferences-in-java/">&raquo;</a>
+                <p>Java as a language has been in the public eye for close to two decades now.  And there shouldn’t
+really be anything new to an old techie, should there?  Well, surprise to say- there are some 
+features that I rarely use.  One of these features is the “WeakReference”.</p>
+
+ <a class="read-more" href="/tech/2014/03/11/weakreferences-in-java/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">

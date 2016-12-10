@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="post-template">
+<body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -43,65 +43,64 @@
         <section class="post-content">
             <p>With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer
 necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
-at scheduled times.  Below shows a quick example of how it can be used. </p>
+at scheduled times.  Below shows a quick example of how it can be used.</p>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span><span style="color:#080;font-weight:bold">package</span> <span style="color:#707;font-weight:bold">drills</span>;
-<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>
-<span class="line-numbers"> <a href="#n3" name="n3">3</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.text.DateFormat</span>;
-<span class="line-numbers"> <a href="#n4" name="n4">4</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.text.SimpleDateFormat</span>;
-<span class="line-numbers"> <a href="#n5" name="n5">5</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.Calendar</span>;
-<span class="line-numbers"> <a href="#n6" name="n6">6</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.Date</span>;
-<span class="line-numbers"> <a href="#n7" name="n7">7</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.concurrent.Executors</span>;
-<span class="line-numbers"> <a href="#n8" name="n8">8</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.concurrent.ScheduledExecutorService</span>;
-<span class="line-numbers"> <a href="#n9" name="n9">9</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.concurrent.TimeUnit</span>;
-<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>
-<span class="line-numbers"><a href="#n11" name="n11">11</a></span><span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Tester</span> {
-<span class="line-numbers"><a href="#n12" name="n12">12</a></span>
-<span class="line-numbers"><a href="#n13" name="n13">13</a></span>  <span style="color:#0a8;font-weight:bold">DateFormat</span> _df;
-<span class="line-numbers"><a href="#n14" name="n14">14</a></span>
-<span class="line-numbers"><a href="#n15" name="n15">15</a></span>  <span style="color:#088;font-weight:bold">public</span> Tester() {
-<span class="line-numbers"><a href="#n16" name="n16">16</a></span>    _df = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">SimpleDateFormat</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">yyyyMMdd HH:mm:ss</span><span style="color:#710">&quot;</span></span>);
-<span class="line-numbers"><a href="#n17" name="n17">17</a></span>  }
-<span class="line-numbers"><a href="#n18" name="n18">18</a></span>
-<span class="line-numbers"><a href="#n19" name="n19">19</a></span>  <span style="color:#088;font-weight:bold">public</span> <span style="color:#0a8;font-weight:bold">String</span> GetTimeNow() {
-<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>    <span style="color:#0a8;font-weight:bold">Date</span> dt = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">Date</span>();
-<span class="line-numbers"><a href="#n21" name="n21">21</a></span>    <span style="color:#080;font-weight:bold">return</span> _df.format(dt);
-<span class="line-numbers"><a href="#n22" name="n22">22</a></span>  }
-<span class="line-numbers"><a href="#n23" name="n23">23</a></span>
-<span class="line-numbers"><a href="#n24" name="n24">24</a></span>  <span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> RunTest() {
-<span class="line-numbers"><a href="#n25" name="n25">25</a></span>    <span style="color:#0a8;font-weight:bold">Runnable</span> worker = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">Runnable</span>() {
-<span class="line-numbers"><a href="#n26" name="n26">26</a></span>      <span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> run() {
-<span class="line-numbers"><a href="#n27" name="n27">27</a></span>        <span style="color:#0a8;font-weight:bold">System</span>.out.format(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%s: Worker running</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>, GetTimeNow());                                
-<span class="line-numbers"><a href="#n28" name="n28">28</a></span>      }
-<span class="line-numbers"><a href="#n29" name="n29">29</a></span>    };
-<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>
-<span class="line-numbers"><a href="#n31" name="n31">31</a></span>    <span style="color:#0a8;font-weight:bold">ScheduledExecutorService</span> ex = <span style="color:#0a8;font-weight:bold">Executors</span>.newSingleThreadScheduledExecutor();
-<span class="line-numbers"><a href="#n32" name="n32">32</a></span>    <span style="color:#0a8;font-weight:bold">System</span>.out.format(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%s: Scheduled worker to run in 5 seconds</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>, GetTimeNow());
-<span class="line-numbers"><a href="#n33" name="n33">33</a></span>    ex.schedule(worker, <span style="color:#00D">5</span>, <span style="color:#0a8;font-weight:bold">TimeUnit</span>.SECONDS);
-<span class="line-numbers"><a href="#n34" name="n34">34</a></span>
-<span class="line-numbers"><a href="#n35" name="n35">35</a></span>    <span style="color:#080;font-weight:bold">try</span> {
-<span class="line-numbers"><a href="#n36" name="n36">36</a></span>      <span style="color:#0a8;font-weight:bold">Thread</span>.sleep(<span style="color:#00D">10000</span>);
-<span class="line-numbers"><a href="#n37" name="n37">37</a></span>    } <span style="color:#080;font-weight:bold">catch</span>(<span style="color:#C00;font-weight:bold">Exception</span> e) {
-<span class="line-numbers"><a href="#n38" name="n38">38</a></span>      <span style="color:#777">// Even if interrupted exception is thrown during sleep, keep going</span>
-<span class="line-numbers"><a href="#n39" name="n39">39</a></span>    }
-<span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span>    <span style="color:#0a8;font-weight:bold">System</span>.out.println(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Test completed</span><span style="color:#710">&quot;</span></span>);
-<span class="line-numbers"><a href="#n41" name="n41">41</a></span>  }        
-<span class="line-numbers"><a href="#n42" name="n42">42</a></span>
-<span class="line-numbers"><a href="#n43" name="n43">43</a></span>  <span style="color:#088;font-weight:bold">public</span> <span style="color:#088;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> main(<span style="color:#0a8;font-weight:bold">String</span><span style="color:#339;font-weight:bold">[]</span> args) {
-<span class="line-numbers"><a href="#n44" name="n44">44</a></span>    Tester t = <span style="color:#080;font-weight:bold">new</span> Tester();
-<span class="line-numbers"><a href="#n45" name="n45">45</a></span>    t.RunTest();
-<span class="line-numbers"><a href="#n46" name="n46">46</a></span>  }
-<span class="line-numbers"><a href="#n47" name="n47">47</a></span>}
-</pre></div>
-</div>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.text.DateFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.Executors</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.ScheduledExecutorService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.TimeUnit</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="o">{</span>
+
+  <span class="n">DateFormat</span> <span class="n">_df</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nf">Tester</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">_df</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyyMMdd HH:mm:ss"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">GetTimeNow</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Date</span> <span class="n">dt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+    <span class="k">return</span> <span class="n">_df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">dt</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">RunTest</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Runnable</span> <span class="n">worker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Worker running\n"</span><span class="o">,</span> <span class="n">GetTimeNow</span><span class="o">());</span>				
+      <span class="o">}</span>
+    <span class="o">};</span>
+
+    <span class="n">ScheduledExecutorService</span> <span class="n">ex</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Scheduled worker to run in 5 seconds\n"</span><span class="o">,</span> <span class="n">GetTimeNow</span><span class="o">());</span>
+    <span class="n">ex</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="n">worker</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// Even if interrupted exception is thrown during sleep, keep going</span>
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Test completed"</span><span class="o">);</span>
+  <span class="o">}</span>	
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Tester</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tester</span><span class="o">();</span>
+    <span class="n">t</span><span class="o">.</span><span class="na">RunTest</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
 </div>
 <p>The test app output looks like this:</p>
 
-<pre><code>20140317 23:56:53: Scheduled worker to run in 5 seconds
+<div class="highlighter-rouge"><pre class="highlight"><code>20140317 23:56:53: Scheduled worker to run in 5 seconds
 20140317 23:56:58: Worker running
 Test completed
 </code></pre>
+</div>
 
 
         </section>
@@ -112,6 +111,8 @@ Test completed
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     
