@@ -47,7 +47,7 @@
 
 <p>First, we’ll need a dummy memory resource-heavy object. We’ll use the same DumbWeight class, whose sole function is to allocate memory.</p>
 
-<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Collection.Generic</span><span class="p">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Collection.Generic</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">Drills</span>
 <span class="p">{</span>
@@ -70,7 +70,7 @@
 
 <p>And once again, we run our test by 1) creating a thousand DumbWeight instances, 2) maintain a set of WeakReferences pointing to these DumbWeight instances, 3) free up any strong (direct) references to the DumbWeights, and 4) watch what happens over time.</p>
 
-<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">Drills</span>

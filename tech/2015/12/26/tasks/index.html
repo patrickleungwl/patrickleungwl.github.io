@@ -43,7 +43,7 @@
         <section class="post-content">
             <p>Testing usage of Tasks today.</p>
 
-<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
 
@@ -91,7 +91,7 @@
             <span class="c1">//Action&lt;object&gt; myAction = DoWork;
 </span>            <span class="c1">//var myBkTask = new Task(myAction, myFlag);
 </span>
-            <span class="kt">var</span> <span class="n">myBkTask</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Task</span><span class="p">(</span><span class="k">delegate</span> <span class="p">{</span> <span class="nf">DoWork</span><span class="p">(</span><span class="n">myFlag</span><span class="p">);</span> <span class="p">});</span>
+            <span class="n">var</span> <span class="n">myBkTask</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Task</span><span class="p">(</span><span class="k">delegate</span> <span class="p">{</span> <span class="nf">DoWork</span><span class="p">(</span><span class="n">myFlag</span><span class="p">);</span> <span class="p">});</span>
             <span class="n">myBkTask</span><span class="p">.</span><span class="nf">Start</span><span class="p">();</span>
 
             <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"Main thread worker waiting"</span><span class="p">);</span>
@@ -105,7 +105,7 @@
 </span>
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">testWkr</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TasksTester</span><span class="p">();</span>
+            <span class="n">var</span> <span class="n">testWkr</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TasksTester</span><span class="p">();</span>
             <span class="n">testWkr</span><span class="p">.</span><span class="nf">RunTest</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>

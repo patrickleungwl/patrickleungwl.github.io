@@ -43,7 +43,7 @@
         <section class="post-content">
             <p>Testing mutexes today.  Mutexes can be used to ensure only one instance of an app runs at any one time.</p>
 
-<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">TestMutex</span>
@@ -91,7 +91,7 @@
             <span class="c1">// Acquire mutex here, ensure only 1 instance of this program
 </span>            <span class="c1">// run at any one time
 </span>
-            <span class="kt">var</span> <span class="n">myMutex</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Mutex</span><span class="p">(</span><span class="k">false</span><span class="p">,</span> <span class="s">"TestMutex"</span><span class="p">);</span>
+            <span class="n">var</span> <span class="n">myMutex</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Mutex</span><span class="p">(</span><span class="k">false</span><span class="p">,</span> <span class="s">"TestMutex"</span><span class="p">);</span>
             <span class="n">myMutex</span><span class="p">.</span><span class="nf">WaitOne</span><span class="p">();</span>
             <span class="nf">LongComputeTask</span><span class="p">();</span>
             <span class="n">myMutex</span><span class="p">.</span><span class="nf">ReleaseMutex</span><span class="p">();</span>
@@ -100,7 +100,7 @@
 
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">tester</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MutexTester</span><span class="p">();</span>
+            <span class="n">var</span> <span class="n">tester</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MutexTester</span><span class="p">();</span>
             <span class="n">tester</span><span class="p">.</span><span class="nf">RunTest</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
