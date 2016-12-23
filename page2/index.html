@@ -212,6 +212,56 @@ timid souls who neither know victory or defeat.”
 
     
 
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/26/tasks/">Using Tasks</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Testing usage of Tasks today. using System; using System.Threading; using System.Threading.Tasks; namespace TestTasks { class TasksTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } private void DoWork(object e) { LogMsg("Background worker starting"); float percentDone = 0.0f; for (int i = 0; i &lt; 10; i++) { Thread.Sleep(200); percentDone += 10.0f; } LogMsg("Background worker completed"); AutoResetEvent ae = e as AutoResetEvent; ae.Set(); } // RunTest // //...
+                <!--
+                <p>Testing usage of Tasks today.</p>
+
+ <a class="read-more" href="/tech/2015/12/26/tasks/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-26">
+                    26 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/25/autoresetevent/">Using AutoResetEvent</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Testing AutoResetEvent today. using System; using System.Threading; namespace TestAutoResetEvent { class AutoResetEventTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask(Object stateInfo) { LogMsg("LongComputeTask starting"); float percentDone = 0.0f; for (int i = 0; i &lt; 10; i++) { Thread.Sleep(500); percentDone += 10.0f; LogMsg("LongComputeTask {0:0.0f}% completed", percentDone); } LogMsg("LongComputeTask completed"); AutoResetEvent myFlag = stateInfo as...
+                <!--
+                <p>Testing AutoResetEvent today.</p>
+
+ <a class="read-more" href="/tech/2015/12/25/autoresetevent/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-25">
+                    25 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
     <nav class="pagination" role="pagination">
     
         

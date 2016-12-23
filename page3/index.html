@@ -182,6 +182,72 @@ multi-threading features.  However, I’ll still post some test code to illustra
 
     
 
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/19/variable-params/">Using Variable Params</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Today just put together a test case to show usage of functions with variable number of parameters. using System; using System.Threading; namespace TestVariableParams { class Tester { // use object[] to allow for arguments of any type static void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } static void Main(string[] args) { LogMsg("Test {0}", "first arg"); LogMsg("This is a test {0} {1}", "first arg", "second arg"); LogMsg("This is a...
+                <!--
+                <p>Today just put together a test case to show usage of functions with variable number of parameters.</p>
+
+ <a class="read-more" href="/tech/2015/12/19/variable-params/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-19">
+                    19 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.
+
+
+  BackgroundWorker
+    
+      Easy to start working in background
+      Easy to periodically update the UI thread
+    
+  
+  Theads
+    
+      Heavy weight multi-threading, but gives full control
+    
+  
+
+
+
+                <!--
+                <p>Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.</p>
+
+ <a class="read-more" href="/tech/2015/12/18/multi-threading-cheatsheet/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-18">
+                    18 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
     <nav class="pagination" role="pagination">
     
         
