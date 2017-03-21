@@ -11,10 +11,10 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
 <body class="home-template">
@@ -53,6 +53,91 @@
      
 </nav>
     </div>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/19/variable-params/">Using Variable Params</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Today just put together a test case to show usage of functions with variable number of parameters. 1 2using System; 3using System.Threading; 4 5namespace TestVariableParams 6{ 7 class Tester 8 { 9 // use object[] to allow for arguments of any type 10 static void LogMsg(string msg, params object[] args) 11 { 12 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 13 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 14 Thread.CurrentThread.ManagedThreadId); 15 Console.Out.WriteLine(msg, args); 16 } 17 18 static void Main(string[] args) 19 { 20 LogMsg(&quot;Test...
+                <!--
+                 <a class="read-more" href="/tech/2015/12/19/variable-params/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-19">
+                    19 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each. 
+
+
+  BackgroundWorker
+    
+      Easy to start working in background
+      Easy to periodically update the UI thread
+    
+  
+  Theads
+    
+      Heavy weight multi-threading, but gives full control
+    
+  
+
+
+
+                <!--
+                 <a class="read-more" href="/tech/2015/12/18/multi-threading-cheatsheet/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-18">
+                    18 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech,csharp/2015/12/17/how-backgroundworker-works/">How BackgroundWorker Works</a></h2>
+            </header>
+            <section class="post-excerpt">
+                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. 1using System; 2using System.Collections.Generic; 3using System.Linq; 4using System.Text; 5using System.ComponentModel; 6using System.Threading; 7 8namespace TestBackgroundWorker 9{ 10 class TestBkGrdWorker 11    { 12        private void LogMsg(string msg) 13        { 14            Console.Out.WriteLine(&quot;{0} ThreadId={1}, {2}&quot;, 15                DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 16                Thread.CurrentThread.ManagedThreadId, msg); 17        } 18...
+                <!--
+                 <a class="read-more" href="/tech,csharp/2015/12/17/how-backgroundworker-works/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech,csharp 
+                
+                <time class="post-date" datetime="2015-12-17">
+                    17 Dec 2015
+                </time> 
+            </footer>
+        </article>
 
     
 
@@ -148,29 +233,6 @@
 
     
 
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/11/02/how-to-use-yield/">How to use Yield</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do not have. 1using System; 2using System.Collections.Generic; 3 4 5namespace TestYield 6{ 7 class TestYield 8 { 9 // -------------------------------------------------- 10 // AllOdds 11 // 12 // Yield provides an easy way to make an enumerator. 13 // Without Yield, you'd have to generate the entire list 14 // of items to iterate thru- and return that...
-                <!--
-                 <a class="read-more" href="/tech/2014/11/02/how-to-use-yield/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-11-02">
-                    02 Nov 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
     <nav class="pagination" role="pagination">
     
         
@@ -199,9 +261,9 @@
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://localhost:4000//assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://localhost:4000//assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://localhost:4000//assets/js/index.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">
