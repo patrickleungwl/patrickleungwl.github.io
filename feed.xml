@@ -3,10 +3,10 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>http://patrickleungwl.github.io//</link>
-    <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2016-10-10 01:02:28 +0800</pubDate>
-    <lastBuildDate>2016-10-10 01:02:28 +0800</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>2016-10-10 00:40:18 +0800</pubDate>
+    <lastBuildDate>2016-10-10 00:40:18 +0800</lastBuildDate>
     <generator>Jekyll v</generator>
     
       <item>
@@ -55,8 +55,8 @@ NOT THE BLAME. &lt;/p&gt;
 
 </description>
         <pubDate>2016-10-09 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//management/2016/10/09/the-spirit-of-kaizen/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//management/2016/10/09/the-spirit-of-kaizen/</guid>
+        <link>http://localhost:4000//management/2016/10/09/the-spirit-of-kaizen/</link>
+        <guid isPermaLink="true">http://localhost:4000//management/2016/10/09/the-spirit-of-kaizen/</guid>
         
         <category>management,</category>
         
@@ -105,8 +105,8 @@ is true to his or her own character.&lt;/li&gt;
 
 </description>
         <pubDate>2016-10-08 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//management/2016/10/08/the-management-masterclass/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//management/2016/10/08/the-management-masterclass/</guid>
+        <link>http://localhost:4000//management/2016/10/08/the-management-masterclass/</link>
+        <guid isPermaLink="true">http://localhost:4000//management/2016/10/08/the-management-masterclass/</guid>
         
         <category>management</category>
         
@@ -123,8 +123,8 @@ is true to his or her own character.&lt;/li&gt;
 
 </description>
         <pubDate>2016-09-18 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/</guid>
+        <link>http://localhost:4000//musings/2016/09/18/get-through-hard/</link>
+        <guid isPermaLink="true">http://localhost:4000//musings/2016/09/18/get-through-hard/</guid>
         
         <category>history</category>
         
@@ -339,8 +339,8 @@ bin ladin- feel like american
 
 </description>
         <pubDate>2016-09-11 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/</guid>
+        <link>http://localhost:4000//musings/2016/09/11/fifteen-years-on/</link>
+        <guid isPermaLink="true">http://localhost:4000//musings/2016/09/11/fifteen-years-on/</guid>
         
         <category>history</category>
         
@@ -377,8 +377,8 @@ in &lt;a href=&quot;../../../../../../assets/pdf/20160502.5.ratio.pdf&quot;&gt;t
 
 </description>
         <pubDate>2016-05-02 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//math/singapore/2016/05/02/sg-math-primary-five-ratio/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//math/singapore/2016/05/02/sg-math-primary-five-ratio/</guid>
+        <link>http://localhost:4000//math/singapore/2016/05/02/sg-math-primary-five-ratio/</link>
+        <guid isPermaLink="true">http://localhost:4000//math/singapore/2016/05/02/sg-math-primary-five-ratio/</guid>
         
         <category>patterns</category>
         
@@ -404,8 +404,8 @@ in &lt;a href=&quot;../../../../../../assets/pdf/20160501.1.ratio.pdf&quot;&gt;t
 
 </description>
         <pubDate>2016-05-01 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/</guid>
+        <link>http://localhost:4000//math/singapore/2016/05/01/sg-math-primary-five-ratio/</link>
+        <guid isPermaLink="true">http://localhost:4000//math/singapore/2016/05/01/sg-math-primary-five-ratio/</guid>
         
         <category>patterns</category>
         
@@ -459,8 +459,8 @@ said yes to something we cannot do.&lt;/li&gt;
 
 </description>
         <pubDate>2016-04-07 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/</guid>
+        <link>http://localhost:4000//tech/2016/04/07/getting-things-done/</link>
+        <guid isPermaLink="true">http://localhost:4000//tech/2016/04/07/getting-things-done/</guid>
         
         <category>patterns</category>
         
@@ -528,8 +528,8 @@ would it work?  This was the golden thread that ran through my years in office.�
 
 </description>
         <pubDate>2016-04-03 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//management/2016/04/03/lky-on-management/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//management/2016/04/03/lky-on-management/</guid>
+        <link>http://localhost:4000//management/2016/04/03/lky-on-management/</link>
+        <guid isPermaLink="true">http://localhost:4000//management/2016/04/03/lky-on-management/</guid>
         
         <category>patterns</category>
         
@@ -568,8 +568,8 @@ Absort what is useful.  Discard what is not.  Add what is uniquely your own.”
 
 </description>
         <pubDate>2016-04-03 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//motivation/2016/04/03/insprirational-quotes/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//motivation/2016/04/03/insprirational-quotes/</guid>
+        <link>http://localhost:4000//motivation/2016/04/03/insprirational-quotes/</link>
+        <guid isPermaLink="true">http://localhost:4000//motivation/2016/04/03/insprirational-quotes/</guid>
         
         <category>quotes</category>
         
@@ -597,8 +597,8 @@ Absort what is useful.  Discard what is not.  Add what is uniquely your own.”
 
 </description>
         <pubDate>2016-04-02 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2016/04/02/tech-to-study/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2016/04/02/tech-to-study/</guid>
+        <link>http://localhost:4000//tech/2016/04/02/tech-to-study/</link>
+        <guid isPermaLink="true">http://localhost:4000//tech/2016/04/02/tech-to-study/</guid>
         
         <category>tech,</category>
         
