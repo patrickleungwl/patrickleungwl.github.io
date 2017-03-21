@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title> - A journal of tech issues in financial applications</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3112953654473556",
+        enable_page_level_ads: true
+      });
+    </script>
+
+</head>
+<body class="home-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="http://patrickleungwl.github.io//">Home</a>
+        <a class="subscribe-button icon-feed" href="http://patrickleungwl.github.io//feed.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Revisiting Generic Collections</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-12-30">30 Dec 2016</time>
+                
+                    on tech
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>Earlier I asked if generic collections were faster than non-generic 
+collections?  I cooked up a quick test to confirm my suspicions that
+non-generics were slower because of the work it needs to box primitives
+and then add the reference to the collection- whereas for generic collections,
+it just needed to add the primitive to its own memory allocation.</p>
+
+<p>But then a colleague asked- how about performance for collections of 
+objects?  Wouldn’t a generic collection do the same as a non-generic collection?
+Both collections only contain references to objects on the heap- and there
+should be no difference, right?  I updated my old test to check this 
+assertion.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+<span class="err">﻿</span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">TestGenericCollection</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">TestGenericListVsArrayList</span>
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">_numItems</span> <span class="p">=</span> <span class="m">10000000</span><span class="p">;</span>
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeArrayListOfObjects</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeArrayListOfObjects start"</span><span class="p">);</span>
+
+            <span class="n">DateTime</span> <span class="n">dtInsertStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">ArrayList</span> <span class="n">stringList</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ArrayList</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">stringList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">Convert</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+            <span class="p">}</span>
+
+            <span class="n">DateTime</span> <span class="n">dtReadStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">string</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">stringList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="p">%</span> <span class="n">_numItems</span><span class="p">/</span><span class="m">10</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="nf">ShowStats</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="s">"ArrayListOfObjects"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeArrayListOfPrimitives</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeArrayListOfPrimitives start"</span><span class="p">);</span>
+            
+            <span class="n">DateTime</span> <span class="n">dtInsertStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">ArrayList</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ArrayList</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">intList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="n">DateTime</span> <span class="n">dtReadStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">intList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="p">%</span> <span class="n">_numItems</span><span class="p">/</span><span class="m">10</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>
+            
+            <span class="nf">ShowStats</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="s">"ArrayListOfPrimitives"</span><span class="p">);</span>      
+        <span class="p">}</span>
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeGenericListOfObjects</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeGenericListOfObjects start"</span><span class="p">);</span>
+            
+            <span class="n">DateTime</span> <span class="n">dtInsertStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">intList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">Convert</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+            <span class="p">}</span>
+
+            <span class="n">DateTime</span> <span class="n">dtReadStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">string</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="n">intList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="p">%</span> <span class="n">_numItems</span><span class="p">/</span><span class="m">10</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>            
+
+            <span class="nf">ShowStats</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="s">"GenericListOfObjects"</span><span class="p">);</span>            
+        <span class="p">}</span>
+
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeGenericListOfPrimitives</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeGenericListOfPrimitives start"</span><span class="p">);</span>
+
+            <span class="n">DateTime</span> <span class="n">dtInsertStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">intList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="n">DateTime</span> <span class="n">dtReadStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="n">intList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="p">%</span> <span class="n">_numItems</span> <span class="p">/</span> <span class="m">10</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="nf">ShowStats</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="s">"GenericListOfPrimitives"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// ShowStats show time procedure took to insert 1M items and to read 1M items
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="c1">/// &lt;param name="dtInsertStart"&gt;Time when insert started&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="dtReadStart"&gt;Time when read started&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="msg"&gt;Name of procedure&lt;/param&gt;
+</span>        <span class="k">static</span> <span class="k">void</span> <span class="nf">ShowStats</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">DateTime</span> <span class="n">dtTimeNow</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">TimeSpan</span> <span class="n">wholeTime</span> <span class="p">=</span> <span class="n">dtTimeNow</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">);</span>
+            <span class="n">TimeSpan</span> <span class="n">insertTime</span> <span class="p">=</span> <span class="n">dtReadStart</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">);</span>
+            <span class="n">TimeSpan</span> <span class="n">readTime</span> <span class="p">=</span> <span class="n">dtTimeNow</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtReadStart</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"{3} took {0} ms in total, {1} ms to insert, {2} to read\n"</span><span class="p">,</span>
+                <span class="n">wholeTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">insertTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">readTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">msg</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">switch</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">0</span><span class="p">])</span>
+            <span class="p">{</span>
+                <span class="k">case</span> <span class="s">"1"</span><span class="p">:</span> 
+                    <span class="nf">TimeGenericListOfPrimitives</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="s">"2"</span><span class="p">:</span>
+                    <span class="nf">TimeGenericListOfObjects</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="s">"3"</span><span class="p">:</span>
+                    <span class="nf">TimeArrayListOfPrimitives</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="s">"4"</span><span class="p">:</span>
+                    <span class="nf">TimeArrayListOfObjects</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<p>The result?</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;TestGenerics.exe 1
+TimeGenericListOfPrimitives start
+..........
+GenericListOfPrimitives took 358.8006 ms in total, 202.8004 ms to insert, 156.0002 to read
+
+
+&gt;TestGenerics.exe 2
+TimeGenericListOfObjects start
+..........
+GenericListOfObjects took 4336.8077 ms in total, 4180.8074 ms to insert, 156.0003 to read
+
+
+&gt;TestGenerics.exe 3
+TimeArrayListOfPrimitives start
+..........
+ArrayListOfPrimitives took 2324.4041 ms in total, 2168.4038 ms to insert, 156.0003 to read
+
+
+TestGenerics.exe 4
+TimeArrayListOfObjects start
+..........
+ArrayListOfObjects took 4508.408 ms in total, 4352.4077 ms to insert, 156.0003 to read
+
+
+</code></pre>
+</div>
+
+<p>It’s fairly conclusive.</p>
+
+<p>For collections of primitives (ints, longs, etc)- generic collections are
+definitely much faster than non-generic collections- because there is no need
+to box items.</p>
+
+<p>For collections of objects- generic collections show no substantial improvement
+over non-generic collections.</p>
+
+
+        </section>
+
+        <p>
+
+        
+            <section class="archive">
+                <h5>Archive</h5>
+                <ul>
+                    
+                        
+                            
+                            
+
+                    
+                        <li><span>09 Dec 2016</span>
+                          <a href="http://patrickleungwl.github.io//finance/2016/12/09/riskfree-profit-strategies/">Risk-free Profit Strategies</a>
+                        </li>
+                    
+                        <li><span>09 Oct 2016</span>
+                          <a href="http://patrickleungwl.github.io//management/2016/10/09/the-spirit-of-kaizen/">The Spirit of Kaizen</a>
+                        </li>
+                    
+                        <li><span>08 Oct 2016</span>
+                          <a href="http://patrickleungwl.github.io//management/2016/10/08/the-management-masterclass/">The Management Masterclass</a>
+                        </li>
+                    
+                        <li><span>18 Sep 2016</span>
+                          <a href="http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/">Get through hard</a>
+                        </li>
+                    
+                        <li><span>11 Sep 2016</span>
+                          <a href="http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/">Fifteen Years On</a>
+                        </li>
+                    
+                </ul>
+            </section>
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=Revisiting Generic Collections&amp;url=/tech/2016/12/30/revisting-generic-collections/"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2016/12/30/revisting-generic-collections/"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2016/12/30/revisting-generic-collections/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+            <!-- Disqus comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        
+
+      <section class="copyright">
+        <a href=""></a> &copy; 
+               &bull; All rights reserved.
+      </section>
+      <section class="poweredby">Made with Jekyll using 
+        <a href="http://github.com/rosario/kasper">Kasper theme</a>
+      </section>
+    </footer>
+    
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>   
+</body>
+</html>
