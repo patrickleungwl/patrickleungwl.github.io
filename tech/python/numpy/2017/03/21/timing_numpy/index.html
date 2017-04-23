@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="post-template">
+<body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -44,40 +44,39 @@
             <p>I’ve been hearing a lot of good things about NumPy and Python- so much so that I’ve finally had to give it a try. 
 What’s so good about NumPy?  For one thing, its built-in array data structure.  Given that data arrays are one 
 continous block of memory, referencing numbers directly in arrays would be much faster than referencing them in Python’s 
-built-in lists- which would really be a list of pointers to the real location of data. </p>
+built-in lists- which would really be a list of pointers to the real location of data.</p>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span>
-<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>﻿from timeit import timeit
-<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>
-<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>test_list_loop = '''
-<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>    alist = [0] * 1000
-<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>    for i in xrange(0, len(alist)): 
-<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>        alist[i] += 1
-<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>'''
-<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>
-<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>test_numpy_arrays = '''
-<span class="line-numbers"><a href="#n11" name="n11">11</a></span>    a = np.zeros(1000)
-<span class="line-numbers"><a href="#n12" name="n12">12</a></span>    b = a+1
-<span class="line-numbers"><a href="#n13" name="n13">13</a></span>'''
-<span class="line-numbers"><a href="#n14" name="n14">14</a></span>
-<span class="line-numbers"><a href="#n15" name="n15">15</a></span>print( timeit( stmt=test_numpy_arrays, setup='import numpy as np',  number=100000 ) )
-<span class="line-numbers"><a href="#n16" name="n16">16</a></span>print( timeit( stmt=test_list_loop, number=100000 ) )
-<span class="line-numbers"><a href="#n17" name="n17">17</a></span>
-</pre></div>
-</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+<span class="err">﻿</span><span class="n">from</span> <span class="n">timeit</span> <span class="n">import</span> <span class="n">timeit</span>
+
+<span class="n">test_list_loop</span> <span class="p">=</span> <span class="sc">'''</span>
+    <span class="n">alist</span> <span class="p">=</span> <span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">*</span> <span class="m">1000</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="nf">xrange</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="nf">len</span><span class="p">(</span><span class="n">alist</span><span class="p">)):</span> 
+        <span class="n">alist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">+=</span> <span class="m">1</span>
+<span class="sc">'''</span>
+
+<span class="n">test_numpy_arrays</span> <span class="p">=</span> <span class="sc">'''</span>
+    <span class="n">a</span> <span class="p">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+    <span class="n">b</span> <span class="p">=</span> <span class="n">a</span><span class="p">+</span><span class="m">1</span>
+<span class="sc">'''</span>
+
+<span class="nf">print</span><span class="p">(</span> <span class="nf">timeit</span><span class="p">(</span> <span class="n">stmt</span><span class="p">=</span><span class="n">test_numpy_arrays</span><span class="p">,</span> <span class="n">setup</span><span class="p">=</span><span class="err">'</span><span class="n">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span><span class="err">'</span><span class="p">,</span>  <span class="n">number</span><span class="p">=</span><span class="m">100000</span> <span class="p">)</span> <span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span> <span class="nf">timeit</span><span class="p">(</span> <span class="n">stmt</span><span class="p">=</span><span class="n">test_list_loop</span><span class="p">,</span> <span class="n">number</span><span class="p">=</span><span class="m">100000</span> <span class="p">)</span> <span class="p">)</span>
+
+</code></pre>
 </div>
 
 <p>The result?</p>
 
-<pre><code>0.680721998215
+<div class="highlighter-rouge"><pre class="highlight"><code>0.680721998215
 7.49408698082
 
 </code></pre>
+</div>
 
-<p>It’s fairly conclusive.  </p>
+<p>It’s fairly conclusive.</p>
 
-<p>NumPy arrays are 11 times faster than Python lists.  No contest. </p>
+<p>NumPy arrays are 11 times faster than Python lists.  No contest.</p>
 
 
         </section>
@@ -88,6 +87,8 @@ built-in lists- which would really be a list of pointers to the real location of
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                             

@@ -58,12 +58,39 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/20/backgroundworker/">Using BackgroundWorker</a></h2>
+            </header>
+            <section class="post-excerpt">
+                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. using System; using System.ComponentModel; using System.Threading; namespace TestBackgroundWorker { class TestBkGrdWorker { static void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // RunTest // // Function run by main thread // Main thread...
+                <!--
+                <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p>
+
+ <a class="read-more" href="/tech/2015/12/20/backgroundworker/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-20">
+                    20 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2015/12/19/variable-params/">Using Variable Params</a></h2>
             </header>
             <section class="post-excerpt">
-                Today just put together a test case to show usage of functions with variable number of parameters. 1 2using System; 3using System.Threading; 4 5namespace TestVariableParams 6{ 7 class Tester 8 { 9 // use object[] to allow for arguments of any type 10 static void LogMsg(string msg, params object[] args) 11 { 12 Console.Out.Write(&quot;{0} ThreadId={1} &quot;, 13 DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 14 Thread.CurrentThread.ManagedThreadId); 15 Console.Out.WriteLine(msg, args); 16 } 17 18 static void Main(string[] args) 19 { 20 LogMsg(&quot;Test...
+                Today just put together a test case to show usage of functions with variable number of parameters. using System; using System.Threading; namespace TestVariableParams { class Tester { // use object[] to allow for arguments of any type static void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } static void Main(string[] args) { LogMsg("Test {0}", "first arg"); LogMsg("This is a test {0} {1}", "first arg", "second arg"); LogMsg("This is a...
                 <!--
-                 <a class="read-more" href="/tech/2015/12/19/variable-params/">&raquo;</a>
+                <p>Today just put together a test case to show usage of functions with variable number of parameters.</p>
+
+ <a class="read-more" href="/tech/2015/12/19/variable-params/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -84,7 +111,7 @@
                 <h2 class="post-title"><a href="/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a></h2>
             </header>
             <section class="post-excerpt">
-                Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each. 
+                Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.
 
 
   BackgroundWorker
@@ -102,7 +129,9 @@
 
 
                 <!--
-                 <a class="read-more" href="/tech/2015/12/18/multi-threading-cheatsheet/">&raquo;</a>
+                <p>Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.</p>
+
+ <a class="read-more" href="/tech/2015/12/18/multi-threading-cheatsheet/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -123,9 +152,11 @@
                 <h2 class="post-title"><a href="/tech,csharp/2015/12/17/how-backgroundworker-works/">How BackgroundWorker Works</a></h2>
             </header>
             <section class="post-excerpt">
-                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. 1using System; 2using System.Collections.Generic; 3using System.Linq; 4using System.Text; 5using System.ComponentModel; 6using System.Threading; 7 8namespace TestBackgroundWorker 9{ 10 class TestBkGrdWorker 11    { 12        private void LogMsg(string msg) 13        { 14            Console.Out.WriteLine(&quot;{0} ThreadId={1}, {2}&quot;, 15                DateTime.Now.ToString(&quot;HH:MM:ss.fff&quot;), 16                Thread.CurrentThread.ManagedThreadId, msg); 17        } 18...
+                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. using System; using System.Collections.Generic; using System.Linq; using System.Text; using System.ComponentModel; using System.Threading; namespace TestBackgroundWorker { class TestBkGrdWorker     {         private void LogMsg(string msg)         {             Console.Out.WriteLine("{0} ThreadId={1}, {2}",                 DateTime.Now.ToString("HH:MM:ss.fff"),                 Thread.CurrentThread.ManagedThreadId, msg);         }         // RunTest...
                 <!--
-                 <a class="read-more" href="/tech,csharp/2015/12/17/how-backgroundworker-works/">&raquo;</a>
+                <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5.  One of the simpler options is the BackgroundWorker.  To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p>
+
+ <a class="read-more" href="/tech,csharp/2015/12/17/how-backgroundworker-works/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -146,9 +177,11 @@
                 <h2 class="post-title"><a href="/tech/2015/05/03/are-generic-collections-faster/">Are Generic Collections Faster than Non-Generic Collections?</a></h2>
             </header>
             <section class="post-excerpt">
-                The oft-repeated assertion is that generic collections run faster than their non-generic versions. But is this true? And if so, just how much faster? I wrote some quick code to run a test. 1using System; 2using System.Collections.Generic; 3using System.Collections; 4 5namespace TestBoxing 6{ 7 class Program 8 { 9 static void TimeArrayList() 10 { 11 Console.Out.WriteLine(&quot;TimeArrayList start&quot;); 12 // Test creating and reading a million boxed ints 13 DateTime dtStart = DateTime.Now; 14 ArrayList intList...
+                The oft-repeated assertion is that generic collections run faster than their non-generic versions. But is this true? And if so, just how much faster? I wrote some quick code to run a test. using System; using System.Collections.Generic; using System.Collections; namespace TestBoxing { class Program { static void TimeArrayList() { Console.Out.WriteLine("TimeArrayList start"); // Test creating and reading a million boxed ints DateTime dtStart = DateTime.Now; ArrayList intList = new ArrayList(); for (int i = 0; i...
                 <!--
-                 <a class="read-more" href="/tech/2015/05/03/are-generic-collections-faster/">&raquo;</a>
+                <p>The oft-repeated assertion is that generic collections run faster than their non-generic versions.  But is this true?  And if so, just how much faster?</p>
+
+ <a class="read-more" href="/tech/2015/05/03/are-generic-collections-faster/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -171,7 +204,9 @@
             <section class="post-excerpt">
                 Let’s discuss a little bit more about Events. How are Events different from Delegates? For events- The event keyword is a modifier- to a delegate type, the most frequent being EventHandler for event handling situations. The event keyword allows a delegate type to be exposed in an interface. Events come with add and remove methods, much like get and set methods for properties. Events have a strict method signature (object ok, EventArgs e). Here is...
                 <!--
-                 <a class="read-more" href="/tech/2014/11/05/all-about-events/">&raquo;</a>
+                <p>Let’s discuss a little bit more about Events.  How are Events different from Delegates?</p>
+
+ <a class="read-more" href="/tech/2014/11/05/all-about-events/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -192,9 +227,11 @@
                 <h2 class="post-title"><a href="/tech/2014/11/04/invoking-delegates-asynchronously/">Invoking Delegates Asynchronously</a></h2>
             </header>
             <section class="post-excerpt">
-                It’s a slow day at work. Let’s try an asynch delegate. 1using System; 2using System.Threading; 3using System.Runtime.Remoting.Messaging; // To access the AsyncResult type 4 5namespace TestAsyncDelegate 6{ 7 class TestDel 8 { 9 delegate int OperatorSig(int a, int b); 10 11 TestDel() 12 { 13 } 14 15 16 // -------------------------------------------------------------- 17 // Add 18 // 19 // Random work method that takes an arbitrarily set 2.4 seconds 20 // to complete. 21 // --------------------------------------------------------------...
+                It’s a slow day at work. Let’s try an asynch delegate. using System; using System.Threading; using System.Runtime.Remoting.Messaging; // To access the AsyncResult type namespace TestAsyncDelegate { class TestDel { delegate int OperatorSig(int a, int b); TestDel() { } // -------------------------------------------------------------- // Add // // Random work method that takes an arbitrarily set 2.4 seconds // to complete. // -------------------------------------------------------------- public int Add(int a, int b) { Console.Out.WriteLine("ThreadId={0}, Adding starts", Thread.CurrentThread.ManagedThreadId ); Thread.Sleep(2400); Console.Out.WriteLine("ThreadId={0}, Adding completed",...
                 <!--
-                 <a class="read-more" href="/tech/2014/11/04/invoking-delegates-asynchronously/">&raquo;</a>
+                <p>It’s a slow day at work.  Let’s try an asynch delegate.</p>
+
+ <a class="read-more" href="/tech/2014/11/04/invoking-delegates-asynchronously/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -204,29 +241,6 @@
                 
                 <time class="post-date" datetime="2014-11-04">
                     04 Nov 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Just playing with a simple delegate example. 1using System; 2 3namespace TestDelegate 4{ 5 class TestDel 6 { 7 // Declare signature of operator methods 8 delegate int OperatorSig(int a, int b); 9 10 TestDel() 11 { 12 } 13 14 15 int Add(int a, int b) 16 { 17 return a + b; 18 } 19 20 int Subtract(int a, int b) 21 { 22 return a - b; 23 } 24 25 26...
-                <!--
-                 <a class="read-more" href="/tech/2014/11/02/simple-delegate-example/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-11-02">
-                    02 Nov 2014
                 </time> 
             </footer>
         </article>

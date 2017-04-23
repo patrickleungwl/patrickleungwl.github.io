@@ -5,52 +5,87 @@
     <description>A journal of tech issues in financial applications</description>
     <link>http://patrickleungwl.github.io//</link>
     <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2017-03-22 02:07:18 +0800</pubDate>
-    <lastBuildDate>2017-03-22 02:07:18 +0800</lastBuildDate>
-    <generator>Jekyll v</generator>
+    <pubDate>Sun, 23 Apr 2017 21:39:48 +0800</pubDate>
+    <lastBuildDate>Sun, 23 Apr 2017 21:39:48 +0800</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>The Tao of Charlie Munger</title>
+        <description>&lt;p&gt;From the book “The Tao of Charlie Munger” by David Clark.&lt;/p&gt;
+
+&lt;h3 id=&quot;waiting&quot;&gt;Waiting&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It’s waiting that helps you as an investor, and a lot of people 
+just can’t stand to wait.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;when-to-bet-heavily&quot;&gt;When to Bet Heavily&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You should remember that good ideas are rare- when the odds are
+greatly in your favor, bet heavily.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;the-herd&quot;&gt;The Herd&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Mimicking the herd invites regression to the mean.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Sun, 23 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>investing</category>
+        
+      </item>
     
       <item>
         <title>Timing NumPy</title>
         <description>&lt;p&gt;I’ve been hearing a lot of good things about NumPy and Python- so much so that I’ve finally had to give it a try. 
 What’s so good about NumPy?  For one thing, its built-in array data structure.  Given that data arrays are one 
 continous block of memory, referencing numbers directly in arrays would be much faster than referencing them in Python’s 
-built-in lists- which would really be a list of pointers to the real location of data. &lt;/p&gt;
+built-in lists- which would really be a list of pointers to the real location of data.&lt;/p&gt;
 
-&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;﻿from timeit import timeit
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;test_list_loop = '''
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;    alist = [0] * 1000
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;    for i in xrange(0, len(alist)): 
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;        alist[i] += 1
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;'''
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;test_numpy_arrays = '''
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;    a = np.zeros(1000)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n12&quot; name=&quot;n12&quot;&gt;12&lt;/a&gt;&lt;/span&gt;    b = a+1
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n13&quot; name=&quot;n13&quot;&gt;13&lt;/a&gt;&lt;/span&gt;'''
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n14&quot; name=&quot;n14&quot;&gt;14&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n15&quot; name=&quot;n15&quot;&gt;15&lt;/a&gt;&lt;/span&gt;print( timeit( stmt=test_numpy_arrays, setup='import numpy as np',  number=100000 ) )
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n16&quot; name=&quot;n16&quot;&gt;16&lt;/a&gt;&lt;/span&gt;print( timeit( stmt=test_list_loop, number=100000 ) )
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n17&quot; name=&quot;n17&quot;&gt;17&lt;/a&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;err&quot;&gt;﻿&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeit&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;test_list_loop&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;&#39;&#39;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;xrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt; 
+        &lt;span class=&quot;n&quot;&gt;alist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;sc&quot;&gt;&#39;&#39;&#39;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;test_numpy_arrays&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;&#39;&#39;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;sc&quot;&gt;&#39;&#39;&#39;&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;timeit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_numpy_arrays&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100000&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;timeit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_list_loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100000&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The result?&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;0.680721998215
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0.680721998215
 7.49408698082
 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;It’s fairly conclusive.  &lt;/p&gt;
+&lt;p&gt;It’s fairly conclusive.&lt;/p&gt;
 
-&lt;p&gt;NumPy arrays are 11 times faster than Python lists.  No contest. &lt;/p&gt;
+&lt;p&gt;NumPy arrays are 11 times faster than Python lists.  No contest.&lt;/p&gt;
 
 </description>
-        <pubDate>2017-03-21 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 21 Mar 2017 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//tech/python/numpy/2017/03/21/timing_numpy/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//tech/python/numpy/2017/03/21/timing_numpy/</guid>
         
@@ -71,167 +106,165 @@ built-in lists- which would really be a list of pointers to the real location of
 collections?  I cooked up a quick test to confirm my suspicions that
 non-generics were slower because of the work it needs to box primitives
 and then add the reference to the collection- whereas for generic collections,
-it just needed to add the primitive to its own memory allocation. &lt;/p&gt;
+it just needed to add the primitive to its own memory allocation.&lt;/p&gt;
 
 &lt;p&gt;But then a colleague asked- how about performance for collections of 
 objects?  Wouldn’t a generic collection do the same as a non-generic collection?
 Both collections only contain references to objects on the heap- and there
 should be no difference, right?  I updated my old test to check this 
-assertion. &lt;/p&gt;
+assertion.&lt;/p&gt;
 
-&lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
-  &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;﻿using System;
-&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;using System.Collections.Generic;
-&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;using System.Collections;
-&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;namespace TestGenericCollection
-&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;{
-&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;    class TestGenericListVsArrayList
-&lt;span class=&quot;line-numbers&quot;&gt;  &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;    {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        const int _numItems = 10000000;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n12&quot; name=&quot;n12&quot;&gt;12&lt;/a&gt;&lt;/span&gt;        static void TimeArrayListOfObjects()
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n13&quot; name=&quot;n13&quot;&gt;13&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n14&quot; name=&quot;n14&quot;&gt;14&lt;/a&gt;&lt;/span&gt;            Console.Out.WriteLine(&amp;quot;TimeArrayListOfObjects start&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n15&quot; name=&quot;n15&quot;&gt;15&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n16&quot; name=&quot;n16&quot;&gt;16&lt;/a&gt;&lt;/span&gt;            DateTime dtInsertStart = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n17&quot; name=&quot;n17&quot;&gt;17&lt;/a&gt;&lt;/span&gt;            ArrayList stringList = new ArrayList();
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n18&quot; name=&quot;n18&quot;&gt;18&lt;/a&gt;&lt;/span&gt;            for (int i = 0; i &amp;lt; _numItems; i++)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n19&quot; name=&quot;n19&quot;&gt;19&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n20&quot; name=&quot;n20&quot;&gt;20&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;                stringList.Add(Convert.ToString(i));
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n21&quot; name=&quot;n21&quot;&gt;21&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n22&quot; name=&quot;n22&quot;&gt;22&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n23&quot; name=&quot;n23&quot;&gt;23&lt;/a&gt;&lt;/span&gt;            DateTime dtReadStart = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n24&quot; name=&quot;n24&quot;&gt;24&lt;/a&gt;&lt;/span&gt;            for (int j = 0; j &amp;lt; _numItems; j++)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n25&quot; name=&quot;n25&quot;&gt;25&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n26&quot; name=&quot;n26&quot;&gt;26&lt;/a&gt;&lt;/span&gt;                string retrievedInt = (string)stringList[j];
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n27&quot; name=&quot;n27&quot;&gt;27&lt;/a&gt;&lt;/span&gt;                if (j % _numItems/10 == 0)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n28&quot; name=&quot;n28&quot;&gt;28&lt;/a&gt;&lt;/span&gt;                    Console.Out.Write(&amp;quot;.&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n29&quot; name=&quot;n29&quot;&gt;29&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n30&quot; name=&quot;n30&quot;&gt;30&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n31&quot; name=&quot;n31&quot;&gt;31&lt;/a&gt;&lt;/span&gt;            ShowStats(dtInsertStart, dtReadStart, &amp;quot;ArrayListOfObjects&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n32&quot; name=&quot;n32&quot;&gt;32&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n33&quot; name=&quot;n33&quot;&gt;33&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n34&quot; name=&quot;n34&quot;&gt;34&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n35&quot; name=&quot;n35&quot;&gt;35&lt;/a&gt;&lt;/span&gt;        static void TimeArrayListOfPrimitives()
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n36&quot; name=&quot;n36&quot;&gt;36&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n37&quot; name=&quot;n37&quot;&gt;37&lt;/a&gt;&lt;/span&gt;            Console.Out.WriteLine(&amp;quot;TimeArrayListOfPrimitives start&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n38&quot; name=&quot;n38&quot;&gt;38&lt;/a&gt;&lt;/span&gt;            
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n39&quot; name=&quot;n39&quot;&gt;39&lt;/a&gt;&lt;/span&gt;            DateTime dtInsertStart = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n40&quot; name=&quot;n40&quot;&gt;40&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;            ArrayList intList = new ArrayList();
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n41&quot; name=&quot;n41&quot;&gt;41&lt;/a&gt;&lt;/span&gt;            for (int i = 0; i &amp;lt; _numItems; i++)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n42&quot; name=&quot;n42&quot;&gt;42&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n43&quot; name=&quot;n43&quot;&gt;43&lt;/a&gt;&lt;/span&gt;                intList.Add(i);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n44&quot; name=&quot;n44&quot;&gt;44&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n45&quot; name=&quot;n45&quot;&gt;45&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n46&quot; name=&quot;n46&quot;&gt;46&lt;/a&gt;&lt;/span&gt;            DateTime dtReadStart = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n47&quot; name=&quot;n47&quot;&gt;47&lt;/a&gt;&lt;/span&gt;            for (int j = 0; j &amp;lt; _numItems; j++)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n48&quot; name=&quot;n48&quot;&gt;48&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n49&quot; name=&quot;n49&quot;&gt;49&lt;/a&gt;&lt;/span&gt;                int retrievedInt = (int)intList[j];
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n50&quot; name=&quot;n50&quot;&gt;50&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;                if (j % _numItems/10 == 0)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n51&quot; name=&quot;n51&quot;&gt;51&lt;/a&gt;&lt;/span&gt;                    Console.Out.Write(&amp;quot;.&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n52&quot; name=&quot;n52&quot;&gt;52&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n53&quot; name=&quot;n53&quot;&gt;53&lt;/a&gt;&lt;/span&gt;            
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n54&quot; name=&quot;n54&quot;&gt;54&lt;/a&gt;&lt;/span&gt;            ShowStats(dtInsertStart, dtReadStart, &amp;quot;ArrayListOfPrimitives&amp;quot;);      
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n55&quot; name=&quot;n55&quot;&gt;55&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n56&quot; name=&quot;n56&quot;&gt;56&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n57&quot; name=&quot;n57&quot;&gt;57&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n58&quot; name=&quot;n58&quot;&gt;58&lt;/a&gt;&lt;/span&gt;        static void TimeGenericListOfObjects()
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n59&quot; name=&quot;n59&quot;&gt;59&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n60&quot; name=&quot;n60&quot;&gt;60&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;            Console.Out.WriteLine(&amp;quot;TimeGenericListOfObjects start&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n61&quot; name=&quot;n61&quot;&gt;61&lt;/a&gt;&lt;/span&gt;            
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n62&quot; name=&quot;n62&quot;&gt;62&lt;/a&gt;&lt;/span&gt;            DateTime dtInsertStart = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n63&quot; name=&quot;n63&quot;&gt;63&lt;/a&gt;&lt;/span&gt;            List&amp;lt;string&amp;gt; intList = new List&amp;lt;string&amp;gt;();
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n64&quot; name=&quot;n64&quot;&gt;64&lt;/a&gt;&lt;/span&gt;            for (int i = 0; i &amp;lt; _numItems; i++)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n65&quot; name=&quot;n65&quot;&gt;65&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n66&quot; name=&quot;n66&quot;&gt;66&lt;/a&gt;&lt;/span&gt;                intList.Add(Convert.ToString(i));
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n67&quot; name=&quot;n67&quot;&gt;67&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n68&quot; name=&quot;n68&quot;&gt;68&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n69&quot; name=&quot;n69&quot;&gt;69&lt;/a&gt;&lt;/span&gt;            DateTime dtReadStart = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n70&quot; name=&quot;n70&quot;&gt;70&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;            for (int j = 0; j &amp;lt; _numItems; j++)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n71&quot; name=&quot;n71&quot;&gt;71&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n72&quot; name=&quot;n72&quot;&gt;72&lt;/a&gt;&lt;/span&gt;                string retrievedInt = intList[j];
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n73&quot; name=&quot;n73&quot;&gt;73&lt;/a&gt;&lt;/span&gt;                if (j % _numItems/10 == 0)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n74&quot; name=&quot;n74&quot;&gt;74&lt;/a&gt;&lt;/span&gt;                    Console.Out.Write(&amp;quot;.&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n75&quot; name=&quot;n75&quot;&gt;75&lt;/a&gt;&lt;/span&gt;            }            
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n76&quot; name=&quot;n76&quot;&gt;76&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n77&quot; name=&quot;n77&quot;&gt;77&lt;/a&gt;&lt;/span&gt;            ShowStats(dtInsertStart, dtReadStart, &amp;quot;GenericListOfObjects&amp;quot;);            
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n78&quot; name=&quot;n78&quot;&gt;78&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n79&quot; name=&quot;n79&quot;&gt;79&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n80&quot; name=&quot;n80&quot;&gt;80&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n81&quot; name=&quot;n81&quot;&gt;81&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n82&quot; name=&quot;n82&quot;&gt;82&lt;/a&gt;&lt;/span&gt;        static void TimeGenericListOfPrimitives()
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n83&quot; name=&quot;n83&quot;&gt;83&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n84&quot; name=&quot;n84&quot;&gt;84&lt;/a&gt;&lt;/span&gt;            Console.Out.WriteLine(&amp;quot;TimeGenericListOfPrimitives start&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n85&quot; name=&quot;n85&quot;&gt;85&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n86&quot; name=&quot;n86&quot;&gt;86&lt;/a&gt;&lt;/span&gt;            DateTime dtInsertStart = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n87&quot; name=&quot;n87&quot;&gt;87&lt;/a&gt;&lt;/span&gt;            List&amp;lt;int&amp;gt; intList = new List&amp;lt;int&amp;gt;();
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n88&quot; name=&quot;n88&quot;&gt;88&lt;/a&gt;&lt;/span&gt;            for (int i = 0; i &amp;lt; _numItems; i++)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n89&quot; name=&quot;n89&quot;&gt;89&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;strong&gt;&lt;a href=&quot;#n90&quot; name=&quot;n90&quot;&gt;90&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;                intList.Add(i);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n91&quot; name=&quot;n91&quot;&gt;91&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n92&quot; name=&quot;n92&quot;&gt;92&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n93&quot; name=&quot;n93&quot;&gt;93&lt;/a&gt;&lt;/span&gt;            DateTime dtReadStart = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n94&quot; name=&quot;n94&quot;&gt;94&lt;/a&gt;&lt;/span&gt;            for (int j = 0; j &amp;lt; _numItems; j++)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n95&quot; name=&quot;n95&quot;&gt;95&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n96&quot; name=&quot;n96&quot;&gt;96&lt;/a&gt;&lt;/span&gt;                int retrievedInt = intList[j];
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n97&quot; name=&quot;n97&quot;&gt;97&lt;/a&gt;&lt;/span&gt;                if (j % _numItems / 10 == 0)
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n98&quot; name=&quot;n98&quot;&gt;98&lt;/a&gt;&lt;/span&gt;                    Console.Out.Write(&amp;quot;.&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n99&quot; name=&quot;n99&quot;&gt;99&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n100&quot; name=&quot;n100&quot;&gt;100&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n101&quot; name=&quot;n101&quot;&gt;101&lt;/a&gt;&lt;/span&gt;            ShowStats(dtInsertStart, dtReadStart, &amp;quot;GenericListOfPrimitives&amp;quot;);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n102&quot; name=&quot;n102&quot;&gt;102&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n103&quot; name=&quot;n103&quot;&gt;103&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n104&quot; name=&quot;n104&quot;&gt;104&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n105&quot; name=&quot;n105&quot;&gt;105&lt;/a&gt;&lt;/span&gt;        /// &amp;lt;summary&amp;gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n106&quot; name=&quot;n106&quot;&gt;106&lt;/a&gt;&lt;/span&gt;        /// ShowStats show time procedure took to insert 1M items and to read 1M items
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n107&quot; name=&quot;n107&quot;&gt;107&lt;/a&gt;&lt;/span&gt;        /// &amp;lt;/summary&amp;gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n108&quot; name=&quot;n108&quot;&gt;108&lt;/a&gt;&lt;/span&gt;        /// &amp;lt;param name=&amp;quot;dtInsertStart&amp;quot;&amp;gt;Time when insert started&amp;lt;/param&amp;gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n109&quot; name=&quot;n109&quot;&gt;109&lt;/a&gt;&lt;/span&gt;        /// &amp;lt;param name=&amp;quot;dtReadStart&amp;quot;&amp;gt;Time when read started&amp;lt;/param&amp;gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n110&quot; name=&quot;n110&quot;&gt;110&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;        /// &amp;lt;param name=&amp;quot;msg&amp;quot;&amp;gt;Name of procedure&amp;lt;/param&amp;gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n111&quot; name=&quot;n111&quot;&gt;111&lt;/a&gt;&lt;/span&gt;        static void ShowStats(DateTime dtInsertStart, DateTime dtReadStart, string msg)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n112&quot; name=&quot;n112&quot;&gt;112&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n113&quot; name=&quot;n113&quot;&gt;113&lt;/a&gt;&lt;/span&gt;            DateTime dtTimeNow = DateTime.Now;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n114&quot; name=&quot;n114&quot;&gt;114&lt;/a&gt;&lt;/span&gt;            TimeSpan wholeTime = dtTimeNow.Subtract(dtInsertStart);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n115&quot; name=&quot;n115&quot;&gt;115&lt;/a&gt;&lt;/span&gt;            TimeSpan insertTime = dtReadStart.Subtract(dtInsertStart);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n116&quot; name=&quot;n116&quot;&gt;116&lt;/a&gt;&lt;/span&gt;            TimeSpan readTime = dtTimeNow.Subtract(dtReadStart);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n117&quot; name=&quot;n117&quot;&gt;117&lt;/a&gt;&lt;/span&gt;            Console.Out.WriteLine(&amp;quot;{3} took {0} ms in total, {1} ms to insert, {2} to read\n&amp;quot;,
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n118&quot; name=&quot;n118&quot;&gt;118&lt;/a&gt;&lt;/span&gt;                wholeTime.TotalMilliseconds,
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n119&quot; name=&quot;n119&quot;&gt;119&lt;/a&gt;&lt;/span&gt;                insertTime.TotalMilliseconds,
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n120&quot; name=&quot;n120&quot;&gt;120&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;                readTime.TotalMilliseconds,
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n121&quot; name=&quot;n121&quot;&gt;121&lt;/a&gt;&lt;/span&gt;                msg);
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n122&quot; name=&quot;n122&quot;&gt;122&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n123&quot; name=&quot;n123&quot;&gt;123&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n124&quot; name=&quot;n124&quot;&gt;124&lt;/a&gt;&lt;/span&gt;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n125&quot; name=&quot;n125&quot;&gt;125&lt;/a&gt;&lt;/span&gt;        static void Main(string[] args)
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n126&quot; name=&quot;n126&quot;&gt;126&lt;/a&gt;&lt;/span&gt;        {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n127&quot; name=&quot;n127&quot;&gt;127&lt;/a&gt;&lt;/span&gt;            switch(args[0])
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n128&quot; name=&quot;n128&quot;&gt;128&lt;/a&gt;&lt;/span&gt;            {
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n129&quot; name=&quot;n129&quot;&gt;129&lt;/a&gt;&lt;/span&gt;                case &amp;quot;1&amp;quot;: 
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n130&quot; name=&quot;n130&quot;&gt;130&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;                    TimeGenericListOfPrimitives();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n131&quot; name=&quot;n131&quot;&gt;131&lt;/a&gt;&lt;/span&gt;                    break;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n132&quot; name=&quot;n132&quot;&gt;132&lt;/a&gt;&lt;/span&gt;                case &amp;quot;2&amp;quot;:
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n133&quot; name=&quot;n133&quot;&gt;133&lt;/a&gt;&lt;/span&gt;                    TimeGenericListOfObjects();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n134&quot; name=&quot;n134&quot;&gt;134&lt;/a&gt;&lt;/span&gt;                    break;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n135&quot; name=&quot;n135&quot;&gt;135&lt;/a&gt;&lt;/span&gt;                case &amp;quot;3&amp;quot;:
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n136&quot; name=&quot;n136&quot;&gt;136&lt;/a&gt;&lt;/span&gt;                    TimeArrayListOfPrimitives();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n137&quot; name=&quot;n137&quot;&gt;137&lt;/a&gt;&lt;/span&gt;                    break;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n138&quot; name=&quot;n138&quot;&gt;138&lt;/a&gt;&lt;/span&gt;                case &amp;quot;4&amp;quot;:
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n139&quot; name=&quot;n139&quot;&gt;139&lt;/a&gt;&lt;/span&gt;                    TimeArrayListOfObjects();
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n140&quot; name=&quot;n140&quot;&gt;140&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;                    break;
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n141&quot; name=&quot;n141&quot;&gt;141&lt;/a&gt;&lt;/span&gt;            }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n142&quot; name=&quot;n142&quot;&gt;142&lt;/a&gt;&lt;/span&gt;        }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n143&quot; name=&quot;n143&quot;&gt;143&lt;/a&gt;&lt;/span&gt;    }
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n144&quot; name=&quot;n144&quot;&gt;144&lt;/a&gt;&lt;/span&gt;}
-&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n145&quot; name=&quot;n145&quot;&gt;145&lt;/a&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;err&quot;&gt;﻿&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Collections.Generic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Collections&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;TestGenericCollection&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TestGenericListVsArrayList&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TimeArrayListOfObjects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TimeArrayListOfObjects start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stringList&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;stringList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Convert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrievedInt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stringList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;nf&quot;&gt;ShowStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ArrayListOfObjects&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TimeArrayListOfPrimitives&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TimeArrayListOfPrimitives start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrievedInt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            
+            &lt;span class=&quot;nf&quot;&gt;ShowStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ArrayListOfPrimitives&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;      
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TimeGenericListOfObjects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TimeGenericListOfObjects start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;();&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Convert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrievedInt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;            
+
+            &lt;span class=&quot;nf&quot;&gt;ShowStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;GenericListOfObjects&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;            
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+
+        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TimeGenericListOfPrimitives&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TimeGenericListOfPrimitives start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;();&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrievedInt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_numItems&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;nf&quot;&gt;ShowStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;GenericListOfPrimitives&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+        &lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;/// ShowStats show time procedure took to insert 1M items and to read 1M items
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;/// &amp;lt;/summary&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;/// &amp;lt;param name=&quot;dtInsertStart&quot;&amp;gt;Time when insert started&amp;lt;/param&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;/// &amp;lt;param name=&quot;dtReadStart&quot;&amp;gt;Time when read started&amp;lt;/param&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;/// &amp;lt;param name=&quot;msg&quot;&amp;gt;Name of procedure&amp;lt;/param&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ShowStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtTimeNow&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;TimeSpan&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wholeTime&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtTimeNow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Subtract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;TimeSpan&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;insertTime&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Subtract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtInsertStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;TimeSpan&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;readTime&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtTimeNow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Subtract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtReadStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{3} took {0} ms in total, {1} ms to insert, {2} to read\n&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;wholeTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TotalMilliseconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;insertTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TotalMilliseconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;readTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TotalMilliseconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; 
+                    &lt;span class=&quot;nf&quot;&gt;TimeGenericListOfPrimitives&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                    &lt;span class=&quot;nf&quot;&gt;TimeGenericListOfObjects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                    &lt;span class=&quot;nf&quot;&gt;TimeArrayListOfPrimitives&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                    &lt;span class=&quot;nf&quot;&gt;TimeArrayListOfObjects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The result?&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;gt;TestGenerics.exe 1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;TestGenerics.exe 1
 TimeGenericListOfPrimitives start
 ..........
 GenericListOfPrimitives took 358.8006 ms in total, 202.8004 ms to insert, 156.0002 to read
@@ -256,18 +289,19 @@ ArrayListOfObjects took 4508.408 ms in total, 4352.4077 ms to insert, 156.0003 t
 
 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;It’s fairly conclusive.  &lt;/p&gt;
+&lt;p&gt;It’s fairly conclusive.&lt;/p&gt;
 
 &lt;p&gt;For collections of primitives (ints, longs, etc)- generic collections are
 definitely much faster than non-generic collections- because there is no need
 to box items.&lt;/p&gt;
 
 &lt;p&gt;For collections of objects- generic collections show no substantial improvement
-over non-generic collections. &lt;/p&gt;
+over non-generic collections.&lt;/p&gt;
 
 </description>
-        <pubDate>2016-12-30 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 30 Dec 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//tech/2016/12/30/revisting-generic-collections/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2016/12/30/revisting-generic-collections/</guid>
         
@@ -286,7 +320,7 @@ reminiscent of traders’ strategies.  There was a souvenir penny-engraving mach
 that presses souvenir pennies for 50 cents plus the one penny.  Next to it was a 
 machine that makes change for one and five dollar bills.   Given a dollar bill, 
 the machine returns 4 quarters and 2 pennies.  Given a 5 dollar bill, the machine 
-returns 20 quarters and 10 pennies. &lt;/p&gt;
+returns 20 quarters and 10 pennies.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/201612/20161209_penny_machine_1.jpg&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;
 &lt;img src=&quot;../../../../../assets/images/201612/20161209_penny_machine_2.jpg&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
@@ -294,17 +328,17 @@ returns 20 quarters and 10 pennies. &lt;/p&gt;
 &lt;p&gt;Whoa!!!  That’s a mega opportunity the size of a dump truck.  In rates and currency
 markets, if there is even an opportunity to exploit risk free arbitrages of a 
 single penny, traders would press this opportunity to the full- using leverage 
-(borrowed funds via repos). &lt;/p&gt;
+(borrowed funds via repos).&lt;/p&gt;
 
 &lt;p&gt;I quickly exchanged two five-dollar bills for a 20 cents risk-free profit.  There 
 was a small risk that the machine might run out of quarters (liquidity 
-risk) which would’ve sunk my profits. &lt;/p&gt;
+risk) which would’ve sunk my profits.&lt;/p&gt;
 
 &lt;p&gt;However, I lost my hard-earned 20 cents gains immediately when my daughter
 asked to get a drink from the neighboring soda machine.&lt;/p&gt;
 
 </description>
-        <pubDate>2016-12-09 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 09 Dec 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//finance/2016/12/09/riskfree-profit-strategies/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//finance/2016/12/09/riskfree-profit-strategies/</guid>
         
@@ -342,7 +376,7 @@ improve.  Look for improvements on existing jobs with your present equipment.&lt
   &lt;li&gt;Make very very small steps toward change&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Jim Collin’s Good To Great says- &lt;/p&gt;
+&lt;p&gt;Jim Collin’s Good To Great says-&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;We kept thinking we shold find the ‘one big thing,’ the miracle moment that
 defined breakthrough….But…no matter how dramatic the end reslt, the
@@ -357,10 +391,10 @@ secrecy.  Their attention to small mistakes flows from the recognition that
 human beings, no matter how gifted, are fallible.  Instead of expecting staff
 members to be perfect, HROs require them to be transparent… &lt;em&gt;If you make a
 mistake, tell us so that we can prevent a bigger problem.&lt;/em&gt;  FIX THE PROBLEM,
-NOT THE BLAME. &lt;/p&gt;
+NOT THE BLAME.&lt;/p&gt;
 
 </description>
-        <pubDate>2016-10-09 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 09 Oct 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//management/2016/10/09/the-spirit-of-kaizen/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//management/2016/10/09/the-spirit-of-kaizen/</guid>
         
@@ -410,7 +444,7 @@ is true to his or her own character.&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>2016-10-08 00:00:00 +0800</pubDate>
+        <pubDate>Sat, 08 Oct 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//management/2016/10/08/the-management-masterclass/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//management/2016/10/08/the-management-masterclass/</guid>
         
@@ -428,7 +462,7 @@ is true to his or her own character.&lt;/li&gt;
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/201609/20160918_hard_to_easy.jpg&quot; /&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>2016-09-18 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 18 Sep 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/</guid>
         
@@ -449,20 +483,20 @@ horrible day- a day that’s been seared into my memory.  Fifteen years is a gre
 number of years that’s passed.  Volumes have already been written to record, 
 to analyse, and to reflect on what happened that day.  It seems a proper civic
 duty to add my own recollections of that day from my point of view to the public
-record.  For this reason- I record the following entry. &lt;/p&gt;
+record.  For this reason- I record the following entry.&lt;/p&gt;
 
 &lt;h2 id=&quot;like-any-other-day&quot;&gt;Like Any Other Day&lt;/h2&gt;
 
 &lt;p&gt;September 11, 2001- was just like any other early autumn day.  I was a young
 Goldman Sachs programmer heading into work that morning in Lower Manhattan.  I had
 recently transferred to the electronic trading team and was looking forward to a 
-day of testing GS’s system with Cantor Fitzgerald’s eSpeed. &lt;/p&gt;
+day of testing GS’s system with Cantor Fitzgerald’s eSpeed.&lt;/p&gt;
 
 &lt;p&gt;I was slightly peeved when the N train I took to work from Brooklyn stopped 
 without explanation at Pacific Street.  Thinking that it was a usual MTA 
 malfunction, I walked over to the nearby Atlatnic Street station to transfer to 
 the uptown 4 train.  This train took me to the Battery Park Bowling Green
-station- which was only 2 blocks away the offices at 125 Broad Street.  &lt;/p&gt;
+station- which was only 2 blocks away the offices at 125 Broad Street.&lt;/p&gt;
 
 &lt;p&gt;The time was 9:15AM.  I remember the exact time because at that point I was 
 slightly peeved at being made tardy for work by the failing public transit
@@ -470,7 +504,7 @@ system.  As I rushed up the station exit
 staircase to make up for lost time, a work colleague grabbed me on the shoulder.  He 
 was heading in the opposite direction on the way down the station staircase.  In 
 terse words, he told me to go home.  Puzzled, I asked why.  He said- “Look up.
-Two planes crashed into the World Trade Center.” and quickly disappeared down the stairs. &lt;/p&gt;
+Two planes crashed into the World Trade Center.” and quickly disappeared down the stairs.&lt;/p&gt;
 
 &lt;h2 id=&quot;look-up&quot;&gt;“Look Up”&lt;/h2&gt;
 
@@ -478,7 +512,7 @@ Two planes crashed into the World Trade Center.” and quickly disappeared down 
 up Broadway.  Against a cloudless blue sky, I saw huge rising plumes of smoke. 
 Fortunately, I was a tech enthusiast- and happened to be carrying a digital camera 
 at the time.  Remember- this was back in 2001- in the era before iPhones and 
-before iPods.  I took this snapshot- &lt;/p&gt;
+before iPods.  I took this snapshot-&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_01_looking_up_broadway.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -486,14 +520,14 @@ before iPods.  I took this snapshot- &lt;/p&gt;
 he said was real.  In 2001, terrorism was the sort of
 news event that only happened in the Middle East or Africa.  Even though there was 
 a WTC bombing in 1994, it was already a forgotten memory.  And because of that, 
-I did not feel any fear. &lt;/p&gt;
+I did not feel any fear.&lt;/p&gt;
 
 &lt;h2 id=&quot;just-get-to-work&quot;&gt;“Just Get To Work”&lt;/h2&gt;
 
 &lt;p&gt;It never occurred to me to leave.  My objective- quite stupefying now
 looking back- but oddly rational at the time- was &lt;em&gt;to get to work&lt;/em&gt;.  It must be 
 the years of social conditioning that makes someone show up to work even as 
-the world burns.  &lt;/p&gt;
+the world burns.&lt;/p&gt;
 
 &lt;p&gt;I walked two blocks eastward to Goldman Sach’s office building at 85 Broad Sreet- 
 and found a throng of people gathered at the entrance.  It seemed that just about 
@@ -502,14 +536,14 @@ learned a few days afterwards- my GS colleagues had just witnessed the second
 plane crash into the towers and were making their way out of the building
 as I was trying to make my way in.  Seeing that my efforts to enter the office
 building would fail, I guessed that my absence from the office 
-would be excused that day. &lt;/p&gt;
+would be excused that day.&lt;/p&gt;
 
-&lt;p&gt;At around 9:20AM, I took this snapshot of 85 Broad Street. &lt;/p&gt;
+&lt;p&gt;At around 9:20AM, I took this snapshot of 85 Broad Street.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_02_85_broad.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At the time, there was no panic in the streets.  People milled about in general 
-confusion as they planned their next steps. &lt;/p&gt;
+confusion as they planned their next steps.&lt;/p&gt;
 
 &lt;p&gt;Since there was no way then to get to work- I had no other destination than to
 walk up Broadway- &lt;em&gt;towards&lt;/em&gt; the source of the smoke.  Having a digital camera 
@@ -518,7 +552,7 @@ a closer look at the smoke.   As I made my way past Wall Street along Broadway,
 the skyscrapers blocked my view of the towers and I could not imagine what was on fire.&lt;/p&gt;
 
 &lt;p&gt;At around 9:25AM, I took a third snapshot of the smoke above lower Manattan 
-office buildings. &lt;/p&gt;
+office buildings.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_03_smoke_over_lower_manhattan.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -527,14 +561,14 @@ office buildings. &lt;/p&gt;
 &lt;p&gt;The scene was surreal.  With smoke in the skies, I saw what looked like pieces 
 of paper floating down from the sky.  As I walked further up Broadway, I finally reached 
 Liberty Plaza.  This plaza, with a clearing void of any buildings- finally 
-allowed me to get a good view of the towers.    &lt;/p&gt;
+allowed me to get a good view of the towers.&lt;/p&gt;
 
 &lt;p&gt;What I saw dumbstruck me for a second.  I saw a whole section of one tower was on 
-fire.  I raised my camera for this shot. &lt;/p&gt;
+fire.  I raised my camera for this shot.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_04_tower_burning.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I took another shot with the camera’s digitial zoom turned on. &lt;/p&gt;
+&lt;p&gt;I took another shot with the camera’s digitial zoom turned on.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_05_tower_burning_zoom.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -549,24 +583,24 @@ floating down weightlessly from the sky.  They seem to float for an eternity as
 they fluttered earthbound.&lt;/p&gt;
 
 &lt;p&gt;Then as I ambled around to get a better angle of the view, I saw the second 
-tower appear from behind the first tower- looking like twin smoke stacks. &lt;/p&gt;
+tower appear from behind the first tower- looking like twin smoke stacks.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_06_two_towers_burning.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The view from google maps from the exact same angle today looks like this- &lt;/p&gt;
+&lt;p&gt;The view from google maps from the exact same angle today looks like this-&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20160911_liberty_plaza.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As I walked closer and closer to the towers, I finally met resistance at the 
 corner of Liberty Plaza and Broadway.  There a few of New York City’s finest had 
 cordoned off the area.  I saw several firetrucks parked nearby- and took another 
-quick snap facing west. &lt;/p&gt;
+quick snap facing west.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_07_liberty_plaza_firetrucks.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;With my path westward blocked by the authorities, I continued walking northward
 up Broadway.  At the corner of Cortland and Broadway, I was able to catch another
-view of the burning towers.  I took two snaps- &lt;/p&gt;
+view of the burning towers.  I took two snaps-&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_08_cortland.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -576,7 +610,7 @@ view of the burning towers.  I took two snaps- &lt;/p&gt;
 throng of onlookers.  Meanwhile, the fire burned away.  I thought that the 
 fire would be put out all right by the firefighters.  Or the fire would just 
 burn itself out.  It was just a matter of time.  Any other possibility had not 
-entered my mind. &lt;/p&gt;
+entered my mind.&lt;/p&gt;
 
 &lt;h2 id=&quot;huge-dust-clouds&quot;&gt;Huge Dust Clouds&lt;/h2&gt;
 
@@ -587,7 +621,7 @@ brownish dust in the air.  I wondered where did that dust come from?  It was
 only a minute or two afterwards that I thought the dust cloud could’ve come 
 from secondary bomb attacks.  I remember reading that was a favorite strategy
 of terrorists- attack first in one primary location, then as the victims wander
-out in confusion, attack them again with a secondary explosive device.  &lt;/p&gt;
+out in confusion, attack them again with a secondary explosive device.&lt;/p&gt;
 
 &lt;p&gt;I thought this huge dust cloud had come from a second wave of attacks.  It was only then that 
 I realised someone was trying to &lt;em&gt;kill me&lt;/em&gt;.  It got personal at this point. 
@@ -595,24 +629,24 @@ It was only then that I started to think about leaving the area.  And if there
 were secondary explosive devices, I thought the best way out of Lower Manhattan 
 was by way of the lower east shoreline- near South Street Seaport.  And in the 
 worst case scenario, if the situation got worse, I coud always jump into the river 
-to escape any further conflagration. &lt;/p&gt;
+to escape any further conflagration.&lt;/p&gt;
 
 &lt;h2 id=&quot;stragglers-going-uptown&quot;&gt;Stragglers Going Uptown&lt;/h2&gt;
 
 &lt;p&gt;I reached South Street- and took several pictures as I walked north.  The first
 photo, takened at approximately 10:10AM shows the thick haze that just 
-appeared - where all my previous photos showed clear blue skies.   &lt;/p&gt;
+appeared - where all my previous photos showed clear blue skies.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_10_south_street.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As I walked along, I overheard others say the towers fell down.  I did not 
 believe it.  I took a look back- and only saw thick haze where the towers
 should appear.  The thick smoke was so enveloping that I wasn’t sure where were
-the towers. &lt;/p&gt;
+the towers.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_11_south_street.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Walking further northward, I took another picture of the stragglers- like myself. &lt;/p&gt;
+&lt;p&gt;Walking further northward, I took another picture of the stragglers- like myself.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_12_south_street.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -620,13 +654,13 @@ the towers. &lt;/p&gt;
 
 &lt;p&gt;Once I passed under the shadow of Brooklyn Bridge, I immediately felt more 
 secure.  It was as if the bridge was a demarcation line between a war zone
-and everywhere else.  &lt;/p&gt;
+and everywhere else.&lt;/p&gt;
 
 &lt;p&gt;As I reached Pike Street, I slowed down and looked back.  I took several shots
-and none of them show the towers. &lt;/p&gt;
+and none of them show the towers.&lt;/p&gt;
 
 &lt;p&gt;The foreground of this photo shows what look a staging area for a squad of 
-auxillary police. &lt;/p&gt;
+auxillary police.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/200109/20010911_13_pike_street.jpg&quot; /&gt;&lt;/p&gt;
 
@@ -644,7 +678,7 @@ bin ladin- feel like american
 --&gt;
 
 </description>
-        <pubDate>2016-09-11 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 11 Sep 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/</guid>
         
@@ -665,24 +699,25 @@ value do figuring out who has how many pencils serve in real life?&lt;/p&gt;
 basic intelligence and an ample supply of heart- also known as perservence- or grit.
 Without grit, a weak-minded individual would just give up.  And that’s exactly what
 the Singapore government wants.  Singapore math serves nothing more than to separate 
-the strong from the weak.  It is a simply a basic sorting tool for this meritocractic society. &lt;/p&gt;
+the strong from the weak.  It is a simply a basic sorting tool for this meritocractic society.&lt;/p&gt;
 
 &lt;p&gt;My kid asked me how can I do my job if I get stomped by a primary school question?&lt;br /&gt;
 First, the Singapore math question to me is more of a logic puzzle than a math question. 
 And second, no one knows everything.  However, the key point is that we do not stay 
 stomped.  We use everything in our resources to solve the problem.  We attack the 
 problem from different angles.  Sooner or later until ceaseless attacks, the solution
-reveals itself.  We are only defeated if we give up.  &lt;/p&gt;
+reveals itself.  We are only defeated if we give up.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Kenneth had a total of 576 black and red pens in the ratio 9:7.  After he had given
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Kenneth had a total of 576 black and red pens in the ratio 9:7.  After he had given
 away an equal number of each type of pens, the number of black and red pens left was
 in the ratio 7:4.  How many pens did he give away altogether?
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;I’ve generated the solution 
 in &lt;a href=&quot;../../../../../../assets/pdf/20160502.5.ratio.pdf&quot;&gt;this pdf here&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>2016-05-02 00:00:00 +0800</pubDate>
+        <pubDate>Mon, 02 May 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//musings/2016/05/02/sg-math-primary-five-ratio/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/05/02/sg-math-primary-five-ratio/</guid>
         
@@ -697,17 +732,18 @@ in &lt;a href=&quot;../../../../../../assets/pdf/20160502.5.ratio.pdf&quot;&gt;t
         <title>Singapore Math Primary 5 Five Ratio Question</title>
         <description>&lt;p&gt;As my kid has been progressing through the Singapore school system, I’ve never been seriously challenged
 by primary school math until now.  I was embarrassingly stomped by the following question.&lt;br /&gt;
-It took me some time to figure it out.  I’ve posted the question and answer for everyone’s benefit. &lt;/p&gt;
+It took me some time to figure it out.  I’ve posted the question and answer for everyone’s benefit.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Mr Lee had some red and white paint.  1/3 of the paint was red.  He used 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Mr Lee had some red and white paint.  1/3 of the paint was red.  He used 
 1/2 of the red paint and 5/6 of the white paint.  In the end, he had
 a total of 10 liters of paint left.  How much paint did he have at first?
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;This question gave me a real headache until I found a way out.  I’ve generated the solution 
 in &lt;a href=&quot;../../../../../../assets/pdf/20160501.1.ratio.pdf&quot;&gt;this pdf here&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>2016-05-01 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 01 May 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/</guid>
         
@@ -717,59 +753,6 @@ in &lt;a href=&quot;../../../../../../assets/pdf/20160501.1.ratio.pdf&quot;&gt;t
         <category>math</category>
         
         <category>singapore</category>
-        
-      </item>
-    
-      <item>
-        <title>Getting Things Done</title>
-        <description>&lt;p&gt;From the book “Getting Things Done Secrets” by Rus Slater- If you want to get on in your career or your
-home life you will need to get things done.  In the modern world, however, there are lots of different
-people wanting lots of different things to be done, and you can’t do everything for everyone unless you
-get much better at a number of different things.&lt;/p&gt;
-
-&lt;h2 id=&quot;knowing-what-things-to-do&quot;&gt;Knowing what things to do&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Recognize that everyone only has 86,400 seconds a day.  Use them wisely.  Time waits for no one.&lt;/li&gt;
-  &lt;li&gt;Ask for clear instructions.  If someone asks you to do something for them, make sure you are 100%
-certain about what’s required.  Whenever possible, get a written instruction or request- the act of 
-writing down instructions makes people think more carefully and fully about what they actually want.
-Try to get the request in as much specific detail as possible.  Getting it right first time is always
-better than having to come back and do it again. &lt;/li&gt;
-  &lt;li&gt;See the relevance of the bigger picture.  Knowing how your tasks relate to the bigger picture
-helps both you and your boss to organize the workload.&lt;/li&gt;
-  &lt;li&gt;Plan for output, not activity.  Aim for specific achievements.  It is very satisfying to see that
-you have achieved something, rather than just spending time doing something.&lt;/li&gt;
-  &lt;li&gt;DREAM to get more done.  Delegate it.  Refuse it.  Escalate it.  Action it.  Make a time for it.&lt;/li&gt;
-  &lt;li&gt;Have a personal vision or mission.  Write down your long-term career goals and what you need to
-do in the medium term to achieve them.&lt;/li&gt;
-  &lt;li&gt;Make to-do lists.  &lt;/li&gt;
-  &lt;li&gt;Find out how others do it.  It is always worth investigating how others may have done a task in
-the past.  Then compare it with your task and use your judgement to decide whether to follow a tried
-and trusted method or to develop a new, better way. &lt;/li&gt;
-  &lt;li&gt;Find out how others do it.  It is always worth investigating how others may have done a task in
-the past.  Then compare it with your task and use your judgement to decide whether to follow a tried
-and trusted method or to develop a new, better way.&lt;/li&gt;
-  &lt;li&gt;Know how to KISS- keep it short and simple.  If you have a choice between a simple and a complex
-way to do something, always go for the simple way.&lt;/li&gt;
-  &lt;li&gt;Look at effort versus payoff.  Judge every task by cost and reward.  Work first on the tasks
-with the least cost and highest return.  By assessing the ratio of effort to payoff, you ensure
-that you are doing thing that are worthwhile. &lt;/li&gt;
-  &lt;li&gt;Go for quick wins.  A quick win is a personal motivator.  You get to tick something off the
-to do list, which means you have a little less left to do and something to say you have finished.&lt;/li&gt;
-  &lt;li&gt;Dont say ‘yes’ to every request.  If we say yes to every request, one of two things will happen-
-either we will end up working 24 hours a day or we will end up letting people down because we 
-said yes to something we cannot do.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>2016-04-07 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>tech</category>
         
       </item>
     

@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="post-template">
+<body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -45,167 +45,165 @@
 collections?  I cooked up a quick test to confirm my suspicions that
 non-generics were slower because of the work it needs to box primitives
 and then add the reference to the collection- whereas for generic collections,
-it just needed to add the primitive to its own memory allocation. </p>
+it just needed to add the primitive to its own memory allocation.</p>
 
 <p>But then a colleague asked- how about performance for collections of 
 objects?  Wouldn’t a generic collection do the same as a non-generic collection?
 Both collections only contain references to objects on the heap- and there
 should be no difference, right?  I updated my old test to check this 
-assertion. </p>
+assertion.</p>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers">  <a href="#n1" name="n1">1</a></span>
-<span class="line-numbers">  <a href="#n2" name="n2">2</a></span>﻿using System;
-<span class="line-numbers">  <a href="#n3" name="n3">3</a></span>using System.Collections.Generic;
-<span class="line-numbers">  <a href="#n4" name="n4">4</a></span>using System.Collections;
-<span class="line-numbers">  <a href="#n5" name="n5">5</a></span>
-<span class="line-numbers">  <a href="#n6" name="n6">6</a></span>namespace TestGenericCollection
-<span class="line-numbers">  <a href="#n7" name="n7">7</a></span>{
-<span class="line-numbers">  <a href="#n8" name="n8">8</a></span>    class TestGenericListVsArrayList
-<span class="line-numbers">  <a href="#n9" name="n9">9</a></span>    {
-<span class="line-numbers"> <strong><a href="#n10" name="n10">10</a></strong></span>        const int _numItems = 10000000;
-<span class="line-numbers"> <a href="#n11" name="n11">11</a></span>
-<span class="line-numbers"> <a href="#n12" name="n12">12</a></span>        static void TimeArrayListOfObjects()
-<span class="line-numbers"> <a href="#n13" name="n13">13</a></span>        {
-<span class="line-numbers"> <a href="#n14" name="n14">14</a></span>            Console.Out.WriteLine(&quot;TimeArrayListOfObjects start&quot;);
-<span class="line-numbers"> <a href="#n15" name="n15">15</a></span>
-<span class="line-numbers"> <a href="#n16" name="n16">16</a></span>            DateTime dtInsertStart = DateTime.Now;
-<span class="line-numbers"> <a href="#n17" name="n17">17</a></span>            ArrayList stringList = new ArrayList();
-<span class="line-numbers"> <a href="#n18" name="n18">18</a></span>            for (int i = 0; i &lt; _numItems; i++)
-<span class="line-numbers"> <a href="#n19" name="n19">19</a></span>            {
-<span class="line-numbers"> <strong><a href="#n20" name="n20">20</a></strong></span>                stringList.Add(Convert.ToString(i));
-<span class="line-numbers"> <a href="#n21" name="n21">21</a></span>            }
-<span class="line-numbers"> <a href="#n22" name="n22">22</a></span>
-<span class="line-numbers"> <a href="#n23" name="n23">23</a></span>            DateTime dtReadStart = DateTime.Now;
-<span class="line-numbers"> <a href="#n24" name="n24">24</a></span>            for (int j = 0; j &lt; _numItems; j++)
-<span class="line-numbers"> <a href="#n25" name="n25">25</a></span>            {
-<span class="line-numbers"> <a href="#n26" name="n26">26</a></span>                string retrievedInt = (string)stringList[j];
-<span class="line-numbers"> <a href="#n27" name="n27">27</a></span>                if (j % _numItems/10 == 0)
-<span class="line-numbers"> <a href="#n28" name="n28">28</a></span>                    Console.Out.Write(&quot;.&quot;);
-<span class="line-numbers"> <a href="#n29" name="n29">29</a></span>            }
-<span class="line-numbers"> <strong><a href="#n30" name="n30">30</a></strong></span>
-<span class="line-numbers"> <a href="#n31" name="n31">31</a></span>            ShowStats(dtInsertStart, dtReadStart, &quot;ArrayListOfObjects&quot;);
-<span class="line-numbers"> <a href="#n32" name="n32">32</a></span>        }
-<span class="line-numbers"> <a href="#n33" name="n33">33</a></span>
-<span class="line-numbers"> <a href="#n34" name="n34">34</a></span>
-<span class="line-numbers"> <a href="#n35" name="n35">35</a></span>        static void TimeArrayListOfPrimitives()
-<span class="line-numbers"> <a href="#n36" name="n36">36</a></span>        {
-<span class="line-numbers"> <a href="#n37" name="n37">37</a></span>            Console.Out.WriteLine(&quot;TimeArrayListOfPrimitives start&quot;);
-<span class="line-numbers"> <a href="#n38" name="n38">38</a></span>            
-<span class="line-numbers"> <a href="#n39" name="n39">39</a></span>            DateTime dtInsertStart = DateTime.Now;
-<span class="line-numbers"> <strong><a href="#n40" name="n40">40</a></strong></span>            ArrayList intList = new ArrayList();
-<span class="line-numbers"> <a href="#n41" name="n41">41</a></span>            for (int i = 0; i &lt; _numItems; i++)
-<span class="line-numbers"> <a href="#n42" name="n42">42</a></span>            {
-<span class="line-numbers"> <a href="#n43" name="n43">43</a></span>                intList.Add(i);
-<span class="line-numbers"> <a href="#n44" name="n44">44</a></span>            }
-<span class="line-numbers"> <a href="#n45" name="n45">45</a></span>
-<span class="line-numbers"> <a href="#n46" name="n46">46</a></span>            DateTime dtReadStart = DateTime.Now;
-<span class="line-numbers"> <a href="#n47" name="n47">47</a></span>            for (int j = 0; j &lt; _numItems; j++)
-<span class="line-numbers"> <a href="#n48" name="n48">48</a></span>            {
-<span class="line-numbers"> <a href="#n49" name="n49">49</a></span>                int retrievedInt = (int)intList[j];
-<span class="line-numbers"> <strong><a href="#n50" name="n50">50</a></strong></span>                if (j % _numItems/10 == 0)
-<span class="line-numbers"> <a href="#n51" name="n51">51</a></span>                    Console.Out.Write(&quot;.&quot;);
-<span class="line-numbers"> <a href="#n52" name="n52">52</a></span>            }
-<span class="line-numbers"> <a href="#n53" name="n53">53</a></span>            
-<span class="line-numbers"> <a href="#n54" name="n54">54</a></span>            ShowStats(dtInsertStart, dtReadStart, &quot;ArrayListOfPrimitives&quot;);      
-<span class="line-numbers"> <a href="#n55" name="n55">55</a></span>        }
-<span class="line-numbers"> <a href="#n56" name="n56">56</a></span>
-<span class="line-numbers"> <a href="#n57" name="n57">57</a></span>
-<span class="line-numbers"> <a href="#n58" name="n58">58</a></span>        static void TimeGenericListOfObjects()
-<span class="line-numbers"> <a href="#n59" name="n59">59</a></span>        {
-<span class="line-numbers"> <strong><a href="#n60" name="n60">60</a></strong></span>            Console.Out.WriteLine(&quot;TimeGenericListOfObjects start&quot;);
-<span class="line-numbers"> <a href="#n61" name="n61">61</a></span>            
-<span class="line-numbers"> <a href="#n62" name="n62">62</a></span>            DateTime dtInsertStart = DateTime.Now;
-<span class="line-numbers"> <a href="#n63" name="n63">63</a></span>            List&lt;string&gt; intList = new List&lt;string&gt;();
-<span class="line-numbers"> <a href="#n64" name="n64">64</a></span>            for (int i = 0; i &lt; _numItems; i++)
-<span class="line-numbers"> <a href="#n65" name="n65">65</a></span>            {
-<span class="line-numbers"> <a href="#n66" name="n66">66</a></span>                intList.Add(Convert.ToString(i));
-<span class="line-numbers"> <a href="#n67" name="n67">67</a></span>            }
-<span class="line-numbers"> <a href="#n68" name="n68">68</a></span>
-<span class="line-numbers"> <a href="#n69" name="n69">69</a></span>            DateTime dtReadStart = DateTime.Now;
-<span class="line-numbers"> <strong><a href="#n70" name="n70">70</a></strong></span>            for (int j = 0; j &lt; _numItems; j++)
-<span class="line-numbers"> <a href="#n71" name="n71">71</a></span>            {
-<span class="line-numbers"> <a href="#n72" name="n72">72</a></span>                string retrievedInt = intList[j];
-<span class="line-numbers"> <a href="#n73" name="n73">73</a></span>                if (j % _numItems/10 == 0)
-<span class="line-numbers"> <a href="#n74" name="n74">74</a></span>                    Console.Out.Write(&quot;.&quot;);
-<span class="line-numbers"> <a href="#n75" name="n75">75</a></span>            }            
-<span class="line-numbers"> <a href="#n76" name="n76">76</a></span>
-<span class="line-numbers"> <a href="#n77" name="n77">77</a></span>            ShowStats(dtInsertStart, dtReadStart, &quot;GenericListOfObjects&quot;);            
-<span class="line-numbers"> <a href="#n78" name="n78">78</a></span>        }
-<span class="line-numbers"> <a href="#n79" name="n79">79</a></span>
-<span class="line-numbers"> <strong><a href="#n80" name="n80">80</a></strong></span>
-<span class="line-numbers"> <a href="#n81" name="n81">81</a></span>
-<span class="line-numbers"> <a href="#n82" name="n82">82</a></span>        static void TimeGenericListOfPrimitives()
-<span class="line-numbers"> <a href="#n83" name="n83">83</a></span>        {
-<span class="line-numbers"> <a href="#n84" name="n84">84</a></span>            Console.Out.WriteLine(&quot;TimeGenericListOfPrimitives start&quot;);
-<span class="line-numbers"> <a href="#n85" name="n85">85</a></span>
-<span class="line-numbers"> <a href="#n86" name="n86">86</a></span>            DateTime dtInsertStart = DateTime.Now;
-<span class="line-numbers"> <a href="#n87" name="n87">87</a></span>            List&lt;int&gt; intList = new List&lt;int&gt;();
-<span class="line-numbers"> <a href="#n88" name="n88">88</a></span>            for (int i = 0; i &lt; _numItems; i++)
-<span class="line-numbers"> <a href="#n89" name="n89">89</a></span>            {
-<span class="line-numbers"> <strong><a href="#n90" name="n90">90</a></strong></span>                intList.Add(i);
-<span class="line-numbers"> <a href="#n91" name="n91">91</a></span>            }
-<span class="line-numbers"> <a href="#n92" name="n92">92</a></span>
-<span class="line-numbers"> <a href="#n93" name="n93">93</a></span>            DateTime dtReadStart = DateTime.Now;
-<span class="line-numbers"> <a href="#n94" name="n94">94</a></span>            for (int j = 0; j &lt; _numItems; j++)
-<span class="line-numbers"> <a href="#n95" name="n95">95</a></span>            {
-<span class="line-numbers"> <a href="#n96" name="n96">96</a></span>                int retrievedInt = intList[j];
-<span class="line-numbers"> <a href="#n97" name="n97">97</a></span>                if (j % _numItems / 10 == 0)
-<span class="line-numbers"> <a href="#n98" name="n98">98</a></span>                    Console.Out.Write(&quot;.&quot;);
-<span class="line-numbers"> <a href="#n99" name="n99">99</a></span>            }
-<span class="line-numbers"><strong><a href="#n100" name="n100">100</a></strong></span>
-<span class="line-numbers"><a href="#n101" name="n101">101</a></span>            ShowStats(dtInsertStart, dtReadStart, &quot;GenericListOfPrimitives&quot;);
-<span class="line-numbers"><a href="#n102" name="n102">102</a></span>        }
-<span class="line-numbers"><a href="#n103" name="n103">103</a></span>
-<span class="line-numbers"><a href="#n104" name="n104">104</a></span>
-<span class="line-numbers"><a href="#n105" name="n105">105</a></span>        /// &lt;summary&gt;
-<span class="line-numbers"><a href="#n106" name="n106">106</a></span>        /// ShowStats show time procedure took to insert 1M items and to read 1M items
-<span class="line-numbers"><a href="#n107" name="n107">107</a></span>        /// &lt;/summary&gt;
-<span class="line-numbers"><a href="#n108" name="n108">108</a></span>        /// &lt;param name=&quot;dtInsertStart&quot;&gt;Time when insert started&lt;/param&gt;
-<span class="line-numbers"><a href="#n109" name="n109">109</a></span>        /// &lt;param name=&quot;dtReadStart&quot;&gt;Time when read started&lt;/param&gt;
-<span class="line-numbers"><strong><a href="#n110" name="n110">110</a></strong></span>        /// &lt;param name=&quot;msg&quot;&gt;Name of procedure&lt;/param&gt;
-<span class="line-numbers"><a href="#n111" name="n111">111</a></span>        static void ShowStats(DateTime dtInsertStart, DateTime dtReadStart, string msg)
-<span class="line-numbers"><a href="#n112" name="n112">112</a></span>        {
-<span class="line-numbers"><a href="#n113" name="n113">113</a></span>            DateTime dtTimeNow = DateTime.Now;
-<span class="line-numbers"><a href="#n114" name="n114">114</a></span>            TimeSpan wholeTime = dtTimeNow.Subtract(dtInsertStart);
-<span class="line-numbers"><a href="#n115" name="n115">115</a></span>            TimeSpan insertTime = dtReadStart.Subtract(dtInsertStart);
-<span class="line-numbers"><a href="#n116" name="n116">116</a></span>            TimeSpan readTime = dtTimeNow.Subtract(dtReadStart);
-<span class="line-numbers"><a href="#n117" name="n117">117</a></span>            Console.Out.WriteLine(&quot;{3} took {0} ms in total, {1} ms to insert, {2} to read\n&quot;,
-<span class="line-numbers"><a href="#n118" name="n118">118</a></span>                wholeTime.TotalMilliseconds,
-<span class="line-numbers"><a href="#n119" name="n119">119</a></span>                insertTime.TotalMilliseconds,
-<span class="line-numbers"><strong><a href="#n120" name="n120">120</a></strong></span>                readTime.TotalMilliseconds,
-<span class="line-numbers"><a href="#n121" name="n121">121</a></span>                msg);
-<span class="line-numbers"><a href="#n122" name="n122">122</a></span>        }
-<span class="line-numbers"><a href="#n123" name="n123">123</a></span>
-<span class="line-numbers"><a href="#n124" name="n124">124</a></span>
-<span class="line-numbers"><a href="#n125" name="n125">125</a></span>        static void Main(string[] args)
-<span class="line-numbers"><a href="#n126" name="n126">126</a></span>        {
-<span class="line-numbers"><a href="#n127" name="n127">127</a></span>            switch(args[0])
-<span class="line-numbers"><a href="#n128" name="n128">128</a></span>            {
-<span class="line-numbers"><a href="#n129" name="n129">129</a></span>                case &quot;1&quot;: 
-<span class="line-numbers"><strong><a href="#n130" name="n130">130</a></strong></span>                    TimeGenericListOfPrimitives();
-<span class="line-numbers"><a href="#n131" name="n131">131</a></span>                    break;
-<span class="line-numbers"><a href="#n132" name="n132">132</a></span>                case &quot;2&quot;:
-<span class="line-numbers"><a href="#n133" name="n133">133</a></span>                    TimeGenericListOfObjects();
-<span class="line-numbers"><a href="#n134" name="n134">134</a></span>                    break;
-<span class="line-numbers"><a href="#n135" name="n135">135</a></span>                case &quot;3&quot;:
-<span class="line-numbers"><a href="#n136" name="n136">136</a></span>                    TimeArrayListOfPrimitives();
-<span class="line-numbers"><a href="#n137" name="n137">137</a></span>                    break;
-<span class="line-numbers"><a href="#n138" name="n138">138</a></span>                case &quot;4&quot;:
-<span class="line-numbers"><a href="#n139" name="n139">139</a></span>                    TimeArrayListOfObjects();
-<span class="line-numbers"><strong><a href="#n140" name="n140">140</a></strong></span>                    break;
-<span class="line-numbers"><a href="#n141" name="n141">141</a></span>            }
-<span class="line-numbers"><a href="#n142" name="n142">142</a></span>        }
-<span class="line-numbers"><a href="#n143" name="n143">143</a></span>    }
-<span class="line-numbers"><a href="#n144" name="n144">144</a></span>}
-<span class="line-numbers"><a href="#n145" name="n145">145</a></span>
-</pre></div>
-</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+<span class="err">﻿</span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">TestGenericCollection</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">TestGenericListVsArrayList</span>
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">_numItems</span> <span class="p">=</span> <span class="m">10000000</span><span class="p">;</span>
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeArrayListOfObjects</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeArrayListOfObjects start"</span><span class="p">);</span>
+
+            <span class="n">DateTime</span> <span class="n">dtInsertStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">ArrayList</span> <span class="n">stringList</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ArrayList</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">stringList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">Convert</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+            <span class="p">}</span>
+
+            <span class="n">DateTime</span> <span class="n">dtReadStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">string</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">stringList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="p">%</span> <span class="n">_numItems</span><span class="p">/</span><span class="m">10</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="nf">ShowStats</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="s">"ArrayListOfObjects"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeArrayListOfPrimitives</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeArrayListOfPrimitives start"</span><span class="p">);</span>
+            
+            <span class="n">DateTime</span> <span class="n">dtInsertStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">ArrayList</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ArrayList</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">intList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="n">DateTime</span> <span class="n">dtReadStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">intList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="p">%</span> <span class="n">_numItems</span><span class="p">/</span><span class="m">10</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>
+            
+            <span class="nf">ShowStats</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="s">"ArrayListOfPrimitives"</span><span class="p">);</span>      
+        <span class="p">}</span>
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeGenericListOfObjects</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeGenericListOfObjects start"</span><span class="p">);</span>
+            
+            <span class="n">DateTime</span> <span class="n">dtInsertStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">intList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">Convert</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+            <span class="p">}</span>
+
+            <span class="n">DateTime</span> <span class="n">dtReadStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">string</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="n">intList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="p">%</span> <span class="n">_numItems</span><span class="p">/</span><span class="m">10</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>            
+
+            <span class="nf">ShowStats</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="s">"GenericListOfObjects"</span><span class="p">);</span>            
+        <span class="p">}</span>
+
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeGenericListOfPrimitives</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeGenericListOfPrimitives start"</span><span class="p">);</span>
+
+            <span class="n">DateTime</span> <span class="n">dtInsertStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">intList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="n">DateTime</span> <span class="n">dtReadStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">_numItems</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="n">intList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="p">%</span> <span class="n">_numItems</span> <span class="p">/</span> <span class="m">10</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="nf">ShowStats</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="s">"GenericListOfPrimitives"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// ShowStats show time procedure took to insert 1M items and to read 1M items
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="c1">/// &lt;param name="dtInsertStart"&gt;Time when insert started&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="dtReadStart"&gt;Time when read started&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="msg"&gt;Name of procedure&lt;/param&gt;
+</span>        <span class="k">static</span> <span class="k">void</span> <span class="nf">ShowStats</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">DateTime</span> <span class="n">dtTimeNow</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">TimeSpan</span> <span class="n">wholeTime</span> <span class="p">=</span> <span class="n">dtTimeNow</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">);</span>
+            <span class="n">TimeSpan</span> <span class="n">insertTime</span> <span class="p">=</span> <span class="n">dtReadStart</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">);</span>
+            <span class="n">TimeSpan</span> <span class="n">readTime</span> <span class="p">=</span> <span class="n">dtTimeNow</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtReadStart</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"{3} took {0} ms in total, {1} ms to insert, {2} to read\n"</span><span class="p">,</span>
+                <span class="n">wholeTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">insertTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">readTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">msg</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">switch</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">0</span><span class="p">])</span>
+            <span class="p">{</span>
+                <span class="k">case</span> <span class="s">"1"</span><span class="p">:</span> 
+                    <span class="nf">TimeGenericListOfPrimitives</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="s">"2"</span><span class="p">:</span>
+                    <span class="nf">TimeGenericListOfObjects</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="s">"3"</span><span class="p">:</span>
+                    <span class="nf">TimeArrayListOfPrimitives</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="k">case</span> <span class="s">"4"</span><span class="p">:</span>
+                    <span class="nf">TimeArrayListOfObjects</span><span class="p">();</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
 </div>
 
 <p>The result?</p>
 
-<pre><code>&gt;TestGenerics.exe 1
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;TestGenerics.exe 1
 TimeGenericListOfPrimitives start
 ..........
 GenericListOfPrimitives took 358.8006 ms in total, 202.8004 ms to insert, 156.0002 to read
@@ -230,15 +228,16 @@ ArrayListOfObjects took 4508.408 ms in total, 4352.4077 ms to insert, 156.0003 t
 
 
 </code></pre>
+</div>
 
-<p>It’s fairly conclusive.  </p>
+<p>It’s fairly conclusive.</p>
 
 <p>For collections of primitives (ints, longs, etc)- generic collections are
 definitely much faster than non-generic collections- because there is no need
 to box items.</p>
 
 <p>For collections of objects- generic collections show no substantial improvement
-over non-generic collections. </p>
+over non-generic collections.</p>
 
 
         </section>
@@ -249,6 +248,8 @@ over non-generic collections. </p>
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     

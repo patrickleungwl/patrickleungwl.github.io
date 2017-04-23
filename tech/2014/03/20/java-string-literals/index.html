@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="post-template">
+<body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -43,61 +43,61 @@
         <section class="post-content">
             <p>Strings in Java can be declared either literally-</p>
 
-<pre><code>String s = "123";
+<div class="highlighter-rouge"><pre class="highlight"><code>String s = "123";
 </code></pre>
+</div>
 <p>or as a String instance-</p>
 
-<pre><code>String s = new String("123");
+<div class="highlighter-rouge"><pre class="highlight"><code>String s = new String("123");
 </code></pre>
+</div>
 <p>What are the differences between these two strings?</p>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span><span style="color:#080;font-weight:bold">package</span> <span style="color:#707;font-weight:bold">drills</span>;
-<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>
-<span class="line-numbers"> <a href="#n3" name="n3">3</a></span><span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Tester</span> {
-<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>
-<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>  <span style="color:#088;font-weight:bold">public</span> <span style="color:#088;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> main(<span style="color:#0a8;font-weight:bold">String</span><span style="color:#339;font-weight:bold">[]</span> args) {
-<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>
-<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>    <span style="color:#777">// Test differences between String v = new String(...)</span>
-<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>    <span style="color:#777">// and String v = &quot;...&quot;</span>
-<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>
-<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>    <span style="color:#777">// String literals are stored in a string pool- cached and reused.</span>
-<span class="line-numbers"><a href="#n11" name="n11">11</a></span>    <span style="color:#777">// String objects are stored in the heap as new objects.                </span>
-<span class="line-numbers"><a href="#n12" name="n12">12</a></span>
-<span class="line-numbers"><a href="#n13" name="n13">13</a></span>    <span style="color:#777">// Two string literals with the same characters are the same</span>
-<span class="line-numbers"><a href="#n14" name="n14">14</a></span>    <span style="color:#777">// in every possible way.</span>
-<span class="line-numbers"><a href="#n15" name="n15">15</a></span>    <span style="color:#0a8;font-weight:bold">String</span> s1 = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abcdef</span><span style="color:#710">&quot;</span></span>;
-<span class="line-numbers"><a href="#n16" name="n16">16</a></span>    <span style="color:#0a8;font-weight:bold">String</span> s2 = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abcdef</span><span style="color:#710">&quot;</span></span>;
-<span class="line-numbers"><a href="#n17" name="n17">17</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s1 == s2);
-<span class="line-numbers"><a href="#n18" name="n18">18</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s1.hashCode() == s2.hashCode());
-<span class="line-numbers"><a href="#n19" name="n19">19</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s1.equals(s2) &amp;&amp; s2.equals(s1));
-<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>
-<span class="line-numbers"><a href="#n21" name="n21">21</a></span>    <span style="color:#777">// Two string objects with the same characters are the same</span>
-<span class="line-numbers"><a href="#n22" name="n22">22</a></span>    <span style="color:#777">// only with hashCode() and equals()- but are different object</span>
-<span class="line-numbers"><a href="#n23" name="n23">23</a></span>    <span style="color:#777">// instances</span>
-<span class="line-numbers"><a href="#n24" name="n24">24</a></span>    <span style="color:#0a8;font-weight:bold">String</span> s3 = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">String</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abcdef</span><span style="color:#710">&quot;</span></span>);
-<span class="line-numbers"><a href="#n25" name="n25">25</a></span>    <span style="color:#0a8;font-weight:bold">String</span> s4 = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">String</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abcdef</span><span style="color:#710">&quot;</span></span>);
-<span class="line-numbers"><a href="#n26" name="n26">26</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s3 != s4);
-<span class="line-numbers"><a href="#n27" name="n27">27</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s3.hashCode() == s4.hashCode());
-<span class="line-numbers"><a href="#n28" name="n28">28</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s3.equals(s4) &amp;&amp; s4.equals(s3));
-<span class="line-numbers"><a href="#n29" name="n29">29</a></span>
-<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>    <span style="color:#777">// String literals and String objects are separate string</span>
-<span class="line-numbers"><a href="#n31" name="n31">31</a></span>    <span style="color:#777">// instances, but hashCodes are all equal</span>
-<span class="line-numbers"><a href="#n32" name="n32">32</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s1 != s3 &amp;amp;&amp;amp; s1 != s4);
-<span class="line-numbers"><a href="#n33" name="n33">33</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s1.hashCode() == s2.hashCode());
-<span class="line-numbers"><a href="#n34" name="n34">34</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s2.hashCode() == s3.hashCode());
-<span class="line-numbers"><a href="#n35" name="n35">35</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s3.hashCode() == s4.hashCode());
-<span class="line-numbers"><a href="#n36" name="n36">36</a></span>
-<span class="line-numbers"><a href="#n37" name="n37">37</a></span>    <span style="color:#777">// Though separate instances, contents are also still equal</span>
-<span class="line-numbers"><a href="#n38" name="n38">38</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s1.equals(s3) &amp;&amp; s1.equals(s4));
-<span class="line-numbers"><a href="#n39" name="n39">39</a></span>    <span style="color:#080;font-weight:bold">assert</span>(s2.equals(s3) &amp;&amp; s2.equals(s4));
-<span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span>
-<span class="line-numbers"><a href="#n41" name="n41">41</a></span>    <span style="color:#0a8;font-weight:bold">System</span>.out.println(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Tests completed</span><span style="color:#710">&quot;</span></span>);
-<span class="line-numbers"><a href="#n42" name="n42">42</a></span>  }
-<span class="line-numbers"><a href="#n43" name="n43">43</a></span>}
-<span class="line-numbers"><a href="#n44" name="n44">44</a></span>
-</pre></div>
-</div>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// Test differences between String v = new String(...)</span>
+    <span class="c1">// and String v = "..."</span>
+
+    <span class="c1">// String literals are stored in a string pool- cached and reused.</span>
+    <span class="c1">// String objects are stored in the heap as new objects.		</span>
+
+    <span class="c1">// Two string literals with the same characters are the same</span>
+    <span class="c1">// in every possible way.</span>
+    <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">"abcdef"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">"abcdef"</span><span class="o">;</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span><span class="o">);</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s1</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">==</span> <span class="n">s2</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s1</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s2</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s2</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s1</span><span class="o">));</span>
+
+    <span class="c1">// Two string objects with the same characters are the same</span>
+    <span class="c1">// only with hashCode() and equals()- but are different object</span>
+    <span class="c1">// instances</span>
+    <span class="n">String</span> <span class="n">s3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">);</span>
+    <span class="n">String</span> <span class="n">s4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">);</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s3</span> <span class="o">!=</span> <span class="n">s4</span><span class="o">);</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s3</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">==</span> <span class="n">s4</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s3</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s4</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s4</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s3</span><span class="o">));</span>
+
+    <span class="c1">// String literals and String objects are separate string</span>
+    <span class="c1">// instances, but hashCodes are all equal</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s1</span> <span class="o">!=</span> <span class="n">s3</span> <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">s1</span> <span class="o">!=</span> <span class="n">s4</span><span class="o">);</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s1</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">==</span> <span class="n">s2</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s2</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">==</span> <span class="n">s3</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s3</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">==</span> <span class="n">s4</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+
+    <span class="c1">// Though separate instances, contents are also still equal</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s1</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s3</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s1</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s4</span><span class="o">));</span>
+    <span class="k">assert</span><span class="o">(</span><span class="n">s2</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s3</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s2</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s4</span><span class="o">));</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Tests completed"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
 </div>
 <p>Summary:</p>
 
@@ -119,6 +119,8 @@
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     

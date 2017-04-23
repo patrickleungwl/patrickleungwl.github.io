@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
 
 </head>
-<body class="post-template">
+<body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
@@ -47,90 +47,86 @@
 
 <p>First, we’ll need a dummy memory resource-heavy object. We’ll use the same DumbWeight class, whose sole function is to allocate memory.</p>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span>using System.Collection.Generic;
-<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>
-<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>namespace Drills
-<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>{
-<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>  class DumbWeight
-<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>  {
-<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>    private List&lt;int&gt; _weights;
-<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>
-<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>    public DumbWeight(int weight) 
-<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>    {
-<span class="line-numbers"><a href="#n11" name="n11">11</a></span>      _weights = new List&lt;int&gt;(weight);
-<span class="line-numbers"><a href="#n12" name="n12">12</a></span>      for (int i=0; i&lt;weight; i++)
-<span class="line-numbers"><a href="#n13" name="n13">13</a></span>      {
-<span class="line-numbers"><a href="#n14" name="n14">14</a></span>        _weights.Add(i);
-<span class="line-numbers"><a href="#n15" name="n15">15</a></span>      }
-<span class="line-numbers"><a href="#n16" name="n16">16</a></span>    } 
-<span class="line-numbers"><a href="#n17" name="n17">17</a></span>  }
-<span class="line-numbers"><a href="#n18" name="n18">18</a></span>}
-</pre></div>
-</div>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Collection.Generic</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Drills</span>
+<span class="p">{</span>
+  <span class="k">class</span> <span class="nc">DumbWeight</span>
+  <span class="p">{</span>
+    <span class="k">private</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">_weights</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">DumbWeight</span><span class="p">(</span><span class="kt">int</span> <span class="n">weight</span><span class="p">)</span> 
+    <span class="p">{</span>
+      <span class="n">_weights</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="n">weight</span><span class="p">);</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">&lt;</span><span class="n">weight</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+      <span class="p">{</span>
+        <span class="n">_weights</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span> 
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 </div>
 
 <p>And once again, we run our test by 1) creating a thousand DumbWeight instances, 2) maintain a set of WeakReferences pointing to these DumbWeight instances, 3) free up any strong (direct) references to the DumbWeights, and 4) watch what happens over time.</p>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"> <a href="#n1" name="n1">1</a></span>using System;
-<span class="line-numbers"> <a href="#n2" name="n2">2</a></span>using System.Collections.Generic;
-<span class="line-numbers"> <a href="#n3" name="n3">3</a></span>
-<span class="line-numbers"> <a href="#n4" name="n4">4</a></span>namespace Drills
-<span class="line-numbers"> <a href="#n5" name="n5">5</a></span>{
-<span class="line-numbers"> <a href="#n6" name="n6">6</a></span>  class MyTest
-<span class="line-numbers"> <a href="#n7" name="n7">7</a></span>  {
-<span class="line-numbers"> <a href="#n8" name="n8">8</a></span>    //----------------------------------------------------------
-<span class="line-numbers"> <a href="#n9" name="n9">9</a></span>    // Checks how many objects referenced by WeakReferences are
-<span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>    // still alive- not yet collected by the GC.
-<span class="line-numbers"><a href="#n11" name="n11">11</a></span>    // 
-<span class="line-numbers"><a href="#n12" name="n12">12</a></span>    private void checkWeakReferences(List&lt;int&gt; ltWeakRefs)
-<span class="line-numbers"><a href="#n13" name="n13">13</a></span>    {
-<span class="line-numbers"><a href="#n14" name="n14">14</a></span>      int numCollecte=0;
-<span class="line-numbers"><a href="#n15" name="n15">15</a></span>      foreach(WeakReference w in ltWeakRefs)
-<span class="line-numbers"><a href="#n16" name="n16">16</a></span>      {
-<span class="line-numbers"><a href="#n17" name="n17">17</a></span>        if (!w.IsAlive)
-<span class="line-numbers"><a href="#n18" name="n18">18</a></span>          ++numCollected;
-<span class="line-numbers"><a href="#n19" name="n19">19</a></span>      }
-<span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>      Console.Out.WriteLine(&quot;checkWeakRefs: size={0}, numCollected={1}&quot;,
-<span class="line-numbers"><a href="#n21" name="n21">21</a></span>        ltWeakRefs.Count, numCollected);
-<span class="line-numbers"><a href="#n22" name="n22">22</a></span>    }
-<span class="line-numbers"><a href="#n23" name="n23">23</a></span>
-<span class="line-numbers"><a href="#n24" name="n24">24</a></span>    //----------------------------------------------------------
-<span class="line-numbers"><a href="#n25" name="n25">25</a></span>    // Create a thousand objects pointed to only by WeakReferences.
-<span class="line-numbers"><a href="#n26" name="n26">26</a></span>    // Every once in a while, scan the WeakReferences to see
-<span class="line-numbers"><a href="#n27" name="n27">27</a></span>    // if their referenced objects still exist or have been collected.
-<span class="line-numbers"><a href="#n28" name="n28">28</a></span>    //
-<span class="line-numbers"><a href="#n29" name="n29">29</a></span>    public void testWeakReferences()
-<span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>    {
-<span class="line-numbers"><a href="#n31" name="n31">31</a></span>      List&lt;int&gt; ltWeakRefs = new List&lt;int&gt;();
-<span class="line-numbers"><a href="#n32" name="n32">32</a></span>
-<span class="line-numbers"><a href="#n33" name="n33">33</a></span>      for (int i=0; i&lt;1000; i++ ) 
-<span class="line-numbers"><a href="#n34" name="n34">34</a></span>      {
-<span class="line-numbers"><a href="#n35" name="n35">35</a></span>        DumbWeight d = new DumbWeight(100000);
-<span class="line-numbers"><a href="#n36" name="n36">36</a></span>        WeakReference w = new WeakReference(d);
-<span class="line-numbers"><a href="#n37" name="n37">37</a></span>        ltWeakRefs.Add(w);
-<span class="line-numbers"><a href="#n38" name="n38">38</a></span>        d = null;
-<span class="line-numbers"><a href="#n39" name="n39">39</a></span>        if (s.Count % 100 == 0) 
-<span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span>          checkWeakReferences(ltWeakRefs);
-<span class="line-numbers"><a href="#n41" name="n41">41</a></span>      }
-<span class="line-numbers"><a href="#n42" name="n42">42</a></span>      Console.Out.WriteLine(&quot;Completed testWeakReferences&quot;);
-<span class="line-numbers"><a href="#n43" name="n43">43</a></span>    }
-<span class="line-numbers"><a href="#n44" name="n44">44</a></span>
-<span class="line-numbers"><a href="#n45" name="n45">45</a></span>    static void Main(string[] args)
-<span class="line-numbers"><a href="#n46" name="n46">46</a></span>    {
-<span class="line-numbers"><a href="#n47" name="n47">47</a></span>      MyTest t = new MyTest();
-<span class="line-numbers"><a href="#n48" name="n48">48</a></span>      t.testWeakReferences();
-<span class="line-numbers"><a href="#n49" name="n49">49</a></span>    }
-<span class="line-numbers"><strong><a href="#n50" name="n50">50</a></strong></span>  }
-<span class="line-numbers"><a href="#n51" name="n51">51</a></span>}
-</pre></div>
-</div>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Drills</span>
+<span class="p">{</span>
+  <span class="k">class</span> <span class="nc">MyTest</span>
+  <span class="p">{</span>
+    <span class="c1">//----------------------------------------------------------
+</span>    <span class="c1">// Checks how many objects referenced by WeakReferences are
+</span>    <span class="c1">// still alive- not yet collected by the GC.
+</span>    <span class="c1">// 
+</span>    <span class="k">private</span> <span class="k">void</span> <span class="nf">checkWeakReferences</span><span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">ltWeakRefs</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">numCollecte</span><span class="p">=</span><span class="m">0</span><span class="p">;</span>
+      <span class="k">foreach</span><span class="p">(</span><span class="n">WeakReference</span> <span class="n">w</span> <span class="k">in</span> <span class="n">ltWeakRefs</span><span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!</span><span class="n">w</span><span class="p">.</span><span class="n">IsAlive</span><span class="p">)</span>
+          <span class="p">++</span><span class="n">numCollected</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"checkWeakRefs: size={0}, numCollected={1}"</span><span class="p">,</span>
+        <span class="n">ltWeakRefs</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">numCollected</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//----------------------------------------------------------
+</span>    <span class="c1">// Create a thousand objects pointed to only by WeakReferences.
+</span>    <span class="c1">// Every once in a while, scan the WeakReferences to see
+</span>    <span class="c1">// if their referenced objects still exist or have been collected.
+</span>    <span class="c1">//
+</span>    <span class="k">public</span> <span class="k">void</span> <span class="nf">testWeakReferences</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">ltWeakRefs</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span><span class="p">&lt;</span><span class="m">1000</span><span class="p">;</span> <span class="n">i</span><span class="p">++</span> <span class="p">)</span> 
+      <span class="p">{</span>
+        <span class="n">DumbWeight</span> <span class="n">d</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DumbWeight</span><span class="p">(</span><span class="m">100000</span><span class="p">);</span>
+        <span class="n">WeakReference</span> <span class="n">w</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">WeakReference</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+        <span class="n">ltWeakRefs</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>
+        <span class="n">d</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Count</span> <span class="p">%</span> <span class="m">100</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> 
+          <span class="nf">checkWeakReferences</span><span class="p">(</span><span class="n">ltWeakRefs</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Completed testWeakReferences"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">MyTest</span> <span class="n">t</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MyTest</span><span class="p">();</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">testWeakReferences</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 </div>
 
 <p>The test app’s output looks like the following:</p>
 
-<pre><code>checkWeakRefs: size=100, numCollected=96
+<div class="highlighter-rouge"><pre class="highlight"><code>checkWeakRefs: size=100, numCollected=96
 checkWeakRefs: size=200, numCollected=192
 checkWeakRefs: size=300, numCollected=296
 checkWeakRefs: size=400, numCollected=392
@@ -141,6 +137,7 @@ checkWeakRefs: size=800, numCollected=792
 checkWeakRefs: size=900, numCollected=896
 checkWeakRefs: size=1000, numCollected=992
 </code></pre>
+</div>
 
 <p>The results show that C#’s WeakReference works just like Java’s. The only noticeable difference is that C# offers you a way to check the existence of the WeakReference’s refent using its IsAlive property. In Java, the way to check a WeakReference’s refent is by getting calling get() to get its contained object and checking for null. C#’s way seems more elegant although functionally there is no difference.</p>
 
@@ -153,6 +150,8 @@ checkWeakRefs: size=1000, numCollected=992
             <section class="archive">
                 <h5>Archive</h5>
                 <ul>
+                    
+                        
                     
                         
                     
