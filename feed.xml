@@ -5,9 +5,93 @@
     <description>A journal of tech issues in financial applications</description>
     <link>http://patrickleungwl.github.io//</link>
     <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Apr 2017 21:39:48 +0800</pubDate>
-    <lastBuildDate>Sun, 23 Apr 2017 21:39:48 +0800</lastBuildDate>
+    <pubDate>Sun, 14 May 2017 22:04:57 +0800</pubDate>
+    <lastBuildDate>Sun, 14 May 2017 22:04:57 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Technologies at a Glance</title>
+        <description>&lt;p&gt;With so many buzzwords coming up every year, it’s very easy to lose 
+track of what’s what.  A technologist, like any professional, must keep 
+reading to keep abreast of new developments.&lt;/p&gt;
+
+&lt;p&gt;As homework for myself, I’ve created an easy-to-read guide below 
+to organize each specific technology in its proper space.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Technology&lt;/th&gt;
+      &lt;th&gt;C#&lt;/th&gt;
+      &lt;th&gt;Java&lt;/th&gt;
+      &lt;th&gt;Python&lt;/th&gt;
+      &lt;th&gt;Javascript&lt;/th&gt;
+      &lt;th&gt;Php&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://martinfowler.com/articles/injection.html&quot;&gt;IOC &lt;br /&gt; Inversion of Control&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Spring &lt;br /&gt; &lt;a href=&quot;http://musingsofaprogrammingaddict.blogspot.sg/2012/11/dagger-new-java-dependency-injection.html&quot;&gt;Dagger&lt;/a&gt; &lt;br /&gt; &lt;a href=&quot;https://keyholesoftware.com/2012/01/30/dependency-injection-for-android-development-an-introduction&quot;&gt;Guice&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Unit Testing&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://jasmine.github.io&quot;&gt;Jasmine&lt;/a&gt; &lt;br /&gt; &lt;a href=&quot;https://mochajs.org/&quot;&gt;Mocha&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mocking&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/Moq/moq4/wiki/Quickstart&quot;&gt;Moq&lt;/a&gt; &lt;br /&gt; RhinoMocks&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ORM&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://docs.peewee-orm.com/en/latest&quot;&gt;Peewee&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WebApi&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://nancyfx.org/&quot;&gt;NancyFX&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://flask.pocoo.org/&quot;&gt;Flask&lt;/a&gt; &lt;br /&gt; Django&lt;/td&gt;
+      &lt;td&gt;Nodejs&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Profiling&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</description>
+        <pubDate>Sun, 14 May 2017 00:00:00 +0800</pubDate>
+        <link>http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>The Tao of Charlie Munger</title>
@@ -725,34 +809,6 @@ in &lt;a href=&quot;../../../../../../assets/pdf/20160502.5.ratio.pdf&quot;&gt;t
         
         
         <category>musings</category>
-        
-      </item>
-    
-      <item>
-        <title>Singapore Math Primary 5 Five Ratio Question</title>
-        <description>&lt;p&gt;As my kid has been progressing through the Singapore school system, I’ve never been seriously challenged
-by primary school math until now.  I was embarrassingly stomped by the following question.&lt;br /&gt;
-It took me some time to figure it out.  I’ve posted the question and answer for everyone’s benefit.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Mr Lee had some red and white paint.  1/3 of the paint was red.  He used 
-1/2 of the red paint and 5/6 of the white paint.  In the end, he had
-a total of 10 liters of paint left.  How much paint did he have at first?
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;This question gave me a real headache until I found a way out.  I’ve generated the solution 
-in &lt;a href=&quot;../../../../../../assets/pdf/20160501.1.ratio.pdf&quot;&gt;this pdf here&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 01 May 2016 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/</guid>
-        
-        <category>math</category>
-        
-        
-        <category>math</category>
-        
-        <category>singapore</category>
         
       </item>
     
