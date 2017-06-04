@@ -5,9 +5,92 @@
     <description>A journal of tech issues in financial applications</description>
     <link>http://patrickleungwl.github.io//</link>
     <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 May 2017 22:04:57 +0800</pubDate>
-    <lastBuildDate>Sun, 14 May 2017 22:04:57 +0800</lastBuildDate>
+    <pubDate>Sat, 03 Jun 2017 17:46:34 +0800</pubDate>
+    <lastBuildDate>Sat, 03 Jun 2017 17:46:34 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Fooled By Randomness</title>
+        <description>&lt;p&gt;Nassim Tabeb’s “Fooled By Randomness” is such a great book, I thought
+I’d save some great passages here.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;On attributing brilliance to success:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A few years ago, when I told one A, a then Master-of-the-Universe type,
+that track records were less relevant than he thought, he found the remark 
+so offensive that he violently flung his cigarette lighter in my direction.
+The episode taught me a lot.  Remember that nobody accepts randomness in 
+his own success, only failure.  His ego was pumped up as he was heading up
+a department of &quot;great traders&quot; who were then temporarily making a fortune
+in the markets and attributing the idea to the sounding of their business,
+their insights, or their intelligence.  They subsequently blew up during
+the harsh New York winter of 1994 (it was the bond market crash that followed
+the surprise interest rate hike by Alan Greenspan).  The interesting part 
+is that several years later I can hardly find any of them still trading 
+(ergodicity).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;On cycles:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Recall that some economists call the rare event a &quot;peso problem.&quot;  The
+designation peso problem does not appear to be undeservedly stereotypical.
+Things have not gotten better since the early 1980s with the currency of
+the United States&#39; southern neighbor.  Long periods of stability draw hordes
+of bank currency traders and hedge fund operators to the calm waters of
+the Mexican peso; they enjoy owning the currency because of the high interest
+rate it commands.  Then they &quot;unexpectedly&quot; blow up, lose money for 
+investors, lose their jobs, and switch careers.  Then a new period of 
+stability sets in.  New currency traders come in with no memory of the bad
+event.  They are drawn to the Mexican peso and the story repeats itself.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;p&gt;On asymmetry:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I was once asked in one of those meetings to express my views on the stock 
+market.  I state, not without a modicum of pomp, that I believed that the 
+market would go slightly up over the next week with a high probability. 
+How high?  &quot;About 70%&quot;.  Clearly, that was a very strong opinion.  But then
+someone interjected.  &quot;But Nassim, you just boasted being short a very large
+quantity of SP500 futures, making a bet that the market would go down. 
+What made you change your mind?&quot; &quot;I did not change my mind!  I have a lot
+of faith in my bet!  As a matter of fact I now feel like selling even more!&quot; 
+The other employees in the room seemed utterly confused.  &quot;Are you bullish
+or are you bearish?&quot;  I was asked by the strategist.  I replied that I could
+not understand the words bullish and bearish outside of their purely
+zoological consideration.... my opinion was that the market was more likely
+to go up (&quot;I would be bullish&quot;), but that it was preferably to short it 
+(&quot;I would be bearish&quot;), because, in the event of its going down, it could go
+down a lot.  Suddently, the few traders in the room understood my opinion 
+and started voicing similar opinions.  And I was not forced to come back to
+the following discussion. 
+
+Let us assume that the reader shared my opinion, that the market over the 
+next week had a 70% probability of going up and 30% probability of going down.
+However, let us say that it would go up by 1% on average, while it could go
+down by an average of 10%.  What would the reader do?  Is the reader
+bullish or bearish?
+
+Accordingly, bullish or bearish are terms used by people who do not engage
+in practicing uncertainty, like the television commentators, or those who have
+no experience in handling risk. 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 03 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>life</category>
+        
+      </item>
     
       <item>
         <title>Technologies at a Glance</title>
@@ -50,7 +133,7 @@ to organize each specific technology in its proper space.&lt;/p&gt;
       &lt;td&gt;Mocking&lt;/td&gt;
       &lt;td&gt;&lt;a href=&quot;https://github.com/Moq/moq4/wiki/Quickstart&quot;&gt;Moq&lt;/a&gt; &lt;br /&gt; RhinoMocks&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://docs.python.org/3/library/unittest.mock.html&quot;&gt;unittest.mock&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
@@ -765,45 +848,6 @@ bin ladin- feel like american
         <pubDate>Sun, 11 Sep 2016 00:00:00 +0800</pubDate>
         <link>http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/</link>
         <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/</guid>
-        
-        <category>history</category>
-        
-        
-        <category>musings</category>
-        
-      </item>
-    
-      <item>
-        <title>Singapore Math Primary 5 Five Ratio Question 2</title>
-        <description>&lt;p&gt;Second challenge question from my kid.  Again it took me some time to work out the problem. 
-Singapore math questions are rather more like puzzles than math questions.  What practical 
-value do figuring out who has how many pencils serve in real life?&lt;/p&gt;
-
-&lt;p&gt;To solve these questions, one needs some
-basic intelligence and an ample supply of heart- also known as perservence- or grit.
-Without grit, a weak-minded individual would just give up.  And that’s exactly what
-the Singapore government wants.  Singapore math serves nothing more than to separate 
-the strong from the weak.  It is a simply a basic sorting tool for this meritocractic society.&lt;/p&gt;
-
-&lt;p&gt;My kid asked me how can I do my job if I get stomped by a primary school question?&lt;br /&gt;
-First, the Singapore math question to me is more of a logic puzzle than a math question. 
-And second, no one knows everything.  However, the key point is that we do not stay 
-stomped.  We use everything in our resources to solve the problem.  We attack the 
-problem from different angles.  Sooner or later until ceaseless attacks, the solution
-reveals itself.  We are only defeated if we give up.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Kenneth had a total of 576 black and red pens in the ratio 9:7.  After he had given
-away an equal number of each type of pens, the number of black and red pens left was
-in the ratio 7:4.  How many pens did he give away altogether?
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;I’ve generated the solution 
-in &lt;a href=&quot;../../../../../../assets/pdf/20160502.5.ratio.pdf&quot;&gt;this pdf here&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 02 May 2016 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//musings/2016/05/02/sg-math-primary-five-ratio/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//musings/2016/05/02/sg-math-primary-five-ratio/</guid>
         
         <category>history</category>
         
