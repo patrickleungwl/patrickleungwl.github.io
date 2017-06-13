@@ -31,49 +31,92 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">The Management Masterclass</h1>
+            <h1 class="post-title">Setting Up Vim For Python</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2016-10-08">08 Oct 2016</time>
+                <time class="post-date" datetime="2017-06-09">09 Jun 2017</time>
                 
-                    on management
+                    on tech
                 
             </section>
         </header>
 
         <section class="post-content">
-            <p>From the book “The Management Masterclass” by Emma De Vita-</p>
+            <p>While I’m enthusiastic with using Vim, I’m afraid that my many years of using
+Visual Studio’s Intellisense has spoiled me.  I now require the same method 
+popups now on Vim when coding Python in Linux.  But how to do this?</p>
 
-<ul>
-  <li>Authenticity
-    <ul>
-      <li>To be authentic is to be real, genuine, trustworthy. An authentic person
-is true to his or her own character.</li>
-      <li>Sell your differences.</li>
-      <li>Remember your roots.</li>
-      <li>Break the mould.</li>
-    </ul>
-  </li>
-  <li>Communicator
-    <ul>
-      <li>Make time and take time.</li>
-      <li>Clear you rmind.</li>
-      <li>Give your undivided attention.</li>
-      <li>Don’t interrupt.</li>
-      <li>Ask what they mean.</li>
-      <li>Check body language.</li>
-      <li>Keep your opinions to yourself.</li>
-      <li>Check what they really feel.</li>
-      <li>Hear what’s not being said.</li>
-      <li>Play back what you’ve heard.</li>
-    </ul>
-  </li>
-  <li>Getting stuff done
-    <ul>
-      <li>Decide on just a few things to get done.</li>
-      <li>Slow down- give each task the time it deserves.</li>
-    </ul>
-  </li>
-</ul>
+<p>First I backup my original .vimrc:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>" Automatic syntax highlighting
+syntax on
+
+" Stop vim from creating automatic backups
+set noswapfile
+set nobackup
+set nowb
+
+" Reload files modified outside of vim
+set autoread
+
+" Make tabs 4 spaces wide 
+set tabstop=4
+set shiftwidth=4
+
+" Replace tabs with spaces
+set expandtab
+
+" If already indented, next line should be indented
+set autoindent
+
+" Show line numbers
+set number
+
+" Highlight col 81 to keep under 80 cols
+set colorcolumn=80
+
+" Set screen to 85x40
+set lines=45
+set columns=85
+
+" Set editing to nowrap
+set nowrap
+
+set nocompatible
+colorscheme oceandeep 
+set guifont=Inconsolata\ 15
+set guicursor=a:blinkon0
+
+set foldmethod=indent
+set foldlevel=99
+filetype on
+filetype indent plugin on
+
+" Set split window navigation shortcuts 
+map &lt;c-j&gt; &lt;c-w&gt;j
+map &lt;c-k&gt; &lt;c-w&gt;k
+map &lt;c-l&gt; &lt;c-w&gt;l
+map &lt;c-h&gt; &lt;c-w&gt;h
+
+set guioptions-=T "get rid of toolbar 
+set guioptions-=m "get rid of men
+
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+</code></pre>
+</div>
+
+<p>Next I followed instructions for <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>.
+Sadly I found the page instructions incomprehensible.  I next tried 
+<a href="https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/">this page</a>
+and similarly failed to install YouCompleteMe using Vundle. 
+It’s mostly there are some external dependencies that are blocked behind
+China’s Great Firewall.  I’ll retry when I’m outside of the Great Firewall.</p>
 
 
         </section>
@@ -90,44 +133,28 @@ is true to his or her own character.</li>
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                             
                             
 
                     
-                        <li><span>18 Sep 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/">Get through hard</a>
+                        <li><span>03 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a>
                         </li>
                     
-                        <li><span>11 Sep 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/">Fifteen Years On</a>
+                        <li><span>14 May 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/">Technologies at a Glance</a>
                         </li>
                     
-                        <li><span>02 May 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/05/02/sg-math-primary-five-ratio/">Singapore Math Primary 5 Five Ratio Question 2</a>
+                        <li><span>23 Apr 2017</span>
+                          <a href="http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/">The Tao of Charlie Munger</a>
                         </li>
                     
-                        <li><span>01 May 2016</span>
-                          <a href="http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/">Singapore Math Primary 5 Five Ratio Question</a>
+                        <li><span>21 Mar 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/python/numpy/2017/03/21/timing_numpy/">Timing NumPy</a>
                         </li>
                     
-                        <li><span>07 Apr 2016</span>
-                          <a href="http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/">Getting Things Done</a>
+                        <li><span>30 Dec 2016</span>
+                          <a href="http://patrickleungwl.github.io//tech/2016/12/30/revisting-generic-collections/">Revisiting Generic Collections</a>
                         </li>
                     
                 </ul>
@@ -141,15 +168,15 @@ is true to his or her own character.</li>
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=The Management Masterclass&amp;url=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=Setting Up Vim For Python&amp;url=/tech/2017/06/09/setting-up-vim-for-python/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2017/06/09/setting-up-vim-for-python/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2017/06/09/setting-up-vim-for-python/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>

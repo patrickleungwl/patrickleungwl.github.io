@@ -31,49 +31,67 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">The Management Masterclass</h1>
+            <h1 class="post-title">Using Conda, NumPy</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2016-10-08">08 Oct 2016</time>
+                <time class="post-date" datetime="2017-06-10">10 Jun 2017</time>
                 
-                    on management
+                    on python
                 
             </section>
         </header>
 
         <section class="post-content">
-            <p>From the book “The Management Masterclass” by Emma De Vita-</p>
+            <p>Notes on using Conda, NumPy</p>
 
-<ul>
-  <li>Authenticity
-    <ul>
-      <li>To be authentic is to be real, genuine, trustworthy. An authentic person
-is true to his or her own character.</li>
-      <li>Sell your differences.</li>
-      <li>Remember your roots.</li>
-      <li>Break the mould.</li>
-    </ul>
-  </li>
-  <li>Communicator
-    <ul>
-      <li>Make time and take time.</li>
-      <li>Clear you rmind.</li>
-      <li>Give your undivided attention.</li>
-      <li>Don’t interrupt.</li>
-      <li>Ask what they mean.</li>
-      <li>Check body language.</li>
-      <li>Keep your opinions to yourself.</li>
-      <li>Check what they really feel.</li>
-      <li>Hear what’s not being said.</li>
-      <li>Play back what you’ve heard.</li>
-    </ul>
-  </li>
-  <li>Getting stuff done
-    <ul>
-      <li>Decide on just a few things to get done.</li>
-      <li>Slow down- give each task the time it deserves.</li>
-    </ul>
-  </li>
-</ul>
+<h2 id="conda">Conda</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Setup Python 3.5 env</td>
+      <td>conda create -n py35 python=3.5 anaconda</td>
+    </tr>
+    <tr>
+      <td>Setup Python 2.7 env</td>
+      <td>conda create -n py27 python=2.7 anaconda</td>
+    </tr>
+    <tr>
+      <td>Switch to Python 3.5 env</td>
+      <td>source activate py35</td>
+    </tr>
+    <tr>
+      <td>Check Python version</td>
+      <td>python -V</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="numpy">Numpy</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Import numpy</td>
+      <td>import numpy as np</td>
+    </tr>
+    <tr>
+      <td>Create a new array</td>
+      <td>na = array([1,2,3,4])</td>
+    </tr>
+    <tr>
+      <td>Use any numpy function</td>
+      <td>na.min()</td>
+    </tr>
+    <tr>
+      <td>Load data into array</td>
+      <td>na = np.loadtxt(‘data.txt’)</td>
+    </tr>
+    <tr>
+      <td>Save array to file</td>
+      <td>np.savetxt(‘data.txt’, na)</td>
+    </tr>
+  </tbody>
+</table>
 
 
         </section>
@@ -88,46 +106,28 @@ is true to his or her own character.</li>
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                             
                             
 
                     
-                        <li><span>18 Sep 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/">Get through hard</a>
+                        <li><span>09 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/06/09/setting-up-vim-for-python/">Setting Up Vim For Python</a>
                         </li>
                     
-                        <li><span>11 Sep 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/">Fifteen Years On</a>
+                        <li><span>03 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a>
                         </li>
                     
-                        <li><span>02 May 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/05/02/sg-math-primary-five-ratio/">Singapore Math Primary 5 Five Ratio Question 2</a>
+                        <li><span>14 May 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/">Technologies at a Glance</a>
                         </li>
                     
-                        <li><span>01 May 2016</span>
-                          <a href="http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/">Singapore Math Primary 5 Five Ratio Question</a>
+                        <li><span>23 Apr 2017</span>
+                          <a href="http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/">The Tao of Charlie Munger</a>
                         </li>
                     
-                        <li><span>07 Apr 2016</span>
-                          <a href="http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/">Getting Things Done</a>
+                        <li><span>21 Mar 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/python/numpy/2017/03/21/timing_numpy/">Timing NumPy</a>
                         </li>
                     
                 </ul>
@@ -141,15 +141,15 @@ is true to his or her own character.</li>
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=The Management Masterclass&amp;url=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=Using Conda, NumPy&amp;url=/python/2017/06/10/using-conda/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/python/2017/06/10/using-conda/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/python/2017/06/10/using-conda/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>

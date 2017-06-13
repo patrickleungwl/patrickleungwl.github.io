@@ -29,7 +29,8 @@
             <h1 class="page-title">Finance Tech Wanderings</h1>
             <h2 class="page-description">
                  A journal of tech issues in financial applications. <br>
-                 <a href='about/index.html'> About me </a> 
+                 <a href='about/index.html'>About me</a> &nbsp&nbsp&nbsp
+                 <a href='bookmarks/index.html'>Bookmarks</a> 
             </h2>
         </div>
     </div>
@@ -49,6 +50,158 @@
      
 </nav>
     </div>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/python/2017/06/11/basic-matplotlib/">Basic Matplotlib Plot</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Sample Matplotlib usage:
+
+jupyter qtconsole
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.figure()                            # Create a new figure window
+xlist = np.linspace(-2.0, 1.0, 100)     # Create 1-D arrays for x,y dimensions
+ylist = np.linspace(-1.0, 2.0, 100)
+X,Y = np.meshgrid(xlist, ylist)         # Create 2-D grid xlist,ylist values
+Z = np.sqrt(X**2 + Y**2)                # Compute function values on the grid
+
+plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = ’k’, linestyles = ’solid’)
+plt.show()
+
+
+
+
+
+
+TestJupyter
+
+
+                <!--
+                <p>Sample Matplotlib usage:</p>
+
+ <a class="read-more" href="/python/2017/06/11/basic-matplotlib/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on python 
+                
+                <time class="post-date" datetime="2017-06-11">
+                    11 Jun 2017
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/python/2017/06/10/using-conda/">Using Conda, NumPy</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Notes on using Conda, NumPy
+
+Conda
+
+
+  
+    
+      Setup Python 3.5 env
+      conda create -n py35 python=3.5 anaconda
+    
+    
+      Setup Python 2.7 env
+      conda create -n py27 python=2.7 anaconda
+    
+    
+      Switch to Python 3.5 env
+      source activate py35
+    
+    
+      Check Python version
+      python -V
+    
+  
+
+
+Numpy
+
+
+  
+    
+      Import numpy
+      import numpy as np
+    
+    
+      Create a new array
+      na = array([1,2,3,4])
+    
+    
+      Use any numpy function
+      na.min()
+    
+    
+      Load data into array
+      na = np.loadtxt(‘data.txt’)
+    
+    
+      Save array to file
+      np.savetxt(‘data.txt’, na)
+    
+  
+
+
+
+                <!--
+                <p>Notes on using Conda, NumPy</p>
+
+ <a class="read-more" href="/python/2017/06/10/using-conda/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on python 
+                
+                <time class="post-date" datetime="2017-06-10">
+                    10 Jun 2017
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2017/06/09/setting-up-vim-for-python/">Setting Up Vim For Python</a></h2>
+            </header>
+            <section class="post-excerpt">
+                While I’m enthusiastic with using Vim, I’m afraid that my many years of using Visual Studio’s Intellisense has spoiled me. I now require the same method popups now on Vim when coding Python in Linux. But how to do this? First I backup my original .vimrc: " Automatic syntax highlighting syntax on " Stop vim from creating automatic backups set noswapfile set nobackup set nowb " Reload files modified outside of vim set autoread "...
+                <!--
+                <p>While I’m enthusiastic with using Vim, I’m afraid that my many years of using
+Visual Studio’s Intellisense has spoiled me.  I now require the same method 
+popups now on Vim when coding Python in Linux.  But how to do this?</p>
+
+ <a class="read-more" href="/tech/2017/06/09/setting-up-vim-for-python/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2017-06-09">
+                    09 Jun 2017
+                </time> 
+            </footer>
+        </article>
 
     
 
@@ -174,96 +327,6 @@ built-in lists- which would really be a list of pointers to the real location of
                 
                 <time class="post-date" datetime="2017-03-21">
                     21 Mar 2017
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2016/12/30/revisting-generic-collections/">Revisiting Generic Collections</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Earlier I asked if generic collections were faster than non-generic collections? I cooked up a quick test to confirm my suspicions that non-generics were slower because of the work it needs to box primitives and then add the reference to the collection- whereas for generic collections, it just needed to add the primitive to its own memory allocation. But then a colleague asked- how about performance for collections of objects? Wouldn’t a generic collection do...
-                <!--
-                <p>Earlier I asked if generic collections were faster than non-generic 
-collections?  I cooked up a quick test to confirm my suspicions that
-non-generics were slower because of the work it needs to box primitives
-and then add the reference to the collection- whereas for generic collections,
-it just needed to add the primitive to its own memory allocation.</p>
-
- <a class="read-more" href="/tech/2016/12/30/revisting-generic-collections/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2016-12-30">
-                    30 Dec 2016
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/finance/2016/12/09/riskfree-profit-strategies/">Risk-free Profit Strategies</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Working in the shadow of traders, I overhear some of their money making strategies. So yesterday at the Washington Zoo, I spotted a perfect money making opportunity reminiscent of traders’ strategies. There was a souvenir penny-engraving machine that presses souvenir pennies for 50 cents plus the one penny. Next to it was a machine that makes change for one and five dollar bills. Given a dollar bill, the machine returns 4 quarters and 2 pennies....
-                <!--
-                <p>Working in the shadow of traders, I overhear some of their money making strategies. 
-So yesterday at the Washington Zoo, I spotted a perfect money making opportunity 
-reminiscent of traders’ strategies.  There was a souvenir penny-engraving machine 
-that presses souvenir pennies for 50 cents plus the one penny.  Next to it was a 
-machine that makes change for one and five dollar bills.   Given a dollar bill, 
-the machine returns 4 quarters and 2 pennies.  Given a 5 dollar bill, the machine 
-returns 20 quarters and 10 pennies.</p>
-
- <a class="read-more" href="/finance/2016/12/09/riskfree-profit-strategies/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on finance 
-                
-                <time class="post-date" datetime="2016-12-09">
-                    09 Dec 2016
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/management/2016/10/09/the-spirit-of-kaizen/">The Spirit of Kaizen</a></h2>
-            </header>
-            <section class="post-excerpt">
-                From the book “The Spirit of Kaizen” by Robert Maurer- The key idea from this book on Kaizen is that people are scared by big changes. Instead of making big changes to fix big problems, make small changes instead. First, small changes are quick and easy to implement and do not meet resistance by scaring people. Second, small changes over time is similar to compound interest- the small changes accumulate giant effects. When making a...
-                <!--
-                <p>From the book “The Spirit of Kaizen” by Robert Maurer-  The key idea from
-this book on Kaizen is that people are scared by big changes.  Instead of
-making big changes to fix big problems, make small changes instead.  First,
-small changes are quick and easy to implement and do not meet resistance by
-scaring people.  Second, small changes over time is similar to compound
-interest- the small changes accumulate giant effects.</p>
-
- <a class="read-more" href="/management/2016/10/09/the-spirit-of-kaizen/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on management 
-                
-                <time class="post-date" datetime="2016-10-09">
-                    09 Oct 2016
                 </time> 
             </footer>
         </article>

@@ -31,49 +31,38 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">The Management Masterclass</h1>
+            <h1 class="post-title">Basic Matplotlib Plot</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2016-10-08">08 Oct 2016</time>
+                <time class="post-date" datetime="2017-06-11">11 Jun 2017</time>
                 
-                    on management
+                    on python
                 
             </section>
         </header>
 
         <section class="post-content">
-            <p>From the book “The Management Masterclass” by Emma De Vita-</p>
+            <p>Sample Matplotlib usage:</p>
 
-<ul>
-  <li>Authenticity
-    <ul>
-      <li>To be authentic is to be real, genuine, trustworthy. An authentic person
-is true to his or her own character.</li>
-      <li>Sell your differences.</li>
-      <li>Remember your roots.</li>
-      <li>Break the mould.</li>
-    </ul>
-  </li>
-  <li>Communicator
-    <ul>
-      <li>Make time and take time.</li>
-      <li>Clear you rmind.</li>
-      <li>Give your undivided attention.</li>
-      <li>Don’t interrupt.</li>
-      <li>Ask what they mean.</li>
-      <li>Check body language.</li>
-      <li>Keep your opinions to yourself.</li>
-      <li>Check what they really feel.</li>
-      <li>Hear what’s not being said.</li>
-      <li>Play back what you’ve heard.</li>
-    </ul>
-  </li>
-  <li>Getting stuff done
-    <ul>
-      <li>Decide on just a few things to get done.</li>
-      <li>Slow down- give each task the time it deserves.</li>
-    </ul>
-  </li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>jupyter qtconsole
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.figure()                            # Create a new figure window
+xlist = np.linspace(-2.0, 1.0, 100)     # Create 1-D arrays for x,y dimensions
+ylist = np.linspace(-1.0, 2.0, 100)
+X,Y = np.meshgrid(xlist, ylist)         # Create 2-D grid xlist,ylist values
+Z = np.sqrt(X**2 + Y**2)                # Compute function values on the grid
+
+plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = ’k’, linestyles = ’solid’)
+plt.show()
+
+</code></pre>
+</div>
+
+<p><img src="../../../../../assets/images/201706/matplotlib_plot1.png" alt="Sample plot" /></p>
+
+<p><a href="../../../../../assets/ipynb/201706/testjupyter.ipynb">TestJupyter</a></p>
 
 
         </section>
@@ -86,48 +75,28 @@ is true to his or her own character.</li>
                 <ul>
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                             
                             
 
                     
-                        <li><span>18 Sep 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/09/18/get-through-hard/">Get through hard</a>
+                        <li><span>10 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//python/2017/06/10/using-conda/">Using Conda, NumPy</a>
                         </li>
                     
-                        <li><span>11 Sep 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/09/11/fifteen-years-on/">Fifteen Years On</a>
+                        <li><span>09 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/06/09/setting-up-vim-for-python/">Setting Up Vim For Python</a>
                         </li>
                     
-                        <li><span>02 May 2016</span>
-                          <a href="http://patrickleungwl.github.io//musings/2016/05/02/sg-math-primary-five-ratio/">Singapore Math Primary 5 Five Ratio Question 2</a>
+                        <li><span>03 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a>
                         </li>
                     
-                        <li><span>01 May 2016</span>
-                          <a href="http://patrickleungwl.github.io//math/singapore/2016/05/01/sg-math-primary-five-ratio/">Singapore Math Primary 5 Five Ratio Question</a>
+                        <li><span>14 May 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/">Technologies at a Glance</a>
                         </li>
                     
-                        <li><span>07 Apr 2016</span>
-                          <a href="http://patrickleungwl.github.io//tech/2016/04/07/getting-things-done/">Getting Things Done</a>
+                        <li><span>23 Apr 2017</span>
+                          <a href="http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/">The Tao of Charlie Munger</a>
                         </li>
                     
                 </ul>
@@ -141,15 +110,15 @@ is true to his or her own character.</li>
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=The Management Masterclass&amp;url=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=Basic Matplotlib Plot&amp;url=/python/2017/06/11/basic-matplotlib/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/python/2017/06/11/basic-matplotlib/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/management/2016/10/08/the-management-masterclass/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/python/2017/06/11/basic-matplotlib/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
