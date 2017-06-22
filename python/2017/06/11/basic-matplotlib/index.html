@@ -41,7 +41,83 @@
         </header>
 
         <section class="post-content">
-            <p>Sample Matplotlib usage:</p>
+            <p>Most data analysts just want to generate a plot quickly with minimal work.<br />
+However Matplotlib’s api has a slight learning curve- and it requires some 
+investment to pick up on its class hierachies and its terminologies. 
+I’ve jotted down some Matplotlib gems here so others users can have less 
+of a learning curve.</p>
+
+<p>One key point to note is that regardless of what commands used to generate plots, 
+they all devolve into one low level plot method- which is pyplot.subplots(). 
+Exploting this method well is the key to build great looking charts.</p>
+
+<p>The <a href="http://matplotlib.org/api/axes_api.html">Axes</a> class is the main class 
+to work with for customising the plot type and the x and y axes.  For 
+working with all other plot elements, we use the 
+<a href="http://matplotlib.org/api/figure_api.html">Figure</a> class.  We acquire 
+pointers (or references) to both the Figure and Axes whenever we call the 
+pyplot.subplot() method.</p>
+
+<p>Sample Matplotlib command usage:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Intent</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Plots</td>
+      <td>Create 2x1 subplots</td>
+      <td>fg, ax = plt.subplots(2, 1, <br />sharex=True)</td>
+    </tr>
+    <tr>
+      <td>Spines</td>
+      <td>Make top spine invisible</td>
+      <td>ax.spines[‘top’].set_visible(False)</td>
+    </tr>
+    <tr>
+      <td>X Ticks</td>
+      <td>Set xtick color, label <br />size, and direction</td>
+      <td>ax.tick_params(axis=’y’, <br />color=’#333333’, labelsize=’small’, direction=’in’)</td>
+    </tr>
+    <tr>
+      <td>Styles</td>
+      <td>Use preset plot styles</td>
+      <td>style.style.use(‘ggplot’)</td>
+    </tr>
+    <tr>
+      <td>Styles</td>
+      <td>See available styles</td>
+      <td>print(plt.style.available)</td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td><a href="http://matplotlib.org/api/text_api.html">Set text at x,y data points</a></td>
+      <td>ax.text(dates[2], prices[2], ‘Example’)</td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>Text with arrow</td>
+      <td>ax.annotate(‘Dividend’,(dates[2],prices[2]), <br />xytext=(0.8, 0.9), <br />textcoords=’axes fraction’, <br />arrowprops = dict(facecolor=’grey’,color=’grey’))</td>
+    </tr>
+    <tr>
+      <td>Subplots</td>
+      <td>Create subplots</td>
+      <td>ax = plt.subplot2grid((gx,gy), (x,y), colspan=c)</td>
+    </tr>
+    <tr>
+      <td>Subplots</td>
+      <td>Create subplots</td>
+      <td>ax = plt.subplot2grid((gx,gy), (x,y), rowspan=r)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Sample Matplotlib script:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>jupyter qtconsole
 
@@ -61,8 +137,6 @@ plt.show()
 </div>
 
 <p><img src="../../../../../assets/images/201706/matplotlib_plot1.png" alt="Sample plot" /></p>
-
-<p><a href="../../../../../assets/ipynb/201706/testjupyter.ipynb">TestJupyter</a></p>
 
 
         </section>
@@ -87,16 +161,16 @@ plt.show()
                           <a href="http://patrickleungwl.github.io//tech/2017/06/09/setting-up-vim-for-python/">Setting Up Vim For Python</a>
                         </li>
                     
+                        <li><span>08 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//python/2017/06/08/python_import/">Imports in Python</a>
+                        </li>
+                    
                         <li><span>03 Jun 2017</span>
                           <a href="http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a>
                         </li>
                     
                         <li><span>14 May 2017</span>
                           <a href="http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/">Technologies at a Glance</a>
-                        </li>
-                    
-                        <li><span>23 Apr 2017</span>
-                          <a href="http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/">The Tao of Charlie Munger</a>
                         </li>
                     
                 </ul>

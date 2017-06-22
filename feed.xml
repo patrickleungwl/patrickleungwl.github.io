@@ -5,13 +5,89 @@
     <description>A journal of tech issues in financial applications</description>
     <link>http://patrickleungwl.github.io//</link>
     <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Jun 2017 14:06:29 +0800</pubDate>
-    <lastBuildDate>Tue, 13 Jun 2017 14:06:29 +0800</lastBuildDate>
+    <pubDate>Wed, 21 Jun 2017 01:14:43 +0800</pubDate>
+    <lastBuildDate>Wed, 21 Jun 2017 01:14:43 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Basic Matplotlib Plot</title>
-        <description>&lt;p&gt;Sample Matplotlib usage:&lt;/p&gt;
+        <description>&lt;p&gt;Most data analysts just want to generate a plot quickly with minimal work.&lt;br /&gt;
+However Matplotlib’s api has a slight learning curve- and it requires some 
+investment to pick up on its class hierachies and its terminologies. 
+I’ve jotted down some Matplotlib gems here so others users can have less 
+of a learning curve.&lt;/p&gt;
+
+&lt;p&gt;One key point to note is that regardless of what commands used to generate plots, 
+they all devolve into one low level plot method- which is pyplot.subplots(). 
+Exploting this method well is the key to build great looking charts.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://matplotlib.org/api/axes_api.html&quot;&gt;Axes&lt;/a&gt; class is the main class 
+to work with for customising the plot type and the x and y axes.  For 
+working with all other plot elements, we use the 
+&lt;a href=&quot;http://matplotlib.org/api/figure_api.html&quot;&gt;Figure&lt;/a&gt; class.  We acquire 
+pointers (or references) to both the Figure and Axes whenever we call the 
+pyplot.subplot() method.&lt;/p&gt;
+
+&lt;p&gt;Sample Matplotlib command usage:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Topic&lt;/th&gt;
+      &lt;th&gt;Intent&lt;/th&gt;
+      &lt;th&gt;Usage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Plots&lt;/td&gt;
+      &lt;td&gt;Create 2x1 subplots&lt;/td&gt;
+      &lt;td&gt;fg, ax = plt.subplots(2, 1, &lt;br /&gt;sharex=True)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spines&lt;/td&gt;
+      &lt;td&gt;Make top spine invisible&lt;/td&gt;
+      &lt;td&gt;ax.spines[‘top’].set_visible(False)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;X Ticks&lt;/td&gt;
+      &lt;td&gt;Set xtick color, label &lt;br /&gt;size, and direction&lt;/td&gt;
+      &lt;td&gt;ax.tick_params(axis=’y’, &lt;br /&gt;color=’#333333’, labelsize=’small’, direction=’in’)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Styles&lt;/td&gt;
+      &lt;td&gt;Use preset plot styles&lt;/td&gt;
+      &lt;td&gt;style.style.use(‘ggplot’)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Styles&lt;/td&gt;
+      &lt;td&gt;See available styles&lt;/td&gt;
+      &lt;td&gt;print(plt.style.available)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Text&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://matplotlib.org/api/text_api.html&quot;&gt;Set text at x,y data points&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;ax.text(dates[2], prices[2], ‘Example’)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Text&lt;/td&gt;
+      &lt;td&gt;Text with arrow&lt;/td&gt;
+      &lt;td&gt;ax.annotate(‘Dividend’,(dates[2],prices[2]), &lt;br /&gt;xytext=(0.8, 0.9), &lt;br /&gt;textcoords=’axes fraction’, &lt;br /&gt;arrowprops = dict(facecolor=’grey’,color=’grey’))&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Subplots&lt;/td&gt;
+      &lt;td&gt;Create subplots&lt;/td&gt;
+      &lt;td&gt;ax = plt.subplot2grid((gx,gy), (x,y), colspan=c)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Subplots&lt;/td&gt;
+      &lt;td&gt;Create subplots&lt;/td&gt;
+      &lt;td&gt;ax = plt.subplot2grid((gx,gy), (x,y), rowspan=r)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Sample Matplotlib script:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter qtconsole
 
@@ -31,8 +107,6 @@ plt.show()
 &lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/201706/matplotlib_plot1.png&quot; alt=&quot;Sample plot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;../../../../../assets/ipynb/201706/testjupyter.ipynb&quot;&gt;TestJupyter&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 11 Jun 2017 00:00:00 +0800</pubDate>
@@ -200,6 +274,53 @@ China’s Great Firewall.  I’ll retry when I’m outside of the Great Firewall
         
         
         <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Imports in Python</title>
+        <description>&lt;p&gt;What’s the difference between: 1) import numpy, 2) import numpy as np,
+and 3) from numpy import * ?&lt;/p&gt;
+
+&lt;p&gt;First example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Second example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Third example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from numpy import *
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The &lt;em&gt;first example&lt;/em&gt; allows usage of all sub-modules and functions in the 
+numpy module- but they can only be accessed by numpy.method().&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;second example&lt;/em&gt; is the same as the first example- but also sets up np as
+alias thru which to access the numpy functions- example: np.method().&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;third example&lt;/em&gt; imports all sub-modules and functions from the numpy
+module into the local namespace.  This allows using numpy’s methods without
+namespace qualifications- example: method().  However, this has the 
+disadvantage of complicating the local namespace with common method names-
+and overriding methods with the same names from other modules.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 08 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://patrickleungwl.github.io//python/2017/06/08/python_import/</link>
+        <guid isPermaLink="true">http://patrickleungwl.github.io//python/2017/06/08/python_import/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>python</category>
         
       </item>
     
@@ -707,64 +828,6 @@ asked to get a drink from the neighboring soda machine.&lt;/p&gt;
         
         
         <category>finance</category>
-        
-      </item>
-    
-      <item>
-        <title>The Spirit of Kaizen</title>
-        <description>&lt;p&gt;From the book “The Spirit of Kaizen” by Robert Maurer-  The key idea from
-this book on Kaizen is that people are scared by big changes.  Instead of
-making big changes to fix big problems, make small changes instead.  First,
-small changes are quick and easy to implement and do not meet resistance by
-scaring people.  Second, small changes over time is similar to compound
-interest- the small changes accumulate giant effects.&lt;/p&gt;
-
-&lt;p&gt;When making a change- there are two basic strategies- innovation and kaizen.
-Innovation calls for a radical, immediate rethink of the status quo.  Kaizen,
-on the other hand, asks for nothing other than small, doable steps toward
-improvement.&lt;/p&gt;
-
-&lt;p&gt;Continuous improvement says- Look for hundreds of small things you can
-improve.  Look for improvements on existing jobs with your present equipment.&lt;/p&gt;
-
-&lt;p&gt;Kaizen says-&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Use exiting resources&lt;/li&gt;
-  &lt;li&gt;Ask team members to participate&lt;/li&gt;
-  &lt;li&gt;Remain alert for problems to solve&lt;/li&gt;
-  &lt;li&gt;Look for ways to improve customer service&lt;/li&gt;
-  &lt;li&gt;Make very very small steps toward change&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Jim Collin’s Good To Great says-&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;We kept thinking we shold find the ‘one big thing,’ the miracle moment that
-defined breakthrough….But…no matter how dramatic the end reslt, the
-good-to-great transformation never happened in one fell swoop.  There was no
-single defining action, no grand program, no one killer innovation, no
-solitary lucky break, no wrenching revolution.  Good to great comes about by a
-cumulative process- step by step, action by action, decision by decision, turn
-by turn of the flywheel- that adds up to sustains and spectacular results.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;High-reliability organisations know they cannot afford to play games of
-secrecy.  Their attention to small mistakes flows from the recognition that
-human beings, no matter how gifted, are fallible.  Instead of expecting staff
-members to be perfect, HROs require them to be transparent… &lt;em&gt;If you make a
-mistake, tell us so that we can prevent a bigger problem.&lt;/em&gt;  FIX THE PROBLEM,
-NOT THE BLAME.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 09 Oct 2016 00:00:00 +0800</pubDate>
-        <link>http://patrickleungwl.github.io//management/2016/10/09/the-spirit-of-kaizen/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//management/2016/10/09/the-spirit-of-kaizen/</guid>
-        
-        <category>management,</category>
-        
-        <category>kaizen</category>
-        
-        
-        <category>management</category>
         
       </item>
     

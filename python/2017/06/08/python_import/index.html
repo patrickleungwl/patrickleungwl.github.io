@@ -31,41 +31,48 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">Inspirational Quotes</h1>
+            <h1 class="post-title">Imports in Python</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2016-04-03">03 Apr 2016</time>
+                <time class="post-date" datetime="2017-06-08">08 Jun 2017</time>
                 
-                    on motivation
+                    on python
                 
             </section>
         </header>
 
         <section class="post-content">
-            <p>“It is not the critic who counts; not the man who points out how the strong man
-stumbles, or where the doer of deeds could have done them better.
-The credit belongs to the man who is actually in the area,
-whose face is marred by dust and sweat and blood;
-who strives valiantly; who errs, who comes short again and again,
-because there is no effort without error and shortcoming;
-but who does actually strive to do the deeds;
-who knows great enthusiams, the great devotions;
-who spends himself in a worthy cause;
-who at the best knows in the end the triumph of high achievement,
-and who at the worst, if he fails, at least fails while daring greatly,
-so that his place shall never be with those cold and
-timid souls who neither know victory or defeat.” 
-<em>Thedore Roosevelt</em></p>
+            <p>What’s the difference between: 1) import numpy, 2) import numpy as np,
+and 3) from numpy import * ?</p>
 
-<p><img src="http://myfunnymemes.com/wp-content/uploads/2015/04/There-Are-No-Limits-Only-Plateaus-Quote-By-Bruce-Lee.jpg" width="480" height="340" align="right" hspace="100" />
-“If you always put limit on everything you do, physical or anything else
-it will spread into your work and into your life.  There are no limits.
-There are only plateaus, and you must not stay there, you must go beyond
-them.”
-<em>Bruce Lee</em></p>
+<p>First example:</p>
 
-<p><img src="http://www.thefatlossninja.com/wp-content/uploads/2013/11/bruce-lee.jpg" width="480" height="340" />
-Absort what is useful.  Discard what is not.  Add what is uniquely your own.”
-<em>Bruce Lee</em></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>import numpy
+</code></pre>
+</div>
+
+<p>Second example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import numpy as np
+</code></pre>
+</div>
+
+<p>Third example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>from numpy import *
+</code></pre>
+</div>
+
+<p>The <em>first example</em> allows usage of all sub-modules and functions in the 
+numpy module- but they can only be accessed by numpy.method().</p>
+
+<p>The <em>second example</em> is the same as the first example- but also sets up np as
+alias thru which to access the numpy functions- example: np.method().</p>
+
+<p>The <em>third example</em> imports all sub-modules and functions from the numpy
+module into the local namespace.  This allows using numpy’s methods without
+namespace qualifications- example: method().  However, this has the 
+disadvantage of complicating the local namespace with common method names-
+and overriding methods with the same names from other modules.</p>
 
 
         </section>
@@ -84,56 +91,28 @@ Absort what is useful.  Discard what is not.  Add what is uniquely your own.”
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                             
                             
 
                     
-                        <li><span>03 Apr 2016</span>
-                          <a href="http://patrickleungwl.github.io//management/2016/04/03/lky-on-management/">LKY on Management</a>
+                        <li><span>03 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a>
                         </li>
                     
-                        <li><span>02 Apr 2016</span>
-                          <a href="http://patrickleungwl.github.io//tech/2016/04/02/tech-to-study/">Tech to Study</a>
+                        <li><span>14 May 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/">Technologies at a Glance</a>
                         </li>
                     
-                        <li><span>27 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io//tech/2015/12/27/tasks2/">Using Tasks-2</a>
+                        <li><span>23 Apr 2017</span>
+                          <a href="http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/">The Tao of Charlie Munger</a>
                         </li>
                     
-                        <li><span>26 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io//tech/2015/12/26/tasks/">Using Tasks</a>
+                        <li><span>21 Mar 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/python/numpy/2017/03/21/timing_numpy/">Timing NumPy</a>
                         </li>
                     
-                        <li><span>25 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io//tech/2015/12/25/autoresetevent/">Using AutoResetEvent</a>
+                        <li><span>30 Dec 2016</span>
+                          <a href="http://patrickleungwl.github.io//tech/2016/12/30/revisting-generic-collections/">Revisiting Generic Collections</a>
                         </li>
                     
                 </ul>
@@ -147,15 +126,15 @@ Absort what is useful.  Discard what is not.  Add what is uniquely your own.”
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=Inspirational Quotes&amp;url=/motivation/2016/04/03/insprirational-quotes/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=Imports in Python&amp;url=/python/2017/06/08/python_import/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/motivation/2016/04/03/insprirational-quotes/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/python/2017/06/08/python_import/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/motivation/2016/04/03/insprirational-quotes/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/python/2017/06/08/python_import/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>

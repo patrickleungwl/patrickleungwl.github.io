@@ -58,32 +58,13 @@
                 <h2 class="post-title"><a href="/python/2017/06/11/basic-matplotlib/">Basic Matplotlib Plot</a></h2>
             </header>
             <section class="post-excerpt">
-                Sample Matplotlib usage:
-
-jupyter qtconsole
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-plt.figure()                            # Create a new figure window
-xlist = np.linspace(-2.0, 1.0, 100)     # Create 1-D arrays for x,y dimensions
-ylist = np.linspace(-1.0, 2.0, 100)
-X,Y = np.meshgrid(xlist, ylist)         # Create 2-D grid xlist,ylist values
-Z = np.sqrt(X**2 + Y**2)                # Compute function values on the grid
-
-plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = ’k’, linestyles = ’solid’)
-plt.show()
-
-
-
-
-
-
-TestJupyter
-
-
+                Most data analysts just want to generate a plot quickly with minimal work. However Matplotlib’s api has a slight learning curve- and it requires some investment to pick up on its class hierachies and its terminologies. I’ve jotted down some Matplotlib gems here so others users can have less of a learning curve. One key point to note is that regardless of what commands used to generate plots, they all devolve into one low level...
                 <!--
-                <p>Sample Matplotlib usage:</p>
+                <p>Most data analysts just want to generate a plot quickly with minimal work.<br />
+However Matplotlib’s api has a slight learning curve- and it requires some 
+investment to pick up on its class hierachies and its terminologies. 
+I’ve jotted down some Matplotlib gems here so others users can have less 
+of a learning curve.</p>
 
  <a class="read-more" href="/python/2017/06/11/basic-matplotlib/">&raquo;</a>
                 -->
@@ -207,6 +188,32 @@ popups now on Vim when coding Python in Linux.  But how to do this?</p>
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/python/2017/06/08/python_import/">Imports in Python</a></h2>
+            </header>
+            <section class="post-excerpt">
+                What’s the difference between: 1) import numpy, 2) import numpy as np, and 3) from numpy import * ? First example: import numpy Second example: import numpy as np Third example: from numpy import * The first example allows usage of all sub-modules and functions in the numpy module- but they can only be accessed by numpy.method(). The second example is the same as the first example- but also sets up np as alias thru...
+                <!--
+                <p>What’s the difference between: 1) import numpy, 2) import numpy as np,
+and 3) from numpy import * ?</p>
+
+ <a class="read-more" href="/python/2017/06/08/python_import/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on python 
+                
+                <time class="post-date" datetime="2017-06-08">
+                    08 Jun 2017
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a></h2>
             </header>
             <section class="post-excerpt">
@@ -299,34 +306,6 @@ The Herd
                 
                 <time class="post-date" datetime="2017-04-23">
                     23 Apr 2017
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/python/numpy/2017/03/21/timing_numpy/">Timing NumPy</a></h2>
-            </header>
-            <section class="post-excerpt">
-                I’ve been hearing a lot of good things about NumPy and Python- so much so that I’ve finally had to give it a try. What’s so good about NumPy? For one thing, its built-in array data structure. Given that data arrays are one continous block of memory, referencing numbers directly in arrays would be much faster than referencing them in Python’s built-in lists- which would really be a list of pointers to the real location...
-                <!--
-                <p>I’ve been hearing a lot of good things about NumPy and Python- so much so that I’ve finally had to give it a try. 
-What’s so good about NumPy?  For one thing, its built-in array data structure.  Given that data arrays are one 
-continous block of memory, referencing numbers directly in arrays would be much faster than referencing them in Python’s 
-built-in lists- which would really be a list of pointers to the real location of data.</p>
-
- <a class="read-more" href="/tech/python/numpy/2017/03/21/timing_numpy/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech, python, and numpy 
-                
-                <time class="post-date" datetime="2017-03-21">
-                    21 Mar 2017
                 </time> 
             </footer>
         </article>
