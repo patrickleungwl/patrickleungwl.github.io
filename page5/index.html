@@ -59,6 +59,31 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/21/rhino-mocks/">Using Rhino Mocks</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Testing Rhino Mocks today for use in unit tests. IAdder.cs using System; namespace TestAdderLib { public interface IAdder { int AddTwoNums(int a, int b); } } Adder.cs using System; using System.Threading; namespace TestAdderLib { public class Adder : IAdder { public int AddTwoNums(int a, int b) { Thread.Sleep(1000); return a + b; } } } TestCalculatorWithRhino.cs using System; using Microsoft.VisualStudio.TestTools.UnitTesting; using Calculator; using TestAdderLib; using Rhino.Mocks; namespace TestCalculatorWithRhino { internal class ManuallyCodedAdderStub : IAdder {...
+                <!--
+                <p>Testing Rhino Mocks today for use in unit tests.</p>
+
+ <a class="read-more" href="/tech/2015/12/21/rhino-mocks/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-21">
+                    21 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2015/12/20/backgroundworker/">Using BackgroundWorker</a></h2>
             </header>
             <section class="post-excerpt">
@@ -217,31 +242,6 @@
                 
                 <time class="post-date" datetime="2014-11-05">
                     05 Nov 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/11/04/invoking-delegates-asynchronously/">Invoking Delegates Asynchronously</a></h2>
-            </header>
-            <section class="post-excerpt">
-                It’s a slow day at work. Let’s try an asynch delegate. using System; using System.Threading; using System.Runtime.Remoting.Messaging; // To access the AsyncResult type namespace TestAsyncDelegate { class TestDel { delegate int OperatorSig(int a, int b); TestDel() { } // -------------------------------------------------------------- // Add // // Random work method that takes an arbitrarily set 2.4 seconds // to complete. // -------------------------------------------------------------- public int Add(int a, int b) { Console.Out.WriteLine("ThreadId={0}, Adding starts", Thread.CurrentThread.ManagedThreadId ); Thread.Sleep(2400); Console.Out.WriteLine("ThreadId={0}, Adding completed",...
-                <!--
-                <p>It’s a slow day at work.  Let’s try an asynch delegate.</p>
-
- <a class="read-more" href="/tech/2014/11/04/invoking-delegates-asynchronously/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-11-04">
-                    04 Nov 2014
                 </time> 
             </footer>
         </article>

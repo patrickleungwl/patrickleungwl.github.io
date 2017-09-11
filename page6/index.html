@@ -59,6 +59,31 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/11/04/invoking-delegates-asynchronously/">Invoking Delegates Asynchronously</a></h2>
+            </header>
+            <section class="post-excerpt">
+                It’s a slow day at work. Let’s try an asynch delegate. using System; using System.Threading; using System.Runtime.Remoting.Messaging; // To access the AsyncResult type namespace TestAsyncDelegate { class TestDel { delegate int OperatorSig(int a, int b); TestDel() { } // -------------------------------------------------------------- // Add // // Random work method that takes an arbitrarily set 2.4 seconds // to complete. // -------------------------------------------------------------- public int Add(int a, int b) { Console.Out.WriteLine("ThreadId={0}, Adding starts", Thread.CurrentThread.ManagedThreadId ); Thread.Sleep(2400); Console.Out.WriteLine("ThreadId={0}, Adding completed",...
+                <!--
+                <p>It’s a slow day at work.  Let’s try an asynch delegate.</p>
+
+ <a class="read-more" href="/tech/2014/11/04/invoking-delegates-asynchronously/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-11-04">
+                    04 Nov 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a></h2>
             </header>
             <section class="post-excerpt">
@@ -206,31 +231,6 @@ straight</strong> what does it do?  why use it?  how to build it?</p>
                 
                 <time class="post-date" datetime="2014-03-21">
                     21 Mar 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Strings in Java can be declared either literally- String s = "123"; or as a String instance- String s = new String("123"); What are the differences between these two strings? package drills; public class Tester { public static void main(String[] args) { // Test differences between String v = new String(...) // and String v = "..." // String literals are stored in a string pool- cached and reused. // String objects are stored in...
-                <!--
-                <p>Strings in Java can be declared either literally-</p>
-
- <a class="read-more" href="/tech/2014/03/20/java-string-literals/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-20">
-                    20 Mar 2014
                 </time> 
             </footer>
         </article>
