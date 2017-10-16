@@ -31,48 +31,38 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">Imports in Python</h1>
+            <h1 class="post-title">Patterns</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2017-06-08">08 Jun 2017</time>
+                <time class="post-date" datetime="2017-10-12">12 Oct 2017</time>
                 
-                    on python
+                    on tech
                 
             </section>
         </header>
 
         <section class="post-content">
-            <p>What’s the difference between: 1) import numpy, 2) import numpy as np,
-and 3) from numpy import * ?</p>
-
-<p>First example:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>import numpy
-</code></pre>
-</div>
-
-<p>Second example:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>import numpy as np
-</code></pre>
-</div>
-
-<p>Third example:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>from numpy import *
-</code></pre>
-</div>
-
-<p>The <em>first example</em> allows usage of all sub-modules and functions in the 
-numpy module- but they can only be accessed by numpy.method().</p>
-
-<p>The <em>second example</em> is the same as the first example- but also sets up np as
-alias thru which to access the numpy functions- example: np.method().</p>
-
-<p>The <em>third example</em> imports all sub-modules and functions from the numpy
-module into the local namespace.  This allows using numpy’s methods without
-namespace qualifications- example: method().  However, this has the 
-disadvantage of complicating the local namespace with common method names-
-and overriding methods with the same names from other modules.</p>
+            <table>
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Decorator</td>
+      <td>Adds new functionality to existing components without changing the component</td>
+    </tr>
+    <tr>
+      <td>Visitor</td>
+      <td>Adds new operations to existing without modifying existing data structures</td>
+    </tr>
+    <tr>
+      <td>Strategy</td>
+      <td>Allows interchanging functionality at runtime without modifying code</td>
+    </tr>
+  </tbody>
+</table>
 
 
         </section>
@@ -87,40 +77,28 @@ and overriding methods with the same names from other modules.</p>
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                             
                             
 
                     
-                        <li><span>03 Jun 2017</span>
-                          <a href="http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a>
+                        <li><span>03 Sep 2017</span>
+                          <a href="http://patrickleungwl.github.io//managing/2017/09/03/managing/">Managing, by Harold Geneen</a>
                         </li>
                     
-                        <li><span>14 May 2017</span>
-                          <a href="http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/">Technologies at a Glance</a>
+                        <li><span>24 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/06/24/the-effective-engineer/">The Effective Engineer</a>
                         </li>
                     
-                        <li><span>23 Apr 2017</span>
-                          <a href="http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/">The Tao of Charlie Munger</a>
+                        <li><span>11 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//python/2017/06/11/basic-matplotlib/">Basic Matplotlib Plot</a>
                         </li>
                     
-                        <li><span>21 Mar 2017</span>
-                          <a href="http://patrickleungwl.github.io//tech/python/numpy/2017/03/21/timing_numpy/">Timing NumPy</a>
+                        <li><span>10 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//python/2017/06/10/using-conda/">Using Conda, NumPy</a>
                         </li>
                     
-                        <li><span>30 Dec 2016</span>
-                          <a href="http://patrickleungwl.github.io//tech/2016/12/30/revisting-generic-collections/">Revisiting Generic Collections</a>
+                        <li><span>09 Jun 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/06/09/setting-up-vim-for-python/">Setting Up Vim For Python</a>
                         </li>
                     
                 </ul>
@@ -134,15 +112,15 @@ and overriding methods with the same names from other modules.</p>
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=Imports in Python&amp;url=/python/2017/06/08/python_import/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=Patterns&amp;url=/tech/2017/10/12/decorators/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/python/2017/06/08/python_import/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2017/10/12/decorators/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/python/2017/06/08/python_import/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2017/10/12/decorators/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
