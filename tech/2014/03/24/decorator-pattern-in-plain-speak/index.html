@@ -80,7 +80,7 @@ in constructor.</li>
 
 <p>In simple psuedo code terms-</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">AbstractWidget</span> <span class="p">{</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AbstractWidget</span> <span class="p">{</span>
   <span class="k">abstract</span> <span class="nf">baseMethod</span><span class="p">();</span>
 <span class="p">}</span>
 
@@ -100,8 +100,7 @@ in constructor.</li>
   <span class="n">@Override</span>
   <span class="nf">baseMethod</span><span class="p">();</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>To put this pattern into practical terms, let’s imagine two types of automobiles- 
 HondaAccord and TeslaRoadster, each sold with two types of options- SunRoof and 
@@ -115,11 +114,11 @@ to a car without changing the base car class.</p>
 
 <p>The code sample below shows one possible Decorator implementation.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// --------------------------------------------
-// CarMake
-// The Abstract Widget
-//
-</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// --------------------------------------------</span>
+<span class="c1">// CarMake</span>
+<span class="c1">// The Abstract Widget</span>
+<span class="c1">//</span>
+<span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
 
 <span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">CarMake</span> <span class="p">{</span>
     
@@ -130,11 +129,11 @@ to a car without changing the base car class.</p>
 <span class="p">}</span>
 
 
-<span class="c1">// --------------------------------------------
-// HondaAccord
-// The concrete widget
-//
-</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+<span class="c1">// --------------------------------------------</span>
+<span class="c1">// HondaAccord</span>
+<span class="c1">// The concrete widget</span>
+<span class="c1">//</span>
+<span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
 
 <span class="k">public</span> <span class="k">class</span> <span class="nc">HondaAccord</span> <span class="n">extends</span> <span class="n">CarMake</span> <span class="p">{</span>
 
@@ -148,11 +147,11 @@ to a car without changing the base car class.</p>
 <span class="p">}</span>
 
 
-<span class="c1">// --------------------------------------------
-// TeslaRoadster
-// Second concrete widget
-//
-</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+<span class="c1">// --------------------------------------------</span>
+<span class="c1">// TeslaRoadster</span>
+<span class="c1">// Second concrete widget</span>
+<span class="c1">//</span>
+<span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
 
 <span class="k">public</span> <span class="k">class</span> <span class="nc">TeslaRoadster</span> <span class="n">extends</span> <span class="n">CarMake</span> <span class="p">{</span>
     
@@ -166,11 +165,11 @@ to a car without changing the base car class.</p>
 <span class="p">}</span>
 
 
-<span class="c1">// --------------------------------------------
-// CarDecorator
-// Abstractor decorator (wrapper)
-//
-</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+<span class="c1">// --------------------------------------------</span>
+<span class="c1">// CarDecorator</span>
+<span class="c1">// Abstractor decorator (wrapper)</span>
+<span class="c1">//</span>
+<span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
 
 <span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">CarDecorator</span> <span class="n">extends</span> <span class="n">CarMake</span> <span class="p">{</span>
     
@@ -181,10 +180,10 @@ to a car without changing the base car class.</p>
 
 
 
-<span class="c1">// --------------------------------------------
-// SunRoofCarDecorator
-//
-</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+<span class="c1">// --------------------------------------------</span>
+<span class="c1">// SunRoofCarDecorator</span>
+<span class="c1">//</span>
+<span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
 
 <span class="k">public</span> <span class="k">class</span> <span class="nc">SunRoofCarDecorator</span> <span class="n">extends</span> <span class="n">CarDecorator</span> <span class="p">{</span>
     
@@ -203,10 +202,10 @@ to a car without changing the base car class.</p>
 <span class="p">}</span>
 
 
-<span class="c1">// --------------------------------------------
-// TintedWindowsCarDecorator
-//
-</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+<span class="c1">// --------------------------------------------</span>
+<span class="c1">// TintedWindowsCarDecorator</span>
+<span class="c1">//</span>
+<span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
 
 <span class="k">public</span> <span class="k">class</span> <span class="nc">TintedWindowsCarDecorator</span> <span class="n">extends</span> <span class="n">CarDecorator</span> <span class="p">{</span>
     
@@ -225,25 +224,25 @@ to a car without changing the base car class.</p>
 <span class="p">}</span>
 
 
-<span class="c1">// --------------------------------------------
-// Tester
-//
-</span><span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
+<span class="c1">// --------------------------------------------</span>
+<span class="c1">// Tester</span>
+<span class="c1">//</span>
+<span class="n">package</span> <span class="n">drills</span><span class="p">;</span>
 
 <span class="k">public</span> <span class="k">class</span> <span class="nc">Tester</span> <span class="p">{</span>
 
     <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="c1">// Car A, HondaAccord has nothing
-</span>        <span class="c1">// Car B, HondaAccord has SunRoof
-</span>        <span class="c1">// Car C, HondaAccord has TintedWindows
-</span>        <span class="c1">// Car D, HondaAccord has SunRoof and TintedWindows
-</span>
-        <span class="c1">// Car E, TeslaRoadster has nothing
-</span>        <span class="c1">// Car F, TeslaRoadster has SunRoof
-</span>        <span class="c1">// Car G, TeslaRoadster has TintedWindows
-</span>        <span class="c1">// Car H, TeslaRoadster has SunRoof and TintedWindows
-</span>
+        <span class="c1">// Car A, HondaAccord has nothing</span>
+        <span class="c1">// Car B, HondaAccord has SunRoof</span>
+        <span class="c1">// Car C, HondaAccord has TintedWindows</span>
+        <span class="c1">// Car D, HondaAccord has SunRoof and TintedWindows</span>
+
+        <span class="c1">// Car E, TeslaRoadster has nothing</span>
+        <span class="c1">// Car F, TeslaRoadster has SunRoof</span>
+        <span class="c1">// Car G, TeslaRoadster has TintedWindows</span>
+        <span class="c1">// Car H, TeslaRoadster has SunRoof and TintedWindows</span>
+
         <span class="n">CarMake</span> <span class="n">a</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">HondaAccord</span><span class="p">();</span>
         <span class="n">CarMake</span> <span class="n">b</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SunRoofCarDecorator</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
         <span class="n">CarMake</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
@@ -266,12 +265,11 @@ to a car without changing the base car class.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The test program output looks as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>A = HondaAccord
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A = HondaAccord
 B = HondaAccord, SunRoof
 C = HondaAccord, TintedWindows
 D = HondaAccord, TintedWindows, SunRoof
@@ -279,8 +277,7 @@ E = TeslaRoadster
 F = TeslaRoadster, SunRoof
 G = TeslaRoadster, TintedWindows
 H = TeslaRoadster, SunRoof, TintedWindows
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>From this bare-bones example, you can see how we can programmatically alter an 
 object’s behavior at runtime- without affecting the original object’s behavior.</p>

@@ -43,7 +43,7 @@
         <section class="post-content">
             <p>Testing mutexes today.  Mutexes can be used to ensure only one instance of an app runs at any one time.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">TestMutex</span>
@@ -59,10 +59,10 @@
         <span class="p">}</span>
 
 
-        <span class="c1">// LongComputeTask
-</span>        <span class="c1">//
-</span>        <span class="c1">// Function run by background worker.
-</span>
+        <span class="c1">// LongComputeTask</span>
+        <span class="c1">//</span>
+        <span class="c1">// Function run by background worker.</span>
+
         <span class="k">private</span> <span class="k">void</span> <span class="nf">LongComputeTask</span><span class="p">()</span>
         <span class="p">{</span>
             <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"LongComputeTask starting"</span><span class="p">);</span>
@@ -80,18 +80,18 @@
         <span class="p">}</span>
 
 
-        <span class="c1">// RunTest
-</span>        <span class="c1">//
-</span>        <span class="c1">// Function run by main thread
-</span>        <span class="c1">// Main thread sets up the background thread
-</span>        <span class="c1">// and fires it off
-</span>
+        <span class="c1">// RunTest</span>
+        <span class="c1">//</span>
+        <span class="c1">// Function run by main thread</span>
+        <span class="c1">// Main thread sets up the background thread</span>
+        <span class="c1">// and fires it off</span>
+
         <span class="k">public</span> <span class="k">void</span> <span class="nf">RunTest</span><span class="p">()</span>
         <span class="p">{</span>
-            <span class="c1">// Acquire mutex here, ensure only 1 instance of this program
-</span>            <span class="c1">// run at any one time
-</span>
-            <span class="n">var</span> <span class="n">myMutex</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Mutex</span><span class="p">(</span><span class="k">false</span><span class="p">,</span> <span class="s">"TestMutex"</span><span class="p">);</span>
+            <span class="c1">// Acquire mutex here, ensure only 1 instance of this program</span>
+            <span class="c1">// run at any one time</span>
+
+            <span class="kt">var</span> <span class="n">myMutex</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Mutex</span><span class="p">(</span><span class="k">false</span><span class="p">,</span> <span class="s">"TestMutex"</span><span class="p">);</span>
             <span class="n">myMutex</span><span class="p">.</span><span class="nf">WaitOne</span><span class="p">();</span>
             <span class="nf">LongComputeTask</span><span class="p">();</span>
             <span class="n">myMutex</span><span class="p">.</span><span class="nf">ReleaseMutex</span><span class="p">();</span>
@@ -100,17 +100,16 @@
 
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">var</span> <span class="n">tester</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MutexTester</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">tester</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MutexTester</span><span class="p">();</span>
             <span class="n">tester</span><span class="p">.</span><span class="nf">RunTest</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Window One</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&gt;TestMutex.exe
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;TestMutex.exe
 19:05:05.661 ThreadId=1 LongComputeTask starting
 19:05:06.701 ThreadId=1 LongComputeTask 2.0f% completed
 19:05:07.703 ThreadId=1 LongComputeTask 4.0f% completed
@@ -123,13 +122,12 @@
 19:05:14.707 ThreadId=1 LongComputeTask 18.0f% completed
 19:05:15.709 ThreadId=1 LongComputeTask 20.0f% completed
 19:05:15.709 ThreadId=1 LongComputeTask completed
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Window Two- notice that this second instance of the test app does not start until the first instance 
 completes.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>19:05:15.709 ThreadId=1 LongComputeTask starting
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>19:05:15.709 ThreadId=1 LongComputeTask starting
 19:05:16.741 ThreadId=1 LongComputeTask 2.0f% completed
 19:05:17.741 ThreadId=1 LongComputeTask 4.0f% completed
 19:05:18.743 ThreadId=1 LongComputeTask 6.0f% completed
@@ -141,8 +139,7 @@ completes.</p>
 19:05:24.747 ThreadId=1 LongComputeTask 18.0f% completed
 19:05:25.747 ThreadId=1 LongComputeTask 20.0f% completed
 19:05:25.747 ThreadId=1 LongComputeTask completed
-</code></pre>
-</div>
+</code></pre></div></div>
 
         </section>
 

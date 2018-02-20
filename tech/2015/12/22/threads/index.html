@@ -44,7 +44,7 @@
             <p>We’re not supposed to use raw managed threads anymore- given that .net 4+ has given us much more advanced
 multi-threading features.  However, I’ll still post some test code to illustrate how threads work.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 
@@ -63,10 +63,10 @@ multi-threading features.  However, I’ll still post some test code to illustra
         <span class="p">}</span>
 
 
-        <span class="c1">// LongComputeTask
-</span>        <span class="c1">//
-</span>        <span class="c1">// Function run by background worker.
-</span>
+        <span class="c1">// LongComputeTask</span>
+        <span class="c1">//</span>
+        <span class="c1">// Function run by background worker.</span>
+
         <span class="k">void</span> <span class="nf">LongComputeTask</span><span class="p">(</span><span class="kt">object</span> <span class="n">threadId</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"LongComputeTask starting"</span><span class="p">);</span>
@@ -83,19 +83,19 @@ multi-threading features.  However, I’ll still post some test code to illustra
         <span class="p">}</span>
 
 
-        <span class="c1">// RunTest
-</span>        <span class="c1">//
-</span>        <span class="c1">// Function run by main thread
-</span>        <span class="c1">// Main thread sets up the background thread
-</span>        <span class="c1">// and fires it off
-</span>
+        <span class="c1">// RunTest</span>
+        <span class="c1">//</span>
+        <span class="c1">// Function run by main thread</span>
+        <span class="c1">// Main thread sets up the background thread</span>
+        <span class="c1">// and fires it off</span>
+
         <span class="k">public</span> <span class="k">void</span> <span class="nf">RunTest</span><span class="p">()</span>
         <span class="p">{</span>
             <span class="n">_workerThread</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Thread</span><span class="p">(</span><span class="n">LongComputeTask</span><span class="p">);</span>
             <span class="n">_workerThread</span><span class="p">.</span><span class="nf">Start</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
 
-            <span class="c1">// main thread do something while background thread do something else
-</span>            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="c1">// main thread do something while background thread do something else</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">2</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
             <span class="p">{</span>
                 <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"Main thread working"</span><span class="p">);</span>
                 <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">);</span>
@@ -106,9 +106,9 @@ multi-threading features.  However, I’ll still post some test code to illustra
         <span class="p">}</span>
 
 
-        <span class="c1">// Main
-</span>        <span class="c1">// Start up a background worker test instance
-</span>
+        <span class="c1">// Main</span>
+        <span class="c1">// Start up a background worker test instance</span>
+
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">ThreadTester</span> <span class="n">testWkr</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ThreadTester</span><span class="p">();</span>
@@ -116,12 +116,11 @@ multi-threading features.  However, I’ll still post some test code to illustra
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The output:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>19:05:36.155 ThreadId=1 Main thread working
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>19:05:36.155 ThreadId=1 Main thread working
 19:05:36.185 ThreadId=3 LongComputeTask starting
 19:05:36.693 ThreadId=3 LongComputeTask 10.0f% completed
 19:05:37.183 ThreadId=1 Main thread working
@@ -136,8 +135,7 @@ multi-threading features.  However, I’ll still post some test code to illustra
 19:05:40.697 ThreadId=3 LongComputeTask 90.0f% completed
 19:05:41.197 ThreadId=3 LongComputeTask 100.0f% completed
 19:05:41.197 ThreadId=3 LongComputeTask completed
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
         </section>

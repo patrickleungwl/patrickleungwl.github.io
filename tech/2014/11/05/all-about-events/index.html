@@ -54,7 +54,7 @@
 
 <p>Here is some simple test code demonstrating the use of Events.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
@@ -73,17 +73,17 @@
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="c1">// ----------------------------------------------------------------
-</span>    <span class="c1">// TinyMech
-</span>    <span class="c1">//
-</span>    <span class="c1">// Machine that publishes error events
-</span>    <span class="c1">//
-</span>    <span class="c1">// ----------------------------------------------------------------
-</span>
+    <span class="c1">// ----------------------------------------------------------------</span>
+    <span class="c1">// TinyMech</span>
+    <span class="c1">//</span>
+    <span class="c1">// Machine that publishes error events</span>
+    <span class="c1">//</span>
+    <span class="c1">// ----------------------------------------------------------------</span>
+
     <span class="k">class</span> <span class="nc">TinyMech</span>
     <span class="p">{</span>
-        <span class="c1">// EventHandlers must have args (object sender, EventArgs e)
-</span>        <span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span> <span class="n">ErrorEventHappened</span><span class="p">;</span>
+        <span class="c1">// EventHandlers must have args (object sender, EventArgs e)</span>
+        <span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span> <span class="n">ErrorEventHappened</span><span class="p">;</span>
 
         <span class="k">public</span> <span class="k">void</span> <span class="nf">Run</span><span class="p">()</span>
         <span class="p">{</span>
@@ -99,13 +99,13 @@
     <span class="p">}</span>
 
 
-    <span class="c1">// ----------------------------------------------------------------
-</span>    <span class="c1">// TinyReporter
-</span>    <span class="c1">//
-</span>    <span class="c1">// Machine that listens for errors and reports it to main console
-</span>    <span class="c1">//
-</span>    <span class="c1">// ----------------------------------------------------------------
-</span>
+    <span class="c1">// ----------------------------------------------------------------</span>
+    <span class="c1">// TinyReporter</span>
+    <span class="c1">//</span>
+    <span class="c1">// Machine that listens for errors and reports it to main console</span>
+    <span class="c1">//</span>
+    <span class="c1">// ----------------------------------------------------------------</span>
+
     <span class="k">class</span> <span class="nc">TinyReporter</span>
     <span class="p">{</span>
         <span class="k">public</span> <span class="k">void</span> <span class="nf">ListenToMachine</span><span class="p">(</span><span class="n">TinyMech</span> <span class="n">m</span><span class="p">)</span>
@@ -137,8 +137,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
         </section>
