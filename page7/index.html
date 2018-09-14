@@ -11,10 +11,10 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css" />
 
 </head>
 <body class="home-template">
@@ -54,6 +54,60 @@
      
 </nav>
     </div>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/03/24/equals-hashcode-and-comparable-interface/">Equals Hashcode and Comparable Interface in Java</a></h2>
+            </header>
+            <section class="post-excerpt">
+                When should a class overwrite equals() and hashCode()? And when should a class implement the Comparable interface? A class should overwrite equals() when the class represents a value item- meaning ideas like dates, times, colors, or other unique representations of things. An object representing 2001-9-11 should equal another object also representing 2001-9-11, no? These two objects are equal despite being two different objects in memory. And each time you overwrite equals, you also have to...
+                <!--
+                <h2 id="when-should-a-class-overwrite-equals-and-hashcode">When should a class overwrite equals() and hashCode()?</h2>
+
+ <a class="read-more" href="/tech/2014/03/24/equals-hashcode-and-comparable-interface/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-03-24">
+                    24 Mar 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a></h2>
+            </header>
+            <section class="post-excerpt">
+                I’ve just had enough of the abstract high-faluting language used in the GOF’s Design Patterns. Absolutely enough. I’m sure there’s more than enough readers who can’t understand any one of the GOF’s denser patterns. The Decorator Pattern is one such dense connundrum. I mean- just give it to me straight what does it do? why use it? how to build it? In plain terms, if there is a need to add functionality to a class...
+                <!--
+                <p>I’ve just had enough of the abstract high-faluting language used in the 
+GOF’s Design Patterns.  Absolutely <strong>enough</strong>.  I’m sure there’s more than 
+enough readers who can’t understand any one of the GOF’s denser patterns.<br />
+The Decorator Pattern is one such dense connundrum.  I mean- <strong>just give it to me 
+straight</strong> what does it do?  why use it?  how to build it?</p>
+
+ <a class="read-more" href="/tech/2014/03/24/decorator-pattern-in-plain-speak/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-03-24">
+                    24 Mar 2014
+                </time> 
+            </footer>
+        </article>
 
     
 
@@ -189,56 +243,6 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
     
 
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a></h2>
-            </header>
-            <section class="post-excerpt">
-                More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’. Common Default Behavior At indeterminate times, the GC comes around, finds and frees up every unreferenced object- these are objects that cannot be traced to a long living root object every object referenced only by a WeakReference and- for Java only- if free memory is low, every object referenced only by a SoftReference C# Has No SoftReferences C# does...
-                <!--
-                <p>More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’.</p>
-
- <a class="read-more" href="/tech/2014/03/15/garbage-collector-differences/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-15">
-                    15 Mar 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-) When it comes to memory management, C# certainly has many comparable features found in Java and more. Following the previous example of testing WeakReferences in Java, we’ll now run a similar test in C#. First, we’ll need a dummy memory resource-heavy object. We’ll use the same DumbWeight class, whose sole function is to allocate memory. using System.Collection.Generic; namespace Drills...
-                <!--
-                <p>Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-)</p>
-
- <a class="read-more" href="/tech/2014/03/13/weakreferences-in-csharp/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-13">
-                    13 Mar 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
     <nav class="pagination" role="pagination">
     
         
@@ -267,9 +271,9 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/index.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

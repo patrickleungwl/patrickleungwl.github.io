@@ -11,10 +11,10 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css" />
 
 </head>
 <body class="home-template">
@@ -54,6 +54,56 @@
      
 </nav>
     </div>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/25/autoresetevent/">Using AutoResetEvent</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Testing AutoResetEvent today. using System; using System.Threading; namespace TestAutoResetEvent { class AutoResetEventTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask(Object stateInfo) { LogMsg("LongComputeTask starting"); float percentDone = 0.0f; for (int i = 0; i &lt; 10; i++) { Thread.Sleep(500); percentDone += 10.0f; LogMsg("LongComputeTask {0:0.0f}% completed", percentDone); } LogMsg("LongComputeTask completed"); AutoResetEvent myFlag = stateInfo as...
+                <!--
+                <p>Testing AutoResetEvent today.</p>
+
+ <a class="read-more" href="/tech/2015/12/25/autoresetevent/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-25">
+                    25 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/24/mutex/">Using Mutexes</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Testing mutexes today. Mutexes can be used to ensure only one instance of an app runs at any one time. using System; using System.Threading; namespace TestMutex { class MutexTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask() { LogMsg("LongComputeTask starting"); float percentDone = 0.0f; for (int i = 0; i &lt;10; i++) { Thread.Sleep(1000);...
+                <!--
+                <p>Testing mutexes today.  Mutexes can be used to ensure only one instance of an app runs at any one time.</p>
+
+ <a class="read-more" href="/tech/2015/12/24/mutex/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-24">
+                    24 Dec 2015
+                </time> 
+            </footer>
+        </article>
 
     
 
@@ -183,72 +233,6 @@ multi-threading features.  However, I’ll still post some test code to illustra
 
     
 
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.
-
-
-  BackgroundWorker
-    
-      Easy to start working in background
-      Easy to periodically update the UI thread
-    
-  
-  Theads
-    
-      Heavy weight multi-threading, but gives full control
-    
-  
-
-
-
-                <!--
-                <p>Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.</p>
-
- <a class="read-more" href="/tech/2015/12/18/multi-threading-cheatsheet/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-12-18">
-                    18 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech,csharp/2015/12/17/how-backgroundworker-works/">How BackgroundWorker Works</a></h2>
-            </header>
-            <section class="post-excerpt">
-                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. using System; using System.Collections.Generic; using System.Linq; using System.Text; using System.ComponentModel; using System.Threading; namespace TestBackgroundWorker { class TestBkGrdWorker     {         private void LogMsg(string msg)         {             Console.Out.WriteLine("{0} ThreadId={1}, {2}",                 DateTime.Now.ToString("HH:MM:ss.fff"),                 Thread.CurrentThread.ManagedThreadId, msg);         }         // RunTest...
-                <!--
-                <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5.  One of the simpler options is the BackgroundWorker.  To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p>
-
- <a class="read-more" href="/tech,csharp/2015/12/17/how-backgroundworker-works/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech,csharp 
-                
-                <time class="post-date" datetime="2015-12-17">
-                    17 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
     <nav class="pagination" role="pagination">
     
         
@@ -277,9 +261,9 @@ multi-threading features.  However, I’ll still post some test code to illustra
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/index.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

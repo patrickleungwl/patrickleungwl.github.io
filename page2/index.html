@@ -11,10 +11,10 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io//assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css" />
 
 </head>
 <body class="home-template">
@@ -54,6 +54,110 @@
      
 </nav>
     </div>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/python/2017/06/10/using-conda/">Using Conda, NumPy</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Notes on using Conda, NumPy
+
+Conda
+
+
+  
+    
+      Setup Python 3.5 env
+      conda create -n py35 python=3.5 anaconda
+    
+    
+      Setup Python 2.7 env
+      conda create -n py27 python=2.7 anaconda
+    
+    
+      Switch to Python 3.5 env
+      source activate py35
+    
+    
+      Check Python version
+      python -V
+    
+  
+
+
+Numpy
+
+
+  
+    
+      Import numpy
+      import numpy as np
+    
+    
+      Create a new array
+      na = array([1,2,3,4])
+    
+    
+      Use any numpy function
+      na.min()
+    
+    
+      Load data into array
+      na = np.loadtxt(‘data.txt’)
+    
+    
+      Save array to file
+      np.savetxt(‘data.txt’, na)
+    
+  
+
+
+
+                <!--
+                <p>Notes on using Conda, NumPy</p>
+
+ <a class="read-more" href="/python/2017/06/10/using-conda/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on python 
+                
+                <time class="post-date" datetime="2017-06-10">
+                    10 Jun 2017
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2017/06/09/setting-up-vim-for-python/">Setting Up Vim For Python</a></h2>
+            </header>
+            <section class="post-excerpt">
+                While I’m enthusiastic with using Vim, I’m afraid that my many years of using Visual Studio’s Intellisense has spoiled me. I now require the same method popups now on Vim when coding Python in Linux. But how to do this? First I backup my original .vimrc: " Automatic syntax highlighting syntax on " Stop vim from creating automatic backups set noswapfile set nobackup set nowb " Reload files modified outside of vim set autoread "...
+                <!--
+                <p>While I’m enthusiastic with using Vim, I’m afraid that my many years of using
+Visual Studio’s Intellisense has spoiled me.  I now require the same method 
+popups now on Vim when coding Python in Linux.  But how to do this?</p>
+
+ <a class="read-more" href="/tech/2017/06/09/setting-up-vim-for-python/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2017-06-09">
+                    09 Jun 2017
+                </time> 
+            </footer>
+        </article>
 
     
 
@@ -211,66 +315,6 @@ built-in lists- which would really be a list of pointers to the real location of
 
     
 
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2016/12/30/revisting-generic-collections/">Revisiting Generic Collections</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Earlier I asked if generic collections were faster than non-generic collections? I cooked up a quick test to confirm my suspicions that non-generics were slower because of the work it needs to box primitives and then add the reference to the collection- whereas for generic collections, it just needed to add the primitive to its own memory allocation. But then a colleague asked- how about performance for collections of objects? Wouldn’t a generic collection do...
-                <!--
-                <p>Earlier I asked if generic collections were faster than non-generic 
-collections?  I cooked up a quick test to confirm my suspicions that
-non-generics were slower because of the work it needs to box primitives
-and then add the reference to the collection- whereas for generic collections,
-it just needed to add the primitive to its own memory allocation.</p>
-
- <a class="read-more" href="/tech/2016/12/30/revisting-generic-collections/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2016-12-30">
-                    30 Dec 2016
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/finance/2016/12/09/riskfree-profit-strategies/">Risk-free Profit Strategies</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Working in the shadow of traders, I overhear some of their money making strategies. So yesterday at the Washington Zoo, I spotted a perfect money making opportunity reminiscent of traders’ strategies. There was a souvenir penny-engraving machine that presses souvenir pennies for 50 cents plus the one penny. Next to it was a machine that makes change for one and five dollar bills. Given a dollar bill, the machine returns 4 quarters and 2 pennies....
-                <!--
-                <p>Working in the shadow of traders, I overhear some of their money making strategies. 
-So yesterday at the Washington Zoo, I spotted a perfect money making opportunity 
-reminiscent of traders’ strategies.  There was a souvenir penny-engraving machine 
-that presses souvenir pennies for 50 cents plus the one penny.  Next to it was a 
-machine that makes change for one and five dollar bills.   Given a dollar bill, 
-the machine returns 4 quarters and 2 pennies.  Given a 5 dollar bill, the machine 
-returns 20 quarters and 10 pennies.</p>
-
- <a class="read-more" href="/finance/2016/12/09/riskfree-profit-strategies/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on finance 
-                
-                <time class="post-date" datetime="2016-12-09">
-                    09 Dec 2016
-                </time> 
-            </footer>
-        </article>
-
-    
-
     <nav class="pagination" role="pagination">
     
         
@@ -299,9 +343,9 @@ returns 20 quarters and 10 pennies.</p>
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io//assets/js/index.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

@@ -3,11 +3,259 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>http://patrickleungwl.github.io//</link>
-    <atom:link href="http://patrickleungwl.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Feb 2018 01:37:02 -0500</pubDate>
-    <lastBuildDate>Tue, 20 Feb 2018 01:37:02 -0500</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 14 Sep 2018 15:00:36 -0400</pubDate>
+    <lastBuildDate>Fri, 14 Sep 2018 15:00:36 -0400</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Options Ideas</title>
+        <description>&lt;p&gt;A tidbit from a recent read:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You’ll want to focus on trying to buy options during lower periods of 
+the security’s volatility and concentrate on selling options during high 
+volatility levels. We know that we can’t always predict that our timing 
+of options trading will correspond to high or low volatility levels, 
+but you can always tailor your options strategies to take advantage of 
+whatever volatility level exists at the time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What this means is when vols are low, you should buy options.  When vols 
+are high, you should sell options.&lt;/p&gt;
+
+&lt;p&gt;How do we know when vols are high or low?  We need to chart historical vols 
+for each ticker.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;20180910&lt;/strong&gt; Sold 2 PG 82.5 Calls for 20181019
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- PG’s been going nowhere.  Might as well sell it at an acceptable
+price point.  Want a waste of time on PG.&lt;/li&gt;
+      &lt;li&gt;Outcome- Just get rid of it- and earn 350.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180831&lt;/strong&gt; Sold 1 ADBE 250 Put for 20180928
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- ADBE’s hot on cloud.  Betting it won’t come down.&lt;br /&gt;
+Might as well earn some income while getting a chance to pick it up cheap.
+ADBE at 265 at the time.&lt;/li&gt;
+      &lt;li&gt;Outcome- At 274.  Most likely will not get put.  Get to keep 263.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180831&lt;/strong&gt; Sold 2 BRK.B 200 Puts for 20180921
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- Earn some money with chance to pick up more, BRK.B at 210 at the time&lt;/li&gt;
+      &lt;li&gt;Outcome- Looking good.  BRK.B now at 215.  Most likely will not get called. 
+Earned 85.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180827&lt;/strong&gt; Sold 5 MO 60.5 Calls
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- Sick of MO dropping, wanted to get out at a higher price point&lt;/li&gt;
+      &lt;li&gt;Outcome- Earned 200, got called, sold 500 sh of MO- got out at an acceptable point&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180516&lt;/strong&gt; Sold 1 BRK.B 195 Put
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- BRK’s a good keeper.  Don’t mind earning income while getting a 
+a chance to pick up more of BRK.B&lt;/li&gt;
+      &lt;li&gt;Outcome- Earned 256, got put at 195.  Not a bad deal looking back- since now 
+BRK.B is now at 215.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180430&lt;/strong&gt; Sold 5 MO 59 Calls
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- Make some income while MO is so low&lt;/li&gt;
+      &lt;li&gt;Outcome- Earned 40&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Fri, 14 Sep 2018 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/investing/2018/09/14/options-ideas/</link>
+        <guid isPermaLink="true">http://localhost:4000/investing/2018/09/14/options-ideas/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>investing</category>
+        
+      </item>
+    
+      <item>
+        <title>Python's Data Science Toolkit</title>
+        <description>&lt;p&gt;Essentially, there are five tools in Python’s data science toolkit.  These are
+NumPy, SciPy, Pandas, MatplotLib, and JupyterLib.  I’ll jot down the essential 
+notes on each of these toolkits.&lt;/p&gt;
+
+&lt;h2 id=&quot;numpy&quot;&gt;NumPy&lt;/h2&gt;
+
+&lt;h3 id=&quot;why-use-numpy-arrays&quot;&gt;Why use NumPy arrays?&lt;/h3&gt;
+
+&lt;p&gt;NumPy’s main benefit is its array object called ndarray.  Ndarray objects 
+wraps around multi-dimensional data- and allows for&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;many creational patterns- from other lists, from csvs,&lt;/li&gt;
+  &lt;li&gt;fast matrix operations without for-each loops&lt;/li&gt;
+  &lt;li&gt;fast data element access as well as data splicing per column or row&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;why-are-numpy-arrays-fast&quot;&gt;Why are NumPy arrays fast?&lt;/h3&gt;
+
+&lt;p&gt;NumPy arrays are typed arrays of a fixed size- wheras Python lists are 
+variable data structures of varying types.  NumPy arrays’ set type allows it to 
+preallocate continuous blocks of memory and allow optimised C API to make array 
+operations extremely quick.&lt;/p&gt;
+
+&lt;h3 id=&quot;creation-patterns&quot;&gt;Creation patterns&lt;/h3&gt;
+
+&lt;p&gt;There are many ways to create a ndarray.  Here are some examples:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Method&lt;/th&gt;
+      &lt;th&gt;Example&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;array&lt;/td&gt;
+      &lt;td&gt;np.array([1,2,3]) &lt;br /&gt;np.array([[1,2],[3,4]])&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;zeros&lt;/td&gt;
+      &lt;td&gt;np.zeros(5) &lt;br /&gt;np.zeroes((3,2))&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ones&lt;/td&gt;
+      &lt;td&gt;np.ones(5) &lt;br /&gt;np.ones((3,2))&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;genfromtxt&lt;/td&gt;
+      &lt;td&gt;np.genfromtxt( filename, delimiter, skip_header)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;datatypes-in-numpy&quot;&gt;Datatypes in NumPy&lt;/h3&gt;
+
+&lt;p&gt;DataTypes range from int8..16, 32, to int64, uint8…64, float16..float64, 
+complex64 to complex128. Depending on OS, int defaults to int32 or int64. Same for other types.&lt;/p&gt;
+
+&lt;p&gt;Examples:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;i = np.int8(8)
+i
+i.nbytes
+--
+8
+1
+
+
+i = np.int8(231238)
+i
+i.nbytes
+--
+70
+1
+
+i = np.int64(231238)
+i
+i.nbytes
+--
+231238
+8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;some-code-examples-&quot;&gt;Some code examples-&lt;/h3&gt;
+
+&lt;p&gt;Creating ndarray from specific values-&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+
+a = np.array([5,6,7,8])
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Creating ndarray from csv-&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;temperatures = np.genfromtxt(&quot;temperatures.csv&quot;, delimiter=&quot;;&quot;, skip_header=1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;operations&quot;&gt;Operations&lt;/h3&gt;
+
+&lt;p&gt;NumPy 2D arrays makes holding all data into memory and running operations 
+on them extremely easy.  With matrix operations, there is no need to write
+for-each loops.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+
+a = np.array([5,6,7,8])
+print(a * 3)
+--
+[15 18 21 24]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;slicing-arrays&quot;&gt;Slicing arrays&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = np.random.rand(8, 3)
+
+array([[ 0.43843581,  0.21627972,  0.3815473 ],
+       [ 0.58425937,  0.00771804,  0.18703358],
+       [ 0.07884072,  0.76229593,  0.64856938],
+       [ 0.31513721,  0.56262377,  0.15340494]])
+
+Get up-to-first-two-rows, second column
+a[:2,1]
+array([ 0.21627972,  0.00771804])
+
+Get all cells from last row
+a[-1]
+array([ 0.31513721,  0.56262377,  0.15340494])
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;numpy-methods&quot;&gt;NumPy methods&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sum()&lt;/li&gt;
+  &lt;li&gt;mean()&lt;/li&gt;
+  &lt;li&gt;std()&lt;/li&gt;
+  &lt;li&gt;min()&lt;/li&gt;
+  &lt;li&gt;max()&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html&quot;&gt;Full list of methods here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;scipy&quot;&gt;SciPy&lt;/h2&gt;
+
+&lt;p&gt;SciPy contains a list of modules that contains methods in the math, physics
+and scientific domains.&lt;br /&gt;
+&lt;a href=&quot;http://scipy.github.io/devdocs/genindex.html&quot;&gt;The list of functions is here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pandas&quot;&gt;Pandas&lt;/h2&gt;
+&lt;h2 id=&quot;matplotlib&quot;&gt;Matplotlib&lt;/h2&gt;
+&lt;h2 id=&quot;jypyterlab&quot;&gt;JypyterLab&lt;/h2&gt;
+
+</description>
+        <pubDate>Sun, 25 Feb 2018 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/tech/2018/02/25/python-tools/</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2018/02/25/python-tools/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>Decorator Pattern</title>
@@ -189,8 +437,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2017/10/13/decorator-pattern/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2017/10/13/decorator-pattern/</guid>
+        <link>http://localhost:4000/tech/2017/10/13/decorator-pattern/</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2017/10/13/decorator-pattern/</guid>
         
         <category>patterns</category>
         
@@ -226,8 +474,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 12 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2017/10/12/decorators/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2017/10/12/decorators/</guid>
+        <link>http://localhost:4000/tech/2017/10/12/decorators/</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2017/10/12/decorators/</guid>
         
         <category>patterns</category>
         
@@ -562,8 +810,8 @@ else.  If you are a manager, you don't drift.
 
 </description>
         <pubDate>Sun, 03 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//managing/2017/09/03/managing/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//managing/2017/09/03/managing/</guid>
+        <link>http://localhost:4000/managing/2017/09/03/managing/</link>
+        <guid isPermaLink="true">http://localhost:4000/managing/2017/09/03/managing/</guid>
         
         <category>managing</category>
         
@@ -595,8 +843,8 @@ knowledge over time accumulates to a mountain of knowledge.&lt;/li&gt;
 
 </description>
         <pubDate>Sat, 24 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2017/06/24/the-effective-engineer/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2017/06/24/the-effective-engineer/</guid>
+        <link>http://localhost:4000/tech/2017/06/24/the-effective-engineer/</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2017/06/24/the-effective-engineer/</guid>
         
         <category>patterns</category>
         
@@ -705,8 +953,8 @@ plt.show()
 
 </description>
         <pubDate>Sun, 11 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//python/2017/06/11/basic-matplotlib/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//python/2017/06/11/basic-matplotlib/</guid>
+        <link>http://localhost:4000/python/2017/06/11/basic-matplotlib/</link>
+        <guid isPermaLink="true">http://localhost:4000/python/2017/06/11/basic-matplotlib/</guid>
         
         <category>patterns</category>
         
@@ -771,8 +1019,8 @@ plt.show()
 
 </description>
         <pubDate>Sat, 10 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//python/2017/06/10/using-conda/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//python/2017/06/10/using-conda/</guid>
+        <link>http://localhost:4000/python/2017/06/10/using-conda/</link>
+        <guid isPermaLink="true">http://localhost:4000/python/2017/06/10/using-conda/</guid>
         
         <category>python</category>
         
@@ -861,8 +1109,8 @@ China’s Great Firewall.  I’ll retry when I’m outside of the Great Firewall
 
 </description>
         <pubDate>Fri, 09 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2017/06/09/setting-up-vim-for-python/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2017/06/09/setting-up-vim-for-python/</guid>
+        <link>http://localhost:4000/tech/2017/06/09/setting-up-vim-for-python/</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2017/06/09/setting-up-vim-for-python/</guid>
         
         <category>python</category>
         
@@ -905,177 +1153,13 @@ and overriding methods with the same names from other modules.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 08 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//python/2017/06/08/python_import/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//python/2017/06/08/python_import/</guid>
+        <link>http://localhost:4000/python/2017/06/08/python_import/</link>
+        <guid isPermaLink="true">http://localhost:4000/python/2017/06/08/python_import/</guid>
         
         <category>patterns</category>
         
         
         <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>Fooled By Randomness</title>
-        <description>&lt;p&gt;Nassim Tabeb’s “Fooled By Randomness” is such a great book, I thought
-I’d save some great passages here.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;On attributing brilliance to success:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A few years ago, when I told one A, a then Master-of-the-Universe type,
-that track records were less relevant than he thought, he found the remark 
-so offensive that he violently flung his cigarette lighter in my direction.
-The episode taught me a lot.  Remember that nobody accepts randomness in 
-his own success, only failure.  His ego was pumped up as he was heading up
-a department of &quot;great traders&quot; who were then temporarily making a fortune
-in the markets and attributing the idea to the sounding of their business,
-their insights, or their intelligence.  They subsequently blew up during
-the harsh New York winter of 1994 (it was the bond market crash that followed
-the surprise interest rate hike by Alan Greenspan).  The interesting part 
-is that several years later I can hardly find any of them still trading 
-(ergodicity).
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;On cycles:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Recall that some economists call the rare event a &quot;peso problem.&quot;  The
-designation peso problem does not appear to be undeservedly stereotypical.
-Things have not gotten better since the early 1980s with the currency of
-the United States' southern neighbor.  Long periods of stability draw hordes
-of bank currency traders and hedge fund operators to the calm waters of
-the Mexican peso; they enjoy owning the currency because of the high interest
-rate it commands.  Then they &quot;unexpectedly&quot; blow up, lose money for 
-investors, lose their jobs, and switch careers.  Then a new period of 
-stability sets in.  New currency traders come in with no memory of the bad
-event.  They are drawn to the Mexican peso and the story repeats itself.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;On asymmetry:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I was once asked in one of those meetings to express my views on the stock 
-market.  I state, not without a modicum of pomp, that I believed that the 
-market would go slightly up over the next week with a high probability. 
-How high?  &quot;About 70%&quot;.  Clearly, that was a very strong opinion.  But then
-someone interjected.  &quot;But Nassim, you just boasted being short a very large
-quantity of SP500 futures, making a bet that the market would go down. 
-What made you change your mind?&quot; &quot;I did not change my mind!  I have a lot
-of faith in my bet!  As a matter of fact I now feel like selling even more!&quot; 
-The other employees in the room seemed utterly confused.  &quot;Are you bullish
-or are you bearish?&quot;  I was asked by the strategist.  I replied that I could
-not understand the words bullish and bearish outside of their purely
-zoological consideration.... my opinion was that the market was more likely
-to go up (&quot;I would be bullish&quot;), but that it was preferably to short it 
-(&quot;I would be bearish&quot;), because, in the event of its going down, it could go
-down a lot.  Suddently, the few traders in the room understood my opinion 
-and started voicing similar opinions.  And I was not forced to come back to
-the following discussion. 
-
-Let us assume that the reader shared my opinion, that the market over the 
-next week had a 70% probability of going up and 30% probability of going down.
-However, let us say that it would go up by 1% on average, while it could go
-down by an average of 10%.  What would the reader do?  Is the reader
-bullish or bearish?
-
-Accordingly, bullish or bearish are terms used by people who do not engage
-in practicing uncertainty, like the television commentators, or those who have
-no experience in handling risk. 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Sat, 03 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>Technologies at a Glance</title>
-        <description>&lt;p&gt;With so many buzzwords coming up every year, it’s very easy to lose 
-track of what’s what.  A technologist, like any professional, must keep 
-reading to keep abreast of new developments.&lt;/p&gt;
-
-&lt;p&gt;As homework for myself, I’ve created an easy-to-read guide below 
-to organize each specific technology in its proper space.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Technology&lt;/th&gt;
-      &lt;th&gt;C#&lt;/th&gt;
-      &lt;th&gt;Java&lt;/th&gt;
-      &lt;th&gt;Python&lt;/th&gt;
-      &lt;th&gt;Javascript&lt;/th&gt;
-      &lt;th&gt;Php&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://martinfowler.com/articles/injection.html&quot;&gt;IOC &lt;br /&gt; Inversion of Control&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;Spring &lt;br /&gt; &lt;a href=&quot;http://musingsofaprogrammingaddict.blogspot.sg/2012/11/dagger-new-java-dependency-injection.html&quot;&gt;Dagger&lt;/a&gt; &lt;br /&gt; &lt;a href=&quot;https://keyholesoftware.com/2012/01/30/dependency-injection-for-android-development-an-introduction&quot;&gt;Guice&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Unit Testing&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://jasmine.github.io&quot;&gt;Jasmine&lt;/a&gt; &lt;br /&gt; &lt;a href=&quot;https://mochajs.org/&quot;&gt;Mocha&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Mocking&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://github.com/Moq/moq4/wiki/Quickstart&quot;&gt;Moq&lt;/a&gt; &lt;br /&gt; RhinoMocks&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://docs.python.org/3/library/unittest.mock.html&quot;&gt;unittest.mock&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ORM&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://docs.peewee-orm.com/en/latest&quot;&gt;Peewee&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;WebApi&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://nancyfx.org/&quot;&gt;NancyFX&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://flask.pocoo.org/&quot;&gt;Flask&lt;/a&gt; &lt;br /&gt; Django&lt;/td&gt;
-      &lt;td&gt;Nodejs&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Profiling&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-</description>
-        <pubDate>Sun, 14 May 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
