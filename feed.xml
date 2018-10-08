@@ -5,8 +5,8 @@
     <description>A journal of tech issues in financial applications</description>
     <link>http://patrickleungwl.github.io/</link>
     <atom:link href="http://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Oct 2018 00:15:36 -0400</pubDate>
-    <lastBuildDate>Mon, 08 Oct 2018 00:15:36 -0400</lastBuildDate>
+    <pubDate>Mon, 08 Oct 2018 00:23:14 -0400</pubDate>
+    <lastBuildDate>Mon, 08 Oct 2018 00:23:14 -0400</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -16,20 +16,24 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20181007 Statuses
   -2 PG 82.5 20181019 Calls- PG at 82.15, maybe I won&#39;t get to sell stock. 
   -1 BA 360  20181019 Puts.  BA at 386.5, way above put&#39;s strike. 
-  -2 C  72.5 20181019 Puts.  C at 72.42- maybe I will be forced to buy it.
+  -2 C  72.5 20181019 Puts.  C at 72.42- maybe I will not be forced to buy it.
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;Last week’s idea on selling 2 20181116 of BL at 50.0 fortunately did not 
 sell in the market.  Now BL is at 50.87.&lt;/p&gt;
 
-&lt;p&gt;New ideas&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;New ideas&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;I see SCHW is coming back.  And stocks like V and UNH just never seem to 
 come back down.  They keep going up and up.&lt;/p&gt;
 
-&lt;p&gt;-2 SCHW 50.0  20181116 Put SCHW appears to be coming back. 
-  -1 V    140.0 20181116 Put V just doesnt seem to go down.&lt;/p&gt;
+&lt;p&gt;Trigger new trades&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -2 SCHW 50.0  20181116 Put SCWH at 51.48.  SCHW appears to be coming back ~ $220
+  -1 V    140.0 20181116 Put V at 145.36.    V just doesnt seem to go down ~ $250
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 
