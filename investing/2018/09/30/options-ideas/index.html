@@ -31,92 +31,48 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">Setting Up Vim For Python</h1>
+            <h1 class="post-title">Options Ideas BiWeekly</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2017-06-09">09 Jun 2017</time>
+                <time class="post-date" datetime="2018-09-30">30 Sep 2018</time>
                 
-                    on tech
+                    on investing
                 
             </section>
         </header>
 
         <section class="post-content">
-            <p>While I’m enthusiastic with using Vim, I’m afraid that my many years of using
-Visual Studio’s Intellisense has spoiled me.  I now require the same method 
-popups now on Vim when coding Python in Linux.  But how to do this?</p>
+            <p>Some tips:</p>
 
-<p>First I backup my original .vimrc:</p>
+<ul>
+  <li>When vols are low, buy options.  When vols are high, sell options.</li>
+  <li>When underlying is high and doesn’t look likely to go any higher, 
+ sell protected calls at above current price.  Pocket the premiums.</li>
+  <li>When underlying is low and doesn’t look likely to go any lower,
+ sell puts at below current price.  Pocket the premiums.</li>
+</ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>" Automatic syntax highlighting
-syntax on
+<p>Some highlights this past week.</p>
 
-" Stop vim from creating automatic backups
-set noswapfile
-set nobackup
-set nowb
+<div class="highlighter-rouge"><pre class="highlight"><code>20180928 Statuses
+  -2 PG 82.5 20181019 Calls- PG at 83.3, above calls' strikes. 
+  -1 BA 360  20181019 Puts.  BA at 371.9, way above put's strike. 
+  -2 C  72.5 20181019 Puts.  C at 71.74- puts at risk.
 
-" Reload files modified outside of vim
-set autoread
+2010928 Expirations
+  -1 ADBE 250 20180928 Put- ADBE at 270. Safely pocketed the 265 premium. 
+  -2 BRK.B 200 20180921 Puts.  BRK.B at 215. Pocketed 85.
 
-" Make tabs 4 spaces wide 
-set tabstop=4
-set shiftwidth=4
-
-" Replace tabs with spaces
-set expandtab
-
-" If already indented, next line should be indented
-set autoindent
-
-" Show line numbers
-set number
-
-" Highlight col 81 to keep under 80 cols
-set colorcolumn=80
-
-" Set screen to 85x40
-set lines=45
-set columns=85
-
-" Set editing to nowrap
-set nowrap
-
-set nocompatible
-colorscheme oceandeep 
-set guifont=Inconsolata\ 15
-set guicursor=a:blinkon0
-
-set foldmethod=indent
-set foldlevel=99
-filetype on
-filetype indent plugin on
-
-" Set split window navigation shortcuts 
-map &lt;c-j&gt; &lt;c-w&gt;j
-map &lt;c-k&gt; &lt;c-w&gt;k
-map &lt;c-l&gt; &lt;c-w&gt;l
-map &lt;c-h&gt; &lt;c-w&gt;h
-
-set guioptions-=T "get rid of toolbar 
-set guioptions-=m "get rid of men
-
-source $VIMRUNTIME/mswin.vim
-behave mswin
-
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+20180924 New ideas
+  Sold 1 BA 360 20181019 Puts.  Pocketed 407.
+  Sold 2 C 72.5 20181019 Puts.  Pocketed 200.
 
 </code></pre>
 </div>
 
-<p>Next I followed instructions for <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>.
-Sadly I found the page instructions incomprehensible.  I next tried 
-<a href="https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/">this page</a>
-and similarly failed to install YouCompleteMe using Vundle. 
-It’s mostly there are some external dependencies that are blocked behind
-China’s Great Firewall.  I’ll retry when I’m outside of the Great Firewall.</p>
+<p>Cloud software maker BL rocking new highs at 56.47.<br />
+Let’s sell 2 20181116 puts on it- at 50.0 for 340.</p>
+
+<hr />
 
 
         </section>
@@ -131,46 +87,28 @@ China’s Great Firewall.  I’ll retry when I’m outside of the Great Firewall
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                             
                             
 
                     
-                        <li><span>08 Jun 2017</span>
-                          <a href="http://patrickleungwl.github.io//python/2017/06/08/python_import/">Imports in Python</a>
+                        <li><span>14 Sep 2018</span>
+                          <a href="http://patrickleungwl.github.io//investing/2018/09/14/options-ideas/">Options Ideas</a>
                         </li>
                     
-                        <li><span>03 Jun 2017</span>
-                          <a href="http://patrickleungwl.github.io//life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a>
+                        <li><span>25 Feb 2018</span>
+                          <a href="http://patrickleungwl.github.io//tech/2018/02/25/python-tools/">Python's Data Science Toolkit</a>
                         </li>
                     
-                        <li><span>14 May 2017</span>
-                          <a href="http://patrickleungwl.github.io//tech/2017/05/14/technologies-at-a-glance/">Technologies at a Glance</a>
+                        <li><span>13 Oct 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/10/13/decorator-pattern/">Decorator Pattern</a>
                         </li>
                     
-                        <li><span>23 Apr 2017</span>
-                          <a href="http://patrickleungwl.github.io//investing/2017/04/23/the-tao-of_charlie-munger/">The Tao of Charlie Munger</a>
+                        <li><span>12 Oct 2017</span>
+                          <a href="http://patrickleungwl.github.io//tech/2017/10/12/decorators/">Patterns</a>
                         </li>
                     
-                        <li><span>21 Mar 2017</span>
-                          <a href="http://patrickleungwl.github.io//tech/python/numpy/2017/03/21/timing_numpy/">Timing NumPy</a>
+                        <li><span>03 Sep 2017</span>
+                          <a href="http://patrickleungwl.github.io//managing/2017/09/03/managing/">Managing, by Harold Geneen</a>
                         </li>
                     
                 </ul>
@@ -184,15 +122,15 @@ China’s Great Firewall.  I’ll retry when I’m outside of the Great Firewall
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=Setting Up Vim For Python&amp;url=/tech/2017/06/09/setting-up-vim-for-python/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=Options Ideas BiWeekly&amp;url=/investing/2018/09/30/options-ideas/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tech/2017/06/09/setting-up-vim-for-python/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/investing/2018/09/30/options-ideas/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/tech/2017/06/09/setting-up-vim-for-python/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/investing/2018/09/30/options-ideas/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>

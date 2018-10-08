@@ -59,6 +59,56 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/20/backgroundworker/">Using BackgroundWorker</a></h2>
+            </header>
+            <section class="post-excerpt">
+                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. using System; using System.ComponentModel; using System.Threading; namespace TestBackgroundWorker { class TestBkGrdWorker { static void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // RunTest // // Function run by main thread // Main thread...
+                <!--
+                <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p>
+
+ <a class="read-more" href="/tech/2015/12/20/backgroundworker/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-20">
+                    20 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/19/variable-params/">Using Variable Params</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Today just put together a test case to show usage of functions with variable number of parameters. using System; using System.Threading; namespace TestVariableParams { class Tester { // use object[] to allow for arguments of any type static void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } static void Main(string[] args) { LogMsg("Test {0}", "first arg"); LogMsg("This is a test {0} {1}", "first arg", "second arg"); LogMsg("This is a...
+                <!--
+                <p>Today just put together a test case to show usage of functions with variable number of parameters.</p>
+
+ <a class="read-more" href="/tech/2015/12/19/variable-params/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-19">
+                    19 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a></h2>
             </header>
             <section class="post-excerpt">
@@ -192,57 +242,6 @@
                 
                 <time class="post-date" datetime="2014-11-04">
                     04 Nov 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Just playing with a simple delegate example. using System; namespace TestDelegate { class TestDel { // Declare signature of operator methods delegate int OperatorSig(int a, int b); TestDel() { } int Add(int a, int b) { return a + b; } int Subtract(int a, int b) { return a - b; } static void Main(string[] args) { TestDel td = new TestDel(); OperatorSig myAdder = new OperatorSig(td.Add); OperatorSig mySuber = new OperatorSig(td.Subtract); Console.Out.WriteLine("Adder Result is...
-                <!--
-                <p>Just playing with a simple delegate example.</p>
-
- <a class="read-more" href="/tech/2014/11/02/simple-delegate-example/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-11-02">
-                    02 Nov 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/11/02/how-to-use-yield/">How to use Yield</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do not have. using System; using System.Collections.Generic; namespace TestYield { class TestYield { // -------------------------------------------------- // AllOdds // // Yield provides an easy way to make an enumerator. // Without Yield, you'd have to generate the entire list // of items to iterate thru- and return that list to the // user. // -------------------------------------------------- static public IEnumerable&lt;int&gt;...
-                <!--
-                <p>Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do 
-not have.</p>
-
- <a class="read-more" href="/tech/2014/11/02/how-to-use-yield/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-11-02">
-                    02 Nov 2014
                 </time> 
             </footer>
         </article>
