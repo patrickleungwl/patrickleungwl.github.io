@@ -11,18 +11,18 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css" />
 
 </head>
 <body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
-        <a class="back-button icon-arrow-left" href="http://patrickleungwl.github.io/">Home</a>
-        <a class="subscribe-button icon-feed" href="http://patrickleungwl.github.io/feed.xml">Subscribe</a>
+        <a class="back-button icon-arrow-left" href="http://localhost:4000/">Home</a>
+        <a class="subscribe-button icon-feed" href="http://localhost:4000/feed.xml">Subscribe</a>
     </nav>
 </header>
 
@@ -43,10 +43,10 @@
         <section class="post-content">
             <p>It’s a slow day at work.  Let’s try an asynch delegate.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Runtime.Remoting.Messaging</span><span class="p">;</span>      <span class="c1">// To access the AsyncResult type
-</span>
+<span class="k">using</span> <span class="nn">System.Runtime.Remoting.Messaging</span><span class="p">;</span>      <span class="c1">// To access the AsyncResult type</span>
+
 <span class="k">namespace</span> <span class="nn">TestAsyncDelegate</span>
 <span class="p">{</span>
     <span class="k">class</span> <span class="nc">TestDel</span>
@@ -58,13 +58,13 @@
         <span class="p">}</span>
 
 
-        <span class="c1">// --------------------------------------------------------------
-</span>        <span class="c1">// Add
-</span>        <span class="c1">// 
-</span>        <span class="c1">// Random work method that takes an arbitrarily set 2.4 seconds
-</span>        <span class="c1">// to complete.
-</span>        <span class="c1">// --------------------------------------------------------------
-</span>        
+        <span class="c1">// --------------------------------------------------------------</span>
+        <span class="c1">// Add</span>
+        <span class="c1">// </span>
+        <span class="c1">// Random work method that takes an arbitrarily set 2.4 seconds</span>
+        <span class="c1">// to complete.</span>
+        <span class="c1">// --------------------------------------------------------------</span>
+        
         <span class="k">public</span> <span class="kt">int</span> <span class="nf">Add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"ThreadId={0}, Adding starts"</span><span class="p">,</span>
@@ -76,43 +76,43 @@
         <span class="p">}</span>
 
 
-        <span class="c1">// --------------------------------------------------------------
-</span>        <span class="c1">// ResultCallback
-</span>        <span class="c1">//
-</span>        <span class="c1">// This function gets called when the delegate method completes
-</span>        <span class="c1">// asynchronously in the background.
-</span>        <span class="c1">// We call EndInvoke to get the delegate results.
-</span>        <span class="c1">// --------------------------------------------------------------
-</span>
+        <span class="c1">// --------------------------------------------------------------</span>
+        <span class="c1">// ResultCallback</span>
+        <span class="c1">//</span>
+        <span class="c1">// This function gets called when the delegate method completes</span>
+        <span class="c1">// asynchronously in the background.</span>
+        <span class="c1">// We call EndInvoke to get the delegate results.</span>
+        <span class="c1">// --------------------------------------------------------------</span>
+
         <span class="k">public</span> <span class="k">void</span> <span class="nf">ResultCallback</span><span class="p">(</span><span class="n">IAsyncResult</span> <span class="n">iar</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">AsyncResult</span> <span class="n">ar</span> <span class="p">=</span> <span class="p">(</span><span class="n">AsyncResult</span><span class="p">)</span><span class="n">iar</span><span class="p">;</span>                   <span class="c1">// Get class object reference.
-</span>            <span class="n">OperatorSig</span> <span class="n">del</span> <span class="p">=</span> <span class="p">(</span><span class="n">OperatorSig</span><span class="p">)</span><span class="n">ar</span><span class="p">.</span><span class="n">AsyncDelegate</span><span class="p">;</span>     <span class="c1">// Get reference to delegate.
-</span>            <span class="kt">int</span> <span class="n">result</span> <span class="p">=</span> <span class="n">del</span><span class="p">.</span><span class="nf">EndInvoke</span><span class="p">(</span><span class="n">iar</span><span class="p">);</span>
+            <span class="n">AsyncResult</span> <span class="n">ar</span> <span class="p">=</span> <span class="p">(</span><span class="n">AsyncResult</span><span class="p">)</span><span class="n">iar</span><span class="p">;</span>                   <span class="c1">// Get class object reference.</span>
+            <span class="n">OperatorSig</span> <span class="n">del</span> <span class="p">=</span> <span class="p">(</span><span class="n">OperatorSig</span><span class="p">)</span><span class="n">ar</span><span class="p">.</span><span class="n">AsyncDelegate</span><span class="p">;</span>     <span class="c1">// Get reference to delegate.</span>
+            <span class="kt">int</span> <span class="n">result</span> <span class="p">=</span> <span class="n">del</span><span class="p">.</span><span class="nf">EndInvoke</span><span class="p">(</span><span class="n">iar</span><span class="p">);</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"ThreadId={0}, Add result = {1}"</span><span class="p">,</span> 
                 <span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">ManagedThreadId</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
         <span class="p">}</span>
 
 
-        <span class="c1">// --------------------------------------------------------------
-</span>        <span class="c1">// Main
-</span>        <span class="c1">// 
-</span>        <span class="c1">// --------------------------------------------------------------
-</span>        
+        <span class="c1">// --------------------------------------------------------------</span>
+        <span class="c1">// Main</span>
+        <span class="c1">// </span>
+        <span class="c1">// --------------------------------------------------------------</span>
+        
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">TestDel</span> <span class="n">td</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TestDel</span><span class="p">();</span>
 
-            <span class="c1">// create delegate and invoke to run asynchronously
-</span>            <span class="n">OperatorSig</span> <span class="n">myAdder</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OperatorSig</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">Add</span><span class="p">);</span>
+            <span class="c1">// create delegate and invoke to run asynchronously</span>
+            <span class="n">OperatorSig</span> <span class="n">myAdder</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OperatorSig</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">Add</span><span class="p">);</span>
             <span class="n">IAsyncResult</span> <span class="n">res</span> <span class="p">=</span> <span class="n">myAdder</span><span class="p">.</span><span class="nf">BeginInvoke</span><span class="p">(</span>
                                     <span class="m">10</span><span class="p">,</span> 
                                     <span class="m">5</span><span class="p">,</span>
                                     <span class="k">new</span> <span class="nf">AsyncCallback</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">ResultCallback</span><span class="p">),</span> 
                                     <span class="k">null</span><span class="p">);</span>
 
-            <span class="c1">// main thread keeps doing something else
-</span>            <span class="k">while</span> <span class="p">(!</span><span class="n">res</span><span class="p">.</span><span class="n">IsCompleted</span><span class="p">)</span>
+            <span class="c1">// main thread keeps doing something else</span>
+            <span class="k">while</span> <span class="p">(!</span><span class="n">res</span><span class="p">.</span><span class="n">IsCompleted</span><span class="p">)</span>
             <span class="p">{</span>
                 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
                 <span class="p">{</span>
@@ -124,12 +124,11 @@
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Runtime results shown here:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ThreadId=3, Adding starts
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ThreadId=3, Adding starts
 ThreadId=1, Main thread working
 ThreadId=1, Main thread working
 ThreadId=1, Main thread working
@@ -142,8 +141,7 @@ ThreadId=1, Main thread working
 ThreadId=1, Main thread working
 ThreadId=1, Main thread working
 ThreadId=1, Main thread working
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
         </section>
@@ -238,28 +236,30 @@ ThreadId=1, Main thread working
                         
                     
                         
+                    
+                        
                             
                             
 
                     
                         <li><span>02 Nov 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a>
+                          <a href="http://localhost:4000/tech/2014/11/02/simple-delegate-example/">Simple Delegate Example</a>
                         </li>
                     
                         <li><span>02 Nov 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/11/02/how-to-use-yield/">How to use Yield</a>
+                          <a href="http://localhost:4000/tech/2014/11/02/how-to-use-yield/">How to use Yield</a>
                         </li>
                     
                         <li><span>24 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/24/equals-hashcode-and-comparable-interface/">Equals Hashcode and Comparable Interface in Java</a>
+                          <a href="http://localhost:4000/tech/2014/03/24/equals-hashcode-and-comparable-interface/">Equals Hashcode and Comparable Interface in Java</a>
                         </li>
                     
                         <li><span>24 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a>
+                          <a href="http://localhost:4000/tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a>
                         </li>
                     
                         <li><span>22 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a>
+                          <a href="http://localhost:4000/tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a>
                         </li>
                     
                 </ul>
@@ -310,9 +310,9 @@ ThreadId=1, Main thread working
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/index.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

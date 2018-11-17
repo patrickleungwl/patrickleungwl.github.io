@@ -11,18 +11,18 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css" />
 
 </head>
 <body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
-        <a class="back-button icon-arrow-left" href="http://patrickleungwl.github.io/">Home</a>
-        <a class="subscribe-button icon-feed" href="http://patrickleungwl.github.io/feed.xml">Subscribe</a>
+        <a class="back-button icon-arrow-left" href="http://localhost:4000/">Home</a>
+        <a class="subscribe-button icon-feed" href="http://localhost:4000/feed.xml">Subscribe</a>
     </nav>
 </header>
 
@@ -44,7 +44,7 @@
             <p>Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do 
 not have.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 
 
@@ -52,15 +52,15 @@ not have.</p>
 <span class="p">{</span>
     <span class="k">class</span> <span class="nc">TestYield</span>
     <span class="p">{</span>
-        <span class="c1">// --------------------------------------------------
-</span>        <span class="c1">// AllOdds
-</span>        <span class="c1">//
-</span>        <span class="c1">// Yield provides an easy way to make an enumerator.
-</span>        <span class="c1">// Without Yield, you'd have to generate the entire list
-</span>        <span class="c1">// of items to iterate thru- and return that list to the
-</span>        <span class="c1">// user.
-</span>        <span class="c1">// --------------------------------------------------
-</span>        
+        <span class="c1">// --------------------------------------------------</span>
+        <span class="c1">// AllOdds</span>
+        <span class="c1">//</span>
+        <span class="c1">// Yield provides an easy way to make an enumerator.</span>
+        <span class="c1">// Without Yield, you'd have to generate the entire list</span>
+        <span class="c1">// of items to iterate thru- and return that list to the</span>
+        <span class="c1">// user.</span>
+        <span class="c1">// --------------------------------------------------</span>
+        
         <span class="k">static</span> <span class="k">public</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="nf">AllOdds</span><span class="p">()</span>
         <span class="p">{</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">Int16</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
@@ -71,13 +71,13 @@ not have.</p>
         <span class="p">}</span>
 
 
-        <span class="c1">// --------------------------------------------------
-</span>        <span class="c1">// Main
-</span>        <span class="c1">//
-</span>        <span class="c1">// Use the enumerator above- and can stop the enumerator
-</span>        <span class="c1">// from generating the next item by breaking at any time.
-</span>        <span class="c1">// --------------------------------------------------
-</span>
+        <span class="c1">// --------------------------------------------------</span>
+        <span class="c1">// Main</span>
+        <span class="c1">//</span>
+        <span class="c1">// Use the enumerator above- and can stop the enumerator</span>
+        <span class="c1">// from generating the next item by breaking at any time.</span>
+        <span class="c1">// --------------------------------------------------</span>
+
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -90,8 +90,7 @@ not have.</p>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
         </section>
@@ -188,28 +187,30 @@ not have.</p>
                         
                     
                         
+                    
+                        
                             
                             
 
                     
                         <li><span>02 Nov 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/11/02/how-to-use-yield/">How to use Yield</a>
+                          <a href="http://localhost:4000/tech/2014/11/02/how-to-use-yield/">How to use Yield</a>
                         </li>
                     
                         <li><span>24 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/24/equals-hashcode-and-comparable-interface/">Equals Hashcode and Comparable Interface in Java</a>
+                          <a href="http://localhost:4000/tech/2014/03/24/equals-hashcode-and-comparable-interface/">Equals Hashcode and Comparable Interface in Java</a>
                         </li>
                     
                         <li><span>24 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a>
+                          <a href="http://localhost:4000/tech/2014/03/24/decorator-pattern-in-plain-speak/">Decorator Pattern in Plain Speak</a>
                         </li>
                     
                         <li><span>22 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a>
+                          <a href="http://localhost:4000/tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a>
                         </li>
                     
                         <li><span>21 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/21/exceptions-in-java-constructors/">Exceptions in Java Constructors</a>
+                          <a href="http://localhost:4000/tech/2014/03/21/exceptions-in-java-constructors/">Exceptions in Java Constructors</a>
                         </li>
                     
                 </ul>
@@ -260,9 +261,9 @@ not have.</p>
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/index.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

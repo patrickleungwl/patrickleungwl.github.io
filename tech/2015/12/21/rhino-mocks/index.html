@@ -11,18 +11,18 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css" />
 
 </head>
 <body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
-        <a class="back-button icon-arrow-left" href="http://patrickleungwl.github.io/">Home</a>
-        <a class="subscribe-button icon-feed" href="http://patrickleungwl.github.io/feed.xml">Subscribe</a>
+        <a class="back-button icon-arrow-left" href="http://localhost:4000/">Home</a>
+        <a class="subscribe-button icon-feed" href="http://localhost:4000/feed.xml">Subscribe</a>
     </nav>
 </header>
 
@@ -45,22 +45,21 @@
 
 <p>IAdder.cs</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">TestAdderLib</span>
 <span class="p">{</span>
-    <span class="k">public</span> <span class="k">interface</span> <span class="n">IAdder</span>
+    <span class="k">public</span> <span class="k">interface</span> <span class="nc">IAdder</span>
     <span class="p">{</span>
         <span class="kt">int</span> <span class="nf">AddTwoNums</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Adder.cs</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">TestAdderLib</span>
@@ -74,12 +73,11 @@
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>TestCalculatorWithRhino.cs</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Microsoft.VisualStudio.TestTools.UnitTesting</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Calculator</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">TestAdderLib</span><span class="p">;</span>
@@ -111,7 +109,7 @@
         <span class="p">[</span><span class="n">TestMethod</span><span class="p">]</span>
         <span class="k">public</span> <span class="k">void</span> <span class="nf">TestCalculatorWithManualAdderStub</span><span class="p">()</span>
         <span class="p">{</span>
-            <span class="n">var</span> <span class="n">adderStub</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ManuallyCodedAdderStub</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">adderStub</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ManuallyCodedAdderStub</span><span class="p">();</span>
             <span class="n">CalculatorV1</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">CalculatorV1</span><span class="p">();</span>
             <span class="n">c</span><span class="p">.</span><span class="n">myAdder</span> <span class="p">=</span> <span class="n">adderStub</span><span class="p">;</span>
             <span class="n">Assert</span><span class="p">.</span><span class="nf">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">c</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">));</span>
@@ -140,8 +138,7 @@
 
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
         </section>
@@ -222,28 +219,30 @@
                         
                     
                         
+                    
+                        
                             
                             
 
                     
                         <li><span>20 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/12/20/backgroundworker/">Using BackgroundWorker</a>
+                          <a href="http://localhost:4000/tech/2015/12/20/backgroundworker/">Using BackgroundWorker</a>
                         </li>
                     
                         <li><span>19 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/12/19/variable-params/">Using Variable Params</a>
+                          <a href="http://localhost:4000/tech/2015/12/19/variable-params/">Using Variable Params</a>
                         </li>
                     
                         <li><span>18 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a>
+                          <a href="http://localhost:4000/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a>
                         </li>
                     
                         <li><span>17 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech,csharp/2015/12/17/how-backgroundworker-works/">How BackgroundWorker Works</a>
+                          <a href="http://localhost:4000/tech,csharp/2015/12/17/how-backgroundworker-works/">How BackgroundWorker Works</a>
                         </li>
                     
                         <li><span>03 May 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/05/03/are-generic-collections-faster/">Are Generic Collections Faster than Non-Generic Collections?</a>
+                          <a href="http://localhost:4000/tech/2015/05/03/are-generic-collections-faster/">Are Generic Collections Faster than Non-Generic Collections?</a>
                         </li>
                     
                 </ul>
@@ -294,9 +293,9 @@
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/index.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">
