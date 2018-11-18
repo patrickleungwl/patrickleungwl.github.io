@@ -3,10 +3,10 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/</link>
-    <atom:link href="http://patrickleungwl.github.iohttp://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Nov 2018 19:19:29 -0500</pubDate>
-    <lastBuildDate>Sat, 17 Nov 2018 19:19:29 -0500</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 17 Nov 2018 21:55:02 -0500</pubDate>
+    <lastBuildDate>Sat, 17 Nov 2018 21:55:02 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -36,8 +36,8 @@ SCHW- Sell 2 50.0 Dec21 calls at 0.60 each for 110.
 &lt;hr /&gt;
 </description>
         <pubDate>Sat, 17 Nov 2018 00:00:00 -0500</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/investing/2018/11/17/options-ideas/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/investing/2018/11/17/options-ideas/</guid>
+        <link>/investing/2018/11/17/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/11/17/options-ideas/</guid>
         
         <category>investing</category>
         
@@ -74,8 +74,8 @@ come back down.  They keep going up and up.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 07 Oct 2018 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/investing/2018/10/07/options-ideas/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/investing/2018/10/07/options-ideas/</guid>
+        <link>/investing/2018/10/07/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/10/07/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -120,8 +120,8 @@ Let’s sell 2 20181116 puts on it- at 50.0 for 340.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 30 Sep 2018 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/investing/2018/09/30/options-ideas/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/investing/2018/09/30/options-ideas/</guid>
+        <link>/investing/2018/09/30/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/09/30/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -198,8 +198,8 @@ BRK.B is now at 215.&lt;/li&gt;
 
 </description>
         <pubDate>Fri, 14 Sep 2018 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/investing/2018/09/14/options-ideas/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/investing/2018/09/14/options-ideas/</guid>
+        <link>/investing/2018/09/14/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/09/14/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -368,8 +368,8 @@ and scientific domains.&lt;br /&gt;
 
 </description>
         <pubDate>Sun, 25 Feb 2018 00:00:00 -0500</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/tech/2018/02/25/python-tools/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/tech/2018/02/25/python-tools/</guid>
+        <link>/tech/2018/02/25/python-tools/</link>
+        <guid isPermaLink="true">/tech/2018/02/25/python-tools/</guid>
         
         <category>patterns</category>
         
@@ -558,8 +558,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/tech/2017/10/13/decorator-pattern/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/tech/2017/10/13/decorator-pattern/</guid>
+        <link>/tech/2017/10/13/decorator-pattern/</link>
+        <guid isPermaLink="true">/tech/2017/10/13/decorator-pattern/</guid>
         
         <category>patterns</category>
         
@@ -595,8 +595,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 12 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/tech/2017/10/12/decorators/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/tech/2017/10/12/decorators/</guid>
+        <link>/tech/2017/10/12/decorators/</link>
+        <guid isPermaLink="true">/tech/2017/10/12/decorators/</guid>
         
         <category>patterns</category>
         
@@ -931,8 +931,8 @@ else.  If you are a manager, you don't drift.
 
 </description>
         <pubDate>Sun, 03 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/managing/2017/09/03/managing/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/managing/2017/09/03/managing/</guid>
+        <link>/managing/2017/09/03/managing/</link>
+        <guid isPermaLink="true">/managing/2017/09/03/managing/</guid>
         
         <category>managing</category>
         
@@ -964,8 +964,8 @@ knowledge over time accumulates to a mountain of knowledge.&lt;/li&gt;
 
 </description>
         <pubDate>Sat, 24 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/tech/2017/06/24/the-effective-engineer/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/tech/2017/06/24/the-effective-engineer/</guid>
+        <link>/tech/2017/06/24/the-effective-engineer/</link>
+        <guid isPermaLink="true">/tech/2017/06/24/the-effective-engineer/</guid>
         
         <category>patterns</category>
         
@@ -1074,8 +1074,8 @@ plt.show()
 
 </description>
         <pubDate>Sun, 11 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.iohttp://patrickleungwl.github.io/python/2017/06/11/basic-matplotlib/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.iohttp://patrickleungwl.github.io/python/2017/06/11/basic-matplotlib/</guid>
+        <link>/python/2017/06/11/basic-matplotlib/</link>
+        <guid isPermaLink="true">/python/2017/06/11/basic-matplotlib/</guid>
         
         <category>patterns</category>
         
