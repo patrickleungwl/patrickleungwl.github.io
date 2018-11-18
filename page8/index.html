@@ -4,17 +4,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title> - A journal of tech issues in financial applications</title>
+    <title>PatrickLeungWL - A journal of tech issues in financial applications</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/main.css" />
 
 </head>
 <body class="home-template">
@@ -57,14 +57,14 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></h2>
+                <h2 class="post-title"><a href="http://patrickleungwl.github.io/tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></h2>
             </header>
             <section class="post-excerpt">
                 Strings in Java can be declared either literally- String s = "123"; or as a String instance- String s = new String("123"); What are the differences between these two strings? package drills; public class Tester { public static void main(String[] args) { // Test differences between String v = new String(...) // and String v = "..." // String literals are stored in a string pool- cached and reused. // String objects are stored in...
                 <!--
                 <p>Strings in Java can be declared either literally-</p>
 
- <a class="read-more" href="/tech/2014/03/20/java-string-literals/">&raquo;</a>
+ <a class="read-more" href="http://patrickleungwl.github.io/tech/2014/03/20/java-string-literals/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -82,7 +82,7 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/17/java-assertions/">Assertions in Java</a></h2>
+                <h2 class="post-title"><a href="http://patrickleungwl.github.io/tech/2014/03/17/java-assertions/">Assertions in Java</a></h2>
             </header>
             <section class="post-excerpt">
                 Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:
@@ -94,7 +94,7 @@ java -ea Test.java
                 <!--
                 <p>Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:</p>
 
- <a class="read-more" href="/tech/2014/03/17/java-assertions/">&raquo;</a>
+ <a class="read-more" href="http://patrickleungwl.github.io/tech/2014/03/17/java-assertions/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -112,7 +112,7 @@ java -ea Test.java
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a></h2>
+                <h2 class="post-title"><a href="http://patrickleungwl.github.io/tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a></h2>
             </header>
             <section class="post-excerpt">
                 With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer necessary to create timers and callbacks. Java 1.5 has a ExecutorService that can execute tasks at scheduled times. Below shows a quick example of how it can be used. package drills; import java.text.DateFormat; import java.text.SimpleDateFormat; import java.util.Calendar; import java.util.Date; import java.util.concurrent.Executors; import java.util.concurrent.ScheduledExecutorService; import java.util.concurrent.TimeUnit; public class Tester { DateFormat _df; public Tester() {...
@@ -121,7 +121,7 @@ java -ea Test.java
 necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
 at scheduled times.  Below shows a quick example of how it can be used.</p>
 
- <a class="read-more" href="/tech/2014/03/17/delayed_background/">&raquo;</a>
+ <a class="read-more" href="http://patrickleungwl.github.io/tech/2014/03/17/delayed_background/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -139,14 +139,14 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a></h2>
+                <h2 class="post-title"><a href="http://patrickleungwl.github.io/tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a></h2>
             </header>
             <section class="post-excerpt">
                 More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’. Common Default Behavior At indeterminate times, the GC comes around, finds and frees up every unreferenced object- these are objects that cannot be traced to a long living root object every object referenced only by a WeakReference and- for Java only- if free memory is low, every object referenced only by a SoftReference C# Has No SoftReferences C# does...
                 <!--
                 <p>More on our old friend, the Garbage Collector- also known on the streets as the ‘GC’.</p>
 
- <a class="read-more" href="/tech/2014/03/15/garbage-collector-differences/">&raquo;</a>
+ <a class="read-more" href="http://patrickleungwl.github.io/tech/2014/03/15/garbage-collector-differences/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -164,14 +164,14 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></h2>
+                <h2 class="post-title"><a href="http://patrickleungwl.github.io/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a></h2>
             </header>
             <section class="post-excerpt">
                 Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-) When it comes to memory management, C# certainly has many comparable features found in Java and more. Following the previous example of testing WeakReferences in Java, we’ll now run a similar test in C#. First, we’ll need a dummy memory resource-heavy object. We’ll use the same DumbWeight class, whose sole function is to allocate memory. using System.Collection.Generic; namespace Drills...
                 <!--
                 <p>Overheard Microsoft taunting Oracle the other day- “Anything you can do, I can do better.”  8-)</p>
 
- <a class="read-more" href="/tech/2014/03/13/weakreferences-in-csharp/">&raquo;</a>
+ <a class="read-more" href="http://patrickleungwl.github.io/tech/2014/03/13/weakreferences-in-csharp/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -189,7 +189,7 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></h2>
+                <h2 class="post-title"><a href="http://patrickleungwl.github.io/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></h2>
             </header>
             <section class="post-excerpt">
                 Continuing on with our investigation into memory handling in Java, let’s look at another rarely used feature- the SoftReference.  To get to the point, a SoftReference is just like a WeakReference- except that the Garbage Collector only collects its referenced object if the JVM is running low on memory.  This makes a SoftReference more “sticky” in a running process’s memory. Here is a simple example of how a SoftReference works. Let’s reuse the same resource-heavy...
@@ -200,7 +200,7 @@ just like a WeakReference- except that the Garbage Collector only collects its
 referenced object if the JVM is running low on memory.  This makes a SoftReference 
 more “sticky” in a running process’s memory.</p>
 
- <a class="read-more" href="/tech/2014/03/12/softreferences-in-java/">&raquo;</a>
+ <a class="read-more" href="http://patrickleungwl.github.io/tech/2014/03/12/softreferences-in-java/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -218,7 +218,7 @@ more “sticky” in a running process’s memory.</p>
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a></h2>
+                <h2 class="post-title"><a href="http://patrickleungwl.github.io/tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a></h2>
             </header>
             <section class="post-excerpt">
                 Java as a language has been in the public eye for close to two decades now.  And there shouldn’t really be anything new to an old techie, should there?  Well, surprise to say- there are some features that I rarely use.  One of these features is the “WeakReference”. What are WeakReferences used for? WeakReferences are used for keeping objects in memory for only as long as a variable references it. As soon as this strong...
@@ -227,7 +227,7 @@ more “sticky” in a running process’s memory.</p>
 really be anything new to an old techie, should there?  Well, surprise to say- there are some 
 features that I rarely use.  One of these features is the “WeakReference”.</p>
 
- <a class="read-more" href="/tech/2014/03/11/weakreferences-in-java/">&raquo;</a>
+ <a class="read-more" href="http://patrickleungwl.github.io/tech/2014/03/11/weakreferences-in-java/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
@@ -261,7 +261,7 @@ features that I rarely use.  One of these features is the “WeakReference”.<
         
 
       <section class="copyright">
-        <a href=""></a> &copy; 
+        <a href="http://patrickleungwl.github.io">PatrickLeungWL</a> &copy; 
                &bull; All rights reserved.
       </section>
       <section class="poweredby">Made with Jekyll using 
@@ -269,9 +269,9 @@ features that I rarely use.  One of these features is the “WeakReference”.<
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://localhost:4000/assets/js/index.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">
