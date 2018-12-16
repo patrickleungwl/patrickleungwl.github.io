@@ -4,25 +4,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title> - A journal of tech issues in financial applications</title>
+    <title>PatrickLeungWL - A journal of tech issues in financial applications</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
 </head>
 <body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
-        <a class="back-button icon-arrow-left" href="http://patrickleungwl.github.io/">Home</a>
-        <a class="subscribe-button icon-feed" href="http://patrickleungwl.github.io/feed.xml">Subscribe</a>
+        <a class="back-button icon-arrow-left" href="/">Home</a>
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
     </nav>
 </header>
 
@@ -43,7 +43,7 @@
         <section class="post-content">
             <p>Testing with Tasks again.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
 
@@ -76,16 +76,16 @@
         <span class="p">}</span>
 
 
-        <span class="c1">// RunTest
-</span>        <span class="c1">//
-</span>        <span class="c1">// Function run by main thread
-</span>        <span class="c1">// Main thread sets up the background worker instance
-</span>        <span class="c1">// and fires it off
-</span>
+        <span class="c1">// RunTest</span>
+        <span class="c1">//</span>
+        <span class="c1">// Function run by main thread</span>
+        <span class="c1">// Main thread sets up the background worker instance</span>
+        <span class="c1">// and fires it off</span>
+
         <span class="k">public</span> <span class="k">void</span> <span class="nf">RunTest</span><span class="p">()</span>
         <span class="p">{</span>
-            <span class="n">var</span> <span class="n">myBkTask</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Task</span><span class="p">(</span><span class="n">DoWork</span><span class="p">);</span>
-            <span class="n">var</span> <span class="n">myBkTask2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Task</span><span class="p">(</span><span class="n">DoWork</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">myBkTask</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Task</span><span class="p">(</span><span class="n">DoWork</span><span class="p">);</span>
+            <span class="kt">var</span> <span class="n">myBkTask2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Task</span><span class="p">(</span><span class="n">DoWork</span><span class="p">);</span>
             <span class="n">myBkTask</span><span class="p">.</span><span class="nf">Start</span><span class="p">();</span>
             <span class="n">myBkTask2</span><span class="p">.</span><span class="nf">Start</span><span class="p">();</span>
 
@@ -98,29 +98,27 @@
 
 
 
-        <span class="c1">// Main
-</span>        <span class="c1">// Start up a background worker test instance
-</span>
+        <span class="c1">// Main</span>
+        <span class="c1">// Start up a background worker test instance</span>
+
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">var</span> <span class="n">testWkr</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TasksTester</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">testWkr</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TasksTester</span><span class="p">();</span>
             <span class="n">testWkr</span><span class="p">.</span><span class="nf">RunTest</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The output-</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>19:05:48.736 ThreadId=4, Background worker starting
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>19:05:48.736 ThreadId=4, Background worker starting
 19:05:48.721 ThreadId=1, Main thread worker waiting
 19:05:48.735 ThreadId=3, Background worker starting
 19:05:50.752 ThreadId=4, Background worker completed
 19:05:50.762 ThreadId=3, Background worker completed
 19:05:50.762 ThreadId=1, Main thread worker completed
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
         </section>
@@ -189,28 +187,30 @@
                         
                     
                         
+                    
+                        
                             
                             
 
                     
                         <li><span>26 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/12/26/tasks/">Using Tasks</a>
+                          <a href="/tech/2015/12/26/tasks/">Using Tasks</a>
                         </li>
                     
                         <li><span>25 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/12/25/autoresetevent/">Using AutoResetEvent</a>
+                          <a href="/tech/2015/12/25/autoresetevent/">Using AutoResetEvent</a>
                         </li>
                     
                         <li><span>24 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/12/24/mutex/">Using Mutexes</a>
+                          <a href="/tech/2015/12/24/mutex/">Using Mutexes</a>
                         </li>
                     
                         <li><span>23 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/12/23/threadpool/">Using ThreadPool</a>
+                          <a href="/tech/2015/12/23/threadpool/">Using ThreadPool</a>
                         </li>
                     
                         <li><span>22 Dec 2015</span>
-                          <a href="http://patrickleungwl.github.io/tech/2015/12/22/threads/">Using Threads</a>
+                          <a href="/tech/2015/12/22/threads/">Using Threads</a>
                         </li>
                     
                 </ul>
@@ -253,7 +253,7 @@
         
 
       <section class="copyright">
-        <a href=""></a> &copy; 
+        <a href="">PatrickLeungWL</a> &copy; 
                &bull; All rights reserved.
       </section>
       <section class="poweredby">Made with Jekyll using 
@@ -261,9 +261,9 @@
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/index.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

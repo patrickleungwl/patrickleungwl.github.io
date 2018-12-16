@@ -4,25 +4,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title> - A journal of tech issues in financial applications</title>
+    <title>PatrickLeungWL - A journal of tech issues in financial applications</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
 </head>
 <body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
-        <a class="back-button icon-arrow-left" href="http://patrickleungwl.github.io/">Home</a>
-        <a class="subscribe-button icon-feed" href="http://patrickleungwl.github.io/feed.xml">Subscribe</a>
+        <a class="back-button icon-arrow-left" href="/">Home</a>
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
     </nav>
 </header>
 
@@ -45,7 +45,7 @@
 necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
 at scheduled times.  Below shows a quick example of how it can be used.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.text.DateFormat</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span><span class="o">;</span>
@@ -59,18 +59,18 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
   <span class="n">DateFormat</span> <span class="n">_df</span><span class="o">;</span>
 
-  <span class="kd">public</span> <span class="n">Tester</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nf">Tester</span><span class="o">()</span> <span class="o">{</span>
     <span class="n">_df</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyyMMdd HH:mm:ss"</span><span class="o">);</span>
   <span class="o">}</span>
 
-  <span class="kd">public</span> <span class="n">String</span> <span class="n">GetTimeNow</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">GetTimeNow</span><span class="o">()</span> <span class="o">{</span>
     <span class="n">Date</span> <span class="n">dt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
     <span class="k">return</span> <span class="n">_df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">dt</span><span class="o">);</span>
   <span class="o">}</span>
 
-  <span class="kd">public</span> <span class="kt">void</span> <span class="n">RunTest</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">RunTest</span><span class="o">()</span> <span class="o">{</span>
     <span class="n">Runnable</span> <span class="n">worker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="n">run</span><span class="o">()</span> <span class="o">{</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Worker running\n"</span><span class="o">,</span> <span class="n">GetTimeNow</span><span class="o">());</span>				
       <span class="o">}</span>
     <span class="o">};</span>
@@ -87,20 +87,18 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Test completed"</span><span class="o">);</span>
   <span class="o">}</span>	
 
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">Tester</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tester</span><span class="o">();</span>
     <span class="n">t</span><span class="o">.</span><span class="na">RunTest</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>The test app output looks like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>20140317 23:56:53: Scheduled worker to run in 5 seconds
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>20140317 23:56:53: Scheduled worker to run in 5 seconds
 20140317 23:56:58: Worker running
 Test completed
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
         </section>
@@ -211,28 +209,30 @@ Test completed
                         
                     
                         
+                    
+                        
                             
                             
 
                     
                         <li><span>17 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a>
+                          <a href="/tech/2014/03/17/delayed_background/">Delayed Background Thread Runnable</a>
                         </li>
                     
                         <li><span>15 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a>
+                          <a href="/tech/2014/03/15/garbage-collector-differences/">Garbage Collector Differences between Java and CSharp</a>
                         </li>
                     
                         <li><span>13 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a>
+                          <a href="/tech/2014/03/13/weakreferences-in-csharp/">WeakReferences in CSharp</a>
                         </li>
                     
                         <li><span>12 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a>
+                          <a href="/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a>
                         </li>
                     
                         <li><span>11 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a>
+                          <a href="/tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a>
                         </li>
                     
                 </ul>
@@ -275,7 +275,7 @@ Test completed
         
 
       <section class="copyright">
-        <a href=""></a> &copy; 
+        <a href="">PatrickLeungWL</a> &copy; 
                &bull; All rights reserved.
       </section>
       <section class="poweredby">Made with Jekyll using 
@@ -283,9 +283,9 @@ Test completed
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/index.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

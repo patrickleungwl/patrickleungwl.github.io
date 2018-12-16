@@ -4,25 +4,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title> - A journal of tech issues in financial applications</title>
+    <title>PatrickLeungWL - A journal of tech issues in financial applications</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
 </head>
 <body class="home-template">
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
-        <a class="back-button icon-arrow-left" href="http://patrickleungwl.github.io/">Home</a>
-        <a class="subscribe-button icon-feed" href="http://patrickleungwl.github.io/feed.xml">Subscribe</a>
+        <a class="back-button icon-arrow-left" href="/">Home</a>
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
     </nav>
 </header>
 
@@ -53,7 +53,7 @@ The following SoftReference test code example creates a thousand SoftReferences 
 DumbWeights, removes any strong references to the DumbWeights, and then 
 periodically checks when and how often the GC cleans up the DumbWeight instances.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.lang.ref.*</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
@@ -63,7 +63,7 @@ periodically checks when and how often the GC cleans up the DumbWeight instances
    *  
    *  Check how many soft references still exist and not collected
    */</span>
-  <span class="kd">private</span> <span class="kt">void</span> <span class="n">checkSoftReferences</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">checkSoftReferences</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="n">numCollected</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
     <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
     <span class="k">while</span> <span class="o">(</span><span class="n">i</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
@@ -85,7 +85,7 @@ periodically checks when and how often the GC cleans up the DumbWeight instances
    * 
    * This means soft references are more sticky than weak references.
    */</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="n">testSoftReferences</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSoftReferences</span><span class="o">()</span> <span class="o">{</span>
 
     <span class="n">Set</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;();</span>
 
@@ -104,17 +104,16 @@ periodically checks when and how often the GC cleans up the DumbWeight instances
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Completed testSoftReferences"</span><span class="o">);</span>
   <span class="o">}</span>
 
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
     <span class="n">MyTest</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyTest</span><span class="o">();</span>
     <span class="n">m</span><span class="o">.</span><span class="na">testSoftReferences</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The output looks as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>*****************************
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*****************************
 Starting testSoftReferences
 Creating 1000 soft references
 checkSoftRefs: size=100, numCollected=0
@@ -128,8 +127,7 @@ checkSoftRefs: size=800, numCollected=624
 checkSoftRefs: size=900, numCollected=832
 checkSoftRefs: size=1000, numCollected=832
 Completed testSoftReferences
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The test results show that the GC wipes out objects referenced by SoftReferences - 
 only if the JVM runs low on memory. Comparing this result to the previous WeakReferences 
@@ -260,12 +258,14 @@ solutions to tackling tough memory problems.</p>
                         
                     
                         
+                    
+                        
                             
                             
 
                     
                         <li><span>11 Mar 2014</span>
-                          <a href="http://patrickleungwl.github.io/tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a>
+                          <a href="/tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a>
                         </li>
                     
                 </ul>
@@ -308,7 +308,7 @@ solutions to tackling tough memory problems.</p>
         
 
       <section class="copyright">
-        <a href=""></a> &copy; 
+        <a href="">PatrickLeungWL</a> &copy; 
                &bull; All rights reserved.
       </section>
       <section class="poweredby">Made with Jekyll using 
@@ -316,9 +316,9 @@ solutions to tackling tough memory problems.</p>
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/index.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

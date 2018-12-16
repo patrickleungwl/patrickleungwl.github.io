@@ -4,17 +4,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title> - A journal of tech issues in financial applications</title>
+    <title>PatrickLeungWL - A journal of tech issues in financial applications</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Anonymous+Pro" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="http://patrickleungwl.github.io/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
 </head>
 <body class="home-template">
@@ -57,13 +57,37 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Strings in Java can be declared either literally- String s = "123"; or as a String instance- String s = new String("123"); What are the differences between these two strings? package drills; public class Tester { public static void main(String[] args) { // Test differences between String v = new String(...) // and String v = "..." // String literals are stored in a string pool- cached and reused. // String objects are stored in...
+                <!--
+                <p>Strings in Java can be declared either literally-</p>
+
+ <a class="read-more" href="/tech/2014/03/20/java-string-literals/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-03-20">
+                    20 Mar 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2014/03/17/java-assertions/">Assertions in Java</a></h2>
             </header>
             <section class="post-excerpt">
                 Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:
 
 java -ea Test.java
-
 
 
 
@@ -237,7 +261,7 @@ features that I rarely use.  One of these features is the “WeakReference”.<
         
 
       <section class="copyright">
-        <a href=""></a> &copy; 
+        <a href="">PatrickLeungWL</a> &copy; 
                &bull; All rights reserved.
       </section>
       <section class="poweredby">Made with Jekyll using 
@@ -245,9 +269,9 @@ features that I rarely use.  One of these features is the “WeakReference”.<
       </section>
     </footer>
     
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://patrickleungwl.github.io/assets/js/index.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

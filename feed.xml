@@ -3,23 +3,59 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>http://patrickleungwl.github.io/</link>
-    <atom:link href="http://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Oct 2018 00:23:14 -0400</pubDate>
-    <lastBuildDate>Mon, 08 Oct 2018 00:23:14 -0400</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 15 Dec 2018 20:48:26 -0500</pubDate>
+    <lastBuildDate>Sat, 15 Dec 2018 20:48:26 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Options October Disaster</title>
+        <description>&lt;p&gt;What a disaster so far.&lt;/p&gt;
+
+&lt;p&gt;From options so far- I have&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;PG- I sold PG at 82.5 and now it is at 93.82.  Paper loss 2200.&lt;/li&gt;
+  &lt;li&gt;BA- I bought 100sh BA at 360 on Oct 22 and it is at 335.  Paper loss 2500.&lt;/li&gt;
+  &lt;li&gt;C- I bought 200sh C at 72 on Oct 22 and it is at 65.  Paper loss 1400.&lt;/li&gt;
+  &lt;li&gt;SCHW- I bought 200sh SCHW at 50 on Nov 16 and it is at 47.  Paper loss 600.&lt;/li&gt;
+  &lt;li&gt;V- I lucked out on this one and kept $250.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So for a few hundred dollars premium gains, I lost 6700.  This is going very 
+badly.&lt;/p&gt;
+
+&lt;p&gt;I should probably sell some calls on these to make some money back.  Okay, new 
+strategy.  Sell calls on these losers to get some money back.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BA- Sell 1 370 Dec21 calls at 2.55 each for 255.
+C- Sell 2 72.5 Dec21 calls at 0.17 each for 34. 
+SCHW- Sell 2 50.0 Dec21 calls at 0.60 each for 110.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sat, 17 Nov 2018 00:00:00 -0500</pubDate>
+        <link>/investing/2018/11/17/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/11/17/options-ideas/</guid>
+        
+        <category>investing</category>
+        
+        
+        <category>investing</category>
+        
+      </item>
     
       <item>
         <title>Options Ideas BiWeekly</title>
         <description>&lt;p&gt;Some highlights this past week.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20181007 Statuses
-  -2 PG 82.5 20181019 Calls- PG at 82.15, maybe I won&#39;t get to sell stock. 
-  -1 BA 360  20181019 Puts.  BA at 386.5, way above put&#39;s strike. 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20181007 Statuses
+  -2 PG 82.5 20181019 Calls- PG at 82.15, maybe I won't get to sell stock. 
+  -1 BA 360  20181019 Puts.  BA at 386.5, way above put's strike. 
   -2 C  72.5 20181019 Puts.  C at 72.42- maybe I will not be forced to buy it.
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Last week’s idea on selling 2 20181116 of BL at 50.0 fortunately did not 
 sell in the market.  Now BL is at 50.87.&lt;/p&gt;
 
@@ -30,17 +66,16 @@ come back down.  They keep going up and up.&lt;/p&gt;
 
 &lt;p&gt;Trigger new trades&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -2 SCHW 50.0  20181116 Put SCWH at 51.48.  SCHW appears to be coming back ~ $220
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -2 SCHW 50.0  20181116 Put SCWH at 51.48.  SCHW appears to be coming back ~ $220
   -1 V    140.0 20181116 Put V at 145.36.    V just doesnt seem to go down ~ $250
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
 </description>
         <pubDate>Sun, 07 Oct 2018 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/investing/2018/10/07/options-ideas/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/investing/2018/10/07/options-ideas/</guid>
+        <link>/investing/2018/10/07/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/10/07/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -63,9 +98,9 @@ come back down.  They keep going up and up.&lt;/p&gt;
 
 &lt;p&gt;Some highlights this past week.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20180928 Statuses
-  -2 PG 82.5 20181019 Calls- PG at 83.3, above calls&#39; strikes. 
-  -1 BA 360  20181019 Puts.  BA at 371.9, way above put&#39;s strike. 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20180928 Statuses
+  -2 PG 82.5 20181019 Calls- PG at 83.3, above calls' strikes. 
+  -1 BA 360  20181019 Puts.  BA at 371.9, way above put's strike. 
   -2 C  72.5 20181019 Puts.  C at 71.74- puts at risk.
 
 2010928 Expirations
@@ -76,8 +111,7 @@ come back down.  They keep going up and up.&lt;/p&gt;
   Sold 1 BA 360 20181019 Puts.  Pocketed 407.
   Sold 2 C 72.5 20181019 Puts.  Pocketed 200.
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Cloud software maker BL rocking new highs at 56.47.&lt;br /&gt;
 Let’s sell 2 20181116 puts on it- at 50.0 for 340.&lt;/p&gt;
@@ -86,8 +120,8 @@ Let’s sell 2 20181116 puts on it- at 50.0 for 340.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 30 Sep 2018 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/investing/2018/09/30/options-ideas/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/investing/2018/09/30/options-ideas/</guid>
+        <link>/investing/2018/09/30/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/09/30/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -164,8 +198,8 @@ BRK.B is now at 215.&lt;/li&gt;
 
 </description>
         <pubDate>Fri, 14 Sep 2018 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/investing/2018/09/14/options-ideas/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/investing/2018/09/14/options-ideas/</guid>
+        <link>/investing/2018/09/14/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/09/14/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -175,7 +209,7 @@ BRK.B is now at 215.&lt;/li&gt;
       </item>
     
       <item>
-        <title>Python&#39;s Data Science Toolkit</title>
+        <title>Python's Data Science Toolkit</title>
         <description>&lt;p&gt;Essentially, there are five tools in Python’s data science toolkit.  These are
 NumPy, SciPy, Pandas, MatplotLib, and JupyterLib.  I’ll jot down the essential 
 notes on each of these toolkits.&lt;/p&gt;
@@ -238,7 +272,7 @@ complex64 to complex128. Depending on OS, int defaults to int32 or int64. Same f
 
 &lt;p&gt;Examples:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;i = np.int8(8)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;i = np.int8(8)
 i
 i.nbytes
 --
@@ -259,25 +293,22 @@ i.nbytes
 --
 231238
 8
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;some-code-examples-&quot;&gt;Some code examples-&lt;/h3&gt;
 
 &lt;p&gt;Creating ndarray from specific values-&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
 
 a = np.array([5,6,7,8])
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Creating ndarray from csv-&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;temperatures = np.genfromtxt(&quot;temperatures.csv&quot;, delimiter=&quot;;&quot;, skip_header=1)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;temperatures = np.genfromtxt(&quot;temperatures.csv&quot;, delimiter=&quot;;&quot;, skip_header=1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;operations&quot;&gt;Operations&lt;/h3&gt;
 
@@ -285,19 +316,18 @@ a = np.array([5,6,7,8])
 on them extremely easy.  With matrix operations, there is no need to write
 for-each loops.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
 
 a = np.array([5,6,7,8])
 print(a * 3)
 --
 [15 18 21 24]
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;slicing-arrays&quot;&gt;Slicing arrays&lt;/h3&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = np.random.rand(8, 3)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = np.random.rand(8, 3)
 
 array([[ 0.43843581,  0.21627972,  0.3815473 ],
        [ 0.58425937,  0.00771804,  0.18703358],
@@ -312,8 +342,7 @@ Get all cells from last row
 a[-1]
 array([ 0.31513721,  0.56262377,  0.15340494])
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;numpy-methods&quot;&gt;NumPy methods&lt;/h3&gt;
 
@@ -334,13 +363,13 @@ and scientific domains.&lt;br /&gt;
 &lt;a href=&quot;http://scipy.github.io/devdocs/genindex.html&quot;&gt;The list of functions is here&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;pandas&quot;&gt;Pandas&lt;/h2&gt;
-&lt;p&gt;## Matplotlib
-## JypyterLab&lt;/p&gt;
+&lt;h2 id=&quot;matplotlib&quot;&gt;Matplotlib&lt;/h2&gt;
+&lt;h2 id=&quot;jypyterlab&quot;&gt;JypyterLab&lt;/h2&gt;
 
 </description>
         <pubDate>Sun, 25 Feb 2018 00:00:00 -0500</pubDate>
-        <link>http://patrickleungwl.github.io/tech/2018/02/25/python-tools/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/tech/2018/02/25/python-tools/</guid>
+        <link>/tech/2018/02/25/python-tools/</link>
+        <guid isPermaLink="true">/tech/2018/02/25/python-tools/</guid>
         
         <category>patterns</category>
         
@@ -356,22 +385,21 @@ existing components- without having to change the existing components.&lt;/p&gt;
 
 &lt;h2 id=&quot;ishippingmethodcs&quot;&gt;IShippingMethod.cs&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IShippingMethod&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;groundshippingcs&quot;&gt;GroundShipping.cs&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -383,12 +411,11 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;       
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;airshippingcs&quot;&gt;AirShipping.cs&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -400,12 +427,11 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;decoratorshippingcs&quot;&gt;DecoratorShipping.cs&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -424,12 +450,11 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;receiptdecoratorcs&quot;&gt;ReceiptDecorator.cs&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -446,12 +471,11 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;signaturerequireddecoratorcs&quot;&gt;SignatureRequiredDecorator.cs&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -468,12 +492,11 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;decoratortestercs&quot;&gt;DecoratorTester.cs&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Microsoft.VisualStudio.TestTools.UnitTesting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -485,59 +508,58 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShippingWithNoOptionsShouldCostTenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShippingWithReceiptOptionShouldCostElevenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;11.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GrondShippingWithSignatureOptionShouldCostTwelveDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;12.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GrondShippingWithSignatureOptionAndReceiptShouldCostThirteenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureAndReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureAndReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;13.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureAndReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShippingWithNoOptionsShouldCostFiftyDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShippingWithReceiptOptionShouldCostElevenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;51.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipmentWithReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/tech/2017/10/13/decorator-pattern/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/tech/2017/10/13/decorator-pattern/</guid>
+        <link>/tech/2017/10/13/decorator-pattern/</link>
+        <guid isPermaLink="true">/tech/2017/10/13/decorator-pattern/</guid>
         
         <category>patterns</category>
         
@@ -573,8 +595,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 12 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/tech/2017/10/12/decorators/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/tech/2017/10/12/decorators/</guid>
+        <link>/tech/2017/10/12/decorators/</link>
+        <guid isPermaLink="true">/tech/2017/10/12/decorators/</guid>
         
         <category>patterns</category>
         
@@ -595,7 +617,7 @@ reference.&lt;/p&gt;
 
 &lt;p&gt;On Management Theories&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...No Theory X, Y, or Z will give us simple answers to complex problems...
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...No Theory X, Y, or Z will give us simple answers to complex problems...
 The men and women with whom I have worked have been whole, rounded, complex
 persons with a wide variety of good and bad qualities.  I could never fit 
 them into any convenient psychological pigeonhole.  The only way I knew how to
@@ -610,41 +632,37 @@ quickerand more sophisticated in handling more complex problems; we became
 more self-confident of our abilities.  But we never reduced the art of 
 management to a formula.  We could never be sure we were right on any one,
 specific decison. 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Many people, young and old, have asked me from time to time for the secret
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Many people, young and old, have asked me from time to time for the secret
 of my success in business.  Usually I avoided giving any answer.  Now I can 
 reveal it- The secret of how to succeed in business or in life is that there is 
 no secret.  No secret at all.  No formula.  No theory. 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A Three Sentence Course on Business Management- You read a book from the
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A Three Sentence Course on Business Management- You read a book from the
 beginning to the end.  You run a business the opposite way.  You start with
 the end, and then you do everything you mut to reach it.
 
 You decide what it is that you want to do, then you start doing it. 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;On the tactics of selling&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Never make your sales pitch right away.  Offer the client a cigarette, sit
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Never make your sales pitch right away.  Offer the client a cigarette, sit
 down, and talk to him about the advantages of your product.  Listen to 
-what he says.  Don&#39;t interrupt him.  Pick out his main objection or doubt
-and focus your sales talk on that.  Finally, before you leave, don&#39;t forget
+what he says.  Don't interrupt him.  Pick out his main objection or doubt
+and focus your sales talk on that.  Finally, before you leave, don't forget
 to ask for the order.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;On departing a job&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Strong doubts and misgivings besieged me right up to the evening that I left
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Strong doubts and misgivings besieged me right up to the evening that I left
 the plant.  It had been my first real postwar job, a happy, good place to
 work, with responsibilities that had challenged my abilities.  Looking back 
 from the parking lot to the light still buring in my office, I wondered
@@ -654,19 +672,18 @@ or worse, and you go forward, with the feeling and faith that if you succeed
 at one task, you have every reason to believe you will succeed at your next, 
 bigger one.  There are no guarantees, of course, but the risk must be taken,
 if you are going to live with yourself thereafter.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;On reviewing problems&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 One by one, we would go through each of the monthly reports.  Not only I 
 but anyone else at the meeting could say anything, question anything, 
 suggest anything that was pertinent... With the figures on the screen, 
 we could all see how each profit center measured up to its budget commitments,
-its last year&#39;s performance and wahterver, in sales, earnings, etc...
+its last year's performance and wahterver, in sales, earnings, etc...
 When problems arose, as they always did, we could deal with them and 
 perhaps even solve them on the spot... Often, we would deal with a problem
 of one company that was similar to if not a replica of a problem faced by 
@@ -687,10 +704,9 @@ I felt the man needed help, I assigned a team of staff man to help him.
 And I explained that we were all there to help the man in trouble; we were
 all one team, one company, and I was interested in solving the problem at
 hand, not taking action against the man personally. 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I brought this point home at a General Managers Meeting early in my reign
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I brought this point home at a General Managers Meeting early in my reign
 at ITT when the man in charge of our Latin America operations reported that
 he had failed to sell our newest, multimillion-dollar telephone switching
 system to the government of Brazil.  I probed for quite a while into the 
@@ -709,44 +725,41 @@ I asked.
 &quot;Why not?&quot;
 
 &quot;Because... really makes the decision.  He recommends the decision and 
-the President follows his advice,&quot; he explained, adding, &quot;Besides, I don&#39;t 
+the President follows his advice,&quot; he explained, adding, &quot;Besides, I don't 
 think I can get in to see Kubitschek.&quot; 
 
-&quot;Well, why don&#39;t you try?  You have everything to gain and nothing to lose.&quot;
+&quot;Well, why don't you try?  You have everything to gain and nothing to lose.&quot;
 
 The following month, he returned to announce with a sheepish grin on his 
 face that he had seen the President of Brazil and had sold the ITT system. 
 It went over quite big.  The men in the room applauded him. 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Experience has taught me what I came to call the inverse ratio of time to 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Experience has taught me what I came to call the inverse ratio of time to 
 veracity.  It has long seemed to me that the lower you are in the corporate
 hiearchy, the more time you have to verify the facts upon which you were
 acting... and the higher you rise and the greater your responsibilities, 
 the less time you have to check your facts, and the more important it is to
 do so.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;On Leadership&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Leadership is the ability to inspire other people to work together as a team,
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Leadership is the ability to inspire other people to work together as a team,
 following your lead, in order to attain a common objective, whether in 
 business, in politics, in war, or on the football field.  No one can do it 
-alone.  Others must want to follow the lader.  I don&#39;t particularly subscribe
+alone.  Others must want to follow the lader.  I don't particularly subscribe
 to the theory that there are natural born leaders.  Leadership is learned, 
 although I cannot explain entirely how it is learned.  The ability to lead
 and inspire others is far more instintual than premeditated and it is acquired
-somehow through the experiences of one&#39;s everyday life, and the ultimate
+somehow through the experiences of one's everyday life, and the ultimate
 nature and quality of that leadership comes out of the innate character and
 personality of the leader himself. 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I wanted to create that kind of invigorating, challenging, creative 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I wanted to create that kind of invigorating, challenging, creative 
 atmosphere at ITT.  I wanted to get the people there to reach for goals 
 that they might think were beyond them.  I wanted them to accomplish more 
 than they thought were possible.  And I wanted them to do it not only for
@@ -765,7 +778,7 @@ but because of peer pressure and pride.
 
 The best hope of achieving that, given my own sense of leadership, was
 to jump in the boat, grab an oar, and start pulling along with the other
-men.  I suppose you might call it participatory leadership.  I didn&#39;t want
+men.  I suppose you might call it participatory leadership.  I didn't want
 to be the captain sitting in the back of the boat, exhorting his men to do
 all the work while he sat there doing nothing.  Nor did I want to be like
 the master of a galley, frightening his slaves half to death with the giant
@@ -774,10 +787,9 @@ knew it...I did set an example, an honest example, which traveled down
 the ranks of management and, to an extent, established a standard of 
 performance for the whole company.  After all, if I could do it, so could the
 next man- if he had any measure of pride in his own ability.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The person who heads a company should realise that his people are not
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The person who heads a company should realise that his people are not
 really working for himl they are working with him for themselves. 
 They have their own dreams, their own need for self-fulfillment.  He has
 to help fill their needs as much as they do his.  He has to prove to them 
@@ -786,19 +798,18 @@ as chief executive, that he will not lead them over the cliff and jeapedise
 their livelihoods, they he can be relied upon to reward them properly 
 and fairly, that he is willing to share the risks as well as the rewards
 of their enterprise.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;On meetings&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;We cut through layers of fat in our management ranks by putting all the 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;We cut through layers of fat in our management ranks by putting all the 
 people in one room so they could talk with one another, face to face, 
 regardless of rank, and an honest assessment of any situation could be based
 upon the facts which emerged...People could disagree with me or with anyone
 else... I tried to welcome criticism.  Naturally, no one likes to be 
-criticized.  One&#39;s first instinct is to be defensive and fight back.  But
+criticized.  One's first instinct is to be defensive and fight back.  But
 that is the kind of defensiveness one should try to keep under control...
 I always wanted someone to point out where I might be heading for a mistake.
 I never batted down such a man.  I listened and we exchanged views. 
@@ -810,14 +821,13 @@ dividends.  People were free to come to me or to anyone else and ask
 honestly for help, and they would get it, again without fear of diminution of
 status, rank or whatever.  We were all in the same lifeboat, all pulling
 toward a single goal.  That was our underlying philosophy.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;On delegation&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 ...He delegates this and he delegates that.  He delegates just about everything
 he can, saying that his shop is well organized and that he runs a tight ship.
 But I have to ask- Organized for what?  Tight in what way?
@@ -838,16 +848,15 @@ the job.  Therefore, beneath the facade of his title, the size of office, and
 the quality of his desk, is he incompetent.
 
 On the other hand, if all his vice presidents do their own jobs superbly, 
-it won&#39;t be long before someone discovers that they don&#39;t need him as the 
+it won't be long before someone discovers that they don't need him as the 
 chief executive at all.  Any one of his subordinates would be happy to take
 over.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;More prevalent are the professional money managers who give other reasons 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;More prevalent are the professional money managers who give other reasons 
 for their tidy desk tops.  One type freely admits that he worked hard to get
 to the top and now, presumably safely enscounced, delights in having others
-do the work for him.  He won&#39;t last long, in my estimation, with that false
+do the work for him.  He won't last long, in my estimation, with that false
 sense of security.  Even more prevalent are the men who persuade themselves
 that they are now above the mundane, nitty-gritty aspects of the day-to-day
 problems of running the business.  They say they have to keep their desks
@@ -855,17 +864,16 @@ and minds clear for the deeper, long-range strategies that will guide their
 companies to new wondrous heights in the world of tomorrow.  They are planning
 for the future, they say, looking far over the heads of the mere mortals on 
 the operating lines of the company.  They sincerely believe it, too.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;On managing&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The key, essential element in all good business management is emotional 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The key, essential element in all good business management is emotional 
 attitude.  The rest is mechanics.  As I use the term, management is not a 
 collection of boxes with names and titles on the organizational chart. 
 Management is a living force.  It is the force that gets things done to 
 acceptable standards- high standards.  You either have it in a company or 
-you don&#39;t.  Management must have a purpose, a dedication, and that dedication
+you don't.  Management must have a purpose, a dedication, and that dedication
 must be an emotional commitment.  It must be built in a vital part of the
 personality of anyone who is truly a manager.  He or she is the one who 
 understands that management must mange. 
@@ -876,7 +884,7 @@ again, until he finds a satsifactory answer.  The answer must be, above all,
 satisfactory to him.  And he will know it.  There may be seventy-eight ways
 to do something and only ten of them with satisfactorily good answers.  The
 manager will continue to probe and to seek for one of those ten answers. 
-It may not be the best of all answers.  But he won&#39;t settle for anything lower
+It may not be the best of all answers.  But he won't settle for anything lower
 than one of those ten.  The next time he will strive for yet a better answer,
 higher on the list, learning something new all the time, and achieving better
 results as he goes along.  He will work this way because of his emotional 
@@ -885,14 +893,13 @@ emulated by those who work with him, so that it becomes a way of life in that
 organization.  The urge to do what must be done is powered by deep-seated
 emotion, not logic.  He might not be able to explain why he works the way 
 he does, or why he makes this choice and not the other one.  He does it because
-he &#39;feels&#39; that it is right.  That feeling is transmitted to others who work
+he 'feels' that it is right.  That feeling is transmitted to others who work
 for him or with him.  They know his emotional commitment includes them as well
 as the goals of the enterprise.  They are willing to follow his lead because
-of that &#39;feeling&#39; which makes him the kind of person he is.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+of that 'feeling' which makes him the kind of person he is.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;If the manager is to accomplish his objectives, he absolutely has to get the 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;If the manager is to accomplish his objectives, he absolutely has to get the 
 information necessary to make the right decisions.  The steps along the way
 define themselves as he goes toward his objectives.  To surmount each step,
 he needs solid facts so that he can recognize the realities of situations. 
@@ -908,7 +915,7 @@ greater than the sum of their individual parts.  That is leadership.
 And if the leadership is successful, it creates a momentum in the enterprise
 which enriches the participants with such a feeling of pride and energy
 tha they produce results, short-term and long-term results, which they 
-themselves never thought possible.  I&#39;ve separated the elements here, but
+themselves never thought possible.  I've separated the elements here, but
 in practice, they all move along together, en masse, nourishing each other
 like the fusion in a nuclear reactor, creating the fire, the pressure, and the
 power which produce energy.  All this is the critical emotional content
@@ -916,17 +923,16 @@ of good management.
 
 This is the emotional horsepower that drives people to do things, drives them
 to keep at it because they feel they must get the answer, drives them to push
-on until they get results that are satisfactory to them.  Of course, you don&#39;t
+on until they get results that are satisfactory to them.  Of course, you don't
 always succeed in every effort.  But then you recognize it early on, and 
 you get out of that situation.  You cut your losses and go on to something
-else.  If you are a manager, you don&#39;t drift.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+else.  If you are a manager, you don't drift.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Sun, 03 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/managing/2017/09/03/managing/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/managing/2017/09/03/managing/</guid>
+        <link>/managing/2017/09/03/managing/</link>
+        <guid isPermaLink="true">/managing/2017/09/03/managing/</guid>
         
         <category>managing</category>
         
@@ -958,8 +964,8 @@ knowledge over time accumulates to a mountain of knowledge.&lt;/li&gt;
 
 </description>
         <pubDate>Sat, 24 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/tech/2017/06/24/the-effective-engineer/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/tech/2017/06/24/the-effective-engineer/</guid>
+        <link>/tech/2017/06/24/the-effective-engineer/</link>
+        <guid isPermaLink="true">/tech/2017/06/24/the-effective-engineer/</guid>
         
         <category>patterns</category>
         
@@ -1048,7 +1054,7 @@ pyplot.subplot() method.&lt;/p&gt;
 
 &lt;p&gt;Sample Matplotlib script:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter qtconsole
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter qtconsole
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -1062,83 +1068,16 @@ Z = np.sqrt(X**2 + Y**2)                # Compute function values on the grid
 plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = ’k’, linestyles = ’solid’)
 plt.show()
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../../../assets/images/201706/matplotlib_plot1.png&quot; alt=&quot;Sample plot&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 11 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/python/2017/06/11/basic-matplotlib/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/python/2017/06/11/basic-matplotlib/</guid>
+        <link>/python/2017/06/11/basic-matplotlib/</link>
+        <guid isPermaLink="true">/python/2017/06/11/basic-matplotlib/</guid>
         
         <category>patterns</category>
-        
-        
-        <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>Using Conda, NumPy</title>
-        <description>&lt;p&gt;Notes on using Conda, NumPy&lt;/p&gt;
-
-&lt;h2 id=&quot;conda&quot;&gt;Conda&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Setup Python 3.5 env&lt;/td&gt;
-      &lt;td&gt;conda create -n py35 python=3.5 anaconda&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Setup Python 2.7 env&lt;/td&gt;
-      &lt;td&gt;conda create -n py27 python=2.7 anaconda&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Switch to Python 3.5 env&lt;/td&gt;
-      &lt;td&gt;source activate py35&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Check Python version&lt;/td&gt;
-      &lt;td&gt;python -V&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;numpy&quot;&gt;Numpy&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Import numpy&lt;/td&gt;
-      &lt;td&gt;import numpy as np&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Create a new array&lt;/td&gt;
-      &lt;td&gt;na = array([1,2,3,4])&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Use any numpy function&lt;/td&gt;
-      &lt;td&gt;na.min()&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Load data into array&lt;/td&gt;
-      &lt;td&gt;na = np.loadtxt(‘data.txt’)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Save array to file&lt;/td&gt;
-      &lt;td&gt;np.savetxt(‘data.txt’, na)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-</description>
-        <pubDate>Sat, 10 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://patrickleungwl.github.io/python/2017/06/10/using-conda/</link>
-        <guid isPermaLink="true">http://patrickleungwl.github.io/python/2017/06/10/using-conda/</guid>
-        
-        <category>python</category>
         
         
         <category>python</category>
