@@ -5,13 +5,14 @@
     <description>A journal of tech issues in financial applications</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Feb 2019 00:09:26 -0500</pubDate>
-    <lastBuildDate>Mon, 18 Feb 2019 00:09:26 -0500</lastBuildDate>
+    <pubDate>Mon, 18 Feb 2019 11:26:27 -0500</pubDate>
+    <lastBuildDate>Mon, 18 Feb 2019 11:26:27 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>2019 New Ideas</title>
-        <description>&lt;h2 id=&quot;books-currently-reading&quot;&gt;Books Currently Reading:&lt;/h2&gt;
+        <description>&lt;p&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;books-currently-reading&quot;&gt;Books Currently Reading:&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.danielletown.com/book/&quot;&gt;Invested&lt;/a&gt;&lt;/li&gt;
@@ -78,7 +79,26 @@ for its fast ndarray.&lt;/p&gt;
 &lt;p&gt;Pandas runs on top of NumPy- so Pandas depends on NumPy.  Pandas provides
 datatable-like functions- as well as stats, groupbys, merge and join methods.&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;Pandas was built starting in 2008 by Wes McKinney at AQR.&lt;/p&gt;
+
+&lt;h2 id=&quot;matplotlib-for-quick-charts&quot;&gt;Matplotlib for Quick Charts&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nbviewer.jupyter.org/github/patrickleungwl/code_lab/blob/master/python_lab/build_charts.ipynb&quot;&gt;Quick charts demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;poisson-distribution&quot;&gt;Poisson Distribution&lt;/h2&gt;
+
+&lt;p&gt;Poisson Distribution is for modelling the number of times an event occurs in
+an interval of time or space- for example- the number of patients arriving in 
+an emergency room between 10 and 11pm.&lt;/p&gt;
+
+&lt;p&gt;The following assumptions must be true in order to use Poisson Distribution&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;k is the number of times an event occurs in an interval- like 0, 1, 2 …&lt;/li&gt;
+  &lt;li&gt;The events are independent.&lt;/li&gt;
+  &lt;li&gt;The rate at which events occur is constant.&lt;/li&gt;
+  &lt;li&gt;Two events cannot occur at exactly the same time.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr /&gt;
 </description>
