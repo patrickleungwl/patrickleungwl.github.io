@@ -5,31 +5,91 @@
     <description>A journal of tech issues in financial applications</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Dec 2018 11:38:57 -0500</pubDate>
-    <lastBuildDate>Wed, 19 Dec 2018 11:38:57 -0500</lastBuildDate>
+    <pubDate>Mon, 18 Feb 2019 00:09:26 -0500</pubDate>
+    <lastBuildDate>Mon, 18 Feb 2019 00:09:26 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Python Notes</title>
-        <description>&lt;h2 id=&quot;packages-to-investigate&quot;&gt;Packages to investigate&lt;/h2&gt;
+        <title>2019 New Ideas</title>
+        <description>&lt;h2 id=&quot;books-currently-reading&quot;&gt;Books Currently Reading:&lt;/h2&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;SciKit&lt;/li&gt;
-  &lt;li&gt;Theano&lt;/li&gt;
-  &lt;li&gt;Caffe&lt;/li&gt;
-  &lt;li&gt;SparkML&lt;/li&gt;
-  &lt;li&gt;TensorFlow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.danielletown.com/book/&quot;&gt;Invested&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://landing.google.com/sre/sre-book/toc/index.html&quot;&gt;Google SRE&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.penguinrandomhouse.com/books/566084/the-banished-immortal-by-ha-jin/9781524747411/&quot;&gt;The Banished Immortal&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;some-ideas-to-resolve-soon&quot;&gt;Some Ideas To Resolve Soon:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Poisson distribution&lt;/li&gt;
+  &lt;li&gt;What is PCA?&lt;/li&gt;
+  &lt;li&gt;What is irvega rho?&lt;/li&gt;
+  &lt;li&gt;Some notes on financial markets&lt;/li&gt;
+  &lt;li&gt;How to use TensorFlow?&lt;/li&gt;
+  &lt;li&gt;How to use pivottable.js?&lt;/li&gt;
+  &lt;li&gt;How to use metplotlib for charts?&lt;/li&gt;
+  &lt;li&gt;Backtest strategy to buy on n% dips?&lt;/li&gt;
+  &lt;li&gt;Build pages on individual tickers&lt;/li&gt;
+  &lt;li&gt;How to host python script on AWS?&lt;/li&gt;
+  &lt;li&gt;Why use NumPy?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;new-investment-ideas&quot;&gt;New Investment Ideas&lt;/h2&gt;
+
+&lt;p&gt;A new proposed idea is to buy on n% dips.  Would this work? 
+Or buy an index instead of individual stocks on such dips.&lt;/p&gt;
+
+&lt;h2 id=&quot;pca&quot;&gt;PCA&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Principal_component_analysis&quot;&gt;PCA - principal component analysis&lt;/a&gt;
+sounds very much like fourier transform.  It is a statistical proceudre that 
+reduces 100 variables to a few important- orthogonal (meaning unrelated) variables- principal components- that 
+explains 95% of the movements of the original wave.&lt;/p&gt;
+
+&lt;p&gt;PCA is used primarily for making predictive models.&lt;/p&gt;
+
+&lt;h2 id=&quot;rho&quot;&gt;Rho&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Greeks_(finance)#Rho&quot;&gt;Rho&lt;/a&gt;
+is the sensitivity of the option value to changes in the risk free 
+interest rate.&lt;/p&gt;
+
+&lt;h2 id=&quot;pivottablejs&quot;&gt;PivotTable.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pivottable.js.org/examples/rcsvs.html&quot;&gt;PivotTable.js&lt;/a&gt; looks pretty 
+powerful.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-use-numpy&quot;&gt;Why use NumPy?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ndarray- a fast and space efficient multi-dimensional array providing
+vectorized arithmetic operations and broadcasting capabilities&lt;/li&gt;
+  &lt;li&gt;functions for reading and writing to disk&lt;/li&gt;
+  &lt;li&gt;tools for integrating with C, C++ and Fortran&lt;/li&gt;
+  &lt;li&gt;math operations with no loops&lt;/li&gt;
+  &lt;li&gt;linear algebra and fourier transform functions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But what functions does NumPy provide and what from Pandas?  I believe
+data analysis primarily use math functions from Pandas and use NumPy primarily
+for its fast ndarray.&lt;/p&gt;
+
+&lt;p&gt;Pandas runs on top of NumPy- so Pandas depends on NumPy.  Pandas provides
+datatable-like functions- as well as stats, groupbys, merge and join methods.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;hr /&gt;
 </description>
-        <pubDate>Tue, 18 Dec 2018 00:00:00 -0500</pubDate>
-        <link>/machine-learning/2018/12/18/python-ideas/</link>
-        <guid isPermaLink="true">/machine-learning/2018/12/18/python-ideas/</guid>
+        <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
+        <link>/finance/2019/02/16/new-ideas/</link>
+        <guid isPermaLink="true">/finance/2019/02/16/new-ideas/</guid>
         
-        <category>machine-learning</category>
+        <category>finance</category>
         
         
-        <category>machine-learning</category>
+        <category>finance</category>
         
       </item>
     
