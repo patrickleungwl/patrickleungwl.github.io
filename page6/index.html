@@ -59,6 +59,31 @@
 
         <article class="post">
             <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/23/threadpool/">Using ThreadPool</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Testing ThreadPool usage today- using System; using System.Threading; namespace TestThreadPool { class ThreadPoolTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId=3D{1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask(Object stateInfo) { LogMsg("LongComputeTask starting"); float percentDone =3D 0.0f; for (int i =3D 0; i &lt; 10; i++) { Thread.Sleep(500); percentDone +=3D 10.0f; LogMsg("LongComputeTask {0:0.0f}% completed", percentDone); } LogMsg("LongComputeTask completed"); AutoResetEvent myFlag =3D stateInfo...
+                <!--
+                <p>Testing ThreadPool usage today-</p>
+
+ <a class="read-more" href="/tech/2015/12/23/threadpool/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-23">
+                    23 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
                 <h2 class="post-title"><a href="/tech/2015/12/22/threads/">Using Threads</a></h2>
             </header>
             <section class="post-excerpt">
@@ -218,31 +243,6 @@ multi-threading features.  However, I’ll still post some test code to illustra
                 
                 <time class="post-date" datetime="2015-12-17">
                     17 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/05/03/are-generic-collections-faster/">Are Generic Collections Faster than Non-Generic Collections?</a></h2>
-            </header>
-            <section class="post-excerpt">
-                The oft-repeated assertion is that generic collections run faster than their non-generic versions. But is this true? And if so, just how much faster? I wrote some quick code to run a test. using System; using System.Collections.Generic; using System.Collections; namespace TestBoxing { class Program { static void TimeArrayList() { Console.Out.WriteLine("TimeArrayList start"); // Test creating and reading a million boxed ints DateTime dtStart = DateTime.Now; ArrayList intList = new ArrayList(); for (int i = 0; i...
-                <!--
-                <p>The oft-repeated assertion is that generic collections run faster than their non-generic versions.  But is this true?  And if so, just how much faster?</p>
-
- <a class="read-more" href="/tech/2015/05/03/are-generic-collections-faster/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-05-03">
-                    03 May 2015
                 </time> 
             </footer>
         </article>

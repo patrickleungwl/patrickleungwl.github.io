@@ -3,11 +3,109 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Feb 2019 11:26:27 -0500</pubDate>
-    <lastBuildDate>Mon, 18 Feb 2019 11:26:27 -0500</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 24 Feb 2019 11:52:50 -0500</pubDate>
+    <lastBuildDate>Sun, 24 Feb 2019 11:52:50 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>How to use slide rules</title>
+        <description>&lt;h2 id=&quot;multiplication&quot;&gt;Multiplication&lt;/h2&gt;
+
+&lt;h3 id=&quot;to-multiply-two-small-numbers-2x3&quot;&gt;To multiply two small numbers, 2x3&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the left, line up C (1) to D (2).  
+- Move cursor to C (3).  D (6) shows the answer.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;to-mulitply-two-big-numbers-6x7&quot;&gt;To mulitply two big numbers, 6x7&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the right, line up C (1) to D (6).
+- Move cursor to C (7).  D (4.2) shows the answer.  Adjust by 10 = 42.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;to-multiple-two-big-numbers-12-x-67&quot;&gt;To multiple two big numbers, 12 x 67&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the left, line up C (1.2) to D (1.2).
+- Move cursor to C (6.7).  D (8) shows the answer.  Adjust by 
+  thinking 10x70=700.  So 8 must be 800.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;division&quot;&gt;Division&lt;/h2&gt;
+
+&lt;h3 id=&quot;to-divide-two-small-numbers-45--78&quot;&gt;To divide two small numbers, 4.5 / 7.8&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D. 
+- Move cursor to D (4.5).
+- Move C (7.8) until 7.8 hits the cursor.
+- Move cursor to C (1).
+- The answer is in D (5.78).
+- Since 4/8 ~ 0.5, the answer is 0.578.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;to-divide-two-numbers-142--83&quot;&gt;To divide two numbers, 142 / 83&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.
+- Move cursor to D (1.42).
+- Move C (8.3) until 8.3 hits the cursor.
+- Move cursor to C (1).
+- The answer is in D (1.72).
+- Since 160/80 ~ 2, the answer is 1.72.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;to-divide-two-big-numbers-2313184--80234&quot;&gt;To divide two big numbers, 2,313,184 / 80,234&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.
+- 2,313,184 ~ 2.3e6.
+- 80,234 ~ 8.0e4.
+- Move cursor to D (2.3).
+- Move C (8.0) until 8.0 hits the cursor.
+- Move cursor to C (1).
+- The answer is in D (2.88).
+~ Adjusted for scale, 2.88e2 ~ 28.8.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;sin&quot;&gt;Sin&lt;/h2&gt;
+
+&lt;h2 id=&quot;sin-30&quot;&gt;Sin 30&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule A and S.  Align rules.
+- Move cursor to S (30).
+- The answer is in A (5).
+- Adjusted, the answer is 0.5.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;cos-30&quot;&gt;Cos 30&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Once you can do sin 0-90, you can do any sin or cos.
+- If you look at the cos/sin charts, cos 30 is the same as sin 60.
+- Sin 60 = 0.866.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;tan-30&quot;&gt;Tan 30&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule D and T.  Align rules.
+- Move cursor to T (30).
+- The answer is in D (5.76).
+- Adjusted, the answer is 0.576. 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/finance/2019/02/20/how-to-use-sliderules/</link>
+        <guid isPermaLink="true">http://localhost:4000/finance/2019/02/20/how-to-use-sliderules/</guid>
+        
+        <category>finance</category>
+        
+        
+        <category>finance</category>
+        
+      </item>
     
       <item>
         <title>2019 New Ideas</title>
@@ -103,8 +201,8 @@ an emergency room between 10 and 11pm.&lt;/p&gt;
 &lt;hr /&gt;
 </description>
         <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
-        <link>/finance/2019/02/16/new-ideas/</link>
-        <guid isPermaLink="true">/finance/2019/02/16/new-ideas/</guid>
+        <link>http://localhost:4000/finance/2019/02/16/new-ideas/</link>
+        <guid isPermaLink="true">http://localhost:4000/finance/2019/02/16/new-ideas/</guid>
         
         <category>finance</category>
         
@@ -140,8 +238,8 @@ SCHW- Sell 2 50.0 Dec21 calls at 0.60 each for 110.
 &lt;hr /&gt;
 </description>
         <pubDate>Sat, 17 Nov 2018 00:00:00 -0500</pubDate>
-        <link>/investing/2018/11/17/options-ideas/</link>
-        <guid isPermaLink="true">/investing/2018/11/17/options-ideas/</guid>
+        <link>http://localhost:4000/investing/2018/11/17/options-ideas/</link>
+        <guid isPermaLink="true">http://localhost:4000/investing/2018/11/17/options-ideas/</guid>
         
         <category>investing</category>
         
@@ -178,8 +276,8 @@ come back down.  They keep going up and up.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 07 Oct 2018 00:00:00 -0400</pubDate>
-        <link>/investing/2018/10/07/options-ideas/</link>
-        <guid isPermaLink="true">/investing/2018/10/07/options-ideas/</guid>
+        <link>http://localhost:4000/investing/2018/10/07/options-ideas/</link>
+        <guid isPermaLink="true">http://localhost:4000/investing/2018/10/07/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -224,8 +322,8 @@ Let’s sell 2 20181116 puts on it- at 50.0 for 340.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 30 Sep 2018 00:00:00 -0400</pubDate>
-        <link>/investing/2018/09/30/options-ideas/</link>
-        <guid isPermaLink="true">/investing/2018/09/30/options-ideas/</guid>
+        <link>http://localhost:4000/investing/2018/09/30/options-ideas/</link>
+        <guid isPermaLink="true">http://localhost:4000/investing/2018/09/30/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -302,8 +400,8 @@ BRK.B is now at 215.&lt;/li&gt;
 
 </description>
         <pubDate>Fri, 14 Sep 2018 00:00:00 -0400</pubDate>
-        <link>/investing/2018/09/14/options-ideas/</link>
-        <guid isPermaLink="true">/investing/2018/09/14/options-ideas/</guid>
+        <link>http://localhost:4000/investing/2018/09/14/options-ideas/</link>
+        <guid isPermaLink="true">http://localhost:4000/investing/2018/09/14/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -472,8 +570,8 @@ and scientific domains.&lt;br /&gt;
 
 </description>
         <pubDate>Sun, 25 Feb 2018 00:00:00 -0500</pubDate>
-        <link>/tech/2018/02/25/python-tools/</link>
-        <guid isPermaLink="true">/tech/2018/02/25/python-tools/</guid>
+        <link>http://localhost:4000/tech/2018/02/25/python-tools/</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2018/02/25/python-tools/</guid>
         
         <category>patterns</category>
         
@@ -662,8 +760,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
-        <link>/tech/2017/10/13/decorator-pattern/</link>
-        <guid isPermaLink="true">/tech/2017/10/13/decorator-pattern/</guid>
+        <link>http://localhost:4000/tech/2017/10/13/decorator-pattern/</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2017/10/13/decorator-pattern/</guid>
         
         <category>patterns</category>
         
@@ -699,8 +797,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 12 Oct 2017 00:00:00 -0400</pubDate>
-        <link>/tech/2017/10/12/decorators/</link>
-        <guid isPermaLink="true">/tech/2017/10/12/decorators/</guid>
+        <link>http://localhost:4000/tech/2017/10/12/decorators/</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2017/10/12/decorators/</guid>
         
         <category>patterns</category>
         
@@ -1035,46 +1133,13 @@ else.  If you are a manager, you don't drift.
 
 </description>
         <pubDate>Sun, 03 Sep 2017 00:00:00 -0400</pubDate>
-        <link>/managing/2017/09/03/managing/</link>
-        <guid isPermaLink="true">/managing/2017/09/03/managing/</guid>
+        <link>http://localhost:4000/managing/2017/09/03/managing/</link>
+        <guid isPermaLink="true">http://localhost:4000/managing/2017/09/03/managing/</guid>
         
         <category>managing</category>
         
         
         <category>managing</category>
-        
-      </item>
-    
-      <item>
-        <title>The Effective Engineer</title>
-        <description>&lt;p&gt;Just read “The Effective Engineer” by Edmond Lau.  For those who have no 
-time to read, I’ve simplified the book to 11 bullet points below.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Increase your leverage by focusing on high impact activities and 
-completing activities quicker.&lt;/li&gt;
-  &lt;li&gt;Learning is like compound interest.  Steadily acquiring small bits of 
-knowledge over time accumulates to a mountain of knowledge.&lt;/li&gt;
-  &lt;li&gt;Prioritize regularly- differentiate between urgent vs important.&lt;/li&gt;
-  &lt;li&gt;Invest in iteration speed- with continuous testing and small incremental changes.&lt;/li&gt;
-  &lt;li&gt;Invest in time saving tools.&lt;/li&gt;
-  &lt;li&gt;Use metrics to drive progress.&lt;/li&gt;
-  &lt;li&gt;Validate ideas via feedbacks early and often.&lt;/li&gt;
-  &lt;li&gt;Test your ideas with automated tests.&lt;/li&gt;
-  &lt;li&gt;Relentless automate repetitive tasks.&lt;/li&gt;
-  &lt;li&gt;Invest in team’s growth.&lt;/li&gt;
-  &lt;li&gt;Build the simplest system possible.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 24 Jun 2017 00:00:00 -0400</pubDate>
-        <link>/tech/2017/06/24/the-effective-engineer/</link>
-        <guid isPermaLink="true">/tech/2017/06/24/the-effective-engineer/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>tech</category>
         
       </item>
     

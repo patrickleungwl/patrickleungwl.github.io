@@ -31,9 +31,9 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">2019 New Ideas</h1>
+            <h1 class="post-title">How to use slide rules</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2019-02-16">16 Feb 2019</time>
+                <time class="post-date" datetime="2019-02-20">20 Feb 2019</time>
                 
                     on finance
                 
@@ -41,96 +41,90 @@
         </header>
 
         <section class="post-content">
-            <p>.</p>
-<h2 id="books-currently-reading">Books Currently Reading:</h2>
+            <h2 id="multiplication">Multiplication</h2>
 
-<ul>
-  <li><a href="https://www.danielletown.com/book/">Invested</a></li>
-  <li><a href="https://landing.google.com/sre/sre-book/toc/index.html">Google SRE</a></li>
-  <li><a href="https://www.penguinrandomhouse.com/books/566084/the-banished-immortal-by-ha-jin/9781524747411/">The Banished Immortal</a></li>
-</ul>
+<h3 id="to-multiply-two-small-numbers-2x3">To multiply two small numbers, 2x3</h3>
 
-<h2 id="some-ideas-to-resolve-soon">Some Ideas To Resolve Soon:</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Use rules C and D.  Starting from the left, line up C (1) to D (2).  
+- Move cursor to C (3).  D (6) shows the answer.
+</code></pre></div></div>
 
-<ul>
-  <li>Poisson distribution</li>
-  <li>What is PCA?</li>
-  <li>What is irvega rho?</li>
-  <li>Some notes on financial markets</li>
-  <li>How to use TensorFlow?</li>
-  <li>How to use pivottable.js?</li>
-  <li>How to use metplotlib for charts?</li>
-  <li>Backtest strategy to buy on n% dips?</li>
-  <li>Build pages on individual tickers</li>
-  <li>How to host python script on AWS?</li>
-  <li>Why use NumPy?</li>
-</ul>
+<h3 id="to-mulitply-two-big-numbers-6x7">To mulitply two big numbers, 6x7</h3>
 
-<h2 id="new-investment-ideas">New Investment Ideas</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Use rules C and D.  Starting from the right, line up C (1) to D (6).
+- Move cursor to C (7).  D (4.2) shows the answer.  Adjust by 10 = 42.
+</code></pre></div></div>
 
-<p>A new proposed idea is to buy on n% dips.  Would this work? 
-Or buy an index instead of individual stocks on such dips.</p>
+<h3 id="to-multiple-two-big-numbers-12-x-67">To multiple two big numbers, 12 x 67</h3>
 
-<h2 id="pca">PCA</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Use rules C and D.  Starting from the left, line up C (1.2) to D (1.2).
+- Move cursor to C (6.7).  D (8) shows the answer.  Adjust by 
+  thinking 10x70=700.  So 8 must be 800.
+</code></pre></div></div>
 
-<p><a href="https://en.wikipedia.org/wiki/Principal_component_analysis">PCA - principal component analysis</a>
-sounds very much like fourier transform.  It is a statistical proceudre that 
-reduces 100 variables to a few important- orthogonal (meaning unrelated) variables- principal components- that 
-explains 95% of the movements of the original wave.</p>
+<p>.</p>
 
-<p>PCA is used primarily for making predictive models.</p>
+<h2 id="division">Division</h2>
 
-<h2 id="rho">Rho</h2>
+<h3 id="to-divide-two-small-numbers-45--78">To divide two small numbers, 4.5 / 7.8</h3>
 
-<p><a href="https://en.wikipedia.org/wiki/Greeks_(finance)#Rho">Rho</a>
-is the sensitivity of the option value to changes in the risk free 
-interest rate.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Use rules C and D. 
+- Move cursor to D (4.5).
+- Move C (7.8) until 7.8 hits the cursor.
+- Move cursor to C (1).
+- The answer is in D (5.78).
+- Since 4/8 ~ 0.5, the answer is 0.578.
+</code></pre></div></div>
 
-<h2 id="pivottablejs">PivotTable.js</h2>
+<h3 id="to-divide-two-numbers-142--83">To divide two numbers, 142 / 83</h3>
 
-<p><a href="https://pivottable.js.org/examples/rcsvs.html">PivotTable.js</a> looks pretty 
-powerful.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Use rules C and D.
+- Move cursor to D (1.42).
+- Move C (8.3) until 8.3 hits the cursor.
+- Move cursor to C (1).
+- The answer is in D (1.72).
+- Since 160/80 ~ 2, the answer is 1.72.
+</code></pre></div></div>
 
-<h2 id="why-use-numpy">Why use NumPy?</h2>
+<h3 id="to-divide-two-big-numbers-2313184--80234">To divide two big numbers, 2,313,184 / 80,234</h3>
 
-<ul>
-  <li>ndarray- a fast and space efficient multi-dimensional array providing
-vectorized arithmetic operations and broadcasting capabilities</li>
-  <li>functions for reading and writing to disk</li>
-  <li>tools for integrating with C, C++ and Fortran</li>
-  <li>math operations with no loops</li>
-  <li>linear algebra and fourier transform functions</li>
-</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Use rules C and D.
+- 2,313,184 ~ 2.3e6.
+- 80,234 ~ 8.0e4.
+- Move cursor to D (2.3).
+- Move C (8.0) until 8.0 hits the cursor.
+- Move cursor to C (1).
+- The answer is in D (2.88).
+~ Adjusted for scale, 2.88e2 ~ 28.8.
+</code></pre></div></div>
 
-<p>But what functions does NumPy provide and what from Pandas?  I believe
-data analysis primarily use math functions from Pandas and use NumPy primarily
-for its fast ndarray.</p>
+<p>.</p>
 
-<p>Pandas runs on top of NumPy- so Pandas depends on NumPy.  Pandas provides
-datatable-like functions- as well as stats, groupbys, merge and join methods.</p>
+<h2 id="sin">Sin</h2>
 
-<p>Pandas was built starting in 2008 by Wes McKinney at AQR.</p>
+<h2 id="sin-30">Sin 30</h2>
 
-<h2 id="matplotlib-for-quick-charts">Matplotlib for Quick Charts</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Use rule A and S.  Align rules.
+- Move cursor to S (30).
+- The answer is in A (5).
+- Adjusted, the answer is 0.5.
+</code></pre></div></div>
 
-<p><a href="https://nbviewer.jupyter.org/github/patrickleungwl/code_lab/blob/master/python_lab/build_charts.ipynb">Quick charts demo</a></p>
+<h2 id="cos-30">Cos 30</h2>
 
-<h2 id="poisson-distribution">Poisson Distribution</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Once you can do sin 0-90, you can do any sin or cos.
+- If you look at the cos/sin charts, cos 30 is the same as sin 60.
+- Sin 60 = 0.866.
+</code></pre></div></div>
 
-<p>Poisson Distribution is for modelling the number of times an event occurs in
-an interval of time or space- for example- the number of patients arriving in 
-an emergency room between 10 and 11pm.</p>
+<h2 id="tan-30">Tan 30</h2>
 
-<p>The following assumptions must be true in order to use Poisson Distribution</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Use rule D and T.  Align rules.
+- Move cursor to T (30).
+- The answer is in D (5.76).
+- Adjusted, the answer is 0.576. 
+</code></pre></div></div>
 
-<ul>
-  <li>k is the number of times an event occurs in an interval- like 0, 1, 2 …</li>
-  <li>The events are independent.</li>
-  <li>The rate at which events occur is constant.</li>
-  <li>Two events cannot occur at exactly the same time.</li>
-</ul>
-
-<hr />
 
         </section>
 
@@ -142,11 +136,13 @@ an emergency room between 10 and 11pm.</p>
                 <ul>
                     
                         
-                    
-                        
                             
                             
 
+                    
+                        <li><span>16 Feb 2019</span>
+                          <a href="http://localhost:4000/finance/2019/02/16/new-ideas/">2019 New Ideas</a>
+                        </li>
                     
                         <li><span>17 Nov 2018</span>
                           <a href="http://localhost:4000/investing/2018/11/17/options-ideas/">Options October Disaster</a>
@@ -164,10 +160,6 @@ an emergency room between 10 and 11pm.</p>
                           <a href="http://localhost:4000/investing/2018/09/14/options-ideas/">Options Ideas</a>
                         </li>
                     
-                        <li><span>25 Feb 2018</span>
-                          <a href="http://localhost:4000/tech/2018/02/25/python-tools/">Python's Data Science Toolkit</a>
-                        </li>
-                    
                 </ul>
             </section>
         
@@ -179,15 +171,15 @@ an emergency room between 10 and 11pm.</p>
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=2019 New Ideas&amp;url=/finance/2019/02/16/new-ideas/"
+    <a class="icon-twitter" href="http://twitter.com/share?text=How to use slide rules&amp;url=/finance/2019/02/20/how-to-use-sliderules/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/finance/2019/02/16/new-ideas/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/finance/2019/02/20/how-to-use-sliderules/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=/finance/2019/02/16/new-ideas/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=/finance/2019/02/20/how-to-use-sliderules/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
