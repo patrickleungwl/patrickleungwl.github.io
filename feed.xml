@@ -3,10 +3,10 @@
   <channel>
     <title>Finance Tech Wanderings</title>
     <description>A journal of tech issues in financial applications</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Feb 2019 11:52:50 -0500</pubDate>
-    <lastBuildDate>Sun, 24 Feb 2019 11:52:50 -0500</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 07 Mar 2019 19:17:58 -0500</pubDate>
+    <lastBuildDate>Thu, 07 Mar 2019 19:17:58 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -32,6 +32,11 @@
   thinking 10x70=700.  So 8 must be 800.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h3 id=&quot;what-are-the-limits-of-rules-c-and-d&quot;&gt;What are the limits of rules C and D?&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Reading C and D from left to right is only for small digits, like 2x4.
+- Reading C and D from right to left works for bigger digits.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;division&quot;&gt;Division&lt;/h2&gt;
@@ -97,8 +102,8 @@
 
 </description>
         <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/finance/2019/02/20/how-to-use-sliderules/</link>
-        <guid isPermaLink="true">http://localhost:4000/finance/2019/02/20/how-to-use-sliderules/</guid>
+        <link>/finance/2019/02/20/how-to-use-sliderules/</link>
+        <guid isPermaLink="true">/finance/2019/02/20/how-to-use-sliderules/</guid>
         
         <category>finance</category>
         
@@ -201,134 +206,13 @@ an emergency room between 10 and 11pm.&lt;/p&gt;
 &lt;hr /&gt;
 </description>
         <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/finance/2019/02/16/new-ideas/</link>
-        <guid isPermaLink="true">http://localhost:4000/finance/2019/02/16/new-ideas/</guid>
+        <link>/finance/2019/02/16/new-ideas/</link>
+        <guid isPermaLink="true">/finance/2019/02/16/new-ideas/</guid>
         
         <category>finance</category>
         
         
         <category>finance</category>
-        
-      </item>
-    
-      <item>
-        <title>Options October Disaster</title>
-        <description>&lt;p&gt;What a disaster so far.&lt;/p&gt;
-
-&lt;p&gt;From options so far- I have&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;PG- I sold PG at 82.5 and now it is at 93.82.  Paper loss 2200.&lt;/li&gt;
-  &lt;li&gt;BA- I bought 100sh BA at 360 on Oct 22 and it is at 335.  Paper loss 2500.&lt;/li&gt;
-  &lt;li&gt;C- I bought 200sh C at 72 on Oct 22 and it is at 65.  Paper loss 1400.&lt;/li&gt;
-  &lt;li&gt;SCHW- I bought 200sh SCHW at 50 on Nov 16 and it is at 47.  Paper loss 600.&lt;/li&gt;
-  &lt;li&gt;V- I lucked out on this one and kept $250.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;So for a few hundred dollars premium gains, I lost 6700.  This is going very 
-badly.&lt;/p&gt;
-
-&lt;p&gt;I should probably sell some calls on these to make some money back.  Okay, new 
-strategy.  Sell calls on these losers to get some money back.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BA- Sell 1 370 Dec21 calls at 2.55 each for 255.
-C- Sell 2 72.5 Dec21 calls at 0.17 each for 34. 
-SCHW- Sell 2 50.0 Dec21 calls at 0.60 each for 110.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-</description>
-        <pubDate>Sat, 17 Nov 2018 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/investing/2018/11/17/options-ideas/</link>
-        <guid isPermaLink="true">http://localhost:4000/investing/2018/11/17/options-ideas/</guid>
-        
-        <category>investing</category>
-        
-        
-        <category>investing</category>
-        
-      </item>
-    
-      <item>
-        <title>Options Ideas BiWeekly</title>
-        <description>&lt;p&gt;Some highlights this past week.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20181007 Statuses
-  -2 PG 82.5 20181019 Calls- PG at 82.15, maybe I won't get to sell stock. 
-  -1 BA 360  20181019 Puts.  BA at 386.5, way above put's strike. 
-  -2 C  72.5 20181019 Puts.  C at 72.42- maybe I will not be forced to buy it.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Last week’s idea on selling 2 20181116 of BL at 50.0 fortunately did not 
-sell in the market.  Now BL is at 50.87.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;New ideas&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I see SCHW is coming back.  And stocks like V and UNH just never seem to 
-come back down.  They keep going up and up.&lt;/p&gt;
-
-&lt;p&gt;Trigger new trades&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -2 SCHW 50.0  20181116 Put SCWH at 51.48.  SCHW appears to be coming back ~ $220
-  -1 V    140.0 20181116 Put V at 145.36.    V just doesnt seem to go down ~ $250
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-</description>
-        <pubDate>Sun, 07 Oct 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/investing/2018/10/07/options-ideas/</link>
-        <guid isPermaLink="true">http://localhost:4000/investing/2018/10/07/options-ideas/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>investing</category>
-        
-      </item>
-    
-      <item>
-        <title>Options Ideas BiWeekly</title>
-        <description>&lt;p&gt;Some tips:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;When vols are low, buy options.  When vols are high, sell options.&lt;/li&gt;
-  &lt;li&gt;When underlying is high and doesn’t look likely to go any higher, 
- sell protected calls at above current price.  Pocket the premiums.&lt;/li&gt;
-  &lt;li&gt;When underlying is low and doesn’t look likely to go any lower,
- sell puts at below current price.  Pocket the premiums.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some highlights this past week.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20180928 Statuses
-  -2 PG 82.5 20181019 Calls- PG at 83.3, above calls' strikes. 
-  -1 BA 360  20181019 Puts.  BA at 371.9, way above put's strike. 
-  -2 C  72.5 20181019 Puts.  C at 71.74- puts at risk.
-
-2010928 Expirations
-  -1 ADBE 250 20180928 Put- ADBE at 270. Safely pocketed the 265 premium. 
-  -2 BRK.B 200 20180921 Puts.  BRK.B at 215. Pocketed 85.
-
-20180924 New ideas
-  Sold 1 BA 360 20181019 Puts.  Pocketed 407.
-  Sold 2 C 72.5 20181019 Puts.  Pocketed 200.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Cloud software maker BL rocking new highs at 56.47.&lt;br /&gt;
-Let’s sell 2 20181116 puts on it- at 50.0 for 340.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-</description>
-        <pubDate>Sun, 30 Sep 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/investing/2018/09/30/options-ideas/</link>
-        <guid isPermaLink="true">http://localhost:4000/investing/2018/09/30/options-ideas/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>investing</category>
         
       </item>
     
@@ -400,8 +284,8 @@ BRK.B is now at 215.&lt;/li&gt;
 
 </description>
         <pubDate>Fri, 14 Sep 2018 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/investing/2018/09/14/options-ideas/</link>
-        <guid isPermaLink="true">http://localhost:4000/investing/2018/09/14/options-ideas/</guid>
+        <link>/investing/2018/09/14/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/09/14/options-ideas/</guid>
         
         <category>patterns</category>
         
@@ -570,8 +454,8 @@ and scientific domains.&lt;br /&gt;
 
 </description>
         <pubDate>Sun, 25 Feb 2018 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/tech/2018/02/25/python-tools/</link>
-        <guid isPermaLink="true">http://localhost:4000/tech/2018/02/25/python-tools/</guid>
+        <link>/tech/2018/02/25/python-tools/</link>
+        <guid isPermaLink="true">/tech/2018/02/25/python-tools/</guid>
         
         <category>patterns</category>
         
@@ -760,8 +644,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/tech/2017/10/13/decorator-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/tech/2017/10/13/decorator-pattern/</guid>
+        <link>/tech/2017/10/13/decorator-pattern/</link>
+        <guid isPermaLink="true">/tech/2017/10/13/decorator-pattern/</guid>
         
         <category>patterns</category>
         
@@ -797,8 +681,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 12 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/tech/2017/10/12/decorators/</link>
-        <guid isPermaLink="true">http://localhost:4000/tech/2017/10/12/decorators/</guid>
+        <link>/tech/2017/10/12/decorators/</link>
+        <guid isPermaLink="true">/tech/2017/10/12/decorators/</guid>
         
         <category>patterns</category>
         
@@ -1133,13 +1017,222 @@ else.  If you are a manager, you don't drift.
 
 </description>
         <pubDate>Sun, 03 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/managing/2017/09/03/managing/</link>
-        <guid isPermaLink="true">http://localhost:4000/managing/2017/09/03/managing/</guid>
+        <link>/managing/2017/09/03/managing/</link>
+        <guid isPermaLink="true">/managing/2017/09/03/managing/</guid>
         
         <category>managing</category>
         
         
         <category>managing</category>
+        
+      </item>
+    
+      <item>
+        <title>The Effective Engineer</title>
+        <description>&lt;p&gt;Just read “The Effective Engineer” by Edmond Lau.  For those who have no 
+time to read, I’ve simplified the book to 11 bullet points below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Increase your leverage by focusing on high impact activities and 
+completing activities quicker.&lt;/li&gt;
+  &lt;li&gt;Learning is like compound interest.  Steadily acquiring small bits of 
+knowledge over time accumulates to a mountain of knowledge.&lt;/li&gt;
+  &lt;li&gt;Prioritize regularly- differentiate between urgent vs important.&lt;/li&gt;
+  &lt;li&gt;Invest in iteration speed- with continuous testing and small incremental changes.&lt;/li&gt;
+  &lt;li&gt;Invest in time saving tools.&lt;/li&gt;
+  &lt;li&gt;Use metrics to drive progress.&lt;/li&gt;
+  &lt;li&gt;Validate ideas via feedbacks early and often.&lt;/li&gt;
+  &lt;li&gt;Test your ideas with automated tests.&lt;/li&gt;
+  &lt;li&gt;Relentless automate repetitive tasks.&lt;/li&gt;
+  &lt;li&gt;Invest in team’s growth.&lt;/li&gt;
+  &lt;li&gt;Build the simplest system possible.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 24 Jun 2017 00:00:00 -0400</pubDate>
+        <link>/tech/2017/06/24/the-effective-engineer/</link>
+        <guid isPermaLink="true">/tech/2017/06/24/the-effective-engineer/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Basic Matplotlib Plot</title>
+        <description>&lt;p&gt;Most data analysts just want to generate a plot quickly with minimal work.&lt;br /&gt;
+However Matplotlib’s api has a slight learning curve- and it requires some 
+investment to pick up on its class hierachies and its terminologies. 
+I’ve jotted down some Matplotlib gems here so others users can have less 
+of a learning curve.&lt;/p&gt;
+
+&lt;p&gt;One key point to note is that regardless of what commands used to generate plots, 
+they all devolve into one low level plot method- which is pyplot.subplots(). 
+Exploting this method well is the key to build great looking charts.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://matplotlib.org/api/axes_api.html&quot;&gt;Axes&lt;/a&gt; class is the main class 
+to work with for customising the plot type and the x and y axes.  For 
+working with all other plot elements, we use the 
+&lt;a href=&quot;http://matplotlib.org/api/figure_api.html&quot;&gt;Figure&lt;/a&gt; class.  We acquire 
+pointers (or references) to both the Figure and Axes whenever we call the 
+pyplot.subplot() method.&lt;/p&gt;
+
+&lt;p&gt;Sample Matplotlib command usage:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Topic&lt;/th&gt;
+      &lt;th&gt;Intent&lt;/th&gt;
+      &lt;th&gt;Usage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Plots&lt;/td&gt;
+      &lt;td&gt;Create 2x1 subplots&lt;/td&gt;
+      &lt;td&gt;fg, ax = plt.subplots(2, 1, &lt;br /&gt;sharex=True)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spines&lt;/td&gt;
+      &lt;td&gt;Make top spine invisible&lt;/td&gt;
+      &lt;td&gt;ax.spines[‘top’].set_visible(False)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;X Ticks&lt;/td&gt;
+      &lt;td&gt;Set xtick color, label &lt;br /&gt;size, and direction&lt;/td&gt;
+      &lt;td&gt;ax.tick_params(axis=’y’, &lt;br /&gt;color=’#333333’, labelsize=’small’, direction=’in’)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Styles&lt;/td&gt;
+      &lt;td&gt;Use preset plot styles&lt;/td&gt;
+      &lt;td&gt;style.style.use(‘ggplot’)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Styles&lt;/td&gt;
+      &lt;td&gt;See available styles&lt;/td&gt;
+      &lt;td&gt;print(plt.style.available)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Text&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://matplotlib.org/api/text_api.html&quot;&gt;Set text at x,y data points&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;ax.text(dates[2], prices[2], ‘Example’)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Text&lt;/td&gt;
+      &lt;td&gt;Text with arrow&lt;/td&gt;
+      &lt;td&gt;ax.annotate(‘Dividend’,(dates[2],prices[2]), &lt;br /&gt;xytext=(0.8, 0.9), &lt;br /&gt;textcoords=’axes fraction’, &lt;br /&gt;arrowprops = dict(facecolor=’grey’,color=’grey’))&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Subplots&lt;/td&gt;
+      &lt;td&gt;Create subplots&lt;/td&gt;
+      &lt;td&gt;ax = plt.subplot2grid((gx,gy), (x,y), colspan=c)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Subplots&lt;/td&gt;
+      &lt;td&gt;Create subplots&lt;/td&gt;
+      &lt;td&gt;ax = plt.subplot2grid((gx,gy), (x,y), rowspan=r)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Sample Matplotlib script:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter qtconsole
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.figure()                            # Create a new figure window
+xlist = np.linspace(-2.0, 1.0, 100)     # Create 1-D arrays for x,y dimensions
+ylist = np.linspace(-1.0, 2.0, 100)
+X,Y = np.meshgrid(xlist, ylist)         # Create 2-D grid xlist,ylist values
+Z = np.sqrt(X**2 + Y**2)                # Compute function values on the grid
+
+plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = ’k’, linestyles = ’solid’)
+plt.show()
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../../assets/images/201706/matplotlib_plot1.png&quot; alt=&quot;Sample plot&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 11 Jun 2017 00:00:00 -0400</pubDate>
+        <link>/python/2017/06/11/basic-matplotlib/</link>
+        <guid isPermaLink="true">/python/2017/06/11/basic-matplotlib/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>python</category>
+        
+      </item>
+    
+      <item>
+        <title>Using Conda, NumPy</title>
+        <description>&lt;p&gt;Notes on using Conda, NumPy&lt;/p&gt;
+
+&lt;h2 id=&quot;conda&quot;&gt;Conda&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Setup Python 3.5 env&lt;/td&gt;
+      &lt;td&gt;conda create -n py35 python=3.5 anaconda&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Setup Python 2.7 env&lt;/td&gt;
+      &lt;td&gt;conda create -n py27 python=2.7 anaconda&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Switch to Python 3.5 env&lt;/td&gt;
+      &lt;td&gt;source activate py35&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Check Python version&lt;/td&gt;
+      &lt;td&gt;python -V&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;numpy&quot;&gt;Numpy&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Import numpy&lt;/td&gt;
+      &lt;td&gt;import numpy as np&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Create a new array&lt;/td&gt;
+      &lt;td&gt;na = array([1,2,3,4])&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Use any numpy function&lt;/td&gt;
+      &lt;td&gt;na.min()&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Load data into array&lt;/td&gt;
+      &lt;td&gt;na = np.loadtxt(‘data.txt’)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Save array to file&lt;/td&gt;
+      &lt;td&gt;np.savetxt(‘data.txt’, na)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</description>
+        <pubDate>Sat, 10 Jun 2017 00:00:00 -0400</pubDate>
+        <link>/python/2017/06/10/using-conda/</link>
+        <guid isPermaLink="true">/python/2017/06/10/using-conda/</guid>
+        
+        <category>python</category>
+        
+        
+        <category>python</category>
         
       </item>
     

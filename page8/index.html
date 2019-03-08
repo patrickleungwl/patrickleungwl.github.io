@@ -48,87 +48,10 @@
             <a class="newer-posts" href="/page7/" title="Previous Page">&laquo; Newer Posts</a>
       
     
-    <span class="page-number"> Page 8 of 9 </span>
-     
-        <a class="older-posts" href="/page9/" title="Next Page">Older Posts &raquo;</a>
+    <span class="page-number"> Page 8 of 8 </span>
      
 </nav>
     </div>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/22/searching-for-primes-with-c/">Searching for Primes with C</a></h2>
-            </header>
-            <section class="post-excerpt">
-                As a software developer, I regularly do drills with different languages. This is rather analogous to how musicians play scales with their instructions. This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes. I remember from Jon Bentley’s “Programming Pearls” back in the old days- when 64K RAM was considered a luxury, programmers came up with ingenius algorithms to conserve memory usage. I...
-                <!--
-                <p>As a software developer, I regularly do drills with different languages.  This is rather analogous to how musicians play scales with their instructions.  This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes.</p>
-
- <a class="read-more" href="/tech/2014/03/22/searching-for-primes-with-c/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-22">
-                    22 Mar 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/21/exceptions-in-java-constructors/">Exceptions in Java Constructors</a></h2>
-            </header>
-            <section class="post-excerpt">
-                This connundrum always troubled me when I coded in C++. What happens to an object when the object’s constructor throws an exception? Is the object fully constructed or not? If not, does that mean its destructor never gets called? If so, then what happens to the memory that the constructor allocated prior to coming across an exception? In C++, there was the problem of leaky memory if constructors are prone to exceptions. This led to...
-                <!--
-                <p>This connundrum always troubled me when I coded in C++.  What happens to an object when the object’s constructor throws an exception?  Is the object fully constructed or not?  If not, does that mean its destructor never gets called?  If so, then what happens to the memory that the constructor allocated prior to coming across an exception?</p>
-
- <a class="read-more" href="/tech/2014/03/21/exceptions-in-java-constructors/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-21">
-                    21 Mar 2014
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2014/03/20/java-string-literals/">Java String Literals Versus String Objects</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Strings in Java can be declared either literally- String s = "123"; or as a String instance- String s = new String("123"); What are the differences between these two strings? package drills; public class Tester { public static void main(String[] args) { // Test differences between String v = new String(...) // and String v = "..." // String literals are stored in a string pool- cached and reused. // String objects are stored in...
-                <!--
-                <p>Strings in Java can be declared either literally-</p>
-
- <a class="read-more" href="/tech/2014/03/20/java-string-literals/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2014-03-20">
-                    20 Mar 2014
-                </time> 
-            </footer>
-        </article>
 
     
 
@@ -239,15 +162,69 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
     
 
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/03/12/softreferences-in-java/">SoftReferences in Java</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Continuing on with our investigation into memory handling in Java, let’s look at another rarely used feature- the SoftReference.  To get to the point, a SoftReference is just like a WeakReference- except that the Garbage Collector only collects its referenced object if the JVM is running low on memory.  This makes a SoftReference more “sticky” in a running process’s memory. Here is a simple example of how a SoftReference works. Let’s reuse the same resource-heavy...
+                <!--
+                <p>Continuing on with our investigation into memory handling in Java, let’s look at another 
+rarely used feature- the SoftReference.  To get to the point, a SoftReference is 
+just like a WeakReference- except that the Garbage Collector only collects its 
+referenced object if the JVM is running low on memory.  This makes a SoftReference 
+more “sticky” in a running process’s memory.</p>
+
+ <a class="read-more" href="/tech/2014/03/12/softreferences-in-java/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-03-12">
+                    12 Mar 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/03/11/weakreferences-in-java/">WeakReferences in Java</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Java as a language has been in the public eye for close to two decades now.  And there shouldn’t really be anything new to an old techie, should there?  Well, surprise to say- there are some features that I rarely use.  One of these features is the “WeakReference”. What are WeakReferences used for? WeakReferences are used for keeping objects in memory for only as long as a variable references it. As soon as this strong...
+                <!--
+                <p>Java as a language has been in the public eye for close to two decades now.  And there shouldn’t
+really be anything new to an old techie, should there?  Well, surprise to say- there are some 
+features that I rarely use.  One of these features is the “WeakReference”.</p>
+
+ <a class="read-more" href="/tech/2014/03/11/weakreferences-in-java/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-03-11">
+                    11 Mar 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
     <nav class="pagination" role="pagination">
     
         
             <a class="newer-posts" href="/page7/" title="Previous Page">&laquo; Newer Posts</a>
       
     
-    <span class="page-number"> Page 8 of 9 </span>
-     
-        <a class="older-posts" href="/page9/" title="Next Page">Older Posts &raquo;</a>
+    <span class="page-number"> Page 8 of 8 </span>
      
 </nav>
 
