@@ -5,8 +5,8 @@
     <description>A journal of tech issues in financial applications</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Mar 2019 19:17:58 -0500</pubDate>
-    <lastBuildDate>Thu, 07 Mar 2019 19:17:58 -0500</lastBuildDate>
+    <pubDate>Thu, 07 Mar 2019 19:51:48 -0500</pubDate>
+    <lastBuildDate>Thu, 07 Mar 2019 19:51:48 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -213,84 +213,6 @@ an emergency room between 10 and 11pm.&lt;/p&gt;
         
         
         <category>finance</category>
-        
-      </item>
-    
-      <item>
-        <title>Options Ideas</title>
-        <description>&lt;p&gt;A tidbit from a recent read:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;You’ll want to focus on trying to buy options during lower periods of 
-the security’s volatility and concentrate on selling options during high 
-volatility levels. We know that we can’t always predict that our timing 
-of options trading will correspond to high or low volatility levels, 
-but you can always tailor your options strategies to take advantage of 
-whatever volatility level exists at the time.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;What this means is when vols are low, you should buy options.  When vols 
-are high, you should sell options.&lt;/p&gt;
-
-&lt;p&gt;How do we know when vols are high or low?  We need to chart historical vols 
-for each ticker.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;20180910&lt;/strong&gt; Sold 2 PG 82.5 Calls for 20181019
-    &lt;ul&gt;
-      &lt;li&gt;Thinking- PG’s been going nowhere.  Might as well sell it at an acceptable
-price point.  Want a waste of time on PG.&lt;/li&gt;
-      &lt;li&gt;Outcome- Just get rid of it- and earn 350.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;20180831&lt;/strong&gt; Sold 1 ADBE 250 Put for 20180928
-    &lt;ul&gt;
-      &lt;li&gt;Thinking- ADBE’s hot on cloud.  Betting it won’t come down.&lt;br /&gt;
-Might as well earn some income while getting a chance to pick it up cheap.
-ADBE at 265 at the time.&lt;/li&gt;
-      &lt;li&gt;Outcome- At 274.  Most likely will not get put.  Get to keep 263.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;20180831&lt;/strong&gt; Sold 2 BRK.B 200 Puts for 20180921
-    &lt;ul&gt;
-      &lt;li&gt;Thinking- Earn some money with chance to pick up more, BRK.B at 210 at the time&lt;/li&gt;
-      &lt;li&gt;Outcome- Looking good.  BRK.B now at 215.  Most likely will not get called. 
-Earned 85.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;20180827&lt;/strong&gt; Sold 5 MO 60.5 Calls
-    &lt;ul&gt;
-      &lt;li&gt;Thinking- Sick of MO dropping, wanted to get out at a higher price point&lt;/li&gt;
-      &lt;li&gt;Outcome- Earned 200, got called, sold 500 sh of MO- got out at an acceptable point&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;20180516&lt;/strong&gt; Sold 1 BRK.B 195 Put
-    &lt;ul&gt;
-      &lt;li&gt;Thinking- BRK’s a good keeper.  Don’t mind earning income while getting a 
-a chance to pick up more of BRK.B&lt;/li&gt;
-      &lt;li&gt;Outcome- Earned 256, got put at 195.  Not a bad deal looking back- since now 
-BRK.B is now at 215.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;20180430&lt;/strong&gt; Sold 5 MO 59 Calls
-    &lt;ul&gt;
-      &lt;li&gt;Thinking- Make some income while MO is so low&lt;/li&gt;
-      &lt;li&gt;Outcome- Earned 40&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-</description>
-        <pubDate>Fri, 14 Sep 2018 00:00:00 -0400</pubDate>
-        <link>/investing/2018/09/14/options-ideas/</link>
-        <guid isPermaLink="true">/investing/2018/09/14/options-ideas/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>investing</category>
         
       </item>
     
@@ -1233,6 +1155,96 @@ plt.show()
         
         
         <category>python</category>
+        
+      </item>
+    
+      <item>
+        <title>Setting Up Vim For Python</title>
+        <description>&lt;p&gt;While I’m enthusiastic with using Vim, I’m afraid that my many years of using
+Visual Studio’s Intellisense has spoiled me.  I now require the same method 
+popups now on Vim when coding Python in Linux.  But how to do this?&lt;/p&gt;
+
+&lt;p&gt;First I backup my original .vimrc:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot; Automatic syntax highlighting
+syntax on
+
+&quot; Stop vim from creating automatic backups
+set noswapfile
+set nobackup
+set nowb
+
+&quot; Reload files modified outside of vim
+set autoread
+
+&quot; Make tabs 4 spaces wide 
+set tabstop=4
+set shiftwidth=4
+
+&quot; Replace tabs with spaces
+set expandtab
+
+&quot; If already indented, next line should be indented
+set autoindent
+
+&quot; Show line numbers
+set number
+
+&quot; Highlight col 81 to keep under 80 cols
+set colorcolumn=80
+
+&quot; Set screen to 85x40
+set lines=45
+set columns=85
+
+&quot; Set editing to nowrap
+set nowrap
+
+set nocompatible
+colorscheme oceandeep 
+set guifont=Inconsolata\ 15
+set guicursor=a:blinkon0
+
+set foldmethod=indent
+set foldlevel=99
+filetype on
+filetype indent plugin on
+
+&quot; Set split window navigation shortcuts 
+map &amp;lt;c-j&amp;gt; &amp;lt;c-w&amp;gt;j
+map &amp;lt;c-k&amp;gt; &amp;lt;c-w&amp;gt;k
+map &amp;lt;c-l&amp;gt; &amp;lt;c-w&amp;gt;l
+map &amp;lt;c-h&amp;gt; &amp;lt;c-w&amp;gt;h
+
+set guioptions-=T &quot;get rid of toolbar 
+set guioptions-=m &quot;get rid of men
+
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next I followed instructions for &lt;a href=&quot;https://github.com/VundleVim/Vundle.vim&quot;&gt;Vundle&lt;/a&gt;.
+Sadly I found the page instructions incomprehensible.  I next tried 
+&lt;a href=&quot;https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/&quot;&gt;this page&lt;/a&gt;
+and similarly failed to install YouCompleteMe using Vundle. 
+It’s mostly there are some external dependencies that are blocked behind
+China’s Great Firewall.  I’ll retry when I’m outside of the Great Firewall.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 09 Jun 2017 00:00:00 -0400</pubDate>
+        <link>/tech/2017/06/09/setting-up-vim-for-python/</link>
+        <guid isPermaLink="true">/tech/2017/06/09/setting-up-vim-for-python/</guid>
+        
+        <category>python</category>
+        
+        
+        <category>tech</category>
         
       </item>
     
