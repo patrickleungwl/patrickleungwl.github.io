@@ -5,35 +5,32 @@
     <description>A journal of tech issues in financial applications</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Mar 2019 19:51:48 -0500</pubDate>
-    <lastBuildDate>Thu, 07 Mar 2019 19:51:48 -0500</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Sun, 21 Jul 2019 16:30:22 -0400</pubDate>
+    <lastBuildDate>Sun, 21 Jul 2019 16:30:22 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
     
       <item>
         <title>How to use slide rules</title>
-        <description>&lt;h2 id=&quot;multiplication&quot;&gt;Multiplication&lt;/h2&gt;
+        <description>&lt;p&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;multiplication&quot;&gt;Multiplication&lt;/h2&gt;
 
-&lt;h3 id=&quot;to-multiply-two-small-numbers-2x3&quot;&gt;To multiply two small numbers, 2x3&lt;/h3&gt;
-
+&lt;p&gt;To multiply two small numbers, 2x3&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the left, line up C (1) to D (2).  
 - Move cursor to C (3).  D (6) shows the answer.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;to-mulitply-two-big-numbers-6x7&quot;&gt;To mulitply two big numbers, 6x7&lt;/h3&gt;
-
+&lt;p&gt;To mulitply two big numbers, 6x7&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the right, line up C (1) to D (6).
 - Move cursor to C (7).  D (4.2) shows the answer.  Adjust by 10 = 42.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;to-multiple-two-big-numbers-12-x-67&quot;&gt;To multiple two big numbers, 12 x 67&lt;/h3&gt;
-
+&lt;p&gt;To multiple two big numbers, 12 x 67&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the left, line up C (1.2) to D (1.2).
 - Move cursor to C (6.7).  D (8) shows the answer.  Adjust by 
   thinking 10x70=700.  So 8 must be 800.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;what-are-the-limits-of-rules-c-and-d&quot;&gt;What are the limits of rules C and D?&lt;/h3&gt;
-
+&lt;p&gt;What are the limits of rules C and D?&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Reading C and D from left to right is only for small digits, like 2x4.
 - Reading C and D from right to left works for bigger digits.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -41,8 +38,7 @@
 
 &lt;h2 id=&quot;division&quot;&gt;Division&lt;/h2&gt;
 
-&lt;h3 id=&quot;to-divide-two-small-numbers-45--78&quot;&gt;To divide two small numbers, 4.5 / 7.8&lt;/h3&gt;
-
+&lt;p&gt;To divide two small numbers, 4.5 / 7.8&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D. 
 - Move cursor to D (4.5).
 - Move C (7.8) until 7.8 hits the cursor.
@@ -51,8 +47,7 @@
 - Since 4/8 ~ 0.5, the answer is 0.578.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;to-divide-two-numbers-142--83&quot;&gt;To divide two numbers, 142 / 83&lt;/h3&gt;
-
+&lt;p&gt;To divide two numbers, 142 / 83&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.
 - Move cursor to D (1.42).
 - Move C (8.3) until 8.3 hits the cursor.
@@ -61,8 +56,7 @@
 - Since 160/80 ~ 2, the answer is 1.72.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;to-divide-two-big-numbers-2313184--80234&quot;&gt;To divide two big numbers, 2,313,184 / 80,234&lt;/h3&gt;
-
+&lt;p&gt;To divide two big numbers, 2,313,184 / 80,234&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.
 - 2,313,184 ~ 2.3e6.
 - 80,234 ~ 8.0e4.
@@ -72,13 +66,9 @@
 - The answer is in D (2.88).
 ~ Adjusted for scale, 2.88e2 ~ 28.8.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;sin&quot;&gt;Sin&lt;/h2&gt;
-
 &lt;h2 id=&quot;sin-30&quot;&gt;Sin 30&lt;/h2&gt;
-
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule A and S.  Align rules.
 - Move cursor to S (30).
 - The answer is in A (5).
@@ -86,14 +76,12 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;cos-30&quot;&gt;Cos 30&lt;/h2&gt;
-
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Once you can do sin 0-90, you can do any sin or cos.
 - If you look at the cos/sin charts, cos 30 is the same as sin 60.
 - Sin 60 = 0.866.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;tan-30&quot;&gt;Tan 30&lt;/h2&gt;
-
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule D and T.  Align rules.
 - Move cursor to T (30).
 - The answer is in D (5.76).
@@ -102,29 +90,27 @@
 
 </description>
         <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
-        <link>/finance/2019/02/20/how-to-use-sliderules/</link>
-        <guid isPermaLink="true">/finance/2019/02/20/how-to-use-sliderules/</guid>
+        <link>/tech/2019/02/20/how-to-use-slide-rules/</link>
+        <guid isPermaLink="true">/tech/2019/02/20/how-to-use-slide-rules/</guid>
         
-        <category>finance</category>
+        <category>retro</category>
         
         
-        <category>finance</category>
+        <category>tech</category>
         
       </item>
     
       <item>
         <title>2019 New Ideas</title>
         <description>&lt;p&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;books-currently-reading&quot;&gt;Books Currently Reading:&lt;/h2&gt;
-
+&lt;h2 id=&quot;books-currently-reading&quot;&gt;Books Currently Reading&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.danielletown.com/book/&quot;&gt;Invested&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://landing.google.com/sre/sre-book/toc/index.html&quot;&gt;Google SRE&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.penguinrandomhouse.com/books/566084/the-banished-immortal-by-ha-jin/9781524747411/&quot;&gt;The Banished Immortal&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;some-ideas-to-resolve-soon&quot;&gt;Some Ideas To Resolve Soon:&lt;/h2&gt;
-
+&lt;h2 id=&quot;some-ideas-to-resolve-soon&quot;&gt;Some Ideas To Resolve Soon&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Poisson distribution&lt;/li&gt;
   &lt;li&gt;What is PCA?&lt;/li&gt;
@@ -140,61 +126,58 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;new-investment-ideas&quot;&gt;New Investment Ideas&lt;/h2&gt;
-
-&lt;p&gt;A new proposed idea is to buy on n% dips.  Would this work? 
-Or buy an index instead of individual stocks on such dips.&lt;/p&gt;
+&lt;p&gt;A new proposed idea is to buy on n% dips. Would this work? Or 
+buy an index instead of individual stocks on such dips.&lt;/p&gt;
 
 &lt;h2 id=&quot;pca&quot;&gt;PCA&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Principal_component_analysis&quot;&gt;PCA - principal component analysis&lt;/a&gt;
-sounds very much like fourier transform.  It is a statistical proceudre that 
-reduces 100 variables to a few important- orthogonal (meaning unrelated) variables- principal components- that 
-explains 95% of the movements of the original wave.&lt;/p&gt;
+sounds very much like fourier 
+transform. It is a statistical proceudre that reduces 100 variables 
+to a few important- orthogonal (meaning unrelated) variables- 
+principal components- that explains 95% of the movements of the 
+original wave.&lt;/p&gt;
 
 &lt;p&gt;PCA is used primarily for making predictive models.&lt;/p&gt;
 
 &lt;h2 id=&quot;rho&quot;&gt;Rho&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Greeks_(finance)#Rho&quot;&gt;Rho&lt;/a&gt;
 is the sensitivity of the option value to changes in the risk free 
 interest rate.&lt;/p&gt;
 
 &lt;h2 id=&quot;pivottablejs&quot;&gt;PivotTable.js&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pivottable.js.org/examples/rcsvs.html&quot;&gt;PivotTable.js&lt;/a&gt; looks pretty 
-powerful.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pivottable.js.org/examples/rcsvs.html&quot;&gt;PivotTable.js&lt;/a&gt;
+looks pretty powerful.&lt;/p&gt;
 
 &lt;h2 id=&quot;why-use-numpy&quot;&gt;Why use NumPy?&lt;/h2&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;ndarray- a fast and space efficient multi-dimensional array providing
-vectorized arithmetic operations and broadcasting capabilities&lt;/li&gt;
+  &lt;li&gt;ndarray- a fast and space efficient multi-dimensional array 
+providing vectorized arithmetic operations and broadcasting capabilities&lt;/li&gt;
   &lt;li&gt;functions for reading and writing to disk&lt;/li&gt;
   &lt;li&gt;tools for integrating with C, C++ and Fortran&lt;/li&gt;
   &lt;li&gt;math operations with no loops&lt;/li&gt;
   &lt;li&gt;linear algebra and fourier transform functions&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;But what functions does NumPy provide and what from Pandas?  I believe
-data analysis primarily use math functions from Pandas and use NumPy primarily
-for its fast ndarray.&lt;/p&gt;
+&lt;p&gt;But what functions does NumPy provide and what from Pandas? I believe 
+data analysis primarily use math functions from Pandas and use NumPy 
+primarily for its fast ndarray.&lt;/p&gt;
 
-&lt;p&gt;Pandas runs on top of NumPy- so Pandas depends on NumPy.  Pandas provides
-datatable-like functions- as well as stats, groupbys, merge and join methods.&lt;/p&gt;
+&lt;p&gt;Pandas runs on top of NumPy- so Pandas depends on NumPy. Pandas 
+provides datatable-like functions- as well as stats, groupbys, merge 
+and join methods.&lt;/p&gt;
 
 &lt;p&gt;Pandas was built starting in 2008 by Wes McKinney at AQR.&lt;/p&gt;
 
 &lt;h2 id=&quot;matplotlib-for-quick-charts&quot;&gt;Matplotlib for Quick Charts&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&quot;https://nbviewer.jupyter.org/github/patrickleungwl/code_lab/blob/master/python_lab/build_charts.ipynb&quot;&gt;Quick charts demo&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;poisson-distribution&quot;&gt;Poisson Distribution&lt;/h2&gt;
+&lt;p&gt;Poisson Distribution is for modelling the number of times an event 
+occurs in an interval of time or space- for example- the number of 
+patients arriving in an emergency room between 10 and 11pm.&lt;/p&gt;
 
-&lt;p&gt;Poisson Distribution is for modelling the number of times an event occurs in
-an interval of time or space- for example- the number of patients arriving in 
-an emergency room between 10 and 11pm.&lt;/p&gt;
-
-&lt;p&gt;The following assumptions must be true in order to use Poisson Distribution&lt;/p&gt;
+&lt;p&gt;The following assumptions must be true in order to use Poisson 
+Distribution&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;k is the number of times an event occurs in an interval- like 0, 1, 2 …&lt;/li&gt;
@@ -203,16 +186,214 @@ an emergency room between 10 and 11pm.&lt;/p&gt;
   &lt;li&gt;Two events cannot occur at exactly the same time.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
 </description>
         <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
-        <link>/finance/2019/02/16/new-ideas/</link>
-        <guid isPermaLink="true">/finance/2019/02/16/new-ideas/</guid>
+        <link>/tech/2019/02/16/2019-new-ideas/</link>
+        <guid isPermaLink="true">/tech/2019/02/16/2019-new-ideas/</guid>
         
-        <category>finance</category>
+        <category>ideas</category>
         
         
-        <category>finance</category>
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Options October Disaster</title>
+        <description>&lt;p&gt;What a disaster so far.&lt;/p&gt;
+
+&lt;p&gt;From options so far- I have&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;PG- I sold PG at 82.5 and now it is at 93.82.  Paper loss 2200.&lt;/li&gt;
+  &lt;li&gt;BA- I bought 100sh BA at 360 on Oct 22 and it is at 335.  Paper loss 2500.&lt;/li&gt;
+  &lt;li&gt;C- I bought 200sh C at 72 on Oct 22 and it is at 65.  Paper loss 1400.&lt;/li&gt;
+  &lt;li&gt;SCHW- I bought 200sh SCHW at 50 on Nov 16 and it is at 47.  Paper loss 600.&lt;/li&gt;
+  &lt;li&gt;V- I lucked out on this one and kept $250.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So for a few hundred dollars premium gains, I lost 6700.  This is going very 
+badly.&lt;/p&gt;
+
+&lt;p&gt;I should probably sell some calls on these to make some money back.  Okay, new 
+strategy.  Sell calls on these losers to get some money back.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BA- Sell 1 370 Dec21 calls at 2.55 each for 255.
+C- Sell 2 72.5 Dec21 calls at 0.17 each for 34. 
+SCHW- Sell 2 50.0 Dec21 calls at 0.60 each for 110.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sat, 17 Nov 2018 00:00:00 -0500</pubDate>
+        <link>/investing/2018/11/17/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/11/17/options-ideas/</guid>
+        
+        <category>investing</category>
+        
+        
+        <category>investing</category>
+        
+      </item>
+    
+      <item>
+        <title>Options Ideas BiWeekly</title>
+        <description>&lt;p&gt;Some highlights this past week.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20181007 Statuses
+  -2 PG 82.5 20181019 Calls- PG at 82.15, maybe I won't get to sell stock. 
+  -1 BA 360  20181019 Puts.  BA at 386.5, way above put's strike. 
+  -2 C  72.5 20181019 Puts.  C at 72.42- maybe I will not be forced to buy it.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Last week’s idea on selling 2 20181116 of BL at 50.0 fortunately did not 
+sell in the market.  Now BL is at 50.87.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;New ideas&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I see SCHW is coming back.  And stocks like V and UNH just never seem to 
+come back down.  They keep going up and up.&lt;/p&gt;
+
+&lt;p&gt;Trigger new trades&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -2 SCHW 50.0  20181116 Put SCWH at 51.48.  SCHW appears to be coming back ~ $220
+  -1 V    140.0 20181116 Put V at 145.36.    V just doesnt seem to go down ~ $250
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Sun, 07 Oct 2018 00:00:00 -0400</pubDate>
+        <link>/investing/2018/10/07/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/10/07/options-ideas/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>investing</category>
+        
+      </item>
+    
+      <item>
+        <title>Options Ideas BiWeekly</title>
+        <description>&lt;p&gt;Some tips:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When vols are low, buy options.  When vols are high, sell options.&lt;/li&gt;
+  &lt;li&gt;When underlying is high and doesn’t look likely to go any higher, 
+ sell protected calls at above current price.  Pocket the premiums.&lt;/li&gt;
+  &lt;li&gt;When underlying is low and doesn’t look likely to go any lower,
+ sell puts at below current price.  Pocket the premiums.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some highlights this past week.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20180928 Statuses
+  -2 PG 82.5 20181019 Calls- PG at 83.3, above calls' strikes. 
+  -1 BA 360  20181019 Puts.  BA at 371.9, way above put's strike. 
+  -2 C  72.5 20181019 Puts.  C at 71.74- puts at risk.
+
+2010928 Expirations
+  -1 ADBE 250 20180928 Put- ADBE at 270. Safely pocketed the 265 premium. 
+  -2 BRK.B 200 20180921 Puts.  BRK.B at 215. Pocketed 85.
+
+20180924 New ideas
+  Sold 1 BA 360 20181019 Puts.  Pocketed 407.
+  Sold 2 C 72.5 20181019 Puts.  Pocketed 200.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cloud software maker BL rocking new highs at 56.47.&lt;br /&gt;
+Let’s sell 2 20181116 puts on it- at 50.0 for 340.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Sun, 30 Sep 2018 00:00:00 -0400</pubDate>
+        <link>/investing/2018/09/30/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/09/30/options-ideas/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>investing</category>
+        
+      </item>
+    
+      <item>
+        <title>Options Ideas</title>
+        <description>&lt;p&gt;A tidbit from a recent read:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You’ll want to focus on trying to buy options during lower periods of 
+the security’s volatility and concentrate on selling options during high 
+volatility levels. We know that we can’t always predict that our timing 
+of options trading will correspond to high or low volatility levels, 
+but you can always tailor your options strategies to take advantage of 
+whatever volatility level exists at the time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What this means is when vols are low, you should buy options.  When vols 
+are high, you should sell options.&lt;/p&gt;
+
+&lt;p&gt;How do we know when vols are high or low?  We need to chart historical vols 
+for each ticker.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;20180910&lt;/strong&gt; Sold 2 PG 82.5 Calls for 20181019
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- PG’s been going nowhere.  Might as well sell it at an acceptable
+price point.  Want a waste of time on PG.&lt;/li&gt;
+      &lt;li&gt;Outcome- Just get rid of it- and earn 350.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180831&lt;/strong&gt; Sold 1 ADBE 250 Put for 20180928
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- ADBE’s hot on cloud.  Betting it won’t come down.&lt;br /&gt;
+Might as well earn some income while getting a chance to pick it up cheap.
+ADBE at 265 at the time.&lt;/li&gt;
+      &lt;li&gt;Outcome- At 274.  Most likely will not get put.  Get to keep 263.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180831&lt;/strong&gt; Sold 2 BRK.B 200 Puts for 20180921
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- Earn some money with chance to pick up more, BRK.B at 210 at the time&lt;/li&gt;
+      &lt;li&gt;Outcome- Looking good.  BRK.B now at 215.  Most likely will not get called. 
+Earned 85.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180827&lt;/strong&gt; Sold 5 MO 60.5 Calls
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- Sick of MO dropping, wanted to get out at a higher price point&lt;/li&gt;
+      &lt;li&gt;Outcome- Earned 200, got called, sold 500 sh of MO- got out at an acceptable point&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180516&lt;/strong&gt; Sold 1 BRK.B 195 Put
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- BRK’s a good keeper.  Don’t mind earning income while getting a 
+a chance to pick up more of BRK.B&lt;/li&gt;
+      &lt;li&gt;Outcome- Earned 256, got put at 195.  Not a bad deal looking back- since now 
+BRK.B is now at 215.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20180430&lt;/strong&gt; Sold 5 MO 59 Calls
+    &lt;ul&gt;
+      &lt;li&gt;Thinking- Make some income while MO is so low&lt;/li&gt;
+      &lt;li&gt;Outcome- Earned 40&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Fri, 14 Sep 2018 00:00:00 -0400</pubDate>
+        <link>/investing/2018/09/14/options-ideas/</link>
+        <guid isPermaLink="true">/investing/2018/09/14/options-ideas/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>investing</category>
         
       </item>
     
@@ -946,305 +1127,6 @@ else.  If you are a manager, you don't drift.
         
         
         <category>managing</category>
-        
-      </item>
-    
-      <item>
-        <title>The Effective Engineer</title>
-        <description>&lt;p&gt;Just read “The Effective Engineer” by Edmond Lau.  For those who have no 
-time to read, I’ve simplified the book to 11 bullet points below.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Increase your leverage by focusing on high impact activities and 
-completing activities quicker.&lt;/li&gt;
-  &lt;li&gt;Learning is like compound interest.  Steadily acquiring small bits of 
-knowledge over time accumulates to a mountain of knowledge.&lt;/li&gt;
-  &lt;li&gt;Prioritize regularly- differentiate between urgent vs important.&lt;/li&gt;
-  &lt;li&gt;Invest in iteration speed- with continuous testing and small incremental changes.&lt;/li&gt;
-  &lt;li&gt;Invest in time saving tools.&lt;/li&gt;
-  &lt;li&gt;Use metrics to drive progress.&lt;/li&gt;
-  &lt;li&gt;Validate ideas via feedbacks early and often.&lt;/li&gt;
-  &lt;li&gt;Test your ideas with automated tests.&lt;/li&gt;
-  &lt;li&gt;Relentless automate repetitive tasks.&lt;/li&gt;
-  &lt;li&gt;Invest in team’s growth.&lt;/li&gt;
-  &lt;li&gt;Build the simplest system possible.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 24 Jun 2017 00:00:00 -0400</pubDate>
-        <link>/tech/2017/06/24/the-effective-engineer/</link>
-        <guid isPermaLink="true">/tech/2017/06/24/the-effective-engineer/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Basic Matplotlib Plot</title>
-        <description>&lt;p&gt;Most data analysts just want to generate a plot quickly with minimal work.&lt;br /&gt;
-However Matplotlib’s api has a slight learning curve- and it requires some 
-investment to pick up on its class hierachies and its terminologies. 
-I’ve jotted down some Matplotlib gems here so others users can have less 
-of a learning curve.&lt;/p&gt;
-
-&lt;p&gt;One key point to note is that regardless of what commands used to generate plots, 
-they all devolve into one low level plot method- which is pyplot.subplots(). 
-Exploting this method well is the key to build great looking charts.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://matplotlib.org/api/axes_api.html&quot;&gt;Axes&lt;/a&gt; class is the main class 
-to work with for customising the plot type and the x and y axes.  For 
-working with all other plot elements, we use the 
-&lt;a href=&quot;http://matplotlib.org/api/figure_api.html&quot;&gt;Figure&lt;/a&gt; class.  We acquire 
-pointers (or references) to both the Figure and Axes whenever we call the 
-pyplot.subplot() method.&lt;/p&gt;
-
-&lt;p&gt;Sample Matplotlib command usage:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Topic&lt;/th&gt;
-      &lt;th&gt;Intent&lt;/th&gt;
-      &lt;th&gt;Usage&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Plots&lt;/td&gt;
-      &lt;td&gt;Create 2x1 subplots&lt;/td&gt;
-      &lt;td&gt;fg, ax = plt.subplots(2, 1, &lt;br /&gt;sharex=True)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spines&lt;/td&gt;
-      &lt;td&gt;Make top spine invisible&lt;/td&gt;
-      &lt;td&gt;ax.spines[‘top’].set_visible(False)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;X Ticks&lt;/td&gt;
-      &lt;td&gt;Set xtick color, label &lt;br /&gt;size, and direction&lt;/td&gt;
-      &lt;td&gt;ax.tick_params(axis=’y’, &lt;br /&gt;color=’#333333’, labelsize=’small’, direction=’in’)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Styles&lt;/td&gt;
-      &lt;td&gt;Use preset plot styles&lt;/td&gt;
-      &lt;td&gt;style.style.use(‘ggplot’)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Styles&lt;/td&gt;
-      &lt;td&gt;See available styles&lt;/td&gt;
-      &lt;td&gt;print(plt.style.available)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Text&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://matplotlib.org/api/text_api.html&quot;&gt;Set text at x,y data points&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;ax.text(dates[2], prices[2], ‘Example’)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Text&lt;/td&gt;
-      &lt;td&gt;Text with arrow&lt;/td&gt;
-      &lt;td&gt;ax.annotate(‘Dividend’,(dates[2],prices[2]), &lt;br /&gt;xytext=(0.8, 0.9), &lt;br /&gt;textcoords=’axes fraction’, &lt;br /&gt;arrowprops = dict(facecolor=’grey’,color=’grey’))&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Subplots&lt;/td&gt;
-      &lt;td&gt;Create subplots&lt;/td&gt;
-      &lt;td&gt;ax = plt.subplot2grid((gx,gy), (x,y), colspan=c)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Subplots&lt;/td&gt;
-      &lt;td&gt;Create subplots&lt;/td&gt;
-      &lt;td&gt;ax = plt.subplot2grid((gx,gy), (x,y), rowspan=r)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Sample Matplotlib script:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter qtconsole
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-plt.figure()                            # Create a new figure window
-xlist = np.linspace(-2.0, 1.0, 100)     # Create 1-D arrays for x,y dimensions
-ylist = np.linspace(-1.0, 2.0, 100)
-X,Y = np.meshgrid(xlist, ylist)         # Create 2-D grid xlist,ylist values
-Z = np.sqrt(X**2 + Y**2)                # Compute function values on the grid
-
-plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = ’k’, linestyles = ’solid’)
-plt.show()
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../../../../assets/images/201706/matplotlib_plot1.png&quot; alt=&quot;Sample plot&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 11 Jun 2017 00:00:00 -0400</pubDate>
-        <link>/python/2017/06/11/basic-matplotlib/</link>
-        <guid isPermaLink="true">/python/2017/06/11/basic-matplotlib/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>Using Conda, NumPy</title>
-        <description>&lt;p&gt;Notes on using Conda, NumPy&lt;/p&gt;
-
-&lt;h2 id=&quot;conda&quot;&gt;Conda&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Setup Python 3.5 env&lt;/td&gt;
-      &lt;td&gt;conda create -n py35 python=3.5 anaconda&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Setup Python 2.7 env&lt;/td&gt;
-      &lt;td&gt;conda create -n py27 python=2.7 anaconda&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Switch to Python 3.5 env&lt;/td&gt;
-      &lt;td&gt;source activate py35&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Check Python version&lt;/td&gt;
-      &lt;td&gt;python -V&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;numpy&quot;&gt;Numpy&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Import numpy&lt;/td&gt;
-      &lt;td&gt;import numpy as np&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Create a new array&lt;/td&gt;
-      &lt;td&gt;na = array([1,2,3,4])&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Use any numpy function&lt;/td&gt;
-      &lt;td&gt;na.min()&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Load data into array&lt;/td&gt;
-      &lt;td&gt;na = np.loadtxt(‘data.txt’)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Save array to file&lt;/td&gt;
-      &lt;td&gt;np.savetxt(‘data.txt’, na)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-</description>
-        <pubDate>Sat, 10 Jun 2017 00:00:00 -0400</pubDate>
-        <link>/python/2017/06/10/using-conda/</link>
-        <guid isPermaLink="true">/python/2017/06/10/using-conda/</guid>
-        
-        <category>python</category>
-        
-        
-        <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>Setting Up Vim For Python</title>
-        <description>&lt;p&gt;While I’m enthusiastic with using Vim, I’m afraid that my many years of using
-Visual Studio’s Intellisense has spoiled me.  I now require the same method 
-popups now on Vim when coding Python in Linux.  But how to do this?&lt;/p&gt;
-
-&lt;p&gt;First I backup my original .vimrc:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot; Automatic syntax highlighting
-syntax on
-
-&quot; Stop vim from creating automatic backups
-set noswapfile
-set nobackup
-set nowb
-
-&quot; Reload files modified outside of vim
-set autoread
-
-&quot; Make tabs 4 spaces wide 
-set tabstop=4
-set shiftwidth=4
-
-&quot; Replace tabs with spaces
-set expandtab
-
-&quot; If already indented, next line should be indented
-set autoindent
-
-&quot; Show line numbers
-set number
-
-&quot; Highlight col 81 to keep under 80 cols
-set colorcolumn=80
-
-&quot; Set screen to 85x40
-set lines=45
-set columns=85
-
-&quot; Set editing to nowrap
-set nowrap
-
-set nocompatible
-colorscheme oceandeep 
-set guifont=Inconsolata\ 15
-set guicursor=a:blinkon0
-
-set foldmethod=indent
-set foldlevel=99
-filetype on
-filetype indent plugin on
-
-&quot; Set split window navigation shortcuts 
-map &amp;lt;c-j&amp;gt; &amp;lt;c-w&amp;gt;j
-map &amp;lt;c-k&amp;gt; &amp;lt;c-w&amp;gt;k
-map &amp;lt;c-l&amp;gt; &amp;lt;c-w&amp;gt;l
-map &amp;lt;c-h&amp;gt; &amp;lt;c-w&amp;gt;h
-
-set guioptions-=T &quot;get rid of toolbar 
-set guioptions-=m &quot;get rid of men
-
-source $VIMRUNTIME/mswin.vim
-behave mswin
-
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Next I followed instructions for &lt;a href=&quot;https://github.com/VundleVim/Vundle.vim&quot;&gt;Vundle&lt;/a&gt;.
-Sadly I found the page instructions incomprehensible.  I next tried 
-&lt;a href=&quot;https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/&quot;&gt;this page&lt;/a&gt;
-and similarly failed to install YouCompleteMe using Vundle. 
-It’s mostly there are some external dependencies that are blocked behind
-China’s Great Firewall.  I’ll retry when I’m outside of the Great Firewall.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 09 Jun 2017 00:00:00 -0400</pubDate>
-        <link>/tech/2017/06/09/setting-up-vim-for-python/</link>
-        <guid isPermaLink="true">/tech/2017/06/09/setting-up-vim-for-python/</guid>
-        
-        <category>python</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
