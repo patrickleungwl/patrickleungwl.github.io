@@ -43,19 +43,21 @@
         <section class="post-content">
             <p>Strings in Java can be declared either literally-</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String s = "123";
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>String s = "123";
+</code></pre>
+</div>
 <p>or as a String instance-</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String s = new String("123");
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>String s = new String("123");
+</code></pre>
+</div>
 <p>What are the differences between these two strings?</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="o">{</span>
 
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
     <span class="c1">// Test differences between String v = new String(...)</span>
     <span class="c1">// and String v = "..."</span>
@@ -65,8 +67,8 @@
 
     <span class="c1">// Two string literals with the same characters are the same</span>
     <span class="c1">// in every possible way.</span>
-    <span class="nc">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">"abcdef"</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">"abcdef"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">"abcdef"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">"abcdef"</span><span class="o">;</span>
     <span class="k">assert</span><span class="o">(</span><span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span><span class="o">);</span>
     <span class="k">assert</span><span class="o">(</span><span class="n">s1</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">==</span> <span class="n">s2</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
     <span class="k">assert</span><span class="o">(</span><span class="n">s1</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s2</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s2</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s1</span><span class="o">));</span>
@@ -74,8 +76,8 @@
     <span class="c1">// Two string objects with the same characters are the same</span>
     <span class="c1">// only with hashCode() and equals()- but are different object</span>
     <span class="c1">// instances</span>
-    <span class="nc">String</span> <span class="n">s3</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">);</span>
-    <span class="nc">String</span> <span class="n">s4</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">);</span>
+    <span class="n">String</span> <span class="n">s3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">);</span>
+    <span class="n">String</span> <span class="n">s4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">);</span>
     <span class="k">assert</span><span class="o">(</span><span class="n">s3</span> <span class="o">!=</span> <span class="n">s4</span><span class="o">);</span>
     <span class="k">assert</span><span class="o">(</span><span class="n">s3</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">==</span> <span class="n">s4</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
     <span class="k">assert</span><span class="o">(</span><span class="n">s3</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s4</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s4</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s3</span><span class="o">));</span>
@@ -91,11 +93,12 @@
     <span class="k">assert</span><span class="o">(</span><span class="n">s1</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s3</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s1</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s4</span><span class="o">));</span>
     <span class="k">assert</span><span class="o">(</span><span class="n">s2</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s3</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s2</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s4</span><span class="o">));</span>
 
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Tests completed"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Tests completed"</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 <p>Summary:</p>
 
 <ul>

@@ -5,9 +5,9 @@
     <description>A journal of tech issues in financial applications</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Sep 2019 17:09:54 -0400</pubDate>
-    <lastBuildDate>Sun, 01 Sep 2019 17:09:54 -0400</lastBuildDate>
-    <generator>Jekyll v4.0.0</generator>
+    <pubDate>Fri, 01 Nov 2019 22:11:27 -0400</pubDate>
+    <lastBuildDate>Fri, 01 Nov 2019 22:11:27 -0400</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Laws of Investing</title>
@@ -27,8 +27,8 @@
     
       <item>
         <title>Food smarts</title>
-        <description>&lt;p&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;food-groups--macro-nutrients&quot;&gt;Food groups- Macro nutrients&lt;/h2&gt;
+        <description>&lt;p&gt;.
+## Food groups- Macro nutrients&lt;/p&gt;
 
 &lt;h3 id=&quot;proteins&quot;&gt;Proteins&lt;/h3&gt;
 &lt;ul&gt;
@@ -170,16 +170,14 @@ for more details on free radicals and antioxidants.&lt;/p&gt;
 &lt;h2 id=&quot;recommendations-from-the-pros&quot;&gt;Recommendations from the pros&lt;/h2&gt;
 &lt;p&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Dr Gott&lt;/strong&gt; from &lt;em&gt;Dr. Gott’s No Flour, No Sugar Diet&lt;/em&gt; says-&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;While many a low-carb diet guru would have you believe that all carbohyrates
+&lt;p&gt;&lt;strong&gt;Dr Gott&lt;/strong&gt; from &lt;em&gt;Dr. Gott’s No Flour, No Sugar Diet&lt;/em&gt; says-
+&amp;gt; While many a low-carb diet guru would have you believe that all carbohyrates
 are created equal- and are equally to blame for making you fat- they are just 
 plain wrong.  Fresh fruits and vegetables- as well as whole grains- are full of
 the essential vitamins, minerals, and fiber that we need to have healthy bodies, 
 protect ourselves against disease, and function properly.  The problem arises 
 when technology takes over the digestion process, removing all those valuable 
 nutrients…&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Simply put, the more refined a carb is, the fewer nutrients it contains because
@@ -233,17 +231,16 @@ beans, vegetables and fruits.&lt;/p&gt;
   &lt;li&gt;Maintain a body-mass index of 18.5-24.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BMI = 703 * Weight in pounds / Height in inches squared 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BMI = 703 * Weight in pounds / Height in inches squared 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Robert Davis, PhD&lt;/strong&gt; in &lt;em&gt;Coffee is good for You&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Fish oil prevents heart disease…the key ingredients appear to be the omega-3
+&lt;p&gt;&lt;strong&gt;Robert Davis, PhD&lt;/strong&gt; in &lt;em&gt;Coffee is good for You&lt;/em&gt;
+&amp;gt; Fish oil prevents heart disease…the key ingredients appear to be the omega-3
 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), which 
 are found in most fish but especially oily ones such as salmon, mackerel, trout,
 sardines, and tuna.&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Eggs are not bad for your heart…Eating up to six a week doesn’t appear to be
@@ -305,53 +302,60 @@ meal once a day with a reduced meal at other times…&lt;/p&gt;
     
       <item>
         <title>How to use slide rules</title>
-        <description>&lt;p&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;multiplication&quot;&gt;Multiplication&lt;/h2&gt;
+        <description>&lt;p&gt;.
+## Multiplication&lt;/p&gt;
 
-&lt;p&gt;To multiply two small numbers, 2x3&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the left, line up C (1) to D (2).  
+&lt;p&gt;To multiply two small numbers, 2x3
+~~~
+- Use rules C and D.  Starting from the left, line up C (1) to D (2).&lt;br /&gt;
 - Move cursor to C (3).  D (6) shows the answer.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+~~~&lt;/p&gt;
 
-&lt;p&gt;To mulitply two big numbers, 6x7&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the right, line up C (1) to D (6).
+&lt;p&gt;To mulitply two big numbers, 6x7
+~~~
+- Use rules C and D.  Starting from the right, line up C (1) to D (6).
 - Move cursor to C (7).  D (4.2) shows the answer.  Adjust by 10 = 42.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+~~~&lt;/p&gt;
 
-&lt;p&gt;To multiple two big numbers, 12 x 67&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the left, line up C (1.2) to D (1.2).
+&lt;p&gt;To multiple two big numbers, 12 x 67
+~~~
+- Use rules C and D.  Starting from the left, line up C (1.2) to D (1.2).
 - Move cursor to C (6.7).  D (8) shows the answer.  Adjust by 
   thinking 10x70=700.  So 8 must be 800.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+~~~&lt;/p&gt;
 
-&lt;p&gt;What are the limits of rules C and D?&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Reading C and D from left to right is only for small digits, like 2x4.
+&lt;p&gt;What are the limits of rules C and D?
+~~~
+- Reading C and D from left to right is only for small digits, like 2x4.
 - Reading C and D from right to left works for bigger digits.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;.&lt;/p&gt;
+~~~
+.&lt;/p&gt;
 
 &lt;h2 id=&quot;division&quot;&gt;Division&lt;/h2&gt;
 
-&lt;p&gt;To divide two small numbers, 4.5 / 7.8&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D. 
+&lt;p&gt;To divide two small numbers, 4.5 / 7.8
+~~~
+- Use rules C and D. 
 - Move cursor to D (4.5).
 - Move C (7.8) until 7.8 hits the cursor.
 - Move cursor to C (1).
 - The answer is in D (5.78).
 - Since 4/8 ~ 0.5, the answer is 0.578.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+~~~&lt;/p&gt;
 
-&lt;p&gt;To divide two numbers, 142 / 83&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.
+&lt;p&gt;To divide two numbers, 142 / 83
+~~~
+- Use rules C and D.
 - Move cursor to D (1.42).
 - Move C (8.3) until 8.3 hits the cursor.
 - Move cursor to C (1).
 - The answer is in D (1.72).
 - Since 160/80 ~ 2, the answer is 1.72.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+~~~&lt;/p&gt;
 
-&lt;p&gt;To divide two big numbers, 2,313,184 / 80,234&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.
+&lt;p&gt;To divide two big numbers, 2,313,184 / 80,234
+~~~
+- Use rules C and D.
 - 2,313,184 ~ 2.3e6.
 - 80,234 ~ 8.0e4.
 - Move cursor to D (2.3).
@@ -359,28 +363,31 @@ meal once a day with a reduced meal at other times…&lt;/p&gt;
 - Move cursor to C (1).
 - The answer is in D (2.88).
 ~ Adjusted for scale, 2.88e2 ~ 28.8.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;.&lt;/p&gt;
+~~~
+.&lt;/p&gt;
 
 &lt;h2 id=&quot;sin-30&quot;&gt;Sin 30&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule A and S.  Align rules.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule A and S.  Align rules.
 - Move cursor to S (30).
 - The answer is in A (5).
 - Adjusted, the answer is 0.5.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;cos-30&quot;&gt;Cos 30&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Once you can do sin 0-90, you can do any sin or cos.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Once you can do sin 0-90, you can do any sin or cos.
 - If you look at the cos/sin charts, cos 30 is the same as sin 60.
 - Sin 60 = 0.866.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;tan-30&quot;&gt;Tan 30&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule D and T.  Align rules.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule D and T.  Align rules.
 - Move cursor to T (30).
 - The answer is in D (5.76).
 - Adjusted, the answer is 0.576. 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 </description>
         <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
@@ -396,13 +403,11 @@ meal once a day with a reduced meal at other times…&lt;/p&gt;
     
       <item>
         <title>2019 New Ideas</title>
-        <description>&lt;p&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;books-currently-reading&quot;&gt;Books Currently Reading&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.danielletown.com/book/&quot;&gt;Invested&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://landing.google.com/sre/sre-book/toc/index.html&quot;&gt;Google SRE&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.penguinrandomhouse.com/books/566084/the-banished-immortal-by-ha-jin/9781524747411/&quot;&gt;The Banished Immortal&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+        <description>&lt;p&gt;.
+## Books Currently Reading
+* &lt;a href=&quot;https://www.danielletown.com/book/&quot;&gt;Invested&lt;/a&gt;
+* &lt;a href=&quot;https://landing.google.com/sre/sre-book/toc/index.html&quot;&gt;Google SRE&lt;/a&gt;
+* &lt;a href=&quot;https://www.penguinrandomhouse.com/books/566084/the-banished-immortal-by-ha-jin/9781524747411/&quot;&gt;The Banished Immortal&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;some-ideas-to-resolve-soon&quot;&gt;Some Ideas To Resolve Soon&lt;/h2&gt;
 &lt;ul&gt;
@@ -496,14 +501,12 @@ Distribution&lt;/p&gt;
         <title>Options October Disaster</title>
         <description>&lt;p&gt;What a disaster so far.&lt;/p&gt;
 
-&lt;p&gt;From options so far- I have&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;PG- I sold PG at 82.5 and now it is at 93.82.  Paper loss 2200.&lt;/li&gt;
-  &lt;li&gt;BA- I bought 100sh BA at 360 on Oct 22 and it is at 335.  Paper loss 2500.&lt;/li&gt;
-  &lt;li&gt;C- I bought 200sh C at 72 on Oct 22 and it is at 65.  Paper loss 1400.&lt;/li&gt;
-  &lt;li&gt;SCHW- I bought 200sh SCHW at 50 on Nov 16 and it is at 47.  Paper loss 600.&lt;/li&gt;
-  &lt;li&gt;V- I lucked out on this one and kept $250.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;From options so far- I have 
+1. PG- I sold PG at 82.5 and now it is at 93.82.  Paper loss 2200.
+2. BA- I bought 100sh BA at 360 on Oct 22 and it is at 335.  Paper loss 2500.
+3. C- I bought 200sh C at 72 on Oct 22 and it is at 65.  Paper loss 1400.
+4. SCHW- I bought 200sh SCHW at 50 on Nov 16 and it is at 47.  Paper loss 600.
+5. V- I lucked out on this one and kept $250.&lt;/p&gt;
 
 &lt;p&gt;So for a few hundred dollars premium gains, I lost 6700.  This is going very 
 badly.&lt;/p&gt;
@@ -511,10 +514,11 @@ badly.&lt;/p&gt;
 &lt;p&gt;I should probably sell some calls on these to make some money back.  Okay, new 
 strategy.  Sell calls on these losers to get some money back.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BA- Sell 1 370 Dec21 calls at 2.55 each for 255.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BA- Sell 1 370 Dec21 calls at 2.55 each for 255.
 C- Sell 2 72.5 Dec21 calls at 0.17 each for 34. 
 SCHW- Sell 2 50.0 Dec21 calls at 0.60 each for 110.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 </description>
@@ -533,12 +537,13 @@ SCHW- Sell 2 50.0 Dec21 calls at 0.60 each for 110.
         <title>Options Ideas BiWeekly</title>
         <description>&lt;p&gt;Some highlights this past week.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20181007 Statuses
-  -2 PG 82.5 20181019 Calls- PG at 82.15, maybe I won't get to sell stock. 
-  -1 BA 360  20181019 Puts.  BA at 386.5, way above put's strike. 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20181007 Statuses
+  -2 PG 82.5 20181019 Calls- PG at 82.15, maybe I won&#39;t get to sell stock. 
+  -1 BA 360  20181019 Puts.  BA at 386.5, way above put&#39;s strike. 
   -2 C  72.5 20181019 Puts.  C at 72.42- maybe I will not be forced to buy it.
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Last week’s idea on selling 2 20181116 of BL at 50.0 fortunately did not 
 sell in the market.  Now BL is at 50.87.&lt;/p&gt;
 
@@ -549,9 +554,10 @@ come back down.  They keep going up and up.&lt;/p&gt;
 
 &lt;p&gt;Trigger new trades&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -2 SCHW 50.0  20181116 Put SCWH at 51.48.  SCHW appears to be coming back ~ $220
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -2 SCHW 50.0  20181116 Put SCWH at 51.48.  SCHW appears to be coming back ~ $220
   -1 V    140.0 20181116 Put V at 145.36.    V just doesnt seem to go down ~ $250
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 
@@ -581,9 +587,9 @@ come back down.  They keep going up and up.&lt;/p&gt;
 
 &lt;p&gt;Some highlights this past week.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20180928 Statuses
-  -2 PG 82.5 20181019 Calls- PG at 83.3, above calls' strikes. 
-  -1 BA 360  20181019 Puts.  BA at 371.9, way above put's strike. 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20180928 Statuses
+  -2 PG 82.5 20181019 Calls- PG at 83.3, above calls&#39; strikes. 
+  -1 BA 360  20181019 Puts.  BA at 371.9, way above put&#39;s strike. 
   -2 C  72.5 20181019 Puts.  C at 71.74- puts at risk.
 
 2010928 Expirations
@@ -594,7 +600,8 @@ come back down.  They keep going up and up.&lt;/p&gt;
   Sold 1 BA 360 20181019 Puts.  Pocketed 407.
   Sold 2 C 72.5 20181019 Puts.  Pocketed 200.
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Cloud software maker BL rocking new highs at 56.47.&lt;br /&gt;
 Let’s sell 2 20181116 puts on it- at 50.0 for 340.&lt;/p&gt;
@@ -692,7 +699,7 @@ BRK.B is now at 215.&lt;/li&gt;
       </item>
     
       <item>
-        <title>Python's Data Science Toolkit</title>
+        <title>Python&#39;s Data Science Toolkit</title>
         <description>&lt;p&gt;Essentially, there are five tools in Python’s data science toolkit.  These are
 NumPy, SciPy, Pandas, MatplotLib, and JupyterLib.  I’ll jot down the essential 
 notes on each of these toolkits.&lt;/p&gt;
@@ -755,7 +762,7 @@ complex64 to complex128. Depending on OS, int defaults to int32 or int64. Same f
 
 &lt;p&gt;Examples:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;i = np.int8(8)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;i = np.int8(8)
 i
 i.nbytes
 --
@@ -776,22 +783,25 @@ i.nbytes
 --
 231238
 8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;some-code-examples-&quot;&gt;Some code examples-&lt;/h3&gt;
 
 &lt;p&gt;Creating ndarray from specific values-&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
 
 a = np.array([5,6,7,8])
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Creating ndarray from csv-&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;temperatures = np.genfromtxt(&quot;temperatures.csv&quot;, delimiter=&quot;;&quot;, skip_header=1)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;temperatures = np.genfromtxt(&quot;temperatures.csv&quot;, delimiter=&quot;;&quot;, skip_header=1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;operations&quot;&gt;Operations&lt;/h3&gt;
 
@@ -799,18 +809,19 @@ a = np.array([5,6,7,8])
 on them extremely easy.  With matrix operations, there is no need to write
 for-each loops.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
 
 a = np.array([5,6,7,8])
 print(a * 3)
 --
 [15 18 21 24]
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;slicing-arrays&quot;&gt;Slicing arrays&lt;/h3&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = np.random.rand(8, 3)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = np.random.rand(8, 3)
 
 array([[ 0.43843581,  0.21627972,  0.3815473 ],
        [ 0.58425937,  0.00771804,  0.18703358],
@@ -825,7 +836,8 @@ Get all cells from last row
 a[-1]
 array([ 0.31513721,  0.56262377,  0.15340494])
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;numpy-methods&quot;&gt;NumPy methods&lt;/h3&gt;
 
@@ -846,8 +858,8 @@ and scientific domains.&lt;br /&gt;
 &lt;a href=&quot;http://scipy.github.io/devdocs/genindex.html&quot;&gt;The list of functions is here&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;pandas&quot;&gt;Pandas&lt;/h2&gt;
-&lt;h2 id=&quot;matplotlib&quot;&gt;Matplotlib&lt;/h2&gt;
-&lt;h2 id=&quot;jypyterlab&quot;&gt;JypyterLab&lt;/h2&gt;
+&lt;p&gt;## Matplotlib
+## JypyterLab&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 25 Feb 2018 00:00:00 -0500</pubDate>
@@ -868,21 +880,22 @@ existing components- without having to change the existing components.&lt;/p&gt;
 
 &lt;h2 id=&quot;ishippingmethodcs&quot;&gt;IShippingMethod.cs&lt;/h2&gt;
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IShippingMethod&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;groundshippingcs&quot;&gt;GroundShipping.cs&lt;/h2&gt;
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -894,11 +907,12 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;       
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;airshippingcs&quot;&gt;AirShipping.cs&lt;/h2&gt;
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -910,11 +924,12 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;decoratorshippingcs&quot;&gt;DecoratorShipping.cs&lt;/h2&gt;
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -933,11 +948,12 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;receiptdecoratorcs&quot;&gt;ReceiptDecorator.cs&lt;/h2&gt;
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -954,11 +970,12 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;signaturerequireddecoratorcs&quot;&gt;SignatureRequiredDecorator.cs&lt;/h2&gt;
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -975,11 +992,12 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;decoratortestercs&quot;&gt;DecoratorTester.cs&lt;/h2&gt;
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Microsoft.VisualStudio.TestTools.UnitTesting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -991,54 +1009,55 @@ existing components- without having to change the existing components.&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShippingWithNoOptionsShouldCostTenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShippingWithReceiptOptionShouldCostElevenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;11.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GrondShippingWithSignatureOptionShouldCostTwelveDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;12.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GrondShippingWithSignatureOptionAndReceiptShouldCostThirteenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureAndReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureAndReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;13.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureAndReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShippingWithNoOptionsShouldCostFiftyDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShippingWithReceiptOptionShouldCostElevenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;51.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipmentWithReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
         <link>/tech/2017/10/13/decorator-pattern/</link>

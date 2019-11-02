@@ -53,7 +53,7 @@ The following SoftReference test code example creates a thousand SoftReferences 
 DumbWeights, removes any strong references to the DumbWeights, and then 
 periodically checks when and how often the GC cleans up the DumbWeight instances.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.lang.ref.*</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
@@ -63,17 +63,17 @@ periodically checks when and how often the GC cleans up the DumbWeight instances
    *  
    *  Check how many soft references still exist and not collected
    */</span>
-  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">checkSoftReferences</span><span class="o">(</span><span class="nc">Set</span><span class="o">&lt;</span><span class="nc">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="n">checkSoftReferences</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="n">numCollected</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">SoftReference</span><span class="o">&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
     <span class="k">while</span> <span class="o">(</span><span class="n">i</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
-      <span class="nc">SoftReference</span> <span class="n">w</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
-      <span class="nc">DumbWeight</span> <span class="n">d</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+      <span class="n">SoftReference</span> <span class="n">w</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">DumbWeight</span> <span class="n">d</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
       <span class="k">if</span> <span class="o">(</span><span class="n">d</span><span class="o">==</span><span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">++</span><span class="n">numCollected</span><span class="o">;</span>
       <span class="o">}</span> 
     <span class="o">}</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"checkSoftRefs: size=%d, numCollected=%d\n"</span><span class="o">,</span> 
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"checkSoftRefs: size=%d, numCollected=%d\n"</span><span class="o">,</span> 
       <span class="n">s</span><span class="o">.</span><span class="na">size</span><span class="o">(),</span> <span class="n">numCollected</span> <span class="o">);</span>
   <span class="o">}</span>
 
@@ -85,35 +85,36 @@ periodically checks when and how often the GC cleans up the DumbWeight instances
    * 
    * This means soft references are more sticky than weak references.
    */</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSoftReferences</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="n">testSoftReferences</span><span class="o">()</span> <span class="o">{</span>
 
-    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;</span><span class="nc">SoftReference</span><span class="o">&gt;();</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">SoftReference</span><span class="o">&gt;();</span>
 
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"*****************************"</span><span class="o">);</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Starting testSoftReferences"</span><span class="o">);</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Creating 1000 soft references"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"*****************************"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Starting testSoftReferences"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Creating 1000 soft references"</span><span class="o">);</span>
     <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">1000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-      <span class="nc">DumbWeight</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DumbWeight</span><span class="o">(</span><span class="mi">100000</span><span class="o">);</span>
-      <span class="nc">SoftReference</span> <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SoftReference</span><span class="o">(</span><span class="n">d</span><span class="o">);</span>
+      <span class="n">DumbWeight</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DumbWeight</span><span class="o">(</span><span class="mi">100000</span><span class="o">);</span>
+      <span class="n">SoftReference</span> <span class="n">w</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SoftReference</span><span class="o">(</span><span class="n">d</span><span class="o">);</span>
       <span class="n">s</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">w</span><span class="o">);</span>
       <span class="n">d</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
       <span class="k">if</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">size</span><span class="o">()%</span><span class="mi">100</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">checkSoftReferences</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
       <span class="o">}</span>
     <span class="o">}</span> 
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Completed testSoftReferences"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Completed testSoftReferences"</span><span class="o">);</span>
   <span class="o">}</span>
 
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
-    <span class="nc">MyTest</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MyTest</span><span class="o">();</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+    <span class="n">MyTest</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyTest</span><span class="o">();</span>
     <span class="n">m</span><span class="o">.</span><span class="na">testSoftReferences</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>The output looks as follows:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*****************************
+<div class="highlighter-rouge"><pre class="highlight"><code>*****************************
 Starting testSoftReferences
 Creating 1000 soft references
 checkSoftRefs: size=100, numCollected=0
@@ -127,7 +128,8 @@ checkSoftRefs: size=800, numCollected=624
 checkSoftRefs: size=900, numCollected=832
 checkSoftRefs: size=1000, numCollected=832
 Completed testSoftReferences
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>The test results show that the GC wipes out objects referenced by SoftReferences - 
 only if the JVM runs low on memory. Comparing this result to the previous WeakReferences 

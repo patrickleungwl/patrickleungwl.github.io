@@ -43,7 +43,7 @@
         <section class="post-content">
             <p>Today just put together a test case to show usage of functions with variable number of parameters.</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="highlighter-rouge"><pre class="highlight"><code>
 <span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
 
@@ -51,8 +51,8 @@
 <span class="p">{</span>
     <span class="k">class</span> <span class="nc">Tester</span>
     <span class="p">{</span>
-        <span class="c1">// use object[] to allow for arguments of any type</span>
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">LogMsg</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">,</span> <span class="k">params</span> <span class="kt">object</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="c1">// use object[] to allow for arguments of any type
+</span>        <span class="k">static</span> <span class="k">void</span> <span class="nf">LogMsg</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">,</span> <span class="k">params</span> <span class="kt">object</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"{0} ThreadId={1} "</span><span class="p">,</span>
                 <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(</span><span class="s">"HH:MM:ss.fff"</span><span class="p">),</span>
@@ -74,14 +74,16 @@
     <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>The output shows-</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10:05:04.208 ThreadId=1 Test first arg
+<div class="highlighter-rouge"><pre class="highlight"><code>10:05:04.208 ThreadId=1 Test first arg
 10:05:04.244 ThreadId=1 This is a test first arg second arg
 10:05:04.244 ThreadId=1 This is a test with int args 123 456
-</code></pre></div></div>
+</code></pre>
+</div>
 
 
         </section>

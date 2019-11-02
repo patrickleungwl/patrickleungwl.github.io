@@ -44,7 +44,7 @@
             <p>Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do 
 not have.</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 
 
@@ -52,15 +52,15 @@ not have.</p>
 <span class="p">{</span>
     <span class="k">class</span> <span class="nc">TestYield</span>
     <span class="p">{</span>
-        <span class="c1">// --------------------------------------------------</span>
-        <span class="c1">// AllOdds</span>
-        <span class="c1">//</span>
-        <span class="c1">// Yield provides an easy way to make an enumerator.</span>
-        <span class="c1">// Without Yield, you'd have to generate the entire list</span>
-        <span class="c1">// of items to iterate thru- and return that list to the</span>
-        <span class="c1">// user.</span>
-        <span class="c1">// --------------------------------------------------</span>
-        
+        <span class="c1">// --------------------------------------------------
+</span>        <span class="c1">// AllOdds
+</span>        <span class="c1">//
+</span>        <span class="c1">// Yield provides an easy way to make an enumerator.
+</span>        <span class="c1">// Without Yield, you'd have to generate the entire list
+</span>        <span class="c1">// of items to iterate thru- and return that list to the
+</span>        <span class="c1">// user.
+</span>        <span class="c1">// --------------------------------------------------
+</span>        
         <span class="k">static</span> <span class="k">public</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="nf">AllOdds</span><span class="p">()</span>
         <span class="p">{</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">Int16</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
@@ -71,13 +71,13 @@ not have.</p>
         <span class="p">}</span>
 
 
-        <span class="c1">// --------------------------------------------------</span>
-        <span class="c1">// Main</span>
-        <span class="c1">//</span>
-        <span class="c1">// Use the enumerator above- and can stop the enumerator</span>
-        <span class="c1">// from generating the next item by breaking at any time.</span>
-        <span class="c1">// --------------------------------------------------</span>
-
+        <span class="c1">// --------------------------------------------------
+</span>        <span class="c1">// Main
+</span>        <span class="c1">//
+</span>        <span class="c1">// Use the enumerator above- and can stop the enumerator
+</span>        <span class="c1">// from generating the next item by breaking at any time.
+</span>        <span class="c1">// --------------------------------------------------
+</span>
         <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -90,7 +90,8 @@ not have.</p>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</code></pre>
+</div>
 
 
         </section>

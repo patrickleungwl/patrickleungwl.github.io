@@ -45,7 +45,7 @@
 necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
 at scheduled times.  Below shows a quick example of how it can be used.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">drills</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.text.DateFormat</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span><span class="o">;</span>
@@ -57,48 +57,50 @@ at scheduled times.  Below shows a quick example of how it can be used.</p>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="o">{</span>
 
-  <span class="nc">DateFormat</span> <span class="n">_df</span><span class="o">;</span>
+  <span class="n">DateFormat</span> <span class="n">_df</span><span class="o">;</span>
 
-  <span class="kd">public</span> <span class="nf">Tester</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">_df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyyMMdd HH:mm:ss"</span><span class="o">);</span>
+  <span class="kd">public</span> <span class="n">Tester</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">_df</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyyMMdd HH:mm:ss"</span><span class="o">);</span>
   <span class="o">}</span>
 
-  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">GetTimeNow</span><span class="o">()</span> <span class="o">{</span>
-    <span class="nc">Date</span> <span class="n">dt</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">();</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">GetTimeNow</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Date</span> <span class="n">dt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
     <span class="k">return</span> <span class="n">_df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">dt</span><span class="o">);</span>
   <span class="o">}</span>
 
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">RunTest</span><span class="o">()</span> <span class="o">{</span>
-    <span class="nc">Runnable</span> <span class="n">worker</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Runnable</span><span class="o">()</span> <span class="o">{</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Worker running\n"</span><span class="o">,</span> <span class="nc">GetTimeNow</span><span class="o">());</span>				
+  <span class="kd">public</span> <span class="kt">void</span> <span class="n">RunTest</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Runnable</span> <span class="n">worker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="n">run</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Worker running\n"</span><span class="o">,</span> <span class="n">GetTimeNow</span><span class="o">());</span>				
       <span class="o">}</span>
     <span class="o">};</span>
 
-    <span class="nc">ScheduledExecutorService</span> <span class="n">ex</span> <span class="o">=</span> <span class="nc">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Scheduled worker to run in 5 seconds\n"</span><span class="o">,</span> <span class="nc">GetTimeNow</span><span class="o">());</span>
-    <span class="n">ex</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="n">worker</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="nc">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+    <span class="n">ScheduledExecutorService</span> <span class="n">ex</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s: Scheduled worker to run in 5 seconds\n"</span><span class="o">,</span> <span class="n">GetTimeNow</span><span class="o">());</span>
+    <span class="n">ex</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="n">worker</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 
     <span class="k">try</span> <span class="o">{</span>
-      <span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span>
-    <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
       <span class="c1">// Even if interrupted exception is thrown during sleep, keep going</span>
     <span class="o">}</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Test completed"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Test completed"</span><span class="o">);</span>
   <span class="o">}</span>	
 
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="nc">Tester</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Tester</span><span class="o">();</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Tester</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tester</span><span class="o">();</span>
     <span class="n">t</span><span class="o">.</span><span class="na">RunTest</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</code></pre>
+</div>
 <p>The test app output looks like this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>20140317 23:56:53: Scheduled worker to run in 5 seconds
+<div class="highlighter-rouge"><pre class="highlight"><code>20140317 23:56:53: Scheduled worker to run in 5 seconds
 20140317 23:56:58: Worker running
 Test completed
-</code></pre></div></div>
+</code></pre>
+</div>
 
 
         </section>

@@ -103,7 +103,7 @@ complex64 to complex128. Depending on OS, int defaults to int32 or int64. Same f
 
 <p>Examples:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i = np.int8(8)
+<div class="highlighter-rouge"><pre class="highlight"><code>i = np.int8(8)
 i
 i.nbytes
 --
@@ -124,22 +124,25 @@ i.nbytes
 --
 231238
 8
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <h3 id="some-code-examples-">Some code examples-</h3>
 
 <p>Creating ndarray from specific values-</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy as np
+<div class="highlighter-rouge"><pre class="highlight"><code>import numpy as np
 
 a = np.array([5,6,7,8])
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>Creating ndarray from csv-</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>temperatures = np.genfromtxt("temperatures.csv", delimiter=";", skip_header=1)
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>temperatures = np.genfromtxt("temperatures.csv", delimiter=";", skip_header=1)
+</code></pre>
+</div>
 
 <h3 id="operations">Operations</h3>
 
@@ -147,18 +150,19 @@ a = np.array([5,6,7,8])
 on them extremely easy.  With matrix operations, there is no need to write
 for-each loops.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy as np
+<div class="highlighter-rouge"><pre class="highlight"><code>import numpy as np
 
 a = np.array([5,6,7,8])
 print(a * 3)
 --
 [15 18 21 24]
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <h3 id="slicing-arrays">Slicing arrays</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = np.random.rand(8, 3)
+<div class="highlighter-rouge"><pre class="highlight"><code>a = np.random.rand(8, 3)
 
 array([[ 0.43843581,  0.21627972,  0.3815473 ],
        [ 0.58425937,  0.00771804,  0.18703358],
@@ -173,7 +177,8 @@ Get all cells from last row
 a[-1]
 array([ 0.31513721,  0.56262377,  0.15340494])
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <h3 id="numpy-methods">NumPy methods</h3>
 
@@ -194,8 +199,8 @@ and scientific domains.<br />
 <a href="http://scipy.github.io/devdocs/genindex.html">The list of functions is here</a></p>
 
 <h2 id="pandas">Pandas</h2>
-<h2 id="matplotlib">Matplotlib</h2>
-<h2 id="jypyterlab">JypyterLab</h2>
+<p>## Matplotlib
+## JypyterLab</p>
 
 
         </section>

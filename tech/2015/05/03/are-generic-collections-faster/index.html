@@ -45,7 +45,7 @@
 
 <p>I wrote some quick code to run a test.</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
 
@@ -56,8 +56,8 @@
         <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeArrayList</span><span class="p">()</span>
         <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeArrayList start"</span><span class="p">);</span>
-            <span class="c1">// Test creating and reading a million boxed ints</span>
-            <span class="n">DateTime</span> <span class="n">dtStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="c1">// Test creating and reading a million boxed ints
+</span>            <span class="n">DateTime</span> <span class="n">dtStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
             <span class="n">ArrayList</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ArrayList</span><span class="p">();</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10000000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
             <span class="p">{</span>
@@ -87,8 +87,8 @@
         <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeGenericList</span><span class="p">()</span>
         <span class="p">{</span>
             <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeGenericList start"</span><span class="p">);</span>
-            <span class="c1">// Test creating and reading a million boxed ints</span>
-            <span class="n">DateTime</span> <span class="n">dtStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="c1">// Test creating and reading a million boxed ints
+</span>            <span class="n">DateTime</span> <span class="n">dtStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
             <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10000000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
             <span class="p">{</span>
@@ -125,11 +125,12 @@
     <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>The result?</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TimeGenericList start
+<div class="highlighter-rouge"><pre class="highlight"><code>TimeGenericList start
 ..........
 GenericList took 646 ms in total, 251 ms to add, 395 to read
 
@@ -145,7 +146,8 @@ TimeGenericList start
 ..........
 GenericList took 786 ms in total, 400 ms to add, 386 to read
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>It’s fairly conclusive.  Adding new items to a generic list is roughly 9 times faster than the non-generic version.  My guess is this slowness comes from boxing the item before adding it to the list.  Retrieving and unboxing the item from a non-generic list is not much slower than the generic version.</p>
 

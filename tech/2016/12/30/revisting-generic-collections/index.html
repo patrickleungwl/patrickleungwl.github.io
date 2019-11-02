@@ -53,7 +53,7 @@ Both collections only contain references to objects on the heap- and there
 should be no difference, right?  I updated my old test to check this 
 assertion.</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="highlighter-rouge"><pre class="highlight"><code>
 <span class="err">﻿</span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
@@ -157,13 +157,13 @@ assertion.</p>
         <span class="p">}</span>
 
 
-        <span class="c1">/// &lt;summary&gt;</span>
-        <span class="c1">/// ShowStats show time procedure took to insert 1M items and to read 1M items</span>
-        <span class="c1">/// &lt;/summary&gt;</span>
-        <span class="c1">/// &lt;param name="dtInsertStart"&gt;Time when insert started&lt;/param&gt;</span>
-        <span class="c1">/// &lt;param name="dtReadStart"&gt;Time when read started&lt;/param&gt;</span>
-        <span class="c1">/// &lt;param name="msg"&gt;Name of procedure&lt;/param&gt;</span>
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">ShowStats</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// ShowStats show time procedure took to insert 1M items and to read 1M items
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="c1">/// &lt;param name="dtInsertStart"&gt;Time when insert started&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="dtReadStart"&gt;Time when read started&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="msg"&gt;Name of procedure&lt;/param&gt;
+</span>        <span class="k">static</span> <span class="k">void</span> <span class="nf">ShowStats</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">dtInsertStart</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">dtReadStart</span><span class="p">,</span> <span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">DateTime</span> <span class="n">dtTimeNow</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
             <span class="n">TimeSpan</span> <span class="n">wholeTime</span> <span class="p">=</span> <span class="n">dtTimeNow</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtInsertStart</span><span class="p">);</span>
@@ -198,11 +198,12 @@ assertion.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>The result?</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;TestGenerics.exe 1
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;TestGenerics.exe 1
 TimeGenericListOfPrimitives start
 ..........
 GenericListOfPrimitives took 358.8006 ms in total, 202.8004 ms to insert, 156.0002 to read
@@ -226,7 +227,8 @@ TimeArrayListOfObjects start
 ArrayListOfObjects took 4508.408 ms in total, 4352.4077 ms to insert, 156.0003 to read
 
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>It’s fairly conclusive.</p>
 
