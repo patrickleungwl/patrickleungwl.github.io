@@ -44,7 +44,7 @@
     <div class="extra-pagination inner">
         <nav class="pagination" role="pagination">
     
-    <span class="page-number"> Page 1 of 9 </span>
+    <span class="page-number"> Page 1 of 8 </span>
      
         <a class="older-posts" href="/page2/" title="Next Page">Older Posts &raquo;</a>
      
@@ -163,23 +163,25 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/investing/2018/11/17/options-ideas/">Options October Disaster</a></h2>
+                <h2 class="post-title"><a href="/tech/2018/02/25/python-tools/">Python's Data Science Toolkit</a></h2>
             </header>
             <section class="post-excerpt">
-                What a disaster so far. From options so far- I have 1. PG- I sold PG at 82.5 and now it is at 93.82. Paper loss 2200. 2. BA- I bought 100sh BA at 360 on Oct 22 and it is at 335. Paper loss 2500. 3. C- I bought 200sh C at 72 on Oct 22 and it is at 65. Paper loss 1400. 4. SCHW- I bought 200sh SCHW at 50 on Nov...
+                Essentially, there are five tools in Python’s data science toolkit. These are NumPy, SciPy, Pandas, MatplotLib, and JupyterLib. I’ll jot down the essential notes on each of these toolkits. NumPy Why use NumPy arrays? NumPy’s main benefit is its array object called ndarray. Ndarray objects wraps around multi-dimensional data- and allows for many creational patterns- from other lists, from csvs, fast matrix operations without for-each loops fast data element access as well as data splicing...
                 <!--
-                <p>What a disaster so far.</p>
+                <p>Essentially, there are five tools in Python’s data science toolkit.  These are
+NumPy, SciPy, Pandas, MatplotLib, and JupyterLib.  I’ll jot down the essential 
+notes on each of these toolkits.</p>
 
- <a class="read-more" href="/investing/2018/11/17/options-ideas/">&raquo;</a>
+ <a class="read-more" href="/tech/2018/02/25/python-tools/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
                 
                  
-                    on investing 
+                    on tech 
                 
-                <time class="post-date" datetime="2018-11-17">
-                    17 Nov 2018
+                <time class="post-date" datetime="2018-02-25">
+                    25 Feb 2018
                 </time> 
             </footer>
         </article>
@@ -188,23 +190,24 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/investing/2018/10/07/options-ideas/">Options Ideas BiWeekly</a></h2>
+                <h2 class="post-title"><a href="/tech/2017/10/13/decorator-pattern/">Decorator Pattern</a></h2>
             </header>
             <section class="post-excerpt">
-                Some highlights this past week. 20181007 Statuses -2 PG 82.5 20181019 Calls- PG at 82.15, maybe I won't get to sell stock. -1 BA 360 20181019 Puts. BA at 386.5, way above put's strike. -2 C 72.5 20181019 Puts. C at 72.42- maybe I will not be forced to buy it. Last week’s idea on selling 2 20181116 of BL at 50.0 fortunately did not sell in the market. Now BL is at 50.87. New...
+                The Decorator pattern- is used to dynamically add new functionality to existing components- without having to change the existing components. IShippingMethod.cs using System; namespace Decorator { public interface IShippingMethod { double GetCost(); } } GroundShipping.cs using System; namespace Decorator { public class GroundShipping : IShippingMethod { public double GetCost() { return 10.0; } } } AirShipping.cs using System; namespace Decorator { public class AirShipping : IShippingMethod { public double GetCost() { return 50.0; } }...
                 <!--
-                <p>Some highlights this past week.</p>
+                <p>The Decorator pattern- is used to dynamically add new functionality to 
+existing components- without having to change the existing components.</p>
 
- <a class="read-more" href="/investing/2018/10/07/options-ideas/">&raquo;</a>
+ <a class="read-more" href="/tech/2017/10/13/decorator-pattern/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
                 
                  
-                    on investing 
+                    on tech 
                 
-                <time class="post-date" datetime="2018-10-07">
-                    07 Oct 2018
+                <time class="post-date" datetime="2017-10-13">
+                    13 Oct 2017
                 </time> 
             </footer>
         </article>
@@ -213,23 +216,67 @@
 
         <article class="post">
             <header class="post-header">
-                <h2 class="post-title"><a href="/investing/2018/09/30/options-ideas/">Options Ideas BiWeekly</a></h2>
+                <h2 class="post-title"><a href="/tech/2017/10/12/decorators/">Patterns</a></h2>
             </header>
             <section class="post-excerpt">
-                Some tips: When vols are low, buy options. When vols are high, sell options. When underlying is high and doesn’t look likely to go any higher, sell protected calls at above current price. Pocket the premiums. When underlying is low and doesn’t look likely to go any lower, sell puts at below current price. Pocket the premiums. Some highlights this past week. 20180928 Statuses -2 PG 82.5 20181019 Calls- PG at 83.3, above calls' strikes....
-                <!--
-                <p>Some tips:</p>
+                
+  
+    
+      Pattern
+      Usage
+    
+  
+  
+    
+      Decorator
+      Adds new functionality to existing components without changing the component
+    
+    
+      Visitor
+      Adds new operations to existing without modifying existing data structures
+    
+    
+      Strategy
+      Allows interchanging functionality at runtime without modifying code
+    
+  
 
- <a class="read-more" href="/investing/2018/09/30/options-ideas/">&raquo;</a>
+
+
+                <!--
+                <table>
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Decorator</td>
+      <td>Adds new functionality to existing components without changing the component</td>
+    </tr>
+    <tr>
+      <td>Visitor</td>
+      <td>Adds new operations to existing without modifying existing data structures</td>
+    </tr>
+    <tr>
+      <td>Strategy</td>
+      <td>Allows interchanging functionality at runtime without modifying code</td>
+    </tr>
+  </tbody>
+</table>
+
+ <a class="read-more" href="/tech/2017/10/12/decorators/">&raquo;</a>
                 -->
             </section>
             <footer class="post-meta">
                 
                  
-                    on investing 
+                    on tech 
                 
-                <time class="post-date" datetime="2018-09-30">
-                    30 Sep 2018
+                <time class="post-date" datetime="2017-10-12">
+                    12 Oct 2017
                 </time> 
             </footer>
         </article>
@@ -238,7 +285,7 @@
 
     <nav class="pagination" role="pagination">
     
-    <span class="page-number"> Page 1 of 9 </span>
+    <span class="page-number"> Page 1 of 8 </span>
      
         <a class="older-posts" href="/page2/" title="Next Page">Older Posts &raquo;</a>
      

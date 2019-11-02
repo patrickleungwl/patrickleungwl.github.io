@@ -48,159 +48,12 @@
             <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
         
     
-    <span class="page-number"> Page 2 of 9 </span>
+    <span class="page-number"> Page 2 of 8 </span>
      
         <a class="older-posts" href="/page3/" title="Next Page">Older Posts &raquo;</a>
      
 </nav>
     </div>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/investing/2018/09/14/options-ideas/">Options Ideas</a></h2>
-            </header>
-            <section class="post-excerpt">
-                A tidbit from a recent read: You’ll want to focus on trying to buy options during lower periods of the security’s volatility and concentrate on selling options during high volatility levels. We know that we can’t always predict that our timing of options trading will correspond to high or low volatility levels, but you can always tailor your options strategies to take advantage of whatever volatility level exists at the time. What this means is...
-                <!--
-                <p>A tidbit from a recent read:</p>
-
- <a class="read-more" href="/investing/2018/09/14/options-ideas/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on investing 
-                
-                <time class="post-date" datetime="2018-09-14">
-                    14 Sep 2018
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2018/02/25/python-tools/">Python's Data Science Toolkit</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Essentially, there are five tools in Python’s data science toolkit. These are NumPy, SciPy, Pandas, MatplotLib, and JupyterLib. I’ll jot down the essential notes on each of these toolkits. NumPy Why use NumPy arrays? NumPy’s main benefit is its array object called ndarray. Ndarray objects wraps around multi-dimensional data- and allows for many creational patterns- from other lists, from csvs, fast matrix operations without for-each loops fast data element access as well as data splicing...
-                <!--
-                <p>Essentially, there are five tools in Python’s data science toolkit.  These are
-NumPy, SciPy, Pandas, MatplotLib, and JupyterLib.  I’ll jot down the essential 
-notes on each of these toolkits.</p>
-
- <a class="read-more" href="/tech/2018/02/25/python-tools/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2018-02-25">
-                    25 Feb 2018
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2017/10/13/decorator-pattern/">Decorator Pattern</a></h2>
-            </header>
-            <section class="post-excerpt">
-                The Decorator pattern- is used to dynamically add new functionality to existing components- without having to change the existing components. IShippingMethod.cs using System; namespace Decorator { public interface IShippingMethod { double GetCost(); } } GroundShipping.cs using System; namespace Decorator { public class GroundShipping : IShippingMethod { public double GetCost() { return 10.0; } } } AirShipping.cs using System; namespace Decorator { public class AirShipping : IShippingMethod { public double GetCost() { return 50.0; } }...
-                <!--
-                <p>The Decorator pattern- is used to dynamically add new functionality to 
-existing components- without having to change the existing components.</p>
-
- <a class="read-more" href="/tech/2017/10/13/decorator-pattern/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2017-10-13">
-                    13 Oct 2017
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2017/10/12/decorators/">Patterns</a></h2>
-            </header>
-            <section class="post-excerpt">
-                
-  
-    
-      Pattern
-      Usage
-    
-  
-  
-    
-      Decorator
-      Adds new functionality to existing components without changing the component
-    
-    
-      Visitor
-      Adds new operations to existing without modifying existing data structures
-    
-    
-      Strategy
-      Allows interchanging functionality at runtime without modifying code
-    
-  
-
-
-
-                <!--
-                <table>
-  <thead>
-    <tr>
-      <th>Pattern</th>
-      <th>Usage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Decorator</td>
-      <td>Adds new functionality to existing components without changing the component</td>
-    </tr>
-    <tr>
-      <td>Visitor</td>
-      <td>Adds new operations to existing without modifying existing data structures</td>
-    </tr>
-    <tr>
-      <td>Strategy</td>
-      <td>Allows interchanging functionality at runtime without modifying code</td>
-    </tr>
-  </tbody>
-</table>
-
- <a class="read-more" href="/tech/2017/10/12/decorators/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2017-10-12">
-                    12 Oct 2017
-                </time> 
-            </footer>
-        </article>
 
     
 
@@ -285,13 +138,169 @@ of a learning curve.</p>
 
     
 
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/python/2017/06/10/using-conda/">Using Conda, NumPy</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Notes on using Conda, NumPy
+
+Conda
+
+
+  
+    
+      Setup Python 3.5 env
+      conda create -n py35 python=3.5 anaconda
+    
+    
+      Setup Python 2.7 env
+      conda create -n py27 python=2.7 anaconda
+    
+    
+      Switch to Python 3.5 env
+      source activate py35
+    
+    
+      Check Python version
+      python -V
+    
+  
+
+
+Numpy
+
+
+  
+    
+      Import numpy
+      import numpy as np
+    
+    
+      Create a new array
+      na = array([1,2,3,4])
+    
+    
+      Use any numpy function
+      na.min()
+    
+    
+      Load data into array
+      na = np.loadtxt(‘data.txt’)
+    
+    
+      Save array to file
+      np.savetxt(‘data.txt’, na)
+    
+  
+
+
+
+                <!--
+                <p>Notes on using Conda, NumPy</p>
+
+ <a class="read-more" href="/python/2017/06/10/using-conda/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on python 
+                
+                <time class="post-date" datetime="2017-06-10">
+                    10 Jun 2017
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2017/06/09/setting-up-vim-for-python/">Setting Up Vim For Python</a></h2>
+            </header>
+            <section class="post-excerpt">
+                While I’m enthusiastic with using Vim, I’m afraid that my many years of using Visual Studio’s Intellisense has spoiled me. I now require the same method popups now on Vim when coding Python in Linux. But how to do this? First I backup my original .vimrc: " Automatic syntax highlighting syntax on " Stop vim from creating automatic backups set noswapfile set nobackup set nowb " Reload files modified outside of vim set autoread "...
+                <!--
+                <p>While I’m enthusiastic with using Vim, I’m afraid that my many years of using
+Visual Studio’s Intellisense has spoiled me.  I now require the same method 
+popups now on Vim when coding Python in Linux.  But how to do this?</p>
+
+ <a class="read-more" href="/tech/2017/06/09/setting-up-vim-for-python/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2017-06-09">
+                    09 Jun 2017
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/python/2017/06/08/python_import/">Imports in Python</a></h2>
+            </header>
+            <section class="post-excerpt">
+                What’s the difference between: 1) import numpy, 2) import numpy as np, and 3) from numpy import * ? First example: import numpy Second example: import numpy as np Third example: from numpy import * The first example allows usage of all sub-modules and functions in the numpy module- but they can only be accessed by numpy.method(). The second example is the same as the first example- but also sets up np as alias thru...
+                <!--
+                <p>What’s the difference between: 1) import numpy, 2) import numpy as np,
+and 3) from numpy import * ?</p>
+
+ <a class="read-more" href="/python/2017/06/08/python_import/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on python 
+                
+                <time class="post-date" datetime="2017-06-08">
+                    08 Jun 2017
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/life/2017/06/03/fooled-by-randomness/">Fooled By Randomness</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Nassim Tabeb’s “Fooled By Randomness” is such a great book, I thought I’d save some great passages here. On attributing brilliance to success: A few years ago, when I told one A, a then Master-of-the-Universe type, that track records were less relevant than he thought, he found the remark so offensive that he violently flung his cigarette lighter in my direction. The episode taught me a lot. Remember that nobody accepts randomness in his own...
+                <!--
+                <p>Nassim Tabeb’s “Fooled By Randomness” is such a great book, I thought
+I’d save some great passages here.</p>
+
+ <a class="read-more" href="/life/2017/06/03/fooled-by-randomness/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on life 
+                
+                <time class="post-date" datetime="2017-06-03">
+                    03 Jun 2017
+                </time> 
+            </footer>
+        </article>
+
+    
+
     <nav class="pagination" role="pagination">
     
         
             <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
         
     
-    <span class="page-number"> Page 2 of 9 </span>
+    <span class="page-number"> Page 2 of 8 </span>
      
         <a class="older-posts" href="/page3/" title="Next Page">Older Posts &raquo;</a>
      

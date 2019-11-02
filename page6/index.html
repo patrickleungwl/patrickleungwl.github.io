@@ -48,113 +48,12 @@
             <a class="newer-posts" href="/page5/" title="Previous Page">&laquo; Newer Posts</a>
       
     
-    <span class="page-number"> Page 6 of 9 </span>
+    <span class="page-number"> Page 6 of 8 </span>
      
         <a class="older-posts" href="/page7/" title="Next Page">Older Posts &raquo;</a>
      
 </nav>
     </div>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/12/25/autoresetevent/">Using AutoResetEvent</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Testing AutoResetEvent today. using System; using System.Threading; namespace TestAutoResetEvent { class AutoResetEventTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask(Object stateInfo) { LogMsg("LongComputeTask starting"); float percentDone = 0.0f; for (int i = 0; i &lt; 10; i++) { Thread.Sleep(500); percentDone += 10.0f; LogMsg("LongComputeTask {0:0.0f}% completed", percentDone); } LogMsg("LongComputeTask completed"); AutoResetEvent myFlag = stateInfo as...
-                <!--
-                <p>Testing AutoResetEvent today.</p>
-
- <a class="read-more" href="/tech/2015/12/25/autoresetevent/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-12-25">
-                    25 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/12/24/mutex/">Using Mutexes</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Testing mutexes today. Mutexes can be used to ensure only one instance of an app runs at any one time. using System; using System.Threading; namespace TestMutex { class MutexTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask() { LogMsg("LongComputeTask starting"); float percentDone = 0.0f; for (int i = 0; i &lt;10; i++) { Thread.Sleep(1000);...
-                <!--
-                <p>Testing mutexes today.  Mutexes can be used to ensure only one instance of an app runs at any one time.</p>
-
- <a class="read-more" href="/tech/2015/12/24/mutex/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-12-24">
-                    24 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/12/23/threadpool/">Using ThreadPool</a></h2>
-            </header>
-            <section class="post-excerpt">
-                Testing ThreadPool usage today- using System; using System.Threading; namespace TestThreadPool { class ThreadPoolTester { private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId=3D{1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. private void LongComputeTask(Object stateInfo) { LogMsg("LongComputeTask starting"); float percentDone =3D 0.0f; for (int i =3D 0; i &lt; 10; i++) { Thread.Sleep(500); percentDone +=3D 10.0f; LogMsg("LongComputeTask {0:0.0f}% completed", percentDone); } LogMsg("LongComputeTask completed"); AutoResetEvent myFlag =3D stateInfo...
-                <!--
-                <p>Testing ThreadPool usage today-</p>
-
- <a class="read-more" href="/tech/2015/12/23/threadpool/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-12-23">
-                    23 Dec 2015
-                </time> 
-            </footer>
-        </article>
-
-    
-
-        <article class="post">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/tech/2015/12/22/threads/">Using Threads</a></h2>
-            </header>
-            <section class="post-excerpt">
-                We’re not supposed to use raw managed threads anymore- given that .net 4+ has given us much more advanced multi-threading features. However, I’ll still post some test code to illustrate how threads work. using System; using System.Text; using System.Threading; namespace TestThreads { class ThreadTester { private Thread _workerThread; private void LogMsg(string msg, params object[] args) { Console.Out.Write("{0} ThreadId={1} ", DateTime.Now.ToString("HH:MM:ss.fff"), Thread.CurrentThread.ManagedThreadId); Console.Out.WriteLine(msg, args); } // LongComputeTask // // Function run by background worker. void LongComputeTask(object...
-                <!--
-                <p>We’re not supposed to use raw managed threads anymore- given that .net 4+ has given us much more advanced
-multi-threading features.  However, I’ll still post some test code to illustrate how threads work.</p>
-
- <a class="read-more" href="/tech/2015/12/22/threads/">&raquo;</a>
-                -->
-            </section>
-            <footer class="post-meta">
-                
-                 
-                    on tech 
-                
-                <time class="post-date" datetime="2015-12-22">
-                    22 Dec 2015
-                </time> 
-            </footer>
-        </article>
 
     
 
@@ -233,13 +132,129 @@ multi-threading features.  However, I’ll still post some test code to illustra
 
     
 
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/12/18/multi-threading-cheatsheet/">Multi-threading Cheat Sheet</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.
+
+
+  BackgroundWorker
+    
+      Easy to start working in background
+      Easy to periodically update the UI thread
+    
+  
+  Theads
+    
+      Heavy weight multi-threading, but gives full control
+    
+  
+
+
+
+                <!--
+                <p>Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each.</p>
+
+ <a class="read-more" href="/tech/2015/12/18/multi-threading-cheatsheet/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-12-18">
+                    18 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech,csharp/2015/12/17/how-backgroundworker-works/">How BackgroundWorker Works</a></h2>
+            </header>
+            <section class="post-excerpt">
+                I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting. using System; using System.Collections.Generic; using System.Linq; using System.Text; using System.ComponentModel; using System.Threading; namespace TestBackgroundWorker { class TestBkGrdWorker     {         private void LogMsg(string msg)         {             Console.Out.WriteLine("{0} ThreadId={1}, {2}",                 DateTime.Now.ToString("HH:MM:ss.fff"),                 Thread.CurrentThread.ManagedThreadId, msg);         }         // RunTest...
+                <!--
+                <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5.  One of the simpler options is the BackgroundWorker.  To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p>
+
+ <a class="read-more" href="/tech,csharp/2015/12/17/how-backgroundworker-works/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech,csharp 
+                
+                <time class="post-date" datetime="2015-12-17">
+                    17 Dec 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2015/05/03/are-generic-collections-faster/">Are Generic Collections Faster than Non-Generic Collections?</a></h2>
+            </header>
+            <section class="post-excerpt">
+                The oft-repeated assertion is that generic collections run faster than their non-generic versions. But is this true? And if so, just how much faster? I wrote some quick code to run a test. using System; using System.Collections.Generic; using System.Collections; namespace TestBoxing { class Program { static void TimeArrayList() { Console.Out.WriteLine("TimeArrayList start"); // Test creating and reading a million boxed ints DateTime dtStart = DateTime.Now; ArrayList intList = new ArrayList(); for (int i = 0; i...
+                <!--
+                <p>The oft-repeated assertion is that generic collections run faster than their non-generic versions.  But is this true?  And if so, just how much faster?</p>
+
+ <a class="read-more" href="/tech/2015/05/03/are-generic-collections-faster/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2015-05-03">
+                    03 May 2015
+                </time> 
+            </footer>
+        </article>
+
+    
+
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/tech/2014/11/05/all-about-events/">All About Events</a></h2>
+            </header>
+            <section class="post-excerpt">
+                Let’s discuss a little bit more about Events. How are Events different from Delegates? For events- The event keyword is a modifier- to a delegate type, the most frequent being EventHandler for event handling situations. The event keyword allows a delegate type to be exposed in an interface. Events come with add and remove methods, much like get and set methods for properties. Events have a strict method signature (object ok, EventArgs e). Here is...
+                <!--
+                <p>Let’s discuss a little bit more about Events.  How are Events different from Delegates?</p>
+
+ <a class="read-more" href="/tech/2014/11/05/all-about-events/">&raquo;</a>
+                -->
+            </section>
+            <footer class="post-meta">
+                
+                 
+                    on tech 
+                
+                <time class="post-date" datetime="2014-11-05">
+                    05 Nov 2014
+                </time> 
+            </footer>
+        </article>
+
+    
+
     <nav class="pagination" role="pagination">
     
         
             <a class="newer-posts" href="/page5/" title="Previous Page">&laquo; Newer Posts</a>
       
     
-    <span class="page-number"> Page 6 of 9 </span>
+    <span class="page-number"> Page 6 of 8 </span>
      
         <a class="older-posts" href="/page7/" title="Next Page">Older Posts &raquo;</a>
      
