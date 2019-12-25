@@ -3,10 +3,10 @@
   <channel>
     <title></title>
     <description>Minimalist Jekyll theme for technical writing blog.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Dec 2019 23:53:08 -0500</pubDate>
-    <lastBuildDate>Tue, 24 Dec 2019 23:53:08 -0500</lastBuildDate>
+    <link>https://patrickleungwl.github.io/</link>
+    <atom:link href="https://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 25 Dec 2019 17:31:46 -0500</pubDate>
+    <lastBuildDate>Wed, 25 Dec 2019 17:31:46 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -15,8 +15,8 @@
 
 </description>
         <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2019/laws-of-investing/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/laws-of-investing/</guid>
+        <link>https://patrickleungwl.github.io/2019/laws-of-investing/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/laws-of-investing/</guid>
         
         <category>patterns</category>
         
@@ -293,8 +293,8 @@ meal once a day with a reduced meal at other times…&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 20 Jul 2019 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2019/all-about-dieting/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/all-about-dieting/</guid>
+        <link>https://patrickleungwl.github.io/2019/all-about-dieting/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/all-about-dieting/</guid>
         
         <category>nutrition</category>
         
@@ -384,8 +384,8 @@ meal once a day with a reduced meal at other times…&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2019/how-to-use-slide-rules/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/how-to-use-slide-rules/</guid>
+        <link>https://patrickleungwl.github.io/2019/how-to-use-slide-rules/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/how-to-use-slide-rules/</guid>
         
         <category>retro</category>
         
@@ -482,8 +482,8 @@ Distribution&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2019/2019-new-ideas/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/2019-new-ideas/</guid>
+        <link>https://patrickleungwl.github.io/2019/2019-new-ideas/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/2019-new-ideas/</guid>
         
         <category>ideas</category>
         
@@ -652,8 +652,8 @@ and scientific domains.&lt;br /&gt;
 
 </description>
         <pubDate>Sun, 25 Feb 2018 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2018/python-tools/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/python-tools/</guid>
+        <link>https://patrickleungwl.github.io/2018/python-tools/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2018/python-tools/</guid>
         
         <category>patterns</category>
         
@@ -842,8 +842,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/decorator-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/decorator-pattern/</guid>
+        <link>https://patrickleungwl.github.io/2017/decorator-pattern/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2017/decorator-pattern/</guid>
         
         <category>patterns</category>
         
@@ -879,8 +879,8 @@ existing components- without having to change the existing components.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 12 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/decorators/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/decorators/</guid>
+        <link>https://patrickleungwl.github.io/2017/decorators/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2017/decorators/</guid>
         
         <category>patterns</category>
         
@@ -1215,8 +1215,8 @@ else.  If you are a manager, you don't drift.
 
 </description>
         <pubDate>Sun, 03 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/managing/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/managing/</guid>
+        <link>https://patrickleungwl.github.io/2017/managing/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2017/managing/</guid>
         
         <category>managing</category>
         
@@ -1248,8 +1248,8 @@ knowledge over time accumulates to a mountain of knowledge.&lt;/li&gt;
 
 </description>
         <pubDate>Sat, 24 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/the-effective-engineer/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/the-effective-engineer/</guid>
+        <link>https://patrickleungwl.github.io/2017/the-effective-engineer/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2017/the-effective-engineer/</guid>
         
         <category>patterns</category>
         
@@ -1358,8 +1358,8 @@ plt.show()
 
 </description>
         <pubDate>Sun, 11 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/basic-matplotlib/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/basic-matplotlib/</guid>
+        <link>https://patrickleungwl.github.io/2017/basic-matplotlib/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2017/basic-matplotlib/</guid>
         
         <category>patterns</category>
         
