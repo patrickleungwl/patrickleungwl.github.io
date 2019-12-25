@@ -1,0 +1,97 @@
+<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title> Are Generic Collections Faster than Non-Generic Collections? | ThinkNotes </title> <meta name="description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta name="keywords" content="Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <!-- Social: Facebook / Open Graph --> <meta property="og:type" content="article"> <meta property="article:author" content="Patrick Leung"> <meta property="article:section" content="tech"> <meta property="article:tag" content=""> <meta property="article:published_time" content="2015-05-03 00:00:00 -0400"> <meta property="og:url" content="http://localhost:4000/2015/are-generic-collections-faster/"> <meta property="og:title" content=" Are Generic Collections Faster than Non-Generic Collections? | ThinkNotes "> <meta property="og:image" content="http://localhost:4000"> <meta property="og:description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta property="og:site_name" content="Patrick Leung"> <meta property="og:locale" content="en_US"> <!-- Social: Twitter --> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:site" content=""> <meta name="twitter:title" content=" Are Generic Collections Faster than Non-Generic Collections? | ThinkNotes "> <meta name="twitter:description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta name="twitter:image:src" content="http://localhost:4000"> <!-- Social: Google+ / Schema.org --> <meta itemprop="name" content=" Are Generic Collections Faster than Non-Generic Collections? | ThinkNotes "> <meta itemprop="description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta itemprop="image" content="http://localhost:4000"> <!-- Canonical link tag --> <link rel="canonical" href="http://localhost:4000/2015/are-generic-collections-faster/"> <link rel="alternate" type="application/rss+xml" title="ThinkNotes" href="http://localhost:4000/feed.xml"> <!-- rel prev and next --> <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css"> </head> <body> <main class="wrapper"> <header class="site-header"> <nav class="nav"> <div class="container"> <h1 class="logo"><a href="http://localhost:4000/">Think<span>Notes</span></a></h1> <ul class="navbar"> <li><a href="http://localhost:4000/bookmarks">Bookmarks</a></li> <li><a href="http://localhost:4000/about">About me</a></li> <li><a href="http://localhost:4000/feed.xml" target="_blank">RSS</a></li> </ul> </div> </nav> </header> <article class="post container" itemscope itemtype="http://schema.org/BlogPosting"> <header class="post-header"> <p class="post-meta"><time datetime="2015-05-03T00:00:00-04:00" itemprop="datePublished">May 3, 2015</time></p> <h1 class="post-title" itemprop="name headline">Are Generic Collections Faster than Non-Generic Collections?</h1> </header> <div class="post-content" itemprop="articleBody"> <p>The oft-repeated assertion is that generic collections run faster than their non-generic versions. But is this true? And if so, just how much faster?</p> <p>I wrote some quick code to run a test.</p> <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">TestBoxing</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeArrayList</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeArrayList start"</span><span class="p">);</span>
+            <span class="c1">// Test creating and reading a million boxed ints</span>
+            <span class="n">DateTime</span> <span class="n">dtStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">ArrayList</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ArrayList</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10000000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">intList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">DateTime</span> <span class="n">dtCreateEnd</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="m">10000000</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">intList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">retrievedInt</span> <span class="p">%</span> <span class="m">1000000</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">();</span>
+            <span class="n">DateTime</span> <span class="n">dtReadEnd</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+
+            <span class="n">TimeSpan</span> <span class="n">wholeTime</span> <span class="p">=</span> <span class="n">dtReadEnd</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtStart</span><span class="p">);</span>
+            <span class="n">TimeSpan</span> <span class="n">addTime</span> <span class="p">=</span> <span class="n">dtCreateEnd</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtStart</span><span class="p">);</span>
+            <span class="n">TimeSpan</span> <span class="n">readTime</span> <span class="p">=</span> <span class="n">dtReadEnd</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtCreateEnd</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"ArrayList took {0} ms in total, {1} ms to add, {2} to read\n"</span><span class="p">,</span> 
+                <span class="n">wholeTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">addTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">readTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">TimeGenericList</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"TimeGenericList start"</span><span class="p">);</span>
+            <span class="c1">// Test creating and reading a million boxed ints</span>
+            <span class="n">DateTime</span> <span class="n">dtStart</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">intList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10000000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">intList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">DateTime</span> <span class="n">dtCreateEnd</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="m">10000000</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">retrievedInt</span> <span class="p">=</span> <span class="n">intList</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">retrievedInt</span> <span class="p">%</span> <span class="m">1000000</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">();</span>
+            <span class="n">DateTime</span> <span class="n">dtReadEnd</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+
+            <span class="n">TimeSpan</span> <span class="n">wholeTime</span> <span class="p">=</span> <span class="n">dtReadEnd</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtStart</span><span class="p">);</span>
+            <span class="n">TimeSpan</span> <span class="n">addTime</span> <span class="p">=</span> <span class="n">dtCreateEnd</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtStart</span><span class="p">);</span>
+            <span class="n">TimeSpan</span> <span class="n">readTime</span> <span class="p">=</span> <span class="n">dtReadEnd</span><span class="p">.</span><span class="nf">Subtract</span><span class="p">(</span><span class="n">dtCreateEnd</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"GenericList took {0} ms in total, {1} ms to add, {2} to read\n"</span><span class="p">,</span>
+                <span class="n">wholeTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">addTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">,</span>
+                <span class="n">readTime</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="nf">TimeGenericList</span><span class="p">();</span>
+            <span class="nf">TimeArrayList</span><span class="p">();</span>
+            <span class="nf">TimeArrayList</span><span class="p">();</span>
+            <span class="nf">TimeGenericList</span><span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">ReadKey</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div> <p>The result?</p> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TimeGenericList start
+..........
+GenericList took 646 ms in total, 251 ms to add, 395 to read
+
+TimeArrayList start
+..........
+ArrayList took 3870 ms in total, 3409 ms to add, 461 to read
+
+TimeArrayList start
+..........
+ArrayList took 3593 ms in total, 3146 ms to add, 447 to read
+
+TimeGenericList start
+..........
+GenericList took 786 ms in total, 400 ms to add, 386 to read
+
+</code></pre></div></div> <p>It’s fairly conclusive. Adding new items to a generic list is roughly 9 times faster than the non-generic version. My guess is this slowness comes from boxing the item before adding it to the list. Retrieving and unboxing the item from a non-generic list is not much slower than the generic version.</p> </div> </article> <footer class="site-footer"> <div class="container"> <small class="block">&copy; 2019 Patrick Leung &middot; &lt;/&gt; Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/thinkspace">Thinkspace theme</a></small> </div> </footer> </main> <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-XXXXX-XX']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script> </body> </html>

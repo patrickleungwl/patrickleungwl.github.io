@@ -1,0 +1,124 @@
+<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title> How BackgroundWorker Works | ThinkNotes </title> <meta name="description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta name="keywords" content="Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <!-- Social: Facebook / Open Graph --> <meta property="og:type" content="article"> <meta property="article:author" content="Patrick Leung"> <meta property="article:section" content="tech,csharp"> <meta property="article:tag" content=""> <meta property="article:published_time" content="2015-12-17 00:00:00 -0500"> <meta property="og:url" content="http://localhost:4000/2015/how-backgroundworker-works/"> <meta property="og:title" content=" How BackgroundWorker Works | ThinkNotes "> <meta property="og:image" content="http://localhost:4000"> <meta property="og:description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta property="og:site_name" content="Patrick Leung"> <meta property="og:locale" content="en_US"> <!-- Social: Twitter --> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:site" content=""> <meta name="twitter:title" content=" How BackgroundWorker Works | ThinkNotes "> <meta name="twitter:description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta name="twitter:image:src" content="http://localhost:4000"> <!-- Social: Google+ / Schema.org --> <meta itemprop="name" content=" How BackgroundWorker Works | ThinkNotes "> <meta itemprop="description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta itemprop="image" content="http://localhost:4000"> <!-- Canonical link tag --> <link rel="canonical" href="http://localhost:4000/2015/how-backgroundworker-works/"> <link rel="alternate" type="application/rss+xml" title="ThinkNotes" href="http://localhost:4000/feed.xml"> <!-- rel prev and next --> <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css"> </head> <body> <main class="wrapper"> <header class="site-header"> <nav class="nav"> <div class="container"> <h1 class="logo"><a href="http://localhost:4000/">Think<span>Notes</span></a></h1> <ul class="navbar"> <li><a href="http://localhost:4000/bookmarks">Bookmarks</a></li> <li><a href="http://localhost:4000/about">About me</a></li> <li><a href="http://localhost:4000/feed.xml" target="_blank">RSS</a></li> </ul> </div> </nav> </header> <article class="post container" itemscope itemtype="http://schema.org/BlogPosting"> <header class="post-header"> <p class="post-meta"><time datetime="2015-12-17T00:00:00-05:00" itemprop="datePublished">Dec 17, 2015</time></p> <h1 class="post-title" itemprop="name headline">How BackgroundWorker Works</h1> </header> <div class="post-content" itemprop="articleBody"> <p>I’ve decided to take a deeper look at all available multi-threading options in .net 4.5. One of the simpler options is the BackgroundWorker. To investigate, I’ve setup a simple BackgroundWorker with progress and completion reporting.</p> <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.ComponentModel</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">TestBackgroundWorker</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">TestBkGrdWorker</span>
+<span class="err">   </span> <span class="p">{</span>
+<span class="err">       </span> <span class="k">private</span> <span class="k">void</span> <span class="nf">LogMsg</span><span class="p">(</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span>
+<span class="err">       </span> <span class="p">{</span>
+<span class="err">           </span> <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"{0} ThreadId={1}, {2}"</span><span class="p">,</span>
+<span class="err">               </span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(</span><span class="s">"HH:MM:ss.fff"</span><span class="p">),</span>
+<span class="err">               </span> <span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">ManagedThreadId</span><span class="p">,</span> <span class="n">msg</span><span class="p">);</span>
+<span class="err">       </span> <span class="p">}</span>
+
+
+<span class="err">       </span> <span class="c1">// RunTest</span>
+<span class="err">       </span> <span class="c1">//</span>
+<span class="err">       </span> <span class="c1">// Function run by main thread</span>
+<span class="err">       </span> <span class="c1">// Main thread sets up the background worker instance</span>
+<span class="err">       </span> <span class="c1">// and fires it off</span>
+
+<span class="err">       </span> <span class="k">public</span> <span class="k">void</span> <span class="nf">RunTest</span><span class="p">()</span>
+<span class="err">       </span> <span class="p">{</span>
+<span class="err">           </span> <span class="n">BackgroundWorker</span> <span class="n">bkWorker</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">BackgroundWorker</span><span class="p">();</span>
+<span class="err">           </span> <span class="n">bkWorker</span><span class="p">.</span><span class="n">WorkerReportsProgress</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span> <span class="err"> </span>
+
+<span class="err">           </span> <span class="c1">// setup functions the background worker calls</span>
+<span class="err">           </span> <span class="c1">// to do work, report progress, and to report completion</span>
+<span class="err">           </span> <span class="n">bkWorker</span><span class="p">.</span><span class="n">DoWork</span> <span class="p">+=</span> <span class="n">bkWorker_DoWork</span><span class="p">;</span>
+<span class="err">           </span> <span class="n">bkWorker</span><span class="p">.</span><span class="n">ProgressChanged</span> <span class="p">+=</span> <span class="n">bkWorker_ProgressChanged</span><span class="p">;</span>
+<span class="err">           </span> <span class="n">bkWorker</span><span class="p">.</span><span class="n">RunWorkerCompleted</span> <span class="p">+=</span> <span class="n">bkWorker_RunWorkerCompleted</span><span class="p">;</span>
+
+<span class="err">           </span> <span class="c1">// trigger background worker to run async</span>
+<span class="err">           </span> <span class="n">bkWorker</span><span class="p">.</span><span class="nf">RunWorkerAsync</span><span class="p">();</span>
+
+<span class="err">           </span> <span class="c1">// main thread do something while background worker do something else</span>
+<span class="err">           </span> <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="m">5</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="err">           </span> <span class="p">{</span>
+<span class="err">               </span> <span class="nf">LogMsg</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="nf">Format</span><span class="p">(</span><span class="s">"Main thread working, BackgroundWorker busy={0}"</span><span class="p">,</span>
+<span class="err">                   </span> <span class="n">bkWorker</span><span class="p">.</span><span class="n">IsBusy</span><span class="p">));</span>
+<span class="err">               </span> <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">);</span>
+<span class="err">           </span> <span class="p">}</span>
+<span class="err">       </span> <span class="p">}</span>
+
+
+<span class="err">       </span> <span class="c1">// bkWorker_ProgressChanged</span>
+<span class="err">       </span> <span class="c1">//</span>
+<span class="err">       </span> <span class="c1">// Report progress</span>
+
+<span class="err">       </span> <span class="k">void</span> <span class="nf">bkWorker_ProgressChanged</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">ProgressChangedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="err">       </span> <span class="p">{</span>
+<span class="err">           </span> <span class="nf">LogMsg</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="nf">Format</span><span class="p">(</span><span class="s">"Background worker update progress, {0:00.0}% done"</span><span class="p">,</span> 
+<span class="err">               </span> <span class="n">e</span><span class="p">.</span><span class="n">ProgressPercentage</span><span class="p">));</span>
+<span class="err">       </span> <span class="p">}</span>
+
+<span class="err">       </span> <span class="c1">// bkWorker_RunWorkerCompleted</span>
+<span class="err">       </span> <span class="c1">// </span>
+<span class="err">       </span> <span class="c1">// Report work is completed</span>
+
+<span class="err">       </span> <span class="k">void</span> <span class="nf">bkWorker_RunWorkerCompleted</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RunWorkerCompletedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="err">       </span> <span class="p">{</span>
+<span class="err">           </span> <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"Background worker completed"</span><span class="p">);</span>
+<span class="err">       </span> <span class="p">}</span>
+
+<span class="err">      </span> <span class="err"> </span>
+<span class="err">       </span> <span class="c1">// bkWorker_DoWork</span>
+<span class="err">       </span> <span class="c1">// </span>
+<span class="err">       </span> <span class="c1">// Function run by background worker.</span>
+<span class="err">       </span> <span class="c1">// Random work method that takes an arbitrarily set 2 seconds</span>
+<span class="err">       </span> <span class="c1">// to complete, with a progress report every 200ms.</span>
+
+<span class="err">       </span> <span class="k">void</span> <span class="nf">bkWorker_DoWork</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">DoWorkEventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="err">       </span> <span class="p">{</span>
+<span class="err">           </span> <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"Background worker starting"</span><span class="p">);</span>
+
+<span class="err">           </span> <span class="kt">float</span> <span class="n">percentDone</span> <span class="p">=</span> <span class="m">0.0f</span><span class="p">;</span>
+<span class="err">           </span> <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="err">           </span> <span class="p">{</span>
+<span class="err">               </span> <span class="n">Thread</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="m">200</span><span class="p">);</span>
+<span class="err">               </span> <span class="n">percentDone</span> <span class="p">+=</span> <span class="m">10.0f</span><span class="p">;</span>
+<span class="err">               </span> <span class="n">BackgroundWorker</span> <span class="n">bkwkr</span> <span class="p">=</span> <span class="n">sender</span> <span class="k">as</span> <span class="n">BackgroundWorker</span><span class="p">;</span>
+<span class="err">               </span> <span class="k">if</span> <span class="p">(</span><span class="n">bkwkr</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+<span class="err">               </span> <span class="p">{</span>
+<span class="err">                   </span> <span class="n">bkwkr</span><span class="p">.</span><span class="nf">ReportProgress</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">percentDone</span><span class="p">);</span>
+<span class="err">               </span> <span class="p">}</span>
+<span class="err">           </span> <span class="p">}</span>
+<span class="err">           </span> <span class="nf">LogMsg</span><span class="p">(</span><span class="s">"Background worker completed"</span><span class="p">);</span>
+<span class="err">       </span> <span class="p">}</span>
+
+
+<span class="err">       </span> <span class="c1">// Main</span>
+<span class="err">       </span> <span class="c1">// Start up a background worker test instance</span>
+
+<span class="err">       </span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="err">       </span> <span class="p">{</span>
+<span class="err">           </span> <span class="n">TestBkGrdWorker</span> <span class="n">testWkr</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TestBkGrdWorker</span><span class="p">();</span>
+<span class="err">           </span> <span class="n">testWkr</span><span class="p">.</span><span class="nf">RunTest</span><span class="p">();</span>
+<span class="err">       </span> <span class="p">}</span>
+<span class="err">   </span> <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div> <p>The output looks as follows:</p> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 12:12:04.680 ThreadId=3, Background worker starting
+ 12:12:04.680 ThreadId=1, Main thread working, BackgroundWorker busy=True
+ 12:12:04.945 ThreadId=4, Background worker update progress, 10.0% done
+ 12:12:05.148 ThreadId=4, Background worker update progress, 20.0% done
+ 12:12:05.350 ThreadId=4, Background worker update progress, 30.0% done
+ 12:12:05.553 ThreadId=4, Background worker update progress, 40.0% done
+ 12:12:05.756 ThreadId=4, Background worker update progress, 50.0% done
+ 12:12:05.756 ThreadId=1, Main thread working, BackgroundWorker busy=True
+ 12:12:05.959 ThreadId=4, Background worker update progress, 60.0% done
+ 12:12:06.162 ThreadId=4, Background worker update progress, 70.0% done
+ 12:12:06.364 ThreadId=4, Background worker update progress, 80.0% done
+ 12:12:06.567 ThreadId=4, Background worker update progress, 90.0% done
+ 12:12:06.770 ThreadId=3, Background worker completed
+ 12:12:06.770 ThreadId=3, Background worker update progress, 100.0% done
+ 12:12:06.770 ThreadId=4, Background worker completed
+ 12:12:06.770 ThreadId=1, Main thread working, BackgroundWorker busy=True
+ 12:12:07.784 ThreadId=1, Main thread working, BackgroundWorker busy=False
+ 12:12:08.798 ThreadId=1, Main thread working, BackgroundWorker busy=False
+</code></pre></div></div> </div> </article> <footer class="site-footer"> <div class="container"> <small class="block">&copy; 2019 Patrick Leung &middot; &lt;/&gt; Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/thinkspace">Thinkspace theme</a></small> </div> </footer> </main> <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-XXXXX-XX']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script> </body> </html>
