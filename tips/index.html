@@ -1,10 +1,10 @@
-<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title> Tips | ThinkNotes </title> <meta name="description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta name="keywords" content="Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <!-- Social: Facebook / Open Graph --> <meta property="og:type" content="website"> <meta property="og:url" content="https://patrickleungwl.github.io/tips/"> <meta property="og:title" content=" Tips | ThinkNotes "> <meta property="og:image" content="https://patrickleungwl.github.io"> <meta property="og:description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta property="og:site_name" content="Patrick Leung"> <meta property="og:locale" content="en_US"> <!-- Social: Twitter --> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:site" content=""> <meta name="twitter:title" content=" Tips | ThinkNotes "> <meta name="twitter:description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta name="twitter:image:src" content="https://patrickleungwl.github.io"> <!-- Social: Google+ / Schema.org --> <meta itemprop="name" content=" Tips | ThinkNotes "> <meta itemprop="description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta itemprop="image" content="https://patrickleungwl.github.io"> <!-- Canonical link tag --> <link rel="canonical" href="https://patrickleungwl.github.io/tips/"> <link rel="alternate" type="application/rss+xml" title="ThinkNotes" href="https://patrickleungwl.github.io/feed.xml"> <!-- rel prev and next --> <link rel="stylesheet" href="https://patrickleungwl.github.io/assets/css/main.css"> </head> <body> <main class="wrapper"> <header class="site-header"> <nav class="nav"> <div class="container"> <h1 class="logo"><a href="https://patrickleungwl.github.io/">Think<span>Notes</span></a></h1> <ul class="navbar"> <li><a href="https://patrickleungwl.github.io/tips">Tips</a></li> <li><a href="https://patrickleungwl.github.io/bookmarks">Bookmarks</a></li> <li><a href="https://patrickleungwl.github.io/about">About me</a></li> <li><a href="https://patrickleungwl.github.io/feed.xml" target="_blank">RSS</a></li> </ul> </div> </nav> </header> <article class="page container"> <header class="page-header"> <h1 class="page-title">Tips</h1> </header> <div class="page-content"> <p><a href="#vi">vi</a> . <a href="#git">git</a> . <a href="#cpp">cpp</a> . <a href="#python">python</a> . <a href="#lua">lua</a></p> <p>.</p> <hr /> <p><a name="vi"><a></a></a></p> <h3 id="vi">Vi</h3> <h4 id="finding-things">Finding things</h4> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f{c}         find the next instance of character 
-F{c}         find the previous instance of character
-/{pattern}   find the next instance of pattern
-?{pattern}   find the previous instance of pattern
-*            find the next instance of word under cursor
-n            after find, go to the next instance
-N            after find, go to the previous instance
+<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title> Tips | ThinkNotes </title> <meta name="description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta name="keywords" content="Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <!-- Social: Facebook / Open Graph --> <meta property="og:type" content="website"> <meta property="og:url" content="https://patrickleungwl.github.io/tips/"> <meta property="og:title" content=" Tips | ThinkNotes "> <meta property="og:image" content="https://patrickleungwl.github.io"> <meta property="og:description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta property="og:site_name" content="Patrick Leung"> <meta property="og:locale" content="en_US"> <!-- Social: Twitter --> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:site" content=""> <meta name="twitter:title" content=" Tips | ThinkNotes "> <meta name="twitter:description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta name="twitter:image:src" content="https://patrickleungwl.github.io"> <!-- Social: Google+ / Schema.org --> <meta itemprop="name" content=" Tips | ThinkNotes "> <meta itemprop="description" content=" Minimalist Jekyll theme for technical writing blog. "> <meta itemprop="image" content="https://patrickleungwl.github.io"> <!-- Canonical link tag --> <link rel="canonical" href="https://patrickleungwl.github.io/tips/"> <link rel="alternate" type="application/rss+xml" title="ThinkNotes" href="https://patrickleungwl.github.io/feed.xml"> <!-- rel prev and next --> <link rel="stylesheet" href="https://patrickleungwl.github.io/assets/css/main.css"> </head> <body> <main class="wrapper"> <header class="site-header"> <nav class="nav"> <div class="container"> <h1 class="logo"><a href="https://patrickleungwl.github.io/">Think<span>Notes</span></a></h1> <ul class="navbar"> <li><a href="https://patrickleungwl.github.io/tips">Tips</a></li> <li><a href="https://patrickleungwl.github.io/bookmarks">Bookmarks</a></li> <li><a href="https://patrickleungwl.github.io/about">About me</a></li> <li><a href="https://patrickleungwl.github.io/feed.xml" target="_blank">RSS</a></li> </ul> </div> </nav> </header> <article class="page container"> <header class="page-header"> <h1 class="page-title">Tips</h1> </header> <div class="page-content"> <p><a href="#vi">vi</a> . <a href="#git">git</a> . <a href="#cpp">cpp</a> . <a href="#python">python</a> . <a href="#lua">lua</a></p> <p>.</p> <hr /> <p><a name="vi"></a></p> <h3 id="vi">Vi</h3> <h4 id="finding-things">Finding things</h4> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f{c}             find the next instance of character 
+F{c}             find the previous instance of character
+/{pattern}       find the next instance of pattern
+?{pattern}       find the previous instance of pattern
+*                find the next instance of word under cursor
+n                after find, go to the next instance
+N                after find, go to the previous instance
 </code></pre></div></div> <h4 id="replacing-things">Replacing things</h4> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:s/old/new/g     replace old with new only on current line
 :n,m s/old/new/g replace old with new only on lines n to m
 :%s/old/new/g    replace old with new globally
@@ -33,7 +33,7 @@ dd               delete line
 </code></pre></div></div> <h4 id="macros">Macros</h4> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>q(r)             record a macro to register r
 @(r)             playback macro r
 n@(r)            playback macro r n number of times
-</code></pre></div></div> <hr /> <p><a name="git"><a></a></a></p> <h4 id="git">Git</h4> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global alias.tree 'log --graph --abbrev-commit --oneline' 
+</code></pre></div></div> <hr /> <p><a name="git"></a></p> <h4 id="git">Git</h4> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global alias.tree 'log --graph --abbrev-commit --oneline' 
 git log --all --decorate --oneline --graph
 git log branch1..branch2
 git show (hashid)
@@ -45,13 +45,16 @@ git unstage filename
 git config --global alias.difflast 'diff --cached HEAD^'
 git log -G"textToFind" --online
 git log -n
-</code></pre></div></div> <h5 id="git-merge">Git merge</h5> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Before
+</code></pre></div></div> <h5 id="git-merge">Git merge</h5> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Merge copies all feature branch changes to another branch.
+
+
+Before
 
     (master)v1--&gt;v2 
                   \ 
                    \(br)--&gt;b1--&gt;b2
 
-In master, git merge
+Git merge moves changes b1 and b2 to the master branch.
 
 After
     (master)v1--&gt;v2--&gt;b1--&gt;b2 
@@ -154,4 +157,46 @@ git commit -m "v3"
 git checkout br
 git rebase master
 
-</code></pre></div></div> <hr /> <p><a name="cpp"><a></a></a></p> <h3 id="c">C++</h3> <hr /> <p><a name="python"><a></a></a></p> <h3 id="python">Python</h3> <hr /> <p><a name="lua"><a></a></a></p> <h3 id="lua">Lua</h3> <hr /> </div> </article> <footer class="site-footer"> <div class="container"> <small class="block">&copy; 2020 Patrick Leung &middot; &lt;/&gt; Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/thinkspace">Thinkspace theme</a></small> </div> </footer> </main> <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-XXXXX-XX']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script> </body> </html>
+------------------------------------------------
+
+Before
+
+    (master)v1--&gt;v2--&gt;v3 
+                       \ 
+                        \(br)--&gt;b1--&gt;b2
+
+After
+
+    (master)v1--&gt;v2--&gt;v3--&gt;b1--&gt;b2 
+                       \ 
+                        \(br)--&gt;b1--&gt;b2
+
+In master branch, 
+
+git rebase br
+
+git tree shows
+
+* af3ee5e (HEAD -&gt; master, br) b2
+* 6112718 b1
+* 89dc959 v3
+* 11a44e7 v2
+* 067f3ca v1
+
+The upside is that there is less branches to show in the tree log.
+The downside is that this rewrites the history- so be super careful 
+with remote repositories shared with teammates. 
+
+</code></pre></div></div> <hr /> <p><a name="cpp"></a></p> <h3 id="c">C++</h3> <h4 id="rvalue-and-move-semantics">Rvalue and move semantics</h4> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kt">void</span> <span class="nf">printInt</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">i</span><span class="p">);</span>  <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"lvalue "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+<span class="kt">void</span> <span class="nf">printInt</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;&amp;</span> <span class="n">i</span><span class="p">);</span>  <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"rvalue "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>   <span class="c1">// a is a lvalue</span>
+<span class="kt">int</span><span class="o">&amp;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>  <span class="c1">// b is a lvalue reference</span>
+<span class="kt">int</span><span class="o">&amp;&amp;</span> <span class="n">c</span><span class="p">;</span>     <span class="c1">// c is a rvalue reference</span>
+
+<span class="c1">// can overload function given reference type- r or lvalue</span>
+<span class="n">printInt</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>        <span class="c1">// calls printInt(int&amp; i)</span>
+<span class="n">printInt</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>        <span class="c1">// calls printInt(int&amp;&amp; i), 6 is a temp rvalue</span>
+
+</code></pre></div></div> <hr /> <p><a name="python"></a></p> <h3 id="python">Python</h3> <hr /> <p><a name="lua"></a></p> <h3 id="lua">Lua</h3> <hr /> </div> </article> <footer class="site-footer"> <div class="container"> <small class="block">&copy; 2020 Patrick Leung &middot; &lt;/&gt; Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/thinkspace">Thinkspace theme</a></small> </div> </footer> </main> <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-XXXXX-XX']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script> </body> </html>
