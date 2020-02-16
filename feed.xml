@@ -3,11 +3,87 @@
   <channel>
     <title></title>
     <description>Minimalist Jekyll theme for technical writing blog.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Feb 2020 01:13:37 -0500</pubDate>
-    <lastBuildDate>Mon, 10 Feb 2020 01:13:37 -0500</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <link>https://patrickleungwl.github.io/</link>
+    <atom:link href="https://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 15 Feb 2020 13:31:12 -0500</pubDate>
+    <lastBuildDate>Sat, 15 Feb 2020 13:31:12 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>The Hard Thing About Hard Things</title>
+        <description>&lt;p&gt;Just read Ben Horowitz’s “The Hard Thing About Hard Things”. 
+Here are some take-aways that I find useful.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;why-its-imperative-to-tell-it-like-it-is&quot;&gt;Why It’s Imperative To Tell It Like It Is&lt;/h3&gt;
+
+&lt;p&gt;There are three key reasons why being transparent about your company’s 
+problems make sense:&lt;/p&gt;
+
+&lt;h4 id=&quot;trust&quot;&gt;Trust&lt;/h4&gt;
+
+&lt;p&gt;Without trust, communication breaks.  More specifically-&lt;/p&gt;
+
+&lt;p&gt;In any human interaction, the required amount of communication is inversely
+proportional to the level of trust.&lt;/p&gt;
+
+&lt;p&gt;Consider the following- If I trust you completely, then I require no 
+explanation or communication of your actions whatsoever, because I know
+that whatever you are doing is in my best interests.  On the other hand, 
+if I don’t trust you at all, then no amount of talking, explaining, or 
+reasoning will have any effect on me, because I do not trust that you are
+telling me the truth.&lt;/p&gt;
+
+&lt;p&gt;[Personal commentary- this reminds me of how the staff of a well-tuned 
+kitchen works.]&lt;/p&gt;
+
+&lt;h4 id=&quot;the-more-brains-working-on-the-hard-problems-the-better&quot;&gt;The more brains working on the hard problems, the better&lt;/h4&gt;
+
+&lt;p&gt;In order to build a great technology company, you have to hire lots of 
+incredibly smart people.  It’s a total waste to have lots of big brains
+but not let them work on your biggest problems.  A brain, no matter how 
+big, cannot solve a problem it doesn’t know about.  As the open source 
+community would explain it, “Given enough eyeballs, all bugs are shallow.”&lt;/p&gt;
+
+&lt;h4 id=&quot;a-good-culture-is-like-the-old-rip-routing-protocol--bad-news-travel-fast-good-news-travel-slow&quot;&gt;A good culture is like the old RIP routing protocol- Bad news travel fast; good news travel slow&lt;/h4&gt;
+
+&lt;p&gt;If you investigate companies that have failed, you will find that many employees
+knew about fatal issues long before those issues killed the company. 
+If the employees knew about the deadly problems, why didn’t they say something?
+(Personal commentary- think NASA or Boeing)  Too often the answer is that the
+company culture discouraged the spread of bad news, so the knowledge lay 
+dormant until it was too late to act.&lt;/p&gt;
+
+&lt;p&gt;A healthy company culture encourages people to share bad news.  A company that
+discusses its problems freely and openly can quickly solve them.  A company that
+covers up its problems frustrates everyone involved.  The resulting action item
+for CEOs- Build a culture that rewards, not punishes, people for getting problems
+into the open where they can be solved.&lt;/p&gt;
+
+&lt;p&gt;As a corollary, beware of management maxims that stop information from flowing
+freely in your company.  For example, consider the old management standard- 
+“Don’t bring me a problem without bringing me a solution.”  What if the employee
+cannot solve an important problem?  For example, what if an engineer identifies
+a serious flaw in the way the product is being marketed?  Do you really want him
+to bury that information?  Management truisms like these may be good for 
+employees to asipre to in the abstract, but they can also be the enemy of 
+free-flowing information- which may be critical for the health of the company.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thought&quot;&gt;Final Thought&lt;/h3&gt;
+
+&lt;p&gt;If you run a company&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
+        <link>https://patrickleungwl.github.io/2020/the-hard-things/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/the-hard-things/</guid>
+        
+        <category>books</category>
+        
+        
+        <category>books</category>
+        
+      </item>
     
       <item>
         <title>C++ explicit keyword</title>
@@ -43,8 +119,8 @@ best-&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 08 Feb 2020 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2020/cpp-explicit-keyword/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/cpp-explicit-keyword/</guid>
+        <link>https://patrickleungwl.github.io/2020/cpp-explicit-keyword/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/cpp-explicit-keyword/</guid>
         
         <category>cpp</category>
         
@@ -111,8 +187,8 @@ minnie 150
 
 </description>
         <pubDate>Fri, 07 Feb 2020 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2020/cpp-multimaps/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/cpp-multimaps/</guid>
+        <link>https://patrickleungwl.github.io/2020/cpp-multimaps/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/cpp-multimaps/</guid>
         
         <category>cpp</category>
         
@@ -197,13 +273,103 @@ m2 2-&amp;gt;world
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 06 Feb 2020 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2020/cpp-initialising-containers/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/cpp-initialising-containers/</guid>
+        <link>https://patrickleungwl.github.io/2020/cpp-initialising-containers/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/cpp-initialising-containers/</guid>
         
         <category>cpp</category>
         
         
         <category>cpp</category>
+        
+      </item>
+    
+      <item>
+        <title>Who Gets What And Why</title>
+        <description>&lt;h4 id=&quot;quick-notes&quot;&gt;Quick Notes&lt;/h4&gt;
+
+&lt;p&gt;Economics is about the efficient allocation of scare resources, and about making
+them less scarce.&lt;/p&gt;
+
+&lt;p&gt;One way financial markets provide thickness to ordinary traders is by giving
+certain professional traders the incentive to become “liquidity providers.”
+Members of this group don’t plan to hold a security and watch it appreciate; 
+rather, they move fast and act as market makers.  They always offer both a bid
+and an ask on the financial commodity for which they are making a market; that is,
+they simultaneously offer to buy and sell.  Liquidity providers make their 
+money by having a spread between those buy and sell offers, which they 
+continuously adjust as the market moves.  The narrower that spread, the greater
+the quantity they offer to buy or sell at that spread, the better service they
+are able to provide to whoever comes on the market to make a trade.&lt;/p&gt;
+
+&lt;p&gt;But when there are high-speed traders in the markets, LPs are forced to quote 
+bigger spreads or offer to trade a lower quantity to at least partially protect
+themselves against being ‘sniped’ by a trader using one of the new superfast 
+lines.  Such a trader might be able to buy from them at their old prices
+(now out of date, or ‘stale’) and then moments later sell back to them at the
+new higher prices.  The wider the spreads the LPs quote, the further prices
+have to jump before they can be exploited on both sides of the trade this way,
+and the more they pass on the cost of protecting themselvs to ordinary 
+investors.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 11 Jan 2020 00:00:00 -0500</pubDate>
+        <link>https://patrickleungwl.github.io/2020/who-gets-what/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/who-gets-what/</guid>
+        
+        <category>books</category>
+        
+        
+        <category>books</category>
+        
+      </item>
+    
+      <item>
+        <title>A Colossal Failure</title>
+        <description>&lt;h4 id=&quot;quick-notes&quot;&gt;Quick Notes&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;File system - data written to the file system when the virtual server
+restarts.  Use a shared file storage system such as AWS S3 instead.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sharing state across multiple servers- requires a distributed store like
+Memcached.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dependency management - requires language specific tools like 
+Bundler for Ruby or Ivy or Java&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dyno- a dyno is a standard unit of virtual server capability.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Logs- to see logs, do   heroku logs –tail&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;steps&quot;&gt;Steps&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;heroku login
+in folder container git repository
+heroku create (this creates an application in heroku to contain the git code
+it also sets the app to point to the git repo)
+git push heroku master (deploys code to virtual machine)
+
+
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 10 Jan 2020 00:00:00 -0500</pubDate>
+        <link>https://patrickleungwl.github.io/2020/heroku-howto/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/heroku-howto/</guid>
+        
+        <category>history</category>
+        
+        
+        <category>history</category>
         
       </item>
     
@@ -501,8 +667,8 @@ was known as the &quot;carry trade&quot; or the &quot;positive carry trade.&quot
 
 </description>
         <pubDate>Fri, 10 Jan 2020 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2020/colossal_failure/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/colossal_failure/</guid>
+        <link>https://patrickleungwl.github.io/2020/colossal_failure/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/colossal_failure/</guid>
         
         <category>history</category>
         
@@ -517,8 +683,8 @@ was known as the &quot;carry trade&quot; or the &quot;positive carry trade.&quot
 
 </description>
         <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2019/laws-of-investing/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/laws-of-investing/</guid>
+        <link>https://patrickleungwl.github.io/2019/laws-of-investing/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/laws-of-investing/</guid>
         
         <category>patterns</category>
         
@@ -775,8 +941,8 @@ for more details on free radicals and antioxidants.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 20 Jul 2019 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2019/all-about-dieting/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/all-about-dieting/</guid>
+        <link>https://patrickleungwl.github.io/2019/all-about-dieting/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/all-about-dieting/</guid>
         
         <category>nutrition</category>
         
@@ -866,468 +1032,10 @@ for more details on free radicals and antioxidants.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2019/how-to-use-slide-rules/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/how-to-use-slide-rules/</guid>
+        <link>https://patrickleungwl.github.io/2019/how-to-use-slide-rules/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/how-to-use-slide-rules/</guid>
         
         <category>retro</category>
-        
-        
-        <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>2019 New Ideas</title>
-        <description>&lt;p&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;books-currently-reading&quot;&gt;Books Currently Reading&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.danielletown.com/book/&quot;&gt;Invested&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://landing.google.com/sre/sre-book/toc/index.html&quot;&gt;Google SRE&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.penguinrandomhouse.com/books/566084/the-banished-immortal-by-ha-jin/9781524747411/&quot;&gt;The Banished Immortal&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;some-ideas-to-resolve-soon&quot;&gt;Some Ideas To Resolve Soon&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Poisson distribution&lt;/li&gt;
-  &lt;li&gt;What is PCA?&lt;/li&gt;
-  &lt;li&gt;What is irvega rho?&lt;/li&gt;
-  &lt;li&gt;Some notes on financial markets&lt;/li&gt;
-  &lt;li&gt;How to use TensorFlow?&lt;/li&gt;
-  &lt;li&gt;How to use pivottable.js?&lt;/li&gt;
-  &lt;li&gt;How to use metplotlib for charts?&lt;/li&gt;
-  &lt;li&gt;Backtest strategy to buy on n% dips?&lt;/li&gt;
-  &lt;li&gt;Build pages on individual tickers&lt;/li&gt;
-  &lt;li&gt;How to host python script on AWS?&lt;/li&gt;
-  &lt;li&gt;Why use NumPy?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;new-investment-ideas&quot;&gt;New Investment Ideas&lt;/h2&gt;
-&lt;p&gt;A new proposed idea is to buy on n% dips. Would this work? Or 
-buy an index instead of individual stocks on such dips.&lt;/p&gt;
-
-&lt;h2 id=&quot;pca&quot;&gt;PCA&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Principal_component_analysis&quot;&gt;PCA - principal component analysis&lt;/a&gt;
-sounds very much like fourier 
-transform. It is a statistical proceudre that reduces 100 variables 
-to a few important- orthogonal (meaning unrelated) variables- 
-principal components- that explains 95% of the movements of the 
-original wave.&lt;/p&gt;
-
-&lt;p&gt;PCA is used primarily for making predictive models.&lt;/p&gt;
-
-&lt;h2 id=&quot;rho&quot;&gt;Rho&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Greeks_(finance)#Rho&quot;&gt;Rho&lt;/a&gt;
-is the sensitivity of the option value to changes in the risk free 
-interest rate.&lt;/p&gt;
-
-&lt;h2 id=&quot;pivottablejs&quot;&gt;PivotTable.js&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://pivottable.js.org/examples/rcsvs.html&quot;&gt;PivotTable.js&lt;/a&gt;
-looks pretty powerful.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-use-numpy&quot;&gt;Why use NumPy?&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;ndarray- a fast and space efficient multi-dimensional array 
-providing vectorized arithmetic operations and broadcasting capabilities&lt;/li&gt;
-  &lt;li&gt;functions for reading and writing to disk&lt;/li&gt;
-  &lt;li&gt;tools for integrating with C, C++ and Fortran&lt;/li&gt;
-  &lt;li&gt;math operations with no loops&lt;/li&gt;
-  &lt;li&gt;linear algebra and fourier transform functions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;But what functions does NumPy provide and what from Pandas? I believe 
-data analysis primarily use math functions from Pandas and use NumPy 
-primarily for its fast ndarray.&lt;/p&gt;
-
-&lt;p&gt;Pandas runs on top of NumPy- so Pandas depends on NumPy. Pandas 
-provides datatable-like functions- as well as stats, groupbys, merge 
-and join methods.&lt;/p&gt;
-
-&lt;p&gt;Pandas was built starting in 2008 by Wes McKinney at AQR.&lt;/p&gt;
-
-&lt;h2 id=&quot;matplotlib-for-quick-charts&quot;&gt;Matplotlib for Quick Charts&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://nbviewer.jupyter.org/github/patrickleungwl/code_lab/blob/master/python_lab/build_charts.ipynb&quot;&gt;Quick charts demo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;poisson-distribution&quot;&gt;Poisson Distribution&lt;/h2&gt;
-&lt;p&gt;Poisson Distribution is for modelling the number of times an event 
-occurs in an interval of time or space- for example- the number of 
-patients arriving in an emergency room between 10 and 11pm.&lt;/p&gt;
-
-&lt;p&gt;The following assumptions must be true in order to use Poisson 
-Distribution&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;k is the number of times an event occurs in an interval- like 0, 1, 2 …&lt;/li&gt;
-  &lt;li&gt;The events are independent.&lt;/li&gt;
-  &lt;li&gt;The rate at which events occur is constant.&lt;/li&gt;
-  &lt;li&gt;Two events cannot occur at exactly the same time.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2019/2019-new-ideas/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/2019-new-ideas/</guid>
-        
-        <category>ideas</category>
-        
-        
-        <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Python's Data Science Toolkit</title>
-        <description>&lt;p&gt;Essentially, there are five tools in Python’s data science toolkit.  These are
-NumPy, SciPy, Pandas, MatplotLib, and JupyterLib.  I’ll jot down the essential 
-notes on each of these toolkits.&lt;/p&gt;
-
-&lt;h2 id=&quot;numpy&quot;&gt;NumPy&lt;/h2&gt;
-
-&lt;h3 id=&quot;why-use-numpy-arrays&quot;&gt;Why use NumPy arrays?&lt;/h3&gt;
-
-&lt;p&gt;NumPy’s main benefit is its array object called ndarray.  Ndarray objects 
-wraps around multi-dimensional data- and allows for&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;many creational patterns- from other lists, from csvs,&lt;/li&gt;
-  &lt;li&gt;fast matrix operations without for-each loops&lt;/li&gt;
-  &lt;li&gt;fast data element access as well as data splicing per column or row&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;why-are-numpy-arrays-fast&quot;&gt;Why are NumPy arrays fast?&lt;/h3&gt;
-
-&lt;p&gt;NumPy arrays are typed arrays of a fixed size- wheras Python lists are 
-variable data structures of varying types.  NumPy arrays’ set type allows it to 
-preallocate continuous blocks of memory and allow optimised C API to make array 
-operations extremely quick.&lt;/p&gt;
-
-&lt;h3 id=&quot;creation-patterns&quot;&gt;Creation patterns&lt;/h3&gt;
-
-&lt;p&gt;There are many ways to create a ndarray.  Here are some examples:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Method&lt;/th&gt;
-      &lt;th&gt;Example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;array&lt;/td&gt;
-      &lt;td&gt;np.array([1,2,3]) &lt;br /&gt;np.array([[1,2],[3,4]])&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;zeros&lt;/td&gt;
-      &lt;td&gt;np.zeros(5) &lt;br /&gt;np.zeroes((3,2))&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ones&lt;/td&gt;
-      &lt;td&gt;np.ones(5) &lt;br /&gt;np.ones((3,2))&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;genfromtxt&lt;/td&gt;
-      &lt;td&gt;np.genfromtxt( filename, delimiter, skip_header)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;datatypes-in-numpy&quot;&gt;Datatypes in NumPy&lt;/h3&gt;
-
-&lt;p&gt;DataTypes range from int8..16, 32, to int64, uint8…64, float16..float64, 
-complex64 to complex128. Depending on OS, int defaults to int32 or int64. Same for other types.&lt;/p&gt;
-
-&lt;p&gt;Examples:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;i = np.int8(8)
-i
-i.nbytes
---
-8
-1
-
-
-i = np.int8(231238)
-i
-i.nbytes
---
-70
-1
-
-i = np.int64(231238)
-i
-i.nbytes
---
-231238
-8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;some-code-examples-&quot;&gt;Some code examples-&lt;/h3&gt;
-
-&lt;p&gt;Creating ndarray from specific values-&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
-
-a = np.array([5,6,7,8])
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Creating ndarray from csv-&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;temperatures = np.genfromtxt(&quot;temperatures.csv&quot;, delimiter=&quot;;&quot;, skip_header=1)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;operations&quot;&gt;Operations&lt;/h3&gt;
-
-&lt;p&gt;NumPy 2D arrays makes holding all data into memory and running operations 
-on them extremely easy.  With matrix operations, there is no need to write
-for-each loops.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
-
-a = np.array([5,6,7,8])
-print(a * 3)
---
-[15 18 21 24]
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;slicing-arrays&quot;&gt;Slicing arrays&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = np.random.rand(8, 3)
-
-array([[ 0.43843581,  0.21627972,  0.3815473 ],
-       [ 0.58425937,  0.00771804,  0.18703358],
-       [ 0.07884072,  0.76229593,  0.64856938],
-       [ 0.31513721,  0.56262377,  0.15340494]])
-
-Get up-to-first-two-rows, second column
-a[:2,1]
-array([ 0.21627972,  0.00771804])
-
-Get all cells from last row
-a[-1]
-array([ 0.31513721,  0.56262377,  0.15340494])
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;numpy-methods&quot;&gt;NumPy methods&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sum()&lt;/li&gt;
-  &lt;li&gt;mean()&lt;/li&gt;
-  &lt;li&gt;std()&lt;/li&gt;
-  &lt;li&gt;min()&lt;/li&gt;
-  &lt;li&gt;max()&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html&quot;&gt;Full list of methods here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;scipy&quot;&gt;SciPy&lt;/h2&gt;
-
-&lt;p&gt;SciPy contains a list of modules that contains methods in the math, physics
-and scientific domains.&lt;br /&gt;
-&lt;a href=&quot;http://scipy.github.io/devdocs/genindex.html&quot;&gt;The list of functions is here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;pandas&quot;&gt;Pandas&lt;/h2&gt;
-&lt;h2 id=&quot;matplotlib&quot;&gt;Matplotlib&lt;/h2&gt;
-&lt;h2 id=&quot;jypyterlab&quot;&gt;JypyterLab&lt;/h2&gt;
-
-</description>
-        <pubDate>Sun, 25 Feb 2018 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/2018/python-tools/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/python-tools/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Decorator Pattern</title>
-        <description>&lt;p&gt;The Decorator pattern- is used to dynamically add new functionality to 
-existing components- without having to change the existing components.&lt;/p&gt;
-
-&lt;h2 id=&quot;ishippingmethodcs&quot;&gt;IShippingMethod.cs&lt;/h2&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IShippingMethod&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;groundshippingcs&quot;&gt;GroundShipping.cs&lt;/h2&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GroundShipping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;       
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;airshippingcs&quot;&gt;AirShipping.cs&lt;/h2&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AirShipping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;decoratorshippingcs&quot;&gt;DecoratorShipping.cs&lt;/h2&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DecoratorShipping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_shippingMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;DecoratorShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shippingMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;_shippingMethod&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shippingMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_shippingMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;receiptdecoratorcs&quot;&gt;ReceiptDecorator.cs&lt;/h2&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ReceiptDecorator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecoratorShipping&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shippingMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shippingMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;signaturerequireddecoratorcs&quot;&gt;SignatureRequiredDecorator.cs&lt;/h2&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SignatureRequiredDecorator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecoratorShipping&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IShippingMethod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shippingMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shippingMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;decoratortestercs&quot;&gt;DecoratorTester.cs&lt;/h2&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Microsoft.VisualStudio.TestTools.UnitTesting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Decorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;DecoratorTests&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DecoratorTester&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShippingWithNoOptionsShouldCostTenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShippingWithReceiptOptionShouldCostElevenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;11.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GrondShippingWithSignatureOptionShouldCostTwelveDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;12.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GrondShippingWithSignatureOptionAndReceiptShouldCostThirteenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GroundShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groundShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureAndReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SignatureRequiredDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;13.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;groundShipmentWithSignatureAndReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShippingWithNoOptionsShouldCostFiftyDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShippingWithReceiptOptionShouldCostElevenDollars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AirShipping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipmentWithReceiptOption&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ReceiptDecorator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airShipment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AreEqual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;51.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airShipmentWithReceiptOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/decorator-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/decorator-pattern/</guid>
-        
-        <category>patterns</category>
         
         
         <category>tech</category>
