@@ -5,9 +5,306 @@
     <description>Minimalist Jekyll theme for technical writing blog.</description>
     <link>https://patrickleungwl.github.io/</link>
     <atom:link href="https://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Feb 2020 13:31:12 -0500</pubDate>
-    <lastBuildDate>Sat, 15 Feb 2020 13:31:12 -0500</lastBuildDate>
+    <pubDate>Sat, 25 Apr 2020 13:31:59 -0400</pubDate>
+    <lastBuildDate>Sat, 25 Apr 2020 13:31:59 -0400</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>What's my Motivation?</title>
+        <description>&lt;p&gt;When you need a swift kick in the butt, just listen-&lt;/p&gt;
+
+&lt;iframe width=&quot;700&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/tbnzAVRZ9Xc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some key take-aways&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nelson Mandela said, “There is no passion to be found playing small and 
+settling for a life that’s less than the one you’re capable of living…”&lt;/li&gt;
+  &lt;li&gt;If I’m going to fall, I don’t want to fall back on anything.  I want
+to fall FORWARD.&lt;/li&gt;
+  &lt;li&gt;…So do what you feel passionate about.  Take chances.  Don’t be afraid
+to fail. … Don’t be afraid to think outside the box.  Don’t be afraid
+to FAIL BIG.&lt;/li&gt;
+  &lt;li&gt;Reggie Jackson struck out 2600 times in his career, the most in the 
+history of baseball.  But you don’t hear about the strikeouts.  People 
+remember the homeruns.&lt;/li&gt;
+  &lt;li&gt;Every failed experiment is one step closer to success.&lt;/li&gt;
+  &lt;li&gt;You WILL FAIL at some point in your life.  Accept it.  You will lose. 
+You will embarrass yourself.  You will suck at something.  There is 
+no doubt about it.&lt;/li&gt;
+  &lt;li&gt;If you don’t fail, you’re not even trying.&lt;/li&gt;
+  &lt;li&gt;To get something you never had, you have to do something you never did.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;For a more thorough &lt;em&gt;ass-kicking&lt;/em&gt;, listen to this one-&lt;/p&gt;
+
+&lt;iframe width=&quot;700&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/TBuIGBCF9jc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+</description>
+        <pubDate>Sat, 25 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://patrickleungwl.github.io/2020/motivation/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/motivation/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>motivation</category>
+        
+      </item>
+    
+      <item>
+        <title>Ideas From Many Fields</title>
+        <description>&lt;p&gt;Depressive Realism: Depressed people have a more accurate view of the world because they’re more realistic about how risky and fragile life is. The opposite of “blissfully unaware.”&lt;/p&gt;
+
+&lt;p&gt;Skill Compensation: People who are exceptionally good at one thing tend to be exceptionally poor at another.&lt;/p&gt;
+
+&lt;p&gt;Curse of Knowledge: The inability to communicate your ideas because you wrongly assume others have the necessary background to understand what you’re talking about.&lt;/p&gt;
+
+&lt;p&gt;Base Rates: The success rate of everyone who’s done what you’re about to try.&lt;/p&gt;
+
+&lt;p&gt;Base-Rate Neglect: Assuming the success rate of everyone who’s done what you’re about to try doesn’t apply to you, caused by overestimating the extent to which you do things differently than everyone else.&lt;/p&gt;
+
+&lt;p&gt;Compassion Fade: People have more compassion for small groups of victims than larger groups, because the smaller the group the easier it is to identify individual victims.&lt;/p&gt;
+
+&lt;p&gt;System Justification Theory: Inefficient systems will be defended and maintained if they serve the needs of people who benefit from them – individual incentives can sustain systemic stupidity.&lt;/p&gt;
+
+&lt;p&gt;Three Men Make a Tiger: People will believe anything if enough people tell them it’s true. It comes from a Chinese proverb that if one person tells you there’s a tiger roaming around your neighborhood, you can assume they’re lying. If two people tell you, you begin to wonder. If three say it’s true, you’re convinced there’s a tiger in your neighborhood and you panic.&lt;/p&gt;
+
+&lt;p&gt;Buridan’s Ass: A thirsty donkey is placed exactly midway between two pails of water. It dies because it can’t make a rational decision about which one to choose. A form of decision paralysis.&lt;/p&gt;
+
+&lt;p&gt;Pareto Principle: The majority of outcomes are driven by a minority of events.&lt;/p&gt;
+
+&lt;p&gt;Sturgeon’s Law: “90% of everything is crap.” The obvious inverse of the Pareto Principle, but hard to accept in practice.&lt;/p&gt;
+
+&lt;p&gt;Cumulative advantage: Social status snowballs in either direction because people like associating with successful people, so doors are opened for them, and avoid associating with unsuccessful people, for whom doors are closed.&lt;/p&gt;
+
+&lt;p&gt;Impostor Syndrome: Fear of being exposed as less talented than people think you are, often because talent is owed to cumulative advantage rather than actual effort or skill.&lt;/p&gt;
+
+&lt;p&gt;Anscombe’s Quartet: Four sets of numbers that look identical on paper (mean average, variance, correlation, etc.) but look completely different when graphed. Describes a situation where exact calculations don’t offer a good representation of how the world works.&lt;/p&gt;
+
+&lt;p&gt;Ringelmann Effect: Members of a group become lazier as the size of their group increases. Based on the assumption that “someone else is probably taking care of that.”&lt;/p&gt;
+
+&lt;p&gt;Semmelweis Reflex: Automatically rejecting evidence that contradicts your tribe’s established norms. Named after a Hungarian doctor who discovered that patients treated by doctors who wash their hands suffer fewer infections, but struggled to convince other doctors that his finding was true.&lt;/p&gt;
+
+&lt;p&gt;False-Consensus Effect: Overestimating how widely held your own beliefs are, caused by the difficulty of imagining the experiences of other people.&lt;/p&gt;
+
+&lt;p&gt;Boomerang Effect: Trying to persuade someone to do one thing can make them more likely to do the opposite, because the act of persuasion can feel like someone stealing your freedom and doing the opposite makes you feel like you’re taking your freedom back.&lt;/p&gt;
+
+&lt;p&gt;Chronological Snobbery: “The assumption that whatever has gone out of date is on that account discredited. You must find why it went out of date. Was it ever refuted (and if so by whom, where, and how conclusively) or did it merely die away as fashions do? If the latter, this tells us nothing about its truth or falsehood. From seeing this, one passes to the realization that our own age is also ‘a period,’ and certainly has, like all periods, its own characteristic illusions.” – C.S. Lewis&lt;/p&gt;
+
+&lt;p&gt;Planck’s Principle: “A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it.”&lt;/p&gt;
+
+&lt;p&gt;McNamara Fallacy: A belief that rational decisions can be made with quantitative measures alone, when in fact the things you can’t measure are often the most consequential. Named after Defense Secretary McNamara, who tried to quantify every aspect of the Vietnam War.&lt;/p&gt;
+
+&lt;p&gt;Courtesy Bias: Giving opinions that are likely to offend people the least, rather than what you actually believe.&lt;/p&gt;
+
+&lt;p&gt;Berkson’s Paradox: Strong correlations can fall apart when combined with a larger population. Among hospital patients, motorcycle crash victims wearing helmets are more likely to be seriously injured than those not wearing helmets. But that’s because most crash victims saved by helmets did not need to become hospital patients, and those without helmets are more likely to die before becoming a hospital patient.&lt;/p&gt;
+
+&lt;p&gt;Group Attribution Error: Incorrectly assuming that the views of a group member reflect those of the whole group.&lt;/p&gt;
+
+&lt;p&gt;Baader-Meinhof Phenomenon: Noticing an idea everywhere you look as soon as it’s brought to your attention in a way that makes you overestimate its prevalence.&lt;/p&gt;
+
+&lt;p&gt;Ludic Fallacy: Falsely associated simulations with real life. Nassim Taleb: “Organized competitive fighting trains the athlete to focus on the game and, in order not to dissipate his concentration, to ignore the possibility of what is not specifically allowed by the rules, such as kicks to the groin, a surprise knife, et cetera. So those who win the gold medal might be precisely those who will be most vulnerable in real life.”&lt;/p&gt;
+
+&lt;p&gt;Normalcy Bias: Underestimating the odds of disaster because it’s comforting to assume things will keep functioning the way they’ve always functioned.&lt;/p&gt;
+
+&lt;p&gt;Actor-Observer Asymmetry: We judge others based solely on their actions, but when judging ourselves we have an internal dialogue that justifies our mistakes and bad decisions.&lt;/p&gt;
+
+&lt;p&gt;The 90-9-1 Rule: In social media networks, 90% of users just read content, 9% of users contribute a little content, and 1% of users contribute almost all the content. Gives a false impression of what ideas are popular or “average.”&lt;/p&gt;
+
+&lt;p&gt;Texas Sharpshooter Fallacy: Goals set retroactively after an activity, like shooting a blank wall and then drawing a bullseye around the holes you left, or picking a benchmark after you’ve invested.&lt;/p&gt;
+
+&lt;p&gt;Fredkin’s Paradox: Confronted with two equally good options, you struggle to decide, even though your decision doesn’t matter because both options are equally good. The more equal the options, the harder the decision.&lt;/p&gt;
+
+&lt;p&gt;Poisoning the Well: Presenting irrelevant adverse information about someone in a way that makes everything else that person says seem untrustworthy. “Before you hear my opponent’s healthcare plan, let me remind you that he got a DUI in college.”&lt;/p&gt;
+
+&lt;p&gt;Golem Effect: Performance declines when supervisors/teachers have low expectations of your abilities.&lt;/p&gt;
+
+&lt;p&gt;Appeal to Consequences: Arguing that a hypothesis must be true (or false) because the outcome is something you like (or dislike). The classic example is arguing that climate change isn’t real because combating climate change will hurt the economy.&lt;/p&gt;
+
+&lt;p&gt;Plain Folks Fallacy: People of authority acquiring trust by presenting themselves as Average Joe’s, when in fact their authority proves they are different from everyone else.&lt;/p&gt;
+
+&lt;p&gt;Behavioral Inevitability: “History never repeats itself; man always does.” – Voltaire&lt;/p&gt;
+
+&lt;p&gt;Apophenia: A tendency to perceive correlations between unrelated things, because your mind can only deal with tiny sample sizes and assuming things are correlated creates easy/comforting explanations of how the world works.&lt;/p&gt;
+
+&lt;p&gt;Self-Handicapping: Avoiding effort because you don’t want to deal with the emotional pain of that effort failing.&lt;/p&gt;
+
+&lt;p&gt;Hanlon’s Razor: “Never attribute to malice that which can be adequately explained by stupidity.”&lt;/p&gt;
+
+&lt;p&gt;False Uniqueness Effect: Assuming your skills are unique when they’re not. Comes from conflating “I’m good at this” with “Others are bad at this.”&lt;/p&gt;
+
+&lt;p&gt;Hard-Easy Effect: Hard tasks promote overconfidence because the rewards are high and fun to dream about; easy tasks promote underconfidence because they’re boring and easy to put off.&lt;/p&gt;
+
+&lt;p&gt;Neglect of Probability: Arguing that Nate Silver was wrong when he said Hillary Clinton has a 70% chance of winning, and using Donald Trump’s victory as your proof. Good predictions are based on probabilities, but the assessment of predictions are always binary, right or wrong.&lt;/p&gt;
+
+&lt;p&gt;Cobra Effect: Attempting to solve a problem makes that problem worse. Comes from an Indian story about a city infested with snakes offering a bounty for every dead cobra, which caused entrepreneurs to start breeding cobras for slaughter.&lt;/p&gt;
+
+&lt;p&gt;Braess’s Paradox: Adding more roads can make traffic worse because new shortcuts become popular and overcrowded.&lt;/p&gt;
+
+&lt;p&gt;Non-Ergodic: When group probabilities don’t apply to singular events. If 100 people play Russian Roulette once, the odds of dying might be, say, 10%. But if one person plays Russian Roulette 100 times, the odds are dying are practically 100%.&lt;/p&gt;
+
+&lt;p&gt;Pollyanna Principle: It’s easier to remember happy memories than bad ones.&lt;/p&gt;
+
+&lt;p&gt;Declinism: Perpetually viewing society as in decline, because you’re afflicted by the Pollyanna Principle and you forget how much things sucked in the past.&lt;/p&gt;
+
+&lt;p&gt;Empathy Gap: Underestimating how you’ll behave when you’re “hot” (angry/aroused/rushed), caused by the inability to accurately foresee how your body’s physical response to situations (dopamine, adrenaline, etc.) will influence decision-making.&lt;/p&gt;
+
+&lt;p&gt;Abilene Paradox: A group decides to do something that no one in the group wants to do because everyone mistakenly assumes they’re the only ones who object to the idea and they don’t want to rock the boat by speaking up.&lt;/p&gt;
+
+&lt;p&gt;Collective Narcissism: Exaggerating the importance and influence of your social group (country, industry, company, department, etc.).&lt;/p&gt;
+
+&lt;p&gt;Moral Luck: Praising someone for a good deed they didn’t have full control over. “Avoid calling heroes those who had no other choice.” – Taleb.&lt;/p&gt;
+
+&lt;p&gt;Feedback Loops: Falling stock prices scare people, which cause them to sell, which makes prices fall, which scares more people, which causes more people to sell, and so on. Works both ways.&lt;/p&gt;
+
+&lt;p&gt;Hawthorne Effect: Being watched/studied changes how people behave, making it difficult to conduct social studies that accurately reflect the real world.&lt;/p&gt;
+
+&lt;p&gt;Perfect Solution Fallacy: Comparing reality with an idealized alternative. Prevalent in any field governed by uncertainty.&lt;/p&gt;
+
+&lt;p&gt;Weasel Words: Phrases that appear to have meaning but convey nothing tangible. “Growth was solid last quarter,” or “Many people believe.”&lt;/p&gt;
+
+&lt;p&gt;Hormesis: Something that hurts you in a high dose can be good for you in small doses. (Weight on your bones, drinking red wine, etc.)&lt;/p&gt;
+
+&lt;p&gt;Backfiring Effect: A supercharged version of confirmation bias where being presented with evidence that goes against your beliefs makes you double down on your initial beliefs because you feel you’re being attacked.&lt;/p&gt;
+
+&lt;p&gt;Reflexivity: When cause and effect are the same. People think Tesla will sell a lot of cars, so Tesla stock goes up, which lets Tesla raise a bunch of new capital, which helps Tesla sell a lot of cars.&lt;/p&gt;
+
+&lt;p&gt;Second Half of the Chessboard: Put one grain of rice on the first chessboard square, two on the next, four on the next, then eight, then sixteen, etc, doubling the amount of rice on each square. When you’ve covered half the chessboard’s squares you’re dealing with an amount of rice that can fit in your lap; in the second half you quickly get to a pile that will consume an entire city. That’s how compounding works: slowly, then ferociously.&lt;/p&gt;
+
+&lt;p&gt;Peter Principle: Good workers will continue to be promoted until they end up in a role they’re bad at.&lt;/p&gt;
+
+&lt;p&gt;Friendship Paradox: On average, people have fewer friends than their friends have. Occurs because people with an abnormally high number of friends are more likely to be one of your friends. It’s a fundamental part of social network dynamics and makes most people feel less popular than they are.&lt;/p&gt;
+
+&lt;p&gt;Hedonic Treadmill: Expectations rise with results, so nothing feels as good as you’d imagine for as long as you’d expect.&lt;/p&gt;
+
+&lt;p&gt;Positive Illusions: Excessively rosy views about the decisions you’ve made to maintain self-esteem in a world where everyone makes bad decisions all the time.&lt;/p&gt;
+
+&lt;p&gt;Ironic Process Theory: Going out of your way to suppress thoughts makes those thoughts more prominent in your mind.&lt;/p&gt;
+
+&lt;p&gt;Clustering Illusions: Falsely assuming that the inevitable bunching of random results in a large sample indicates a trend.&lt;/p&gt;
+
+&lt;p&gt;Foundational Species: A single thing that plays an outsized role in supporting an ecosystem, whose loss would pull down many others with it. In nature: kelp, algae, and coral. In business: The Federal Reserve and Amazon.&lt;/p&gt;
+
+&lt;p&gt;Bizarreness Effect: Crazy things are easier to remember than common things, providing a distorted sense of “normal.”&lt;/p&gt;
+
+&lt;p&gt;Nonlinearity: Outputs aren’t always proportional to inputs, so the world is a barrage of massive wins and horrible losses that surprise people.&lt;/p&gt;
+
+&lt;p&gt;Moderating Relationship: The correlation between two variables depends on a third, seemingly unrelated variable. The quality of a marriage may be dependent on a spouse’s work project that’s causing stress.&lt;/p&gt;
+
+&lt;p&gt;Denomination Effect: One hundred $1 bills feels like less money than one $100 bill. Also explains stock splits – buying 10 shares for $10 each feels cheaper than one share for $100.&lt;/p&gt;
+
+&lt;p&gt;Woozle Effect: “A reliable way to make people believe in falsehoods is frequent repetition, because familiarity is not easily distinguished from truth.” - Daniel Kahneman.&lt;/p&gt;
+
+&lt;p&gt;Google Scholar Effect: Scientific research depends on citing other research, and the research that gets cited the most is whatever shows up in the top results of Google Scholar searches, regardless of its contribution to the field.&lt;/p&gt;
+
+&lt;p&gt;Inversion: Avoiding problems can be more important than scoring wins.&lt;/p&gt;
+
+&lt;p&gt;Gambler’s Ruin: Has many meanings, the most important of which is that playing a negative-probability game persistently enough guarantees going broke.&lt;/p&gt;
+
+&lt;p&gt;Principle of Least Effort: When seeking information, effort declines as soon as the minimum acceptable result is reached.&lt;/p&gt;
+
+&lt;p&gt;Dunning-Kruger Effect: Knowing the limits of your intelligence requires a certain level of intelligence, so some people are too stupid to know how stupid they are.&lt;/p&gt;
+
+&lt;p&gt;Knightian Uncertainty: Risk that can’t be measured; admitting that you don’t know what you don’t know.&lt;/p&gt;
+
+&lt;p&gt;Aumann’s Agreement Theorem: If you understand your opponent’s beliefs you cannot agree to disagree. If you agree to disagree it’s because one side doesn’t understand the other side’s view.&lt;/p&gt;
+
+&lt;p&gt;Focusing Effect: Overemphasizing factors that seem important but exist as part of a complex system. People from the Midwest assume Californians are happier because the weather is better, but they’re not because Californians also deal with traffic, bad bosses, unhappy marriages, etc, which more than offset the happiness boost from sunny skies.&lt;/p&gt;
+
+&lt;p&gt;The Middle Ground Fallacy: Falsely assuming that splitting the difference between two polar opposite views is a healthy compromise. If one person says vaccines cause autism and another person says they don’t, it’s not right to compromise and say vaccines sometimes cause autism.&lt;/p&gt;
+
+&lt;p&gt;Rebound Effect: New symptoms, or supercharged old symptoms, emerge when medicine or other protections are withdrawn.&lt;/p&gt;
+
+&lt;p&gt;Ostrich Effect: Avoiding negative information that might challenge views that you desperately want to be right.&lt;/p&gt;
+
+&lt;p&gt;Founder’s Syndrome: When a CEO is so emotionally invested in a company that they can’t effectively delegate decisions.&lt;/p&gt;
+
+&lt;p&gt;In-Group Favoritism: Giving preference to people from your social group regardless of their objective qualifications.&lt;/p&gt;
+
+&lt;p&gt;Bounded Rationality: People can’t be fully rational because your brain is a hormone machine, not an Excel spreadsheet.&lt;/p&gt;
+
+&lt;p&gt;Luxury Paradox: The more expensive something is the less likely you are to use it, so the relationship between price and utility is an inverted U. Ferraris sit in garages; Hondas get driven.&lt;/p&gt;
+
+&lt;p&gt;Meat Paradox: Dogs are family, pigs are food. Some animals classified as food are wrongly perceived to have lower intelligence than those classified as pets. An example of morality depending on utility.&lt;/p&gt;
+
+&lt;p&gt;Fluency Heuristic: Ideas that can be explained simply are more likely to be believed than those that are complex, even if the simple-sounding ideas are nonsense. It occurs because ideas that are easy to grasp are hard to distinguish from ideas you’re familiar with.&lt;/p&gt;
+
+&lt;p&gt;Historical Wisdom: “The dead outnumber the living 14 to 1, and we ignore the accumulated experience of such a huge majority of mankind at our peril.” – Niall Ferguson&lt;/p&gt;
+
+&lt;p&gt;Fact-Check Scarcity Principle: This article is called 100 Little Ideas but there are fewer than 100 ideas. 99% of readers won’t notice because they’re not checking, and most of those who notice won’t say anything. Don’t believe everything you read.&lt;/p&gt;
+
+&lt;p&gt;Emotional Contagion: One person’s emotions trigger the same emotions in other people, because evolution has selected for empathizing with those in your social group whose actions you rely on.&lt;/p&gt;
+
+&lt;p&gt;Tribal Affiliation: Beliefs can be swayed by identity and a desire to fit in over rational analysis. There is little correlation between climate change denial and scientific literacy. But there is a strong correlation between climate change denial and political affiliation.&lt;/p&gt;
+
+&lt;p&gt;Emotional Competence: The ability to recognize others’ emotions and respond to them productively. Harder and rarer than it sounds.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 01 Mar 2020 00:00:00 -0500</pubDate>
+        <link>https://patrickleungwl.github.io/2020/many-ideas/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/many-ideas/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Heroku Notes</title>
+        <description>&lt;h4 id=&quot;quick-notes&quot;&gt;Quick Notes&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;File system - data written to the file system when the virtual server
+restarts.  Use a shared file storage system such as AWS S3 instead.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sharing state across multiple servers- requires a distributed store like
+Memcached.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dependency management - requires language specific tools like 
+Bundler for Ruby or Ivy or Java&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dyno- a dyno is a standard unit of virtual server capability.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Logs- to see logs, do   heroku logs –tail&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;steps&quot;&gt;Steps&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;heroku login
+in folder container git repository
+heroku create (this creates an application in heroku to contain the git code
+it also sets the app to point to the git repo)
+git push heroku master (deploys code to virtual machine)
+
+
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
+        <link>https://patrickleungwl.github.io/2020/heroku-howto/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/heroku-howto/</guid>
+        
+        <category>history</category>
+        
+        
+        <category>history</category>
+        
+      </item>
     
       <item>
         <title>The Hard Thing About Hard Things</title>
@@ -68,10 +365,6 @@ a serious flaw in the way the product is being marketed?  Do you really want him
 to bury that information?  Management truisms like these may be good for 
 employees to asipre to in the abstract, but they can also be the enemy of 
 free-flowing information- which may be critical for the health of the company.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thought&quot;&gt;Final Thought&lt;/h3&gt;
-
-&lt;p&gt;If you run a company&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
@@ -320,56 +613,6 @@ investors.&lt;/p&gt;
         
         
         <category>books</category>
-        
-      </item>
-    
-      <item>
-        <title>A Colossal Failure</title>
-        <description>&lt;h4 id=&quot;quick-notes&quot;&gt;Quick Notes&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;File system - data written to the file system when the virtual server
-restarts.  Use a shared file storage system such as AWS S3 instead.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sharing state across multiple servers- requires a distributed store like
-Memcached.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Dependency management - requires language specific tools like 
-Bundler for Ruby or Ivy or Java&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Dyno- a dyno is a standard unit of virtual server capability.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Logs- to see logs, do   heroku logs –tail&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;steps&quot;&gt;Steps&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;heroku login
-in folder container git repository
-heroku create (this creates an application in heroku to contain the git code
-it also sets the app to point to the git repo)
-git push heroku master (deploys code to virtual machine)
-
-
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Fri, 10 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/heroku-howto/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/heroku-howto/</guid>
-        
-        <category>history</category>
-        
-        
-        <category>history</category>
         
       </item>
     
@@ -690,355 +933,6 @@ was known as the &quot;carry trade&quot; or the &quot;positive carry trade.&quot
         
         
         <category>investing</category>
-        
-      </item>
-    
-      <item>
-        <title>Food smarts</title>
-        <description>&lt;h2 id=&quot;recommendations-from-dr-valter-longo&quot;&gt;Recommendations from Dr Valter Longo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Plenty of vegetables and legumes and a generous splash of olive oil&lt;/li&gt;
-  &lt;li&gt;Key to longevity is to slow down the growth hormone receptor (GHR).
-    &lt;ul&gt;
-      &lt;li&gt;Proteins activate the GHR- which increases the level of insulin- which is
-linked to diabetes and cancer.&lt;/li&gt;
-      &lt;li&gt;Proteins activate TOR-S6K- genes that accelerate aging.&lt;/li&gt;
-      &lt;li&gt;Sugars activate PKA- another gene that accelerate aging.&lt;/li&gt;
-      &lt;li&gt;Reducing calories, particularly from proteins and sugars- decrease the
-activites of the GHR- and indirectly- TOR-S6K and PKA.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Keep diet to 80% plant and 20% fish.  Keep fish to wild salmon.  Tuna has 
-high levels of mercury- canned light tuna has less- but better stick to 
-salmon, sardines and cod.&lt;/li&gt;
-  &lt;li&gt;Eat just enough proteins- about 50 grams of protein a day.  Get an 
-&lt;a href=&quot;https://www.livestrong.com/article/501118-50-gram-protein-diet/&quot;&gt;estimate of protein levels here.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Eat good unsaturated fats&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;recommendations-from-the-pros&quot;&gt;Recommendations from the pros&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Dr Gott&lt;/strong&gt; from &lt;em&gt;Dr. Gott’s No Flour, No Sugar Diet&lt;/em&gt; says-&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;While many a low-carb diet guru would have you believe that all carbohyrates
-are created equal- and are equally to blame for making you fat- they are just 
-plain wrong.  Fresh fruits and vegetables- as well as whole grains- are full of
-the essential vitamins, minerals, and fiber that we need to have healthy bodies, 
-protect ourselves against disease, and function properly.  The problem arises 
-when technology takes over the digestion process, removing all those valuable 
-nutrients…&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Simply put, the more refined a carb is, the fewer nutrients it contains because
-it has already been broken down, by the refining process, to its elemental form.
-Modern processing technology has manged to take once healthful whole grains 
-and strip them of their very benefits.  The whole grain, for instance, a veritable 
-nutrition workhorse in its natural form, is steamed, pounded, and scraped to 
-remove its outer fiber-full bran layer, its mineral-dense germ, and its vitamin-
-rich oil.  Next it is pulverised by high speed steel rollers into a fine powder,
-then bleached to remove any possible likeness to its original form.  This powdery
-white substance is then labeled ‘all-purpose flour’ and used to make almost
-all of the breads, cookies, crackers, cereals, and pastas you find on your 
-supermarket shelves.  Even those toasty brown ‘wheat breads’ are often made with 
-white flour and then artifically colored to make them look ‘healthy’.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;After all that processing, flour retains its high calorie nature but little
-else.  It is virtually devoid of fiber and the vitamins and minerals our bodies
-need to function properly and fend off disease.  The calories in all-purpose
-flour are what nutritionists call ‘empty calories’.  They will fill you up and 
-provide instance energy, but they won’t nourish your body for the long haul.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The point of my No Flour, No Sugar Diet is to replace the empty calories
-of highly refined foots with the nutrient dense calories found in unprocessed
-foots.  So when I say no flour- I mean no all-purpose flour, but also no whole
-wheat flour or any product with the word flour in its ingredient list….
-All carbs are allowed on the diet except for those foods that contain flour. 
-This means that you can still enjoy rice, potatoes, barley, oats, peas, corn,
-beans, vegetables and fruits.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Dr Gott says&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Avoid food containing
-    &lt;ul&gt;
-      &lt;li&gt;flour of any kind- wheat, rice, and corn flours- examples- pizza, pasta, buttery cookies&lt;/li&gt;
-      &lt;li&gt;refined or concentrated sugars- cane sugar, beet sugar, glocose, sucrose, 
-  high frutose corn syrup, maple syrup, honey- examples- cakes, ice-cream&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Eat
-    &lt;ul&gt;
-      &lt;li&gt;whole grains and starchy vegetables- brown rice, potatoes, barley, oats, peas, 
-  corn, beans, vegetables and fruits.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Maintain a body-mass index of 18.5-24.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BMI = 703 * Weight in pounds / Height in inches squared 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Robert Davis, PhD&lt;/strong&gt; in &lt;em&gt;Coffee is good for You&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Fish oil prevents heart disease…the key ingredients appear to be the omega-3
-fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), which 
-are found in most fish but especially oily ones such as salmon, mackerel, trout,
-sardines, and tuna.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Eggs are not bad for your heart…Eating up to six a week doesn’t appear to be
-harmful for most healthy people.  So how can this be if egg yolks are high in 
-cholesterol and too much cholesterol is bad for us?  Most of our cholesterol is
-made by the liver, which ramps up production when we eat saturated and trans
-fats.  But cholesterol from food appears to have little impact on most people’s 
-cholesterol levels.  Eggs are relatively low in saturated fat, and they contain
-unsaturated fats, which may be beneficial.  Plus, they’re a good source of 
-protein and several vitamins and minerals.  They can be a healthful and more 
-filling alternative to high-calorie muffins, begals, and sugary cereals.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Nuts prevent heart attacks…Nuts lower LDL (bad) cholesterol levels.  They
-also appear to decrease inflammation in arteries, which may contribute to heart
-attacks…So which nuts are best for you?… Walnuts, for example, are richest
-in ALA, an omega-3 fatty acid and peanuts contain resveratrol, a substance
-also found in red wine… All nuts are relatively high in unsaturated fats, 
-which care thought to be good for the heart.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Trans fats (partially hydrogenated fats) are harmful…Like saturated fats, 
-trans fats were found to raise LDL (bad) cholesterol, but they also lowered 
-HDL (good) cholesterol.  People who consume the most trans fats are more likely
-to develop heart disease.  The increased risk appears to come from artificially
-created trans fats, not those that occur naturally in milk and meat.  Scientists
-suspect that trans fats cause harm by not only affecting cholestrol levels but
-also raising blood fats called triglycerides, promoting inflammation in arteries,
-and adversely affecting the lining of blood vessels.  Overall, the evidence
-suggests trans fats are more harmful than saturated fats, and it’s more 
-consistent.  To avoid it, check ingredient labels and steer clear of anything
-containing partially hydrogenated oils.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Gene Stone&lt;/strong&gt; in &lt;em&gt;The Secrets of People Who Never Get Sick&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;According to Susan Roberts, professor at the Friedman School of Nutrition
-Science and Policy at Tufts University and author of &lt;em&gt;The “I” Diet&lt;/em&gt;, her study
-of caloric reduction calls for a 25 percent cut in calories, but she believes it
-can be done in any way the dieter wishes as long as it feels comfortable-
-eating a full diet one day and then cutting calories the next, or eating a normal
-meal once a day with a reduced meal at other times…&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;food-groups--macro-nutrients&quot;&gt;Food groups- Macro nutrients&lt;/h2&gt;
-
-&lt;h3 id=&quot;proteins&quot;&gt;Proteins&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Found in meat, nuts, and eggs- sources of amino acids.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;fats&quot;&gt;Fats&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Major source of stored energy in the body
-    &lt;ul&gt;
-      &lt;li&gt;Saturated fats&lt;/li&gt;
-      &lt;li&gt;Unsaturated fats
-        &lt;ul&gt;
-          &lt;li&gt;Mono-unsaturated fats- oleic acid in olive oil&lt;/li&gt;
-          &lt;li&gt;Poly-unsaturated fats- salmon and corn oil&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;carbohydrates&quot;&gt;Carbohydrates&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Simple carbohydrates- simple sugars- monosaccharides (fructose, glucose) 
-and dissachrides (lactose, sucrose) found in fruit juices, honey, candy or sodas.
-    &lt;ul&gt;
-      &lt;li&gt;This type of carbohydrate provides ready energy because your body has to do
-very little work to convert simple sugars to glucose.  They are digested
-quickly and easily, sending a rush of glucose into your blood stream. 
-When your body is flooded with glucose in this way, you experience a 
-temporary sugar high caused by the spike in your blood sugar level.  A 
-short time later, as the glucose leaves your system, you experience a crash,
-which leaves you feeling fatigued and listless- and hungry again as your 
-body craves more fuel.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Complex carbohydrates- whole grains- brown rice, wheat, oats, barley, quinoa
-  and corn, legumes (beans), and vegetables are made up of much more complicated
-  sugar molecules.
-    &lt;ul&gt;
-      &lt;li&gt;Your body needs to work much harder to break these 
-complex sugars down and convert them to glucose.  Because of the extra 
-effort required to digest these foods, digestion takes place over an 
-extended period of time- and the glucose your body gets from these foods is
-released into your blood stream at a slower, steadier pace.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Examples of good carbohydrates
-    &lt;ul&gt;
-      &lt;li&gt;Vegetables- all of them&lt;/li&gt;
-      &lt;li&gt;Whole fruits- apples, bananas, strawberries&lt;/li&gt;
-      &lt;li&gt;Whole grains- pure oats, quinoa, brown rice&lt;/li&gt;
-      &lt;li&gt;Legumes- lentils, kidney beans, peas&lt;/li&gt;
-      &lt;li&gt;Nuts- almondds, walnuts, hazel nuts, peanuts, macadamia nuts&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Exceptions to simple carb rule are- milk products and fruits.  Because
- milk products and fruits are relatively low in sugar and provide big doses
- of imortant vitamins and minerals- fruits also provide fiber- these foods
- can be enjoyed as a regular part of a healthful diet.  Choose fresh fruits
- instead of fruit juices and low fat or non-fat milk products.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;difference-between-white-rice-and-brown-rice&quot;&gt;Difference between white rice and brown rice&lt;/h2&gt;
-
-&lt;p&gt;White rice is what you get when you remove the husk, 
-bran and germ from whole grain – or brown rice. 
-When you lose the bran – you lose the fiber. 
-When you lose the germ – you lose B vitamins and some fat. 
-All that remains is the endosperm, making white rice essentially, 
-nutritionally naked starch.&lt;/p&gt;
-
-&lt;p&gt;Consumers like white rice because it’s light and fluffy. 
-Food manufacturers like it because without the fat it is less likely 
-to go rancid and has a longer shelf life than whole grain rice does&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-wrong-with-starch&quot;&gt;What is wrong with starch?&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Starches&lt;/strong&gt; include grain products, such as bread, crackers, pasta, 
-and rice. As with simple sugars, some complex carbohydrate foods are 
-better choices than others. Refined grains, such as 
-white flour and white rice, have been processed, which removes nutrients 
-and fiber.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;White rice&lt;/strong&gt; is considered empty carbs since it loses its main sources 
-of nutrients. … A 3.5-ounce (100-gram) serving of &lt;strong&gt;brown rice&lt;/strong&gt; has 
-fewer calories and carbs than white rice and twice as much fiber. 
-In general, brown rice also has higher amounts of vitamins and minerals 
-than white rice.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-are-free-radicals-and-antioxidants&quot;&gt;What are free radicals and antioxidants?&lt;/h2&gt;
-
-&lt;p&gt;Free radicals are unstable atoms that can damage cells, causing illness and 
-aging.  &lt;a href=&quot;https://www.verywellhealth.com/information-about-free-radicals-2249103&quot;&gt;Read here&lt;/a&gt;
-for more details on free radicals and antioxidants.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 20 Jul 2019 00:00:00 -0400</pubDate>
-        <link>https://patrickleungwl.github.io/2019/all-about-dieting/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/all-about-dieting/</guid>
-        
-        <category>nutrition</category>
-        
-        
-        <category>nutrition</category>
-        
-      </item>
-    
-      <item>
-        <title>How to use slide rules</title>
-        <description>&lt;p&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;multiplication&quot;&gt;Multiplication&lt;/h2&gt;
-
-&lt;p&gt;To multiply two small numbers, 2x3&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the left, line up C (1) to D (2).  
-- Move cursor to C (3).  D (6) shows the answer.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To mulitply two big numbers, 6x7&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the right, line up C (1) to D (6).
-- Move cursor to C (7).  D (4.2) shows the answer.  Adjust by 10 = 42.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To multiple two big numbers, 12 x 67&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.  Starting from the left, line up C (1.2) to D (1.2).
-- Move cursor to C (6.7).  D (8) shows the answer.  Adjust by 
-  thinking 10x70=700.  So 8 must be 800.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;What are the limits of rules C and D?&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Reading C and D from left to right is only for small digits, like 2x4.
-- Reading C and D from right to left works for bigger digits.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;division&quot;&gt;Division&lt;/h2&gt;
-
-&lt;p&gt;To divide two small numbers, 4.5 / 7.8&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D. 
-- Move cursor to D (4.5).
-- Move C (7.8) until 7.8 hits the cursor.
-- Move cursor to C (1).
-- The answer is in D (5.78).
-- Since 4/8 ~ 0.5, the answer is 0.578.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To divide two numbers, 142 / 83&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.
-- Move cursor to D (1.42).
-- Move C (8.3) until 8.3 hits the cursor.
-- Move cursor to C (1).
-- The answer is in D (1.72).
-- Since 160/80 ~ 2, the answer is 1.72.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To divide two big numbers, 2,313,184 / 80,234&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rules C and D.
-- 2,313,184 ~ 2.3e6.
-- 80,234 ~ 8.0e4.
-- Move cursor to D (2.3).
-- Move C (8.0) until 8.0 hits the cursor.
-- Move cursor to C (1).
-- The answer is in D (2.88).
-~ Adjusted for scale, 2.88e2 ~ 28.8.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;sin-30&quot;&gt;Sin 30&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule A and S.  Align rules.
-- Move cursor to S (30).
-- The answer is in A (5).
-- Adjusted, the answer is 0.5.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;cos-30&quot;&gt;Cos 30&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Once you can do sin 0-90, you can do any sin or cos.
-- If you look at the cos/sin charts, cos 30 is the same as sin 60.
-- Sin 60 = 0.866.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;tan-30&quot;&gt;Tan 30&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Use rule D and T.  Align rules.
-- Move cursor to T (30).
-- The answer is in D (5.76).
-- Adjusted, the answer is 0.576. 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2019/how-to-use-slide-rules/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/how-to-use-slide-rules/</guid>
-        
-        <category>retro</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
