@@ -5,8 +5,8 @@
     <description>Minimalist Jekyll theme for technical writing blog.</description>
     <link>https://patrickleungwl.github.io/</link>
     <atom:link href="https://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Apr 2020 13:31:59 -0400</pubDate>
-    <lastBuildDate>Sat, 25 Apr 2020 13:31:59 -0400</lastBuildDate>
+    <pubDate>Sun, 26 Apr 2020 02:19:17 -0400</pubDate>
+    <lastBuildDate>Sun, 26 Apr 2020 02:19:17 -0400</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -44,6 +44,12 @@ no doubt about it.&lt;/li&gt;
 
 &lt;iframe width=&quot;700&quot; height=&quot;380&quot; src=&quot;https://www.youtube.com/embed/TBuIGBCF9jc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thinking about the hard times…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../../assets/images/201609/20160918_hard_to_easy.jpg&quot; /&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Sat, 25 Apr 2020 00:00:00 -0400</pubDate>
         <link>https://patrickleungwl.github.io/2020/motivation/</link>
@@ -58,191 +64,536 @@ no doubt about it.&lt;/li&gt;
     
       <item>
         <title>Ideas From Many Fields</title>
-        <description>&lt;p&gt;Depressive Realism: Depressed people have a more accurate view of the world because they’re more realistic about how risky and fragile life is. The opposite of “blissfully unaware.”&lt;/p&gt;
+        <description>&lt;h4 id=&quot;depressive-realism&quot;&gt;Depressive Realism&lt;/h4&gt;
 
-&lt;p&gt;Skill Compensation: People who are exceptionally good at one thing tend to be exceptionally poor at another.&lt;/p&gt;
+&lt;p&gt;Depressed people have a more accurate view of the world because they’re more
+realistic about how risky and fragile life is. The opposite of “blissfully
+unaware.”&lt;/p&gt;
 
-&lt;p&gt;Curse of Knowledge: The inability to communicate your ideas because you wrongly assume others have the necessary background to understand what you’re talking about.&lt;/p&gt;
+&lt;h4 id=&quot;skill-compensation&quot;&gt;Skill Compensation&lt;/h4&gt;
 
-&lt;p&gt;Base Rates: The success rate of everyone who’s done what you’re about to try.&lt;/p&gt;
+&lt;p&gt;People who are exceptionally good at one thing tend to be exceptionally poor at
+another.&lt;/p&gt;
 
-&lt;p&gt;Base-Rate Neglect: Assuming the success rate of everyone who’s done what you’re about to try doesn’t apply to you, caused by overestimating the extent to which you do things differently than everyone else.&lt;/p&gt;
+&lt;h4 id=&quot;curse-of-knowledge&quot;&gt;Curse of Knowledge&lt;/h4&gt;
 
-&lt;p&gt;Compassion Fade: People have more compassion for small groups of victims than larger groups, because the smaller the group the easier it is to identify individual victims.&lt;/p&gt;
+&lt;p&gt;The inability to communicate your ideas because you wrongly assume others have
+the necessary background to understand what you’re talking about.&lt;/p&gt;
 
-&lt;p&gt;System Justification Theory: Inefficient systems will be defended and maintained if they serve the needs of people who benefit from them – individual incentives can sustain systemic stupidity.&lt;/p&gt;
+&lt;h4 id=&quot;base-rates&quot;&gt;Base Rates&lt;/h4&gt;
 
-&lt;p&gt;Three Men Make a Tiger: People will believe anything if enough people tell them it’s true. It comes from a Chinese proverb that if one person tells you there’s a tiger roaming around your neighborhood, you can assume they’re lying. If two people tell you, you begin to wonder. If three say it’s true, you’re convinced there’s a tiger in your neighborhood and you panic.&lt;/p&gt;
+&lt;p&gt;The success rate of everyone who’s done what you’re about to try.&lt;/p&gt;
 
-&lt;p&gt;Buridan’s Ass: A thirsty donkey is placed exactly midway between two pails of water. It dies because it can’t make a rational decision about which one to choose. A form of decision paralysis.&lt;/p&gt;
+&lt;h4 id=&quot;base-rate-neglect&quot;&gt;Base-Rate Neglect&lt;/h4&gt;
 
-&lt;p&gt;Pareto Principle: The majority of outcomes are driven by a minority of events.&lt;/p&gt;
+&lt;p&gt;Assuming the success rate of everyone who’s done what you’re about to try
+doesn’t apply to you, caused by overestimating the extent to which you do
+things differently than everyone else.&lt;/p&gt;
 
-&lt;p&gt;Sturgeon’s Law: “90% of everything is crap.” The obvious inverse of the Pareto Principle, but hard to accept in practice.&lt;/p&gt;
+&lt;h4 id=&quot;compassion-fade&quot;&gt;Compassion Fade&lt;/h4&gt;
 
-&lt;p&gt;Cumulative advantage: Social status snowballs in either direction because people like associating with successful people, so doors are opened for them, and avoid associating with unsuccessful people, for whom doors are closed.&lt;/p&gt;
+&lt;p&gt;People have more compassion for small groups of victims than larger groups,
+because the smaller the group the easier it is to identify individual victims.&lt;/p&gt;
 
-&lt;p&gt;Impostor Syndrome: Fear of being exposed as less talented than people think you are, often because talent is owed to cumulative advantage rather than actual effort or skill.&lt;/p&gt;
+&lt;h4 id=&quot;system-justification-theory&quot;&gt;System Justification Theory&lt;/h4&gt;
 
-&lt;p&gt;Anscombe’s Quartet: Four sets of numbers that look identical on paper (mean average, variance, correlation, etc.) but look completely different when graphed. Describes a situation where exact calculations don’t offer a good representation of how the world works.&lt;/p&gt;
+&lt;p&gt;Inefficient systems will be defended and maintained if they serve the needs of
+people who benefit from them – individual incentives can sustain systemic
+stupidity.&lt;/p&gt;
 
-&lt;p&gt;Ringelmann Effect: Members of a group become lazier as the size of their group increases. Based on the assumption that “someone else is probably taking care of that.”&lt;/p&gt;
+&lt;h4 id=&quot;three-men-make-a-tiger&quot;&gt;Three Men Make a Tiger&lt;/h4&gt;
 
-&lt;p&gt;Semmelweis Reflex: Automatically rejecting evidence that contradicts your tribe’s established norms. Named after a Hungarian doctor who discovered that patients treated by doctors who wash their hands suffer fewer infections, but struggled to convince other doctors that his finding was true.&lt;/p&gt;
+&lt;p&gt;People will believe anything if enough people tell them it’s true. It comes
+from a Chinese proverb that if one person tells you there’s a tiger roaming
+around your neighborhood, you can assume they’re lying. If two people tell you,
+you begin to wonder. If three say it’s true, you’re convinced there’s a tiger
+in your neighborhood and you panic.&lt;/p&gt;
 
-&lt;p&gt;False-Consensus Effect: Overestimating how widely held your own beliefs are, caused by the difficulty of imagining the experiences of other people.&lt;/p&gt;
+&lt;h4 id=&quot;buridans-ass&quot;&gt;Buridan’s Ass&lt;/h4&gt;
 
-&lt;p&gt;Boomerang Effect: Trying to persuade someone to do one thing can make them more likely to do the opposite, because the act of persuasion can feel like someone stealing your freedom and doing the opposite makes you feel like you’re taking your freedom back.&lt;/p&gt;
+&lt;p&gt;A thirsty donkey is placed exactly midway between two pails of water. It dies
+because it can’t make a rational decision about which one to choose. A form of
+decision paralysis.&lt;/p&gt;
 
-&lt;p&gt;Chronological Snobbery: “The assumption that whatever has gone out of date is on that account discredited. You must find why it went out of date. Was it ever refuted (and if so by whom, where, and how conclusively) or did it merely die away as fashions do? If the latter, this tells us nothing about its truth or falsehood. From seeing this, one passes to the realization that our own age is also ‘a period,’ and certainly has, like all periods, its own characteristic illusions.” – C.S. Lewis&lt;/p&gt;
+&lt;h4 id=&quot;pareto-principle&quot;&gt;Pareto Principle&lt;/h4&gt;
 
-&lt;p&gt;Planck’s Principle: “A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it.”&lt;/p&gt;
+&lt;p&gt;The majority of outcomes are driven by a minority of events.&lt;/p&gt;
 
-&lt;p&gt;McNamara Fallacy: A belief that rational decisions can be made with quantitative measures alone, when in fact the things you can’t measure are often the most consequential. Named after Defense Secretary McNamara, who tried to quantify every aspect of the Vietnam War.&lt;/p&gt;
+&lt;h4 id=&quot;sturgeons-law&quot;&gt;Sturgeon’s Law&lt;/h4&gt;
 
-&lt;p&gt;Courtesy Bias: Giving opinions that are likely to offend people the least, rather than what you actually believe.&lt;/p&gt;
+&lt;p&gt;“90% of everything is crap.” The obvious inverse of the Pareto Principle, but
+hard to accept in practice.&lt;/p&gt;
 
-&lt;p&gt;Berkson’s Paradox: Strong correlations can fall apart when combined with a larger population. Among hospital patients, motorcycle crash victims wearing helmets are more likely to be seriously injured than those not wearing helmets. But that’s because most crash victims saved by helmets did not need to become hospital patients, and those without helmets are more likely to die before becoming a hospital patient.&lt;/p&gt;
+&lt;h4 id=&quot;cumulative-advantage&quot;&gt;Cumulative advantage&lt;/h4&gt;
 
-&lt;p&gt;Group Attribution Error: Incorrectly assuming that the views of a group member reflect those of the whole group.&lt;/p&gt;
+&lt;p&gt;Social status snowballs in either direction because people like associating
+with successful people, so doors are opened for them, and avoid associating
+with unsuccessful people, for whom doors are closed.&lt;/p&gt;
 
-&lt;p&gt;Baader-Meinhof Phenomenon: Noticing an idea everywhere you look as soon as it’s brought to your attention in a way that makes you overestimate its prevalence.&lt;/p&gt;
+&lt;h4 id=&quot;impostor-syndrome&quot;&gt;Impostor Syndrome&lt;/h4&gt;
 
-&lt;p&gt;Ludic Fallacy: Falsely associated simulations with real life. Nassim Taleb: “Organized competitive fighting trains the athlete to focus on the game and, in order not to dissipate his concentration, to ignore the possibility of what is not specifically allowed by the rules, such as kicks to the groin, a surprise knife, et cetera. So those who win the gold medal might be precisely those who will be most vulnerable in real life.”&lt;/p&gt;
+&lt;p&gt;Fear of being exposed as less talented than people think you are, often because
+talent is owed to cumulative advantage rather than actual effort or skill.&lt;/p&gt;
 
-&lt;p&gt;Normalcy Bias: Underestimating the odds of disaster because it’s comforting to assume things will keep functioning the way they’ve always functioned.&lt;/p&gt;
+&lt;h4 id=&quot;anscombes-quartet&quot;&gt;Anscombe’s Quartet&lt;/h4&gt;
 
-&lt;p&gt;Actor-Observer Asymmetry: We judge others based solely on their actions, but when judging ourselves we have an internal dialogue that justifies our mistakes and bad decisions.&lt;/p&gt;
+&lt;p&gt;Four sets of numbers that look identical on paper (mean average, variance,
+correlation, etc.) but look completely different when graphed. Describes a
+situation where exact calculations don’t offer a good representation of how the
+world works.&lt;/p&gt;
 
-&lt;p&gt;The 90-9-1 Rule: In social media networks, 90% of users just read content, 9% of users contribute a little content, and 1% of users contribute almost all the content. Gives a false impression of what ideas are popular or “average.”&lt;/p&gt;
+&lt;h4 id=&quot;ringelmann-effect&quot;&gt;Ringelmann Effect&lt;/h4&gt;
 
-&lt;p&gt;Texas Sharpshooter Fallacy: Goals set retroactively after an activity, like shooting a blank wall and then drawing a bullseye around the holes you left, or picking a benchmark after you’ve invested.&lt;/p&gt;
+&lt;p&gt;Members of a group become lazier as the size of their group increases. Based on
+the assumption that “someone else is probably taking care of that.”&lt;/p&gt;
 
-&lt;p&gt;Fredkin’s Paradox: Confronted with two equally good options, you struggle to decide, even though your decision doesn’t matter because both options are equally good. The more equal the options, the harder the decision.&lt;/p&gt;
+&lt;h4 id=&quot;semmelweis-reflex&quot;&gt;Semmelweis Reflex&lt;/h4&gt;
 
-&lt;p&gt;Poisoning the Well: Presenting irrelevant adverse information about someone in a way that makes everything else that person says seem untrustworthy. “Before you hear my opponent’s healthcare plan, let me remind you that he got a DUI in college.”&lt;/p&gt;
+&lt;p&gt;Automatically rejecting evidence that contradicts your tribe’s established
+norms. Named after a Hungarian doctor who discovered that patients treated by
+doctors who wash their hands suffer fewer infections, but struggled to convince
+other doctors that his finding was true.&lt;/p&gt;
 
-&lt;p&gt;Golem Effect: Performance declines when supervisors/teachers have low expectations of your abilities.&lt;/p&gt;
+&lt;h4 id=&quot;false-consensus-effect&quot;&gt;False-Consensus Effect&lt;/h4&gt;
 
-&lt;p&gt;Appeal to Consequences: Arguing that a hypothesis must be true (or false) because the outcome is something you like (or dislike). The classic example is arguing that climate change isn’t real because combating climate change will hurt the economy.&lt;/p&gt;
+&lt;p&gt;Overestimating how widely held your own beliefs are, caused by the difficulty
+of imagining the experiences of other people.&lt;/p&gt;
 
-&lt;p&gt;Plain Folks Fallacy: People of authority acquiring trust by presenting themselves as Average Joe’s, when in fact their authority proves they are different from everyone else.&lt;/p&gt;
+&lt;h4 id=&quot;boomerang-effect&quot;&gt;Boomerang Effect&lt;/h4&gt;
 
-&lt;p&gt;Behavioral Inevitability: “History never repeats itself; man always does.” – Voltaire&lt;/p&gt;
+&lt;p&gt;Trying to persuade someone to do one thing can make them more likely to do the
+opposite, because the act of persuasion can feel like someone stealing your
+freedom and doing the opposite makes you feel like you’re taking your freedom
+back.&lt;/p&gt;
 
-&lt;p&gt;Apophenia: A tendency to perceive correlations between unrelated things, because your mind can only deal with tiny sample sizes and assuming things are correlated creates easy/comforting explanations of how the world works.&lt;/p&gt;
+&lt;h4 id=&quot;chronological-snobbery&quot;&gt;Chronological Snobbery&lt;/h4&gt;
 
-&lt;p&gt;Self-Handicapping: Avoiding effort because you don’t want to deal with the emotional pain of that effort failing.&lt;/p&gt;
+&lt;p&gt;“The assumption that whatever has gone out of date is on that account
+discredited. You must find why it went out of date. Was it ever refuted (and if
+so by whom, where, and how conclusively) or did it merely die away as fashions
+do? If the latter, this tells us nothing about its truth or falsehood. From
+seeing this, one passes to the realization that our own age is also ‘a period,’
+and certainly has, like all periods, its own characteristic illusions.” – C.S.
+Lewis&lt;/p&gt;
 
-&lt;p&gt;Hanlon’s Razor: “Never attribute to malice that which can be adequately explained by stupidity.”&lt;/p&gt;
+&lt;h4 id=&quot;plancks-principle&quot;&gt;Planck’s Principle&lt;/h4&gt;
 
-&lt;p&gt;False Uniqueness Effect: Assuming your skills are unique when they’re not. Comes from conflating “I’m good at this” with “Others are bad at this.”&lt;/p&gt;
+&lt;p&gt;“A new scientific truth does not triumph by convincing its opponents and making
+them see the light, but rather because its opponents eventually die and a new
+generation grows up that is familiar with it.”&lt;/p&gt;
 
-&lt;p&gt;Hard-Easy Effect: Hard tasks promote overconfidence because the rewards are high and fun to dream about; easy tasks promote underconfidence because they’re boring and easy to put off.&lt;/p&gt;
+&lt;h4 id=&quot;mcnamara-fallacy&quot;&gt;McNamara Fallacy&lt;/h4&gt;
 
-&lt;p&gt;Neglect of Probability: Arguing that Nate Silver was wrong when he said Hillary Clinton has a 70% chance of winning, and using Donald Trump’s victory as your proof. Good predictions are based on probabilities, but the assessment of predictions are always binary, right or wrong.&lt;/p&gt;
+&lt;p&gt;A belief that rational decisions can be made with quantitative measures alone,
+when in fact the things you can’t measure are often the most consequential.
+Named after Defense Secretary McNamara, who tried to quantify every aspect of
+the Vietnam War.&lt;/p&gt;
 
-&lt;p&gt;Cobra Effect: Attempting to solve a problem makes that problem worse. Comes from an Indian story about a city infested with snakes offering a bounty for every dead cobra, which caused entrepreneurs to start breeding cobras for slaughter.&lt;/p&gt;
+&lt;h4 id=&quot;courtesy-bias&quot;&gt;Courtesy Bias&lt;/h4&gt;
 
-&lt;p&gt;Braess’s Paradox: Adding more roads can make traffic worse because new shortcuts become popular and overcrowded.&lt;/p&gt;
+&lt;p&gt;Giving opinions that are likely to offend people the least, rather than what
+you actually believe.&lt;/p&gt;
 
-&lt;p&gt;Non-Ergodic: When group probabilities don’t apply to singular events. If 100 people play Russian Roulette once, the odds of dying might be, say, 10%. But if one person plays Russian Roulette 100 times, the odds are dying are practically 100%.&lt;/p&gt;
+&lt;h4 id=&quot;berksons-paradox&quot;&gt;Berkson’s Paradox&lt;/h4&gt;
 
-&lt;p&gt;Pollyanna Principle: It’s easier to remember happy memories than bad ones.&lt;/p&gt;
+&lt;p&gt;Strong correlations can fall apart when combined with a larger population.
+Among hospital patients, motorcycle crash victims wearing helmets are more
+likely to be seriously injured than those not wearing helmets. But that’s
+because most crash victims saved by helmets did not need to become hospital
+patients, and those without helmets are more likely to die before becoming a
+hospital patient.&lt;/p&gt;
 
-&lt;p&gt;Declinism: Perpetually viewing society as in decline, because you’re afflicted by the Pollyanna Principle and you forget how much things sucked in the past.&lt;/p&gt;
+&lt;h4 id=&quot;group-attribution-error&quot;&gt;Group Attribution Error&lt;/h4&gt;
 
-&lt;p&gt;Empathy Gap: Underestimating how you’ll behave when you’re “hot” (angry/aroused/rushed), caused by the inability to accurately foresee how your body’s physical response to situations (dopamine, adrenaline, etc.) will influence decision-making.&lt;/p&gt;
+&lt;p&gt;Incorrectly assuming that the views of a group member reflect those of the
+whole group.&lt;/p&gt;
 
-&lt;p&gt;Abilene Paradox: A group decides to do something that no one in the group wants to do because everyone mistakenly assumes they’re the only ones who object to the idea and they don’t want to rock the boat by speaking up.&lt;/p&gt;
+&lt;h4 id=&quot;baader-meinhof-phenomenon&quot;&gt;Baader-Meinhof Phenomenon&lt;/h4&gt;
 
-&lt;p&gt;Collective Narcissism: Exaggerating the importance and influence of your social group (country, industry, company, department, etc.).&lt;/p&gt;
+&lt;p&gt;Noticing an idea everywhere you look as soon as it’s brought to your attention
+in a way that makes you overestimate its prevalence.&lt;/p&gt;
 
-&lt;p&gt;Moral Luck: Praising someone for a good deed they didn’t have full control over. “Avoid calling heroes those who had no other choice.” – Taleb.&lt;/p&gt;
+&lt;h4 id=&quot;ludic-fallacy&quot;&gt;Ludic Fallacy&lt;/h4&gt;
 
-&lt;p&gt;Feedback Loops: Falling stock prices scare people, which cause them to sell, which makes prices fall, which scares more people, which causes more people to sell, and so on. Works both ways.&lt;/p&gt;
+&lt;p&gt;Falsely associated simulations with real life. Nassim Taleb&lt;/p&gt;
 
-&lt;p&gt;Hawthorne Effect: Being watched/studied changes how people behave, making it difficult to conduct social studies that accurately reflect the real world.&lt;/p&gt;
+&lt;p&gt;“Organized competitive fighting trains the athlete to focus on the game and, in
+order not to dissipate his concentration, to ignore the possibility of what is
+not specifically allowed by the rules, such as kicks to the groin, a surprise
+knife, et cetera. So those who win the gold medal might be precisely those who
+will be most vulnerable in real life.”&lt;/p&gt;
 
-&lt;p&gt;Perfect Solution Fallacy: Comparing reality with an idealized alternative. Prevalent in any field governed by uncertainty.&lt;/p&gt;
+&lt;h4 id=&quot;normalcy-bias&quot;&gt;Normalcy Bias&lt;/h4&gt;
 
-&lt;p&gt;Weasel Words: Phrases that appear to have meaning but convey nothing tangible. “Growth was solid last quarter,” or “Many people believe.”&lt;/p&gt;
+&lt;p&gt;Underestimating the odds of disaster because it’s comforting to assume things
+will keep functioning the way they’ve always functioned.&lt;/p&gt;
 
-&lt;p&gt;Hormesis: Something that hurts you in a high dose can be good for you in small doses. (Weight on your bones, drinking red wine, etc.)&lt;/p&gt;
+&lt;h4 id=&quot;actor-observer-asymmetry&quot;&gt;Actor-Observer Asymmetry&lt;/h4&gt;
 
-&lt;p&gt;Backfiring Effect: A supercharged version of confirmation bias where being presented with evidence that goes against your beliefs makes you double down on your initial beliefs because you feel you’re being attacked.&lt;/p&gt;
+&lt;p&gt;We judge others based solely on their actions, but when judging ourselves we
+have an internal dialogue that justifies our mistakes and bad decisions.&lt;/p&gt;
 
-&lt;p&gt;Reflexivity: When cause and effect are the same. People think Tesla will sell a lot of cars, so Tesla stock goes up, which lets Tesla raise a bunch of new capital, which helps Tesla sell a lot of cars.&lt;/p&gt;
+&lt;h4 id=&quot;the-90-9-1-rule&quot;&gt;The 90-9-1 Rule&lt;/h4&gt;
 
-&lt;p&gt;Second Half of the Chessboard: Put one grain of rice on the first chessboard square, two on the next, four on the next, then eight, then sixteen, etc, doubling the amount of rice on each square. When you’ve covered half the chessboard’s squares you’re dealing with an amount of rice that can fit in your lap; in the second half you quickly get to a pile that will consume an entire city. That’s how compounding works: slowly, then ferociously.&lt;/p&gt;
+&lt;p&gt;In social media networks, 90% of users just read content, 9% of users
+contribute a little content, and 1% of users contribute almost all the content.
+Gives a false impression of what ideas are popular or “average.”&lt;/p&gt;
 
-&lt;p&gt;Peter Principle: Good workers will continue to be promoted until they end up in a role they’re bad at.&lt;/p&gt;
+&lt;h4 id=&quot;texas-sharpshooter-fallacy&quot;&gt;Texas Sharpshooter Fallacy&lt;/h4&gt;
 
-&lt;p&gt;Friendship Paradox: On average, people have fewer friends than their friends have. Occurs because people with an abnormally high number of friends are more likely to be one of your friends. It’s a fundamental part of social network dynamics and makes most people feel less popular than they are.&lt;/p&gt;
+&lt;p&gt;Goals set retroactively after an activity, like shooting a blank wall and then
+drawing a bullseye around the holes you left, or picking a benchmark after
+you’ve invested.&lt;/p&gt;
 
-&lt;p&gt;Hedonic Treadmill: Expectations rise with results, so nothing feels as good as you’d imagine for as long as you’d expect.&lt;/p&gt;
+&lt;h4 id=&quot;fredkins-paradox&quot;&gt;Fredkin’s Paradox&lt;/h4&gt;
 
-&lt;p&gt;Positive Illusions: Excessively rosy views about the decisions you’ve made to maintain self-esteem in a world where everyone makes bad decisions all the time.&lt;/p&gt;
+&lt;p&gt;Confronted with two equally good options, you struggle to decide, even though
+your decision doesn’t matter because both options are equally good. The more
+equal the options, the harder the decision.&lt;/p&gt;
 
-&lt;p&gt;Ironic Process Theory: Going out of your way to suppress thoughts makes those thoughts more prominent in your mind.&lt;/p&gt;
+&lt;h4 id=&quot;poisoning-the-well&quot;&gt;Poisoning the Well&lt;/h4&gt;
 
-&lt;p&gt;Clustering Illusions: Falsely assuming that the inevitable bunching of random results in a large sample indicates a trend.&lt;/p&gt;
+&lt;p&gt;Presenting irrelevant adverse information about someone in a way that makes
+everything else that person says seem untrustworthy. “Before you hear my
+opponent’s healthcare plan, let me remind you that he got a DUI in college.”&lt;/p&gt;
 
-&lt;p&gt;Foundational Species: A single thing that plays an outsized role in supporting an ecosystem, whose loss would pull down many others with it. In nature: kelp, algae, and coral. In business: The Federal Reserve and Amazon.&lt;/p&gt;
+&lt;h4 id=&quot;golem-effect&quot;&gt;Golem Effect&lt;/h4&gt;
 
-&lt;p&gt;Bizarreness Effect: Crazy things are easier to remember than common things, providing a distorted sense of “normal.”&lt;/p&gt;
+&lt;p&gt;Performance declines when supervisors/teachers have low expectations of your
+abilities.&lt;/p&gt;
 
-&lt;p&gt;Nonlinearity: Outputs aren’t always proportional to inputs, so the world is a barrage of massive wins and horrible losses that surprise people.&lt;/p&gt;
+&lt;h4 id=&quot;appeal-to-consequences&quot;&gt;Appeal to Consequences&lt;/h4&gt;
 
-&lt;p&gt;Moderating Relationship: The correlation between two variables depends on a third, seemingly unrelated variable. The quality of a marriage may be dependent on a spouse’s work project that’s causing stress.&lt;/p&gt;
+&lt;p&gt;Arguing that a hypothesis must be true (or false) because the outcome is
+something you like (or dislike). The classic example is arguing that climate
+change isn’t real because combating climate change will hurt the economy.&lt;/p&gt;
 
-&lt;p&gt;Denomination Effect: One hundred $1 bills feels like less money than one $100 bill. Also explains stock splits – buying 10 shares for $10 each feels cheaper than one share for $100.&lt;/p&gt;
+&lt;h4 id=&quot;plain-folks-fallacy&quot;&gt;Plain Folks Fallacy&lt;/h4&gt;
 
-&lt;p&gt;Woozle Effect: “A reliable way to make people believe in falsehoods is frequent repetition, because familiarity is not easily distinguished from truth.” - Daniel Kahneman.&lt;/p&gt;
+&lt;p&gt;People of authority acquiring trust by presenting themselves as Average Joe’s,
+when in fact their authority proves they are different from everyone else.&lt;/p&gt;
 
-&lt;p&gt;Google Scholar Effect: Scientific research depends on citing other research, and the research that gets cited the most is whatever shows up in the top results of Google Scholar searches, regardless of its contribution to the field.&lt;/p&gt;
+&lt;h4 id=&quot;behavioral-inevitability&quot;&gt;Behavioral Inevitability&lt;/h4&gt;
 
-&lt;p&gt;Inversion: Avoiding problems can be more important than scoring wins.&lt;/p&gt;
+&lt;p&gt;“History never repeats itself; man always does.” – Voltaire&lt;/p&gt;
 
-&lt;p&gt;Gambler’s Ruin: Has many meanings, the most important of which is that playing a negative-probability game persistently enough guarantees going broke.&lt;/p&gt;
+&lt;h4 id=&quot;apophenia&quot;&gt;Apophenia&lt;/h4&gt;
 
-&lt;p&gt;Principle of Least Effort: When seeking information, effort declines as soon as the minimum acceptable result is reached.&lt;/p&gt;
+&lt;p&gt;A tendency to perceive correlations between unrelated things, because your mind
+can only deal with tiny sample sizes and assuming things are correlated creates
+easy/comforting explanations of how the world works.&lt;/p&gt;
 
-&lt;p&gt;Dunning-Kruger Effect: Knowing the limits of your intelligence requires a certain level of intelligence, so some people are too stupid to know how stupid they are.&lt;/p&gt;
+&lt;h4 id=&quot;self-handicapping&quot;&gt;Self-Handicapping&lt;/h4&gt;
 
-&lt;p&gt;Knightian Uncertainty: Risk that can’t be measured; admitting that you don’t know what you don’t know.&lt;/p&gt;
+&lt;p&gt;Avoiding effort because you don’t want to deal with the emotional pain of that
+effort failing.&lt;/p&gt;
 
-&lt;p&gt;Aumann’s Agreement Theorem: If you understand your opponent’s beliefs you cannot agree to disagree. If you agree to disagree it’s because one side doesn’t understand the other side’s view.&lt;/p&gt;
+&lt;h4 id=&quot;hanlons-razor&quot;&gt;Hanlon’s Razor&lt;/h4&gt;
 
-&lt;p&gt;Focusing Effect: Overemphasizing factors that seem important but exist as part of a complex system. People from the Midwest assume Californians are happier because the weather is better, but they’re not because Californians also deal with traffic, bad bosses, unhappy marriages, etc, which more than offset the happiness boost from sunny skies.&lt;/p&gt;
+&lt;p&gt;“Never attribute to malice that which can be adequately explained by
+stupidity.”&lt;/p&gt;
 
-&lt;p&gt;The Middle Ground Fallacy: Falsely assuming that splitting the difference between two polar opposite views is a healthy compromise. If one person says vaccines cause autism and another person says they don’t, it’s not right to compromise and say vaccines sometimes cause autism.&lt;/p&gt;
+&lt;h4 id=&quot;false-uniqueness-effect&quot;&gt;False Uniqueness Effect&lt;/h4&gt;
 
-&lt;p&gt;Rebound Effect: New symptoms, or supercharged old symptoms, emerge when medicine or other protections are withdrawn.&lt;/p&gt;
+&lt;p&gt;Assuming your skills are unique when they’re not. Comes from conflating “I’m
+good at this” with “Others are bad at this.”&lt;/p&gt;
 
-&lt;p&gt;Ostrich Effect: Avoiding negative information that might challenge views that you desperately want to be right.&lt;/p&gt;
+&lt;h4 id=&quot;hard-easy-effect&quot;&gt;Hard-Easy Effect&lt;/h4&gt;
 
-&lt;p&gt;Founder’s Syndrome: When a CEO is so emotionally invested in a company that they can’t effectively delegate decisions.&lt;/p&gt;
+&lt;p&gt;Hard tasks promote overconfidence because the rewards are high and fun to dream
+about; easy tasks promote underconfidence because they’re boring and easy to
+put off.&lt;/p&gt;
 
-&lt;p&gt;In-Group Favoritism: Giving preference to people from your social group regardless of their objective qualifications.&lt;/p&gt;
+&lt;h4 id=&quot;neglect-of-probability&quot;&gt;Neglect of Probability&lt;/h4&gt;
 
-&lt;p&gt;Bounded Rationality: People can’t be fully rational because your brain is a hormone machine, not an Excel spreadsheet.&lt;/p&gt;
+&lt;p&gt;Arguing that Nate Silver was wrong when he said Hillary Clinton has a 70%
+chance of winning, and using Donald Trump’s victory as your proof. Good
+predictions are based on probabilities, but the assessment of predictions are
+always binary, right or wrong.&lt;/p&gt;
 
-&lt;p&gt;Luxury Paradox: The more expensive something is the less likely you are to use it, so the relationship between price and utility is an inverted U. Ferraris sit in garages; Hondas get driven.&lt;/p&gt;
+&lt;h4 id=&quot;cobra-effect&quot;&gt;Cobra Effect&lt;/h4&gt;
 
-&lt;p&gt;Meat Paradox: Dogs are family, pigs are food. Some animals classified as food are wrongly perceived to have lower intelligence than those classified as pets. An example of morality depending on utility.&lt;/p&gt;
+&lt;p&gt;Attempting to solve a problem makes that problem worse. Comes from an Indian
+story about a city infested with snakes offering a bounty for every dead cobra,
+which caused entrepreneurs to start breeding cobras for slaughter.&lt;/p&gt;
 
-&lt;p&gt;Fluency Heuristic: Ideas that can be explained simply are more likely to be believed than those that are complex, even if the simple-sounding ideas are nonsense. It occurs because ideas that are easy to grasp are hard to distinguish from ideas you’re familiar with.&lt;/p&gt;
+&lt;h4 id=&quot;braesss-paradox&quot;&gt;Braess’s Paradox&lt;/h4&gt;
 
-&lt;p&gt;Historical Wisdom: “The dead outnumber the living 14 to 1, and we ignore the accumulated experience of such a huge majority of mankind at our peril.” – Niall Ferguson&lt;/p&gt;
+&lt;p&gt;Adding more roads can make traffic worse because new shortcuts become popular
+and overcrowded.&lt;/p&gt;
 
-&lt;p&gt;Fact-Check Scarcity Principle: This article is called 100 Little Ideas but there are fewer than 100 ideas. 99% of readers won’t notice because they’re not checking, and most of those who notice won’t say anything. Don’t believe everything you read.&lt;/p&gt;
+&lt;h4 id=&quot;non-ergodic&quot;&gt;Non-Ergodic&lt;/h4&gt;
 
-&lt;p&gt;Emotional Contagion: One person’s emotions trigger the same emotions in other people, because evolution has selected for empathizing with those in your social group whose actions you rely on.&lt;/p&gt;
+&lt;p&gt;When group probabilities don’t apply to singular events. If 100 people play
+Russian Roulette once, the odds of dying might be, say, 10%. But if one person
+plays Russian Roulette 100 times, the odds are dying are practically 100%.&lt;/p&gt;
 
-&lt;p&gt;Tribal Affiliation: Beliefs can be swayed by identity and a desire to fit in over rational analysis. There is little correlation between climate change denial and scientific literacy. But there is a strong correlation between climate change denial and political affiliation.&lt;/p&gt;
+&lt;h4 id=&quot;pollyanna-principle&quot;&gt;Pollyanna Principle&lt;/h4&gt;
 
-&lt;p&gt;Emotional Competence: The ability to recognize others’ emotions and respond to them productively. Harder and rarer than it sounds.&lt;/p&gt;
+&lt;p&gt;It’s easier to remember happy memories than bad ones.&lt;/p&gt;
+
+&lt;h4 id=&quot;declinism&quot;&gt;Declinism&lt;/h4&gt;
+
+&lt;p&gt;Perpetually viewing society as in decline, because you’re afflicted by the
+Pollyanna Principle and you forget how much things sucked in the past.&lt;/p&gt;
+
+&lt;h4 id=&quot;empathy-gap&quot;&gt;Empathy Gap&lt;/h4&gt;
+
+&lt;p&gt;Underestimating how you’ll behave when you’re “hot” (angry/aroused/rushed),
+caused by the inability to accurately foresee how your body’s physical response
+to situations (dopamine, adrenaline, etc.) will influence decision-making.&lt;/p&gt;
+
+&lt;h4 id=&quot;abilene-paradox&quot;&gt;Abilene Paradox&lt;/h4&gt;
+
+&lt;p&gt;A group decides to do something that no one in the group wants to do because
+everyone mistakenly assumes they’re the only ones who object to the idea and
+they don’t want to rock the boat by speaking up.&lt;/p&gt;
+
+&lt;h4 id=&quot;collective-narcissism&quot;&gt;Collective Narcissism&lt;/h4&gt;
+
+&lt;p&gt;Exaggerating the importance and influence of your social group (country,
+industry, company, department, etc.).&lt;/p&gt;
+
+&lt;h4 id=&quot;moral-luck&quot;&gt;Moral Luck&lt;/h4&gt;
+
+&lt;p&gt;Praising someone for a good deed they didn’t have full control over. “Avoid
+calling heroes those who had no other choice.” – Taleb.&lt;/p&gt;
+
+&lt;h4 id=&quot;feedback-loops&quot;&gt;Feedback Loops&lt;/h4&gt;
+
+&lt;p&gt;Falling stock prices scare people, which cause them to sell, which makes prices
+fall, which scares more people, which causes more people to sell, and so on.
+Works both ways.&lt;/p&gt;
+
+&lt;h4 id=&quot;hawthorne-effect&quot;&gt;Hawthorne Effect&lt;/h4&gt;
+
+&lt;p&gt;Being watched/studied changes how people behave, making it difficult to conduct
+social studies that accurately reflect the real world.&lt;/p&gt;
+
+&lt;h4 id=&quot;perfect-solution-fallacy&quot;&gt;Perfect Solution Fallacy&lt;/h4&gt;
+
+&lt;p&gt;Comparing reality with an idealized alternative. Prevalent in any field
+governed by uncertainty.&lt;/p&gt;
+
+&lt;h4 id=&quot;weasel-words&quot;&gt;Weasel Words&lt;/h4&gt;
+
+&lt;p&gt;Phrases that appear to have meaning but convey nothing tangible. “Growth was
+solid last quarter,” or “Many people believe.”&lt;/p&gt;
+
+&lt;h4 id=&quot;hormesis&quot;&gt;Hormesis&lt;/h4&gt;
+
+&lt;p&gt;Something that hurts you in a high dose can be good for you in small doses.
+(Weight on your bones, drinking red wine, etc.)&lt;/p&gt;
+
+&lt;h4 id=&quot;backfiring-effect&quot;&gt;Backfiring Effect&lt;/h4&gt;
+
+&lt;p&gt;A supercharged version of confirmation bias where being presented with evidence
+that goes against your beliefs makes you double down on your initial beliefs
+because you feel you’re being attacked.&lt;/p&gt;
+
+&lt;h4 id=&quot;reflexivity&quot;&gt;Reflexivity&lt;/h4&gt;
+
+&lt;p&gt;When cause and effect are the same. People think Tesla will sell a lot of cars,
+so Tesla stock goes up, which lets Tesla raise a bunch of new capital, which
+helps Tesla sell a lot of cars.&lt;/p&gt;
+
+&lt;h4 id=&quot;second-half-of-the-chessboard&quot;&gt;Second Half of the Chessboard&lt;/h4&gt;
+
+&lt;p&gt;Put one grain of rice on the first chessboard square, two on the next, four on
+the next, then eight, then sixteen, etc, doubling the amount of rice on each
+square. When you’ve covered half the chessboard’s squares you’re dealing with
+an amount of rice that can fit in your lap; in the second half you quickly get
+to a pile that will consume an entire city. That’s how compounding works&lt;/p&gt;
+
+&lt;p&gt;slowly, then ferociously.&lt;/p&gt;
+
+&lt;h4 id=&quot;peter-principle&quot;&gt;Peter Principle&lt;/h4&gt;
+
+&lt;p&gt;Good workers will continue to be promoted until they end up in a role they’re
+bad at.&lt;/p&gt;
+
+&lt;h4 id=&quot;friendship-paradox&quot;&gt;Friendship Paradox&lt;/h4&gt;
+
+&lt;p&gt;On average, people have fewer friends than their friends have. Occurs because
+people with an abnormally high number of friends are more likely to be one of
+your friends. It’s a fundamental part of social network dynamics and makes most
+people feel less popular than they are.&lt;/p&gt;
+
+&lt;h4 id=&quot;hedonic-treadmill&quot;&gt;Hedonic Treadmill&lt;/h4&gt;
+
+&lt;p&gt;Expectations rise with results, so nothing feels as good as you’d imagine for
+as long as you’d expect.&lt;/p&gt;
+
+&lt;h4 id=&quot;positive-illusions&quot;&gt;Positive Illusions&lt;/h4&gt;
+
+&lt;p&gt;Excessively rosy views about the decisions you’ve made to maintain self-esteem
+in a world where everyone makes bad decisions all the time.&lt;/p&gt;
+
+&lt;h4 id=&quot;ironic-process-theory&quot;&gt;Ironic Process Theory&lt;/h4&gt;
+
+&lt;p&gt;Going out of your way to suppress thoughts makes those thoughts more prominent
+in your mind.&lt;/p&gt;
+
+&lt;h4 id=&quot;clustering-illusions&quot;&gt;Clustering Illusions&lt;/h4&gt;
+
+&lt;p&gt;Falsely assuming that the inevitable bunching of random results in a large
+sample indicates a trend.&lt;/p&gt;
+
+&lt;h4 id=&quot;foundational-species&quot;&gt;Foundational Species&lt;/h4&gt;
+
+&lt;p&gt;A single thing that plays an outsized role in supporting an ecosystem, whose
+loss would pull down many others with it. In nature kelp, algae, and coral. In
+business The Federal Reserve and Amazon.&lt;/p&gt;
+
+&lt;h4 id=&quot;bizarreness-effect&quot;&gt;Bizarreness Effect&lt;/h4&gt;
+
+&lt;p&gt;Crazy things are easier to remember than common things, providing a distorted
+sense of “normal.”&lt;/p&gt;
+
+&lt;h4 id=&quot;nonlinearity&quot;&gt;Nonlinearity&lt;/h4&gt;
+
+&lt;p&gt;Outputs aren’t always proportional to inputs, so the world is a barrage of
+massive wins and horrible losses that surprise people.&lt;/p&gt;
+
+&lt;h4 id=&quot;moderating-relationship&quot;&gt;Moderating Relationship&lt;/h4&gt;
+
+&lt;p&gt;The correlation between two variables depends on a third, seemingly unrelated
+variable. The quality of a marriage may be dependent on a spouse’s work project
+that’s causing stress.&lt;/p&gt;
+
+&lt;h4 id=&quot;denomination-effect&quot;&gt;Denomination Effect&lt;/h4&gt;
+
+&lt;p&gt;One hundred $1 bills feels like less money than one $100 bill. Also explains
+stock splits – buying 10 shares for $10 each feels cheaper than one share for
+$100.&lt;/p&gt;
+
+&lt;h4 id=&quot;woozle-effect&quot;&gt;Woozle Effect&lt;/h4&gt;
+
+&lt;p&gt;“A reliable way to make people believe in falsehoods is frequent repetition,
+because familiarity is not easily distinguished from truth.” - Daniel Kahneman.&lt;/p&gt;
+
+&lt;h4 id=&quot;google-scholar-effect&quot;&gt;Google Scholar Effect&lt;/h4&gt;
+
+&lt;p&gt;Scientific research depends on citing other research, and the research that
+gets cited the most is whatever shows up in the top results of Google Scholar
+searches, regardless of its contribution to the field.&lt;/p&gt;
+
+&lt;h4 id=&quot;inversion&quot;&gt;Inversion&lt;/h4&gt;
+
+&lt;p&gt;Avoiding problems can be more important than scoring wins.&lt;/p&gt;
+
+&lt;h4 id=&quot;gamblers-ruin&quot;&gt;Gambler’s Ruin&lt;/h4&gt;
+
+&lt;p&gt;Has many meanings, the most important of which is that playing a
+negative-probability game persistently enough guarantees going broke.&lt;/p&gt;
+
+&lt;h4 id=&quot;principle-of-least-effort&quot;&gt;Principle of Least Effort&lt;/h4&gt;
+
+&lt;p&gt;When seeking information, effort declines as soon as the minimum acceptable
+result is reached.&lt;/p&gt;
+
+&lt;h4 id=&quot;dunning-kruger-effect&quot;&gt;Dunning-Kruger Effect&lt;/h4&gt;
+
+&lt;p&gt;Knowing the limits of your intelligence requires a certain level of
+intelligence, so some people are too stupid to know how stupid they are.&lt;/p&gt;
+
+&lt;h4 id=&quot;knightian-uncertainty&quot;&gt;Knightian Uncertainty&lt;/h4&gt;
+
+&lt;p&gt;Risk that can’t be measured; admitting that you don’t know what you don’t know.&lt;/p&gt;
+
+&lt;h4 id=&quot;aumanns-agreement-theorem&quot;&gt;Aumann’s Agreement Theorem&lt;/h4&gt;
+
+&lt;p&gt;If you understand your opponent’s beliefs you cannot agree to disagree. If you
+agree to disagree it’s because one side doesn’t understand the other side’s
+view.&lt;/p&gt;
+
+&lt;h4 id=&quot;focusing-effect&quot;&gt;Focusing Effect&lt;/h4&gt;
+
+&lt;p&gt;Overemphasizing factors that seem important but exist as part of a complex
+system. People from the Midwest assume Californians are happier because the
+weather is better, but they’re not because Californians also deal with traffic,
+bad bosses, unhappy marriages, etc, which more than offset the happiness boost
+from sunny skies.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-middle-ground-fallacy&quot;&gt;The Middle Ground Fallacy&lt;/h4&gt;
+
+&lt;p&gt;Falsely assuming that splitting the difference between two polar opposite views
+is a healthy compromise. If one person says vaccines cause autism and another
+person says they don’t, it’s not right to compromise and say vaccines sometimes
+cause autism.&lt;/p&gt;
+
+&lt;h4 id=&quot;rebound-effect&quot;&gt;Rebound Effect&lt;/h4&gt;
+
+&lt;p&gt;New symptoms, or supercharged old symptoms, emerge when medicine or other
+protections are withdrawn.&lt;/p&gt;
+
+&lt;h4 id=&quot;ostrich-effect&quot;&gt;Ostrich Effect&lt;/h4&gt;
+
+&lt;p&gt;Avoiding negative information that might challenge views that you desperately
+want to be right.&lt;/p&gt;
+
+&lt;h4 id=&quot;founders-syndrome&quot;&gt;Founder’s Syndrome&lt;/h4&gt;
+
+&lt;p&gt;When a CEO is so emotionally invested in a company that they can’t effectively
+delegate decisions.&lt;/p&gt;
+
+&lt;h4 id=&quot;in-group-favoritism&quot;&gt;In-Group Favoritism&lt;/h4&gt;
+
+&lt;p&gt;Giving preference to people from your social group regardless of their
+objective qualifications.&lt;/p&gt;
+
+&lt;h4 id=&quot;bounded-rationality&quot;&gt;Bounded Rationality&lt;/h4&gt;
+
+&lt;p&gt;People can’t be fully rational because your brain is a hormone machine, not an
+Excel spreadsheet.&lt;/p&gt;
+
+&lt;h4 id=&quot;luxury-paradox&quot;&gt;Luxury Paradox&lt;/h4&gt;
+
+&lt;p&gt;The more expensive something is the less likely you are to use it, so the
+relationship between price and utility is an inverted U. Ferraris sit in
+garages; Hondas get driven.&lt;/p&gt;
+
+&lt;h4 id=&quot;meat-paradox&quot;&gt;Meat Paradox&lt;/h4&gt;
+
+&lt;p&gt;Dogs are family, pigs are food. Some animals classified as food are wrongly
+perceived to have lower intelligence than those classified as pets. An example
+of morality depending on utility.&lt;/p&gt;
+
+&lt;h4 id=&quot;fluency-heuristic&quot;&gt;Fluency Heuristic&lt;/h4&gt;
+
+&lt;p&gt;Ideas that can be explained simply are more likely to be believed than those
+that are complex, even if the simple-sounding ideas are nonsense. It occurs
+because ideas that are easy to grasp are hard to distinguish from ideas you’re
+familiar with.&lt;/p&gt;
+
+&lt;h4 id=&quot;historical-wisdom&quot;&gt;Historical Wisdom&lt;/h4&gt;
+
+&lt;p&gt;“The dead outnumber the living 14 to 1, and we ignore the accumulated
+experience of such a huge majority of mankind at our peril.” – Niall Ferguson&lt;/p&gt;
+
+&lt;h4 id=&quot;fact-check-scarcity-principle&quot;&gt;Fact-Check Scarcity Principle&lt;/h4&gt;
+
+&lt;p&gt;This article is called 100 Little Ideas but there are fewer than 100 ideas. 99%
+of readers won’t notice because they’re not checking, and most of those who
+notice won’t say anything. Don’t believe everything you read.&lt;/p&gt;
+
+&lt;h4 id=&quot;emotional-contagion&quot;&gt;Emotional Contagion&lt;/h4&gt;
+
+&lt;p&gt;One person’s emotions trigger the same emotions in other people, because
+evolution has selected for empathizing with those in your social group whose
+actions you rely on.&lt;/p&gt;
+
+&lt;h4 id=&quot;tribal-affiliation&quot;&gt;Tribal Affiliation&lt;/h4&gt;
+
+&lt;p&gt;Beliefs can be swayed by identity and a desire to fit in over rational
+analysis. There is little correlation between climate change denial and
+scientific literacy. But there is a strong correlation between climate change
+denial and political affiliation.&lt;/p&gt;
+
+&lt;h4 id=&quot;emotional-competence&quot;&gt;Emotional Competence&lt;/h4&gt;
+
+&lt;p&gt;The ability to recognize others’ emotions and respond to them productively.
+Harder and rarer than it sounds.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 01 Mar 2020 00:00:00 -0500</pubDate>
