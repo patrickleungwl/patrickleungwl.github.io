@@ -3,11 +3,96 @@
   <channel>
     <title></title>
     <description>Minimalist Jekyll theme for technical writing blog.</description>
-    <link>https://patrickleungwl.github.io/</link>
-    <atom:link href="https://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Apr 2020 02:19:17 -0400</pubDate>
-    <lastBuildDate>Sun, 26 Apr 2020 02:19:17 -0400</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 29 Nov 2020 17:32:22 -0500</pubDate>
+    <lastBuildDate>Sun, 29 Nov 2020 17:32:22 -0500</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Potpourri of items</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;import-module-versus-from-module-import-foo-in-python&quot;&gt;Import module versus from module import foo in Python&lt;/h3&gt;
+
+&lt;p&gt;This question had always bugged me.  There are two ways to import
+modules in Python.&lt;/p&gt;
+
+&lt;h4 id=&quot;import-module&quot;&gt;import module&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Simplest way to import a module&lt;/li&gt;
+  &lt;li&gt;However must require using the name of the module as a prefix before
+a module’s class or function- like &lt;em&gt;module.foo&lt;/em&gt;.  One way around this is
+to use &lt;em&gt;import module as mo&lt;/em&gt;.  Then you can use &lt;em&gt;mo.foo&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;from-module-import-foo&quot;&gt;from module import foo&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No need to use module namespace prefix to use foo.  Can import individual functions or classes.&lt;/li&gt;
+  &lt;li&gt;However, problem with no module namespace prefix means readers have no idea where a function
+or class comes from.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;from module import *&lt;/em&gt; adds all items from module into current namespace- which is horrible.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-zen-of-python&quot;&gt;The Zen of Python&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/python/peps/blob/master/pep-0020.txt&quot;&gt;From Python Python Enhancement Proposal (PEP) #20&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;the-agile-manifesto&quot;&gt;The Agile Manifesto&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../../assets/images/202011/AgileManifesto.jpg&quot; alt=&quot;Agile Manifesto&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;scrum&quot;&gt;Scrum&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../../assets/images/202011/Scrum.jpg&quot; alt=&quot;Scrum&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;lean-software&quot;&gt;Lean Software&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../../assets/images/202011/LeanSoftware.jpg&quot; alt=&quot;Lean&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 28 Nov 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2020/potpourri/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/potpourri/</guid>
+        
+        <category>patterns</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>What's my Motivation?</title>
@@ -52,8 +137,8 @@ no doubt about it.&lt;/li&gt;
 
 </description>
         <pubDate>Sat, 25 Apr 2020 00:00:00 -0400</pubDate>
-        <link>https://patrickleungwl.github.io/2020/motivation/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/motivation/</guid>
+        <link>http://localhost:4000/2020/motivation/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/motivation/</guid>
         
         <category>patterns</category>
         
@@ -597,8 +682,8 @@ Harder and rarer than it sounds.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 01 Mar 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/many-ideas/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/many-ideas/</guid>
+        <link>http://localhost:4000/2020/many-ideas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/many-ideas/</guid>
         
         <category>patterns</category>
         
@@ -647,8 +732,8 @@ git push heroku master (deploys code to virtual machine)
 
 </description>
         <pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/heroku-howto/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/heroku-howto/</guid>
+        <link>http://localhost:4000/2020/heroku-howto/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/heroku-howto/</guid>
         
         <category>history</category>
         
@@ -719,8 +804,8 @@ free-flowing information- which may be critical for the health of the company.&l
 
 </description>
         <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/the-hard-things/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/the-hard-things/</guid>
+        <link>http://localhost:4000/2020/the-hard-things/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/the-hard-things/</guid>
         
         <category>books</category>
         
@@ -763,8 +848,8 @@ best-&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 08 Feb 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/cpp-explicit-keyword/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/cpp-explicit-keyword/</guid>
+        <link>http://localhost:4000/2020/cpp-explicit-keyword/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/cpp-explicit-keyword/</guid>
         
         <category>cpp</category>
         
@@ -831,8 +916,8 @@ minnie 150
 
 </description>
         <pubDate>Fri, 07 Feb 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/cpp-multimaps/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/cpp-multimaps/</guid>
+        <link>http://localhost:4000/2020/cpp-multimaps/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/cpp-multimaps/</guid>
         
         <category>cpp</category>
         
@@ -917,8 +1002,8 @@ m2 2-&amp;gt;world
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 06 Feb 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/cpp-initialising-containers/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/cpp-initialising-containers/</guid>
+        <link>http://localhost:4000/2020/cpp-initialising-containers/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/cpp-initialising-containers/</guid>
         
         <category>cpp</category>
         
@@ -957,8 +1042,8 @@ investors.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 11 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/who-gets-what/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/who-gets-what/</guid>
+        <link>http://localhost:4000/2020/who-gets-what/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/who-gets-what/</guid>
         
         <category>books</category>
         
@@ -1261,29 +1346,13 @@ was known as the &quot;carry trade&quot; or the &quot;positive carry trade.&quot
 
 </description>
         <pubDate>Fri, 10 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/colossal_failure/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/colossal_failure/</guid>
+        <link>http://localhost:4000/2020/colossal_failure/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/colossal_failure/</guid>
         
         <category>history</category>
         
         
         <category>history</category>
-        
-      </item>
-    
-      <item>
-        <title>Laws of Investing</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://www.collaborativefund.com/blog/the-laws-of-investing/&quot;&gt;Laws of Investing&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
-        <link>https://patrickleungwl.github.io/2019/laws-of-investing/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2019/laws-of-investing/</guid>
-        
-        <category>patterns</category>
-        
-        
-        <category>investing</category>
         
       </item>
     
