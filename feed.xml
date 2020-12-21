@@ -5,9 +5,9 @@
     <description>Minimalist Jekyll theme for technical writing blog.</description>
     <link>https://patrickleungwl.github.io/</link>
     <atom:link href="https://patrickleungwl.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Dec 2020 22:06:19 -0500</pubDate>
-    <lastBuildDate>Sat, 19 Dec 2020 22:06:19 -0500</lastBuildDate>
-    <generator>Jekyll v3.8.6</generator>
+    <pubDate>Mon, 21 Dec 2020 15:28:33 -0500</pubDate>
+    <lastBuildDate>Mon, 21 Dec 2020 15:28:33 -0500</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>What's so good about pytest?</title>
@@ -34,8 +34,8 @@ about pytest?  Here is a summary:&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;pytest-xdist, pytest test.py -n 3, run tests on 3 parallel processes&lt;/li&gt;
       &lt;li&gt;parameterized, decorate test function with @parameterized.expand([‘a’,’b’,’c’])&lt;/li&gt;
-      &lt;li&gt;pytest-flake8, pytest –flake8, check code against PEP8 standards&lt;/li&gt;
-      &lt;li&gt;pytest-html, pytest –html=rep.html, generate pretty test result report&lt;/li&gt;
+      &lt;li&gt;pytest-flake8, pytest --flake8, check code against PEP8 standards&lt;/li&gt;
+      &lt;li&gt;pytest-html, pytest --html=rep.html, generate pretty test result report&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -44,7 +44,7 @@ about pytest?  Here is a summary:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;-v, -vv, -vvv: verbose and very verbose, very very verbose&lt;/li&gt;
-  &lt;li&gt;–pdb: start pdb debugger when a test fails&lt;/li&gt;
+  &lt;li&gt;--pdb: start pdb debugger when a test fails&lt;/li&gt;
   &lt;li&gt;-k: run only certain tests using a keyword filter&lt;/li&gt;
   &lt;li&gt;-s: to display program stdout output while tests are running instead of after failure&lt;/li&gt;
   &lt;li&gt;-x: exit after first failure&lt;/li&gt;
@@ -96,7 +96,7 @@ or class comes from.&lt;/li&gt;
 &lt;h3 id=&quot;the-zen-of-python&quot;&gt;The Zen of Python&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/python/peps/blob/master/pep-0020.txt&quot;&gt;From Python Python Enhancement Proposal (PEP) #20&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Beautiful is better than ugly.
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
 Complex is better than complicated.
@@ -746,56 +746,6 @@ Harder and rarer than it sounds.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Heroku Notes</title>
-        <description>&lt;h4 id=&quot;quick-notes&quot;&gt;Quick Notes&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;File system - data written to the file system when the virtual server
-restarts.  Use a shared file storage system such as AWS S3 instead.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sharing state across multiple servers- requires a distributed store like
-Memcached.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Dependency management - requires language specific tools like 
-Bundler for Ruby or Ivy or Java&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Dyno- a dyno is a standard unit of virtual server capability.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Logs- to see logs, do   heroku logs –tail&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;steps&quot;&gt;Steps&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;heroku login
-in folder container git repository
-heroku create (this creates an application in heroku to contain the git code
-it also sets the app to point to the git repo)
-git push heroku master (deploys code to virtual machine)
-
-
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
-        <link>https://patrickleungwl.github.io/2020/heroku-howto/</link>
-        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/heroku-howto/</guid>
-        
-        <category>history</category>
-        
-        
-        <category>history</category>
-        
-      </item>
-    
-      <item>
         <title>The Hard Thing About Hard Things</title>
         <description>&lt;p&gt;Just read Ben Horowitz’s “The Hard Thing About Hard Things”. 
 Here are some take-aways that I find useful.&lt;/p&gt;
@@ -954,7 +904,7 @@ multiple instances of the same key!  How does this work?&lt;/p&gt;
 
 &lt;p&gt;After executing this function:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mickey count 2
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mickey count 2
 minnie count 3
 mickey 100
 mickey 200
@@ -1047,7 +997,7 @@ containers.&lt;/p&gt;
 
 &lt;p&gt;The result of running these two functions:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;m1 1-&amp;gt;hello
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;m1 1-&amp;gt;hello
 m1 2-&amp;gt;world
 m1 failed to insert great!
 m2 1-&amp;gt;hello
@@ -1102,6 +1052,310 @@ investors.&lt;/p&gt;
         
         
         <category>books</category>
+        
+      </item>
+    
+      <item>
+        <title>A Colossal Failure</title>
+        <description>&lt;p&gt;Lawrence McDonald’s “A Colossal Failure of Common Sense” read like a 
+work of fiction- a real page-turner- but the events that led to the 
+downfall of Lehman Brothers happened in an unreal era not too long ago.  I’ve 
+decided to save some prized passages here:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#fu&quot;&gt;On fuck-ups&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ep&quot;&gt;On executive presense and decision making&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#td&quot;&gt;Triumph with Delta bonds&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#mg&quot;&gt;Mike Gelband’s farewall&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lm&quot;&gt;Larry McCarthy’s farewell&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ct&quot;&gt;The carry trade&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a name=&quot;fu&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;on-fuck-ups&quot;&gt;On fuck-ups:&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The trading floor is an arena of instant decisions: all traders
+are called to make markets all the time, to price the stock,
+price the bonds, buy, sell, or hold.  And I'd just make a
+mistake.  A big one.  There was nowhere to turn.  No one could
+help.  My word was my bond.  There was no going back.
+   
+Which was precisely when Rich Gatward appeared on my left
+shoulder, like the angel of death. 
+
+&quot;The Calpine trade ... what delta did you do it on?&quot;  The equity
+trading floor around me suddenly seemed like like the petrified
+forest.  It always does when Gatward comes over.  Everyone stops,
+watching for the scene to unfold.  I knew only one thing: I'd
+shorted only half the stock I should have.
+
+Ah...er...Rich, I did it on a 30, but I probably should have done
+it on a 60.&quot; &quot;What's this word _probably_ -- what do you mean by
+that&quot; &quot;Er..I mean we should have done the trade on a 60 delta...&quot;
+&quot;How many shares of stock do you need to sell right now to be
+hedged?&quot;
+
+I grappled for the bond calculator on the screen and hit the
+buttons as my entire career flashed before my eyes, the way it
+does, I believe, when you face instant death. 
+
+&quot;Forty-five thousand two hundred, Rich.&quot; &quot;Well, don't look at me.
+Sell the fucking stock,&quot; he snapped. 
+
+I could feel every eye on the floor trained on me, and he was not
+finished yet. &quot;If you're gonna work on my desk, you don't fly
+blind.  You'd better know your deltas to the fucking penny.&quot; 
+
+&quot;You're right.  I screwed up, and I'm sorry.  It won't happen
+again.&quot; 
+
+&quot;You're goddamned right it won't, becuase if it does we're going
+to have a big fucking probllem. Do you understand that?&quot;
+
+&quot;Yes, I do.  It was a mistake.  It won't happen again.  I'm
+sorry.&quot;
+
+&quot;You'd better be fucking sorry.  Right here we're dealing with
+the firm's capital.  You're on my watch, and I have an eye on
+every fucking penny of risk on this desk- and if you have a
+problem with that, you can get the fuck out.&quot;
+
+And with that he stormed off, back to his desk.  It was as if the
+entire place could breathe again.  People went back to work and
+the whole shouting, yelling, tempestuous atmosphere of the
+trading floor swiftly resumed business as usual. 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a name=&quot;ep&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;on-executive-presense-and-decision-making&quot;&gt;On executive presense and decision making&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...I twice thought I saw my ultimate boss, Alex Kirk, Lehman's
+global head of high-yield and leveraged-loan business, and a huge
+power in the land, look just a tad hard-faced at some of the more
+optimistic assumptions coming from the guys who walked on water
+(the mortgage guys).  On anyone else I might not have noticed,
+but Alex was a terrific guy of very even temperament, displaying
+nerves of steel in all of our trading sorties.  He was six feet
+tall, had an extremely commanding presence, and was never prone
+to unnecessary displays of emotion.
+
+My observation took place at one of our 7AM meetings.  The
+discussion was about the US real estate market, and I thought I
+noticed osmething.  It wasn't a lapse in concentration, because
+he was listening intently, no doubt about that.  But for just a
+split second I thought he might say something, and I sensed it
+might be an unfavorable comment.  But whatever it was, he reined
+himself in and said nothing.
+
+Just before we broke up, to return to the trading floor, I
+thought I noticed it again.  And once more the subject was
+property.  But once more our leader refrained from making a
+comment, and I never gave it another thought.  At least not until
+we were outside the room.  That was when Alex pulled Larry
+McCarthy and me aside and looked at us with a deadly serious
+expression. 
+
+&quot;This housing market,&quot; he snapped, &quot;it's 'roided up.&quot; ... &quot;This
+whole thing is fucking ridiculous,&quot; he confirmed, obviously not
+wanting to sugarcoat the issue completely.  And then he added,
+just for good measure, &quot;This market is on fucking steriods.&quot;
+
+The three of us just stood there.  And for once Larry was lost for
+words.  He looked straight at Alex, nodded curtly, and held out
+his right hand.  I watched them shake.  I witnessed an unspoken
+bond forged between them.  And it was not convertible.  We might
+as well, all three of us, have cut our thumbs with a bowie knife
+and allowed our blood to mingle, because right there outside that
+conference room we three had locked our minds into a potential
+mutiny.  And it was one I think we all sensed might one day save
+this organization, which to a man we believed could be heading
+for very serious trouble.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a name=&quot;td&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;triumph-with-delta-bonds&quot;&gt;Triumph with Delta bonds:&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;US Air just made a hostile bid for Delta.  At least fifty-five
+cents on the dollar for the bonds.&quot; 
+
+I think I nearly died of happiness.  Chills ran up my spine, and
+my pulse was racing as I headed up to the trading floor...I was
+just running the numbers through my mind, and the key ones were
+there we now owned about $750 million worth, face value of the
+bonds and we'd bought most of them for well under 25 cents on the
+dollar. 
+...
+It was not yet seven o'clock, but by now everyone in the entire
+bank knew about the drama, and a lot of them knew we were about
+to make a colossal fortune for the firm.  The atmosphere was
+electric, nothing less, as our group moved into gear, because
+trading was expected to start early, maybe around seven-thirty.
+
+The place was packed, and every single eye was on us, especially
+me, the market maker.  But suddenly there was a shift of focus,
+and we turned to the entrace to the trading floor to see Jane
+Castle walking in.  A huge burst of applause broke out, a
+spontaneous cry of joy, just for her.  Through all the months,
+through all the doubts and all the fears, she'd never wavered in
+her valuation of Delta Air Lines, and everyone knew it. 
+
+The smile on her face would have lit up Yankee Stadium, and she
+walked straight up to me and gave me a sweeping high five that
+darn nearly broke my wrist.  Moments later Larry came in, wearing
+a brand-new suit and looking like the king of the world, and
+another burst of applause ripped into the mourning air.  When it
+died down, he looked over to Joe Beggans, who was about to start
+trading the Delta bonds, and, with a huge grin on his face, held
+out his hand and shouted, &quot;Gimme the keys, Joe.  I'm driving!&quot;
+The whole place erupted. 
+
+... The rest remains a blur until the moment Larry McCarthy
+decided to get out.  &quot;Okay, guys.  Let's go,&quot; he called, and, for
+the first time for almost a year, we began to divest ourselves of
+the Delta bonds.  Larry launched them onto the market with
+consummate skill, knowing, of course, that US Air was out there
+waiting, begging to buy.  By the time he had finished, Lehman had
+made a $250 million profit, the larget one-day triumph in the
+history of Lehman Brothers bond trading.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a name=&quot;mg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;mike-gelbands-farewell&quot;&gt;Mike Gelband’s farewell&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The news broke the following morning on the Bloomberg tape, and
+Larry McCarthy was not so much shocked as shattered.  Mike
+Gelband was his linesman, our blocker, the big hitter who was a
+huge sponsor of all of our risk and short positions.  He'd had
+the most phenomenal career, punctuated by success after success.
+In a democracy he'd have been swept to power, most certainly by
+Larry McCarthy, who regarded him as the most talented guy in the
+building.  The chairman and his deputy had somehow found a way to
+lose him, and that had to rank as one of the most stupid acts
+he'd ever seen anyone do- anywhere.
+
+On the day Mike left, May 2 2007, everyone trooped down to the
+third floor around eleven to say good-bye.  So many people wanted
+to shake his hand that a huge receiving line formed.  Everyone
+owed him something.  He was such a big part of our strength and
+standing in the corporation.  His presense made us count.  Some
+of the women were in tears as the great Lehman banker moved from
+friend to friend.  How could anything ever be the same again. 
+
+Mike could have saved his job, could have gone on collecting $10
+to $20 million a year, every dollar of it earned.  But he was not
+that kind of guy.  Like Larry, Mike was certain we were steaming
+toward the iceberg, with a balance sheet he thought was
+catastrophically overleveraged.  He had to be true not only to
+the firm but to himself,and he could not countenance the wishes of
+the chairman.  And so he walked away from one of the highest
+paying jobs on Wall Street, walked away from those enormous
+earnings.  It took a real man to do that. 
+
+He came over to say a last good-bye to Larry, Joe, and me.  And
+there was a strange silence throughout the trading floor as he
+did so.  When he finally turned away and walked toward the door,
+there was a sustained and heartfelt burst of applause- not the
+raucous outpouring that greets a touchdown or a home run, just a
+fierce clapping of hands, like the kind that greets a pitcher
+when he's finally relieved in the eighth with his team out in
+front after a long job, brilliantly done.  For the record, he did
+turn around one last time and, typically, just smiled and nodded
+to his fans.  If he'd been wearing a cap, he would have doffed
+it- for the good times.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a name=&quot;lm&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;larry-mccarthys-farewell&quot;&gt;Larry McCarthy’s farewell&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;I told them I'd heard a lot about Dick Fuld over the years.
+He's a former commercial paper trader, but not once, not one time
+in all my years here, did I ever see him on the trading floor.
+Not even on the day me and the guys had the single most
+profitable day in the history of Lehman's fixed-income division-
+two hundred fifty million clams, and the guy's a no-show.&quot;
+
+It's hard for Captain Cool to show outage.  But I could see it on
+his face at that moment, just at the memory of that shining day
+when we sold the Delta bonds and never even received a note or a
+handshake from the head of the corporation. 
+
+&quot;I said I just thought it was very odd, that's all- a pretty
+unusual way to stay close to your troops.&quot;
+
+For the rest of the morning Larry walked around saying his
+goodbyes and spending time with the support staff.  He told me he
+was leaving the building right after lunch, but he didn't mention
+precisely what lunch would mean on this day.  It turned out he'd
+ordered twenty carts of food from the outstanding steakhouse Ben
+Benson's.  That's where he ate, and that was the food he wanted
+for his guys.  When fifteen waiters started pushing them in I
+thought the A train had veered off its tracks.  There were huge
+metal trays of prime rib, filets, porterhouses, creamed spinach,
+mountains of potatoes.  There was enough shrimp and lobster to
+feed the population of Martha's Vineyard.  Larry had decried, &quot;No
+plastic,&quot; so there was only the finest cutlery and linen napkins.
+The feast cost him around $14,000.
+
+He and I talked quietly while we dined, and he came up with some
+true McCarthyisms- &quot;Never tell anyone on Wall Street your
+problems, old buddy.  Ninety percent of those you tell don't
+care, and the other ten percent are glad you have them.&quot;
+
+...
+
+There were eighteen rows of people between Larry and the door,
+and one by one they stood up and applauded as he walked past,
+just as they had with Mike.  
+
+Larry never looked back.  But just before he reached the glass
+doors, he raised a clenched right fist high in the air.  And then
+he was gone.  Something in the soul of Lehman Brothers was gone
+with him, and it never came back as we steamed ever onward toward
+Larry's iceberg.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a name=&quot;ct&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;the-carry-trade&quot;&gt;The carry trade&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;For a start, commercial paper is short-term money, loaned out for
+thirty to forty days or less.  This market is used by the biggest
+and best blue-chip companies.  Commercial paper is the quickest,
+cheapest, and easiest way for them to raise a fast loan that is
+not registed by the SEC.  As an example, say Bear Stearns goes to
+JPMorganChase and requests a $500 million loan for fourteen days.
+Question- would you lend Bear Stearns half a billion dollars just
+a couple of weeks when they were backing it with AAA-rated
+mortgage bonds and willing to pay 5 percent interest?  Answer:
+probably yes, since that would mean a $959,000 profit.
+
+Now JPMorganChase isn't going to offer up that $500 million to
+any old applicant.  But Bear Stearns is a highly respected bank,
+and they've done something similar many times before.  The same
+would apply to Lehman, Morgan Stanley, ... or Countrywide.  All
+of them have always paid back, with the interest, right on time.
+But in many cases they paid back with money from another
+short-term paper loan they'd borrow from someone else. For banks
+with blue-chip lines of credit, it was possible to keep a huge
+loan rolling for months and months, paying back with borrowed
+money over andover.  Simply put, they were taking short-term
+borrowed money and investing in longer-term mortgage-backed
+securities that paid a higher yield.  In Wall Street jargon, this
+was known as the &quot;carry trade&quot; or the &quot;positive carry trade.&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 10 Jan 2020 00:00:00 -0500</pubDate>
+        <link>https://patrickleungwl.github.io/2020/colossal_failure/</link>
+        <guid isPermaLink="true">https://patrickleungwl.github.io/2020/colossal_failure/</guid>
+        
+        <category>history</category>
+        
+        
+        <category>history</category>
         
       </item>
     
