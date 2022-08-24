@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
     
     
       
@@ -17,11 +17,12 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1c3799f8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -35,7 +36,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -247,6 +248,34 @@
     <li class="md-nav__item">
       <a href="../../../2022/ModernCpp/CuriousUseOfTemplates/" class="md-nav__link">
         Curious Use of Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2022/ModernCpp/Features/" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2022/ModernCpp/MakeTips/" class="md-nav__link">
+        Make Tips
       </a>
     </li>
   
@@ -1587,6 +1616,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../cheats/journalctl/" class="md-nav__link">
+        journalctl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../cheats/nix/" class="md-nav__link">
         Nix
       </a>
@@ -1678,53 +1721,82 @@
 
 <hr />
 <h3 id="the-man-in-the-arena">The Man In The Arena</h3>
-<pre><code>&quot;It is not the critic who counts; 
-not the man who points out how the strong man stumbles, 
-or where the doer of deeds could have done them better.
-The credit belongs to the man who is actually in the area,
-whose face is marred by dust and sweat and blood;
-who strives valiantly; 
-who errs, who comes short again and again,
-because there is no effort without error and shortcoming;
-but who does actually strive to do the deeds;
-who knows great enthusiams, the great devotions;
-who spends himself in a worthy cause;
-who at the best knows in the end the triumph of high achievement,
-and who at the worst, 
-if he fails, at least fails while daring greatly,
-so that his place shall never be with those cold and
-timid souls who neither know victory or defeat.&quot; 
-</code></pre>
-<p><em>Thedore Roosevelt</em></p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>&quot;It is not the critic who counts; 
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>not the man who points out how the strong man stumbles, 
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>or where the doer of deeds could have done them better.
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>The credit belongs to the man who is actually in the area,
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>whose face is marred by dust and sweat and blood;
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>who strives valiantly; 
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>who errs, who comes short again and again,
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>because there is no effort without error and shortcoming;
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>but who does actually strive to do the deeds;
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>who knows great enthusiams, the great devotions;
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>who spends himself in a worthy cause;
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>who at the best knows in the end the triumph of high achievement,
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>and who at the worst, 
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>if he fails, at least fails while daring greatly,
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>so that his place shall never be with those cold and
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>timid souls who neither know victory or defeat.&quot; 
+</code></pre></div></td></tr></table></div>
+<em>Thedore Roosevelt</em></p>
 <hr />
 <h3 id="no-limits">No Limits</h3>
 <p><img src="../../../../../assets/images/201604/BruceLee.NoLimits.jpg"
 width="480" height="340" >
 .</p>
-<pre><code>&quot;If you always put limit on everything you do, 
-physical or anything else it will spread into 
-your work and into your life.  
-
-There are no limits.
-
-There are only plateaus, 
-and you must not stay there, 
-you must go beyond them.&quot;
-</code></pre>
-<p><em>Bruce Lee</em></p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&quot;If you always put limit on everything you do, 
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>physical or anything else it will spread into 
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>your work and into your life.  
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>There are no limits.
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>There are only plateaus, 
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>and you must not stay there, 
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>you must go beyond them.&quot;
+</code></pre></div></td></tr></table></div>
+<em>Bruce Lee</em></p>
 <hr />
 <h3 id="never-forget">Never Forget</h3>
 <p><img src="../../../../../assets/images/201604/BruceLee.Absorb.jpg"
 width="480" height="340" >
 .</p>
-<pre><code>Absort what is useful.  
-Discard what is not.  
-Add what is uniquely your own.&quot;
-</code></pre>
-<p><em>Bruce Lee</em></p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Absort what is useful.  
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Discard what is not.  
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>Add what is uniquely your own.&quot;
+</code></pre></div></td></tr></table></div>
+<em>Bruce Lee</em></p>
+
+
+
 
               
             </article>
+            
           </div>
         </div>
         
@@ -1732,7 +1804,8 @@ Add what is uniquely your own.&quot;
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../2016-04-02-tech-to-study/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tech to Study" rel="prev">
@@ -1787,10 +1860,11 @@ Add what is uniquely your own.&quot;
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
       
     
   </body>

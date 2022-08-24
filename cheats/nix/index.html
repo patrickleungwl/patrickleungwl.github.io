@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
     
     
       
@@ -17,11 +17,12 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1c3799f8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -35,7 +36,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -247,6 +248,34 @@
     <li class="md-nav__item">
       <a href="../../2022/ModernCpp/CuriousUseOfTemplates/" class="md-nav__link">
         Curious Use of Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/ModernCpp/Features/" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/ModernCpp/MakeTips/" class="md-nav__link">
+        Make Tips
       </a>
     </li>
   
@@ -1532,6 +1561,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../journalctl/" class="md-nav__link">
+        journalctl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -1605,15 +1648,23 @@
 
 
 <h1 id="nix">Nix</h1>
-<pre><code>find . -name &quot;pattern&quot;          # find any objects with a name pattern
-find . -name &quot;pattern&quot; -type f  # find any files with a name pattern
-find . -mtime -1                # find any objects modified within the past day
-find . -name &quot;regex_abc&quot; -type f -exec grep -nH regex_xyz {} \;
-        # find any file with regex_abc whose contents contain regex_xyz
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>find . -name &quot;pattern&quot;          # find any objects with a name pattern
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>find . -name &quot;pattern&quot; -type f  # find any files with a name pattern
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>find . -mtime -1                # find any objects modified within the past day
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>find . -name &quot;regex_abc&quot; -type f -exec grep -nH regex_xyz {} \;
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        # find any file with regex_abc whose contents contain regex_xyz
+</code></pre></div></td></tr></table></div>
+
+
+
 
               
             </article>
+            
           </div>
         </div>
         
@@ -1621,10 +1672,11 @@ find . -name &quot;regex_abc&quot; -type f -exec grep -nH regex_xyz {} \;
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../git/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Git" rel="prev">
+        <a href="../journalctl/" class="md-footer__link md-footer__link--prev" aria-label="Previous: journalctl" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1633,7 +1685,7 @@ find . -name &quot;regex_abc&quot; -type f -exec grep -nH regex_xyz {} \;
               <span class="md-footer__direction">
                 Previous
               </span>
-              Git
+              journalctl
             </div>
           </div>
         </a>
@@ -1676,10 +1728,11 @@ find . -name &quot;regex_abc&quot; -type f -exec grep -nH regex_xyz {} \;
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
       
     
   </body>
