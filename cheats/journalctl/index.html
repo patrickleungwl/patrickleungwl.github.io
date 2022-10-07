@@ -22,6 +22,10 @@
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
       
       
     
@@ -31,8 +35,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono,+13:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono, 13"}</style>
       
     
     
@@ -50,7 +54,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="yellow">
   
     
     
@@ -229,12 +233,106 @@
       
       
         <label class="md-nav__link" for="__nav_2_1">
+          Finance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Finance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Finance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/Finance/Trading/" class="md-nav__link">
+        Trading
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/Linux/LinuxTips/" class="md-nav__link">
+        Linux Tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
           ModernCpp
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="ModernCpp" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           ModernCpp
         </label>
@@ -1695,41 +1793,26 @@
 
 <h1 id="journalctl">journalctl</h1>
 <h2 id="options">Options</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>-u (name)          unit name
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>-f                 follow
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>-n                 show last 10 entries
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>-n (num)           show last num entries
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>_PID=(pid)         process id
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>--no-full          truncate logs
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>--no-pager         do not page, can redirect to grep or disk
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>-a                 display all
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>-since (datetime)
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>-until (datetime)
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>-u (name)          unit name
+-f                 follow
+-n                 show last 10 entries
+-n (num)           show last num entries
+_PID=(pid)         process id
+--no-full          truncate logs
+--no-pager         do not page, can redirect to grep or disk
+-a                 display all
+-since (datetime)
+-until (datetime)
+</code></pre></div>
 <p>Datetime options include:
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&quot;2022-01-01 09:00:00&quot;
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>&quot;2022-01-01&quot;
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>09:00
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>today
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>yesterday
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>&quot;1 hour ago&quot;
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>&quot;10 minutes ago&quot;
-</code></pre></div></td></tr></table></div></p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>&quot;2022-01-01 09:00:00&quot;
+&quot;2022-01-01&quot;
+09:00
+today
+yesterday
+&quot;1 hour ago&quot;
+&quot;10 minutes ago&quot;
+</code></pre></div></p>
 
 
 

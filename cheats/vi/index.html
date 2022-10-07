@@ -22,6 +22,10 @@
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
       
       
     
@@ -31,8 +35,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono,+13:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono, 13"}</style>
       
     
     
@@ -50,7 +54,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="yellow">
   
     
     
@@ -229,12 +233,106 @@
       
       
         <label class="md-nav__link" for="__nav_2_1">
+          Finance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Finance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Finance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/Finance/Trading/" class="md-nav__link">
+        Trading
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/Linux/LinuxTips/" class="md-nav__link">
+        Linux Tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
           ModernCpp
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="ModernCpp" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           ModernCpp
         </label>
@@ -1821,91 +1919,63 @@
 
 <h1 id="vi">Vi</h1>
 <h2 id="finding-things">Finding things</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>f{c}         find the next instance of character 
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>F{c}         find the previous instance of character
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>/{pattern}   find the next instance of pattern
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>?{pattern}   find the previous instance of pattern
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>*            find the next instance of word under cursor
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>n            after find, go to the next instance
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>N            after find, go to the previous instance
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>f{c}         find the next instance of character 
+F{c}         find the previous instance of character
+/{pattern}   find the next instance of pattern
+?{pattern}   find the previous instance of pattern
+*            find the next instance of word under cursor
+n            after find, go to the next instance
+N            after find, go to the previous instance
+</code></pre></div>
 <h2 id="replacing-things">Replacing things</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>:s/old/new/g     replace old with new only on current line
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>:n,m s/old/new/g replace old with new only on lines n to m
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>:%s/old/new/g    replace old with new globally
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>                 %s is special symbol in ed for all rows in file
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>:s/old/new/g     replace old with new only on current line
+:n,m s/old/new/g replace old with new only on lines n to m
+:%s/old/new/g    replace old with new globally
+                 %s is special symbol in ed for all rows in file
+</code></pre></div>
 <h2 id="vital-ops">Vital ops</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>u                undo last sequence of change
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>u                undo last sequence of change
+</code></pre></div>
 <h2 id="buffers">Buffers</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>:e               select a file to edit from local folder
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>:ls              list loaded files in buffers
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>:bn              buffer next
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>:bp              buffer previous
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>:bdelete n       buffer delete n
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>:e               select a file to edit from local folder
+:ls              list loaded files in buffers
+:bn              buffer next
+:bp              buffer previous
+:bdelete n       buffer delete n
+</code></pre></div>
 <h2 id="windows">Windows</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Ctrl-w s         split horizontal window
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Ctrl-w v         split vertical window
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Ctrl-w h/j/k/l   window jump- up, down, left, right
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Ctrl-w Ctrl-w    window cycle
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>Ctrl-w c         close window
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>Ctrl-w =         resize window sizes all equal
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Ctrl-w s         split horizontal window
+Ctrl-w v         split vertical window
+Ctrl-w h/j/k/l   window jump- up, down, left, right
+Ctrl-w Ctrl-w    window cycle
+Ctrl-w c         close window
+Ctrl-w =         resize window sizes all equal
+</code></pre></div>
 <h2 id="visual-blocks">Visual blocks</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>v                select block by character
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>V                select block by line
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Ctrl-v           select block
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>v                select block by character
+V                select block by line
+Ctrl-v           select block
+</code></pre></div>
 <h2 id="moving-around">Moving around</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>$                jump to end of line
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>dw               delete word forward
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>daw              delete a word
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>dd               delete line
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>$                jump to end of line
+dw               delete word forward
+daw              delete a word
+dd               delete line
+</code></pre></div>
 <h2 id="reformatting">Reformatting</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>:set textwidth=65
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>v
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>gq
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>:set textwidth=65
+v
+gq
+</code></pre></div>
 <h2 id="bookmarks">Bookmarks</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>m(c)             mark position with character c
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>&#39;(c)             jump back to position c
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>m(c)             mark position with character c
+&#39;(c)             jump back to position c
+</code></pre></div>
 <h2 id="macros">Macros</h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>q(r)             record a macro to register r
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>@(r)             playback macro r
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>n@(r)            playback macro r n number of times
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>q(r)             record a macro to register r
+@(r)             playback macro r
+n@(r)            playback macro r n number of times
+</code></pre></div>
 
 
 

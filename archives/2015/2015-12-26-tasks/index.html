@@ -22,6 +22,10 @@
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
       
       
     
@@ -31,8 +35,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono,+13:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono, 13"}</style>
       
     
     
@@ -50,7 +54,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="yellow">
   
     
     
@@ -224,12 +228,106 @@
       
       
         <label class="md-nav__link" for="__nav_2_1">
+          Finance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Finance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Finance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2022/Finance/Trading/" class="md-nav__link">
+        Trading
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2022/Linux/LinuxTips/" class="md-nav__link">
+        Linux Tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
           ModernCpp
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="ModernCpp" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           ModernCpp
         </label>
@@ -1643,149 +1741,80 @@
   <h1>Using Tasks</h1>
 
 <p>Testing usage of Tasks today. </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C#</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span>
-<span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span>
-<span class="normal"><a href="#__codelineno-0-42">42</a></span>
-<span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span>
-<span class="normal"><a href="#__codelineno-0-45">45</a></span>
-<span class="normal"><a href="#__codelineno-0-46">46</a></span>
-<span class="normal"><a href="#__codelineno-0-47">47</a></span>
-<span class="normal"><a href="#__codelineno-0-48">48</a></span>
-<span class="normal"><a href="#__codelineno-0-49">49</a></span>
-<span class="normal"><a href="#__codelineno-0-50">50</a></span>
-<span class="normal"><a href="#__codelineno-0-51">51</a></span>
-<span class="normal"><a href="#__codelineno-0-52">52</a></span>
-<span class="normal"><a href="#__codelineno-0-53">53</a></span>
-<span class="normal"><a href="#__codelineno-0-54">54</a></span>
-<span class="normal"><a href="#__codelineno-0-55">55</a></span>
-<span class="normal"><a href="#__codelineno-0-56">56</a></span>
-<span class="normal"><a href="#__codelineno-0-57">57</a></span>
-<span class="normal"><a href="#__codelineno-0-58">58</a></span>
-<span class="normal"><a href="#__codelineno-0-59">59</a></span>
-<span class="normal"><a href="#__codelineno-0-60">60</a></span>
-<span class="normal"><a href="#__codelineno-0-61">61</a></span>
-<span class="normal"><a href="#__codelineno-0-62">62</a></span>
-<span class="normal"><a href="#__codelineno-0-63">63</a></span>
-<span class="normal"><a href="#__codelineno-0-64">64</a></span>
-<span class="normal"><a href="#__codelineno-0-65">65</a></span>
-<span class="normal"><a href="#__codelineno-0-66">66</a></span>
-<span class="normal"><a href="#__codelineno-0-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Threading</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Threading.Tasks</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">TestTasks</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">TasksTester</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">LogMsg</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="k">params</span><span class="w"> </span><span class="kt">object</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0} ThreadId={1} &quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">                </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;HH:MM:ss.fff&quot;</span><span class="p">),</span><span class="w"></span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">                </span><span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">ManagedThreadId</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DoWork</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">            </span><span class="n">LogMsg</span><span class="p">(</span><span class="s">&quot;Background worker starting&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">percentDone</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0.0f</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="p">++)</span><span class="w"></span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">            </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">                </span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">200</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">                </span><span class="n">percentDone</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="m">10.0f</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">            </span><span class="n">LogMsg</span><span class="p">(</span><span class="s">&quot;Background worker completed&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">            </span><span class="n">AutoResetEvent</span><span class="w"> </span><span class="n">ae</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">AutoResetEvent</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">            </span><span class="n">ae</span><span class="p">.</span><span class="n">Set</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">        </span><span class="c1">// RunTest</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">        </span><span class="c1">//</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">        </span><span class="c1">// Function run by main thread</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">        </span><span class="c1">// Main thread sets up the background worker instance</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">        </span><span class="c1">// and fires it off</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">RunTest</span><span class="p">()</span><span class="w"></span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">            </span><span class="n">AutoResetEvent</span><span class="w"> </span><span class="n">myFlag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AutoResetEvent</span><span class="p">(</span><span class="k">false</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">            </span><span class="c1">//Action&lt;object&gt; myAction = DoWork;</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">            </span><span class="c1">//var myBkTask = new Task(myAction, myFlag);</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">myBkTask</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Task</span><span class="p">(</span><span class="k">delegate</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">DoWork</span><span class="p">(</span><span class="n">myFlag</span><span class="p">);</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">            </span><span class="n">myBkTask</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">            </span><span class="n">LogMsg</span><span class="p">(</span><span class="s">&quot;Main thread worker waiting&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">            </span><span class="n">myFlag</span><span class="p">.</span><span class="n">WaitOne</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">            </span><span class="n">LogMsg</span><span class="p">(</span><span class="s">&quot;Main thread worker completed&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">        </span><span class="c1">// Main</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">        </span><span class="c1">// Start up a background worker test instance</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">testWkr</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TasksTester</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">            </span><span class="n">testWkr</span><span class="p">.</span><span class="n">RunTest</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="font-weight: bold">using</span> <span style="font-weight: bold">System</span>;
+<span style="font-weight: bold">using</span> <span style="font-weight: bold">System.Threading</span>;
+<span style="font-weight: bold">using</span> <span style="font-weight: bold">System.Threading.Tasks</span>;
+
+<span style="font-weight: bold">namespace</span> <span style="font-weight: bold">TestTasks</span>
+{
+    <span style="font-weight: bold">class</span> <span style="font-weight: bold">TasksTester</span>
+    {
+        <span style="font-weight: bold">private</span> <span style="font-weight: bold">void</span> LogMsg(<span style="font-weight: bold">string</span> msg, <span style="font-weight: bold">params</span> <span style="font-weight: bold">object</span>[] args)
+        {
+            Console.Out.Write(<span style="font-style: italic">&quot;{0} ThreadId={1} &quot;</span>,
+                DateTime.Now.ToString(<span style="font-style: italic">&quot;HH:MM:ss.fff&quot;</span>),
+                Thread.CurrentThread.ManagedThreadId);
+            Console.Out.WriteLine(msg, args);
+        }
+
+
+
+        <span style="font-weight: bold">private</span> <span style="font-weight: bold">void</span> DoWork(<span style="font-weight: bold">object</span> e)
+        {
+            LogMsg(<span style="font-style: italic">&quot;Background worker starting&quot;</span>);
+
+            <span style="font-weight: bold">float</span> percentDone = 0.0f;
+            <span style="font-weight: bold">for</span> (<span style="font-weight: bold">int</span> i = 0; i &lt; 10; i++)
+            {
+                Thread.Sleep(200);
+                percentDone += 10.0f;
+            }
+            LogMsg(<span style="font-style: italic">&quot;Background worker completed&quot;</span>);
+
+            AutoResetEvent ae = e <span style="font-weight: bold">as</span> AutoResetEvent;
+            ae.Set();
+        }
+
+
+        <span style="font-style: italic">// RunTest</span>
+        <span style="font-style: italic">//</span>
+        <span style="font-style: italic">// Function run by main thread</span>
+        <span style="font-style: italic">// Main thread sets up the background worker instance</span>
+        <span style="font-style: italic">// and fires it off</span>
+
+        <span style="font-weight: bold">public</span> <span style="font-weight: bold">void</span> RunTest()
+        {
+            AutoResetEvent myFlag = <span style="font-weight: bold">new</span> AutoResetEvent(<span style="font-weight: bold">false</span>);
+
+            <span style="font-style: italic">//Action&lt;object&gt; myAction = DoWork;</span>
+            <span style="font-style: italic">//var myBkTask = new Task(myAction, myFlag);</span>
+
+            <span style="font-weight: bold">var</span> myBkTask = <span style="font-weight: bold">new</span> Task(<span style="font-weight: bold">delegate</span> { DoWork(myFlag); });
+            myBkTask.Start();
+
+            LogMsg(<span style="font-style: italic">&quot;Main thread worker waiting&quot;</span>);
+            myFlag.WaitOne();
+            LogMsg(<span style="font-style: italic">&quot;Main thread worker completed&quot;</span>);
+        }
+
+
+        <span style="font-style: italic">// Main</span>
+        <span style="font-style: italic">// Start up a background worker test instance</span>
+
+        <span style="font-weight: bold">static</span> <span style="font-weight: bold">void</span> Main(<span style="font-weight: bold">string</span>[] args)
+        {
+            <span style="font-weight: bold">var</span> testWkr = <span style="font-weight: bold">new</span> TasksTester();
+            testWkr.RunTest();
+        }
+    }
+}
+</code></pre></div>
 <p>The output is- </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>19:05:47.041 ThreadId=1, Main thread worker waiting
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>19:05:47.060 ThreadId=3, Background worker starting
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>19:05:49.108 ThreadId=3, Background worker completed
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>19:05:49.108 ThreadId=1, Main thread worker completed
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>19:05:47.041 ThreadId=1, Main thread worker waiting
+19:05:47.060 ThreadId=3, Background worker starting
+19:05:49.108 ThreadId=3, Background worker completed
+19:05:49.108 ThreadId=1, Main thread worker completed
+</code></pre></div>
 
 
 

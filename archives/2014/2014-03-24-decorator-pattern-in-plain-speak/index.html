@@ -22,6 +22,10 @@
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
       
       
     
@@ -31,8 +35,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono,+13:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono, 13"}</style>
       
     
     
@@ -50,7 +54,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="yellow">
   
     
     
@@ -224,12 +228,106 @@
       
       
         <label class="md-nav__link" for="__nav_2_1">
+          Finance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Finance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Finance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2022/Finance/Trading/" class="md-nav__link">
+        Trading
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2022/Linux/LinuxTips/" class="md-nav__link">
+        Linux Tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
           ModernCpp
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="ModernCpp" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           ModernCpp
         </label>
@@ -1672,46 +1770,27 @@ in constructor.</li>
 <li>A <strong>ConcreteWrapper</strong> firmly adds new functionality to the wrapped Widget.</li>
 </ul>
 <p>In simple psuedo code terms- </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C#</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">AbstractWidget</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="k">abstract</span><span class="w"> </span><span class="nf">baseMethod</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">ConcreteWidget</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AbstractWidget</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="n">@Override</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="nf">baseMethod</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">AbstractWrapper</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AbstractWidget</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="n">AbstractWrapper</span><span class="p">(</span><span class="w"> </span><span class="n">AbstractWidget</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="n">@Override</span><span class="w"></span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="nf">baseMethod</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">ConcreteWrapper</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AbstractWrapper</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="n">ConcreteWrapper</span><span class="p">(</span><span class="w"> </span><span class="n">AbstractWidget</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="n">@Override</span><span class="w"></span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span><span class="nf">baseMethod</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>AbstractWidget {
+  <span style="font-weight: bold">abstract</span> baseMethod();
+}
+
+ConcreteWidget : AbstractWidget {
+  @Override
+  baseMethod();
+}
+
+AbstractWrapper : AbstractWidget {
+  AbstractWrapper( AbstractWidget )
+  @Override
+  baseMethod();
+}
+
+ConcreteWrapper : AbstractWrapper {
+  ConcreteWrapper( AbstractWidget )
+  @Override
+  baseMethod();
+}
+</code></pre></div>
 <p>To put this pattern into practical terms, let's imagine two types of automobiles- 
 HondaAccord and TeslaRoadster, each sold with two types of options- SunRoof and 
 TintedWindows.  Each combination of options- none, SunRoof only, TintedWindows 
@@ -1721,323 +1800,167 @@ boolean flags.  The problem with this model is that if we add a new option, we'd
 have to mess with the base car class.  The Decorator allows us to add new options 
 to a car without changing the base car class. </p>
 <p>The code sample below shows one possible Decorator implementation.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C#</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">  1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">  2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">  3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">  4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">  5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">  6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">  7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">  8</a></span>
-<span class="normal"><a href="#__codelineno-1-9">  9</a></span>
-<span class="normal"><a href="#__codelineno-1-10"> 10</a></span>
-<span class="normal"><a href="#__codelineno-1-11"> 11</a></span>
-<span class="normal"><a href="#__codelineno-1-12"> 12</a></span>
-<span class="normal"><a href="#__codelineno-1-13"> 13</a></span>
-<span class="normal"><a href="#__codelineno-1-14"> 14</a></span>
-<span class="normal"><a href="#__codelineno-1-15"> 15</a></span>
-<span class="normal"><a href="#__codelineno-1-16"> 16</a></span>
-<span class="normal"><a href="#__codelineno-1-17"> 17</a></span>
-<span class="normal"><a href="#__codelineno-1-18"> 18</a></span>
-<span class="normal"><a href="#__codelineno-1-19"> 19</a></span>
-<span class="normal"><a href="#__codelineno-1-20"> 20</a></span>
-<span class="normal"><a href="#__codelineno-1-21"> 21</a></span>
-<span class="normal"><a href="#__codelineno-1-22"> 22</a></span>
-<span class="normal"><a href="#__codelineno-1-23"> 23</a></span>
-<span class="normal"><a href="#__codelineno-1-24"> 24</a></span>
-<span class="normal"><a href="#__codelineno-1-25"> 25</a></span>
-<span class="normal"><a href="#__codelineno-1-26"> 26</a></span>
-<span class="normal"><a href="#__codelineno-1-27"> 27</a></span>
-<span class="normal"><a href="#__codelineno-1-28"> 28</a></span>
-<span class="normal"><a href="#__codelineno-1-29"> 29</a></span>
-<span class="normal"><a href="#__codelineno-1-30"> 30</a></span>
-<span class="normal"><a href="#__codelineno-1-31"> 31</a></span>
-<span class="normal"><a href="#__codelineno-1-32"> 32</a></span>
-<span class="normal"><a href="#__codelineno-1-33"> 33</a></span>
-<span class="normal"><a href="#__codelineno-1-34"> 34</a></span>
-<span class="normal"><a href="#__codelineno-1-35"> 35</a></span>
-<span class="normal"><a href="#__codelineno-1-36"> 36</a></span>
-<span class="normal"><a href="#__codelineno-1-37"> 37</a></span>
-<span class="normal"><a href="#__codelineno-1-38"> 38</a></span>
-<span class="normal"><a href="#__codelineno-1-39"> 39</a></span>
-<span class="normal"><a href="#__codelineno-1-40"> 40</a></span>
-<span class="normal"><a href="#__codelineno-1-41"> 41</a></span>
-<span class="normal"><a href="#__codelineno-1-42"> 42</a></span>
-<span class="normal"><a href="#__codelineno-1-43"> 43</a></span>
-<span class="normal"><a href="#__codelineno-1-44"> 44</a></span>
-<span class="normal"><a href="#__codelineno-1-45"> 45</a></span>
-<span class="normal"><a href="#__codelineno-1-46"> 46</a></span>
-<span class="normal"><a href="#__codelineno-1-47"> 47</a></span>
-<span class="normal"><a href="#__codelineno-1-48"> 48</a></span>
-<span class="normal"><a href="#__codelineno-1-49"> 49</a></span>
-<span class="normal"><a href="#__codelineno-1-50"> 50</a></span>
-<span class="normal"><a href="#__codelineno-1-51"> 51</a></span>
-<span class="normal"><a href="#__codelineno-1-52"> 52</a></span>
-<span class="normal"><a href="#__codelineno-1-53"> 53</a></span>
-<span class="normal"><a href="#__codelineno-1-54"> 54</a></span>
-<span class="normal"><a href="#__codelineno-1-55"> 55</a></span>
-<span class="normal"><a href="#__codelineno-1-56"> 56</a></span>
-<span class="normal"><a href="#__codelineno-1-57"> 57</a></span>
-<span class="normal"><a href="#__codelineno-1-58"> 58</a></span>
-<span class="normal"><a href="#__codelineno-1-59"> 59</a></span>
-<span class="normal"><a href="#__codelineno-1-60"> 60</a></span>
-<span class="normal"><a href="#__codelineno-1-61"> 61</a></span>
-<span class="normal"><a href="#__codelineno-1-62"> 62</a></span>
-<span class="normal"><a href="#__codelineno-1-63"> 63</a></span>
-<span class="normal"><a href="#__codelineno-1-64"> 64</a></span>
-<span class="normal"><a href="#__codelineno-1-65"> 65</a></span>
-<span class="normal"><a href="#__codelineno-1-66"> 66</a></span>
-<span class="normal"><a href="#__codelineno-1-67"> 67</a></span>
-<span class="normal"><a href="#__codelineno-1-68"> 68</a></span>
-<span class="normal"><a href="#__codelineno-1-69"> 69</a></span>
-<span class="normal"><a href="#__codelineno-1-70"> 70</a></span>
-<span class="normal"><a href="#__codelineno-1-71"> 71</a></span>
-<span class="normal"><a href="#__codelineno-1-72"> 72</a></span>
-<span class="normal"><a href="#__codelineno-1-73"> 73</a></span>
-<span class="normal"><a href="#__codelineno-1-74"> 74</a></span>
-<span class="normal"><a href="#__codelineno-1-75"> 75</a></span>
-<span class="normal"><a href="#__codelineno-1-76"> 76</a></span>
-<span class="normal"><a href="#__codelineno-1-77"> 77</a></span>
-<span class="normal"><a href="#__codelineno-1-78"> 78</a></span>
-<span class="normal"><a href="#__codelineno-1-79"> 79</a></span>
-<span class="normal"><a href="#__codelineno-1-80"> 80</a></span>
-<span class="normal"><a href="#__codelineno-1-81"> 81</a></span>
-<span class="normal"><a href="#__codelineno-1-82"> 82</a></span>
-<span class="normal"><a href="#__codelineno-1-83"> 83</a></span>
-<span class="normal"><a href="#__codelineno-1-84"> 84</a></span>
-<span class="normal"><a href="#__codelineno-1-85"> 85</a></span>
-<span class="normal"><a href="#__codelineno-1-86"> 86</a></span>
-<span class="normal"><a href="#__codelineno-1-87"> 87</a></span>
-<span class="normal"><a href="#__codelineno-1-88"> 88</a></span>
-<span class="normal"><a href="#__codelineno-1-89"> 89</a></span>
-<span class="normal"><a href="#__codelineno-1-90"> 90</a></span>
-<span class="normal"><a href="#__codelineno-1-91"> 91</a></span>
-<span class="normal"><a href="#__codelineno-1-92"> 92</a></span>
-<span class="normal"><a href="#__codelineno-1-93"> 93</a></span>
-<span class="normal"><a href="#__codelineno-1-94"> 94</a></span>
-<span class="normal"><a href="#__codelineno-1-95"> 95</a></span>
-<span class="normal"><a href="#__codelineno-1-96"> 96</a></span>
-<span class="normal"><a href="#__codelineno-1-97"> 97</a></span>
-<span class="normal"><a href="#__codelineno-1-98"> 98</a></span>
-<span class="normal"><a href="#__codelineno-1-99"> 99</a></span>
-<span class="normal"><a href="#__codelineno-1-100">100</a></span>
-<span class="normal"><a href="#__codelineno-1-101">101</a></span>
-<span class="normal"><a href="#__codelineno-1-102">102</a></span>
-<span class="normal"><a href="#__codelineno-1-103">103</a></span>
-<span class="normal"><a href="#__codelineno-1-104">104</a></span>
-<span class="normal"><a href="#__codelineno-1-105">105</a></span>
-<span class="normal"><a href="#__codelineno-1-106">106</a></span>
-<span class="normal"><a href="#__codelineno-1-107">107</a></span>
-<span class="normal"><a href="#__codelineno-1-108">108</a></span>
-<span class="normal"><a href="#__codelineno-1-109">109</a></span>
-<span class="normal"><a href="#__codelineno-1-110">110</a></span>
-<span class="normal"><a href="#__codelineno-1-111">111</a></span>
-<span class="normal"><a href="#__codelineno-1-112">112</a></span>
-<span class="normal"><a href="#__codelineno-1-113">113</a></span>
-<span class="normal"><a href="#__codelineno-1-114">114</a></span>
-<span class="normal"><a href="#__codelineno-1-115">115</a></span>
-<span class="normal"><a href="#__codelineno-1-116">116</a></span>
-<span class="normal"><a href="#__codelineno-1-117">117</a></span>
-<span class="normal"><a href="#__codelineno-1-118">118</a></span>
-<span class="normal"><a href="#__codelineno-1-119">119</a></span>
-<span class="normal"><a href="#__codelineno-1-120">120</a></span>
-<span class="normal"><a href="#__codelineno-1-121">121</a></span>
-<span class="normal"><a href="#__codelineno-1-122">122</a></span>
-<span class="normal"><a href="#__codelineno-1-123">123</a></span>
-<span class="normal"><a href="#__codelineno-1-124">124</a></span>
-<span class="normal"><a href="#__codelineno-1-125">125</a></span>
-<span class="normal"><a href="#__codelineno-1-126">126</a></span>
-<span class="normal"><a href="#__codelineno-1-127">127</a></span>
-<span class="normal"><a href="#__codelineno-1-128">128</a></span>
-<span class="normal"><a href="#__codelineno-1-129">129</a></span>
-<span class="normal"><a href="#__codelineno-1-130">130</a></span>
-<span class="normal"><a href="#__codelineno-1-131">131</a></span>
-<span class="normal"><a href="#__codelineno-1-132">132</a></span>
-<span class="normal"><a href="#__codelineno-1-133">133</a></span>
-<span class="normal"><a href="#__codelineno-1-134">134</a></span>
-<span class="normal"><a href="#__codelineno-1-135">135</a></span>
-<span class="normal"><a href="#__codelineno-1-136">136</a></span>
-<span class="normal"><a href="#__codelineno-1-137">137</a></span>
-<span class="normal"><a href="#__codelineno-1-138">138</a></span>
-<span class="normal"><a href="#__codelineno-1-139">139</a></span>
-<span class="normal"><a href="#__codelineno-1-140">140</a></span>
-<span class="normal"><a href="#__codelineno-1-141">141</a></span>
-<span class="normal"><a href="#__codelineno-1-142">142</a></span>
-<span class="normal"><a href="#__codelineno-1-143">143</a></span>
-<span class="normal"><a href="#__codelineno-1-144">144</a></span>
-<span class="normal"><a href="#__codelineno-1-145">145</a></span>
-<span class="normal"><a href="#__codelineno-1-146">146</a></span>
-<span class="normal"><a href="#__codelineno-1-147">147</a></span>
-<span class="normal"><a href="#__codelineno-1-148">148</a></span>
-<span class="normal"><a href="#__codelineno-1-149">149</a></span>
-<span class="normal"><a href="#__codelineno-1-150">150</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// --------------------------------------------</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// CarMake</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// The Abstract Widget</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">//</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">package</span><span class="w"> </span><span class="n">drills</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CarMake</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="k">abstract</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="n">CarMake</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span><span class="w">            </span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="c1">// --------------------------------------------</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="c1">// HondaAccord</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="c1">// The concrete widget</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="c1">//</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="n">package</span><span class="w"> </span><span class="n">drills</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">HondaAccord</span><span class="w"> </span><span class="n">extends</span><span class="w"> </span><span class="n">CarMake</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">HondaAccord</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span><span class="n">@Override</span><span class="w"></span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;HondaAccord&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="p">}</span><span class="w">        </span>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="c1">// --------------------------------------------</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="c1">// TeslaRoadster</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="c1">// Second concrete widget</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="c1">//</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="n">package</span><span class="w"> </span><span class="n">drills</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a>
-<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TeslaRoadster</span><span class="w"> </span><span class="n">extends</span><span class="w"> </span><span class="n">CarMake</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a>
-<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">TeslaRoadster</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-44" name="__codelineno-1-44"></a>
-<a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="w">    </span><span class="n">@Override</span><span class="w"></span>
-<a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;TeslaRoadster&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="w">    </span><span class="p">}</span><span class="w">        </span>
-<a id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-50" name="__codelineno-1-50"></a>
-<a id="__codelineno-1-51" name="__codelineno-1-51"></a>
-<a id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="c1">// --------------------------------------------</span>
-<a id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="c1">// CarDecorator</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54"></a><span class="c1">// Abstractor decorator (wrapper)</span>
-<a id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="c1">//</span>
-<a id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="n">package</span><span class="w"> </span><span class="n">drills</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-57" name="__codelineno-1-57"></a>
-<a id="__codelineno-1-58" name="__codelineno-1-58"></a><span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CarDecorator</span><span class="w"> </span><span class="n">extends</span><span class="w"> </span><span class="n">CarMake</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-59" name="__codelineno-1-59"></a>
-<a id="__codelineno-1-60" name="__codelineno-1-60"></a><span class="w">    </span><span class="n">@Override</span><span class="w"></span>
-<a id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">CarDecorator</span><span class="p">(</span><span class="n">CarMake</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-62" name="__codelineno-1-62"></a><span class="w">    </span><span class="p">}</span><span class="w">    </span>
-<a id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-64" name="__codelineno-1-64"></a>
-<a id="__codelineno-1-65" name="__codelineno-1-65"></a>
-<a id="__codelineno-1-66" name="__codelineno-1-66"></a>
-<a id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="c1">// --------------------------------------------</span>
-<a id="__codelineno-1-68" name="__codelineno-1-68"></a><span class="c1">// SunRoofCarDecorator</span>
-<a id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="c1">//</span>
-<a id="__codelineno-1-70" name="__codelineno-1-70"></a><span class="n">package</span><span class="w"> </span><span class="n">drills</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-71" name="__codelineno-1-71"></a>
-<a id="__codelineno-1-72" name="__codelineno-1-72"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SunRoofCarDecorator</span><span class="w"> </span><span class="n">extends</span><span class="w"> </span><span class="n">CarDecorator</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-73" name="__codelineno-1-73"></a>
-<a id="__codelineno-1-74" name="__codelineno-1-74"></a><span class="w">    </span><span class="n">CarMake</span><span class="w"> </span><span class="n">_wrappedCar</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-75" name="__codelineno-1-75"></a>
-<a id="__codelineno-1-76" name="__codelineno-1-76"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">SunRoofCarDecorator</span><span class="p">(</span><span class="n">CarMake</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-77" name="__codelineno-1-77"></a><span class="w">        </span><span class="n">super</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-78" name="__codelineno-1-78"></a>
-<a id="__codelineno-1-79" name="__codelineno-1-79"></a><span class="w">        </span><span class="n">_wrappedCar</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-80" name="__codelineno-1-80"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-81" name="__codelineno-1-81"></a>
-<a id="__codelineno-1-82" name="__codelineno-1-82"></a><span class="w">    </span><span class="n">@Override</span><span class="w"></span>
-<a id="__codelineno-1-83" name="__codelineno-1-83"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-84" name="__codelineno-1-84"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">_wrappedCar</span><span class="p">.</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="s">&quot;, SunRoof&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-85" name="__codelineno-1-85"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-86" name="__codelineno-1-86"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-87" name="__codelineno-1-87"></a>
-<a id="__codelineno-1-88" name="__codelineno-1-88"></a>
-<a id="__codelineno-1-89" name="__codelineno-1-89"></a><span class="c1">// --------------------------------------------</span>
-<a id="__codelineno-1-90" name="__codelineno-1-90"></a><span class="c1">// TintedWindowsCarDecorator</span>
-<a id="__codelineno-1-91" name="__codelineno-1-91"></a><span class="c1">//</span>
-<a id="__codelineno-1-92" name="__codelineno-1-92"></a><span class="n">package</span><span class="w"> </span><span class="n">drills</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-93" name="__codelineno-1-93"></a>
-<a id="__codelineno-1-94" name="__codelineno-1-94"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TintedWindowsCarDecorator</span><span class="w"> </span><span class="n">extends</span><span class="w"> </span><span class="n">CarDecorator</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-95" name="__codelineno-1-95"></a>
-<a id="__codelineno-1-96" name="__codelineno-1-96"></a><span class="w">    </span><span class="n">CarMake</span><span class="w"> </span><span class="n">_wrappedCar</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-97" name="__codelineno-1-97"></a>
-<a id="__codelineno-1-98" name="__codelineno-1-98"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">CarMake</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-99" name="__codelineno-1-99"></a><span class="w">        </span><span class="n">super</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-100" name="__codelineno-1-100"></a>
-<a id="__codelineno-1-101" name="__codelineno-1-101"></a><span class="w">        </span><span class="n">_wrappedCar</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-102" name="__codelineno-1-102"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-103" name="__codelineno-1-103"></a>
-<a id="__codelineno-1-104" name="__codelineno-1-104"></a><span class="w">    </span><span class="n">@Override</span><span class="w">  </span>
-<a id="__codelineno-1-105" name="__codelineno-1-105"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-106" name="__codelineno-1-106"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">_wrappedCar</span><span class="p">.</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="s">&quot;, TintedWindows&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-107" name="__codelineno-1-107"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-108" name="__codelineno-1-108"></a><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-109" name="__codelineno-1-109"></a>
-<a id="__codelineno-1-110" name="__codelineno-1-110"></a>
-<a id="__codelineno-1-111" name="__codelineno-1-111"></a><span class="c1">// --------------------------------------------</span>
-<a id="__codelineno-1-112" name="__codelineno-1-112"></a><span class="c1">// Tester</span>
-<a id="__codelineno-1-113" name="__codelineno-1-113"></a><span class="c1">//</span>
-<a id="__codelineno-1-114" name="__codelineno-1-114"></a><span class="n">package</span><span class="w"> </span><span class="n">drills</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-115" name="__codelineno-1-115"></a>
-<a id="__codelineno-1-116" name="__codelineno-1-116"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Tester</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-117" name="__codelineno-1-117"></a>
-<a id="__codelineno-1-118" name="__codelineno-1-118"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-119" name="__codelineno-1-119"></a>
-<a id="__codelineno-1-120" name="__codelineno-1-120"></a><span class="w">        </span><span class="c1">// Car A, HondaAccord has nothing</span>
-<a id="__codelineno-1-121" name="__codelineno-1-121"></a><span class="w">        </span><span class="c1">// Car B, HondaAccord has SunRoof</span>
-<a id="__codelineno-1-122" name="__codelineno-1-122"></a><span class="w">        </span><span class="c1">// Car C, HondaAccord has TintedWindows</span>
-<a id="__codelineno-1-123" name="__codelineno-1-123"></a><span class="w">        </span><span class="c1">// Car D, HondaAccord has SunRoof and TintedWindows</span>
-<a id="__codelineno-1-124" name="__codelineno-1-124"></a>
-<a id="__codelineno-1-125" name="__codelineno-1-125"></a><span class="w">        </span><span class="c1">// Car E, TeslaRoadster has nothing</span>
-<a id="__codelineno-1-126" name="__codelineno-1-126"></a><span class="w">        </span><span class="c1">// Car F, TeslaRoadster has SunRoof</span>
-<a id="__codelineno-1-127" name="__codelineno-1-127"></a><span class="w">        </span><span class="c1">// Car G, TeslaRoadster has TintedWindows</span>
-<a id="__codelineno-1-128" name="__codelineno-1-128"></a><span class="w">        </span><span class="c1">// Car H, TeslaRoadster has SunRoof and TintedWindows</span>
-<a id="__codelineno-1-129" name="__codelineno-1-129"></a>
-<a id="__codelineno-1-130" name="__codelineno-1-130"></a><span class="w">        </span><span class="n">CarMake</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HondaAccord</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-1-131" name="__codelineno-1-131"></a><span class="w">        </span><span class="n">CarMake</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SunRoofCarDecorator</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-132" name="__codelineno-1-132"></a><span class="w">        </span><span class="n">CarMake</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-133" name="__codelineno-1-133"></a><span class="w">        </span><span class="n">CarMake</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SunRoofCarDecorator</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-134" name="__codelineno-1-134"></a>
-<a id="__codelineno-1-135" name="__codelineno-1-135"></a><span class="w">        </span><span class="n">CarMake</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TeslaRoadster</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-1-136" name="__codelineno-1-136"></a><span class="w">        </span><span class="n">CarMake</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SunRoofCarDecorator</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-137" name="__codelineno-1-137"></a><span class="w">        </span><span class="n">CarMake</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-138" name="__codelineno-1-138"></a><span class="w">        </span><span class="n">CarMake</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TintedWindowsCarDecorator</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-1-139" name="__codelineno-1-139"></a>
-<a id="__codelineno-1-140" name="__codelineno-1-140"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;A = &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span><span class="w">              </span>
-<a id="__codelineno-1-141" name="__codelineno-1-141"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;B = &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span><span class="w">              </span>
-<a id="__codelineno-1-142" name="__codelineno-1-142"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;C = &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span><span class="w">              </span>
-<a id="__codelineno-1-143" name="__codelineno-1-143"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;D = &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span><span class="w">              </span>
-<a id="__codelineno-1-144" name="__codelineno-1-144"></a>
-<a id="__codelineno-1-145" name="__codelineno-1-145"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;E = &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span><span class="w">              </span>
-<a id="__codelineno-1-146" name="__codelineno-1-146"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;F = &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span><span class="w">              </span>
-<a id="__codelineno-1-147" name="__codelineno-1-147"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;G = &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span><span class="w">              </span>
-<a id="__codelineno-1-148" name="__codelineno-1-148"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;H = &quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span><span class="w"></span>
-<a id="__codelineno-1-149" name="__codelineno-1-149"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-1-150" name="__codelineno-1-150"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="font-style: italic">// --------------------------------------------</span>
+<span style="font-style: italic">// CarMake</span>
+<span style="font-style: italic">// The Abstract Widget</span>
+<span style="font-style: italic">//</span>
+package drills;
+
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">abstract</span> <span style="font-weight: bold">class</span> <span style="font-weight: bold">CarMake</span> {
+
+    <span style="font-weight: bold">abstract</span> <span style="font-weight: bold">public</span> String getName();
+
+    CarMake() {
+    }            
+}
+
+
+<span style="font-style: italic">// --------------------------------------------</span>
+<span style="font-style: italic">// HondaAccord</span>
+<span style="font-style: italic">// The concrete widget</span>
+<span style="font-style: italic">//</span>
+package drills;
+
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">class</span> <span style="font-weight: bold">HondaAccord</span> extends CarMake {
+
+    <span style="font-weight: bold">public</span> HondaAccord () {
+    }
+
+    @Override
+    <span style="font-weight: bold">public</span> String getName() {
+        <span style="font-weight: bold">return</span> <span style="font-style: italic">&quot;HondaAccord&quot;</span>;
+    }        
+}
+
+
+<span style="font-style: italic">// --------------------------------------------</span>
+<span style="font-style: italic">// TeslaRoadster</span>
+<span style="font-style: italic">// Second concrete widget</span>
+<span style="font-style: italic">//</span>
+package drills;
+
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">class</span> <span style="font-weight: bold">TeslaRoadster</span> extends CarMake {
+
+    <span style="font-weight: bold">public</span> TeslaRoadster() {
+    }
+
+    @Override
+    <span style="font-weight: bold">public</span> String getName() {
+        <span style="font-weight: bold">return</span> <span style="font-style: italic">&quot;TeslaRoadster&quot;</span>;
+    }        
+}
+
+
+<span style="font-style: italic">// --------------------------------------------</span>
+<span style="font-style: italic">// CarDecorator</span>
+<span style="font-style: italic">// Abstractor decorator (wrapper)</span>
+<span style="font-style: italic">//</span>
+package drills;
+
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">abstract</span> <span style="font-weight: bold">class</span> <span style="font-weight: bold">CarDecorator</span> extends CarMake {
+
+    @Override
+    <span style="font-weight: bold">public</span> CarDecorator(CarMake c) {
+    }    
+}
+
+
+
+<span style="font-style: italic">// --------------------------------------------</span>
+<span style="font-style: italic">// SunRoofCarDecorator</span>
+<span style="font-style: italic">//</span>
+package drills;
+
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">class</span> <span style="font-weight: bold">SunRoofCarDecorator</span> extends CarDecorator {
+
+    CarMake _wrappedCar;
+
+    <span style="font-weight: bold">public</span> SunRoofCarDecorator(CarMake c) {
+        super(c);
+
+        _wrappedCar = c;
+    }
+
+    @Override
+    <span style="font-weight: bold">public</span> String getName() {
+        <span style="font-weight: bold">return</span> _wrappedCar.getName() + <span style="font-style: italic">&quot;, SunRoof&quot;</span>;
+    }
+}
+
+
+<span style="font-style: italic">// --------------------------------------------</span>
+<span style="font-style: italic">// TintedWindowsCarDecorator</span>
+<span style="font-style: italic">//</span>
+package drills;
+
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">class</span> <span style="font-weight: bold">TintedWindowsCarDecorator</span> extends CarDecorator {
+
+    CarMake _wrappedCar;
+
+    <span style="font-weight: bold">public</span> TintedWindowsCarDecorator(CarMake c) {
+        super(c);
+
+        _wrappedCar = c;
+    }
+
+    @Override  
+    <span style="font-weight: bold">public</span> String getName() {
+        <span style="font-weight: bold">return</span> _wrappedCar.getName() + <span style="font-style: italic">&quot;, TintedWindows&quot;</span>;
+    }
+}
+
+
+<span style="font-style: italic">// --------------------------------------------</span>
+<span style="font-style: italic">// Tester</span>
+<span style="font-style: italic">//</span>
+package drills;
+
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">class</span> <span style="font-weight: bold">Tester</span> {
+
+    <span style="font-weight: bold">public</span> <span style="font-weight: bold">static</span> <span style="font-weight: bold">void</span> main(String[] args) {
+
+        <span style="font-style: italic">// Car A, HondaAccord has nothing</span>
+        <span style="font-style: italic">// Car B, HondaAccord has SunRoof</span>
+        <span style="font-style: italic">// Car C, HondaAccord has TintedWindows</span>
+        <span style="font-style: italic">// Car D, HondaAccord has SunRoof and TintedWindows</span>
+
+        <span style="font-style: italic">// Car E, TeslaRoadster has nothing</span>
+        <span style="font-style: italic">// Car F, TeslaRoadster has SunRoof</span>
+        <span style="font-style: italic">// Car G, TeslaRoadster has TintedWindows</span>
+        <span style="font-style: italic">// Car H, TeslaRoadster has SunRoof and TintedWindows</span>
+
+        CarMake a = <span style="font-weight: bold">new</span> HondaAccord();
+        CarMake b = <span style="font-weight: bold">new</span> SunRoofCarDecorator(a);
+        CarMake c = <span style="font-weight: bold">new</span> TintedWindowsCarDecorator(a);
+        CarMake d = <span style="font-weight: bold">new</span> SunRoofCarDecorator(c);
+
+        CarMake e = <span style="font-weight: bold">new</span> TeslaRoadster();
+        CarMake f = <span style="font-weight: bold">new</span> SunRoofCarDecorator(e);
+        CarMake g = <span style="font-weight: bold">new</span> TintedWindowsCarDecorator(e);
+        CarMake h = <span style="font-weight: bold">new</span> TintedWindowsCarDecorator(f);
+
+        System.<span style="font-weight: bold">out</span>.println(<span style="font-style: italic">&quot;A = &quot;</span> + a.getName());              
+        System.<span style="font-weight: bold">out</span>.println(<span style="font-style: italic">&quot;B = &quot;</span> + b.getName());              
+        System.<span style="font-weight: bold">out</span>.println(<span style="font-style: italic">&quot;C = &quot;</span> + c.getName());              
+        System.<span style="font-weight: bold">out</span>.println(<span style="font-style: italic">&quot;D = &quot;</span> + d.getName());              
+
+        System.<span style="font-weight: bold">out</span>.println(<span style="font-style: italic">&quot;E = &quot;</span> + e.getName());              
+        System.<span style="font-weight: bold">out</span>.println(<span style="font-style: italic">&quot;F = &quot;</span> + f.getName());              
+        System.<span style="font-weight: bold">out</span>.println(<span style="font-style: italic">&quot;G = &quot;</span> + g.getName());              
+        System.<span style="font-weight: bold">out</span>.println(<span style="font-style: italic">&quot;H = &quot;</span> + h.getName());
+    }
+}
+</code></pre></div>
 <p>The test program output looks as follows:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span>
-<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>A = HondaAccord
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>B = HondaAccord, SunRoof
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>C = HondaAccord, TintedWindows
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>D = HondaAccord, TintedWindows, SunRoof
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>E = TeslaRoadster
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>F = TeslaRoadster, SunRoof
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>G = TeslaRoadster, TintedWindows
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>H = TeslaRoadster, SunRoof, TintedWindows
-</code></pre></div></td></tr></table></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>A = HondaAccord
+B = HondaAccord, SunRoof
+C = HondaAccord, TintedWindows
+D = HondaAccord, TintedWindows, SunRoof
+E = TeslaRoadster
+F = TeslaRoadster, SunRoof
+G = TeslaRoadster, TintedWindows
+H = TeslaRoadster, SunRoof, TintedWindows
+</code></pre></div>
 <p>From this bare-bones example, you can see how we can programmatically alter an 
 object's behavior at runtime- without affecting the original object's behavior. </p>
 

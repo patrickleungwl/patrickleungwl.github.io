@@ -22,6 +22,10 @@
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
       
       
     
@@ -31,8 +35,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono,+13:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono, 13"}</style>
       
     
     
@@ -50,7 +54,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="yellow">
   
     
     
@@ -224,12 +228,106 @@
       
       
         <label class="md-nav__link" for="__nav_2_1">
+          Finance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Finance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Finance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2022/Finance/Trading/" class="md-nav__link">
+        Trading
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2022/Linux/LinuxTips/" class="md-nav__link">
+        Linux Tips
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
           ModernCpp
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="ModernCpp" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           ModernCpp
         </label>
@@ -1643,98 +1741,56 @@
   <h1>Java String Literals Versus String Objects</h1>
 
 <p>Strings in Java can be declared either literally-</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>String s = &quot;123&quot;;
-</code></pre></div></td></tr></table></div>
+<p><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>String s = &quot;123&quot;;
+</code></pre></div>
 or as a String instance-</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>String s = new String(&quot;123&quot;);
-</code></pre></div></td></tr></table></div>
+<p><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>String s = new String(&quot;123&quot;);
+</code></pre></div>
 What are the differences between these two strings?</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span>
-<span class="normal"><a href="#__codelineno-2-29">29</a></span>
-<span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span>
-<span class="normal"><a href="#__codelineno-2-32">32</a></span>
-<span class="normal"><a href="#__codelineno-2-33">33</a></span>
-<span class="normal"><a href="#__codelineno-2-34">34</a></span>
-<span class="normal"><a href="#__codelineno-2-35">35</a></span>
-<span class="normal"><a href="#__codelineno-2-36">36</a></span>
-<span class="normal"><a href="#__codelineno-2-37">37</a></span>
-<span class="normal"><a href="#__codelineno-2-38">38</a></span>
-<span class="normal"><a href="#__codelineno-2-39">39</a></span>
-<span class="normal"><a href="#__codelineno-2-40">40</a></span>
-<span class="normal"><a href="#__codelineno-2-41">41</a></span>
-<span class="normal"><a href="#__codelineno-2-42">42</a></span>
-<span class="normal"><a href="#__codelineno-2-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">drills</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Tester</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="c1">// Test differences between String v = new String(...)</span><span class="w"></span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="c1">// and String v = &quot;...&quot;</span><span class="w"></span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="c1">// String literals are stored in a string pool- cached and reused.</span><span class="w"></span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="c1">// String objects are stored in the heap as new objects.        </span><span class="w"></span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="c1">// Two string literals with the same characters are the same</span><span class="w"></span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="c1">// in every possible way.</span><span class="w"></span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abcdef&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abcdef&quot;</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">hashCode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w"></span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s1</span><span class="p">));</span><span class="w"></span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="c1">// Two string objects with the same characters are the same</span><span class="w"></span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="c1">// only with hashCode() and equals()- but are different object</span><span class="w"></span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="c1">// instances</span><span class="w"></span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;abcdef&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">s4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;abcdef&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s3</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s4</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s3</span><span class="p">.</span><span class="na">hashCode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s4</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w"></span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s3</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s4</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s4</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s3</span><span class="p">));</span><span class="w"></span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">    </span><span class="c1">// String literals and String objects are separate string</span><span class="w"></span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="c1">// instances, but hashCodes are all equal</span><span class="w"></span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s4</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">hashCode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w"></span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s2</span><span class="p">.</span><span class="na">hashCode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s3</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w"></span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s3</span><span class="p">.</span><span class="na">hashCode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s4</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w"></span>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a>
-<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">    </span><span class="c1">// Though separate instances, contents are also still equal</span><span class="w"></span>
-<a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s4</span><span class="p">));</span><span class="w"></span>
-<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">    </span><span class="k">assert</span><span class="p">(</span><span class="n">s2</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s4</span><span class="p">));</span><span class="w"></span>
-<a id="__codelineno-2-40" name="__codelineno-2-40"></a>
-<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tests completed&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
+<p><div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="font-weight: bold">package</span> <span style="font-weight: bold">drills</span>;
+
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">class</span> <span style="font-weight: bold">Tester</span> {
+
+  <span style="font-weight: bold">public</span> <span style="font-weight: bold">static</span> <span style="font-weight: bold">void</span> main(String[] args) {
+
+    <span style="font-style: italic">// Test differences between String v = new String(...)</span>
+    <span style="font-style: italic">// and String v = &quot;...&quot;</span>
+
+    <span style="font-style: italic">// String literals are stored in a string pool- cached and reused.</span>
+    <span style="font-style: italic">// String objects are stored in the heap as new objects.        </span>
+
+    <span style="font-style: italic">// Two string literals with the same characters are the same</span>
+    <span style="font-style: italic">// in every possible way.</span>
+    String s1 = <span style="font-style: italic">&quot;abcdef&quot;</span>;
+    String s2 = <span style="font-style: italic">&quot;abcdef&quot;</span>;
+    <span style="font-weight: bold">assert</span>(s1 == s2);
+    <span style="font-weight: bold">assert</span>(s1.hashCode() == s2.hashCode());
+    <span style="font-weight: bold">assert</span>(s1.equals(s2) &amp;&amp; s2.equals(s1));
+
+    <span style="font-style: italic">// Two string objects with the same characters are the same</span>
+    <span style="font-style: italic">// only with hashCode() and equals()- but are different object</span>
+    <span style="font-style: italic">// instances</span>
+    String s3 = <span style="font-weight: bold">new</span> String(<span style="font-style: italic">&quot;abcdef&quot;</span>);
+    String s4 = <span style="font-weight: bold">new</span> String(<span style="font-style: italic">&quot;abcdef&quot;</span>);
+    <span style="font-weight: bold">assert</span>(s3 != s4);
+    <span style="font-weight: bold">assert</span>(s3.hashCode() == s4.hashCode());
+    <span style="font-weight: bold">assert</span>(s3.equals(s4) &amp;&amp; s4.equals(s3));
+
+    <span style="font-style: italic">// String literals and String objects are separate string</span>
+    <span style="font-style: italic">// instances, but hashCodes are all equal</span>
+    <span style="font-weight: bold">assert</span>(s1 != s3 &amp;amp;&amp;amp; s1 != s4);
+    <span style="font-weight: bold">assert</span>(s1.hashCode() == s2.hashCode());
+    <span style="font-weight: bold">assert</span>(s2.hashCode() == s3.hashCode());
+    <span style="font-weight: bold">assert</span>(s3.hashCode() == s4.hashCode());
+
+    <span style="font-style: italic">// Though separate instances, contents are also still equal</span>
+    <span style="font-weight: bold">assert</span>(s1.equals(s3) &amp;&amp; s1.equals(s4));
+    <span style="font-weight: bold">assert</span>(s2.equals(s3) &amp;&amp; s2.equals(s4));
+
+    System.out.println(<span style="font-style: italic">&quot;Tests completed&quot;</span>);
+  }
+}
+</code></pre></div>
 Summary:</p>
 <ul>
 <li>Regardless of how strings are declared, for a given character sequence, their hashCodes() and equals() all return the same value.<ul>
