@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Using Variable Params"
+date: 20151219
+categories: tech
+tags: patterns
+archive: true
+---
+Today just put together a test case to show usage of functions with variable number of parameters. 
+
+~~~csharp
+
+using System;
+using System.Threading;
+
+namespace TestVariableParams
+{
+    class Tester
+    {
+        // use object[] to allow for arguments of any type
+        static void LogMsg(string msg, params object[] args)
+        {
+            Console.Out.Write("{0} ThreadId={1} ",
+                DateTime.Now.ToString("HH:MM:ss.fff"),
+                Thread.CurrentThread.ManagedThreadId);
+            Console.Out.WriteLine(msg, args);
+        }
+
+        static void Main(string[] args)
+        {
+            LogMsg("Test {0}",
+                "first arg");
+            LogMsg("This is a test {0} {1}",
+                "first arg",
+                "second arg");
+            LogMsg("This is a test with int args {0} {1}",
+                123,
+                456);
+        }
+    }
+}
+
+~~~
+
+The output shows- 
+
+~~~
+10:05:04.208 ThreadId=1 Test first arg
+10:05:04.244 ThreadId=1 This is a test first arg second arg
+10:05:04.244 ThreadId=1 This is a test with int args 123 456
+~~~
+

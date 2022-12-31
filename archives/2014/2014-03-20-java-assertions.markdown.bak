@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Assertions in Java"
+date: 20140317
+categories: tech
+tags: java, threads
+archive: true
+---
+Ran into a puzzle the other day.  My assertions in Java were not working.  That was a puzzle- since assertions always worked in C#.  Turns out- assertions in Java are turned off by default.  To enable assertions, one must execute the Java class with -ea.  Example:
+
+~~~
+java -ea Test.java
+~~~
+
+
+

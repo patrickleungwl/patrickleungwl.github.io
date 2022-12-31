@@ -1,0 +1,140 @@
+---
+layout: post
+title: "Searching for Primes with C"
+date: 20140322
+categories: tech
+tags: c, primes
+archive: true
+---
+As a software developer, I regularly do drills with different languages.  This is rather analogous to how musicians play scales with their instructions.  This past weekend, I brushed off some C cobwebs with a quick exercise to find prime numbers using the Sieve of Eratosthenes.
+
+I remember from 
+[Jon Bentley's "Programming Pearls"](http://www.amazon.com/Programming-Pearls-Jon-Bentley/dp/8177588583)
+- back in the old days- when 64K RAM was considered a luxury, programmers came up with ingenius algorithms to conserve memory usage. I remember bit arrays were one fairly frugal data structures. I took it for a spin with the following prime search.
+
+~~~c
+#include "stdio.h"
+#include "string.h"
+#include "ctype.h"
+#include "malloc.h"
+#include "math.h"
+#include "assert.h"
+
+/* Show primes using Sieve of Eratosthenes */
+
+void show_bits(unsigned n)
+{
+    int i;
+    for (i=(sizeof(int)*8)-1; i>0; i--)
+    {
+        (n&(1<<i)) ? putchar('1') : putchar('0');
+    }
+    printf( "\n" );
+}
+
+
+// is number u already marked?
+// lookup our bit index map
+// returns 1 if true
+//         0 if false
+int is_bit_marked(unsigned *nums, unsigned u)
+{
+   unsigned bytenum = u / 32.0;
+   unsigned offset = u % 32;
+
+   //printf( "is_bit_marked: %u, byte %u, bit %u\n", u, bytenum, offset );
+   unsigned selected_byte = nums[bytenum];
+   unsigned mask = 0x01;
+   mask = mask << offset;   // rightshift offset times
+
+   //printf( "before mask: " );
+   //show_bits(selected_byte);
+
+   //printf( "after mask:  " );
+   selected_byte &= mask;   // and operation
+   //show_bits(selected_byte);
+   return ( selected_byte > 0 );
+}
+
+
+// given a number, find the byte and offset (the bit index) that
+// represents the number.
+//
+void mark_bit(unsigned *nums, unsigned u)
+{
+   unsigned bytenum = u / 32.0;
+   unsigned offset = u % 32;
+
+   //printf( "mark_bit: %u, byte %u, bit %u\n", u, bytenum, offset );
+   unsigned mask = 0x01;
+   mask = mask << offset;   // rightshift offset times
+
+   nums[bytenum] |= mask;
+   //show_bits(selected_byte);
+}
+
+
+int main()
+{
+    unsigned x, y = 0;
+    printf( "Length of unsigned %i\n\n", sizeof(unsigned));
+
+    // 32 bits per unsigned
+    // to check for primes up to 1024*1024,
+    // we'd need 1024*1024/32 unsigned variables
+    // = 32,768 or 32k
+    // 
+    unsigned space_needed = 32768*16;
+    unsigned nums[space_needed];
+    memset(nums,0x00,space_needed);
+
+    // test our functions
+    mark_bit(nums, 10);
+    mark_bit(nums, 200);
+    assert( is_bit_marked(nums, 2)==0 );
+    assert( is_bit_marked(nums,24)==0 );
+    assert( is_bit_marked(nums,300)==0 );
+    assert( is_bit_marked(nums,10)==1 );
+    assert( is_bit_marked(nums,200)==1 );
+
+    // continue on with main program
+    memset(nums,0x00,space_needed);
+    unsigned t=2;
+    unsigned maxnum = 16*1024*1024;
+
+    for(t=2; t<maxnum; t++)
+    {
+        //printf("Checking %u\n", t);
+        if (is_bit_marked(nums,t)==1)
+            continue;
+
+        // mark every mutiple of t, but not t itself
+        unsigned i=t+t;
+        while(i<maxnum)
+        {
+            mark_bit(nums, i);
+            i+=t;
+        }
+    }
+
+    int printed=0;
+    for(int t=2; t<maxnum; t++)
+    {
+        if (is_bit_marked(nums,t)==0)
+        {
+            printf( "%10u", t);
+            ++printed;
+        }
+
+        if (printed>4)
+        {
+            printed=0;
+            printf("\n");
+        }
+    }
+    printf("\n");
+}
+
+~~~
+
+

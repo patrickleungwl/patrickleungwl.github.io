@@ -1,0 +1,142 @@
+---
+layout: post
+title: "How BackgroundWorker Works"
+date: 20151217
+categories: tech,csharp
+tags: patterns
+archive: true
+---
+I've decided to take a deeper look at all available multi-threading options in .net 4.5.  One of the simpler options is the BackgroundWorker.  To investigate, I've setup a simple BackgroundWorker with progress and completion reporting.
+
+~~~csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.ComponentModel;
+using System.Threading;
+
+namespace TestBackgroundWorker
+{
+    class TestBkGrdWorker
+    {
+        private void LogMsg(string msg)
+        {
+            Console.Out.WriteLine("{0} ThreadId={1}, {2}",
+                DateTime.Now.ToString("HH:MM:ss.fff"),
+                Thread.CurrentThread.ManagedThreadId, msg);
+        }
+
+
+        // RunTest
+        //
+        // Function run by main thread
+        // Main thread sets up the background worker instance
+        // and fires it off
+
+        public void RunTest()
+        {
+            BackgroundWorker bkWorker = new BackgroundWorker();
+            bkWorker.WorkerReportsProgress = true;  
+
+            // setup functions the background worker calls
+            // to do work, report progress, and to report completion
+            bkWorker.DoWork += bkWorker_DoWork;
+            bkWorker.ProgressChanged += bkWorker_ProgressChanged;
+            bkWorker.RunWorkerCompleted += bkWorker_RunWorkerCompleted;
+
+            // trigger background worker to run async
+            bkWorker.RunWorkerAsync();
+
+            // main thread do something while background worker do something else
+            for (int i = 0; i &lt; 5; i++)
+            {
+                LogMsg(string.Format("Main thread working, BackgroundWorker busy={0}",
+                    bkWorker.IsBusy));
+                Thread.Sleep(1000);
+            }
+        }
+
+
+        // bkWorker_ProgressChanged
+        //
+        // Report progress
+
+        void bkWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            LogMsg(string.Format("Background worker update progress, {0:00.0}% done", 
+                e.ProgressPercentage));
+        }
+
+        // bkWorker_RunWorkerCompleted
+        // 
+        // Report work is completed
+
+        void bkWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            LogMsg("Background worker completed");
+        }
+
+        
+        // bkWorker_DoWork
+        // 
+        // Function run by background worker.
+        // Random work method that takes an arbitrarily set 2 seconds
+        // to complete, with a progress report every 200ms.
+
+        void bkWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            LogMsg("Background worker starting");
+
+            float percentDone = 0.0f;
+            for (int i = 0; i &lt; 10; i++)
+            {
+                Thread.Sleep(200);
+                percentDone += 10.0f;
+                BackgroundWorker bkwkr = sender as BackgroundWorker;
+                if (bkwkr != null)
+                {
+                    bkwkr.ReportProgress((int)percentDone);
+                }
+            }
+            LogMsg("Background worker completed");
+        }
+
+
+        // Main
+        // Start up a background worker test instance
+
+        static void Main(string[] args)
+        {
+            TestBkGrdWorker testWkr = new TestBkGrdWorker();
+            testWkr.RunTest();
+        }
+    }
+}
+
+~~~
+The output looks as follows:
+
+
+~~~
+ 12:12:04.680 ThreadId=3, Background worker starting
+ 12:12:04.680 ThreadId=1, Main thread working, BackgroundWorker busy=True
+ 12:12:04.945 ThreadId=4, Background worker update progress, 10.0% done
+ 12:12:05.148 ThreadId=4, Background worker update progress, 20.0% done
+ 12:12:05.350 ThreadId=4, Background worker update progress, 30.0% done
+ 12:12:05.553 ThreadId=4, Background worker update progress, 40.0% done
+ 12:12:05.756 ThreadId=4, Background worker update progress, 50.0% done
+ 12:12:05.756 ThreadId=1, Main thread working, BackgroundWorker busy=True
+ 12:12:05.959 ThreadId=4, Background worker update progress, 60.0% done
+ 12:12:06.162 ThreadId=4, Background worker update progress, 70.0% done
+ 12:12:06.364 ThreadId=4, Background worker update progress, 80.0% done
+ 12:12:06.567 ThreadId=4, Background worker update progress, 90.0% done
+ 12:12:06.770 ThreadId=3, Background worker completed
+ 12:12:06.770 ThreadId=3, Background worker update progress, 100.0% done
+ 12:12:06.770 ThreadId=4, Background worker completed
+ 12:12:06.770 ThreadId=1, Main thread working, BackgroundWorker busy=True
+ 12:12:07.784 ThreadId=1, Main thread working, BackgroundWorker busy=False
+ 12:12:08.798 ThreadId=1, Main thread working, BackgroundWorker busy=False
+~~~
+
+

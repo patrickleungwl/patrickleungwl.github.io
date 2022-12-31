@@ -1,0 +1,39 @@
+---
+layout: post
+title: "What's so good about pytest?"
+date: 20201219
+categories: tech
+tags: patterns
+archive: true
+---
+
+### Reasons pytest is the best unit test framework for Python
+
+Python coders appear to favor pytest over unittest by a wide margin.  What's so good 
+about pytest?  Here is a summary:
+
+* minimal test coding fuss.  No need to derive test from a unittest base class. 
+* pytest shows the intermediate values leading to test failures- without requiring debugging.
+* simple reusable test fixture setup.
+* easy to parameterize tests without writing duplicate tests.
+* can directly kick off pdb debugger in the event of a test failure
+* marks for allowing selection of tests to execute.
+  * mark groups of tests with decorator @pytest.mark.label
+  * then execute that one group of test with: pytest -m label
+* can run one a set of matching tests by name with -k  
+* automatic test discovery in folder and subfolders.
+* many extensions (plugins) are available
+  * pytest-xdist, pytest test.py -n 3, run tests on 3 parallel processes
+  * parameterized, decorate test function with @parameterized.expand(['a','b','c'])
+  * pytest-flake8, pytest \-\-flake8, check code against PEP8 standards
+  * pytest-html, pytest \-\-html=rep.html, generate pretty test result report
+
+### Python most useful command line options
+
+* -v, -vv, -vvv: verbose and very verbose, very very verbose
+* \-\-pdb: start pdb debugger when a test fails
+* -k: run only certain tests using a keyword filter
+* -s: to display program stdout output while tests are running instead of after failure
+* -x: exit after first failure
+
+

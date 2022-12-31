@@ -1,0 +1,198 @@
+---
+layout: post
+title: "Equals Hashcode and Comparable Interface in Java"
+date: 20140324
+categories: tech
+tags: patterns
+archive: true
+---
+
+When should a class overwrite equals() and hashCode()?  
+------------------------------------------------------
+
+And when should a class implement the Comparable interface?  A class should overwrite equals() when the class represents a value item- meaning ideas like dates, times, colors, or other unique representations of things.  An object representing 2001-9-11 should equal another object also representing 2001-9-11, no?  These two objects are equal despite being two different objects in memory.  And each time you overwrite equals, you also have to overwrite hashCode()- because otherwise, each collection class that stores objects according to their hashCodes would not recognize them as being the same object.  
+
+Lastly, a class should implement the Comparable interface when you want to overwrite the default sorting.  So if you want to sort the object backwards or add case insensitivity, you can do so in your own Comparable compareTo() routine.
+
+~~~java
+package drills;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Set;
+
+
+public final class MartianDateTime implements Comparable<MartianDateTime> {
+
+  // This test class demonstrates how to
+  // 1. override equals()
+  // 2. overrides hashCode()
+  
+  // Why override equals()?  When a class represents value, two instances of the same
+  // class with the same value SHOULD be equal to each other. 
+  // An example is a MartianDateTime class.  If two instances both represent 10AM, then
+  // they should be considered equal.  (On the other hand, perhaps a static factory
+  // constructor should ensure only one instance of the same datetime get created.)
+  //
+  // Why override hashCode()?  If you override equals() to mean two instances are 
+  // equal, then they should also be considered equal when adding them to a 
+  // Collection like hashSet or hashMap which uses an object's hashCode() to 
+  // represent uniqueness.  
+  
+  private int martianHour;
+  private int martianMinute;
+  private int martianSecond;
+  private int hashCode;
+  
+  // Make MartianDateTime an immutable class
+  // seal it
+  // make it constructed from a factory builder
+  
+  private MartianDateTime(int hour, int minute, int second) {
+    martianHour = hour;
+    martianMinute = minute;
+    martianSecond = second;
+    hashCode = 0;
+  }
+  
+  // ---------------------------------------------------------------------
+  // MartianDateTime
+  // Static factory constructor 
+  
+  static public MartianDateTime BuildMartianDateTime(int hour, int minute, int second) {
+    return new MartianDateTime(hour, minute, second);
+  }
+
+  // ---------------------------------------------------------------------
+  // toString()
+  
+  @Override
+  public String toString() {
+    return String.format("%d:%d:%d", martianHour, martianMinute, martianSecond);
+  }
+  
+  // ---------------------------------------------------------------------
+  // equals()
+  //  return true if compare against self
+  //  return false if compare against another type - use instanceof()
+  //  cast to correct type
+  //  return true if all significant fields compare equal
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    
+    if (!(o instanceof MartianDateTime))
+      return false;
+    
+    MartianDateTime other = (MartianDateTime)o;
+    if (other.martianHour != this.martianHour || 
+        other.martianMinute != this.martianMinute || 
+        other.martianSecond != this.martianSecond ) 
+      return false;
+    
+    return true;
+  }
+  
+
+  // ---------------------------------------------------------------------
+  // hashCode
+  // A good hashCode method should 
+  // - unequal objects should return unequal hashcodes
+  // - good hashing function should distribute objects across a range evenly
+  //
+  // simple recipe for a hashing function
+  // 1. start with a prime number
+  // 2. mix in contributions from each significant field
+  
+  @Override
+  public int hashCode() {
+    int tmp = hashCode;
+    if (tmp==0) {
+      tmp = 17;
+      tmp = 31 * tmp + martianHour;
+      tmp = 31 * tmp + martianMinute;
+      tmp = 31 * tmp + martianSecond;
+      hashCode = tmp;
+    }
+    return hashCode;
+  }
+  
+
+  // ---------------------------------------------------------------------
+  // compareTo
+  // If this object is greater than comparedTo object, then return 1  
+  
+  @Override
+  public int compareTo(MartianDateTime o) {
+    
+    if (this.martianHour > o.martianHour)
+      return 1;
+    if ((this.martianHour == o.martianHour) &&
+      (this.martianMinute > o.martianMinute))
+      return 1;
+    if ((this.martianHour == o.martianHour) &&
+      (this.martianMinute == o.martianMinute) &&
+      (this.martianSecond > o.martianSecond))
+      return 1;
+    if ((this.martianHour == o.martianHour) &&
+      (this.martianMinute == o.martianMinute) &&
+      (this.martianSecond == o.martianSecond))
+      return 0;
+    
+    return -1;
+  }  
+
+  
+  // ---------------------------------------------------------------------
+  // test code
+  
+  public static void main(String[] args) {
+
+    // Construct 3 MartianDateTime instances
+    MartianDateTime dt1 = MartianDateTime.BuildMartianDateTime(10,8,8);
+    MartianDateTime dt2 = MartianDateTime.BuildMartianDateTime(10,8,9);
+    MartianDateTime dt3 = MartianDateTime.BuildMartianDateTime(10,8,8);
+    
+    // Instances with the same datetimes are equal
+    assert(!dt1.equals(dt2));
+    assert(dt1.equals(dt3));    
+  
+    // Should not be able to add two instances with the same "equal-ness"
+    // into the same hashset
+    Set<MartianDateTime> s = new HashSet<MartianDateTime>();
+    s.add(dt1);
+    s.add(dt2);
+    assert(s.contains(dt3));
+    
+    List<MartianDateTime> listMdt = new ArrayList<MartianDateTime>();
+    listMdt.add(dt1);
+    listMdt.add(dt2);
+    listMdt.add(dt3);
+    ListIterator<MartianDateTime> li = listMdt.listIterator();
+    System.out.println("Print list of MartianDateTimes");
+    while(li.hasNext()) {
+      MartianDateTime m=li.next();
+      if (m==null)
+        break;
+      System.out.println(m.toString());
+    }
+    
+    Collections.sort(listMdt);
+    ListIterator<MartianDateTime> sl = listMdt.listIterator();
+    System.out.println("Print list of sorted MartianDateTimes");
+    while(sl.hasNext()) {
+      MartianDateTime m=sl.next();
+      if (m==null)
+        break;
+      System.out.println(m.toString());
+    }
+    
+    System.out.println("Passed all tests");
+  }
+}
+~~~
+

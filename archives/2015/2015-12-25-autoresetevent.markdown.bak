@@ -1,0 +1,94 @@
+---
+layout: post
+title: "Using AutoResetEvent"
+date: 20151225
+categories: tech
+tags: patterns
+archive: true
+---
+Testing AutoResetEvent today.
+
+~~~csharp
+using System;
+using System.Threading;
+
+namespace TestAutoResetEvent
+{
+    class AutoResetEventTester
+    {
+        private void LogMsg(string msg, params object[] args)
+        {
+            Console.Out.Write("{0} ThreadId={1} ",
+                DateTime.Now.ToString("HH:MM:ss.fff"),
+                Thread.CurrentThread.ManagedThreadId);
+            Console.Out.WriteLine(msg, args);
+        }
+
+
+        // LongComputeTask
+        //
+        // Function run by background worker.
+
+        private void LongComputeTask(Object stateInfo)
+        {
+            LogMsg("LongComputeTask starting");
+
+            float percentDone = 0.0f;
+            for (int i = 0; i < 10; i++)
+            {
+                Thread.Sleep(500);
+                percentDone += 10.0f;
+                LogMsg("LongComputeTask {0:0.0f}% completed",
+                    percentDone);
+            }
+            LogMsg("LongComputeTask completed");
+
+            AutoResetEvent myFlag = stateInfo as AutoResetEvent;
+            if (myFlag != null)
+            {
+                myFlag.Set();
+            }
+        }
+
+
+        // RunTest
+        //
+        // Function run by main thread
+        // Main thread sets up the background thread
+        // and fires it off
+
+        public void RunTest()
+        {
+            var myFlag = new AutoResetEvent(false);
+            ThreadPool.QueueUserWorkItem(new WaitCallback(LongComputeTask), myFlag);
+            myFlag.WaitOne();
+        }
+
+
+
+        static void Main(string[] args)
+        {
+            var tester = new AutoResetEventTester();
+            tester.RunTest();
+        }
+    }
+}
+~~~
+
+The output-
+
+~~~
+19:05:51.698 ThreadId=3 LongComputeTask starting
+19:05:52.232 ThreadId=3 LongComputeTask 10.0f% completed
+19:05:52.732 ThreadId=3 LongComputeTask 20.0f% completed
+19:05:53.232 ThreadId=3 LongComputeTask 30.0f% completed
+19:05:53.738 ThreadId=3 LongComputeTask 40.0f% completed
+19:05:54.238 ThreadId=3 LongComputeTask 50.0f% completed
+19:05:54.738 ThreadId=3 LongComputeTask 60.0f% completed
+19:05:55.240 ThreadId=3 LongComputeTask 70.0f% completed
+19:05:55.740 ThreadId=3 LongComputeTask 80.0f% completed
+19:05:56.240 ThreadId=3 LongComputeTask 90.0f% completed
+19:05:56.740 ThreadId=3 LongComputeTask 100.0f% completed
+19:05:56.740 ThreadId=3 LongComputeTask completed
+~~~
+

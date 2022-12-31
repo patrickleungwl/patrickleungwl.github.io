@@ -1,0 +1,108 @@
+---
+layout: post
+title: WeakReferences in CSharp
+date: 20140313
+categories: tech
+tags: csharp, memory
+archive: true
+---
+Overheard Microsoft taunting Oracle the other day- "Anything you can do, I can do better."  8-)
+
+When it comes to memory management, C# certainly has many comparable features found in Java and more. Following the previous example of testing WeakReferences in Java, we'll now run a similar test in C#.
+
+First, we'll need a dummy memory resource-heavy object. We'll use the same DumbWeight class, whose sole function is to allocate memory.
+
+~~~csharp
+using System.Collection.Generic;
+
+namespace Drills
+{
+  class DumbWeight
+  {
+    private List<int> _weights;
+
+    public DumbWeight(int weight) 
+    {
+      _weights = new List<int>(weight);
+      for (int i=0; i<weight; i++)
+      {
+        _weights.Add(i);
+      }
+    } 
+  }
+}
+~~~
+
+And once again, we run our test by 1) creating a thousand DumbWeight instances, 2) maintain a set of WeakReferences pointing to these DumbWeight instances, 3) free up any strong (direct) references to the DumbWeights, and 4) watch what happens over time.
+
+~~~csharp
+using System;
+using System.Collections.Generic;
+
+namespace Drills
+{
+  class MyTest
+  {
+    //----------------------------------------------------------
+    // Checks how many objects referenced by WeakReferences are
+    // still alive- not yet collected by the GC.
+    // 
+    private void checkWeakReferences(List<int> ltWeakRefs)
+    {
+      int numCollecte=0;
+      foreach(WeakReference w in ltWeakRefs)
+      {
+        if (!w.IsAlive)
+          ++numCollected;
+      }
+      Console.Out.WriteLine("checkWeakRefs: size={0}, numCollected={1}",
+        ltWeakRefs.Count, numCollected);
+    }
+
+    //----------------------------------------------------------
+    // Create a thousand objects pointed to only by WeakReferences.
+    // Every once in a while, scan the WeakReferences to see
+    // if their referenced objects still exist or have been collected.
+    //
+    public void testWeakReferences()
+    {
+      List<int> ltWeakRefs = new List<int>();
+
+      for (int i=0; i<1000; i++ ) 
+      {
+        DumbWeight d = new DumbWeight(100000);
+        WeakReference w = new WeakReference(d);
+        ltWeakRefs.Add(w);
+        d = null;
+        if (s.Count % 100 == 0) 
+          checkWeakReferences(ltWeakRefs);
+      }
+      Console.Out.WriteLine("Completed testWeakReferences");
+    }
+
+    static void Main(string[] args)
+    {
+      MyTest t = new MyTest();
+      t.testWeakReferences();
+    }
+  }
+}
+~~~
+
+The test app's output looks like the following:
+
+~~~
+checkWeakRefs: size=100, numCollected=96
+checkWeakRefs: size=200, numCollected=192
+checkWeakRefs: size=300, numCollected=296
+checkWeakRefs: size=400, numCollected=392
+checkWeakRefs: size=500, numCollected=496
+checkWeakRefs: size=600, numCollected=592
+checkWeakRefs: size=700, numCollected=696
+checkWeakRefs: size=800, numCollected=792
+checkWeakRefs: size=900, numCollected=896
+checkWeakRefs: size=1000, numCollected=992
+~~~
+
+The results show that C#'s WeakReference works just like Java's. The only noticeable difference is that C# offers you a way to check the existence of the WeakReference's refent using its IsAlive property. In Java, the way to check a WeakReference's refent is by getting calling get() to get its contained object and checking for null. C#'s way seems more elegant although functionally there is no difference.
+

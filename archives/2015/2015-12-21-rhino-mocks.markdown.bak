@@ -1,0 +1,112 @@
+---
+layout: post
+title: "Using Rhino Mocks"
+date: 20151221
+categories: tech
+tags: patterns
+archive: true
+---
+Testing Rhino Mocks today for use in unit tests.
+
+IAdder.cs
+
+~~~csharp
+using System;
+
+namespace TestAdderLib
+{
+    public interface IAdder
+    {
+        int AddTwoNums(int a, int b);
+    }
+}
+
+~~~
+
+
+Adder.cs
+
+~~~csharp
+using System;
+using System.Threading;
+
+namespace TestAdderLib
+{
+    public class Adder : IAdder
+    {
+        public int AddTwoNums(int a, int b)
+        {
+            Thread.Sleep(1000);
+            return a + b;
+        }
+    }
+}
+~~~
+
+TestCalculatorWithRhino.cs
+
+~~~csharp
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Calculator;
+using TestAdderLib;
+using Rhino.Mocks;
+
+namespace TestCalculatorWithRhino
+{
+    internal class ManuallyCodedAdderStub : IAdder
+    {
+        public int AddTwoNums(int a, int b)
+        {
+            int result = a + b;
+            return result;
+        }
+    }
+
+
+    [TestClass]
+    public class TestCalculator
+    {
+        [TestMethod]
+        public void TestCalculatorDirectly()
+        {
+            CalculatorV1 c = new CalculatorV1();
+            Assert.AreEqual(2, c.Add(1, 1));
+            Assert.AreEqual(5, c.Add(2, 3));
+        }
+
+        [TestMethod]
+        public void TestCalculatorWithManualAdderStub()
+        {
+            var adderStub = new ManuallyCodedAdderStub();
+            CalculatorV1 c = new CalculatorV1();
+            c.myAdder = adderStub;
+            Assert.AreEqual(2, c.Add(1, 1));
+            Assert.AreEqual(5, c.Add(2, 3));
+        }
+
+        [TestMethod]
+        public void TestCalculatorWithGeneratedAdderStub()
+        {
+            MockRepository mocks = new MockRepository();
+            IAdder mockedAdderStub = mocks.DynamicMock<IAdder>();
+            using (mocks.Record())
+            {
+                mockedAdderStub.AddTwoNums(1, 1);
+                LastCall.Return(2);
+
+                mockedAdderStub.AddTwoNums(2, 3);
+                LastCall.Return(5);
+            }
+
+            CalculatorV1 c = new CalculatorV1();
+            c.myAdder = mockedAdderStub;
+            Assert.AreEqual(2, c.Add(1, 1));
+            Assert.AreEqual(5, c.Add(2, 3));
+        }
+
+    }
+}
+~~~
+
+

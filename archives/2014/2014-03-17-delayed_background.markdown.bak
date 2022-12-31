@@ -1,0 +1,69 @@
+---
+layout: post
+title: "Delayed Background Thread Runnable"
+date: 20140317
+categories: tech
+tags: java, threads
+archive: true
+---
+With Java 1.5, if you want a function to execute at a certain time in the future, it is no longer
+necessary to create timers and callbacks.  Java 1.5 has a ExecutorService that can execute tasks
+at scheduled times.  Below shows a quick example of how it can be used. 
+
+~~~java
+package drills;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+public class Tester {
+
+  DateFormat _df;
+
+  public Tester() {
+    _df = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
+  }
+
+  public String GetTimeNow() {
+    Date dt = new Date();
+    return _df.format(dt);
+  }
+
+  public void RunTest() {
+    Runnable worker = new Runnable() {
+      public void run() {
+        System.out.format("%s: Worker running\n", GetTimeNow());				
+      }
+    };
+
+    ScheduledExecutorService ex = Executors.newSingleThreadScheduledExecutor();
+    System.out.format("%s: Scheduled worker to run in 5 seconds\n", GetTimeNow());
+    ex.schedule(worker, 5, TimeUnit.SECONDS);
+
+    try {
+      Thread.sleep(10000);
+    } catch(Exception e) {
+      // Even if interrupted exception is thrown during sleep, keep going
+    }
+    System.out.println("Test completed");
+  }	
+
+  public static void main(String[] args) {
+    Tester t = new Tester();
+    t.RunTest();
+  }
+}
+~~~
+The test app output looks like this:
+
+~~~
+20140317 23:56:53: Scheduled worker to run in 5 seconds
+20140317 23:56:58: Worker running
+Test completed
+~~~
+

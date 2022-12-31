@@ -1,0 +1,91 @@
+---
+layout: post
+title: "Using Tasks-2"
+date: 20151227
+categories: tech
+tags: patterns
+archive: true
+---
+Testing with Tasks again. 
+
+~~~csharp
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace TestTasks2
+{
+    class TasksTester
+    {
+        private void LogMsg(string msg, params object[] args)
+        {
+            Console.Out.Write("{0} ThreadId={1} ",
+                DateTime.Now.ToString("HH:MM:ss.fff"),
+                Thread.CurrentThread.ManagedThreadId);
+            Console.Out.WriteLine(msg, args);
+        }
+
+
+
+        private void DoWork()
+        {
+            LogMsg("Background worker starting");
+
+            float percentDone = 0.0f;
+            for (int i = 0; i < 10; i++)
+            {
+                Thread.Sleep(200);
+                percentDone += 10.0f;
+            }
+            LogMsg("Background worker completed");
+
+        }
+
+
+        // RunTest
+        //
+        // Function run by main thread
+        // Main thread sets up the background worker instance
+        // and fires it off
+
+        public void RunTest()
+        {
+            var myBkTask = new Task(DoWork);
+            var myBkTask2 = new Task(DoWork);
+            myBkTask.Start();
+            myBkTask2.Start();
+
+            LogMsg("Main thread worker waiting");
+            myBkTask.Wait();
+            myBkTask2.Wait();
+
+            LogMsg("Main thread worker completed");
+        }
+
+
+
+        // Main
+        // Start up a background worker test instance
+
+        static void Main(string[] args)
+        {
+            var testWkr = new TasksTester();
+            testWkr.RunTest();
+        }
+    }
+}
+~~~
+
+The output-
+
+~~~
+19:05:48.736 ThreadId=4, Background worker starting
+19:05:48.721 ThreadId=1, Main thread worker waiting
+19:05:48.735 ThreadId=3, Background worker starting
+19:05:50.752 ThreadId=4, Background worker completed
+19:05:50.762 ThreadId=3, Background worker completed
+19:05:50.762 ThreadId=1, Main thread worker completed
+~~~
+
+
+

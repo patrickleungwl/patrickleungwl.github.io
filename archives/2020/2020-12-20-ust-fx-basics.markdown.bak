@@ -1,0 +1,28 @@
+---
+layout: post
+title: "UST and FX Basics"
+date: 20201220
+categories: tech
+tags: patterns
+published: false
+archive: true
+---
+### UST Basics
+
+* UST quote notation:  
+
+
+### FX Basics
+
+* Spot-currency trading is conducted through pips.  One pip is 1/100th of a penny. 
+One pip is 0.0001 in the exchange rate of a currency pair. 
+
+* A **standard** lot is 100,000 units of a currency pair.  One pip move of a standard contract
+is 1e5 * 1e-4 = 1e1 = 10 units (for example $10).
+
+* A **mini lot** is 10,000 units of a currency pair.  One pip move of a mini lot contract is
+1e4 * 1e-4 = 1e0 = 1 unit (for example $1).
+
+* The cost of a buy and sell round trip is the size of the bid-ask spread. 
+
+

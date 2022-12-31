@@ -1,0 +1,32 @@
+# Multiplexed IO
+
+## Background
+
+Traditional I/O calls such as read() blocks on the call until data returns.  If there is no data in a pipe, read() blocks.  
+
+The traditional I/O model can work under two models- 
+
+1. use a non-blocking I/O file descriptor
+2. use multple processes or threads 
+
+When reading a non-block file descriptor of a pipe with no data, the read system call will return an error and not block.  The reader can then continuously
+poll or poll intermittently.  Both methods have problems.  A continuous poll maxes out CPU usage while an intermittent poll introduces I/O latency. 
+
+Using multiple processes or threads to perform the I/O and free up the parent
+process/thread can work- but this adds additional complexity in arranging 
+communication between the processes and threads.  
+
+For reading to/writing from multiple file descriptors, there are 4 methods: 
+
+1. select()
+2. poll()
+3. signal driven I/O
+4. epoll()
+
+
+
+
+
+
+
+## 

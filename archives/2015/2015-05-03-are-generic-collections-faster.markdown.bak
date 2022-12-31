@@ -1,0 +1,118 @@
+---
+layout: post
+title: "Are Generic Collections Faster than Non-Generic Collections?"
+date: 20150503
+categories: tech
+tags: patterns
+archive: true
+---
+The oft-repeated assertion is that generic collections run faster than their non-generic versions.  But is this true?  And if so, just how much faster?  
+
+I wrote some quick code to run a test. 
+
+~~~csharp
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+namespace TestBoxing
+{
+    class Program
+    {
+        static void TimeArrayList()
+        {
+            Console.Out.WriteLine("TimeArrayList start");
+            // Test creating and reading a million boxed ints
+            DateTime dtStart = DateTime.Now;
+            ArrayList intList = new ArrayList();
+            for (int i = 0; i < 10000000; i++)
+            {
+                intList.Add(i);
+            }
+            DateTime dtCreateEnd = DateTime.Now;
+
+            for (int j = 0; j < 10000000; j++)
+            {
+                int retrievedInt = (int)intList[j];
+                if (retrievedInt % 1000000 == 0)
+                    Console.Out.Write(".");
+            }
+            Console.Out.WriteLine();
+            DateTime dtReadEnd = DateTime.Now;
+
+            TimeSpan wholeTime = dtReadEnd.Subtract(dtStart);
+            TimeSpan addTime = dtCreateEnd.Subtract(dtStart);
+            TimeSpan readTime = dtReadEnd.Subtract(dtCreateEnd);
+            Console.Out.WriteLine("ArrayList took {0} ms in total, {1} ms to add, {2} to read\n", 
+                wholeTime.TotalMilliseconds,
+                addTime.TotalMilliseconds,
+                readTime.TotalMilliseconds);
+        }
+
+
+        static void TimeGenericList()
+        {
+            Console.Out.WriteLine("TimeGenericList start");
+            // Test creating and reading a million boxed ints
+            DateTime dtStart = DateTime.Now;
+            List<int> intList = new List<int>();
+            for (int i = 0; i < 10000000; i++)
+            {
+                intList.Add(i);
+            }
+            DateTime dtCreateEnd = DateTime.Now;
+
+            for (int j = 0; j < 10000000; j++)
+            {
+                int retrievedInt = intList[j];
+                if (retrievedInt % 1000000 == 0)
+                    Console.Out.Write(".");
+            }
+            Console.Out.WriteLine();
+            DateTime dtReadEnd = DateTime.Now;
+
+            TimeSpan wholeTime = dtReadEnd.Subtract(dtStart);
+            TimeSpan addTime = dtCreateEnd.Subtract(dtStart);
+            TimeSpan readTime = dtReadEnd.Subtract(dtCreateEnd);
+            Console.Out.WriteLine("GenericList took {0} ms in total, {1} ms to add, {2} to read\n",
+                wholeTime.TotalMilliseconds,
+                addTime.TotalMilliseconds,
+                readTime.TotalMilliseconds);
+        }
+
+        static void Main(string[] args)
+        {
+            TimeGenericList();
+            TimeArrayList();
+            TimeArrayList();
+            TimeGenericList();
+            Console.ReadKey();
+        }
+    }
+}
+
+~~~
+
+The result?
+
+~~~
+TimeGenericList start
+..........
+GenericList took 646 ms in total, 251 ms to add, 395 to read
+
+TimeArrayList start
+..........
+ArrayList took 3870 ms in total, 3409 ms to add, 461 to read
+
+TimeArrayList start
+..........
+ArrayList took 3593 ms in total, 3146 ms to add, 447 to read
+
+TimeGenericList start
+..........
+GenericList took 786 ms in total, 400 ms to add, 386 to read
+
+~~~
+
+It's fairly conclusive.  Adding new items to a generic list is roughly 9 times faster than the non-generic version.  My guess is this slowness comes from boxing the item before adding it to the list.  Retrieving and unboxing the item from a non-generic list is not much slower than the generic version. 
+

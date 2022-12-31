@@ -1,0 +1,73 @@
+---
+layout: post
+title: "Java String Literals Versus String Objects"
+date: 20140320
+categories: tech
+tags: java, memory
+archive: true
+---
+Strings in Java can be declared either literally-
+
+~~~
+String s = "123";
+~~~
+or as a String instance-
+
+~~~
+String s = new String("123");
+~~~
+What are the differences between these two strings?
+
+~~~java
+package drills;
+
+public class Tester {
+
+  public static void main(String[] args) {
+
+    // Test differences between String v = new String(...)
+    // and String v = "..."
+
+    // String literals are stored in a string pool- cached and reused.
+    // String objects are stored in the heap as new objects.		
+
+    // Two string literals with the same characters are the same
+    // in every possible way.
+    String s1 = "abcdef";
+    String s2 = "abcdef";
+    assert(s1 == s2);
+    assert(s1.hashCode() == s2.hashCode());
+    assert(s1.equals(s2) && s2.equals(s1));
+
+    // Two string objects with the same characters are the same
+    // only with hashCode() and equals()- but are different object
+    // instances
+    String s3 = new String("abcdef");
+    String s4 = new String("abcdef");
+    assert(s3 != s4);
+    assert(s3.hashCode() == s4.hashCode());
+    assert(s3.equals(s4) && s4.equals(s3));
+
+    // String literals and String objects are separate string
+    // instances, but hashCodes are all equal
+    assert(s1 != s3 &amp;&amp; s1 != s4);
+    assert(s1.hashCode() == s2.hashCode());
+    assert(s2.hashCode() == s3.hashCode());
+    assert(s3.hashCode() == s4.hashCode());
+
+    // Though separate instances, contents are also still equal
+    assert(s1.equals(s3) && s1.equals(s4));
+    assert(s2.equals(s3) && s2.equals(s4));
+
+    System.out.println("Tests completed");
+  }
+}
+
+~~~
+Summary:
+
+* Regardless of how strings are declared, for a given character sequence, their hashCodes() and equals() all return the same value.
+    * String literals reuse the same string instance if already exists.
+    * String objects always create a new instance (unless using the intern method).
+
+

@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Multi-threading Cheat Sheet"
+date: 20151218
+categories: tech
+tags: patterns
+archive: true
+---
+Here is a cheatsheet of .net 4.5 multi-threading options- with the pros and cons of each. 
+
+* BackgroundWorker
+    * Easy to start working in background
+    * Easy to periodically update the UI thread
+* Theads
+    * Heavy weight multi-threading, but gives full control
+
+

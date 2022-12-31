@@ -1,0 +1,107 @@
+---
+layout: post
+title: "Using ThreadPool"
+date: 20151223
+categories: tech
+tags: patterns
+archive: true
+---
+Testing ThreadPool usage today- 
+
+~~~csharp
+using System;
+using System.Threading;
+
+namespace TestThreadPool
+{
+    class ThreadPoolTester
+    {
+        private void LogMsg(string msg, params object[] args)
+        {
+            Console.Out.Write("{0} ThreadId=3D{1} ",
+                DateTime.Now.ToString("HH:MM:ss.fff"),
+                Thread.CurrentThread.ManagedThreadId);
+            Console.Out.WriteLine(msg, args);
+        }
+
+
+        // LongComputeTask
+        //
+        // Function run by background worker.
+
+        private void LongComputeTask(Object stateInfo)
+        {
+            LogMsg("LongComputeTask starting");
+
+            float percentDone =3D 0.0f;
+            for (int i =3D 0; i < 10; i++)
+            {
+                Thread.Sleep(500);
+                percentDone +=3D 10.0f;
+                LogMsg("LongComputeTask {0:0.0f}% completed",
+                    percentDone);
+            }
+            LogMsg("LongComputeTask completed");
+
+            AutoResetEvent myFlag =3D stateInfo as AutoResetEvent;
+            if (myFlag !=3D null)
+            {
+                myFlag.Set();
+            }
+        }
+
+
+        private void GetMaxThreadPoolThreads()
+        {
+            int workerThreads, portThreads;
+            ThreadPool.GetMaxThreads(out workerThreads, out portThreads);
+            LogMsg("MaxWorkerThreads=3D{0} MaxPortThreads=3D{1}",
+                workerThreads, portThreads);
+        }
+
+
+        // RunTest
+        //
+        // Function run by main thread
+        // Main thread sets up the background thread
+        // and fires it off
+
+        public void RunTest()
+        {
+            GetMaxThreadPoolThreads();
+
+            var myFlag =3D new AutoResetEvent(false);
+            ThreadPool.QueueUserWorkItem(new WaitCallback(LongComputeTask), myFlag);
+
+            myFlag.WaitOne();
+        }
+
+
+
+        static void Main(string[] args)
+        {
+            var tester =3D new ThreadPoolTester();
+            tester.RunTest();
+        }
+    }
+}
+~~~
+
+The output-
+
+~~~
+19:05:59.297 ThreadId=3D1 MaxWorkerThreads=3D1023 MaxPortThreads=3D1000
+19:05:59.332 ThreadId=3D3 LongComputeTask starting
+19:05:59.842 ThreadId=3D3 LongComputeTask 10.0f% completed
+19:05:00.342 ThreadId=3D3 LongComputeTask 20.0f% completed
+19:05:00.842 ThreadId=3D3 LongComputeTask 30.0f% completed
+19:05:01.342 ThreadId=3D3 LongComputeTask 40.0f% completed
+19:05:01.844 ThreadId=3D3 LongComputeTask 50.0f% completed
+19:05:02.344 ThreadId=3D3 LongComputeTask 60.0f% completed
+19:05:02.846 ThreadId=3D3 LongComputeTask 70.0f% completed
+19:05:03.346 ThreadId=3D3 LongComputeTask 80.0f% completed
+19:05:03.846 ThreadId=3D3 LongComputeTask 90.0f% completed
+19:05:04.346 ThreadId=3D3 LongComputeTask 100.0f% completed
+19:05:04.346 ThreadId=3D3 LongComputeTask completed
+~~~
+

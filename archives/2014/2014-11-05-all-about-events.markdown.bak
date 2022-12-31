@@ -1,0 +1,106 @@
+---
+layout: post
+title: "All About Events"
+date: 20141105
+categories: tech
+tags: patterns
+archive: true
+---
+Let's discuss a little bit more about Events.  How are Events different from Delegates?
+
+For events-
+
+* The event keyword is a modifier- to a delegate type, the most frequent being EventHandler for event handling situations.
+* The event keyword allows a delegate type to be exposed in an interface.  
+* Events come with add and remove methods, much like get and set methods for properties.
+* Events have a strict method signature (object ok, EventArgs e). 
+
+Here is some simple test code demonstrating the use of Events.
+
+~~~csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TestEvents
+{
+   
+    class TinyMechErrorArgs : EventArgs
+    {
+        public int MechError { get; set; }
+
+        public TinyMechErrorArgs(int error)
+        {
+            MechError = error;
+        }
+    }
+
+    // ----------------------------------------------------------------
+    // TinyMech
+    //
+    // Machine that publishes error events
+    //
+    // ----------------------------------------------------------------
+
+    class TinyMech
+    {
+        // EventHandlers must have args (object sender, EventArgs e)
+        public event EventHandler ErrorEventHappened;
+
+        public void Run()
+        {
+            Random r = new Random();
+            for(int i=0; i<1000; i++)
+            {
+                if (r.Next(100)==1)
+                {
+                    ErrorEventHappened(this, new TinyMechErrorArgs(i));
+                }
+            }
+        }
+    }
+
+
+    // ----------------------------------------------------------------
+    // TinyReporter
+    //
+    // Machine that listens for errors and reports it to main console
+    //
+    // ----------------------------------------------------------------
+
+    class TinyReporter
+    {
+        public void ListenToMachine(TinyMech m)
+        {
+            m.ErrorEventHappened += ReportError;
+        }
+
+        private void ReportError(object sender, EventArgs e)
+        {
+            if (sender is TinyMech)
+            {
+                TinyMechErrorArgs ea = (TinyMechErrorArgs) e;
+                Console.Out.WriteLine("Error on {0}", ea.MechError);
+            }
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            TinyMech m = new TinyMech();
+            TinyReporter r = new TinyReporter();
+            r.ListenToMachine(m);
+            m.Run();
+            Console.In.ReadLine();
+        }
+    }
+}
+
+~~~
+
+

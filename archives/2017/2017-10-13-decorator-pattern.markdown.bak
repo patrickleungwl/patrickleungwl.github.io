@@ -1,0 +1,206 @@
+---
+layout: post
+title: "Decorator Pattern"
+date: 20171013
+categories: tech
+tags: patterns
+published: false
+archive: true
+---
+The Decorator pattern- is used to dynamically add new functionality to 
+existing components- without having to change the existing components. 
+
+
+
+IShippingMethod.cs
+---
+
+~~~csharp
+using System;
+
+namespace Decorator
+{
+    public interface IShippingMethod
+    {
+        double GetCost();
+    }
+}
+
+~~~
+
+
+GroundShipping.cs
+---
+
+~~~csharp
+using System;
+
+namespace Decorator
+{
+    public class GroundShipping : IShippingMethod
+    {
+        public double GetCost()
+        {
+            return 10.0;
+        }       
+    }
+}
+~~~
+
+
+AirShipping.cs
+---
+
+~~~csharp
+using System;
+
+namespace Decorator
+{
+    public class AirShipping : IShippingMethod
+    {
+        public double GetCost()
+        {
+            return 50.0;
+        }
+    }
+}
+~~~
+
+
+DecoratorShipping.cs
+---
+
+~~~csharp
+using System;
+
+namespace Decorator
+{
+    public class DecoratorShipping : IShippingMethod
+    {
+        IShippingMethod _shippingMethod;
+
+        public DecoratorShipping(IShippingMethod shippingMethod)
+        {
+            _shippingMethod = shippingMethod;
+        }
+
+        public virtual double GetCost()
+        {
+            return _shippingMethod.GetCost();
+        }
+    }
+}
+~~~
+
+
+ReceiptDecorator.cs
+---
+
+~~~csharp
+using System;
+
+namespace Decorator
+{
+    public class ReceiptDecorator : DecoratorShipping
+    {
+        public ReceiptDecorator(IShippingMethod shippingMethod) :
+            base(shippingMethod)
+        {
+        }
+
+        public override double GetCost()
+        {
+            return base.GetCost() +  1.0;
+        }
+    }
+}
+~~~
+
+
+SignatureRequiredDecorator.cs
+---
+
+~~~csharp
+using System;
+
+namespace Decorator
+{
+    public class SignatureRequiredDecorator : DecoratorShipping
+    {
+        public SignatureRequiredDecorator(IShippingMethod shippingMethod) :
+            base(shippingMethod)
+        {
+        }
+
+        public override double GetCost()
+        {
+            return base.GetCost() + 2.0;
+        }
+    }
+}
+~~~
+
+DecoratorTester.cs
+---
+
+~~~csharp
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Decorator;
+
+namespace DecoratorTests
+{
+    [TestClass]
+    public class DecoratorTester
+    {
+        [TestMethod]
+        public void GroundShippingWithNoOptionsShouldCostTenDollars()
+        {
+            var groundShipment = new GroundShipping();
+            Assert.AreEqual(10.0, groundShipment.GetCost());
+        }
+
+        [TestMethod]
+        public void GroundShippingWithReceiptOptionShouldCostElevenDollars()
+        {
+            var groundShipment = new GroundShipping();
+            var groundShipmentWithReceiptOption = new ReceiptDecorator(groundShipment);
+            Assert.AreEqual(11.0, groundShipmentWithReceiptOption.GetCost());
+        }
+
+        [TestMethod]
+        public void GrondShippingWithSignatureOptionShouldCostTwelveDollars()
+        {
+            var groundShipment = new GroundShipping();
+            var groundShipmentWithSignatureOption = new SignatureRequiredDecorator(groundShipment);
+            Assert.AreEqual(12.0, groundShipmentWithSignatureOption.GetCost());
+        }
+
+        [TestMethod]
+        public void GrondShippingWithSignatureOptionAndReceiptShouldCostThirteenDollars()
+        {
+            var groundShipment = new GroundShipping();
+            var receiptOption = new ReceiptDecorator(groundShipment);
+            var groundShipmentWithSignatureAndReceiptOption = new SignatureRequiredDecorator(receiptOption);
+            Assert.AreEqual(13.0, groundShipmentWithSignatureAndReceiptOption.GetCost());
+        }
+
+        [TestMethod]
+        public void AirShippingWithNoOptionsShouldCostFiftyDollars()
+        {
+            var airShipment = new AirShipping();
+            Assert.AreEqual(50.0, airShipment.GetCost());
+        }
+
+        [TestMethod]
+        public void AirShippingWithReceiptOptionShouldCostElevenDollars()
+        {
+            var airShipment = new AirShipping();
+            var airShipmentWithReceiptOption = new ReceiptDecorator(airShipment);
+            Assert.AreEqual(51.0, airShipmentWithReceiptOption.GetCost());
+        }
+
+
+    }
+}
+~~~

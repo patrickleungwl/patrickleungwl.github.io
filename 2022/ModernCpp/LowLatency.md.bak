@@ -1,0 +1,117 @@
+# Low Latency Concepts
+
+## RCU
+
+* Reading a constant list scales almost linearly for additional threads.
+* For a list that updates occasionally, still need to manage read-write
+race conditions.  Using traditional read-write locks and atomics don't 
+scale much because locks block.  Multi cores may need to sync before and 
+after writes.  Every mutex/lock is heavy-weight and expensive.
+* **Core RCU idea**
+    * Copy the old structure to a new structure
+    * Update the new structure (any concurrent readers still read from old structure)
+    * Update the global pointer to point to new structure.  New readers read
+    from new structure at this point. 
+    * Sleep until last concurrent reader finishes reading old structure.
+    * Once kernel wakes this sleep, it is safe to deallocate old structure.
+
+## DMA
+
+Direct Memory Access controller's job is to move data from different ports in/out
+of memory.  This alleviates this job from the CPU- which can keep working on 
+computing tasks- while the DMA does its job.  The CPU tells the DMA the source
+and target of the data- and tell the DMA to send an interrupt when it's done.
+
+The cpu backs off from using the bus while the DMA moves data over the bus. 
+The cpu just continues to work using its L1 and L2 caches.  This period is called
+cycle stealing.
+
+## RDMA
+
+Remote Direct Memory Access technology allows reading data from the memory of 
+a remote machine- without using any CPU cycles of the host machine.  This frees
+up CPU cycles of the host machine.
+
+The term **zero copy** often comes up.  TCP copies data in and out of system 
+buffers on both the client and server machines.  RDMA moves data directly from
+the server machine to the client.
+
+RDMA bypasses kernel.  TCP traffic relies on going thru the kernel stack and 
+on the kernel scheduler.
+
+Downside- requires using new RDMA api calls.  Kernel bypass solutions like 
+Solarflare Onload and Mellanox requires no software changes.
+
+## CPU architectures
+* Sandy Bridge- 2011-2013, 32 nm, 64K L1, 256K L2
+* Ivy Bridge- 2012-2015, 22nm, 64K L1, 256K L2
+* Haswell- 2013-2022, 22nm, 64K L1, 256K L2
+* Broadwell- 2014-2018, 14nm, 64K L1, 256K L2
+* Skylake- 2015-2019, 14nm, 64K L1, 256K L2
+* Cannon Lake- 2018-2020, 10nm, 64K L1 per core, 256K L2 per core
+* Cypress Cove- 2021-now, 10nm, 80K L1 per core
+
+## Mesh?
+
+## FPGA
+
+Field Programmable Gate Arrays- are circuits with programmable logic on NICs 
+that operate directly on data coming in over the network.  
+
+
+## NTP
+
+Network Time Protocol.  Accurate to 10ms (0.01 seconds).
+
+```
+
+Client
+       t0          t3
+ ---------------------------------------------->
+           t1  t2                             Time
+Server
+
+t0 = time client sends time request
+t1 = time server receives time request
+t2 = time server sends time reply
+t3 = time client receives 'time' from server
+
+```
+
+The Time Server sends back to the Client a message packet 
+containing t0, t1, and t2.  The Client knows t3. 
+
+We want to know how long it took the message to go from the 
+Server to the Client- because once we know the time, we 
+can figure out the real time. 
+
+We get the travel time by averaging the times the messages spent
+traveling to and from the two machines. 
+
+So we guess the one-way travel time (TT) as:
+
+```
+TT = ((t1-t0) + (t3-t2)) / 2
+```
+
+So this means the time at point t3 should really be 
+
+```
+t2+TT
+```
+
+Doing NTP in a feedback loop refines the time precision until 
+the variability in time t3 goes under a certain threshold.
+
+## PTP
+
+Precision Time Protocol.  Similar idea to NTP but more accurate to 
+1us (0.000001 seconds).
+
+
+## Caches
+* L3 cache is a contended resource for multiple threads.  Multiple cores
+share the same L3 cache.
+* L2 cache is 256K for code and data- as of 2022.
+* L1 cache 
+

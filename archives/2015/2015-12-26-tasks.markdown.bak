@@ -1,0 +1,89 @@
+---
+layout: post
+title: "Using Tasks"
+date: 20151226
+categories: tech
+tags: patterns
+archive: true
+---
+Testing usage of Tasks today. 
+
+~~~csharp
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace TestTasks
+{
+    class TasksTester
+    {
+        private void LogMsg(string msg, params object[] args)
+        {
+            Console.Out.Write("{0} ThreadId={1} ",
+                DateTime.Now.ToString("HH:MM:ss.fff"),
+                Thread.CurrentThread.ManagedThreadId);
+            Console.Out.WriteLine(msg, args);
+        }
+
+
+
+        private void DoWork(object e)
+        {
+            LogMsg("Background worker starting");
+
+            float percentDone = 0.0f;
+            for (int i = 0; i < 10; i++)
+            {
+                Thread.Sleep(200);
+                percentDone += 10.0f;
+            }
+            LogMsg("Background worker completed");
+
+            AutoResetEvent ae = e as AutoResetEvent;
+            ae.Set();
+        }
+
+
+        // RunTest
+        //
+        // Function run by main thread
+        // Main thread sets up the background worker instance
+        // and fires it off
+
+        public void RunTest()
+        {
+            AutoResetEvent myFlag = new AutoResetEvent(false);
+
+            //Action<object> myAction = DoWork;
+            //var myBkTask = new Task(myAction, myFlag);
+
+            var myBkTask = new Task(delegate { DoWork(myFlag); });
+            myBkTask.Start();
+
+            LogMsg("Main thread worker waiting");
+            myFlag.WaitOne();
+            LogMsg("Main thread worker completed");
+        }
+
+
+        // Main
+        // Start up a background worker test instance
+
+        static void Main(string[] args)
+        {
+            var testWkr = new TasksTester();
+            testWkr.RunTest();
+        }
+    }
+}
+~~~
+
+The output is- 
+
+~~~
+19:05:47.041 ThreadId=1, Main thread worker waiting
+19:05:47.060 ThreadId=3, Background worker starting
+19:05:49.108 ThreadId=3, Background worker completed
+19:05:49.108 ThreadId=1, Main thread worker completed
+~~~
+

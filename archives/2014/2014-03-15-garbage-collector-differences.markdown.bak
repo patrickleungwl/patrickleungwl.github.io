@@ -1,0 +1,36 @@
+---
+layout: post
+title: Garbage Collector Differences between Java and CSharp
+date: 20140315
+categories: tech
+tags: java, csharp, memory
+archive: true
+---
+More on our old friend, the Garbage Collector- also known on the streets as the 'GC'.
+
+Common Default Behavior
+-----------------------
+At indeterminate times, the GC comes around, finds and frees up
+
+* every unreferenced object- these are objects that cannot be traced to a long living root object
+* every object referenced only by a WeakReference
+* and- for Java only- if free memory is low, every object referenced only by a SoftReference
+
+C# Has No SoftReferences
+------------------------
+C# does not have SoftReferences.  Why this is so?  Two leading theories on StackOverflow say
+
+* Java has four levels of reference strength- (strong, soft, weak, and phantom)- and that's way too confusing.  C# just keeps it simple at two- strong and weak.  Nice.
+* On 32-bit Windows platforms, C#, unlike Java, uses an entire process' addressable memory space- 4GB.  It's 2GB in practical terms because the OS/kernal claims usage on the other 2GB, but it's also possible to push the user space limits to 3GB using boot flags.  With more memory at is disposal, C# apps are less likely than Java apps to struggle for memory- which is how SoftReferences are likely to be used.With Java on Linux, the way to find the maxium heap size is via:
+
+~~~
+java -XX:+PrintFlagsFinal -version | grep i maxheapsize
+~~~
+
+
+When Is the Garbage Collector Coming?
+-------------------------------------
+In C#, it is not uncommon to see code explicitly requesting a garbage collection.  The GC collects immediately at the point in the code.
+
+In Java however, the GC collection call is only a request.  The GC alays collects at an indeterminate time in the future.
+

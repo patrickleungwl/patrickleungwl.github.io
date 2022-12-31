@@ -1,0 +1,125 @@
+---
+layout: post
+title: "WeakReferences in Java"
+date: 20140311
+categories: tech
+tags: java, memory
+archive: true
+---
+Java as a language has been in the public eye for close to two decades now.  And there shouldn't
+really be anything new to an old techie, should there?  Well, surprise to say- there are some 
+features that I rarely use.  One of these features is the "WeakReference".
+
+What are WeakReferences used for? WeakReferences are used for keeping objects in memory for only 
+as long as a variable references it. As soon as this strong reference disappears, this object held 
+by the WeakReference is up for garbage collection. This makes WeakReferences quite handy for 
+keeping high storage-cost objects in memory for only as long as you really need it.
+
+Example, let's make a dummy class that does nothing but make heavy memory allocations:
+
+~~~java
+package drills; 
+
+import java.util.ArrayList;
+
+public class DumbWeight {
+  private ArrayList<Integer> _weights;
+  
+  public DumbWeight(int weight) {
+    _weights = new ArrayList<Integer>(weight);
+    for (int i=0; i<weight; i++) {
+      _weights.add(new Integer(i));
+    }
+  }
+}
+
+~~~
+
+And here is the test code. The test code creates a thousand "DumbWeight" objects- each allocating one
+hundred thousand Integers. While the WeakReferences keep track of the DumbWeights, we remove any strong
+references to them. This leaves the WeakReference as the only link to the DumbWeights. The Garbage
+Collector eventually spots this- and wipes out the DumbWeights over time. The CheckReferences method
+periodically scans the set of WeakReferences to see if the DumbWeights still exist.
+
+~~~java
+package drills;
+import java.lang.ref.*;
+import java.util.*;
+
+public class MyTest { 
+
+  /** checkWeakReferences
+   *  
+   *  Check how many weak references still exist and not collected
+   */
+  private void checkWeakReferences(Set<WeakReference> s) {
+    int numCollected = 0;
+    Iterator<WeakReference> i = s.iterator();
+    while (i.hasNext()) {
+      WeakReference w = i.next();
+      DumbWeight d = w.get();
+      if (d==null) {
+        ++numCollected;
+      } 
+    }
+    System.out.format("checkWeakRefs: size=%d, numCollected=%dn",
+      s.size(), numCollected );
+  } 
+
+  /** testWeakReferences
+   *  
+   *  If the GC collects weak references, then we should be
+   *  able to create objects using WR indefinitely.
+   *
+
+  public void testWeakReferences() {
+
+    Set<WeakReference> s = new HashSet<WeakReference>();
+
+    System.out.println("*****************************"); 
+    System.out.println("Starting testWeakReferences"); 
+    System.out.println("Creating 1000 weak references");
+    for (int i=0; i&lt;1000; i++) {
+      DumbWeight d = new DumbWeight(100000);
+      WeakReference w = new WeakReference(d);
+      s.add(w);
+      d = null;
+      if (s.size()%100==0) {
+        checkWeakReferences(s);
+      } 
+    }
+    System.out.println("Completed testWeakReferences"); 
+  }
+
+  public static void main(String[] args) { 
+    MyTest m = new MyTest();
+    m.testWeakReferences();
+  }
+}
+
+~~~
+The output of one such test run is shown below. The memory usage of this Test app stays in the 220 meg range on a Linux laptop with 2Gb RAM.
+
+~~~
+*****************************
+Starting testWeakReferences
+Creating 1000 weak references
+checkWeakRefs: size=100, numCollected=98
+checkWeakRefs: size=200, numCollected=182
+checkWeakRefs: size=300, numCollected=235
+checkWeakRefs: size=400, numCollected=318
+checkWeakRefs: size=500, numCollected=489
+checkWeakRefs: size=600, numCollected=576
+checkWeakRefs: size=700, numCollected=663
+checkWeakRefs: size=800, numCollected=750
+checkWeakRefs: size=900, numCollected=837
+checkWeakRefs: size=1000, numCollected=924
+Completed testWeakReferences
+
+~~~
+
+As shown, because the objects, the DumbWeight instances, are only "weakly referenced" and not strongly referenced, the GC always collects them whenever it runs.
+
+Hope the test code makes clear this feature of WeakReference.
+
+

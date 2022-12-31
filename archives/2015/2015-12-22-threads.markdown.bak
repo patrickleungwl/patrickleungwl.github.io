@@ -1,0 +1,106 @@
+---
+layout: post
+title: "Using Threads"
+date: 20151222
+categories: tech
+tags: patterns
+archive: true
+---
+We're not supposed to use raw managed threads anymore- given that .net 4+ has given us much more advanced
+multi-threading features.  However, I'll still post some test code to illustrate how threads work. 
+
+~~~csharp
+using System;
+using System.Text;
+using System.Threading;
+
+namespace TestThreads
+{
+    class ThreadTester
+    {
+        private Thread _workerThread;
+
+        private void LogMsg(string msg, params object[] args)
+        {
+            Console.Out.Write("{0} ThreadId={1} ",
+                DateTime.Now.ToString("HH:MM:ss.fff"),
+                Thread.CurrentThread.ManagedThreadId);
+            Console.Out.WriteLine(msg, args);
+        }
+
+
+        // LongComputeTask
+        //
+        // Function run by background worker.
+
+        void LongComputeTask(object threadId)
+        {
+            LogMsg("LongComputeTask starting");
+
+            float percentDone = 0.0f;
+            for (int i = 0; i < 10; i++)
+            {
+                Thread.Sleep(500);
+                percentDone += 10.0f;
+                LogMsg("LongComputeTask {0:0.0f}% completed",
+                   percentDone);
+            }
+            LogMsg("LongComputeTask completed");
+        }
+
+
+        // RunTest
+        //
+        // Function run by main thread
+        // Main thread sets up the background thread
+        // and fires it off
+
+        public void RunTest()
+        {
+            _workerThread = new Thread(LongComputeTask);
+            _workerThread.Start(1);
+
+            // main thread do something while background thread do something else
+            for (int i = 0; i < 2; i++)
+            {
+                LogMsg("Main thread working");
+                Thread.Sleep(1000);
+            }
+            LogMsg("Main thread completed, wait for worker thread");
+
+            _workerThread.Join();
+        }
+
+
+        // Main
+        // Start up a background worker test instance
+
+        static void Main(string[] args)
+        {
+            ThreadTester testWkr = new ThreadTester();
+            testWkr.RunTest();
+        }
+    }
+}
+~~~
+
+The output:
+
+~~~
+19:05:36.155 ThreadId=1 Main thread working
+19:05:36.185 ThreadId=3 LongComputeTask starting
+19:05:36.693 ThreadId=3 LongComputeTask 10.0f% completed
+19:05:37.183 ThreadId=1 Main thread working
+19:05:37.193 ThreadId=3 LongComputeTask 20.0f% completed
+19:05:37.695 ThreadId=3 LongComputeTask 30.0f% completed
+19:05:38.185 ThreadId=1 Main thread completed, wait for worker thread
+19:05:38.195 ThreadId=3 LongComputeTask 40.0f% completed
+19:05:38.695 ThreadId=3 LongComputeTask 50.0f% completed
+19:05:39.195 ThreadId=3 LongComputeTask 60.0f% completed
+19:05:39.695 ThreadId=3 LongComputeTask 70.0f% completed
+19:05:40.195 ThreadId=3 LongComputeTask 80.0f% completed
+19:05:40.697 ThreadId=3 LongComputeTask 90.0f% completed
+19:05:41.197 ThreadId=3 LongComputeTask 100.0f% completed
+19:05:41.197 ThreadId=3 LongComputeTask completed
+~~~
+

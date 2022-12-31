@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Heroku Notes"
+date: 20200210
+categories: history 
+tags: history
+published: false
+archive: true
+---
+
+#### Quick Notes
+
+* File system - data written to the file system when the virtual server
+  restarts.  Use a shared file storage system such as AWS S3 instead. 
+
+* Sharing state across multiple servers- requires a distributed store like
+  Memcached.
+
+* Dependency management - requires language specific tools like 
+  Bundler for Ruby or Ivy or Java
+
+* Dyno- a dyno is a standard unit of virtual server capability.
+
+* Logs- to see logs, do   heroku logs --tail 
+
+#### Steps
+
+~~~
+heroku login
+in folder container git repository
+heroku create (this creates an application in heroku to contain the git code
+it also sets the app to point to the git repo)
+git push heroku master (deploys code to virtual machine)
+
+
+
+
+~~~
+
+

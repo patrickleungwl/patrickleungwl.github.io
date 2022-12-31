@@ -1,0 +1,41 @@
+---
+layout: post
+title: "C++ explicit keyword"
+date: 20200208
+categories: cpp
+tags: cpp
+archive: true
+---
+
+In C++, the use of the *explicit* keyword prevents the compiler from 
+dynamically creating temporaily objects just when value types 
+match the parameter types in its constructor.  An example describes this 
+best-
+
+~~~cpp
+
+class TestClass
+{
+public:
+    explicit TestClass(double d) : _d(d) {};
+private:
+    double _d;
+};
+
+
+void testExplicitKeyword()
+{
+    vector<TestClass> v1;
+
+    // with explicit keyword in constructor
+    // this no longer works
+
+    // v1.push_back(1.0);
+
+    // this works
+    v1.push_back(TestClass(1.0));
+}
+
+~~~
+
+

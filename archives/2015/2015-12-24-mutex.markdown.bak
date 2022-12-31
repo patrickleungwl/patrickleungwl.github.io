@@ -1,0 +1,110 @@
+---
+layout: post
+title: "Using Mutexes"
+date: 20151224
+categories: tech
+tags: patterns
+archive: true
+---
+Testing mutexes today.  Mutexes can be used to ensure only one instance of an app runs at any one time.
+
+~~~csharp
+using System;
+using System.Threading;
+
+namespace TestMutex
+{
+    class MutexTester
+    {
+        private void LogMsg(string msg, params object[] args)
+        {
+            Console.Out.Write("{0} ThreadId={1} ",
+                DateTime.Now.ToString("HH:MM:ss.fff"),
+                Thread.CurrentThread.ManagedThreadId);
+            Console.Out.WriteLine(msg, args);
+        }
+
+
+        // LongComputeTask
+        //
+        // Function run by background worker.
+
+        private void LongComputeTask()
+        {
+            LogMsg("LongComputeTask starting");
+
+            float percentDone = 0.0f;
+            for (int i = 0; i <10; i++)
+            {
+                Thread.Sleep(1000);
+                percentDone += 2.0f;
+                LogMsg("LongComputeTask {0:0.0f}% completed",
+                    percentDone);
+            }
+            LogMsg("LongComputeTask completed");
+
+        }
+
+
+        // RunTest
+        //
+        // Function run by main thread
+        // Main thread sets up the background thread
+        // and fires it off
+
+        public void RunTest()
+        {
+            // Acquire mutex here, ensure only 1 instance of this program
+            // run at any one time
+
+            var myMutex = new Mutex(false, "TestMutex");
+            myMutex.WaitOne();
+            LongComputeTask();
+            myMutex.ReleaseMutex();
+        }
+
+
+        static void Main(string[] args)
+        {
+            var tester = new MutexTester();
+            tester.RunTest();
+        }
+    }
+}
+~~~
+
+Window One
+
+~~~
+>TestMutex.exe
+19:05:05.661 ThreadId=1 LongComputeTask starting
+19:05:06.701 ThreadId=1 LongComputeTask 2.0f% completed
+19:05:07.703 ThreadId=1 LongComputeTask 4.0f% completed
+19:05:08.703 ThreadId=1 LongComputeTask 6.0f% completed
+19:05:09.705 ThreadId=1 LongComputeTask 8.0f% completed
+19:05:10.705 ThreadId=1 LongComputeTask 10.0f% completed
+19:05:11.705 ThreadId=1 LongComputeTask 12.0f% completed
+19:05:12.707 ThreadId=1 LongComputeTask 14.0f% completed
+19:05:13.707 ThreadId=1 LongComputeTask 16.0f% completed
+19:05:14.707 ThreadId=1 LongComputeTask 18.0f% completed
+19:05:15.709 ThreadId=1 LongComputeTask 20.0f% completed
+19:05:15.709 ThreadId=1 LongComputeTask completed
+~~~
+
+Window Two- notice that this second instance of the test app does not start until the first instance 
+completes.
+
+~~~
+19:05:15.709 ThreadId=1 LongComputeTask starting
+19:05:16.741 ThreadId=1 LongComputeTask 2.0f% completed
+19:05:17.741 ThreadId=1 LongComputeTask 4.0f% completed
+19:05:18.743 ThreadId=1 LongComputeTask 6.0f% completed
+19:05:19.743 ThreadId=1 LongComputeTask 8.0f% completed
+19:05:20.743 ThreadId=1 LongComputeTask 10.0f% completed
+19:05:21.745 ThreadId=1 LongComputeTask 12.0f% completed
+19:05:22.745 ThreadId=1 LongComputeTask 14.0f% completed
+19:05:23.745 ThreadId=1 LongComputeTask 16.0f% completed
+19:05:24.747 ThreadId=1 LongComputeTask 18.0f% completed
+19:05:25.747 ThreadId=1 LongComputeTask 20.0f% completed
+19:05:25.747 ThreadId=1 LongComputeTask completed
+~~~

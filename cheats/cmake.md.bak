@@ -1,0 +1,37 @@
+# Cmake
+
+## Basics
+
+Each folder must have a make file named 'CMakeLists.txt'.
+CMake generates a Makefile and also kicks off the build.
+
+~~~
+cmake_minimum_required(VERSION 3.5)
+
+add_executable(cmake_test test01.cpp)
+
+~~~
+
+Commands to fire cmake to generate makefile and then kick off the build
+
+~~~
+cmake ./
+cmake ./ -DCMAKE_CXX_COMPILER="icc" -DCMAKE_CXX_FLAGS="-std=c++11"
+make
+make VERBOSE=1
+make clean
+~~~
+
+Command line parameters get saved to a file- CMakeCache.txt.
+
+
+## Common commands
+
+~~~
+add_subdirectory
+add_executable
+include_directories
+add_definition
+target_link_libraries
+
+~~~

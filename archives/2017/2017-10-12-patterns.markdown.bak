@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Patterns"
+date: 20171012
+categories: tech
+tags: patterns
+published: false
+archive: true
+---
+
+| Pattern   | Usage | 
+| --------- | ----- |
+| Decorator | Adds new functionality to existing components without changing the component |
+| Visitor   | Adds new operations to existing without modifying existing data structures | 
+| Strategy  | Allows interchanging functionality at runtime without modifying code |
+
+
+

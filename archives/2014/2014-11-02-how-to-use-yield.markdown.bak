@@ -1,0 +1,60 @@
+---
+layout: post
+title: "How to use Yield"
+date: 20141102
+categories: tech
+tags: patterns
+archive: true
+---
+Always wanted to be clear on how Yield works. This is a feature that traditional C or C++ do 
+not have.
+
+~~~csharp
+using System;
+using System.Collections.Generic;
+
+
+namespace TestYield
+{
+    class TestYield
+    {
+        // --------------------------------------------------
+        // AllOdds
+        //
+        // Yield provides an easy way to make an enumerator.
+        // Without Yield, you'd have to generate the entire list
+        // of items to iterate thru- and return that list to the
+        // user.
+        // --------------------------------------------------
+        
+        static public IEnumerable<int> AllOdds()
+        {
+            for (int i = 1; i < Int16.MaxValue; i++)
+            {
+                if (i % 2 == 1)
+                    yield return i;
+            }
+        }
+
+
+        // --------------------------------------------------
+        // Main
+        //
+        // Use the enumerator above- and can stop the enumerator
+        // from generating the next item by breaking at any time.
+        // --------------------------------------------------
+
+        static void Main(string[] args)
+        {
+            int count = 0;
+            foreach (int i in AllOdds())
+            {
+                Console.WriteLine("{0}", i);
+                if (++count > 10)
+                    break;
+            }
+        }
+    }
+}
+~~~
+

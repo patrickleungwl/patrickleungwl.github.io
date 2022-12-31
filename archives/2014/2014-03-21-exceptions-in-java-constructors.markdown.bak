@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Exceptions in Java Constructors"
+date: 20140321
+categories: tech
+tags: java, memory
+archive: true
+---
+This connundrum always troubled me when I coded in C++.  What happens to an object when the object's constructor throws an exception?  Is the object fully constructed or not?  If not, does that mean its destructor never gets called?  If so, then what happens to the memory that the constructor allocated prior to coming across an exception?
+
+In C++, there was the problem of leaky memory if constructors are prone to exceptions.  This led to remembering to keep constructors light and simple- because a half-constructor object is not fully constructed and its destructor will not get called- leaving this half-constructed object to leak already allocated memory. 
+
+Does Java have this half-constructed memory leak problem?  Thinking this for a bit- the answer is no- because Java keeps objects in a managed memory heap.  Whatever objects are not referenced by root objects get collected by the GC.  So, constructors throwing exceptions should pose no problems in Java, correct?  Only a test case can tell for sure. 
+
+~~~java
+package drills;
+
+import java.util.ArrayList;
+public class Tester {
+
+  // If a constructor allocates huge amount of memory
+  // then throws an exception
+  // does the GC collect that memory?
+  //
+  // We'll create 10,000 dummy Tester class objects-
+  // each allocating huge chunks of memory.
+  //
+  // Will the test program complete all 10,000 object
+  // creations?	
+	
+  private ArrayList<Integer> _a;
+		
+  public Tester() {
+    _a = new ArrayList<Integer>();
+    for(int i=0; i<1000000; i++) {
+      _a.add(i);
+    }
+    int j = 10/0;	
+  }
+	
+  public static void main(String[] args) {	
+    for (int i=0; i<10000; i++) {
+      try {				
+        Tester d = new Tester();				
+      } catch(Exception e) {
+        if (i%1000==0)
+          System.out.println(i);
+      }			
+    }
+    System.out.println("Test completed");
+  }
+}
+~~~
+
+The output shows:
+
+~~~
+0
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+Test completed
+~~~
+Proved.  No memory leaks given exceptions in Java contructors.

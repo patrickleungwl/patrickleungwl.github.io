@@ -1,0 +1,112 @@
+---
+layout: post
+title: "Invoking Delegates Asynchronously"
+date: 20141104
+categories: tech
+tags: patterns
+archive: true
+---
+It's a slow day at work.  Let's try an asynch delegate.
+
+~~~csharp
+using System;
+using System.Threading;
+using System.Runtime.Remoting.Messaging;      // To access the AsyncResult type
+
+namespace TestAsyncDelegate
+{
+    class TestDel
+    {
+        delegate int OperatorSig(int a, int b);
+
+        TestDel()
+        {
+        }
+
+
+        // --------------------------------------------------------------
+        // Add
+        // 
+        // Random work method that takes an arbitrarily set 2.4 seconds
+        // to complete.
+        // --------------------------------------------------------------
+        
+        public int Add(int a, int b)
+        {
+            Console.Out.WriteLine("ThreadId={0}, Adding starts",
+                Thread.CurrentThread.ManagedThreadId );
+            Thread.Sleep(2400);
+            Console.Out.WriteLine("ThreadId={0}, Adding completed",
+                Thread.CurrentThread.ManagedThreadId );
+            return a + b;
+        }
+
+
+        // --------------------------------------------------------------
+        // ResultCallback
+        //
+        // This function gets called when the delegate method completes
+        // asynchronously in the background.
+        // We call EndInvoke to get the delegate results.
+        // --------------------------------------------------------------
+
+        public void ResultCallback(IAsyncResult iar)
+        {
+            AsyncResult ar = (AsyncResult)iar;                   // Get class object reference.
+            OperatorSig del = (OperatorSig)ar.AsyncDelegate;     // Get reference to delegate.
+            int result = del.EndInvoke(iar);
+            Console.Out.WriteLine("ThreadId={0}, Add result = {1}", 
+                Thread.CurrentThread.ManagedThreadId, result);
+        }
+
+
+        // --------------------------------------------------------------
+        // Main
+        // 
+        // --------------------------------------------------------------
+        
+        static void Main(string[] args)
+        {
+            TestDel td = new TestDel();
+
+            // create delegate and invoke to run asynchronously
+            OperatorSig myAdder = new OperatorSig(td.Add);
+            IAsyncResult res = myAdder.BeginInvoke(
+                                    10, 
+                                    5,
+                                    new AsyncCallback(td.ResultCallback), 
+                                    null);
+
+            // main thread keeps doing something else
+            while (!res.IsCompleted)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.Out.WriteLine("ThreadId={0}, Main thread working",
+                        Thread.CurrentThread.ManagedThreadId );
+                    Thread.Sleep(1000);
+                }
+            }
+        }
+    }
+}
+~~~
+
+Runtime results shown here:
+
+~~~
+ThreadId=3, Adding starts
+ThreadId=1, Main thread working
+ThreadId=1, Main thread working
+ThreadId=1, Main thread working
+ThreadId=3, Adding completed
+ThreadId=3, Add result = 15
+ThreadId=1, Main thread working
+ThreadId=1, Main thread working
+ThreadId=1, Main thread working
+ThreadId=1, Main thread working
+ThreadId=1, Main thread working
+ThreadId=1, Main thread working
+ThreadId=1, Main thread working
+~~~
+

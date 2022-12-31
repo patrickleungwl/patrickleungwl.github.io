@@ -1,0 +1,50 @@
+---
+layout: post
+title: "Simple Delegate Example"
+date: 20141102
+categories: tech
+tags: delegates, csharp
+archive: true
+---
+Just playing with a simple delegate example. 
+
+~~~csharp
+using System;
+
+namespace TestDelegate
+{
+    class TestDel
+    {
+        // Declare signature of operator methods
+        delegate int OperatorSig(int a, int b);
+
+        TestDel()
+        {
+        }
+
+
+        int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        int Subtract(int a, int b)
+        {
+            return a - b;
+        }
+ 
+
+        static void Main(string[] args)
+        {
+            TestDel td = new TestDel();
+            OperatorSig myAdder = new OperatorSig(td.Add);
+            OperatorSig mySuber = new OperatorSig(td.Subtract);
+            Console.Out.WriteLine("Adder Result is {0}", myAdder(2, 3));
+            Console.Out.WriteLine("Suber Result is {0}", mySuber(2, 3));
+            Console.In.ReadLine();
+        }
+    }
+}
+
+~~~
+

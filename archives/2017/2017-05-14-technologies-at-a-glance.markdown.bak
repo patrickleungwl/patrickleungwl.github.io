@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Technologies at a Glance"
+date: 20170514
+categories: tech
+tags: patterns
+archive: true
+---
+
+With so many buzzwords coming up every year, it's very easy to lose 
+track of what's what.  A technologist, like any professional, must keep 
+reading to keep abreast of new developments.  
+
+As homework for myself, I've created an easy-to-read guide below 
+to organize each specific technology in its proper space. 
+
+| Technology | C# | Java | Python | Javascript | Php |
+| ---------- | -- | ---- | ------ | ---------- | --- |
+| [IOC <br> Inversion of Control](https://martinfowler.com/articles/injection.html) |  | Spring <br> [Dagger](http://musingsofaprogrammingaddict.blogspot.sg/2012/11/dagger-new-java-dependency-injection.html) <br> [Guice](https://keyholesoftware.com/2012/01/30/dependency-injection-for-android-development-an-introduction) | | | |
+| Unit Testing |  | | | [Jasmine](https://jasmine.github.io) <br> [Mocha](https://mochajs.org/) | |
+| Mocking    | [Moq](https://github.com/Moq/moq4/wiki/Quickstart) <br> RhinoMocks | | [unittest.mock](https://docs.python.org/3/library/unittest.mock.html) | | |
+| ORM        |    |     | [Peewee](http://docs.peewee-orm.com/en/latest) | | |
+| WebApi     | [NancyFX](http://nancyfx.org/) |   | [Flask](http://flask.pocoo.org/) <br> Django | Nodejs | | 
+| Profiling  | | | | | |
+
+

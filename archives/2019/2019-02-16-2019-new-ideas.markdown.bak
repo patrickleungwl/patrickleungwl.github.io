@@ -1,0 +1,87 @@
+---
+layout: post
+title: "2019 New Ideas"
+date: 20190216
+categories: tech
+tags: ideas
+archive: true
+---
+.
+## Books Currently Reading
+* [Invested](https://www.danielletown.com/book/)
+* [Google SRE](https://landing.google.com/sre/sre-book/toc/index.html)
+* [The Banished Immortal](https://www.penguinrandomhouse.com/books/566084/the-banished-immortal-by-ha-jin/9781524747411/)
+
+## Some Ideas To Resolve Soon
+* Poisson distribution
+* What is PCA?
+* What is irvega rho?
+* Some notes on financial markets
+* How to use TensorFlow?
+* How to use pivottable.js?
+* How to use metplotlib for charts?
+* Backtest strategy to buy on n% dips?
+* Build pages on individual tickers
+* How to host python script on AWS?
+* Why use NumPy?
+
+
+## New Investment Ideas
+A new proposed idea is to buy on n% dips. Would this work? Or 
+buy an index instead of individual stocks on such dips.
+
+## PCA
+[PCA - principal component analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)
+sounds very much like fourier 
+transform. It is a statistical proceudre that reduces 100 variables 
+to a few important- orthogonal (meaning unrelated) variables- 
+principal components- that explains 95% of the movements of the 
+original wave.
+
+PCA is used primarily for making predictive models.
+
+## Rho
+[Rho](https://en.wikipedia.org/wiki/Greeks_(finance)#Rho)
+is the sensitivity of the option value to changes in the risk free 
+interest rate.
+
+## PivotTable.js
+[PivotTable.js](https://pivottable.js.org/examples/rcsvs.html)
+looks pretty powerful.
+
+## Why use NumPy?
+* ndarray- a fast and space efficient multi-dimensional array 
+providing vectorized arithmetic operations and broadcasting capabilities
+* functions for reading and writing to disk
+* tools for integrating with C, C++ and Fortran
+* math operations with no loops
+* linear algebra and fourier transform functions
+
+But what functions does NumPy provide and what from Pandas? I believe 
+data analysis primarily use math functions from Pandas and use NumPy 
+primarily for its fast ndarray.
+
+Pandas runs on top of NumPy- so Pandas depends on NumPy. Pandas 
+provides datatable-like functions- as well as stats, groupbys, merge 
+and join methods.
+
+Pandas was built starting in 2008 by Wes McKinney at AQR.
+
+## Matplotlib for Quick Charts
+[Quick charts demo](https://nbviewer.jupyter.org/github/patrickleungwl/code_lab/blob/master/python_lab/build_charts.ipynb)
+
+
+## Poisson Distribution
+Poisson Distribution is for modelling the number of times an event 
+occurs in an interval of time or space- for example- the number of 
+patients arriving in an emergency room between 10 and 11pm.
+
+The following assumptions must be true in order to use Poisson 
+Distribution
+
+* k is the number of times an event occurs in an interval- like 0, 1, 2 …
+* The events are independent.
+* The rate at which events occur is constant.
+* Two events cannot occur at exactly the same time.
+
+

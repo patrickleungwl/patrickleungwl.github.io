@@ -1,0 +1,68 @@
+---
+layout: post
+title: "C++ How to use multimaps"
+date: 20200207
+categories: cpp
+tags: cpp
+archive: true
+---
+
+In C++, multimaps are data containers that work like maps but allow
+multiple instances of the same key!  How does this work?
+
+~~~cpp
+void testMultiMap()
+{
+    multimap<string, int> mm{
+        {"mickey", 100},
+        {"minnie", 150},
+        {"mickey", 200},
+        {"minnie", 300},
+        {"minnie", 400}
+    };
+
+    cout << "mickey count " << mm.count("mickey") << endl;
+    cout << "minnie count " << mm.count("minnie") << endl;
+    auto res = mm.equal_range("mickey");
+    for (auto iter=res.first; iter != res.second; ++iter) {
+        cout << iter->first << " " << iter->second << endl;
+    }
+    res = mm.equal_range("minnie");
+    for (auto iter=res.first; iter != res.second; ++iter) {
+        cout << iter->first << " " << iter->second << endl;
+    }
+    // erase just the second instance of minnie
+    // reverse iterate because erasing a member removes 
+    // member from container
+    for (auto iter=res.second; iter != res.first; --iter) {
+        if (iter->second>=300) {
+            iter = mm.erase(iter);
+        }
+    }
+    cout << "after erasing select instances of minnie" << endl;
+    res = mm.equal_range("minnie");
+    for (auto iter=res.first; iter != res.second; ++iter) {
+        cout << iter->first << " " << iter->second << endl;
+    }
+}
+~~~
+
+After executing this function:
+
+~~~
+mickey count 2
+minnie count 3
+mickey 100
+mickey 200
+minnie 150
+minnie 300
+minnie 400
+after erasing select instances of minnie
+minnie 150
+~~~
+
+
+
+~~~
+
+

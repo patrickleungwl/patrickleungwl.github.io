@@ -1,0 +1,83 @@
+---
+layout: post
+title: "C++ initialising containers"
+date: 20200206
+categories: cpp
+tags: cpp
+archive: true
+---
+
+Modern c++ (v11 and v14) has new ways of initialising standard library
+containers. 
+
+~~~cpp
+void testInitialisingVectors()
+{
+    // initialise the old way
+    vector<int> v1;
+    v1.push_back(1);
+    v1.push_back(2);
+
+    // initialise the new way
+    vector<int> v2{1,2};
+
+    // initialise using with and without =
+    vector<int> v3 = {1,2};
+}
+
+
+void testInitialisingMaps()
+{
+    // initialise the old way
+    map<int, string> m1;
+    m1[1] = "hello";
+    cout << "m1 " << 1 << "->" << m1[1] << endl;
+    
+    // another old way
+    typedef map<int, string>::iterator miter;
+    pair<miter, bool> result = m1.insert( pair<int, string>(2,"world") );
+    if (result.second) { 
+        cout << "m1 " 
+             << (result.first)->first 
+             << "->" << (result.first)->second << endl;
+    } else {
+        cout << "m1 failed to insert" << endl;
+    }
+
+    // reinsert same key again
+    pair<miter, bool> result2 = m1.insert( pair<int, string>(2,"world") );
+    if (result2.second) { 
+        cout << "m1 " 
+             << (result2.first)->first 
+             << "->" << (result2.first)->second << endl;
+    } else {
+        cout << "m1 failed to insert great!" << endl;
+    }
+
+    // initialise the new way
+    map<int,string> m2{
+        {1, "hello"},
+        {2, "world"}
+    };
+
+    cout << "m2 " << 1 << "->" << m2[1] << endl;
+    cout << "m2 " << 2 << "->" << m2[2] << endl;
+
+    // initialise the new way with =
+    map<int,string> m3 = {
+        {1, "hello"},
+        {2, "world"}
+    };
+}
+
+~~~
+
+The result of running these two functions:
+
+~~~
+m1 1->hello
+m1 2->world
+m1 failed to insert great!
+m2 1->hello
+m2 2->world
+~~~

@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Using Conda, NumPy"
+date: 20170610
+categories: python
+tags: python
+archive: true
+---
+Notes on using Conda, NumPy
+
+Conda 
+------
+
+| Setup Python 3.5 env | conda create -n py35 python=3.5 anaconda | 
+| Setup Python 2.7 env | conda create -n py27 python=2.7 anaconda | 
+| Switch to Python 3.5 env | source activate py35 | 
+| Check Python version | python -V | 
+
+
+Numpy
+------
+
+| Import numpy | import numpy as np | 
+| Create a new array | na = array([1,2,3,4]) |
+| Use any numpy function | na.min() | 
+| Load data into array | na = np.loadtxt('data.txt') |
+| Save array to file | np.savetxt('data.txt', na) |
+
+
+
+
+
