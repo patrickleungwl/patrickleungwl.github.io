@@ -339,6 +339,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#yay-failure" class="md-nav__link">
+    Yay failure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     Summary
   </a>
@@ -1421,6 +1428,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#yay-failure" class="md-nav__link">
+    Yay failure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     Summary
   </a>
@@ -1527,6 +1541,30 @@ of sleep mode without hard-rebooting the machine.  The screen was frozen. </p>
 sleep mode and screen savers.  This worked.  Again, while this quick remedy 
 prevented the screen freezing up, why this should have failed in the first 
 place was the real problem. </p>
+<h2 id="yay-failure">Yay failure</h2>
+<p>Next, I tried to install pandoc, but the installation failed with a download 
+timeout of the package, hslua-cli.  All previous installations made using
+yay and pacman succeeded previously, so what was wrong this time? </p>
+<p>An online post suggested to use pacman with the options -Syu like so:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo pacman -Syu hslua-cli
+</code></pre></div>
+<p>This worked!  Option S forces pacman to update its repository mirrors to 
+the latest working sources.  Option y downloads a copy of the master
+package database from the servers listed in pacman.conf.  And Option u 
+removes unneeded packages.</p>
+<p>Unfortunately, once I ran pandoc, it reported the library
+ibHSsafe-0.3.19-2aVM1fCfxX88jnlVeNbd8Q-ghc9.0.2.so was missing. 
+I found this library was in the package haskell-safe.  Why wasn't
+this installed along with pandoc if it's a dependency?  I manually
+installed this package via yay:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>yay haskell-safe
+</code></pre></div>
+<p>Retrying pandoc again, I next hit yet another error: pdfengine not 
+installed.  That's odd.  Didn't that come along with installing pandoc?
+I found an online comment to install texlive.  Using yay, I installed
+texdlive-bin, texlive-core, and other texlive auxilary packages. </p>
+<p>Finally, after all these installs were done, I was able to convert
+a markdown file to pdf.  </p>
 <h2 id="summary">Summary</h2>
 <p>All in all, while EndeavourOS does have its rough edges, its package manager
 yay and its set of cool desktop themes makes working with it a quiet joy.</p>
