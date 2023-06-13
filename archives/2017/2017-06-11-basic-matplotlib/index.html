@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../2017-06-09-setting-up-vim-for-python/">
+        <link rel="prev" href="../2017-06-08-python_import/">
       
       
         <link rel="next" href="../2017-06-24-the-effective-engineer/">
@@ -402,20 +402,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2016/2016-04-02-tech-to-study/" class="md-nav__link">
-        Tech to Study
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../2016/2016-04-03-insprirational-quotes/" class="md-nav__link">
         Inspirational Quotes
       </a>
@@ -636,20 +622,6 @@
     <li class="md-nav__item">
       <a href="../2017-06-08-python_import/" class="md-nav__link">
         Imports in Python
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../2017-06-09-setting-up-vim-for-python/" class="md-nav__link">
-        Setting Up Vim For Python
       </a>
     </li>
   
@@ -1379,16 +1351,16 @@ pyplot.subplot() method. </p>
 <p>Sample Matplotlib script:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>jupyter qtconsole
 
-import numpy as np
-import matplotlib.pyplot as plt
+<span style="font-weight: bold">import</span> <span style="font-weight: bold">numpy</span> <span style="font-weight: bold">as</span> <span style="font-weight: bold">np</span>
+<span style="font-weight: bold">import</span> <span style="font-weight: bold">matplotlib.pyplot</span> <span style="font-weight: bold">as</span> <span style="font-weight: bold">plt</span>
 
-plt.figure()                            # Create a new figure window
-xlist = np.linspace(-2.0, 1.0, 100)     # Create 1-D arrays for x,y dimensions
+plt.figure()                            <span style="font-style: italic"># Create a new figure window</span>
+xlist = np.linspace(-2.0, 1.0, 100)     <span style="font-style: italic"># Create 1-D arrays for x,y dimensions</span>
 ylist = np.linspace(-1.0, 2.0, 100)
-X,Y = np.meshgrid(xlist, ylist)         # Create 2-D grid xlist,ylist values
-Z = np.sqrt(X**2 + Y**2)                # Compute function values on the grid
+X,Y = np.meshgrid(xlist, ylist)         <span style="font-style: italic"># Create 2-D grid xlist,ylist values</span>
+Z = np.sqrt(X**2 + Y**2)                <span style="font-style: italic"># Compute function values on the grid</span>
 
-plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = ’k’, linestyles = ’solid’)
+plt.contour(X, Y, Z, [0.5, 1.0, 1.2, 1.5], colors = <span style="border: 1px solid #FF0000">’</span>k<span style="border: 1px solid #FF0000">’</span>, linestyles = <span style="border: 1px solid #FF0000">’</span>solid<span style="border: 1px solid #FF0000">’</span>)
 plt.show()
 </code></pre></div>
 <p><img alt="Sample plot" src="../../../assets/images/201706/matplotlib_plot1.png" /></p>
