@@ -1271,6 +1271,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#find" class="md-nav__link">
     find
   </a>
@@ -1416,6 +1423,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#find" class="md-nav__link">
     find
   </a>
@@ -1535,6 +1549,19 @@
 
 
 <h1 id="nix">Nix</h1>
+<h2 id="files">files</h2>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>fd  = file descriptor
+fd 0    = stdin
+fd 1    = stdout
+fd 2    = stderr
+
+redirect stdout to file:                command &gt; x
+                same as:                command 1&gt; x
+redirect stderr to file:                command 2&gt; x
+redirect stdout to x, stderr to y:      command 1&gt; x 2&gt; y
+redirect stderr and   stdout to x:      command &amp;&gt; x
+                          same as:      command 2&gt;&amp;1 &gt; x
+</code></pre></div>
 <h2 id="find">find</h2>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>find . -name &quot;pattern&quot;          # find any objects with a name pattern
 find . -name &quot;pattern&quot; -type f  # find any files with a name pattern
