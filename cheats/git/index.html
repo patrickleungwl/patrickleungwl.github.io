@@ -231,23 +231,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../2023/lieflat/" class="md-nav__link">
+        Feeling Great
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
           Linux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_1">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           Linux
         </label>
@@ -1266,6 +1280,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#squash" class="md-nav__link">
+    Squash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#git-merge" class="md-nav__link">
     Git merge
   </a>
@@ -1342,6 +1363,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#squash" class="md-nav__link">
+    Squash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#git-merge" class="md-nav__link">
     Git merge
   </a>
@@ -1386,6 +1414,23 @@ git log -G&quot;textToFind&quot; --online
 git log -n
 git diff HEAD~2 HEAD 
 cat .git/HEAD   # to find name of current branch
+</code></pre></div>
+<h2 id="squash">Squash</h2>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Compress multiple commits into one commit
+
+Before
+    (master)v1--&gt;v2--&gt;v3--&gt;v4
+
+After
+    (master)v1--&gt;v4
+
+All changes in v2, v3 and v4 from Before are compressed into v4 in After.
+
+To do this Squash operation:
+
+1) git rebase -i (v1)
+2) pick v2, squash (s) v3 and v4, save
+3) comment out the comment to remove, save
 </code></pre></div>
 <h2 id="git-merge">Git merge</h2>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>Merge copies all feature branch changes to another branch.
