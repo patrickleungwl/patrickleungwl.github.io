@@ -1,0 +1,283 @@
+# Kernel Bypass
+
+## OpenOnload
+
+OpenOnload is software used for kernel bypass to work with Solarflare network 
+cards.  By redirecting network IO to run through its own stack in/out of its
+network card, applications can avoid network traffic latency encountered when 
+relying on the kernel to send or receive data.  With all things kernel related,
+your application must wait its turn depending on the whim of the kernel 
+scheduler.  Other latencies are caused by data copies and context switching
+when apps switch from kernel to user mode.
+
+## onload
+
+onload is the application to run Solarflare's kernel bypass software.  We need
+to optimize onload settings for each application.  Dued to the paucity of 
+optmisation tips on the net, I've put together some battle-field notes for 
+optimising onload. 
+
+Use onload_stackdump to peek into onload stats and see which area needs 
+tweaking.
+
+    onload_stackdump lots
+
+Here are some areas that need looking into for each onloaded application:
+
+1. packet buffers
+2. kernel polls 
+3. interrupts
+4. packet drops
+5. lock contentions
+
+
+### packet buffers
+
+Check for the following statistics reported by onload_stackdump:
+
+    pkt_scramble0
+    pkt_scramble1
+    pkt_scramble2
+    memory_pressure_enter
+    memory_pressure_drops
+
+The onload documentation states for each stat:
+
+**pkt_scramble0** is the number of times onload scrambled to find free buffers for 
+L0 cache.  This is an indication of severe memory pressure. pkt_scramble1 and 
+pkt_scramble2 are similar counts for L1 and L2 caches. 
+
+**memory_pressure_enter** is the number of times onload has entered 'memory 
+pressure' state.  **memory_pressure_drops** is the number of packets dropped 
+due to 'memory pressure'. 
+
+Onload documentation states "When Onload detects a stack is close to allocating
+all available packet buffers, it will take action to try and avoid packet buffer
+exhaustion.  Onload will automatically start dropping packets on receive and,
+where possible, will reduce the receive descriptor ring fill level in an attempt
+to alleviate the situation." 
+
+For memory related issues, the documentation suggests bumping up EF_MAX_PACKETS.
+This setting controls the maximum number of packet buffers that can be used by
+the Onload stack. By default, updating EF_MAX_PACKETS also updates parameters
+EF_MAX_RX_PACKETS and EF_MAX_TX_PACKETS to 75% of EF_MAX_PACKETS.
+
+While increasing EF_MAX_PACKETS should be beneficial to preventing memory 
+pressure problems, the downside of increasing this value too high is a larger
+memomry footprint and resulting latency. 
+
+### kernel polls
+
+Onload_stackdump shows the number of times a socket event was polled from the 
+kernel versus user space, with the latter being preferred.  Examples:
+
+    k_polls: 34441
+    u_polls: 1870340303
+
+**k_polls** is the number of times the socket event queue was polled from the 
+kernel while **u_polls** is the number of times the socket event queue was 
+polled from user space.  We'd much prefer applications to read socket events 
+from user space- bypassing kernel scheduling and data copies and context 
+switching. 
+
+If k_polls > u_polls, then one parameter to try is EF_POLL_USEC.  This setting 
+gets onload to continuously poll in user space for the set number of microseconds..
+
+When an application reads from a socket and no data is available, the call
+will enter the OS kernel and block.  When data becomes available, the network
+adapter will interrupt the CPU, allowing the kernel to reschedule the application
+to continue.  *Blocking and interrupts are relatively expensive operations.*
+
+Onload can be configured to spin on the processor in user mode for up to 
+a specific number of microseconds waiting for data from the network.  
+If the spin period expires the processor will revert to conventional blocking
+behavior.  Non-blocking sockets will always return immeidately as these are 
+unaffected by spinning.
+
+If a cpu core can be dedicated to each thread that blocks waiting for network 
+IO, then spinning is the best method to achieve the lowest possible latency.
+
+
+The documentation suggests using EF_POLL_USEC to increase the timeout a user
+polls sockets before blocking- which then would require an interrupt wakeup 
+from the kernel.  While this suggestion may work for single-threaded applications, 
+the downside of a higher poll timeout can also block other threads from polling.
+No one solution works for all applications.  The proper setting depends on the 
+number of threads polling sockets and the level of incoming or outgoing data.
+
+
+### interrupts
+
+Onload_stackdump shows counts for each event- such as the number of data 
+receive/sent events and the number of times an interrupt was used to poll. 
+Examples:
+
+    rx_evs: 2092752987
+    tx_evs: 25770
+    interrupt_polls: 6688961
+    interrupt_evs: 12014176
+    interrupt_wakes: 5336668
+
+**rx_evs** and **tx_evs** are the number of events received and transmitted, 
+respectively.  **interrupt_polls** is the number of times the stack is polled
+and invoked by interrupts.  **interrupt_evs** is the number of events processed
+invoked by interrupts.  Lastly, **interrupt_wakes** is the number of times
+the application is woken by interrupt.
+
+A high number of events handled by interrupts relative to the total number of 
+packet receive events could mean latency caused by relying on interrupts. 
+
+The documentation advises setting a higher **EF_POLL_USEC**.  This gets polls 
+to continuously poll the socket before timing out and then relying on interrupts
+to get data.  This reduces the number of interrupts- and context switches- 
+for reading socket packets.  But a higher poll timeout comes with a cost of 
+blocking other threads from polling.  Finding the optimial setting requires testing. 
+
+
+### packet drops
+
+Packet losses over the network harm performance.  The Linux tool ethtool 
+identifies packet drops. 
+
+    ethtool -S <interface> | grep drop
+        rx_noskb_drops: 0
+        port_rx_nodesc_drops: 504905630
+        port_rx_dp_di_dropped_packets: 1016728
+
+**rx_noskb_drops** is the number of packets dropped when there are not enough
+socket buffers.  **port_rx_nodesc_drops** is the number of packets dropped 
+when there are no further descriptors in the rx ring buffer.  
+**port_rx_dp_di_dropped_packets** is the number of packts dropped by filters. 
+
+Onloa's documentation says "If packet loss is observed at the network level 
+due to a lack of receive buffering try increasing the size of the receive 
+descriptor queue size via **EF_RXQ_SIZE**.  If packet drops are observed at the
+socket level, it may also be worth experimenting with socket buffer sizes 
+via **EF_UDP_RCVBUF**.  Setting **EF_EVS_PER_POLL** to a higher value may also 
+improve efficiency".
+
+A larger rx ring buffer with a larger EF_RXQ_SIZE can absorb larger packet bursts
+without drops but at an increase in process memory working set size.
+
+EF_EVS_PER_POLL sets the number of hardware network events to handle before 
+performing other work.  This setting presents a trade-off- larger values 
+increase batching- which usually improves efficiency- but may also increase
+the working set size- which could harm efficiency. 
+
+### lock contentions
+
+Onload's documentation states, "When threads share a stack,a thread holding 
+the stack lock blocks another thread."  High coutns in the stats 
+**interrupt_lock_contends**, **periodic_lock_contends**, and 
+**timeout_interrupt_lock_contends** can identify these lock contentions. 
+
+The documentation suggests to use **EF_STACK_PER_THREAD** to create a stack 
+per thread.  If a multi-threaded application is doing lots of socket operations,
+stack lock contention will lead to send/receive performance jitter.  In such 
+cases improved perofmrance can be had when each contending thread has its own
+stack.  This can be managed with EF_STACK_PER_THREAD which creates a separate
+Onload stack for the stocks created by each thread.
+
+If using EF_STACK_PER_THREAD, it may also be possible to bump up EF_POLL_USEC
+since each user-space poll now no longer blocks other threads.
+
+
+## network stack
+
+### typical network flow
+
+Data packets flow from the TX application to the RX listener application.
+
+    TX                      RX
+    -------------           -------------
+    Application             Application
+    Transport (L4)          Transport (L4)
+    Network (L3)            Network (L3)
+    Data link (L2)          Data link (L2)
+    NIC driver              NIC driver
+    NIC hardware            NIC hardware
+
+Contents of a data packet:
+
+    Ethernet header
+        dest MAC, src MAC, type of next structure
+    IP header
+        length, IP type, header checksum, src IP, dest IP
+    TCP header
+        src IP, dest IP, checksum
+    payload
+    checksum
+
+### rx path
+
+    Applications            in user space
+    --------------------------------------
+    NIC driver              in kernel space
+    tx and rx ring buffer   --> packet buffers
+    NIC 
+
+The NIC driver preallocates packet buffers and the tx and rx ring buffers.  
+Also, tx and rx ring buffers are shared between NIC and NIC driver.
+
+What happens when a NIC receives a data packet?  It matches the incoming packet's
+MAC address to the NIC's MAC address.  Next it verifies the ethernet checksum.
+
+Next the NIC copies the data packet to the rx ring buffer using direct memory
+access (DMA).  DMA alleviates any work by the cpu.  The NIC then triggers
+an interrupt to notify the NIC driver there is incoming data.
+
+The cpu interrupts the process in execution.  It switches to kernel space to
+1) lookup the Interrupt Descriptor Table (IDT), 2) execute the interrupt's
+registered service routine (ISR).  Then the cpu acks the interrupt and switches
+back to user space.
+
+Later, the cpu enters the kernel space again- this time driven by the **NIC
+driver**.  The NIC driver dynamically allocates an sk buffer (skb) and update
+its data structure with packet metadata.  The NIC driver removes the ethernet
+header and then passes skb to the network stack.
+
+The NIC driver calls L3 layer handling- verifying the IP addresses, checksums,
+combines fragmented packets and then calls the higher L4 protocol handler.
+
+The L4 layer enqueues the skb to the socket read queue.  The skb points to the
+address of the data in the packet buffer.  Then it signals the socket.
+
+The application in the user space reads the socket- with a system call that 
+switches the process mode to kernel space.  This dequeues the packet from 
+the socket receive queue, copies the packet to the application buffer, 
+releases the skb and then returns control back to user space and to the user 
+app.
+
+### overheads
+
+There are too many context switches- back and forth from user to kernel modes.
+
+There is context switching during a system read call.  There is a packet copy
+before/during the read process.  There is a dynamic allocation of skb by the
+NIC driver.  There is an interrupt for every arriving packet.  What a horrible
+design.
+
+A kernel bypass network stack bypasses all these overheads.  In a KB setup, 
+there is no context switching (all user space) and there is no packet copy
+from the kernel to the user handover.
+
+### reading
+
+Reading data packets can be done in two ways- via interrupt or via polling. 
+
+With interrupts, the NIC notifies the cpu a data packet arrived.  Interrupt
+is a hardware mechanism.  This interrupt handling is slower for high speed
+traffic.
+
+With polling, the cpu keeps checking on the NIC.  This is a software-level
+mechanism.  The cpu usage is high but this handles high speed traffic.
+
+
+
+
+
+
+
+
+
+

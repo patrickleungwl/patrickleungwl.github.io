@@ -1,0 +1,235 @@
+# Street Fighting Guide to Modern C++
+
+
+## Map, operator<
+
+
+## Unordered_map, hash
+
+
+## Emplace, Emplace_Back
+
+When adding new objects to a collection such as a vector, in pre-C++11 days, a caller might create the object first and then insert or push_back this object into the vector.  The STL container, owing to its value-semantics roots, makes a copy of the object.  This duplicate copy is essentially a wasted effort.  Why not just create the object in place, in the container itself?  That is essentially the work of emplace and emplace_back.  
+
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+
+struct HeavyObject
+{
+	std::string name;
+};
+
+int main()
+{
+	std::vector<HeavyObject> v;
+	v.emplace_back(HeavyObject{"World"});
+
+	auto iter = v.cbegin();
+	v.emplace(iter, HeavyObject{"Hello"});
+
+	std::for_each(v.cbegin(), v.cend(), [](const HeavyObject& h) {
+		std::cout << h.name << '\n';
+	});
+
+	return 0;
+}
+```
+``` output
+Hello
+World
+```
+
+## Try_Emplace
+
+Vectors can contain duplicate objects, whereas a map can only contain unique objects, each with a unique key.  When emplace() tries insert a duplicate object into a map, STL finds the key already existing in the map- and destroys the newly created object.  This is a waste of effort.  Try_emplace() checks for an object's existence first and only creates a new object if it doesn't exist in the map. 
+
+```c++ hl_lines="16 17"
+#include <iostream>
+#include <map>
+#include <string>
+
+struct HeavyObject
+{
+	HeavyObject(std::string ln, std::string fn) : lname(ln), fname(fn) {
+		std::cout << "Created " << lname << " " << fname << '\n';
+	}
+	std::string lname, fname;
+};
+
+int main()
+{
+	std::map<int, HeavyObject> m;
+	m.try_emplace(1, "Mouse", "Mickey");
+	m.try_emplace(1, "Mouse", "Mickey");
+
+	return 0;
+}
+```
+```
+Created Mouse Mickey
+```
+
+Note the parameters passed into try_emplace() are **perfectly forwarded** to the mapped value's constructor.  Perfect forwarding means the compiler passes on lvalues as lvalues and rvalues as rvalues. 
+
+## Piecewise Construction
+
+Sometimes we have a class with its **copy constructor deleted**.  Why?  Because we really just want one instance of this class.  Or sometimes we want one instance for performance reasons.  We don't want to worry about unncessary memory allocations and cleanups on the heap at runtime. 
+
+If a class is not copy-constructible, and if we use it as a key in a map, we run into a problem.  Using emplace or insert normally, we can't create this object as the key and use it in the map, because the map cannot take a copy of this key. 
+
+This is where a map's piece_wise construction can be used to work around this non-copy-constructable key problem.  Example below.
+
+```c++
+#include <iostream>
+#include <map>
+#include <string>
+#include <utility>
+
+struct MyThing
+{
+	MyThing(std::string ln, std::string fn) :
+		lname(ln), fname(fn) {
+	}
+
+	MyThing(const MyThing&) = delete;
+	MyThing& operator= (const MyThing&) = delete;
+
+	bool operator<(const MyThing& other) const {
+		return (lname < other.lname && fname < other.fname);
+	}
+
+	std::string lname, fname;
+};
+
+int main()
+{
+	std::map<MyThing, int> m;
+
+//	traditional c++98 style of inserting map items fails
+//	when key object is not copy-constructable
+//	auto item = std::pair<MyThing, int>(MyThing("Mouse", "Mickey"), 1);
+//	m.insert(item);
+
+//	this also fails because we cannot create MyThing as a key
+//	m.emplace(MyThing("Mouse", "Mickey"),2);
+
+//	this again fails because we cannot create MyThing as a key
+//	m.emplace("Mouse", "Mickey", 2);
+
+//	C++17, this fails
+//	m.try_emplace( "Mouse", "Mickey", 2);
+
+//	C++17, this fails, fails to create a copy of MyThing
+//	m.try_emplace( {"Mouse", "Mickey"}, 2);
+
+//	C++11, this works, create key and values in-place separately
+	m.emplace(std::piecewise_construct,
+		std::forward_as_tuple("Mouse", "Mickey"),
+		std::forward_as_tuple(2) );
+
+	return 0;
+}
+```
+
+## Lambdas
+
+Lambdas are essentially nameless "anonymous" functions declared in the code right where they are invoked.  Compared to functions or functors, this locality of declaration saves a lookup in the editor to the inner workings of the function.  On the other hand, readability becomes an issue for overly long lambdas. 
+
+A point of confusion is a lambda's capture clause of its definition.  A lambda can capture values or references of variables on the stack for use inside its function.  It can even capture a variable by way of a std::move operator (the original variable can no longer be used afterwards).  
+
+_Tip_: use lambdas for short one-to-two liner functions.
+
+### Example of a functor and an equivalent lambda.
+
+``` c++
+    #include <iostream>
+    #include <vector>
+    #include <algorithm>
+
+    struct OddChecker
+    {
+        void operator()(int i)
+        {
+            std::string tmp = (i & 1) ? "odd" : "even";
+            std::cout << tmp << '\n';
+        }
+    };
+
+    int main()
+    {
+        std::vector<int> v {0,1,2,3};
+
+        std::for_each(v.cbegin(), v.cend(), OddChecker());
+
+        std::for_each(v.cbegin(), v.cend(), [](int i) {
+            std::string tmp = (i & 1) ? "odd" : "even";
+            std::cout << tmp << '\n';
+        });
+
+        int bump = 3;
+        std::string location("bump");
+        std::for_each(v.cbegin(), v.cend(), [bump, &location](int i) {
+            std::cout << location << " " << i+bump << '\n';
+        });
+    }
+```
+
+``` output
+even
+odd
+even
+odd
+even
+odd
+even
+odd
+bump 3
+bump 4
+bump 5
+bump 6
+```
+
+## Decltype
+
+Decltype is used mainly in template meta-programming.  Decltype is used to get type of one variable for use to declare another variable.  Example: 
+
+```c++
+float a = 2.0;
+decltype(a) b = a;
+```
+
+This usage looks overly convoluted.  Why not use auto instead?  The only practical usage is in building template classes or functions.  Example: 
+
+```c++
+#include <iostream>
+
+template<class T, class U>
+auto mul(T x, U y) -> decltype(x*y)
+{
+	return x*y;
+}
+
+int main()
+{
+	double a = 2.0;
+	float b = 3.0;
+
+	auto c = mul(a, b);
+	std::cout << c << '\n';
+}
+```
+
+
+
+
+## Function templates
+
+## Class templates
+
+## Type traits
+
+
+

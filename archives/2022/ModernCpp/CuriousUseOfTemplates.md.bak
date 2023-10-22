@@ -1,0 +1,148 @@
+# Curious Use of Templates
+
+## Traditional Use of Templates
+
+Templates in C++ have existed for more than 20 years.  Simply-put, we use templates to reuse code via compile-time inheritance.  A simple example is a function which compares multiplies two numbers, say two doubles.  And let's say we want to reuse the same code to multiply two integers.  A template just hollow out the core logic into a generic function and allow it to be used by any data type.  
+
+A simple example is as follows:
+
+~~~c++
+
+template <typename T>
+T multiply(T a, T b) {
+    return a * b;
+}
+
+
+int main()
+{
+    assert(multiply(2,3) == 6);
+    assert(multiply(2.0,3.1) == 6.2);  // beware of floating point errors!
+}
+
+~~~
+
+We can apply templates to entire classes as well using the same idea.  That's all fine and dandy.  But what's **really interesting** is a curious use of templates for solving parent-child relationship issues.
+
+## Parent-Child Include Issues
+
+A very common problem in software is coding parent-child relationships.  A parent keeps a pointer/reference to its child objects.  But what if the child wants to make a callback to its parent?  It'd keep a pointer/reference back to its parents.  This leads to *all kinds of dreadful cyclic header include* issues.  For example, the child class cannot include the parent class's header because the parent header file already includes the child header file.  
+
+The traditional way of breaking this cyclic relationship is to use a 'forward reference'. 
+
+---
+
+## Using Forward References
+
+Let's say a Parent class keeps a pointer to a Child - and the Child wants a pointer back to the Parent.  It can be done this way in traditional C++:
+
+In Parent.h
+
+~~~c++
+
+#pragma once
+
+#include "Child.h"
+
+class Parent {
+private:
+	Child* c_;
+
+public:
+	Parent() {
+		c_ = new Child(this);
+	}
+};
+
+~~~
+
+And now in the Child's class declaration, it needs to tell the compiler that Parent exists, but the Child header cannot include the Parent header- or else this would lead to cyclic include errors.  To get around this, the Child declaration - can contain a *forward reference* to a Parent.  This tells the compiler- "trust me, a Parent type exists, let the linker figure it out at link time."
+
+In Child.h
+
+~~~c++
+#pragma once
+
+class Parent;  // forward reference to Parent
+
+class Child {
+private:
+	Parent* p_;
+
+public:
+	Child(Parent* p) : p_(p) {
+	}	
+};
+~~~
+
+This works.  You can also use smart pointers in place of the raw pointers, but the pattern is the same.  That is great. 
+
+Only in moderm C++, we don't really want to use pointers too much.  Why?  If we stick to objects and references, we can always be sure a real object exists- and skip checking against nullptrs.   
+
+---
+
+## Breaking includes with Templates
+
+Let's once again use a Parent-Child class relationship, but this time **with NO pointers**.  We can do this with templates.
+
+Let's keep the same Parent-Child idea.  This time, the Parent contains a Child, but a Child with full knowledge of what type of Parent it has.  This is a wild idea- as we will see soon. 
+
+The Parent class has two functions.  The first function, WakeChild, tickles the Child.  The second function, CallbackFromChild(), is used by the Child to callback the Parent.   Here is the Parent declaration and definition:
+
+~~~c++
+#pragma once
+
+#include "Child.h"
+
+class Parent {
+private:
+	Child<Parent> c_;
+
+public:
+	Parent() : c_(*this) {
+	}
+
+	void WakeChild() {
+		c_.WakeUp();
+	}
+
+	void CallbackFromChild() {
+		std::cout << "Feed Child\n";
+	}
+};
+~~~
+
+The Child class is much more interesting.  The Child has a templated Parent type- so by definition at compile time, it knows the type of its Parent.  **The Child header does not even need to include the Parent's header.**  This is the entire beauty of using Templates to break Parent-Child build issues.
+
+~~~c++
+#pragma once
+
+template <typename TParent>
+class Child {
+private:
+	TParent& p_;
+
+public:
+	Child(TParent& p) : p_(p) {
+	}	
+
+	void WakeUp() {
+		p_.CallbackFromChild();
+	}
+};
+~~~
+
+At compile time, the compiler ensures the parent type has a public method call CallbackFromChild while this Child class can call. 
+
+To test this code, all that is needed is code like this:
+
+~~~
+    Parent p;
+    p.WakeChild();
+~~~
+
+The Parent wakes the Child, which in turn, makes a call back to the Parent.  The is no use of forward references, no use of pointers, and no issues with cyclic include headers.
+
+Brilliant.
+
+PL.20220531

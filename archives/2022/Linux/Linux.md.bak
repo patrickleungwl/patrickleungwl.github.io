@@ -1,0 +1,202 @@
+# Linux notes
+
+## virtual memory
+
+The OS makes each process believe it has access to a continuous stretch of 
+memory stretching from 0 to MAX.  The OS intersperses every process' memory 
+needs to real physical memory spaces.  The OS handles the virtual to read 
+memory translations.  The OS divides memory into pages- which it uses to handle
+mapping a page at a time.  
+
+
+## shared memory
+
+Use shmget system call to read write to the same memory space.  
+
+## signals
+
+Use signals to send signals to each process.  Every process has signal handlers
+for execution in response to each signal.
+
+## sockets
+
+Use sockets to get two processes on the same or different machines to talk to 
+each other.  With different machines, use TCP or UDP networking protocol. 
+On same machine, use Unix sockets.
+
+## pipes
+
+Pipes system call returns two file descriptors.  A pipe is a half-duplex 
+commuication- which means it's only one way.  Regular pipes work in the same 
+process- shared by parent and child after fork.  Named pipes are for 
+different processes.
+
+
+## taskset
+
+taskset binds a process to run on specific cpu cores.  By default, the kernel 
+decides which core to run a process when its scheduler schedules a process. 
+However, when we pin a process to a specific core(s), it's less likely for the
+process to have cache misses- because the process is likely to have already 
+run on that core previously.  With less cache misses- the process should run 
+faster overall. 
+
+    taskset -p <pid> -c <cpu-list>
+    where cpu-list can be a number or a range like 0-9
+
+
+## NUMA
+
+NUMA, or non-uniform memory access, is a setup of cpus such that a cluster of 
+cpus can share memory locally via a local bus instead of the system bus.
+
+Cpus need to fetch memory quickly.  However, because multiple cpus 
+can fetch memory at the same time, this leads to contention and latency.  
+
+The idea with NUMA is that small clusters can treat its shared memory as its L3 
+cache.  Instead of a core reaching out to the system bus to fetch data from
+the main memory, it can fetch the same data in this shared L3 cache.
+
+Comparisons with UMA, uniform memory access
+
+UMA
+
+* offers limited bandwidth
+* uses a single memory controller, slower than NUMA
+
+NUMA
+
+* offers more bandwidth than UMA
+* uses multiple memory controllers, speeds up memory fetches than UMA
+* better for real time applications
+
+
+## hyperthreading
+
+Hyperthreading is Intel's name for a hardware technique to run more than one thread 
+on each core.  It creates two logical (virtual) processors per actual core, each of 
+which has its own processor state.  Each logical processor runs indepedently of 
+the other logical processor.  However, both logical processors share the same 
+(L1/L2/L3?) caches and system bus.  
+
+AMD has similar technology called SMT, simulatenous multithreading.
+Both allow two threads to run in parallel on the same core.  
+
+To check whether hyperthreading/SMT is enabled:
+
+    cat /proc/version
+
+
+## low latency kernel
+
+Compared to a regular generic kernel, a low latency kernel- also known as a 
+real time kernel- context switches more often.  These kernels are tuned to 
+specific needs.  Generic kernels favor throughput over latency.  Generic kernels
+want to get things done- with less context switches.  Low latency kernels 
+favor latency over throughput.  Low latency kernels want to respond to events
+quicker- with more context switches- consuming more cpu- and usually resulting
+in lower throughput.
+
+To check the kernel version:
+
+    cat /proc/version
+
+
+## multicast/unicast
+
+Unicast is a one-to-one traffic flow.  If multiple clients request the same
+data feed from the same server, the server will flood the network with multiple
+copies of the same data.
+
+In a multicast environment, the server only sends one data feed- and it is up 
+to the switches to forward the data to only the interested clients.
+
+
+## tmux
+
+Tmux is a terminal multiplexer that allows you to run multiple terminals over a
+single session.
+
+Tmux by default uses an awkward ctrl-b to start all tmux commands.  
+To override default key bindings, add a .tmux.conf file.  The following file
+makes ctrl-t the keystroke for triggering tmux:
+
+``` text title=".tmux.conf contents"
+    unbind C-b
+    set-option -g prefix C-t
+    bind-key C-t send-prefix
+
+    bind v split-window -h
+    bind s split-window -v
+    unbind '"'
+    unbind %
+
+    bind h select-pane -L
+    bind l select-pane -R
+    bind k select-pane -U
+    bind j select-pane -D
+```
+
+``` text title="Keystroke - Action cheatsheet""
+    ctrl-t s          | split screen horizontally
+    ctrl-t v          | split screen vertically
+    ctrl-t h          | move cursor to pane below
+    ctrl-t j          | move cursor to pane left
+    ctrl-t k          | move cursor to pane above
+    ctrl-t l          | move cursor to pane right
+    ctrl-t ctrl-arrow | expands or shrinks the pane
+    ctrl-t z          | zoom in or out of pane
+    ctrl-t space      | rotate to next layout|
+    ctrl-t u          | swap pane up
+    ctrl-t d          | swap pane down
+    ctrl-t >          | show menu
+    ctrl-t ?          | see list of all tmux commands
+```
+
+You can lose connection to a terminal for any number of reasons, but the tmux
+session remains alive behind the scenes if the machine remains up. 
+
+To check what tmux sessions are still running:
+
+    tmux ls
+
+To connect to a specific session: 
+
+    tmux attach -t 0
+
+To start a tmux session with a specific name like 'mywork':
+
+    tmux new -s mywork
+
+To connect to a specific session by name: 
+
+    tmux attach -t mywork
+
+
+## systemd
+
+systemd is used to start, stop and monitor status in Ubuntu.  
+
+* list-unit-files
+* start
+* stop
+* restart
+* status
+
+
+## journalctl
+
+## vi
+
+
+## proc
+
+## lspci
+
+## ethtool
+
+## top
+
+## network time protocol ntp
+
+

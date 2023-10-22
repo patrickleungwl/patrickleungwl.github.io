@@ -1,0 +1,45 @@
+---
+layout: post
+title: "Imports in Python"
+date: 20170608
+categories: python
+tags: patterns
+archive: true
+---
+
+What's the difference between: 1) import numpy, 2) import numpy as np,
+and 3) from numpy import * ?
+
+First example:
+
+~~~
+import numpy
+~~~
+
+
+Second example:
+
+~~~
+import numpy as np
+~~~
+
+
+Third example:
+
+~~~
+from numpy import *
+~~~
+
+The *first example* allows usage of all sub-modules and functions in the 
+numpy module- but they can only be accessed by numpy.method().
+
+The *second example* is the same as the first example- but also sets up np as
+alias thru which to access the numpy functions- example: np.method().
+
+The *third example* imports all sub-modules and functions from the numpy
+module into the local namespace.  This allows using numpy's methods without
+namespace qualifications- example: method().  However, this has the 
+disadvantage of complicating the local namespace with common method names-
+and overriding methods with the same names from other modules.
+
+

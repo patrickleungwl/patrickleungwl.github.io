@@ -1,0 +1,101 @@
+# Trading
+
+## options
+
+### market making
+
+MM buys and sell options and earns the bid-ask spread.  
+
+Suppose MM sells a 1 call option contract, making him delta negative.  He needs
+to hedge the negative delta by buying the underlying equity.  If the delta is 
+0.05, then on 1 option contract, he'd need to buy 5 shares of the underlying 
+equity.  With 1 short call and 5 shares, the MM becomes delta neutral.
+
+If the price of the underlying goes up, the call option delta also goes up. 
+This means the MM is again not hedged.  For example, if the delta goes to 0.10,
+the MM would need to hold 10 shares.  Since he already holds 5 shares, he'd go 
+buy another 5 shares for a total of 10 shares- making him delta neutral.
+
+Now if the call becomes in-the-money and the delta reaches 1.0, the MM needs
+to hold 100 shares of the underlying, in the event the call holder exercises 
+and the MM needs to hand over the 100 shares.
+
+### implied volatility
+
+Once news about a company goes public, the IV should go down- because the 
+unknown becomes known.  When the IV goes down, option prices go down as well- 
+because by definition, option prices are built on intrinsic and extrinsic 
+information.  IV is part of the extrinsic. 
+
+## extrinsic value
+
+The more time to expiration, the more it's going to be worth- from its 
+extrinsic value- made of implied volatility and time value.
+
+## calendar call spread
+
+Calendar call spread is a play on IV.  A closer to expiration option has lower
+IV than a longer to expiration option.
+
+Buying and selling of options with the same strike price but with different
+expirations.  A basic calendar call spread would be 1) sell short DTE call 
+and 2) buy long DTE call.  The short DTE would have negative vega and the long
+DTE would have positive vega.  Overall, the vega is positive which means for 
+every increase in IV, the overall option price would go up. 
+
+
+### vega
+
+Vega is the change in option price for each 1% move in implied vol.
+This is a first derivative.  Vega is higher in ATM options and longer DTE.
+
+
+### gamma
+
+Gamma is the change in delta for each move in the underlying equity's price. 
+In physics terms, it is acceleration, a second derivative. 
+
+
+
+### gamma squeeze
+
+Gamma squeeze is a self-reinforcing push up effect motivated by call option 
+holders.  The call seller is required to buy up the underlying equity to 
+delta neutral is short call positions.  This buying in effect pushes up the 
+price of the underlying further- which increases the call's delta, further
+requiring the call seller to buy more underlying.  For an equity with few
+shares outstanding, this behavior induces further buying and higher underlying
+equity prices. 
+
+In effect, the underlying reason for a gamma squeeze are the market makers'
+need to remain delta neutral. 
+
+
+## fixed income
+
+### the fed
+
+The role of central banks such as the Federal Reserve- is to maintain a stable
+and growing economy through price stability and full employment.  The Fed has
+two primary tools in its toolbox: 
+
+* Setting short term interest rates.  The Fed controls the short end of the 
+yield curve.
+* Buying or selling treasury notes and bonds through open market operations.
+    * Selling bonds to the public takes away cash from the public.  This 
+    lowers the money supply- and reduces demand for goods.  This is a tool
+    to use for lowering inflation.  During World War II, Uncle Sam sold bonds
+    to the public not to finance the war, but to reduce demand for other goods
+    and reduce inflation.
+    * Buying bonds from the public puts money into the hands of the public.
+    This stimulates the economy.  This is a tool to use during weak economic 
+    times to flood the market with money.  "Quantitative easing" is this form
+    of open market bond purchases.  Bidding up bonds also causes long term 
+    interest rates to fall.
+
+
+
+
+
+
+

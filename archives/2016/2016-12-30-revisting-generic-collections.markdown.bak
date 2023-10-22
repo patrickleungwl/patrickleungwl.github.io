@@ -1,0 +1,207 @@
+---
+layout: post
+title: "Revisiting Generic Collections"
+date: 20161230
+categories: tech
+tags: patterns
+archive: true
+---
+Earlier I asked if generic collections were faster than non-generic 
+collections?  I cooked up a quick test to confirm my suspicions that
+non-generics were slower because of the work it needs to box primitives
+and then add the reference to the collection- whereas for generic collections,
+it just needed to add the primitive to its own memory allocation. 
+
+But then a colleague asked- how about performance for collections of 
+objects?  Wouldn't a generic collection do the same as a non-generic collection?
+Both collections only contain references to objects on the heap- and there
+should be no difference, right?  I updated my old test to check this 
+assertion. 
+
+~~~csharp
+
+﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+
+namespace TestGenericCollection
+{
+    class TestGenericListVsArrayList
+    {
+        const int _numItems = 10000000;
+
+        static void TimeArrayListOfObjects()
+        {
+            Console.Out.WriteLine("TimeArrayListOfObjects start");
+
+            DateTime dtInsertStart = DateTime.Now;
+            ArrayList stringList = new ArrayList();
+            for (int i = 0; i < _numItems; i++)
+            {
+                stringList.Add(Convert.ToString(i));
+            }
+
+            DateTime dtReadStart = DateTime.Now;
+            for (int j = 0; j < _numItems; j++)
+            {
+                string retrievedInt = (string)stringList[j];
+                if (j % _numItems/10 == 0)
+                    Console.Out.Write(".");
+            }
+
+            ShowStats(dtInsertStart, dtReadStart, "ArrayListOfObjects");
+        }
+
+
+        static void TimeArrayListOfPrimitives()
+        {
+            Console.Out.WriteLine("TimeArrayListOfPrimitives start");
+            
+            DateTime dtInsertStart = DateTime.Now;
+            ArrayList intList = new ArrayList();
+            for (int i = 0; i < _numItems; i++)
+            {
+                intList.Add(i);
+            }
+
+            DateTime dtReadStart = DateTime.Now;
+            for (int j = 0; j < _numItems; j++)
+            {
+                int retrievedInt = (int)intList[j];
+                if (j % _numItems/10 == 0)
+                    Console.Out.Write(".");
+            }
+            
+            ShowStats(dtInsertStart, dtReadStart, "ArrayListOfPrimitives");      
+        }
+
+
+        static void TimeGenericListOfObjects()
+        {
+            Console.Out.WriteLine("TimeGenericListOfObjects start");
+            
+            DateTime dtInsertStart = DateTime.Now;
+            List<string> intList = new List<string>();
+            for (int i = 0; i < _numItems; i++)
+            {
+                intList.Add(Convert.ToString(i));
+            }
+
+            DateTime dtReadStart = DateTime.Now;
+            for (int j = 0; j < _numItems; j++)
+            {
+                string retrievedInt = intList[j];
+                if (j % _numItems/10 == 0)
+                    Console.Out.Write(".");
+            }            
+
+            ShowStats(dtInsertStart, dtReadStart, "GenericListOfObjects");            
+        }
+
+
+
+        static void TimeGenericListOfPrimitives()
+        {
+            Console.Out.WriteLine("TimeGenericListOfPrimitives start");
+
+            DateTime dtInsertStart = DateTime.Now;
+            List<int> intList = new List<int>();
+            for (int i = 0; i < _numItems; i++)
+            {
+                intList.Add(i);
+            }
+
+            DateTime dtReadStart = DateTime.Now;
+            for (int j = 0; j < _numItems; j++)
+            {
+                int retrievedInt = intList[j];
+                if (j % _numItems / 10 == 0)
+                    Console.Out.Write(".");
+            }
+
+            ShowStats(dtInsertStart, dtReadStart, "GenericListOfPrimitives");
+        }
+
+
+        /// <summary>
+        /// ShowStats show time procedure took to insert 1M items and to read 1M items
+        /// </summary>
+        /// <param name="dtInsertStart">Time when insert started</param>
+        /// <param name="dtReadStart">Time when read started</param>
+        /// <param name="msg">Name of procedure</param>
+        static void ShowStats(DateTime dtInsertStart, DateTime dtReadStart, string msg)
+        {
+            DateTime dtTimeNow = DateTime.Now;
+            TimeSpan wholeTime = dtTimeNow.Subtract(dtInsertStart);
+            TimeSpan insertTime = dtReadStart.Subtract(dtInsertStart);
+            TimeSpan readTime = dtTimeNow.Subtract(dtReadStart);
+            Console.Out.WriteLine("{3} took {0} ms in total, {1} ms to insert, {2} to read\n",
+                wholeTime.TotalMilliseconds,
+                insertTime.TotalMilliseconds,
+                readTime.TotalMilliseconds,
+                msg);
+        }
+
+
+        static void Main(string[] args)
+        {
+            switch(args[0])
+            {
+                case "1": 
+                    TimeGenericListOfPrimitives();
+                    break;
+                case "2":
+                    TimeGenericListOfObjects();
+                    break;
+                case "3":
+                    TimeArrayListOfPrimitives();
+                    break;
+                case "4":
+                    TimeArrayListOfObjects();
+                    break;
+            }
+        }
+    }
+}
+
+~~~
+
+The result?
+
+~~~
+>TestGenerics.exe 1
+TimeGenericListOfPrimitives start
+..........
+GenericListOfPrimitives took 358.8006 ms in total, 202.8004 ms to insert, 156.0002 to read
+
+
+>TestGenerics.exe 2
+TimeGenericListOfObjects start
+..........
+GenericListOfObjects took 4336.8077 ms in total, 4180.8074 ms to insert, 156.0003 to read
+
+
+>TestGenerics.exe 3
+TimeArrayListOfPrimitives start
+..........
+ArrayListOfPrimitives took 2324.4041 ms in total, 2168.4038 ms to insert, 156.0003 to read
+
+
+TestGenerics.exe 4
+TimeArrayListOfObjects start
+..........
+ArrayListOfObjects took 4508.408 ms in total, 4352.4077 ms to insert, 156.0003 to read
+
+
+~~~
+
+It's fairly conclusive.  
+
+For collections of primitives (ints, longs, etc)- generic collections are
+definitely much faster than non-generic collections- because there is no need
+to box items.
+
+For collections of objects- generic collections show no substantial improvement
+over non-generic collections. 
+
+
