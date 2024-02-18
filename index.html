@@ -17,7 +17,7 @@
     
     
       
-        <title>Notes - ThinkNotes</title>
+        <title>OpenACR on EndeavourOS - ThinkNotes</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#got-problems" class="md-skip">
+        <a href="#openacr-style" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notes
+              OpenACR on EndeavourOS
             
           </span>
         </div>
@@ -196,12 +196,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Notes
+          OpenACR on EndeavourOS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
-        Notes
+        OpenACR on EndeavourOS
       </a>
       
         
@@ -218,9 +218,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#got-problems" class="md-nav__link">
-    Got Problems?
+  <a href="#openacr-style" class="md-nav__link">
+    OpenACR style
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-build" class="md-nav__link">
+    First build
+  </a>
+  
+    <nav class="md-nav" aria-label="First build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringop-overflow" class="md-nav__link">
+    stringop-overflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mariadbmysqlh" class="md-nav__link">
+    mariadb/mysql.h
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -323,6 +357,20 @@
   
   
     <li class="md-nav__item">
+      <a href="2023/gotproblems/" class="md-nav__link">
+        Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="2023/lieflat/" class="md-nav__link">
         Feeling Great
       </a>
@@ -398,17 +446,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
       
       
       
-        <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
           Reads
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_10">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_11">
           <span class="md-nav__icon md-icon"></span>
           Reads
         </label>
@@ -436,6 +484,20 @@
     <li class="md-nav__item">
       <a href="2023/Reads/framauro/" class="md-nav__link">
         Fra Mauro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2023/Reads/thebondking/" class="md-nav__link">
+        The Bond King
       </a>
     </li>
   
@@ -1238,9 +1300,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#got-problems" class="md-nav__link">
-    Got Problems?
+  <a href="#openacr-style" class="md-nav__link">
+    OpenACR style
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-build" class="md-nav__link">
+    First build
+  </a>
+  
+    <nav class="md-nav" aria-label="First build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringop-overflow" class="md-nav__link">
+    stringop-overflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mariadbmysqlh" class="md-nav__link">
+    mariadb/mysql.h
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1259,16 +1355,180 @@
                   
 
 
-  <h1>Notes</h1>
+  <h1>OpenACR on EndeavourOS</h1>
 
-<h2 id="got-problems">Got Problems?</h2>
-<p>From Larry McCarthy, ex-Lehman MD.</p>
+<p>I have been a big fan of EndeavourOS, a Arch-based Linux OS, for the past year.<br />
+And at the same time, I am a new adopter of
+<a href="https://github.com/alexeilebedev/openacr">Alexei Lebedev's OpenACR </a>.  My idea
+at the beginning of 2024 was "why not try out both at the same time?" It would be
+an interested experience to document the learning effort on using OpenACR on a 
+new OS.</p>
+<p>First of all, what is <strong>EndeavourOS</strong>?  <a href="https://endeavouros.com">EndeavourOS</a> 
+is a minimal Linux distribution which has been a delight to use over the past year.
+On my home desktop, a relatively weak Lenovo ThinkCentre M92p, this OS has been 
+stable and performant.  Moreover, its dark space-based themes look simply cool
+and modern.</p>
+<p>And second, what is <strong>OpenACR</strong>?  OpenACR is a software framework for building software.
+In other words, it is meta-software, a tool that builds other tools.  It relies 
+on a common data dictionary to store a program's data structures and generates
+the necessary code for managing their memory allocations, deallocations, lookups,
+and updates.  In brief, OpenACR is a code generator which generates code from 
+application metadata.</p>
+<h2 id="openacr-style">OpenACR style</h2>
+<p>While the use of code generation is not new, there are <strong>pros and cons</strong> with 
+OpenACR's approach.  The pros with code generation is that 1) common bugs with 
+handling memory are mostly avoided, 2) that all code in an organization looks 
+standardized, and 3) most everyone can read each other's code.  One con with 
+OpenACR is effort it takes some time for a C++ developer to get used to reading 
+the generated code.  A C++ developer usually expects to see classes structured 
+around data and functions that handle that data.  With generated OpenACR code, 
+this idea is rather reversed.</p>
+<p>What do I mean by <em>reversed</em> C++ code?  I can explain better with a concrete example. 
+Let's say we have two data structures each with its own sort operation.  In C++, we'd 
+see something like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="font-weight: bold">class</span> <span style="font-weight: bold">A</span> {
+  <span style="font-weight: bold">int</span> a[10];
+<span style="font-weight: bold">public</span>:
+  <span style="font-weight: bold">void</span> sort();
+};
+
+<span style="font-weight: bold">class</span> <span style="font-weight: bold">B</span> {
+  <span style="font-weight: bold">double</span> b[10];
+<span style="font-weight: bold">public</span>:
+  <span style="font-weight: bold">void</span> sort();
+};
+</code></pre></div>
+<p>With OpenARC, the generated would look something like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="font-weight: bold">struct</span> <span style="font-weight: bold">A</span> {
+    <span style="font-weight: bold">int</span> a[10];
+};
+
+<span style="font-weight: bold">struct</span> <span style="font-weight: bold">B</span> {
+    <span style="font-weight: bold">double</span> b[10];
+};
+
+<span style="font-weight: bold">void</span> sort(A &amp;a);
+<span style="font-weight: bold">void</span> sort(B &amp;b);
+</code></pre></div>
+<p>By using function overloading, OpenACR applies the same uniform functions across
+all applicable data structures.  (Side note: This may remind you of template-based
+programming.  OpenACR generates all code rather than rely on templates.  I'd leave
+aside debating the pros and cons of template-based programming for another day.)</p>
+<p>To use OpenACR, a developer avoids thinking about classes and member functions and 
+rather, thinks about generated functions that operates on data structures.  It's 
+<em>reversed</em>.  This may take some time to digest and wrap your head around.  But 
+this style works and this is its own style of programming.</p>
+<h2 id="first-build">First build</h2>
+<p>The first step to building OpenACR is to get the code and build.  On a modern
+64-bit Ubuntu OS, it would be as easy as:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>git clone https://github.com/alexeilebedev/openacr.git
+cd openacr
+ai
+</code></pre></div>
+<h3 id="pre-requisites">Pre-requisites</h3>
+<p>A quick look at OpenACR's dependencies shows a dependencies on mariadb, ssl, lz4 and 
+cppcheck.  In EndeavourOS, these can be installed quickly using yay:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>yay mariadb
+
+4 extra/mariadb-clients 11.2.3-1 (1.9 MiB 32.8 MiB)
+    MariaDB client tools
+3 extra/mariadb-libs 11.2.3-1 (5.6 MiB 24.0 MiB) (Installed: 11.1.2-1)
+    MariaDB libraries
+2 extra/percona-server 8.1.0_1-2 (26.7 MiB 187.7 MiB)
+    Drop-in replacement for MySQL that provides improved performance, diagnostics, instrumentation and MyRocks storage engine
+1 extra/mariadb 11.2.3-1 (29.4 MiB 212.8 MiB)
+    Fast SQL database server, derived from MySQL
+==&gt; Packages to install (eg: 1 2 3, 1-3 or ^4)
+==&gt; 1,3,4
+Sync Explicit (1): mariadb-11.2.3-1
+resolving dependencies...
+looking for conflicting packages...
+
+extra/mariadb-clients               11.2.3-1      32.79 MiB       1.89 MiB
+extra/mariadb-libs     11.1.2-1     11.2.3-1       0.22 MiB       5.60 MiB
+extra/mariadb                       11.2.3-1     212.76 MiB      29.36 MiB
+
+(install steps continued normally)
+</code></pre></div>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>yay lz4
+
+ core/lz4 1:1.9.4-2 (509.5 KiB 1.8 MiB) (Installed: 1:1.9.4-1)
+    Extremely fast compression algorithm
+==&gt; Packages to install (eg: 1 2 3, 1-3 or ^4)
+==&gt; 1
+
+(install steps continued normally)
+</code></pre></div>
+<p>To be exact, here are my development machine specs:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>OS kernel   6.4.11-arch2-1
+gcc version 13.2.1 20230801
+</code></pre></div>
+<h3 id="stringop-overflow">stringop-overflow</h3>
+<p>But running the first build of OpenACR on EndeavourOS, the make fails with these errors:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>g++ -x c++ -Wno-invalid-offsetof -ffunction-sections -fdata-sections -Wsequence-point -Wno-multichar -Wall -Wshadow -pipe -Wextra -Winit-self -Wmissing-include-dirs -Wmissing-declarations -Winvalid-pch -iquote . -Wno-vla -fpch-preprocess -Wno-class-memaccess -Wpedantic -c cpp/gen/algo_gen.cpp -o build/release/cpp.gen.algo_gen.o -msse4.2 -D AOS_SSE42 -O3 -fno-strict-aliasing -Werror -Wno-unused-local-typedefs -Wno-long-long -Wno-cast-function-type
+In function ‘void algo::ch_SetStrptr(LnumStr4_U32&amp;, const strptr&amp;)’,
+    inlined from ‘bool algo::ch_ReadStrptrMaybe(LnumStr4_U32&amp;, strptr)’ at cpp/gen/algo_gen.cpp:4249:21:
+cpp/gen/algo_gen.cpp:4270:22: error: writing 1 byte into a region of size 0 [-Werror=stringop-overflow=]
+ 4270 |         parent.ch[j] = rhs_elems[i];
+      |         ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from ./include/algo.h:33,
+                 from cpp/gen/algo_gen.cpp:25:
+./include/gen/algo_gen.h: In function ‘bool algo::ch_ReadStrptrMaybe(LnumStr4_U32&amp;, strptr)’:
+./include/gen/algo_gen.h:2677:8: note: at offset 4 into destination object ‘algo::LnumStr4_U32::ch’ of size 4
+ 2677 |     u8 ch[4];
+      |        ^~
+</code></pre></div>
+<p>Googling for stringop-overflow errors point to this spurious problem with gcc version 11 and up.</p>
+<p>According to a <a href="https://www.mail-archive.com/dev@dpdk.org/msg163488.html">17 Apr 2020 post by Bruce Richardson at Intel</a></p>
 <blockquote>
-<p>Never tell anyone on Wall Street your problems.  Ninety percent of those 
-you tell don't care, and the other ten percent are glad you have them.</p>
+<p>stringop-overflow warns when it sees a possible overflow
+in a string operation.</p>
+<p>In the rte_memcpy functions different branches are taken
+depending on the size. stringop-overflow is raised for the
+branches in the function where it sees the static size of the
+src could be overflowed.</p>
+<p>However, in reality a correct size argument and in some cases
+dynamic allocation would ensure that this does not happen.</p>
 </blockquote>
-<p>Larry sounds like a guy you'd like to share a pint with down at the pub.</p>
-<p>2023-10</p>
+<p>Reading this and other online posts reveal several possible workarounds:</p>
+<ol>
+<li>disable the warning using a compiler option</li>
+<li>use a pragama to disable the warning on specific files</li>
+<li>use clang</li>
+<li>upgrade to the most recent gcc</li>
+<li>disable the runtime optimizations</li>
+</ol>
+<p>While I could've tried any or all of these options, I opted to disable the compiler 
+optimizations as a quick fix.  This was replacing the -O3 gcc compiler flag in 
+bin/bootstrap/Linx-g++.release-x86-64 to -g -Og. </p>
+<p>Removing the compiler optimizations removed the stringop-overflow warnings. </p>
+<h3 id="mariadbmysqlh">mariadb/mysql.h</h3>
+<p>The next compiler error I encountered was this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>In file included from cpp/gen/lib_mysql_gen.cpp:26:                                          
+./include/gen/lib_mysql_gen.h:26:10: fatal error: mariadb/mysql.h: No such file or directory                                                
+   26 | #include &lt;mariadb/mysql.h&gt;                                                           
+      |          ^~~~~~~~~~~~~~~~~    
+</code></pre></div>
+<p>This looked odd because I was sure I installed mariadb as part of my pre-requisites check. 
+However I could not find a /usr/include/mariadb/mysql.h on my system.  Instead, I found a
+/usr/include/mysql/mysql.h.  It looked like on my system, the mariadb files were installed
+in a mysql folder rather than to mariadb folder. </p>
+<p>I compared the mariadb files as packaged for Debian and as packaged for Arch-Linux.</p>
+<p><a href="https://packages.debian.org/sid/i386/libmariadb-dev/filelist">Mariadb package for Debian</a>
+shows:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>/usr/include/mariadb/mysql.h
+</code></pre></div>
+<p><a href="https://archlinux.org/packages/extra/x86_64/mariadb-libs">Mariadb package for Arch-Linux</a>
+shows:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>usr/include/mysql/mysql.h
+</code></pre></div>
+<p>Indeed, for Arch-Linux, the mariadb header files are installed under the older mysql folder
+name.  With this confirmed, a quick solution was to make a mariadb softlink to mysql- like 
+this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>cd /usr/include
+sudo ln -s mysql mariadb
+</code></pre></div>
+<p>With this quick hack, the OpenARC ai build completed for the first time.</p>
 
 
 
