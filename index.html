@@ -258,6 +258,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    Hello World
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1340,6 +1347,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    Hello World
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1361,7 +1375,7 @@
 And at the same time, I am a new adopter of
 <a href="https://github.com/alexeilebedev/openacr">Alexei Lebedev's OpenACR </a>.  My idea
 at the beginning of 2024 was "why not try out both at the same time?" It would be
-an interested experience to document the learning effort on using OpenACR on a 
+a challenging experience to document the learning effort on using OpenACR on a 
 new OS.</p>
 <p>First of all, what is <strong>EndeavourOS</strong>?  <a href="https://endeavouros.com">EndeavourOS</a> 
 is a minimal Linux distribution which has been a delight to use over the past year.
@@ -1490,18 +1504,28 @@ src could be overflowed.</p>
 <p>However, in reality a correct size argument and in some cases
 dynamic allocation would ensure that this does not happen.</p>
 </blockquote>
-<p>Reading this and other online posts reveal several possible workarounds:</p>
+<p>Reading this and other online posts revealed several possible workarounds:</p>
 <ol>
 <li>disable the warning using a compiler option</li>
 <li>use a pragama to disable the warning on specific files</li>
 <li>use clang</li>
 <li>upgrade to the most recent gcc</li>
-<li>disable the runtime optimizations</li>
+<li>lower or disable the compiler optimizations</li>
 </ol>
 <p>While I could've tried any or all of these options, I opted to disable the compiler 
 optimizations as a quick fix.  This was replacing the -O3 gcc compiler flag in 
-bin/bootstrap/Linx-g++.release-x86-64 to -g -Og. </p>
-<p>Removing the compiler optimizations removed the stringop-overflow warnings. </p>
+bin/bootstrap/Linx-g++.release-x86-64 to -O2.</p>
+<p>Reducing the compiler optimizations removed the stringop-overflow warnings. </p>
+<p><em>Edit</em> A read of the OpenACR readme shows that <a href="https://github.com/alexeilebedev/openacr?tab=readme-ov-file#known-issues">this compiler issue is a known 
+problem</a>.
+Perhaps the makefile should thrown up a warning  when building with gcc &gt; version 8 
+and O3?</p>
+<p><em>Follow-up</em> I took another look at this build problem.  The command ai runs the 
+script bin/select-bootstrap to consider the specific build file for the system's 
+architecture and compiler.  The problem with this script is that it only considers
+the compilers clang++ and g++.  It does not detect the compiler's version so it
+never considers running the bootstrap script for gc++ version 9 or higher.  This
+is a <strong>script issue</strong> that should be fixed.</p>
 <h3 id="mariadbmysqlh">mariadb/mysql.h</h3>
 <p>The next compiler error I encountered was this:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>In file included from cpp/gen/lib_mysql_gen.cpp:26:                                          
@@ -1529,6 +1553,18 @@ this:</p>
 sudo ln -s mysql mariadb
 </code></pre></div>
 <p>With this quick hack, the OpenARC ai build completed for the first time.</p>
+<h2 id="hello-world">Hello World</h2>
+<p>Following tradition, I created a Hello World application as a first trial run of the 
+environment.  To do this, run this as a trial run:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>acr_ed -create -target hello
+</code></pre></div>
+<p>After inspecting the planned updates, commit the changes for real:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>acr_ed -create -target hello -write
+</code></pre></div>
+<p>Running this command retriggere the same compiler optimization issue I encountered
+previously.  The abt build command picked out the O3 optmization level for g++ version
+8 instead of for 9+.  The compiler options are stored in data/dev/tool_opt.ssim. 
+This is <strong>issue #2</strong> that should be fixed.</p>
 
 
 
