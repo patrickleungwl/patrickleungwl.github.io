@@ -265,6 +265,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    Next Step
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1354,6 +1361,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    Next Step
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1382,6 +1396,7 @@ is a minimal Linux distribution which has been a delight to use over the past ye
 On my home desktop, a relatively weak Lenovo ThinkCentre M92p, this OS has been 
 stable and performant.  Moreover, its dark space-based themes look simply cool
 and modern.</p>
+<p><img alt="EndeavourOS Desktop" src="assets/images/202402/EndeavourOS.png" /></p>
 <p>And second, what is <strong>OpenACR</strong>?  OpenACR is a software framework for building software.
 In other words, it is meta-software, a tool that builds other tools.  It relies 
 on a common data dictionary to store a program's data structures and generates
@@ -1396,7 +1411,7 @@ standardized, and 3) most everyone can read each other's code.  One con with
 OpenACR is effort it takes some time for a C++ developer to get used to reading 
 the generated code.  A C++ developer usually expects to see classes structured 
 around data and functions that handle that data.  With generated OpenACR code, 
-this idea is rather reversed.</p>
+this idea is instead reversed.</p>
 <p>What do I mean by <em>reversed</em> C++ code?  I can explain better with a concrete example. 
 Let's say we have two data structures each with its own sort operation.  In C++, we'd 
 see something like this:</p>
@@ -1514,11 +1529,11 @@ dynamic allocation would ensure that this does not happen.</p>
 </ol>
 <p>While I could've tried any or all of these options, I opted to disable the compiler 
 optimizations as a quick fix.  This was replacing the -O3 gcc compiler flag in 
-bin/bootstrap/Linx-g++.release-x86-64 to -O2.</p>
+bin/bootstrap/Linux-g++.release-x86-64 to -O2.</p>
 <p>Reducing the compiler optimizations removed the stringop-overflow warnings. </p>
-<p><em>Edit</em> A read of the OpenACR readme shows that <a href="https://github.com/alexeilebedev/openacr?tab=readme-ov-file#known-issues">this compiler issue is a known 
+<p><strong>Edit</strong> A read of the OpenACR readme shows that <a href="https://github.com/alexeilebedev/openacr?tab=readme-ov-file#known-issues">this compiler issue is a known 
 problem</a>.
-Perhaps the makefile should thrown up a warning  when building with gcc &gt; version 8 
+Perhaps the makefile should thrown up a warning when building with gcc &gt;= version 8 
 and O3?</p>
 <p><em>Follow-up</em> I took another look at this build problem.  The command ai runs the 
 script bin/select-bootstrap to consider the specific build file for the system's 
@@ -1561,10 +1576,15 @@ environment.  To do this, run this as a trial run:</p>
 <p>After inspecting the planned updates, commit the changes for real:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>acr_ed -create -target hello -write
 </code></pre></div>
-<p>Running this command retriggere the same compiler optimization issue I encountered
+<p>Running this command ran into the same compiler optimization issue I encountered
 previously.  The abt build command picked out the O3 optmization level for g++ version
-8 instead of for 9+.  The compiler options are stored in data/dev/tool_opt.ssim. 
-This is <strong>issue #2</strong> that should be fixed.</p>
+8.  The compiler options are stored in data/dev/tool_opt.ssim.  To fix this, 
+I overrode -O3 with -O2 and recompiled.  This worked!  The proof is in the 
+screenshot below.</p>
+<p><img alt="OpenACR HelloWorld" src="assets/images/202402/OpenACR.Hello.png" /></p>
+<h2 id="next-step">Next Step</h2>
+<p>Perhaps we can remove this gcc build problem by building with clang instead. 
+That will be in the next experiment.</p>
 
 
 
