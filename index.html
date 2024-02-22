@@ -1570,11 +1570,16 @@ sudo ln -s mysql mariadb
 <p>With this quick hack, the OpenARC ai build completed for the first time.</p>
 <h2 id="hello-world">Hello World</h2>
 <p>Following tradition, I created a Hello World application as a first trial run of the 
-environment.  To do this, run this as a trial run:</p>
+environment.  To do this, I ran the command below to create a default app.</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>acr_ed -create -target hello
 </code></pre></div>
-<p>After inspecting the planned updates, commit the changes for real:</p>
+<p>After inspecting the planned updates, I committed the changes into my local 
+data dictionary for real:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>acr_ed -create -target hello -write
+</code></pre></div>
+<p>To build, I kick off a build using OpenACR's built tool- which is appropriately 
+named <em>abt</em>, short for a-build-tool.  </p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>abt hello
 </code></pre></div>
 <p>Running this command ran into the same compiler optimization issue I encountered
 previously.  The abt build command picked out the O3 optmization level for g++ version
