@@ -225,11 +225,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-build" class="md-nav__link">
-    First build
+  <a href="#step-1" class="md-nav__link">
+    Step 1
   </a>
   
-    <nav class="md-nav" aria-label="First build">
+    <nav class="md-nav" aria-label="Step 1">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -253,15 +253,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    Hello World
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hello-world" class="md-nav__link">
-    Hello World
+  <a href="#step-2" class="md-nav__link">
+    Step 2
   </a>
+  
+    <nav class="md-nav" aria-label="Step 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-stringop-overflow" class="md-nav__link">
+    no-stringop-overflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-summary" class="md-nav__link">
+    Fix summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1321,11 +1348,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-build" class="md-nav__link">
-    First build
+  <a href="#step-1" class="md-nav__link">
+    Step 1
   </a>
   
-    <nav class="md-nav" aria-label="First build">
+    <nav class="md-nav" aria-label="Step 1">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1349,15 +1376,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    Hello World
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hello-world" class="md-nav__link">
-    Hello World
+  <a href="#step-2" class="md-nav__link">
+    Step 2
   </a>
+  
+    <nav class="md-nav" aria-label="Step 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-stringop-overflow" class="md-nav__link">
+    no-stringop-overflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-summary" class="md-nav__link">
+    Fix summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1406,15 +1460,15 @@ application metadata.</p>
 <h2 id="openacr-style">OpenACR style</h2>
 <p>While the use of code generation is not new, there are <strong>pros and cons</strong> with 
 OpenACR's approach.  The pros with code generation is that 1) common bugs with 
-handling memory are mostly avoided, 2) that all code in an organization looks 
-standardized, and 3) most everyone can read each other's code.  One con with 
-OpenACR is effort it takes some time for a C++ developer to get used to reading 
-the generated code.  A C++ developer usually expects to see classes structured 
-around data and functions that handle that data.  With generated OpenACR code, 
-this idea is instead reversed.</p>
-<p>What do I mean by <em>reversed</em> C++ code?  I can explain better with a concrete example. 
-Let's say we have two data structures each with its own sort operation.  In C++, we'd 
-see something like this:</p>
+handling memory are mostly avoided, 2) the code is extremely type-safe,
+and 3) most everyone can read each other's code.  One con with 
+OpenACR is the effort it takes for a C++ developer to get used to reading 
+ACR's generated code.  A C++ developer usually expects to see a class wrapped 
+around 1) some data and 2) functions that handle that data.  With generated 
+OpenACR code, this idea is instead reversed. </p>
+<p>A picture is worth a thousand words- so here is a concrete example. 
+Let's say we have two data structures each with its own sort operation.<br />
+In C++, we'd see something like this:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="font-weight: bold">class</span> <span style="font-weight: bold">A</span> {
   <span style="font-weight: bold">int</span> a[10];
 <span style="font-weight: bold">public</span>:
@@ -1436,20 +1490,16 @@ see something like this:</p>
     <span style="font-weight: bold">double</span> b[10];
 };
 
-<span style="font-weight: bold">void</span> sort(A &amp;a);
-<span style="font-weight: bold">void</span> sort(B &amp;b);
+<span style="font-weight: bold">void</span> A_sort(A &amp;a);
+<span style="font-weight: bold">void</span> B_sort(B &amp;b);
 </code></pre></div>
-<p>By using function overloading, OpenACR applies the same uniform functions across
-all applicable data structures.  (Side note: This may remind you of template-based
-programming.  OpenACR generates all code rather than rely on templates.  I'd leave
-aside debating the pros and cons of template-based programming for another day.)</p>
 <p>To use OpenACR, a developer avoids thinking about classes and member functions and 
 rather, thinks about generated functions that operates on data structures.  It's 
 <em>reversed</em>.  This may take some time to digest and wrap your head around.  But 
 this style works and this is its own style of programming.</p>
-<h2 id="first-build">First build</h2>
-<p>The first step to building OpenACR is to get the code and build.  On a modern
-64-bit Ubuntu OS, it would be as easy as:</p>
+<h2 id="step-1">Step 1</h2>
+<p>The first step to building OpenACR is to get the code and build.  On any Linux
+box, it would be as easy as:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>git clone https://github.com/alexeilebedev/openacr.git
 cd openacr
 ai
@@ -1568,7 +1618,7 @@ this:</p>
 sudo ln -s mysql mariadb
 </code></pre></div>
 <p>With this quick hack, the OpenARC ai build completed for the first time.</p>
-<h2 id="hello-world">Hello World</h2>
+<h3 id="hello-world">Hello World</h3>
 <p>Following tradition, I created a Hello World application as a first trial run of the 
 environment.  To do this, I ran the command below to create a default app.</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>acr_ed -create -target hello
@@ -1587,9 +1637,56 @@ previously.  The abt build command picked out the O3 optmization level for g++ v
 I overrode -O3 with -O2 and recompiled.  This worked!  The proof is in the 
 screenshot below.</p>
 <p><img alt="OpenACR HelloWorld" src="assets/images/202402/OpenACR.Hello.png" /></p>
+<h2 id="step-2">Step 2</h2>
+<h3 id="no-stringop-overflow">no-stringop-overflow</h3>
+<p>Perhaps we can remove this gcc build problem by removing the stringop-overflow
+warning.  This seems to be a fix suggestion put into gcc10 <a href="https://patches.dpdk.org/project/dpdk/patch/20200407162755.6802-1-ktraynor@redhat.com">posted here</a>
+I am using gcc 13 and I still see the nostring-overflow errors- so I could 
+force the nostring-overflow at compile time.</p>
+<p>To disable nostring-overflow, I made these two changes:</p>
+<ul>
+<li>bin/bootstrap/Linux-g++.release-x86_64<ul>
+<li>add to g++ command line parameters:<br>
+<em>-Wno-stringop-overflow to g++</em></li>
+</ul>
+</li>
+<li>data/dev/tool_opt.ssim<ul>
+<li>add the line<br>
+<em>dev.tool_opt  tool_opt:%-g++.release-%/%-CC:-Wno-stringop-overflow  comment:""</em></li>
+</ul>
+</li>
+</ul>
+<p>Then I ran <em>ai -clean</em> and <em>ai -force</em> to rebuild the entire system and then 
+<em>abt hello -clean</em> and <em>abt hello -force</em> to build the hello app.   To my surprise, 
+both builds succeeded!  And furthermore, the hello app ran without crashing.  Amazing.</p>
+<p>The proof is in the screenshot.  Notice the use of g++ O3 and no-stringop-overflow
+parameters:</p>
+<p><img alt="OpenACR HelloWorld" src="assets/images/202402/OpenACR.Hello2.png" /></p>
+<h3 id="fix-summary">Fix summary</h3>
+<p>In summary, there are altogether 3 small patches to get OpenACR to work on Arch-Linux.</p>
+<ul>
+<li>bin/bootstrap/Linux-g++.release-x86_64<ul>
+<li>add to g++ command line parameters:<br>
+<em>-Wno-stringop-overflow to g++</em></li>
+</ul>
+</li>
+<li>data/dev/tool_opt.ssim<ul>
+<li>add the line<br>
+<em>dev.tool_opt  tool_opt:%-g++.release-%/%-CC:-Wno-stringop-overflow  comment:""</em></li>
+</ul>
+</li>
+<li>in /usr/include<ul>
+<li>make a softlink from mariadb to mysql:<br>  <br />
+<em>cd /usr/include</em><br>
+<em>sudo ln -s mysql mariadb</em></li>
+</ul>
+</li>
+</ul>
 <h2 id="next-step">Next Step</h2>
-<p>Perhaps we can remove this gcc build problem by building with clang instead. 
-That will be in the next experiment.</p>
+<p>Getting this far has only opened up more questons.  Does this no-stringop-overflow 
+compile parameter really work?  On other Linux distributions systems as well?
+And for more cpu intensive applications?  Would clang work out of the box without
+this extra parameter?  There's more to be done here next.</p>
 
 
 
