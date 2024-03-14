@@ -1826,7 +1826,11 @@ the possibilities intrigued me.  Why not?</p>
 revived MacBook from the stick.  The install itself took an hour or less.  The 
 wifi immediately worked after the install.  I was impressed.  After the install, 
 I ran the obligatory system upgrades and both EndeavourOS and the MacBook 
-performed flawlessly.  The 7 year old machine was remarkably a delight to run. </p>
+performed flawlessly.  After using the machine for half a day, I found the
+entire OS on the 7 year old machine a remarkable delight to run. </p>
+<p><img alt="MacBookOnEndeavourOS" src="assets/images/202402/MacBookOnEndeavourOS.png" /></p>
+<p>But that does not mean the upgrade was free of problems.  There were a few
+minor hurdles to overcome - documented below.</p>
 <h2 id="mkdocs">mkdocs</h2>
 <p>What did not run out of the box?  mkdocs.  I use mkdocs for generating this 
 static site.  Using yay, I installed mkdocs and then tried to install 
@@ -1834,8 +1838,9 @@ mkdocs-material 9.5.1-1.  The install failed with an error:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>ERROR: Could not resolve all dependencies.
 </code></pre></div>
 <p>Without mkdocs-material, the only available themes that came with mkdocs
-were mkdocs and readthedocs.  I relied on the material theme.  So I 
-rolled up my sleeves and got to work. </p>
+were mkdocs and readthedocs.  These other themes pale compared to material.
+I rolled up my sleeves and got to work.  It was either mkdocs with material
+or don't play at all.</p>
 <p>I first downloaded the open source mkdcos-material theme from github:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>git clone https://github.com/squidfunk/mkdocs-material.git
 </code></pre></div>
@@ -1892,16 +1897,15 @@ too easy.</p>
 <h2 id="cpupower">cpupower</h2>
 <p>I had read online that Linux doesn't come with Apple's power saving software
 for its MacBooks.  Intrigued, I decided to take a look.  While that may or 
-may not be true, Linux does have its own power saving utilities.  That was
-not a surprise because for high frequency trading, we always disable power 
-saving utilities and keep cpu usage at maximum.  The command cpupower 
-does this trick:</p>
+may not be true, I knew Linux has its own power saving utilities- because for
+high frequency trading, we always disable power saving utilities and keep cpu 
+usage at maximum.  The command cpupower does this trick:</p>
 <div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>sudo cpupower frequency-info
 sudo cpupower -c all frequency-set 500 -g powersave
 grep MHz /proc/cpuinfo
 </code></pre></div>
-<p>This lowered the cpu frequency which should prolong battery life.
-We shall see.   </p>
+<p>This lowered the cpu frequency which should presumeably extend a battery's charge
+for more hours.  We shall see.   </p>
 
 
 
