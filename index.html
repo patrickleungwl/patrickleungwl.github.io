@@ -18,7 +18,7 @@
     
     
       
-        <title>Modern Performant Linux Cpp - ThinkNotes</title>
+        <title>C++ Learning Journey - ThinkNotes</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Modern Performant Linux Cpp
+              C++ Learning Journey
             
           </span>
         </div>
@@ -212,7 +212,7 @@
   
   
   <span class="md-ellipsis">
-    Modern Performant Linux Cpp
+    C++ Learning Journey
     
   </span>
   
@@ -225,7 +225,7 @@
   
   
   <span class="md-ellipsis">
-    Modern Performant Linux Cpp
+    C++ Learning Journey
     
   </span>
   
@@ -251,6 +251,135 @@
       Performance
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cacheline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cacheline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-coherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache coherence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-model-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory model contracts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atomics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atomics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdatomic_flag-c11" class="md-nav__link">
+    <span class="md-ellipsis">
+      std::atomic_flag C++11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spinlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spinlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tts" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdatomic_flag-c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      std::atomic_flag C++20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aba-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      ABA Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atomic_flag-vs-atomicbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      atomic_flag vs atomic&lt;bool>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmemory_order" class="md-nav__link">
+    <span class="md-ellipsis">
+      std::memory_order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2407,6 +2536,135 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#caches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cacheline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cacheline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-coherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache coherence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-model-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory model contracts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atomics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atomics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdatomic_flag-c11" class="md-nav__link">
+    <span class="md-ellipsis">
+      std::atomic_flag C++11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spinlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spinlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tts" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdatomic_flag-c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      std::atomic_flag C++20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aba-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      ABA Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atomic_flag-vs-atomicbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      atomic_flag vs atomic&lt;bool>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmemory_order" class="md-nav__link">
+    <span class="md-ellipsis">
+      std::memory_order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2423,24 +2681,287 @@
 
 
 
-  <h1>Modern Performant Linux Cpp</h1>
+  <h1>C++ Learning Journey</h1>
 
 <p>Core notes distilled from talks by Scott Meyers, Rainer Grimm, Perplexity, and
 Gemini 3 Pro.</p>
 <h2 id="performance">Performance</h2>
-<p>As c++ programmers on Linux, we care about performance.  To paraphrase Scott Meyers 
-in a c++ conference talk- <em>"If we didn't care about performance, we would be using 
-python- over in the next room".</em></p>
+<p>As c++ programmers, we care about performance.  If we don't care about performance, 
+we would be using python.  In the words of Scott Meyers during a cpp conference talk, 
+"Over in the next room". </p>
 <p>At a foundation, we must understand what happens at each step in a life cycle of a 
-c++ program.  What are optimisation opportunities at each stage?</p>
-<p>1 <strong>the compiler</strong> will unroll loops, remove unused code, place variables in registers, etc</p>
-<p>2 <strong>the processor</strong> will run operations out of order, and make branch predictions; 
-      branch mispredictions are very costly; try to write branchless code or with fewer branches</p>
-<p>3 <strong>the cache</strong> will perfetch the next instructions or data in a traditional von neumenn
-    cpu architecture</p>
-<p>4 <strong>the kernel</strong> (kernel bypass?)</p>
-<p>5 <strong>non-blocking IO</strong> (epoll and broadcast)</p>
+c++ program. </p>
+<ul>
+<li>1 <strong>the compiler</strong> <ul>
+<li>the compiler will unroll loops, remove unused code, place variables in registers, etc</li>
+</ul>
+</li>
+<li>2 <strong>the processor</strong><ul>
+<li>the processor will run operations out of order, and make branch predictions; 
+  branch mispredictions are very costly; try to write branchless code or with fewer branches</li>
+</ul>
+</li>
+<li>3 <strong>the cache</strong><ul>
+<li>in a traditional von neumenn cpu architecture, the cache will prefetch the next instructions or data</li>
+</ul>
+</li>
+</ul>
 <p>Each part works hard to optimize its own respective stage.</p>
+<h2 id="caches">Caches</h2>
+<p>Because modern processor's cpu speed is increasing much faster than that of 
+memory access, much of processing's delays comes from memory read/writes.  To 
+allay these delays, modern processors with multiple cores are always designed with
+multiple caches, designated L1 (private, small, fastest), L2 (private, larger,
+fast) and L3 (shared, slower). </p>
+<h2 id="cacheline">Cacheline</h2>
+<p>A cache line is the smallest fixed-size block of data (typically 64 bytes on
+modern x86/ARM CPUs) that a CPU cache transfers between main memory (L3) and 
+each core's private local caches.</p>
+<p>Loading data at least 64 bytes at a time exploits data's spatial locality, 
+meaning data is most likely to be located sequentially in memory.  Loading an 
+entire block from L3 (DRAM) takes 100-200 cycles whereas reading from L1 takes
+3-5 cycles. </p>
+<h2 id="cache-coherence">Cache coherence</h2>
+<p>However, a problem with caches is that the view of memory held by two different
+processors is through their individual caches, which, without any additional
+precautions, could end up seeing two different values.  This is the <strong>cache
+coherence problem</strong>.  This CC problem exists because there is a global state in
+the main memory (L3) and private local states (L1, L2).  </p>
+<p>In multi-core systems, cache lines are the unit of coherency under protocols 
+like MESI.  When one core updates data in a cache line, the MESI protocol 
+invalidates copies of the same data in other cores, forcing them to refetch 
+them on the next read. </p>
+<p>To resolve this cache coherence problem, a common protocol is for the writing
+processor to acquire bus access (this sounds like a lock to me)- to broadcast
+the invalidated address.  All processors continuously <strong>snoop</strong> on the bus. 
+If an address appears that is in their cache, the processor invalidates the 
+local copy of the data.</p>
+<h2 id="memory-model">Memory model</h2>
+<p>C++ 11 introduced a memory model that specifies behaviour for multi-threaded
+programs.  These rules guarantees correctness, robustness and portability for
+multi-threaded programs.  In essence, a memory model specifies what happens
+when two threads access the same memory location.</p>
+<p>If two or more threads access the same memory location and one thread wants to
+modify it, then
+there will be a data race unless</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>- the write is handled by an atomic operation
+- the read and write happens at different times
+</code></pre></div>
+<h3 id="memory-model-contracts">Memory model contracts</h3>
+<p>The memory model in C++ 11 introduces varying levels of control flow order
+contracts available to the programmer. </p>
+<p>What the memory model clarifies</p>
+<ul>
+<li>atomic operations- what operations can perform un-interrupted.</li>
+<li>partial ordering of operations- sequences of operations that must not be reordered.</li>
+<li>visible effects of operations- when updates on shared variables are visible to other threads.</li>
+</ul>
+<p>These are- in order of optimisation possibilities and the level of expertise required:</p>
+<ul>
+<li>strong: single threading, one control flow only</li>
+<li>medium: multi-threading with tasks, threads, and condition variables</li>
+<li>weak: atomics; sequential consistency, acquire-release semantic, relaxed semantic</li>
+</ul>
+<p>Roughly speaking, the stronger the contract, the less choices/options a cpp
+program can optimise.  Conversely, the weaker the contract, the more
+optimisation choices a cpp program has available to optimise.  </p>
+<p>Tasks, threads and condition variables are understandable.  Let's just focus on atomics.</p>
+<h2 id="atomics">Atomics</h2>
+<p>The two main ideas of atomics is-  <strong>order constraints</strong> and <strong>synchronization</strong>.</p>
+<p>With atomics, we reach the domain of experts.  When we use atomics, we often
+speak of lock-free programming.  <em>Sequential consistency</em> is the strongest,
+most intuitive level of the weak memory model.  <em>Acquired-release semantics</em> is
+next.  The <em>relaxed semantic relaxed semantic</em> is the weakest of the weak
+memory model.</p>
+<h3 id="stdatomic_flag-c11">std::atomic_flag C++11</h3>
+<p>atomic_flag is the simplest atomic boolean flag, used as a foundational building
+block for higher level lock abstractions.  It is the only truly guaranteed
+atomic variable.  All other atomics can potentially use mutexes internally
+depending on the processor architecture- although this is unlikely.  Also other
+atomics may use mutexes if the size of the locked data exceeds the size of the
+processor's cache line (?).  </p>
+<p>A pre-C++20 atomic_flag only has two methods: test_and_set and clear.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>test_and_set    sets the atomic_flag and return the old value
+clear           clears the atomic_flag
+</code></pre></div>
+<p><em>Clear</em> sets the flag to false. </p>
+<p><em>Test_and_set TAS</em> sets the flag to true and returns the old value. 
+If it returns false, then that means the current thread is the first to set it. 
+If it returns true, then this means some other thread set it to true first.
+<mark>In summary, if TAS returns false, then it means we have the lock</mark> and can 
+proceed until we clear it. </p>
+<p>To assert an atomic does not use a mutex, call its is_lock_free method or 
+starting in C++17, the constexpr atomic<type>::is_always_lock_free starting in C++17.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>obj.is_lock_free()
+atomic&lt;type&gt;::is_always_lock_free()
+</code></pre></div>
+<h3 id="spinlock">Spinlock</h3>
+<p>A first use case of atomic_flag is with a spinlock.  </p>
+<p>A mutex, when blocked, enters into a wait state by switching into kernel mode 
+and waits until a later time (how much later?) to try a lock.  </p>
+<p><strong>Unlike a mutex</strong>, a spinlock, when blocked does not context switch into kernel
+mode.  A spinlock stays in user mode and rather spends its cpu cycles
+repeatedly retrying the lock, causing high cpu usage, but avoiding a costly
+switch to kernel mode. </p>
+<p>Example of a spinlock using atomic_flag</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="font-weight: bold">static</span> std::atomic_flag s_flag = ATOMIC_FLAG_INIT;
+<span style="font-weight: bold">static</span> <span style="font-weight: bold">int</span> s_cnt = 0;
+
+<span style="font-weight: bold">class</span> <span style="font-weight: bold">Spinlock</span> {
+    <span style="font-weight: bold">bool</span> _locked = false;
+<span style="font-weight: bold">public</span>:
+    ~Spinlock() {
+        <span style="font-weight: bold">if</span> (_locked) {
+            s_flag.clear(std::memory_order_release);
+        }
+    }
+
+    <span style="font-style: italic">// All Spinlock instances that want to acquire the flag will test_and_set; </span>
+    <span style="font-style: italic">// test_and_set returns the previous value of the flag meaning </span>
+    <span style="font-style: italic">// test_and_set returns false only if it acquires the lock.</span>
+    <span style="font-style: italic">//</span>
+    <span style="font-style: italic">// If the flag was already set (true), lock() will keep trying.</span>
+    <span style="font-style: italic">// lock() will only break out of the while loop only if the flag is </span>
+    <span style="font-style: italic">// clear (false).</span>
+
+    <span style="font-weight: bold">void</span> lock() {
+        <span style="font-weight: bold">while</span>( s_flag.test_and_set(std::memory_order_acquire) );
+        _locked = true;
+    }
+};
+
+<span style="font-style: italic">// Even if the code after the lock throws an exception, </span>
+<span style="font-style: italic">// the spinlock instance will always unlock by RAII.</span>
+
+<span style="font-weight: bold">void</span> test_spinlock(<span style="font-weight: bold">int</span> i) {
+    Spinlock spinlock;
+    spinlock.lock();
+    s_cnt += i;
+}
+
+
+TEST(Threads, Spinlock_TestUnlockByRaii) {
+    <span style="font-weight: bold">int</span> n_threads = 100;
+    std::vector&lt;std::<span style="font-weight: bold">thread</span>&gt; threads;
+    threads.reserve(n_threads);
+
+    <span style="font-weight: bold">for</span> (<span style="font-weight: bold">int</span> i=0; i&lt;n_threads; i++) {
+        threads.emplace_back(test_spinlock, i);
+    }
+    <span style="font-weight: bold">for</span> (<span style="font-weight: bold">auto</span>&amp; t : threads) {
+        t.join();
+    }
+    <span style="font-style: italic">// sum of 0..99.</span>
+    ASSERT_TRUE(s_cnt == 4950);
+}
+</code></pre></div>
+<h3 id="tts">TTS</h3>
+<p>The previous example of a test_and_set (TAS) Spinlock was a naive, inefficient
+implementation.  A major problem with the use of TAS is that it is
+effectively a <em>write</em>.  <mark>A write forces all other threads to invalidate</mark> their
+copy of that atomic_flag address' cache_line even though the value of the
+atomic_flag does not necessarily change (most likely true as is most of the
+time when flag has been set by other threads).  This forces all other threads
+to reread from the cache_line- even when there is no value change- creating a lot
+of bus line contention.  This atomic_flag test_and_set use in a Spinlock
+creates a lot of cache-line 'noise', also called <mark>cache line bouncing</mark>,
+because every spinning thread repeatedly performs a read-modify-write on the
+same cache-line.</p>
+<p>A better Spinlock implementation with atomic_flag is the TTS protocol- <em>test
+and test-and-set</em>.  Because reading is a lot faster, less expensive, less disruptive
+to other threads, TTS performs repeated tests (reads) first and if-and-only-if 
+test returns false (the flag is just cleared by another thread!), </p>
+<p>(post example here)</p>
+<h3 id="stdatomic_flag-c20">std::atomic_flag C++20</h3>
+<p>A C++20 atomic_flag has additional methods for synchronizing between threads,
+that is- one thread can tell another thread something is ready.</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>wait            blocks the calling thread until notified on the atomic_flag
+notify_one      notify one thread waiting on the atomic_flag
+notify_all      notify all threads waiting on the atomic_flag
+</code></pre></div>
+<p>A wait has the signature (bool old, std::memory_order order=std::memory_order_seq_cst) 
+which blocks until the atomic_flag's value (false by default and also after a clear)
+is different from old.  A test_and_set on the atomic_flag sets the flag value to
+true.  This wait is guaranteed to unblock only if the value has changed.</p>
+<p>A thread can wake up <strong>spuriously</strong> - meaning wake up for no reason due to kernel 
+implementation details.  To prevent a atomic_flag wait from returning erroneously,
+the Cpp++20 standard, std::atomic_flag::wait(bool old_val) has a built-in loop
+that checks- 'is the atomic_value still equal to old_val' ?  If true, the thread
+goes back to sleep.  <mark>This explains why the wait function has an old_val parameter.</mark></p>
+<p>Example of a atomic_flag wait and notify use case in a workflow:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>std::atomic_flag flag_a = ATOMIC_FLAG_INIT;
+std::atomic_flag flag_b = ATOMIC_FLAG_INIT;
+
+// test_and_set and clear&#39;s default parameter is: memory_order_seq_cst
+void appendA(std::string&amp; str) {
+    str += &#39;A&#39;;
+    flag_a.test_and_set(std::memory_order_acquire); // should be first to get lock and set flag
+    flag_a.notify_one();   // notify one waiting thread
+}
+
+void appendB(std::string&amp; str) {
+    flag_a.wait(false);  // wait until flag_a is set
+
+    str += &#39;B&#39;;
+    flag_a.clear(std::memory_order_release);        // clear flag_a before setting flag_b
+    flag_b.test_and_set(std::memory_order_acquire); // should be first to get lock and set flag
+    flag_b.notify_one();   // notify one waiting thread
+}
+
+void appendC(std::string&amp; str) {
+    flag_b.wait(false);  // wait until flag_b is set
+
+    str += &#39;C&#39;;
+    flag_b.clear(std::memory_order_release);  // clear flag_b for next use
+}
+
+TEST(Threads, AtomicFlag_WaitAndNotify) {
+    for (int i=0; i&lt;10; i++) {
+        std::string result;
+        std::thread t1(appendA, std::ref(result));
+        std::thread t2(appendB, std::ref(result));
+        std::thread t3(appendC, std::ref(result));
+
+        t1.join();
+        t2.join();
+        t3.join();
+
+        ASSERT_TRUE(result == &quot;ABC&quot;);
+    }
+}
+</code></pre></div>
+<p>Note this form of synchronization, a wait and notify, is much more efficient
+than a spinlock.  </p>
+<p>A wait and notify in C++20 uses a <em>hybrid</em> synchronization model.  The thread's
+wait() stays in user mode first and exits if the flag is set.  The thread enters
+kernel mode only if necessary after a small <em>loop</em> period.  The cpu consumes zero 
+cpu while in the kernel takes over the thread in sleep mode. </p>
+<p>Before C++20's wait and notify, developers used spinlocks, but this consumes
+excessive cpu and prevents the cpu from doing other work. </p>
+<h3 id="aba-problem">ABA Problem</h3>
+<p>The ABA problem is that in between times when a thread checks a flag for a changed
+value, another thread could have changed the flag value from A to B and then back
+to A.  Then waiting thread never saw the changed state and continues to wait/block.</p>
+<h3 id="atomic_flag-vs-atomicbool">atomic_flag vs atomic&lt;bool&gt;</h3>
+<p>In 99% of all cases, std::atomic_flag and std::atomic&lt;bool&gt; compiles to the same 
+assembly code.  However, atomic_flag has one big difference- the C++ standard 
+<mark>guarantees atomic_flag is always lock-free, regardless of how ancient or different
+the processor is</mark>.  The atomic_flag is backed by raw hardware instructions, never
+a software lock. </p>
+<p>atomic&lt;bool&gt; is usually lock-free, but not guaranteed.  In some cases of obscure
+processors, the C++ compiler can secretely implement the atomic&lt;bool&gt; with a 
+mutex lock. </p>
+<p>However, on modern x64 (Intel/AMD) and ARM64 (Apple/Android) processors, atomic&lt;bool&gt;
+is almost always lock_free, and can be verified with the function call is_lock_free. 
+So use atomic<bool> in almost all cases than a atomic_flag, and only use the 
+latter for portability and implementing a spinlock- which seems to fit the 
+test_and_set use case perfectly. </p>
+<h3 id="stdmemory_order">std::memory_order</h3>
+<p>A load with <em>std::memory_order_acquire</em> means all writes in other threads that
+release the same atomic variable are visible in this thread. </p>
+<p>A store with <em>std::memory_order_release</em> means all writes in this thread are 
+visible by other threads that acquire the same atomic variable.</p>
+<p>.</p>
 <p>2025-11</p>
 
 
